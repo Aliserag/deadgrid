@@ -1,27 +1,34 @@
 {
-  "day": 5,
-  "health": 90,
-  "morale": 70,
-  "water": 2,
-  "food": 3,
+  "day": 6,
+  "health": 85,
+  "morale": 65,
+  "water": 1,
+  "food": 2,
   "location": [
     0,
     0
   ],
-  "base_defense": 2,
-  "last_action": "signal",
+  "base_defense": 3,
+  "last_action": "defend",
   "status_effects": [],
   "traits": [],
   "gear": [
     {
       "name": "flashlight",
       "type": "tool",
-      "durability": 6
+      "durability": 5
     }
   ],
   "materials": {
-    "metal": 2,
+    "metal": 1,
     "fabric": 1,
     "circuitry": 0
-  }
+  },
+  "factions": {
+    "watchers": {
+      "disposition": "neutral",
+      "last_seen": "east"
+    }
+  },
+  "threat_level": "moderate"
 }
