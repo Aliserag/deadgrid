@@ -1,0 +1,27 @@
+{
+  "day": 2,
+  "health": 95,
+  "morale": 75,
+  "water": 2,
+  "food": 3,
+  "location": [
+    0,
+    0
+  ],
+  "base_defense": 2,
+  "last_action": "defend",
+  "status_effects": [],
+  "traits": [],
+  "gear": [
+    {
+      "name": "flashlight",
+      "type": "tool",
+      "durability": 9
+    }
+  ],
+  "materials": {
+    "metal": 1,
+    "fabric": 1,
+    "circuitry": 0
+  }
+}

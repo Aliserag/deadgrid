@@ -1,0 +1,5 @@
+# Automation and AI logic
+run_daily_sim.sh
+ai_engine/
+*.log
+*.plist
