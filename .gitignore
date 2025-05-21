@@ -1,5 +1,11 @@
 # Automation and AI logic
 run_daily_sim.sh
+setup_cron.sh
 ai_engine/
 *.log
 *.plist
+*blockchain_cache.json
+
+# Local environment and temporary files
+.env
+.DS_Store
