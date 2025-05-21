@@ -1,33 +1,35 @@
 {
-  "day": 6,
-  "health": 85,
-  "morale": 65,
+  "day": 7,
+  "health": 83,
+  "morale": 63,
   "water": 1,
   "food": 2,
   "location": [
     0,
     0
   ],
-  "base_defense": 3,
+  "base_defense": 4,
   "last_action": "defend",
   "status_effects": [],
   "traits": [],
   "gear": [
     {
-      "name": "flashlight",
+      "name": "reinforced flashlight",
       "type": "tool",
-      "durability": 5
+      "durability": 7,
+      "bonus": "20% brighter beam"
     }
   ],
   "materials": {
-    "metal": 1,
-    "fabric": 1,
+    "metal": 0,
+    "fabric": 0,
     "circuitry": 0
   },
   "factions": {
     "watchers": {
       "disposition": "neutral",
-      "last_seen": "east"
+      "last_seen": "east",
+      "activity": "increased"
     }
   },
   "threat_level": "moderate"
