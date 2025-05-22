@@ -24,6 +24,31 @@
       "faction_name": "The Caravan Collective",
       "status": "alive",
       "relationship": -10
+    },
+    {
+      "name": "Marcus 'Ironprice' Holloway",
+      "age": 42,
+      "background": "Former Marine Corps logistics officer who specialized in supply chain management. After the outbreak, he put his skills to use keeping trade routes open.",
+      "description": "A broad-shouldered man with a salt-and-pepper beard and a permanent squint from years of scanning horizons. Speaks in measured tones but has a dry wit that surfaces unexpectedly.",
+      "motivation": "Believes civilization can be rebuilt one trade deal at a time, and will protect caravan routes at all costs.",
+      "skills": [
+        "Route planning",
+        "Crisis negotiation",
+        "Defensive driving",
+        "Weapons maintenance"
+      ],
+      "items": [
+        "A modified GPS unit with safe routes mapped",
+        "A silver Zippo with 'Semper Fi' engraved",
+        "A ledger of every trade deal he's brokered"
+      ],
+      "quirk": "Always carries a small scale to weigh goods, even when it's clearly unnecessary.",
+      "secret": "He's been skimming small percentages from trades to build an emergency stockpile, convinced the Collective's idealism will get them all killed.",
+      "id": "npc_2",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": -31
     }
   ]
 }

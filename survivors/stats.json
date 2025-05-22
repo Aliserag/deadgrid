@@ -1,16 +1,22 @@
 {
-  "day": 9,
-  "health": 83,
-  "morale": 70,
-  "water": 2,
-  "food": 4,
+  "day": 10,
+  "health": 81,
+  "morale": 65,
+  "water": 1,
+  "food": 3,
   "location": [
     0,
     0
   ],
   "base_defense": 4,
-  "last_action": "scavenge",
-  "status_effects": [],
+  "last_action": "signal",
+  "status_effects": [
+    {
+      "name": "Fog Anxiety",
+      "duration": 2,
+      "effect": "-5% perception in fog"
+    }
+  ],
   "traits": [
     {
       "name": "Silent Salvager",
@@ -22,24 +28,19 @@
     {
       "name": "reinforced flashlight",
       "type": "tool",
-      "durability": 6,
+      "durability": 5,
       "bonus": "20% brighter beam"
     },
     {
       "name": "vest",
       "type": "armor",
-      "durability": 5,
+      "durability": 4,
       "bonus": "+5% damage resistance"
-    },
-    {
-      "name": "Vest",
-      "type": "armor",
-      "durability": 93
     },
     {
       "name": "Salvage Bicycle",
       "type": "transport",
-      "durability": 8,
+      "durability": 7,
       "bonus": "+1 inventory slot when scavenging"
     }
   ],
@@ -52,19 +53,28 @@
     "watchers": {
       "disposition": "neutral",
       "last_seen": "east",
-      "activity": "increased"
+      "activity": "signaling back"
     },
     "caravan_collective": {
       "disposition": "neutral",
       "last_seen": "south",
-      "activity": "passing through"
+      "activity": "recent passage"
     }
   },
   "threat_level": "moderate",
   "discovered_locations": [
-    "Sunset Ridge Subdivision"
+    "Sunset Ridge Subdivision",
+    "Rustbelt Tool & Die"
   ],
   "skills": [
     "Silent Salvager"
+  ],
+  "active_story_arc": "Silent Siege",
+  "radio_transmissions": [
+    {
+      "content": "They're learning! Don't let them\u2014 [screams]",
+      "origin": "unknown",
+      "threat_implication": "high"
+    }
   ]
 }

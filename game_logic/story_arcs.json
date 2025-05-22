@@ -1,6 +1,124 @@
 {
   "main_arc": {},
-  "side_arcs": [],
-  "current_day": 3,
+  "side_arcs": [
+    {
+      "title": "The Last Transmission",
+      "type": "rescue mission",
+      "description": "The survivor intercepts a desperate radio transmission from a nearby survivor group under siege by zombies. They must decide whether to risk venturing out to rescue them or stay safe in their hideout.",
+      "length": 6,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Static and Screams",
+          "description": "While scavenging for supplies, the survivor picks up a faint radio transmission. A panicked voice pleads for help before the signal cuts out."
+        },
+        {
+          "day": 2,
+          "title": "The Decision",
+          "description": "The survivor debates whether to investigate the transmission. They recall the increased zombie activity and the risks involved."
+        },
+        {
+          "day": 3,
+          "title": "Scouting the Area",
+          "description": "The survivor cautiously scouts the area mentioned in the transmission, finding signs of a recent struggle but no survivors."
+        },
+        {
+          "day": 4,
+          "title": "Trapped",
+          "description": "The survivor discovers the source of the transmission\u2014a small group barricaded in a nearby building, surrounded by zombies."
+        },
+        {
+          "day": 5,
+          "title": "The Rescue",
+          "description": "The survivor devises a plan to distract the zombies and lead the trapped group to safety."
+        },
+        {
+          "day": 6,
+          "title": "Aftermath",
+          "description": "The rescued group shares valuable information about the zombie movements and a potential safe zone, but the survivor must decide whether to trust them."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "information",
+          "description": "Details about a potential safe zone and zombie movement patterns."
+        },
+        {
+          "type": "relationship",
+          "description": "Gains trust with the rescued group, potentially leading to future alliances."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Dr. Elena Vasquez",
+          "role": "Leader of the trapped survivor group, a former scientist with knowledge of the zombie outbreak."
+        },
+        {
+          "name": "Marcus Greene",
+          "role": "A former soldier in the group, skilled in combat and survival tactics."
+        }
+      ],
+      "failure_consequences": "If the survivor fails, the trapped group is overrun by zombies, and the opportunity for valuable information and allies is lost. The survivor may also attract more zombies to their own hideout.",
+      "id": "arc_1",
+      "status": "active",
+      "current_day": 1
+    },
+    {
+      "title": "Silent Siege",
+      "type": "fortification",
+      "description": "The eerie silence outside the safehouse is unsettling. The survivor must fortify their shelter against an unseen threat while uncovering the reason behind the zombies' sudden disappearance.",
+      "length": 5,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "The Quiet Before the Storm",
+          "description": "The survivor notices the complete absence of zombies in the area. They decide to use this opportunity to scout for materials to reinforce the safehouse."
+        },
+        {
+          "day": 2,
+          "title": "Gathering Supplies",
+          "description": "The survivor ventures out to nearby buildings, collecting wood, nails, and other fortification materials. They hear distant, unfamiliar noises but see nothing."
+        },
+        {
+          "day": 3,
+          "title": "Strange Discoveries",
+          "description": "While reinforcing the safehouse, the survivor finds strange markings on the walls outside. They also discover a journal hinting at a 'Watchers' group observing the area."
+        },
+        {
+          "day": 4,
+          "title": "The Watchers' Signal",
+          "description": "The survivor spots a flare in the distance, followed by the sound of engines. It seems the Watchers are signaling something\u2014or someone."
+        },
+        {
+          "day": 5,
+          "title": "Fortified but Watched",
+          "description": "The survivor completes the fortifications, but the safehouse now feels like a target. The Watchers' presence looms, and the zombies' absence remains unexplained."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Gain additional fortification materials and a temporary safehouse defense bonus."
+        },
+        {
+          "type": "information",
+          "description": "Learn about the Watchers and their possible connection to the zombies' behavior."
+        }
+      ],
+      "characters": [
+        {
+          "name": "The Watcher",
+          "role": "A mysterious figure observing the survivor's movements from afar."
+        }
+      ],
+      "failure_consequences": "If the survivor fails to fortify the safehouse, the Watchers may exploit its weaknesses, leading to a breach or direct confrontation. The unexplained zombie absence could also result in a sudden, overwhelming attack.",
+      "id": "arc_2",
+      "status": "active",
+      "current_day": 0
+    }
+  ],
+  "current_day": 5,
   "story_phase": "beginning"
 }

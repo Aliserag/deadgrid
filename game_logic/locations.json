@@ -55,6 +55,203 @@
       "coords": [
         0,
         0
+      ],
+      "buildings": [
+        {
+          "name": "Sunset Ridge Apartments",
+          "description": "A well-preserved apartment complex in the Sunset Ridge Subdivision, this building has remained largely untouched by the chaos outside. The exterior is clean, and the interior shows signs of recent habitation before being abandoned. Faded posters and scattered personal items hint at the lives once lived here. The building offers a relatively safe haven with multiple entry points and clear lines of sight.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+--------+--------+--------+\n|        |        |        |\n|  Lobby | Stairs |  Mail  |\n|        |        |  Room  |\n+--------+--------+--------+\n|        |        |        |\n|  Apt   |  Hall  |  Apt   |\n|  101   |  Way   |  102   |\n+--------+--------+--------+\n\nUpper Floors (2-3):\n+--------+--------+--------+\n|        |        |        |\n|  Apt   | Stairs |  Apt   |\n|  201/301|        | 202/302|\n+--------+--------+--------+\n|        |        |        |\n|  Apt   |  Hall  |  Apt   |\n|  203/303|  Way   | 204/304|\n+--------+--------+--------+",
+          "rooms": [
+            {
+              "name": "Lobby",
+              "description": "The main entrance area with a front desk and seating area.",
+              "contents": [
+                "Broken security camera",
+                "Scattered newspapers",
+                "Empty water cooler"
+              ]
+            },
+            {
+              "name": "Mail Room",
+              "description": "A small room with mailboxes and package storage.",
+              "contents": [
+                "Unopened packages",
+                "Rusted keys",
+                "Piles of junk mail"
+              ]
+            },
+            {
+              "name": "Apartment Units",
+              "description": "Standard living spaces with bedrooms, kitchens, and bathrooms.",
+              "contents": [
+                "Furniture",
+                "Personal belongings",
+                "Kitchen supplies",
+                "Medications"
+              ]
+            },
+            {
+              "name": "Stairwell",
+              "description": "Central staircase connecting all floors.",
+              "contents": [
+                "Emergency exit signs",
+                "Fire extinguisher",
+                "Graffiti"
+              ]
+            }
+          ],
+          "dangers": [
+            "Potential zombie horde in dark corners",
+            "Trip hazards from debris",
+            "Weak floorboards in some units"
+          ],
+          "resources": [
+            "Canned food in apartments",
+            "First aid kits",
+            "Tools in maintenance closet",
+            "Bottled water"
+          ],
+          "special_features": [
+            "Functional elevators (power-dependent)",
+            "Rooftop access with good vantage points",
+            "Some units have working gas stoves"
+          ],
+          "id": "bldg_490",
+          "location_id": "loc_2"
+        }
+      ]
+    },
+    {
+      "name": "Rustbelt Tool & Die",
+      "description": "A small manufacturing plant that once produced precision machine parts, now silent except for the occasional creak of metal settling. The skeletal remains of industrial equipment loom in the dim light filtering through broken skylights. A thin layer of metal dust coats every surface, muffling footsteps.",
+      "type": "industrial",
+      "danger_level": 2,
+      "resources": [
+        "scrap metal",
+        "industrial lubricants",
+        "tool fragments",
+        "steel cables"
+      ],
+      "features": [
+        "overhead crane system",
+        "partially disassembled machinery",
+        "employee break room with intact vending machine"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "hidden safe in manager's office containing emergency cash"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "rusted zombies (covered in metal shards)"
+        ]
+      },
+      "id": "loc_3",
+      "coords": [
+        0,
+        0
+      ],
+      "buildings": [
+        {
+          "name": "Rustbelt Tool & Die",
+          "description": "A once-thriving industrial factory now stands as a fortified bastion against the undead. The reinforced steel doors and boarded-up windows suggest survivors have been here recently. The interior is a maze of machinery and makeshift barricades, with the faint smell of oil and decay lingering in the air. The upper floors provide a vantage point for scouting the surrounding area.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+----------------+\n| Office | Break |\n+--------+-------+\n| Main  | Storage|\n| Floor | Room  |\n+--------+-------+\n| Workshop | Exit |\n+----------------+\n\nUpper Floors:\n+----------------+\n| Catwalk | Sniper|\n|--------+ Nest  |\n| Storage| Lookout|\n+----------------+",
+          "rooms": [
+            {
+              "name": "Main Floor",
+              "description": "The heart of the factory, filled with heavy machinery and workbenches.",
+              "contents": [
+                "Industrial presses",
+                "Workbenches",
+                "Tool racks",
+                "Barricades"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "A small administrative area with a view of the main floor.",
+              "contents": [
+                "Desk",
+                "Filing cabinets",
+                "Broken computer",
+                "Survivor notes"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "A place where workers once took their breaks, now repurposed for survival.",
+              "contents": [
+                "Rusted fridge",
+                "Tables and chairs",
+                "Old coffee maker",
+                "First aid supplies"
+              ]
+            },
+            {
+              "name": "Storage Room",
+              "description": "Cluttered with spare parts and supplies, some still usable.",
+              "contents": [
+                "Metal scraps",
+                "Spare tools",
+                "Dusty crates",
+                "Rusted chains"
+              ]
+            },
+            {
+              "name": "Workshop",
+              "description": "A well-equipped area for repairing and crafting items.",
+              "contents": [
+                "Welding gear",
+                "Bench grinder",
+                "Toolboxes",
+                "Blueprint scraps"
+              ]
+            },
+            {
+              "name": "Catwalk",
+              "description": "A metal walkway overlooking the main floor, providing a strategic advantage.",
+              "contents": [
+                "Rusted railings",
+                "Overhead lights",
+                "Zipline anchor",
+                "Rope ladder"
+              ]
+            },
+            {
+              "name": "Sniper Nest",
+              "description": "A fortified position with a clear view of the surroundings.",
+              "contents": [
+                "Sandbags",
+                "Wooden crates",
+                "Empty shell casings",
+                "Binoculars"
+              ]
+            }
+          ],
+          "dangers": [
+            "Collapsing catwalks",
+            "Rusted metal edges",
+            "Zombies trapped in machinery",
+            "Booby traps set by survivors"
+          ],
+          "resources": [
+            "Industrial tools",
+            "Scrap metal",
+            "First aid supplies",
+            "Ammunition casings"
+          ],
+          "special_features": [
+            "Fortified entry points",
+            "Overhead catwalks for scouting",
+            "Workshop for crafting repairs",
+            "Sniper nest with vantage points"
+          ],
+          "id": "bldg_317",
+          "location_id": "loc_3"
+        }
       ]
     }
   ]
