@@ -2,6 +2,7 @@
 run_daily_sim.sh
 setup_cron.sh
 ai_engine/
+logs/temp*
 *.log
 *.plist
 *blockchain_cache.json
