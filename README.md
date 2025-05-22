@@ -1,14 +1,30 @@
-# DeadGrid
+# 🧟‍♂️ DeadGrid: A Web3 Zombie Apocalypse Survival Simulator
 
-A procedurally generated web3 zombie apocalypse survival simulation that uses VRF. Each day reveals a new log entry from a lone survivor in a decaying city overrun by the undead. Every night players can make decisions about their camp, survivors, collect gear and have serious consequences or opportunities for the decisions they make. 
+**DeadGrid** is a highly complex procedurally evolving, Web3-powered survival game set in a crumbling city plagued by the undead. Each day brings a new **log entry** from a lone survivor — *you*. By day, read their desperate struggle. By night, **make decisions** that affect the fate of your camp, allies, and chances of survival. Every choice you make impacts the simulation.
 
-## Structure
+> Built with on-chain randomness via VRF and designed to grow autonomously over time.
 
-- `/logs` - Daily survivor logs
-- `/survivors` - Character info and inventory
-- `/city` - Map of the decaying urban environment
-- `/game_logic` - Rules and mechanics that drive the simulation
+---
 
-## Following the Story
+## 📦 Project Structure
 
-Star and watch this repository to follow the daily updates as our survivor attempts to persist in this harsh new reality.
+
+├── /logs          # Daily survivor logs (auto-generated based on game state)
+├── /survivors     # Survivor profiles, inventory, and character metadata
+├── /city          # Dynamic map of the decaying urban environment
+└── /game_logic    # Core simulation mechanics and decision engine
+
+## 🔮 How It Works
+Daily Log Generation:
+A GitHub Action (or similar automation) commits a new /logs/YYYY-MM-DD.md file representing the day's story update.
+
+Player Decisions:
+Each player can submit choices affecting their base, resources, and risks via Web3 interactions (coming soon).
+
+Random Events:
+Powered by Chainlink VRF for provably fair outcomes — no two timelines are the same.
+
+Simulation Core:
+The /game_logic module handles state transitions, consequences, resource management, and branching paths.
+
+Interested in joining the open beta or contributing to the project? Reach out to Ali Serag!
