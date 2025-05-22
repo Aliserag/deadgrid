@@ -22,7 +22,9 @@
         "Internal disputes over profit can lead to infighting"
       ],
       "id": "faction_1",
-      "members": [],
+      "members": [
+        "npc_1"
+      ],
       "relations": {}
     }
   ]

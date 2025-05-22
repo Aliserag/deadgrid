@@ -1,15 +1,15 @@
 {
-  "day": 9,
+  "day": 10,
   "health": 83,
-  "morale": 70,
-  "water": 2,
-  "food": 4,
+  "morale": 72,
+  "water": 1,
+  "food": 3,
   "location": [
     0,
     0
   ],
-  "base_defense": 4,
-  "last_action": "scavenge",
+  "base_defense": 5,
+  "last_action": "defend",
   "status_effects": [],
   "traits": [
     {
@@ -22,7 +22,7 @@
     {
       "name": "reinforced flashlight",
       "type": "tool",
-      "durability": 6,
+      "durability": 7,
       "bonus": "20% brighter beam"
     },
     {
@@ -39,13 +39,19 @@
     {
       "name": "Salvage Bicycle",
       "type": "transport",
-      "durability": 8,
+      "durability": 9,
       "bonus": "+1 inventory slot when scavenging"
+    },
+    {
+      "name": "Bandage",
+      "type": "medical",
+      "durability": 3,
+      "bonus": "+10% healing efficiency"
     }
   ],
   "materials": {
     "metal": 0,
-    "fabric": 1,
+    "fabric": 0,
     "circuitry": 0
   },
   "factions": {
@@ -57,7 +63,7 @@
     "caravan_collective": {
       "disposition": "neutral",
       "last_seen": "south",
-      "activity": "passing through"
+      "activity": "negotiating"
     }
   },
   "threat_level": "moderate",

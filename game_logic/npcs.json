@@ -1,0 +1,29 @@
+{
+  "npcs": [
+    {
+      "name": "Dr. Elias Vance",
+      "age": 42,
+      "background": "Former trauma surgeon who lost his family in the early days of the outbreak. Now uses his medical skills to barter for supplies and information.",
+      "description": "Tall and lean with salt-and-pepper hair tied back in a short ponytail. His piercing blue eyes and calm demeanor mask a sharp, calculating mind. Speaks softly but carries an air of quiet authority.",
+      "motivation": "To create a network of safe trade routes where knowledge and medical supplies can flow freely between survivor groups.",
+      "skills": [
+        "Advanced medical knowledge",
+        "Negotiation",
+        "Field surgery",
+        "Herbal remedy preparation"
+      ],
+      "items": [
+        "A leather-bound journal of zombie bite reactions and treatments",
+        "A silver pocket watch that belonged to his late wife",
+        "A custom-made bone saw for emergency amputations"
+      ],
+      "quirk": "Always hums old jazz tunes while working, even during high-stress situations.",
+      "secret": "He's secretly developing an experimental vaccine using spinal fluid harvested from special infected, but hasn't told anyone about the dangerous side effects he's observed.",
+      "id": "npc_1",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": -10
+    }
+  ]
+}
