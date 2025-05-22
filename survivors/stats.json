@@ -1,17 +1,23 @@
 {
-  "day": 8,
+  "day": 9,
   "health": 83,
-  "morale": 65,
-  "water": 1,
-  "food": 2,
+  "morale": 70,
+  "water": 2,
+  "food": 4,
   "location": [
     0,
     0
   ],
   "base_defense": 4,
-  "last_action": "signal",
+  "last_action": "scavenge",
   "status_effects": [],
-  "traits": [],
+  "traits": [
+    {
+      "name": "Silent Salvager",
+      "level": 1,
+      "effect": "Reduces noise while scavenging by 25%"
+    }
+  ],
   "gear": [
     {
       "name": "reinforced flashlight",
@@ -29,11 +35,17 @@
       "name": "Vest",
       "type": "armor",
       "durability": 93
+    },
+    {
+      "name": "Salvage Bicycle",
+      "type": "transport",
+      "durability": 8,
+      "bonus": "+1 inventory slot when scavenging"
     }
   ],
   "materials": {
     "metal": 0,
-    "fabric": 0,
+    "fabric": 1,
     "circuitry": 0
   },
   "factions": {
@@ -48,5 +60,11 @@
       "activity": "passing through"
     }
   },
-  "threat_level": "moderate"
+  "threat_level": "moderate",
+  "discovered_locations": [
+    "Sunset Ridge Subdivision"
+  ],
+  "skills": [
+    "Silent Salvager"
+  ]
 }

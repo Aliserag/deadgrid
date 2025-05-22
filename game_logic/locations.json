@@ -26,6 +26,36 @@
         0,
         0
       ]
+    },
+    {
+      "name": "Sunset Ridge Subdivision",
+      "description": "A quiet suburban neighborhood frozen in time, with overgrown lawns and abandoned bicycles still lying in driveways. Most houses remain intact though some show signs of forced entry and struggle. The occasional wind chime creates an eerie soundtrack to the apocalypse.",
+      "type": "residential",
+      "danger_level": 2,
+      "resources": [
+        "canned food",
+        "first aid supplies",
+        "tools",
+        "clean linens"
+      ],
+      "features": [
+        "well-maintained community garden",
+        "partially boarded-up houses",
+        "functional rainwater collection system"
+      ],
+      "symbol": "H",
+      "secrets": [
+        "One basement contains a survivor's detailed apocalypse journal"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_2",
+      "coords": [
+        0,
+        0
+      ]
     }
   ]
 }

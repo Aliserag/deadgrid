@@ -1,0 +1,37 @@
+{
+  "skills": [
+    {
+      "name": "Silent Salvager",
+      "type": "scavenging",
+      "description": "Allows the survivor to scavenge quietly, reducing the chance of attracting zombies. At higher levels, it also increases the speed and efficiency of scavenging in high-risk areas.",
+      "prerequisite": "Basic Scavenging level 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces noise made while scavenging by 25%, lowering zombie attraction chance.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Increases scavenging speed by 15% in high-risk areas and further reduces noise by 35%.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Grants a 50% noise reduction and a 25% speed boost in all scavenging activities. Unlocks the ability to silently open locked containers.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Stealth",
+        "Lockpicking"
+      ],
+      "usage_examples": [
+        "Quietly looting a pharmacy surrounded by zombies.",
+        "Quickly gathering supplies from a overrun military checkpoint without alerting the horde.",
+        "Silently breaking into a locked safe in an infested building."
+      ],
+      "id": "skill_1"
+    }
+  ]
+}
