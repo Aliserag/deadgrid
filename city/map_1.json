@@ -1,0 +1,79 @@
+{
+  "name": "The Forgotten Tunnels",
+  "theme": "subway system",
+  "description": "A sprawling underground network of subway tunnels and stations, now overgrown with strange fungi and littered with abandoned trains. The air is thick with the smell of damp concrete and decay. Flickering emergency lights cast eerie shadows, and the distant sound of dripping water echoes through the tunnels. Survivors whisper of something moving in the deeper, unexplored sections.",
+  "size": "large",
+  "dimensions": [
+    40,
+    20
+  ],
+  "points_of_interest": [
+    {
+      "name": "Central Station",
+      "type": "commercial",
+      "description": "A once-bustling transit hub, now a maze of broken ticket booths and overturned benches. The main concourse is relatively clear, but the platforms are overrun.",
+      "coords": [
+        20,
+        5
+      ],
+      "symbol": "S"
+    },
+    {
+      "name": "Maintenance Depot",
+      "type": "industrial",
+      "description": "A workshop filled with rusted tools and broken machinery. Could still have usable parts if you're brave enough to dig through the wreckage.",
+      "coords": [
+        5,
+        15
+      ],
+      "symbol": "M"
+    },
+    {
+      "name": "Supply Cache",
+      "type": "residential",
+      "description": "A hidden stash left by previous survivors, tucked away in an old employee break room. The door is barricaded from the inside.",
+      "coords": [
+        35,
+        10
+      ],
+      "symbol": "C"
+    },
+    {
+      "name": "Collapsed Tunnel",
+      "type": "hazard",
+      "description": "A section of the tunnel that has caved in, creating a dangerous bottleneck. Something seems to be moving in the rubble.",
+      "coords": [
+        25,
+        18
+      ],
+      "symbol": "X"
+    },
+    {
+      "name": "Generator Room",
+      "type": "industrial",
+      "description": "A small room housing backup generators. With some work, they might still provide power to parts of the station.",
+      "coords": [
+        10,
+        2
+      ],
+      "symbol": "G"
+    }
+  ],
+  "danger_level": 7,
+  "resources": [
+    "medical supplies",
+    "tools",
+    "scrap metal",
+    "food rations",
+    "batteries"
+  ],
+  "special_features": [
+    "flickering emergency lights",
+    "overgrown fungi",
+    "abandoned trains",
+    "echoing sounds",
+    "hidden stashes"
+  ],
+  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#                                   #   #\n#   M                               #   #\n#   #                               #   #\n#   #                               #   #\n#   #                  X            #   #\n#   ##################################   #\n########################################",
+  "id": "map_1"
+}

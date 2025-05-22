@@ -1,4 +1,12 @@
 {
-  "maps": [],
-  "active_map": null
+  "maps": [
+    {
+      "id": "map_1",
+      "name": "The Forgotten Tunnels",
+      "theme": "subway system",
+      "size": "large",
+      "danger_level": 7
+    }
+  ],
+  "active_map": "map_1"
 }

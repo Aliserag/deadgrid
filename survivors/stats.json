@@ -1,19 +1,19 @@
 {
-  "day": 10,
-  "health": 81,
-  "morale": 65,
-  "water": 1,
-  "food": 3,
+  "day": 11,
+  "health": 86,
+  "morale": 63,
+  "water": 0,
+  "food": 4,
   "location": [
     0,
     0
   ],
   "base_defense": 4,
-  "last_action": "signal",
+  "last_action": "scavenge",
   "status_effects": [
     {
       "name": "Fog Anxiety",
-      "duration": 2,
+      "duration": 1,
       "effect": "-5% perception in fog"
     }
   ],
@@ -28,7 +28,7 @@
     {
       "name": "reinforced flashlight",
       "type": "tool",
-      "durability": 5,
+      "durability": 4,
       "bonus": "20% brighter beam"
     },
     {
@@ -40,20 +40,20 @@
     {
       "name": "Salvage Bicycle",
       "type": "transport",
-      "durability": 7,
+      "durability": 6,
       "bonus": "+1 inventory slot when scavenging"
     }
   ],
   "materials": {
-    "metal": 0,
+    "metal": 2,
     "fabric": 1,
     "circuitry": 0
   },
   "factions": {
     "watchers": {
       "disposition": "neutral",
-      "last_seen": "east",
-      "activity": "signaling back"
+      "last_seen": "generator_room",
+      "activity": "fresh markings"
     },
     "caravan_collective": {
       "disposition": "neutral",
@@ -64,7 +64,8 @@
   "threat_level": "moderate",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
-    "Rustbelt Tool & Die"
+    "Rustbelt Tool & Die",
+    "Generator Room"
   ],
   "skills": [
     "Silent Salvager"
@@ -75,6 +76,11 @@
       "content": "They're learning! Don't let them\u2014 [screams]",
       "origin": "unknown",
       "threat_implication": "high"
+    },
+    {
+      "content": "[static]...repeat...sector 7 compromised...[static]",
+      "origin": "watchers?",
+      "threat_implication": "medium"
     }
   ]
 }

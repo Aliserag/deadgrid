@@ -24,7 +24,9 @@
       "id": "faction_1",
       "members": [
         "npc_1",
-        "npc_2"
+        "npc_2",
+        "npc_3",
+        "npc_4"
       ],
       "relations": {}
     }

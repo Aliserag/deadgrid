@@ -49,6 +49,56 @@
       "faction_name": "The Caravan Collective",
       "status": "alive",
       "relationship": -31
+    },
+    {
+      "name": "Marcus 'Hawk' Callahan",
+      "age": 42,
+      "background": "Former Army Ranger turned private security contractor. Specialized in high-risk convoy protection in conflict zones before the outbreak.",
+      "description": "A grizzled man with a shaved head and a network of scars across his forearms. His piercing blue eyes constantly scan for threats, but he speaks with surprising warmth when negotiating deals. Wears a modified tactical vest with caravan insignia.",
+      "motivation": "Believes secure trade routes are the only way to prevent humanity from descending into complete barbarism. Secretly hopes to find his estranged daughter among the survivor settlements.",
+      "skills": [
+        "Convoy defense tactics",
+        "Hand-to-hand combat",
+        "Negotiation under pressure",
+        "Improvised weapon crafting"
+      ],
+      "items": [
+        "Customized ballistic briefcase (doubles as shield)",
+        "Dog-eared ledger of trade routes and safehouses",
+        "Pre-war military issue compass that always points north"
+      ],
+      "quirk": "Constantly fidgets with a silver challenge coin from his Ranger days, flipping it between his fingers during tense moments.",
+      "secret": "His caravan accidentally transported the infected that overran the Greenbrier settlement, though he's convinced it was sabotage by a rival faction.",
+      "id": "npc_3",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": 31
+    },
+    {
+      "name": "Eleanor 'Ellie' Whitmore",
+      "age": 42,
+      "background": "Former high school history teacher who specialized in ancient trade routes and barter economies. She secretly ran an underground book exchange for banned historical texts.",
+      "description": "A wiry woman with salt-and-pepper hair kept in a practical braid, her sharp green eyes always scanning for opportunities. She speaks with measured precision but has a warm, encouraging tone that disarms strangers.",
+      "motivation": "To rebuild civilization through a network of safe trade routes, proving humanity can cooperate even in darkness.",
+      "skills": [
+        "Bartering & negotiation",
+        "Historical knowledge of trade systems",
+        "Basic first aid",
+        "Persuasive storytelling"
+      ],
+      "items": [
+        "A dog-eared copy of 'The Silk Road: A History'",
+        "A brass compass that always points to the last safe trade post",
+        "A hidden ledger of favors owed"
+      ],
+      "quirk": "Constantly makes historical comparisons to current situations ('This reminds me of when the Phoenicians...')",
+      "secret": "Her underground book exchange accidentally spread the first rumors of the coming apocalypse - she blames herself for not sounding the alarm sooner.",
+      "id": "npc_4",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": -22
     }
   ]
 }
