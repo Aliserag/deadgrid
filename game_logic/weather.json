@@ -1,0 +1,36 @@
+{
+  "current_conditions": {
+    "type": "clear",
+    "severity": 2,
+    "duration": 3,
+    "effects": [
+      "narrative_clear skies",
+      "narrative_good visibility"
+    ]
+  },
+  "forecast": [
+    {
+      "day": 1,
+      "type": "clear",
+      "severity": 2
+    },
+    {
+      "day": 2,
+      "type": "clear",
+      "severity": 2
+    },
+    {
+      "day": 3,
+      "type": "clear",
+      "severity": 1
+    }
+  ],
+  "season": "spring",
+  "history": [
+    {
+      "date": "2025-05-22",
+      "conditions": "clear",
+      "severity": 1
+    }
+  ]
+}

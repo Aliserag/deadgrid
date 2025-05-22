@@ -1,0 +1,31 @@
+{
+  "locations": [
+    {
+      "name": "Abandoned Mega Mart",
+      "description": "A once-bustling retail giant now stands as a hollow shell of consumerism, its automatic doors permanently jammed open. The flickering emergency lights cast eerie shadows across overturned shopping carts and scattered debris. The faint smell of rotting produce mixes with something more sinister deeper in the store.",
+      "type": "commercial",
+      "danger_level": 7,
+      "resources": [],
+      "features": [
+        "Collapsed shelving creating hazardous pathways",
+        "Bloody handprints leading to the stockroom",
+        "Shattered glass everywhere from looted electronics section"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "Rumored manager's office safe still intact behind barricaded door"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Stockroom Stalkers (zombies that hide in shelves and ambush survivors)"
+        ]
+      },
+      "id": "loc_1",
+      "coords": [
+        0,
+        0
+      ]
+    }
+  ]
+}

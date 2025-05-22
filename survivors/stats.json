@@ -1,7 +1,7 @@
 {
-  "day": 7,
+  "day": 8,
   "health": 83,
-  "morale": 63,
+  "morale": 65,
   "water": 1,
   "food": 2,
   "location": [
@@ -9,15 +9,26 @@
     0
   ],
   "base_defense": 4,
-  "last_action": "defend",
+  "last_action": "signal",
   "status_effects": [],
   "traits": [],
   "gear": [
     {
       "name": "reinforced flashlight",
       "type": "tool",
-      "durability": 7,
+      "durability": 6,
       "bonus": "20% brighter beam"
+    },
+    {
+      "name": "vest",
+      "type": "armor",
+      "durability": 5,
+      "bonus": "+5% damage resistance"
+    },
+    {
+      "name": "Vest",
+      "type": "armor",
+      "durability": 93
     }
   ],
   "materials": {
@@ -30,6 +41,11 @@
       "disposition": "neutral",
       "last_seen": "east",
       "activity": "increased"
+    },
+    "caravan_collective": {
+      "disposition": "neutral",
+      "last_seen": "south",
+      "activity": "passing through"
     }
   },
   "threat_level": "moderate"
