@@ -1334,9 +1334,29 @@ export default function Game() {
       }));
       addLog("The attack damaged your camp defenses.");
     }
+    
+    // Check if this attack resulted in game over
+    setTimeout(() => checkGameOver(), 0);
   };
 
-  // Consume daily resources at camp
+  // Helper function to check if game should end due to all survivors being lost
+  const checkGameOver = () => {
+    if (gameState.survivors <= 0 && gameState.phase === 'camp') {
+      // All survivors are dead, game over
+      addLog("With all survivors lost, your camp cannot sustain itself. Your settlement has fallen.");
+      
+      // Set game to dead phase
+      setGameState(prev => ({
+        ...prev,
+        phase: 'dead'
+      }));
+      
+      return true;
+    }
+    return false;
+  };
+
+  // Update consume resources function to check for game over
   const consumeResources = () => {
     const foodNeeded = 1 + Math.floor(gameState.survivors / 2);
     const waterNeeded = 1 + Math.floor(gameState.survivors / 2);
@@ -1367,6 +1387,9 @@ export default function Game() {
           survivors: prev.survivors - 1
         }));
         addLog("A survivor has died from lack of resources.");
+        
+        // Check if this was the last survivor
+        setTimeout(() => checkGameOver(), 0);
       }
     }
   };
@@ -1565,6 +1588,9 @@ export default function Game() {
             survivors: prev.survivors - 1
           }));
           addLog("The scavenging party encountered trouble. One person didn't make it back.");
+          
+          // Check if this was the last survivor
+          setTimeout(() => checkGameOver(), 0);
         } else {
           addLog("The scavenging party returned empty-handed. At least everyone made it back safely.");
         }
@@ -2057,6 +2083,9 @@ export default function Game() {
         }));
         
         addLog(`The mission failed. The team retreated with ${casualties} ${casualties === 1 ? 'casualty' : 'casualties'}.`);
+        
+        // Check if this mission caused game over
+        setTimeout(() => checkGameOver(), 0);
       } else {
         addLog("The mission failed. You barely escaped with your life.");
       }
@@ -2534,6 +2563,13 @@ export default function Game() {
     addLog(outcomeMessage);
     setGameState(newGameState);
     setShowCampAttackDialog(false);
+    
+    // Check if this defense resulted in game over
+    setTimeout(() => {
+      if (newGameState.survivors <= 0) {
+        checkGameOver();
+      }
+    }, 0);
   };
 
   // Toggle party dialog
