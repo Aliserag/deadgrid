@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Military-grade Rifle of Zombie Slaying",
+      "description": "A military-grade rifle that could save your life in the right situation. Effects: +22% Zombie Damage, +18% Critical Chance.",
+      "emoji": "🔫",
+      "category": "weapon",
+      "rarity": "epic",
+      "effects": [
+        {
+          "name": "zombie_damage",
+          "value": 22
+        },
+        {
+          "name": "critical_chance",
+          "value": 18
+        }
+      ],
+      "source": "military_base",
+      "date_found": "2023-08-15"
+    },
+    {
+      "id": 2,
+      "name": "Tactical Vest of Endurance",
+      "description": "A tactical vest offering protection in the dangerous world. Effects: +15% Protection, +20% Durability.",
+      "emoji": "🦺",
+      "category": "armor",
+      "rarity": "rare",
+      "effects": [
+        {
+          "name": "protection",
+          "value": 15
+        },
+        {
+          "name": "durability",
+          "value": 20
+        }
+      ],
+      "source": "police_station",
+      "date_found": "2023-08-20"
+    },
+    {
+      "id": 3,
+      "name": "Hospital-grade First Aid Kit of Healing",
+      "description": "Some hospital-grade first aid kit that could help treat wounds or illness. Effects: +26% Healing, +32% Recovery Time.",
+      "emoji": "🩹",
+      "category": "medical",
+      "rarity": "rare",
+      "effects": [
+        {
+          "name": "healing",
+          "value": 26
+        },
+        {
+          "name": "recovery_time",
+          "value": 32
+        }
+      ],
+      "source": "hospital",
+      "date_found": "2023-09-01"
+    },
+    {
+      "id": 4,
+      "name": "Preserved MRE",
+      "description": "Some preserved mre to keep hunger at bay. Effects: +13% Nutrition.",
+      "emoji": "🥫",
+      "category": "food",
+      "rarity": "common",
+      "effects": [
+        {
+          "name": "nutrition",
+          "value": 13
+        }
+      ],
+      "source": "military_base",
+      "date_found": "2023-09-05"
+    },
+    {
+      "id": 5,
+      "name": "High-tech Radio of Reliability",
+      "description": "A high-tech radio useful for survival tasks. Effects: +25% Signal Strength, +17% Battery Life.",
+      "emoji": "📻",
+      "category": "tools",
+      "rarity": "rare",
+      "effects": [
+        {
+          "name": "signal_strength",
+          "value": 25
+        },
+        {
+          "name": "battery_life",
+          "value": 17
+        }
+      ],
+      "source": "radio_tower",
+      "date_found": "2023-09-10"
+    },
+    {
+      "id": 6,
+      "name": "Ancient Relic of the Ancients",
+      "description": "A ancient relic with mysterious properties. Effects: +25% Faction Rep, +30% Zombie Repellent, +10% Skill Bonus.",
+      "emoji": "🧿",
+      "category": "rare",
+      "rarity": "legendary",
+      "effects": [
+        {
+          "name": "faction_rep",
+          "value": 25
+        },
+        {
+          "name": "zombie_repellent",
+          "value": 30
+        },
+        {
+          "name": "skill_bonus",
+          "value": 10
+        }
+      ],
+      "source": "government_facility",
+      "date_found": "2023-09-15"
+    }
+  ],
+  "next_id": 7
+} 

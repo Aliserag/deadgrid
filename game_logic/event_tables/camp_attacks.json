@@ -1,0 +1,253 @@
+{
+  "event_type": "camp_attack",
+  "description": "Events that occur when zombies break into the camp",
+  
+  "attack_types": [
+    {
+      "id": "small_breach",
+      "name": "Small Breach",
+      "description": "A few zombies have found a weak point in your defenses and broken through.",
+      "flavor_text": [
+        "The sound of splintering wood breaks the night's silence. A lone zombie has torn through your makeshift barrier.",
+        "A muffled crash from the east side of camp sends your heart racing. Zombies have found a way in.",
+        "The danger was subtle - a single zombie wandering in through an overlooked gap in your defenses.",
+        "You're awakened by screams - a breach in the perimeter has let zombies filter into camp."
+      ],
+      "min_zombies": 1,
+      "max_zombies": 5,
+      "severity": "low",
+      "base_chance": 0.15,
+      "min_day": 1
+    },
+    {
+      "id": "coordinated_attack",
+      "name": "Coordinated Attack",
+      "description": "A sizeable group of zombies is attacking multiple points of your camp simultaneously.",
+      "flavor_text": [
+        "It's as if they're working together - zombies pound at every entrance simultaneously.",
+        "Multiple breaches reported - the undead are filtering in from different points around the perimeter.",
+        "This isn't random - zombies are attacking every weak point in your defenses at once.",
+        "The attack comes from all directions. Somehow, the dead have found a way to organize."
+      ],
+      "min_zombies": 4,
+      "max_zombies": 12,
+      "severity": "medium",
+      "base_chance": 0.08,
+      "min_day": 7
+    },
+    {
+      "id": "horde_siege",
+      "name": "Horde Siege",
+      "description": "A massive horde has surrounded your camp and is breaking in from all sides.",
+      "flavor_text": [
+        "The moans are deafening - a wall of walking corpses surrounds the entire camp, pressing inward.",
+        "There's nowhere to run. Hundreds of them have surrounded the camp, and the perimeter is failing.",
+        "It's a full-scale siege. The horde must have been tracking you for days.",
+        "The camp shudders under the weight of countless bodies. The fence is collapsing and they're pouring in."
+      ],
+      "min_zombies": 10,
+      "max_zombies": 30,
+      "severity": "high",
+      "base_chance": 0.05,
+      "min_day": 14
+    },
+    {
+      "id": "stealth_infiltration",
+      "name": "Stealth Infiltration",
+      "description": "Zombies have quietly broken into your camp during the night.",
+      "flavor_text": [
+        "You wake to find them already inside. Somehow, they got in without triggering any alarms.",
+        "The first scream comes from within camp itself - they're already past the defenses.",
+        "By the time you realize what's happening, zombies are wandering freely between the shelters.",
+        "The breach was silent, the infiltration complete. You discover them only when it's almost too late."
+      ],
+      "min_zombies": 2,
+      "max_zombies": 8,
+      "severity": "medium",
+      "base_chance": 0.07,
+      "min_day": 5
+    },
+    {
+      "id": "desperate_scavengers",
+      "name": "Desperate Scavengers",
+      "description": "Human scavengers tried to raid your camp but attracted zombies in the process.",
+      "flavor_text": [
+        "Gunshots wake you - raiders tried to break in, but they brought the dead with them.",
+        "The raiders didn't expect the horde. Now everyone's paying the price.",
+        "The break-in attempt went wrong. Now there are bodies - living and dead - at your gates.",
+        "They came for your supplies, but they were followed. Now zombies pour in through the breach they made."
+      ],
+      "min_zombies": 3,
+      "max_zombies": 10,
+      "severity": "medium",
+      "base_chance": 0.06,
+      "min_day": 10
+    }
+  ],
+  
+  "defense_options": [
+    {
+      "id": "fight_back",
+      "name": "Fight Back",
+      "description": "Engage the zombies with weapons to protect your camp.",
+      "flavor_text": [
+        "Weapons ready. You'll make a stand here and push them back.",
+        "There's no choice - you have to fight to protect everything you've built.",
+        "Your people form a defensive line, weapons raised against the approaching dead.",
+        "The dead think your camp is easy prey. You'll show them otherwise."
+      ],
+      "requirements": {
+        "ammo": 3,
+        "min_survivors": 2
+      },
+      "outcomes": {
+        "success": [
+          "The gunfire finally stops as the last zombie falls. Your defense holds.",
+          "Panting and splattered with gore, your survivors stand victorious over the dead.",
+          "The attack is repelled. Your camp remains secure, though at a cost.",
+          "You've won this round. The corpses of the truly dead litter your perimeter."
+        ],
+        "failure": [
+          "There were too many. You had to fall back, leaving sections of camp overrun.",
+          "Despite your best efforts, they broke through. The cost in lives was severe.",
+          "The defense collapses under the zombie assault. Panic spreads through the survivors.",
+          "Your ammunition runs dry before the last of them falls. The dead pour through the gap."
+        ]
+      }
+    },
+    {
+      "id": "barricade",
+      "name": "Barricade",
+      "description": "Reinforce weak points and hold out against the attack.",
+      "flavor_text": [
+        "Quickly! Shore up the defenses before they break through!",
+        "No time to fight - you need to strengthen the barriers.",
+        "The focus is on reinforcement. Block every entry point you can find.",
+        "Working feverishly, your people stack anything they can find against the failing walls."
+      ],
+      "requirements": {
+        "materials": 2,
+        "min_survivors": 1
+      },
+      "outcomes": {
+        "success": [
+          "The reinforcements hold. You can hear the zombies still clawing at the walls, but they won't get through now.",
+          "Your hasty fortifications stand strong. The camp remains secure.",
+          "It worked - the barricades are holding. The attack has been contained.",
+          "With the last barrier secured, you finally allow yourself to breathe. You've survived."
+        ],
+        "failure": [
+          "The barriers fail under the relentless assault. They're coming in.",
+          "It's not enough. The reinforcements collapse and the dead pour through.",
+          "Despite your efforts, the barricades cannot hold back so many.",
+          "The sound of splintering wood signals the failure of your defenses."
+        ]
+      }
+    },
+    {
+      "id": "evacuate",
+      "name": "Evacuate",
+      "description": "Abandon camp temporarily and escape with what you can carry.",
+      "flavor_text": [
+        "There's no choice - we have to leave now!",
+        "Grab only what you need. We're evacuating immediately.",
+        "The camp is lost. Your priority now is getting your people out alive.",
+        "No time to fight or build barricades. You need to run."
+      ],
+      "requirements": {
+        "min_survivors": 1
+      },
+      "outcomes": {
+        "success": [
+          "You watch from a distance as zombies swarm through your abandoned camp. At least your people made it out.",
+          "The evacuation succeeds. Your group escapes into the night, leaving the dead to claim your former home.",
+          "Looking back, you see your camp overrun. But your people are safe, and that's what matters.",
+          "You've lost your shelter, but not your lives. You'll rebuild elsewhere."
+        ],
+        "failure": [
+          "The escape route is cut off. Some of your people don't make it out.",
+          "It's too late for a clean escape. The zombies catch several of your slower members.",
+          "The evacuation descends into chaos. Not everyone survives the desperate flight.",
+          "Your retreat turns into a rout as zombies pour into your midst."
+        ]
+      }
+    }
+  ],
+  
+  "factors": {
+    "attack_chance_modifiers": {
+      "zombie_density": [
+        {"level": 1, "modifier": 0.03},
+        {"level": 3, "modifier": 0.09},
+        {"level": 5, "modifier": 0.15},
+        {"level": 8, "modifier": 0.24},
+        {"level": 10, "modifier": 0.30}
+      ],
+      "camp_defense": [
+        {"level": 0, "modifier": 0.10},
+        {"level": 2, "modifier": -0.05},
+        {"level": 5, "modifier": -0.20},
+        {"level": 8, "modifier": -0.35},
+        {"level": 10, "modifier": -0.50}
+      ],
+      "weather": [
+        {"type": "clear", "modifier": 0.00},
+        {"type": "rain", "modifier": 0.05},
+        {"type": "fog", "modifier": 0.15},
+        {"type": "storm", "modifier": 0.10}
+      ],
+      "night_guard": [
+        {"guarded": true, "modifier": -0.20},
+        {"guarded": false, "modifier": 0.20}
+      ],
+      "camp_type": [
+        {"type": "open", "modifier": 0.10},
+        {"type": "building", "modifier": -0.15}
+      ],
+      "recent_attack": [
+        {"days_since": 1, "modifier": -0.25},
+        {"days_since": 2, "modifier": -0.15},
+        {"days_since": 3, "modifier": -0.05}
+      ]
+    },
+    
+    "defense_success_modifiers": {
+      "fight_back": {
+        "ammo": 0.05,
+        "survivors": 0.10,
+        "defense": 0.05
+      },
+      "barricade": {
+        "materials": 0.10,
+        "survivors": 0.05,
+        "defense": 0.10
+      },
+      "evacuate": {
+        "camp_type_open": 0.15,
+        "camp_type_building": -0.20,
+        "survivors": -0.05
+      }
+    }
+  },
+  
+  "narrative_templates": {
+    "attack_start": [
+      "Day {day}: The sound of zombies at the perimeter grows louder. Something feels different about tonight.",
+      "Day {day}: You're awakened suddenly in the dark. The camp is under attack.",
+      "Day {day}: The breach happens quickly. One moment the camp is secure, the next...",
+      "Day {day}: Screams echo through camp as the first zombies break through your defenses."
+    ],
+    "attack_end_success": [
+      "The attack is over. Your camp stands, though not without cost.",
+      "As dawn breaks, you survey the damage. You survived, but the dead will be back.",
+      "The defense was successful, but this was a harsh reminder of the world you live in.",
+      "You've protected your home, for now. But the noise may attract more."
+    ],
+    "attack_end_failure": [
+      "The attack leaves your camp in ruins. You'll need to rebuild what you've lost.",
+      "The cost was high. Too high. But at least some survived to see another day.",
+      "As the survivors regroup, the scale of the disaster becomes clear.",
+      "You've suffered a devastating blow. Recovery will be difficult."
+    ]
+  }
+} 

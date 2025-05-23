@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Paper, Typography, IconButton, Button, Dialog, DialogTitle, DialogContent, DialogActions, Tooltip } from '@mui/material';
+import { Box, Grid, Paper, Typography, IconButton, Button, Dialog, DialogTitle, DialogContent, DialogActions, Tooltip, Badge } from '@mui/material';
 import { motion } from 'framer-motion';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import InventoryIcon from '@mui/icons-material/Inventory';
 import { useRouter } from 'next/navigation';
 
 // Cell types
@@ -24,6 +25,25 @@ interface SurvivorData {
   disposition: 'friendly' | 'neutral' | 'hostile';
   skills: string[];
   isDiscovered: boolean;
+}
+
+// Interface for loot items
+interface LootEffect {
+  name: string;
+  value: number;
+}
+
+interface LootItem {
+  id: number;
+  name: string;
+  description: string;
+  emoji: string;
+  category: string;
+  rarity: string;
+  effects: LootEffect[];
+  source: string;
+  date_found: string;
+  equipped?: boolean;
 }
 
 // Interface for faction reputation
@@ -54,6 +74,7 @@ interface GameState {
   };
   cityGrid: CellContents[];
   log: string[];
+  loot: LootItem[]; // Player's collected loot items
 }
 
 // Grid dimensions
@@ -144,8 +165,13 @@ export default function Game() {
   const [showSurvivorDialog, setShowSurvivorDialog] = useState(false);
   const [showContactDialog, setShowContactDialog] = useState(false);
   const [showNightEventDialog, setShowNightEventDialog] = useState(false);
+  const [showInventoryDialog, setShowInventoryDialog] = useState(false);
   const [selectedCellIndex, setSelectedCellIndex] = useState<number | null>(null);
   const [currentSurvivor, setCurrentSurvivor] = useState<SurvivorData | null>(null);
+  const [selectedLootItem, setSelectedLootItem] = useState<LootItem | null>(null);
+  const [showCampAttackDialog, setShowCampAttackDialog] = useState(false);
+  const [currentAttack, setCurrentAttack] = useState<any>(null);
+  const [attackDefenseOptions, setAttackDefenseOptions] = useState<any[]>([]);
   
   // Generate random player start position
   const getRandomStartPosition = () => {
@@ -181,6 +207,7 @@ export default function Game() {
     },
     cityGrid: [],
     log: ['Day 1: You find yourself alone in a zombie-infested city.'],
+    loot: [],
   });
 
   useEffect(() => {
@@ -468,8 +495,8 @@ export default function Game() {
         addLog(`You successfully defeated the ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'}. ${casualties > 0 ? `Lost ${casualties} survivors.` : ''} -2 ammo.`);
         
         // Chance to find loot
-        if (Math.random() < 0.4) {
-          addResources();
+        if (Math.random() < 0.7) { // Increase chance since that's a key feature now
+          findLoot(zombieType);
         }
       } else {
         if (casualties >= gameState.survivors + 1) {
@@ -505,27 +532,140 @@ export default function Game() {
   const handleSurvivor = (action: 'recruit' | 'ignore') => {
     if (selectedCellIndex === null) return;
     
-    if (action === 'recruit') {
-      // Add survivor to group
-      const newGrid = [...gameState.cityGrid];
-      // Remove player from current position
-      newGrid[gameState.playerPosition].hasPlayer = false;
-      // Move player to survivor position and clear survivor
-      newGrid[selectedCellIndex] = {
-        type: 'empty',
-        hasPlayer: true
-      };
+    // Generate a random survivor data
+    const survivorId = `survivor-${selectedCellIndex}`;
+    const names = ["Alex", "Morgan", "Casey", "Jordan", "Taylor", "Riley", "Quinn", "Avery", "Blake", "Cameron"];
+    const factions = [null, "Traders", "Medics", "Raiders", "Military Remnant", "Scientists"];
+    const skills = ["Medicine", "Hunting", "Defense", "Engineering", "Crafting", "Leadership", "Scavenging"];
+    
+    // Generate random survivor attributes
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    const randomFaction = factions[Math.floor(Math.random() * factions.length)];
+    const randomSkill = skills[Math.floor(Math.random() * skills.length)];
+    
+    // Determine disposition based on faction or random chance
+    let disposition: 'friendly' | 'neutral' | 'hostile' = 'neutral';
+    let factionReputation = 0;
+    
+    if (randomFaction) {
+      factionReputation = gameState.factionReputations[randomFaction] || 0;
       
-      setGameState(prev => ({
-        ...prev,
-        playerPosition: selectedCellIndex,
-        survivors: prev.survivors + 1,
-        cityGrid: newGrid
-      }));
+      // Calculate chances based on reputation
+      const friendlyChance = 0.3 + (factionReputation > 0 ? factionReputation / 200 : 0); 
+      const hostileChance = 0.2 + (factionReputation < 0 ? Math.abs(factionReputation) / 200 : 0);
       
-      addLog('You recruited a survivor to your group.');
+      const roll = Math.random();
+      if (roll < friendlyChance) {
+        disposition = 'friendly';
+      } else if (roll >= (1 - hostileChance)) {
+        disposition = 'hostile';
+      } else {
+        disposition = 'neutral';
+      }
     } else {
-      addLog('You decided to leave the survivor alone.');
+      // No faction, 40% friendly, 40% neutral, 20% hostile
+      const roll = Math.random();
+      if (roll < 0.4) {
+        disposition = 'friendly';
+      } else if (roll < 0.8) {
+        disposition = 'neutral';
+      } else {
+        disposition = 'hostile';
+      }
+    }
+    
+    if (action === 'recruit') {
+      if (disposition === 'friendly') {
+        // Successful recruitment
+        const newGrid = [...gameState.cityGrid];
+        // Remove player from current position
+        newGrid[gameState.playerPosition].hasPlayer = false;
+        // Move player to survivor position and clear survivor
+        newGrid[selectedCellIndex] = {
+          type: 'empty',
+          hasPlayer: true
+        };
+        
+        setGameState(prev => ({
+          ...prev,
+          playerPosition: selectedCellIndex,
+          survivors: prev.survivors + 1,
+          cityGrid: newGrid
+        }));
+        
+        addLog(`${randomName} was friendly and decided to join your group! +1 survivor with ${randomSkill} skills.`);
+        
+        // If they belonged to a faction, improve reputation
+        if (randomFaction) {
+          updateFactionReputation(randomFaction, 10);
+          addLog(`Your reputation with the ${randomFaction} has improved.`);
+        }
+      } else if (disposition === 'neutral') {
+        // Neutral survivors might join, but less likely
+        const joinChance = 0.3 + (randomFaction ? factionReputation / 300 : 0);
+        
+        if (Math.random() < joinChance) {
+          // They decided to join
+          const newGrid = [...gameState.cityGrid];
+          newGrid[gameState.playerPosition].hasPlayer = false;
+          newGrid[selectedCellIndex] = {
+            type: 'empty',
+            hasPlayer: true
+          };
+          
+          setGameState(prev => ({
+            ...prev,
+            playerPosition: selectedCellIndex,
+            survivors: prev.survivors + 1,
+            cityGrid: newGrid
+          }));
+          
+          addLog(`After some convincing, ${randomName} agreed to join your group. +1 survivor with ${randomSkill} skills.`);
+          
+          if (randomFaction) {
+            updateFactionReputation(randomFaction, 5);
+          }
+        } else {
+          // They rejected the offer
+          addLog(`${randomName} considered your offer but ultimately decided not to join your group.`);
+        }
+      } else {
+        // Hostile survivors - might attack
+        addLog(`${randomName} was hostile and rejected your recruitment attempt.`);
+        
+        // 30% chance of attacking
+        if (Math.random() < 0.3) {
+          addLog(`${randomName} attacked you before fleeing!`);
+          
+          // Small chance of losing resources
+          if (Math.random() < 0.5 && gameState.resources.food > 0) {
+            setGameState(prev => ({
+              ...prev,
+              resources: {
+                ...prev.resources,
+                food: Math.max(0, prev.resources.food - 2)
+              }
+            }));
+            addLog("They stole some of your food supplies. -2 food.");
+          }
+          
+          // Update faction reputation negatively
+          if (randomFaction) {
+            updateFactionReputation(randomFaction, -10);
+            addLog(`Your reputation with the ${randomFaction} has decreased.`);
+          }
+        }
+        
+        // Hostile survivors remain on the map
+      }
+    } else {
+      // Player chose to ignore the survivor
+      addLog(`You decided to leave ${randomName} alone.`);
+      
+      // Small positive reputation for respecting space of hostile survivors
+      if (disposition === 'hostile' && randomFaction) {
+        updateFactionReputation(randomFaction, 2);
+      }
     }
     
     setShowSurvivorDialog(false);
@@ -985,7 +1125,7 @@ export default function Game() {
   const scoutArea = () => {
     // Check if player has already performed an action this day
     if (gameState.hasPerformedAction) {
-      addLog("You've already performed a camp action today. End the day before performing another action.");
+      addLog("You've already performed an action today. End the day before performing another action.");
       return;
     }
     
@@ -1011,6 +1151,11 @@ export default function Game() {
       }));
       
       addLog(`Scout mission successful! Found: +${ammoFound} ammo, +${medicineFound} medicine.`);
+      
+      // Add chance to find loot based on scout range
+      if (Math.random() < 0.3 + (gameState.scoutRange * 0.05)) {
+        findLoot('scouting');
+      }
       
       // Small chance to improve scout range
       if (Math.random() < 0.2) {
@@ -1204,6 +1349,11 @@ export default function Game() {
       }));
       
       addLog(`Exploration successful! Found +${foodFound} food and +${waterFound} water.`);
+      
+      // Add chance to find loot
+      if (Math.random() < 0.3) {
+        findLoot('exploration');
+      }
     } else if (findChance < 0.3) {
       // Discover a new survivor
       const newGrid = [...gameState.cityGrid];
@@ -1232,6 +1382,10 @@ export default function Game() {
       }));
       
       addLog("Your team discovered a hidden resource cache!");
+    } else if (findChance < 0.45) {
+      // Small chance to find rare loot
+      const loot = findLoot('exploration_rare');
+      addLog("Your team found something unusual while exploring!");
     } else {
       addLog("The team explored the area but found nothing of value.");
     }
@@ -1261,6 +1415,11 @@ export default function Game() {
       }));
       
       addLog(`Scavenging successful! Found +${foodFound} food, +${medicineFound} medicine, and +${ammoFound} ammo.`);
+      
+      // Add chance to find loot
+      if (Math.random() < 0.5) {
+        findLoot('building');
+      }
     } else if (findChance < 0.8) {
       // Building is empty
       addLog("The building was already picked clean. Nothing valuable remained.");
@@ -1410,6 +1569,11 @@ export default function Game() {
         
         addLog(`${currentSurvivor.name} was friendly and decided to join your camp! +1 survivor with ${currentSurvivor.skills[0]} skills.`);
         
+        // Chance to get loot from the new survivor
+        if (Math.random() < 0.6) {
+          findLoot('survivor_friendly');
+        }
+        
         // Successful recruitment improves faction reputation significantly
         if (faction) {
           updateFactionReputation(faction, 15);
@@ -1455,6 +1619,11 @@ export default function Game() {
           }));
           
           addLog(`${currentSurvivor.name} offered to trade. You gave ${medicineGiven} medicine and received ${foodReceived} food.`);
+          
+          // Chance to get loot from trading
+          if (Math.random() < 0.4) {
+            findLoot('survivor_trade');
+          }
           
           // Successful trade slightly improves faction reputation
           if (faction) {
@@ -1616,6 +1785,447 @@ export default function Game() {
     }));
     
     addLog(`Resource gathering successful! Found +${foodFound} food, +${waterFound} water, +${medicineFound} medicine, and +${ammoFound} ammo.`);
+    
+    // Add chance to find loot
+    if (Math.random() < 0.7) {
+      findLoot('resource');
+    }
+  };
+
+  // Rarity colors for loot
+  const getLootRarityColor = (rarity: string) => {
+    switch(rarity) {
+      case 'common': return '#ffffff';
+      case 'uncommon': return '#1eff00';
+      case 'rare': return '#0070dd';
+      case 'epic': return '#a335ee';
+      case 'legendary': return '#ff8000';
+      case 'unique': return '#e6cc80';
+      default: return '#ffffff';
+    }
+  };
+
+  // Toggle inventory dialog
+  const toggleInventory = () => {
+    setShowInventoryDialog(!showInventoryDialog);
+  };
+
+  // Handle loot item click in inventory
+  const handleLootItemClick = (item: LootItem) => {
+    setSelectedLootItem(item);
+  };
+
+  // Equip or unequip an item
+  const toggleEquipItem = (item: LootItem) => {
+    if (!item) return;
+    
+    // Create copy of loot array
+    const newLoot = [...gameState.loot];
+    
+    // Find the item
+    const itemIndex = newLoot.findIndex(i => i.id === item.id);
+    if (itemIndex === -1) return;
+    
+    // Toggle equipped status
+    newLoot[itemIndex] = {
+      ...newLoot[itemIndex],
+      equipped: !newLoot[itemIndex].equipped
+    };
+    
+    // Update game state
+    setGameState(prev => ({
+      ...prev,
+      loot: newLoot
+    }));
+    
+    // Update selected item
+    setSelectedLootItem(newLoot[itemIndex]);
+    
+    // Log the action
+    if (newLoot[itemIndex].equipped) {
+      addLog(`You equipped ${item.name}.`);
+    } else {
+      addLog(`You unequipped ${item.name}.`);
+    }
+  };
+
+  // Find loot when defeating zombies, exploring, etc.
+  const findLoot = (source: string) => {
+    // Simulating loot generation since we don't have the backend
+    // In a real implementation, we would call the backend API
+    
+    // Define loot category possibilities based on source
+    let possibleCategories: string[] = [];
+    
+    if (source === 'zombie' || source === 'zombieGroup' || source === 'zombieHorde') {
+      possibleCategories = ['weapon', 'medical', 'armor'];
+    } else if (source === 'resource') {
+      possibleCategories = ['food', 'medical', 'tools'];
+    } else if (source === 'building') {
+      possibleCategories = ['weapon', 'food', 'medical', 'tools', 'armor'];
+    } else if (source === 'survivor') {
+      possibleCategories = ['food', 'medical', 'tools', 'weapon'];
+    } else {
+      possibleCategories = ['weapon', 'food', 'medical', 'tools', 'armor', 'rare'];
+    }
+    
+    // Rarity chance based on source
+    let rarityChance = Math.random();
+    let rarity = 'common';
+    
+    // Adjust rarity chance based on source
+    if (source === 'zombieHorde') rarityChance += 0.2;
+    else if (source === 'zombieGroup') rarityChance += 0.1;
+    
+    // Determine rarity
+    if (rarityChance > 0.99) rarity = 'legendary';
+    else if (rarityChance > 0.95) rarity = 'epic';
+    else if (rarityChance > 0.85) rarity = 'rare';
+    else if (rarityChance > 0.60) rarity = 'uncommon';
+    
+    // Sample loot items for each category (in a real app we would have a bigger database)
+    const lootOptions = {
+      weapon: [
+        { id: 101, name: "Rusty Machete", emoji: "🔪", effects: [{ name: "damage", value: 10 }] },
+        { id: 102, name: "Modified Baseball Bat", emoji: "🏏", effects: [{ name: "stun", value: 10 }] },
+        { id: 103, name: "Military-grade Rifle", emoji: "🔫", effects: [{ name: "range", value: 20 }] }
+      ],
+      armor: [
+        { id: 201, name: "Reinforced Jacket", emoji: "🧥", effects: [{ name: "protection", value: 15 }] },
+        { id: 202, name: "Tactical Vest", emoji: "🦺", effects: [{ name: "durability", value: 20 }] },
+        { id: 203, name: "Military Helmet", emoji: "🪖", effects: [{ name: "protection", value: 25 }] }
+      ],
+      medical: [
+        { id: 301, name: "First Aid Kit", emoji: "🩹", effects: [{ name: "healing", value: 15 }] },
+        { id: 302, name: "Antibiotics", emoji: "💊", effects: [{ name: "infection_resistance", value: 20 }] },
+        { id: 303, name: "Painkillers", emoji: "💉", effects: [{ name: "pain_reduction", value: 25 }] }
+      ],
+      food: [
+        { id: 401, name: "Canned Soup", emoji: "🥫", effects: [{ name: "nutrition", value: 15 }] },
+        { id: 402, name: "Dried Meat", emoji: "🥩", effects: [{ name: "energy", value: 20 }] },
+        { id: 403, name: "MRE Pack", emoji: "🍱", effects: [{ name: "nutrition", value: 25 }] }
+      ],
+      tools: [
+        { id: 501, name: "Flashlight", emoji: "🔦", effects: [{ name: "vision", value: 15 }] },
+        { id: 502, name: "Compass", emoji: "🧭", effects: [{ name: "accuracy", value: 20 }] },
+        { id: 503, name: "Toolkit", emoji: "🧰", effects: [{ name: "repair_bonus", value: 25 }] }
+      ],
+      rare: [
+        { id: 601, name: "Mysterious Artifact", emoji: "🔮", effects: [{ name: "zombie_repellent", value: 15 }] },
+        { id: 602, name: "Ancient Relic", emoji: "📿", effects: [{ name: "faction_rep", value: 20 }] },
+        { id: 603, name: "Hidden Document", emoji: "📜", effects: [{ name: "xp_gain", value: 25 }] }
+      ]
+    };
+    
+    // Select a random category from possible categories
+    const category = possibleCategories[Math.floor(Math.random() * possibleCategories.length)];
+    
+    // Select a random item from that category
+    const baseItem = lootOptions[category as keyof typeof lootOptions][Math.floor(Math.random() * lootOptions[category as keyof typeof lootOptions].length)];
+    
+    // Create a new loot item with unique ID
+    const newLootId = gameState.loot.length > 0 
+      ? Math.max(...gameState.loot.map(item => item.id)) + 1 
+      : 1000;
+    
+    // Create description based on category
+    let description = '';
+    switch(category) {
+      case 'weapon': 
+        description = `A weapon that could save your life in the right situation.`;
+        break;
+      case 'armor':
+        description = `Protective gear that helps you survive in the wasteland.`;
+        break;
+      case 'medical':
+        description = `Medical supplies to treat wounds and illness.`;
+        break;
+      case 'food':
+        description = `Food to keep you going through tough times.`;
+        break;
+      case 'tools':
+        description = `Tools to help with survival tasks.`;
+        break;
+      case 'rare':
+        description = `A mysterious item with unusual properties.`;
+        break;
+    }
+    
+    // Add effect description
+    if (baseItem.effects.length > 0) {
+      const effectDesc = baseItem.effects.map(effect => {
+        let readable = effect.name.replace(/_/g, ' ');
+        return `+${effect.value}% ${readable}`;
+      }).join(', ');
+      
+      description += ` Effects: ${effectDesc}.`;
+    }
+    
+    // Create the new loot item
+    const newLoot: LootItem = {
+      id: newLootId,
+      name: baseItem.name,
+      description: description,
+      emoji: baseItem.emoji,
+      category: category,
+      rarity: rarity,
+      effects: baseItem.effects,
+      source: source,
+      date_found: new Date().toISOString().split('T')[0],
+      equipped: false
+    };
+    
+    // Add to game state
+    setGameState(prev => ({
+      ...prev,
+      loot: [...prev.loot, newLoot]
+    }));
+    
+    // Log the find
+    addLog(`You found ${newLoot.emoji} ${newLoot.name} (${rarity.charAt(0).toUpperCase() + rarity.slice(1)})!`);
+    
+    return newLoot;
+  };
+
+  // Handle camp attack event
+  const handleCampAttack = (attackType: string) => {
+    // Create attack event based on type
+    const attackTypes = {
+      'small_breach': {
+        name: 'Small Breach',
+        description: 'A few zombies have found a weak point in your defenses and broken through.',
+        zombieCount: Math.floor(Math.random() * 5) + 1,
+        severity: 'low'
+      },
+      'coordinated_attack': {
+        name: 'Coordinated Attack',
+        description: 'A sizeable group of zombies is attacking multiple points of your camp simultaneously.',
+        zombieCount: Math.floor(Math.random() * 8) + 4,
+        severity: 'medium'
+      },
+      'horde_siege': {
+        name: 'Horde Siege',
+        description: 'A massive horde has surrounded your camp and is breaking in from all sides.',
+        zombieCount: Math.floor(Math.random() * 20) + 10,
+        severity: 'high'
+      },
+      'stealth_infiltration': {
+        name: 'Stealth Infiltration',
+        description: 'Zombies have quietly broken into your camp during the night.',
+        zombieCount: Math.floor(Math.random() * 6) + 2,
+        severity: 'medium'
+      },
+      'desperate_scavengers': {
+        name: 'Desperate Scavengers',
+        description: 'Human scavengers tried to raid your camp but attracted zombies in the process.',
+        zombieCount: Math.floor(Math.random() * 7) + 3,
+        severity: 'medium'
+      }
+    };
+    
+    // Get attack details
+    const attack = attackTypes[attackType as keyof typeof attackTypes] || attackTypes.small_breach;
+    setCurrentAttack(attack);
+    
+    // Generate defense options based on game state
+    const defenseOptions = [];
+    
+    // Fight Back option - requires ammo and survivors
+    if (gameState.resources.ammo >= 3 && gameState.survivors >= 2) {
+      defenseOptions.push({
+        id: 'fight_back',
+        name: 'Fight Back',
+        description: 'Engage the zombies with weapons to protect your camp.',
+        successChance: Math.min(0.95, 0.7 + (gameState.campDefense * 0.05) + (Math.min(5, gameState.survivors) * 0.1)),
+        consequences: {
+          ammoUsed: Math.floor(Math.random() * 5) + 3,
+          casualties: {
+            success: Math.floor(Math.random() * 2),
+            failure: Math.floor(Math.random() * 3) + 1
+          }
+        }
+      });
+    }
+    
+    // Barricade option - always available
+    defenseOptions.push({
+      id: 'barricade',
+      name: 'Barricade',
+      description: 'Reinforce weak points and hold out against the attack.',
+      successChance: Math.min(0.95, 0.5 + (gameState.campDefense * 0.1)),
+      consequences: {
+        casualties: {
+          success: 0,
+          failure: Math.floor(Math.random() * 2) + 1
+        },
+        defenseImprovement: 1
+      }
+    });
+    
+    // Evacuate option - harder in buildings
+    const evacuateBonus = gameState.campType === 'open' ? 0.15 : -0.2;
+    defenseOptions.push({
+      id: 'evacuate',
+      name: 'Evacuate',
+      description: 'Abandon camp temporarily and escape with what you can carry.',
+      successChance: Math.min(0.95, Math.max(0.1, 0.8 + evacuateBonus - (gameState.survivors * 0.05))),
+      consequences: {
+        casualties: {
+          success: 0,
+          failure: Math.floor(Math.random() * 4) + 1
+        },
+        resourceLoss: 2.0 // Multiplier for resource loss
+      }
+    });
+    
+    setAttackDefenseOptions(defenseOptions);
+    setShowCampAttackDialog(true);
+  };
+  
+  // Handle defense choice
+  const handleDefenseChoice = (defenseOption: any) => {
+    if (!currentAttack) return;
+    
+    // Roll for success
+    const success = Math.random() < defenseOption.successChance;
+    
+    // Calculate casualties
+    let casualties = 0;
+    if (success) {
+      casualties = defenseOption.consequences.casualties.success;
+    } else {
+      casualties = defenseOption.consequences.casualties.failure;
+    }
+    casualties = Math.min(casualties, gameState.survivors);
+    
+    // Calculate zombie kills
+    let zombieKills = 0;
+    if (success) {
+      // More kills if fighting back
+      if (defenseOption.id === 'fight_back') {
+        zombieKills = Math.floor(currentAttack.zombieCount * 0.7);
+      } else {
+        zombieKills = Math.floor(currentAttack.zombieCount * 0.3);
+      }
+    } else {
+      // Some kills even on failure
+      zombieKills = Math.floor(currentAttack.zombieCount * 0.2);
+    }
+    
+    // Calculate resource loss
+    const resourceLoss: {[key: string]: number} = {};
+    const lossMultiplier = defenseOption.consequences.resourceLoss || 1.0;
+    
+    if (currentAttack.severity === 'low') {
+      resourceLoss.food = Math.floor(Math.random() * 3) * lossMultiplier;
+      resourceLoss.medicine = Math.floor(Math.random() * 2) * lossMultiplier;
+    } else if (currentAttack.severity === 'medium') {
+      resourceLoss.food = Math.floor(Math.random() * 3 + 1) * lossMultiplier;
+      resourceLoss.medicine = Math.floor(Math.random() * 3) * lossMultiplier;
+      resourceLoss.water = Math.floor(Math.random() * 3) * lossMultiplier;
+    } else {
+      resourceLoss.food = Math.floor(Math.random() * 4 + 2) * lossMultiplier;
+      resourceLoss.medicine = Math.floor(Math.random() * 3 + 1) * lossMultiplier;
+      resourceLoss.water = Math.floor(Math.random() * 4 + 1) * lossMultiplier;
+    }
+    
+    // Ammo used for fighting back
+    let ammoUsed = 0;
+    if (defenseOption.id === 'fight_back') {
+      ammoUsed = defenseOption.consequences.ammoUsed;
+      ammoUsed = Math.min(ammoUsed, gameState.resources.ammo);
+    }
+    
+    // Defense damage or improvement
+    let defenseDamage = 0;
+    let defenseImprovement = 0;
+    
+    if (!success) {
+      // Defense damage on failure
+      if (currentAttack.severity === 'low') {
+        defenseDamage = Math.floor(Math.random() * 2);
+      } else if (currentAttack.severity === 'medium') {
+        defenseDamage = Math.floor(Math.random() * 2) + 1;
+      } else {
+        defenseDamage = Math.floor(Math.random() * 3) + 2;
+      }
+    }
+    
+    if (success && defenseOption.id === 'barricade') {
+      defenseImprovement = defenseOption.consequences.defenseImprovement || 0;
+    }
+    
+    // Apply all effects to game state
+    const newGameState = {...gameState};
+    
+    // Update survivors
+    newGameState.survivors = Math.max(0, newGameState.survivors - casualties);
+    
+    // Update zombies
+    newGameState.zombies = Math.max(0, newGameState.zombies - zombieKills);
+    
+    // Update camp defense
+    newGameState.campDefense = Math.max(0, newGameState.campDefense - defenseDamage + defenseImprovement);
+    
+    // Update resources
+    if (ammoUsed > 0) {
+      newGameState.resources.ammo = Math.max(0, newGameState.resources.ammo - ammoUsed);
+    }
+    
+    Object.keys(resourceLoss).forEach(resource => {
+      if (resourceLoss[resource] > 0 && newGameState.resources[resource as keyof typeof newGameState.resources] !== undefined) {
+        newGameState.resources[resource as keyof typeof newGameState.resources] = Math.max(
+          0, 
+          newGameState.resources[resource as keyof typeof newGameState.resources] - resourceLoss[resource]
+        );
+      }
+    });
+    
+    // Generate outcome message
+    let outcomeMessage = success 
+      ? `You successfully defended against the ${currentAttack.name.toLowerCase()}.` 
+      : `Your defense against the ${currentAttack.name.toLowerCase()} failed.`;
+      
+    if (casualties > 0) {
+      outcomeMessage += ` You lost ${casualties} ${casualties === 1 ? 'survivor' : 'survivors'}.`;
+    }
+    
+    if (zombieKills > 0) {
+      outcomeMessage += ` You killed ${zombieKills} zombies.`;
+    }
+    
+    if (defenseDamage > 0) {
+      outcomeMessage += ` Your camp defenses were damaged by ${defenseDamage} points.`;
+    }
+    
+    if (defenseImprovement > 0) {
+      outcomeMessage += ` You improved your camp defenses by ${defenseImprovement} points.`;
+    }
+    
+    if (ammoUsed > 0) {
+      outcomeMessage += ` Used ${ammoUsed} ammunition.`;
+    }
+    
+    const resourceMessages = [];
+    Object.keys(resourceLoss).forEach(resource => {
+      if (resourceLoss[resource] > 0) {
+        resourceMessages.push(`${resourceLoss[resource]} ${resource}`);
+      }
+    });
+    
+    if (resourceMessages.length > 0) {
+      outcomeMessage += ` Lost ${resourceMessages.join(', ')}.`;
+    }
+    
+    // Check for loot opportunity
+    if (success && Math.random() < (currentAttack.severity === 'high' ? 0.7 : currentAttack.severity === 'medium' ? 0.5 : 0.3)) {
+      const loot = findLoot('zombie_' + currentAttack.name.toLowerCase().replace(' ', '_'));
+      outcomeMessage += ` You found ${loot.emoji} ${loot.name} while defending!`;
+    }
+    
+    addLog(outcomeMessage);
+    setGameState(newGameState);
+    setShowCampAttackDialog(false);
   };
 
   if (!mounted) {
@@ -1645,9 +2255,16 @@ export default function Game() {
         <Typography variant="h6" sx={{ color: '#ff4d4d' }}>
           Day {gameState.day} 
         </Typography>
-        <Typography variant="body2" sx={{ color: '#4fc3f7' }}>
-          {gameState.hasCamp ? 'Camp established' : 'No camp yet'}
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Typography variant="body2" sx={{ color: '#4fc3f7', mr: 2 }}>
+            {gameState.hasCamp ? 'Camp established' : 'No camp yet'}
+          </Typography>
+          <Badge badgeContent={gameState.loot.filter(item => item.equipped).length} color="primary">
+            <IconButton onClick={toggleInventory} sx={{ color: '#ff9800' }}>
+              <InventoryIcon />
+            </IconButton>
+          </Badge>
+        </Box>
       </Box>
 
       {/* Main Game Grid */}
@@ -2093,6 +2710,9 @@ export default function Game() {
           <Typography sx={{ color: '#fff', my: 2 }}>
             You found another survivor. Would you like to recruit them to your group?
           </Typography>
+          <Typography sx={{ color: '#ddd', my: 2, fontStyle: 'italic' }}>
+            Note: Whether they join depends on their disposition towards you. Some survivors may be friendly, others neutral or hostile. Your faction reputation can influence their decision.
+          </Typography>
         </DialogContent>
         <DialogActions sx={{ p: 2 }}>
           <Button 
@@ -2199,6 +2819,186 @@ export default function Game() {
             Scavenge
           </Button>
         </DialogActions>
+      </Dialog>
+
+      {/* Inventory Dialog */}
+      <Dialog 
+        open={showInventoryDialog} 
+        onClose={() => {
+          setShowInventoryDialog(false);
+          setSelectedLootItem(null);
+        }}
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle sx={{ color: '#ff9800', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span>Inventory</span>
+          <Typography variant="subtitle1" sx={{ color: '#aaa' }}>
+            {gameState.loot.length} Items ({gameState.loot.filter(item => item.equipped).length} Equipped)
+          </Typography>
+        </DialogTitle>
+        <DialogContent sx={{ display: 'flex', height: '60vh' }}>
+          {/* Item List */}
+          <Box sx={{ width: '40%', borderRight: '1px solid #333', pr: 2, overflowY: 'auto' }}>
+            {gameState.loot.length === 0 ? (
+              <Typography sx={{ color: '#aaa', fontStyle: 'italic', mt: 2 }}>
+                You haven't found any items yet.
+              </Typography>
+            ) : (
+              gameState.loot.map(item => (
+                <Box 
+                  key={item.id}
+                  sx={{
+                    p: 1, 
+                    mb: 1, 
+                    border: `1px solid ${getLootRarityColor(item.rarity)}`,
+                    background: item === selectedLootItem ? 'rgba(255,255,255,0.1)' : 'transparent',
+                    display: 'flex',
+                    alignItems: 'center',
+                    borderRadius: 1,
+                    cursor: 'pointer',
+                    '&:hover': {
+                      background: 'rgba(255,255,255,0.05)'
+                    }
+                  }}
+                  onClick={() => handleLootItemClick(item)}
+                >
+                  <Box sx={{ fontSize: 24, mr: 2 }}>{item.emoji}</Box>
+                  <Box sx={{ flex: 1 }}>
+                    <Typography sx={{ color: getLootRarityColor(item.rarity) }}>
+                      {item.name} {item.equipped && '(Equipped)'}
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: '#aaa' }}>
+                      {item.category} - {item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1)}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))
+            )}
+          </Box>
+          
+          {/* Item Details */}
+          <Box sx={{ width: '60%', pl: 2, overflowY: 'auto' }}>
+            {selectedLootItem ? (
+              <Box>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                  <Box sx={{ fontSize: 40, mr: 3 }}>{selectedLootItem.emoji}</Box>
+                  <Box>
+                    <Typography variant="h5" sx={{ color: getLootRarityColor(selectedLootItem.rarity) }}>
+                      {selectedLootItem.name}
+                    </Typography>
+                    <Typography variant="subtitle2" sx={{ color: '#aaa' }}>
+                      {selectedLootItem.category.charAt(0).toUpperCase() + selectedLootItem.category.slice(1)} • {selectedLootItem.rarity.charAt(0).toUpperCase() + selectedLootItem.rarity.slice(1)}
+                    </Typography>
+                  </Box>
+                </Box>
+                <Typography sx={{ color: '#fff', mb: 3 }}>
+                  {selectedLootItem.description}
+                </Typography>
+                
+                {selectedLootItem.effects.length > 0 && (
+                  <Box sx={{ mb: 3 }}>
+                    <Typography variant="subtitle1" sx={{ color: '#ff9800', mb: 1 }}>
+                      Effects:
+                    </Typography>
+                    {selectedLootItem.effects.map((effect, idx) => (
+                      <Typography key={idx} sx={{ color: '#4fc3f7' }}>
+                        • +{effect.value}% {effect.name.replace(/_/g, ' ')}
+                      </Typography>
+                    ))}
+                  </Box>
+                )}
+                
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
+                  <Box>
+                    <Typography variant="caption" sx={{ color: '#aaa' }}>
+                      Source: {selectedLootItem.source}
+                    </Typography>
+                    <Typography variant="caption" sx={{ display: 'block', color: '#aaa' }}>
+                      Found: {selectedLootItem.date_found}
+                    </Typography>
+                  </Box>
+                  <Button 
+                    variant="contained" 
+                    color={selectedLootItem.equipped ? "secondary" : "primary"}
+                    onClick={() => toggleEquipItem(selectedLootItem)}
+                  >
+                    {selectedLootItem.equipped ? 'Unequip' : 'Equip'}
+                  </Button>
+                </Box>
+              </Box>
+            ) : (
+              <Typography sx={{ color: '#aaa', fontStyle: 'italic', mt: 2 }}>
+                Select an item to view details.
+              </Typography>
+            )}
+          </Box>
+        </DialogContent>
+        <DialogActions sx={{ p: 2 }}>
+          <Button 
+            onClick={() => {
+              setShowInventoryDialog(false);
+              setSelectedLootItem(null);
+            }}
+            variant="contained"
+            color="secondary"
+          >
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Camp Attack Dialog */}
+      <Dialog 
+        open={showCampAttackDialog} 
+        onClose={() => {}} // Can't close this dialog by clicking outside
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle sx={{ color: '#ff4d4d', display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ mr: 2, fontSize: '24px' }}>⚠️</Box>
+          {currentAttack?.name || 'Camp Attack!'}
+        </DialogTitle>
+        <DialogContent>
+          <Typography sx={{ color: '#fff', my: 2, fontSize: '18px' }}>
+            {currentAttack?.description || 'Your camp is under attack by zombies!'}
+          </Typography>
+          
+          <Typography sx={{ color: '#ff4d4d', my: 2 }}>
+            Approximately {currentAttack?.zombieCount || 'several'} zombies are attempting to break into your camp.
+            You must decide how to respond.
+          </Typography>
+          
+          <Typography variant="h6" sx={{ color: '#ff9800', mt: 3 }}>
+            Defense Options:
+          </Typography>
+          
+          <Box sx={{ mt: 2, display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {attackDefenseOptions.map((option, index) => (
+              <Paper key={index} sx={{ p: 2, background: '#2a2a2a', borderLeft: `4px solid ${option.id === 'fight_back' ? '#ff4d4d' : option.id === 'barricade' ? '#4caf50' : '#ff9800'}` }}>
+                <Typography variant="h6" sx={{ color: '#fff' }}>
+                  {option.name} - {Math.round(option.successChance * 100)}% Success Chance
+                </Typography>
+                <Typography sx={{ color: '#ccc', mb: 2 }}>
+                  {option.description}
+                </Typography>
+                <Typography variant="caption" sx={{ color: '#aaa' }}>
+                  {option.id === 'fight_back' && `Requires: ${option.consequences.ammoUsed} ammo minimum`}
+                  {option.id === 'evacuate' && `Warning: Will result in significant resource loss`}
+                </Typography>
+                <Button 
+                  variant="contained" 
+                  fullWidth
+                  sx={{ mt: 1 }}
+                  color={option.id === 'fight_back' ? 'error' : option.id === 'barricade' ? 'success' : 'warning'}
+                  onClick={() => handleDefenseChoice(option)}
+                >
+                  Choose this option
+                </Button>
+              </Paper>
+            ))}
+          </Box>
+        </DialogContent>
       </Dialog>
     </Box>
   );
