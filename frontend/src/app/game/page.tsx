@@ -25,9 +25,10 @@ interface GameState {
   campType: 'open' | 'building' | null;
   survivors: number;
   zombies: number;
-  campDefense: number; // New camp defense stat
-  scoutRange: number; // How far scouts can explore
+  campDefense: number;
+  scoutRange: number;
   hasMoved: boolean; // Track if player has moved this day
+  hasPerformedAction: boolean; // Track if player has performed a camp action this day
   resources: {
     food: number;
     water: number;
@@ -124,6 +125,7 @@ export default function Game() {
   const [showCampDialog, setShowCampDialog] = useState(false);
   const [showCombatDialog, setShowCombatDialog] = useState(false);
   const [showSurvivorDialog, setShowSurvivorDialog] = useState(false);
+  const [showNightEventDialog, setShowNightEventDialog] = useState(false);
   const [selectedCellIndex, setSelectedCellIndex] = useState<number | null>(null);
   
   // Generate random player start position
@@ -141,9 +143,10 @@ export default function Game() {
     campType: null,
     survivors: 0,
     zombies: 20,
-    campDefense: 0, // Starting camp defense
-    scoutRange: 1, // Starting scout range
-    hasMoved: false, // Track if player has moved this day
+    campDefense: 0,
+    scoutRange: 1,
+    hasMoved: false,
+    hasPerformedAction: false,
     resources: {
       food: 10,
       water: 10,
@@ -516,7 +519,8 @@ export default function Game() {
     setGameState(prev => ({
       ...prev,
       day: prev.day + 1,
-      hasMoved: false // Reset movement for the new day
+      hasMoved: false, // Reset movement for the new day
+      hasPerformedAction: false // Reset camp action for the new day
     }));
     
     addLog(`Day ${gameState.day + 1} begins.`);
@@ -895,6 +899,12 @@ export default function Game() {
 
   // Camp Actions
   const gatherResources = () => {
+    // Check if player has already performed an action this day
+    if (gameState.hasPerformedAction) {
+      addLog("You've already performed a camp action today. End the day before performing another action.");
+      return;
+    }
+    
     addLog("You focused on gathering resources today.");
     // Add resources based on survivors (at least 1 + number of survivors as maximum)
     const foodFound = 1 + Math.floor(Math.random() * (1 + gameState.survivors));
@@ -902,6 +912,7 @@ export default function Game() {
     
     setGameState(prev => ({
       ...prev,
+      hasPerformedAction: true,
       resources: {
         ...prev.resources,
         food: prev.resources.food + foodFound,
@@ -919,16 +930,21 @@ export default function Game() {
       }));
       addLog("While gathering, you found and recruited a survivor!");
     }
-    
-    // Do not end day automatically
   };
 
   const reinforceCamp = () => {
+    // Check if player has already performed an action this day
+    if (gameState.hasPerformedAction) {
+      addLog("You've already performed a camp action today. End the day before performing another action.");
+      return;
+    }
+    
     addLog("You reinforced camp defenses.");
     
     // Increase camp defense
     setGameState(prev => ({
       ...prev,
+      hasPerformedAction: true,
       campDefense: prev.campDefense + 1,
       resources: {
         ...prev.resources,
@@ -938,12 +954,22 @@ export default function Game() {
     }));
     
     addLog("Camp defense improved. -1 ammo used for fortifications.");
-    // Do not end day automatically
   };
 
   const scoutArea = () => {
+    // Check if player has already performed an action this day
+    if (gameState.hasPerformedAction) {
+      addLog("You've already performed a camp action today. End the day before performing another action.");
+      return;
+    }
+    
     // Chance to find something based on scout range
     const findChance = 0.3 + (gameState.scoutRange * 0.1);
+    
+    setGameState(prev => ({
+      ...prev,
+      hasPerformedAction: true
+    }));
     
     if (Math.random() < findChance) {
       const ammoFound = Math.floor(Math.random() * (gameState.scoutRange + 2));
@@ -985,8 +1011,89 @@ export default function Game() {
         }
       }
     }
+  };
+
+  // Handle end day button click - show night event dialog first
+  const handleEndDay = () => {
+    if (gameState.phase === 'solo') {
+      // In solo phase, just end the day directly
+      endDay();
+    } else {
+      // In camp phase, show night event dialog
+      setShowNightEventDialog(true);
+    }
+  };
+
+  // Night actions
+  const handleNightAction = (action: 'sleep' | 'guard' | 'scavenge') => {
+    if (action === 'sleep') {
+      addLog("You and your survivors rested for the night. Everyone regained some strength.");
+      // Small chance of healing if medicine is available
+      if (gameState.resources.medicine > 0 && Math.random() < 0.5) {
+        setGameState(prev => ({
+          ...prev,
+          resources: {
+            ...prev.resources,
+            medicine: prev.resources.medicine - 1
+          }
+        }));
+        addLog("Used 1 medicine to treat minor injuries.");
+      }
+    } else if (action === 'guard') {
+      addLog("You set up guard shifts for the night. Everyone is on high alert.");
+      // Reduce chance of zombie attack for the next day
+      setGameState(prev => ({
+        ...prev,
+        campDefense: prev.campDefense + 0.5 // Temporary defense boost
+      }));
+      
+      // Small chance of finding zombie scouts
+      if (Math.random() < 0.3) {
+        addLog("Your guards spotted and eliminated some zombie scouts. This might prevent a larger attack.");
+        setGameState(prev => ({
+          ...prev,
+          zombies: Math.max(0, prev.zombies - Math.floor(Math.random() * 3) - 1),
+          resources: {
+            ...prev.resources,
+            ammo: Math.max(0, prev.resources.ammo - 1)
+          }
+        }));
+      }
+    } else if (action === 'scavenge') {
+      addLog("You sent a few people out to scavenge during the night. It's dangerous but can be rewarding.");
+      
+      // Higher risk, higher reward
+      if (Math.random() < 0.6) {
+        // Success - find resources
+        const foodFound = Math.floor(Math.random() * 3) + 1;
+        const ammoFound = Math.floor(Math.random() * 2);
+        
+        setGameState(prev => ({
+          ...prev,
+          resources: {
+            ...prev.resources,
+            food: prev.resources.food + foodFound,
+            ammo: prev.resources.ammo + ammoFound
+          }
+        }));
+        
+        addLog(`Night scavenging was successful! Found +${foodFound} food and +${ammoFound} ammo.`);
+      } else {
+        // Failure - might lose a survivor
+        if (gameState.survivors > 0 && Math.random() < 0.4) {
+          setGameState(prev => ({
+            ...prev,
+            survivors: prev.survivors - 1
+          }));
+          addLog("The scavenging party encountered trouble. One person didn't make it back.");
+        } else {
+          addLog("The scavenging party returned empty-handed. At least everyone made it back safely.");
+        }
+      }
+    }
     
-    // Do not end day automatically
+    setShowNightEventDialog(false);
+    endDay(); // Now end the day after handling the night action
   };
 
   if (!mounted) {
@@ -1097,7 +1204,7 @@ export default function Game() {
                   variant="contained"
                   color="primary"
                   sx={{ mt: 2, width: '50%' }}
-                  onClick={endDay}
+                  onClick={handleEndDay}
                 >
                   {gameState.hasMoved ? 'End Day' : 'Skip Movement & End Day'}
                 </Button>
@@ -1200,7 +1307,7 @@ export default function Game() {
                   variant="contained"
                   color="primary"
                   sx={{ mt: 2, width: '100%' }}
-                  onClick={endDay}
+                  onClick={handleEndDay}
                 >
                   End Day
                 </Button>
@@ -1448,6 +1555,55 @@ export default function Game() {
             color="secondary"
           >
             Ignore
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Night Event Dialog */}
+      <Dialog 
+        open={showNightEventDialog} 
+        onClose={() => setShowNightEventDialog(false)}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle sx={{ color: '#ff4d4d' }}>
+          Night Event
+        </DialogTitle>
+        <DialogContent>
+          <Typography sx={{ color: '#fff', my: 2 }}>
+            What would you like to do during the night?
+          </Typography>
+          <Typography sx={{ color: '#fff', mb: 2 }}>
+            • Sleep: Everyone regains some strength.
+          </Typography>
+          <Typography sx={{ color: '#fff', mb: 2 }}>
+            • Guard: Set up guard shifts for the night.
+          </Typography>
+          <Typography sx={{ color: '#fff', mb: 2 }}>
+            • Scavenge: Send a few people out to find resources during the night.
+          </Typography>
+        </DialogContent>
+        <DialogActions sx={{ p: 2 }}>
+          <Button 
+            onClick={() => handleNightAction('sleep')}
+            variant="contained"
+            color="primary"
+          >
+            Sleep
+          </Button>
+          <Button 
+            onClick={() => handleNightAction('guard')}
+            variant="contained"
+            color="primary"
+          >
+            Guard
+          </Button>
+          <Button 
+            onClick={() => handleNightAction('scavenge')}
+            variant="contained"
+            color="primary"
+          >
+            Scavenge
           </Button>
         </DialogActions>
       </Dialog>
