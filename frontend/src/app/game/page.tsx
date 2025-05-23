@@ -55,7 +55,7 @@ interface FactionReputation {
 // Game state interface
 interface GameState {
   day: number;
-  phase: 'solo' | 'camp';
+  phase: 'solo' | 'camp' | 'dead';
   playerPosition: number;
   hasCamp: boolean;
   campPosition: number | null;
@@ -174,6 +174,8 @@ export default function Game() {
   const [showCampAttackDialog, setShowCampAttackDialog] = useState(false);
   const [currentAttack, setCurrentAttack] = useState<any>(null);
   const [attackDefenseOptions, setAttackDefenseOptions] = useState<any[]>([]);
+  // Add a refresh key to force grid rerender when needed
+  const [gridRefreshKey, setGridRefreshKey] = useState(0);
   
   // Generate random player start position
   const getRandomStartPosition = () => {
@@ -288,8 +290,33 @@ export default function Game() {
         triggerSoloEvent('open');
       }
     } else if (cell.type === 'resource') {
-      movePlayer(index);
+      // Get resources from the cache
       addResources();
+      
+      // Create a new grid with the resource cache removed
+      const newGrid = [...gameState.cityGrid];
+      // Remove player from current position
+      newGrid[gameState.playerPosition].hasPlayer = false;
+      // Move player to resource position and clear resource
+      newGrid[index] = {
+        type: 'empty',
+        hasPlayer: true
+      };
+      
+      // Update game state
+      setGameState(prev => ({
+        ...prev,
+        playerPosition: index,
+        hasMoved: true,
+        cityGrid: newGrid
+      }));
+      
+      // Force refresh the grid to ensure the UI updates
+      setGridRefreshKey(prev => prev + 1);
+      
+      addLog('You collected resources from the cache. The supplies have been depleted.');
+      
+      // Trigger a resource-related event
       triggerSoloEvent('resource');
     } else if (cell.type === 'zombie' || cell.type === 'zombieGroup' || cell.type === 'zombieHorde') {
       setSelectedCellIndex(index);
@@ -457,77 +484,255 @@ export default function Game() {
     let casualties = 0;
     
     if (action === 'fight') {
+      // Use ammo for fighting
+      const ammoUsed = zombieType === 'zombie' ? 1 : zombieType === 'zombieGroup' ? 2 : 3;
+      
+      // Check if player has enough ammo
+      if (gameState.resources.ammo < ammoUsed) {
+        addLog("You don't have enough ammunition to fight!");
+        setShowCombatDialog(false);
+        return;
+      }
+      
+      // Combat chances depend on zombie type
       if (zombieType === 'zombie') {
         // 80% chance to win against a single zombie
         combatSuccess = Math.random() < 0.8;
-        casualties = 0;
+        casualties = combatSuccess ? 0 : (Math.random() < 0.5 ? 0 : 1); // 50% chance of player death on failure
       } else if (zombieType === 'zombieGroup') {
         // 50% chance to win against a zombie group
         combatSuccess = Math.random() < 0.5;
-        casualties = combatSuccess ? 0 : 1;
+        casualties = combatSuccess ? (Math.random() < 0.3 ? 1 : 0) : (gameState.survivors > 0 ? 1 : 1); // Always lose someone on failure
       } else if (zombieType === 'zombieHorde') {
         // 20% chance to win against a zombie horde
         combatSuccess = Math.random() < 0.2;
-        casualties = combatSuccess ? 1 : (gameState.survivors > 0 ? gameState.survivors : 1);
+        casualties = combatSuccess ? (gameState.survivors > 0 ? 1 : 0) : (gameState.survivors > 0 ? gameState.survivors : 1);
       }
+      
+      // Create a new grid to update
+      const newGrid = [...gameState.cityGrid];
       
       // Apply combat effects
       if (combatSuccess) {
-        const newGrid = [...gameState.cityGrid];
-        // Remove player from current position
+        // Fight was successful - zombie is eliminated or reduced
+        
+        // First, always remove the player from their current position
         newGrid[gameState.playerPosition].hasPlayer = false;
-        // Move player to zombie position and clear zombie
-        newGrid[selectedCellIndex] = {
-          type: 'empty',
-          hasPlayer: true
-        };
         
-        setGameState(prev => ({
-          ...prev,
-          playerPosition: selectedCellIndex,
-          survivors: Math.max(0, prev.survivors - casualties),
-          zombies: prev.zombies - 1,
-          resources: {
-            ...prev.resources,
-            ammo: Math.max(0, prev.resources.ammo - 2)
-          },
-          cityGrid: newGrid
-        }));
+        if (zombieType === 'zombieHorde') {
+          // For hordes, just reduce the threat rather than removing entirely
+          newGrid[selectedCellIndex] = {
+            type: 'zombieGroup',
+            hasPlayer: true // Player moves to the position
+          };
+          addLog("You managed to thin out the zombie horde, but many remain.");
+        } else if (zombieType === 'zombieGroup' && Math.random() < 0.3) {
+          // 30% chance a weakened zombie remains
+          newGrid[selectedCellIndex] = {
+            type: 'zombie',
+            hasPlayer: true // Player moves to the position
+          };
+          addLog("You took down most of the zombies, but one is still standing.");
+        } else {
+          // Clear the tile completely
+          newGrid[selectedCellIndex] = {
+            type: 'empty',
+            hasPlayer: true // Player moves to the position
+          };
+        }
         
-        addLog(`You successfully defeated the ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'}. ${casualties > 0 ? `Lost ${casualties} survivors.` : ''} -2 ammo.`);
+        // If successful against a horde but with heavy losses, don't advance
+        if (zombieType === 'zombieHorde' && casualties > 0 && Math.random() < 0.7) {
+          // Player doesn't move to the horde's position
+          newGrid[selectedCellIndex].hasPlayer = false;
+          // Put player back at their original position
+          newGrid[gameState.playerPosition].hasPlayer = true;
+          
+          setGameState(prev => ({
+            ...prev,
+            survivors: Math.max(0, prev.survivors - casualties),
+            zombies: prev.zombies - 3, // Kill a few zombies
+            resources: {
+              ...prev.resources,
+              ammo: Math.max(0, prev.resources.ammo - ammoUsed)
+            },
+            cityGrid: newGrid,
+            hasMoved: true
+          }));
+          
+          // Force refresh the grid
+          setGridRefreshKey(prev => prev + 1);
+          
+          addLog(`You fought back the zombie horde but couldn't safely advance. Used ${ammoUsed} ammo.`);
+        } else {
+          // Normal success case - player moves to the zombie's position
+          setGameState(prev => ({
+            ...prev,
+            playerPosition: selectedCellIndex, // Update player's position to the zombie's previous position
+            survivors: Math.max(0, prev.survivors - casualties),
+            zombies: prev.zombies - (zombieType === 'zombie' ? 1 : zombieType === 'zombieGroup' ? 3 : 5),
+            resources: {
+              ...prev.resources,
+              ammo: Math.max(0, prev.resources.ammo - ammoUsed)
+            },
+            cityGrid: newGrid,
+            hasMoved: true
+          }));
+          
+          // Force refresh the grid
+          setGridRefreshKey(prev => prev + 1);
+          
+          // Combat results message
+          let combatMessage = `You successfully defeated ${zombieType === 'zombie' ? 'the zombie' : zombieType === 'zombieGroup' ? 'the group of zombies' : 'part of the zombie horde'}.`;
+          
+          if (casualties > 0) {
+            if (gameState.survivors > 0) {
+              combatMessage += ` Lost ${casualties} survivor${casualties > 1 ? 's' : ''} in the fight.`;
+            } else {
+              combatMessage += ` You were injured in the fight.`;
+            }
+          }
+          
+          combatMessage += ` Used ${ammoUsed} ammo.`;
+          addLog(combatMessage);
+        }
         
-        // Chance to find loot
-        if (Math.random() < 0.7) { // Increase chance since that's a key feature now
+        // Chance to find loot from zombies
+        if (Math.random() < 0.6) {
           findLoot(zombieType);
         }
       } else {
-        if (casualties >= gameState.survivors + 1) {
-          // Game over - player died
-          addLog('You were overwhelmed by zombies and died.');
+        // Fight failed - the zombie stays where it is but player doesn't move
+        let combatMessage = `You failed to defeat ${zombieType === 'zombie' ? 'the zombie' : zombieType === 'zombieGroup' ? 'the group of zombies' : 'the zombie horde'}.`;
+        
+        // Check if player or all survivors died
+        const playerDied = (gameState.survivors === 0 && casualties > 0);
+        
+        if (playerDied) {
+          // Player death
+          addLog(`${combatMessage} You were killed in the fight.`);
           setShowCombatDialog(false);
-          // TODO: Add game over screen
+          
+          // Game over - show death screen
+          setGameState(prev => ({
+            ...prev,
+            phase: 'dead'
+          }));
+          
+          return;
+        } else {
+          // Update game state - use ammo and potentially lose survivors
+          // Note: The grid is not changed - zombie stays where it is
+          setGameState(prev => ({
+            ...prev,
+            survivors: Math.max(0, prev.survivors - casualties),
+            resources: {
+              ...prev.resources,
+              ammo: Math.max(0, prev.resources.ammo - ammoUsed),
+              medicine: Math.max(0, prev.resources.medicine - 1)
+            },
+            hasMoved: true
+          }));
+          
+          // Force refresh the grid
+          setGridRefreshKey(prev => prev + 1);
+          
+          if (casualties > 0) {
+            combatMessage += ` Lost ${casualties} survivor${casualties > 1 ? 's' : ''} in the fight.`;
+          }
+          
+          combatMessage += ` Used ${ammoUsed} ammo and 1 medicine treating wounds.`;
+          addLog(combatMessage);
+        }
+      }
+    } else {
+      // Flee action - has a chance of taking damage
+      const fleeSuccess = Math.random() < (zombieType === 'zombie' ? 0.9 : zombieType === 'zombieGroup' ? 0.7 : 0.5);
+      
+      if (fleeSuccess) {
+        addLog(`You successfully fled from ${zombieType === 'zombie' ? 'the zombie' : zombieType === 'zombieGroup' ? 'the group of zombies' : 'the zombie horde'}.`);
+      } else {
+        // Failed to flee - take damage
+        casualties = zombieType === 'zombie' ? 0 : zombieType === 'zombieGroup' ? (Math.random() < 0.5 ? 1 : 0) : 1;
+        
+        // Check if player died during flee attempt
+        if (gameState.survivors === 0 && casualties > 0) {
+          addLog(`You failed to escape and were killed by ${zombieType === 'zombie' ? 'the zombie' : zombieType === 'zombieGroup' ? 'the zombies' : 'the zombie horde'}.`);
+          
+          // Game over - show death screen
+          setGameState(prev => ({
+            ...prev,
+            phase: 'dead'
+          }));
+          
+          setShowCombatDialog(false);
           return;
         }
         
+        // Update game state with casualties
         setGameState(prev => ({
           ...prev,
           survivors: Math.max(0, prev.survivors - casualties),
           resources: {
             ...prev.resources,
-            ammo: Math.max(0, prev.resources.ammo - 2),
-            medicine: Math.max(0, prev.resources.medicine - 1)
-          }
+            medicine: Math.max(0, prev.resources.medicine - (casualties > 0 ? 1 : 0))
+          },
+          hasMoved: true
         }));
         
-        addLog(`You failed to defeat the ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} and retreated. ${casualties > 0 ? `Lost ${casualties} survivors.` : ''} -2 ammo, -1 medicine.`);
+        // Force refresh the grid
+        setGridRefreshKey(prev => prev + 1);
+        
+        let fleeMessage = `You barely escaped from ${zombieType === 'zombie' ? 'the zombie' : zombieType === 'zombieGroup' ? 'the group of zombies' : 'the zombie horde'}.`;
+        
+        if (casualties > 0) {
+          fleeMessage += ` Lost ${casualties} survivor${casualties > 1 ? 's' : ''} during the escape.`;
+          fleeMessage += ` Used 1 medicine treating wounds.`;
+        }
+        
+        addLog(fleeMessage);
       }
-    } else {
-      // Flee action
-      addLog(`You decided to flee from the ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'}.`);
     }
     
     setShowCombatDialog(false);
-    endDay();
+    
+    // Only end the day if the player survived
+    if (gameState.phase !== 'dead') {
+      // Skip updateZombies here - don't call endDay() which would move all zombies
+      // Instead, just increment the day manually
+      setGameState(prev => ({
+        ...prev,
+        day: prev.day + 1,
+        hasMoved: false, // Reset movement for the new day
+        hasPerformedAction: false // Reset camp action for the new day
+      }));
+      
+      addLog(`Day ${gameState.day + 1} begins.`);
+      
+      // Different events based on game phase
+      if (gameState.phase === 'solo') {
+        // Random chance for a special solo event
+        if (Math.random() < 0.2) {
+          triggerRandomSoloEvent();
+        }
+      } else if (gameState.phase === 'camp') {
+        // Resource consumption happens daily
+        consumeResources();
+        
+        // Daily camp events
+        if (Math.random() < 0.7) {
+          triggerCampEvent('daily');
+        } else {
+          triggerCampEvent('special');
+        }
+        
+        // Chance for zombie attack on camp
+        const attackChance = 0.1 + (gameState.survivors * 0.02) - (gameState.campDefense * 0.02);
+        if (Math.random() < attackChance) {
+          zombieAttackOnCamp();
+        }
+      }
+    }
   };
 
   // Handle encountering survivors
@@ -747,6 +952,10 @@ export default function Game() {
   const updateZombies = () => {
     const newGrid = [...gameState.cityGrid];
     
+    // Keep track of indices that have been processed
+    // This helps prevent issues with zombies that have been defeated in automatic combat
+    const processedIndices = new Set<number>();
+    
     // Get target position (player or camp)
     const targetPosition = gameState.phase === 'solo' 
       ? gameState.playerPosition 
@@ -754,12 +963,30 @@ export default function Game() {
     
     // Process each cell for potential zombie movement
     for (let i = 0; i < newGrid.length; i++) {
+      // Skip if this cell has already been processed
+      if (processedIndices.has(i)) continue;
+      
       // Skip if this is not a zombie cell
       if (newGrid[i].type !== 'zombie' && newGrid[i].type !== 'zombieGroup' && newGrid[i].type !== 'zombieHorde') continue;
       
       const zombieType = newGrid[i].type;
       const distance = getDistance(i, targetPosition);
       const chaseChance = getChaseChance(distance);
+      
+      // If zombie is adjacent to player in solo mode, trigger automatic combat
+      if (gameState.phase === 'solo' && distance === 1) {
+        // 50% chance for zombie to attack if adjacent
+        if (Math.random() < 0.5) {
+          // Mark this index as processed
+          processedIndices.add(i);
+          
+          // Trigger automatic combat
+          handleAutomaticCombat(i, zombieType);
+          
+          // Skip normal movement for this zombie (it either died or killed player)
+          continue;
+        }
+      }
       
       // Decide if zombie will chase player/camp or move randomly
       const willChase = Math.random() < chaseChance;
@@ -770,8 +997,11 @@ export default function Game() {
         let bestCells: number[] = [];
         
         for (const adjIdx of adjacentCells) {
-          // Skip occupied cells
-          if (newGrid[adjIdx].type !== 'empty') continue;
+          // Skip occupied cells or processed cells
+          if (newGrid[adjIdx].type !== 'empty' || processedIndices.has(adjIdx)) continue;
+          
+          // Never let zombie move directly onto player's tile in solo mode
+          if (adjIdx === targetPosition) continue;
           
           // Check if this cell is closer to target
           if (getDistance(adjIdx, targetPosition) < distance) {
@@ -782,6 +1012,10 @@ export default function Game() {
         // If there are cells closer to target, move zombie to a random one
         if (bestCells.length > 0) {
           const targetCell = bestCells[Math.floor(Math.random() * bestCells.length)];
+          
+          // Mark both original and target indices as processed
+          processedIndices.add(i);
+          processedIndices.add(targetCell);
           
           // Move zombie
           newGrid[targetCell] = {
@@ -805,12 +1039,19 @@ export default function Game() {
         if (Math.random() < 0.4) {
           const adjacentCells = getAdjacentCells(i);
           const emptyCells = adjacentCells.filter(cellIdx => 
-            newGrid[cellIdx].type === 'empty'
+            newGrid[cellIdx].type === 'empty' && 
+            // Prevent any movement onto player's tile or processed cells
+            cellIdx !== targetPosition &&
+            !processedIndices.has(cellIdx)
           );
           
           // If there are empty adjacent cells, move zombie to a random one
           if (emptyCells.length > 0) {
             const targetCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            
+            // Mark both original and target indices as processed
+            processedIndices.add(i);
+            processedIndices.add(targetCell);
             
             // Move zombie
             newGrid[targetCell] = {
@@ -832,11 +1073,18 @@ export default function Game() {
     if (Math.random() < 0.15) {
       const edgeCells = getEdgeCells();
       const emptyCells = edgeCells.filter(cellIdx => 
-        newGrid[cellIdx].type === 'empty'
+        newGrid[cellIdx].type === 'empty' &&
+        // Ensure we don't spawn new zombies on player's position or processed cells
+        cellIdx !== targetPosition &&
+        !processedIndices.has(cellIdx)
       );
       
       if (emptyCells.length > 0) {
         const targetCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+        
+        // Mark as processed
+        processedIndices.add(targetCell);
+        
         newGrid[targetCell] = {
           type: Math.random() < 0.7 ? 'zombie' : 'zombieGroup',
           hasPlayer: false
@@ -856,6 +1104,68 @@ export default function Game() {
       ...prev,
       cityGrid: newGrid
     }));
+    
+    // Force refresh the grid
+    setGridRefreshKey(prev => prev + 1);
+  };
+
+  // Handle automatic combat when a zombie attacks the player
+  const handleAutomaticCombat = (zombieIndex: number, zombieType: CellType) => {
+    if (gameState.phase !== 'solo') return;
+    
+    // Zombie automatically attacks player
+    const attackSuccess = Math.random() < (zombieType === 'zombie' ? 0.3 : zombieType === 'zombieGroup' ? 0.5 : 0.8);
+    
+    if (attackSuccess) {
+      // Player dies if no survivors or player loses last survivor
+      if (gameState.survivors === 0) {
+        // Game over - player died
+        addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked and killed you!`);
+        
+        // Game over - show death screen
+        setGameState(prev => ({
+          ...prev,
+          phase: 'dead'
+        }));
+      } else {
+        // Player loses a survivor but survives
+        setGameState(prev => ({
+          ...prev,
+          survivors: prev.survivors - 1,
+          resources: {
+            ...prev.resources,
+            medicine: Math.max(0, prev.resources.medicine - 1)
+          }
+        }));
+        
+        addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked your group! You lost 1 survivor but managed to fight it off.`);
+      }
+    } else {
+      // Player successfully defeats the zombie without moving
+      const newGrid = [...gameState.cityGrid];
+      
+      // Remove the zombie
+      newGrid[zombieIndex] = {
+        type: 'empty',
+        hasPlayer: false
+      };
+      
+      setGameState(prev => ({
+        ...prev,
+        zombies: prev.zombies - (zombieType === 'zombie' ? 1 : zombieType === 'zombieGroup' ? 3 : 5),
+        cityGrid: newGrid
+      }));
+
+      // Force refresh the grid to update the UI
+      setGridRefreshKey(prev => prev + 1);
+      
+      addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked, but you successfully defeated it!`);
+      
+      // Chance to find loot from zombie
+      if (Math.random() < 0.4) {
+        findLoot(zombieType);
+      }
+    }
   };
 
   // Get adjacent cells for a given index
@@ -2261,8 +2571,103 @@ export default function Game() {
     });
   };
 
+  // Return appropriate content based on game phase
   if (!mounted) {
-    return null; // or a loading spinner
+    return null;
+  } else if (gameState.phase === 'dead') {
+    // Game Over Screen
+    return (
+      <Box
+        sx={{
+          minHeight: '100vh',
+          background: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url("/images/death-bg.jpg")',
+          backgroundSize: 'cover',
+          color: '#ff4d4d',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          p: 3
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <Typography variant="h2" sx={{ mb: 1, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            You Died
+          </Typography>
+          
+          <Typography variant="h5" sx={{ mb: 4, color: '#aaa' }}>
+            You survived for {gameState.day} days
+          </Typography>
+          
+          <Box sx={{ my: 4, borderTop: '1px solid rgba(255,77,77,0.3)', borderBottom: '1px solid rgba(255,77,77,0.3)', py: 4 }}>
+            <Typography variant="body1" sx={{ mb: 3, color: '#ddd', maxWidth: '600px' }}>
+              Your journey has come to an end in this zombie-infested wasteland. The dead have claimed another victim.
+            </Typography>
+            
+            <Typography variant="body1" sx={{ color: '#ddd', maxWidth: '600px' }}>
+              But your story will be remembered by those who find your remains... 
+              {gameState.survivors > 0 && ` and perhaps the ${gameState.survivors} survivors who escaped might continue your legacy.`}
+            </Typography>
+          </Box>
+          
+          <Box sx={{ mt: 2, mb: 5 }}>
+            <Typography variant="h6" sx={{ color: '#aaa', mb: 2 }}>
+              Final Stats
+            </Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4 }}>
+              <Box>
+                <Typography variant="body2" sx={{ color: '#ff9800' }}>
+                  Days Survived
+                </Typography>
+                <Typography variant="h4" sx={{ color: '#fff' }}>
+                  {gameState.day}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography variant="body2" sx={{ color: '#ff9800' }}>
+                  Survivors
+                </Typography>
+                <Typography variant="h4" sx={{ color: '#fff' }}>
+                  {gameState.survivors}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography variant="body2" sx={{ color: '#ff9800' }}>
+                  Zombies Killed
+                </Typography>
+                <Typography variant="h4" sx={{ color: '#fff' }}>
+                  {gameState.zombies > 0 ? 20 - gameState.zombies : 20}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+          
+          <Button 
+            variant="contained" 
+            color="primary"
+            size="large"
+            onClick={() => router.push('/')}
+            sx={{ 
+              px: 4, 
+              py: 1,
+              mt: 3,
+              fontSize: '1.2rem',
+              border: '1px solid #ff4d4d',
+              '&:hover': {
+                backgroundColor: 'rgba(255,77,77,0.2)'
+              }
+            }}
+          >
+            Return to Main Menu
+          </Button>
+        </motion.div>
+      </Box>
+    );
   }
 
   return (
@@ -2346,10 +2751,11 @@ export default function Game() {
                     height: 'fit-content',
                     mb: 2
                   }}
+                  key={gridRefreshKey} // Add key to force complete remount and rerender
                 >
                   {gameState.cityGrid.map((cell, index) => (
                     <motion.div
-                      key={index}
+                      key={`${index}-${cell.type}-${cell.hasPlayer ? 'player' : 'empty'}`}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3, delay: index * 0.001 }}
@@ -2426,10 +2832,11 @@ export default function Game() {
                     mb: 2,
                     alignSelf: 'center'
                   }}
+                  key={gridRefreshKey} // Add key to force complete remount and rerender
                 >
                   {gameState.cityGrid.map((cell, index) => (
                     <motion.div
-                      key={index}
+                      key={`${index}-${cell.type}-${index === gameState.campPosition ? 'camp' : 'empty'}`}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3, delay: index * 0.001 }}
