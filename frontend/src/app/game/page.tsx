@@ -973,22 +973,68 @@ export default function Game() {
       const distance = getDistance(i, targetPosition);
       const chaseChance = getChaseChance(distance);
       
-      // If zombie is adjacent to player in solo mode, trigger automatic combat
+      // If zombie is adjacent to player in solo mode, trigger automatic combat - CRITICAL FIX
       if (gameState.phase === 'solo' && distance === 1) {
+        // Mark this index as processed to prevent further updates
+        processedIndices.add(i);
+        
         // 50% chance for zombie to attack if adjacent
         if (Math.random() < 0.5) {
-          // Mark this index as processed
-          processedIndices.add(i);
-          
           // Trigger automatic combat
-          handleAutomaticCombat(i, zombieType);
+          const attackSuccess = Math.random() < (zombieType === 'zombie' ? 0.3 : zombieType === 'zombieGroup' ? 0.5 : 0.8);
           
-          // Skip normal movement for this zombie (it either died or killed player)
+          if (attackSuccess) {
+            // Zombie succeeded in attack - same logic as before
+            if (gameState.survivors === 0) {
+              // Game over - player died
+              addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked and killed you!`);
+              
+              // Game over - show death screen
+              setGameState(prev => ({
+                ...prev,
+                phase: 'dead'
+              }));
+              return; // Exit early - game is over
+            } else {
+              // Player loses a survivor but survives
+              setGameState(prev => ({
+                ...prev,
+                survivors: prev.survivors - 1,
+                resources: {
+                  ...prev.resources,
+                  medicine: Math.max(0, prev.resources.medicine - 1)
+                }
+              }));
+              
+              addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked your group! You lost 1 survivor but managed to fight it off.`);
+            }
+          } else {
+            // Player defeats zombie - DIRECTLY remove zombie from grid
+            newGrid[i] = {
+              type: 'empty',
+              hasPlayer: false
+            };
+            
+            // Update zombie count
+            const zombiesKilled = (zombieType === 'zombie' ? 1 : zombieType === 'zombieGroup' ? 3 : 5);
+            
+            // Update zombie count immediately in our function scope
+            gameState.zombies = Math.max(0, gameState.zombies - zombiesKilled);
+            
+            addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked, but you successfully defeated it!`);
+            
+            // Chance to find loot from zombie
+            if (Math.random() < 0.4) {
+              findLoot(zombieType);
+            }
+          }
+          
+          // Skip normal movement processing for this zombie
           continue;
         }
       }
       
-      // Decide if zombie will chase player/camp or move randomly
+      // Regular zombie movement continues as before...
       const willChase = Math.random() < chaseChance;
       
       if (willChase) {
@@ -1099,73 +1145,23 @@ export default function Game() {
       }
     }
     
-    // Update the grid
+    // Update the grid with all changes
     setGameState(prev => ({
       ...prev,
-      cityGrid: newGrid
+      cityGrid: newGrid,
+      zombies: gameState.zombies // Ensure zombie count reflects any combat that occurred
     }));
     
     // Force refresh the grid
     setGridRefreshKey(prev => prev + 1);
   };
 
-  // Handle automatic combat when a zombie attacks the player
+  // Remove handleAutomaticCombat function as its logic is now in updateZombies
+  // This prevents any issues with function call sequencing
   const handleAutomaticCombat = (zombieIndex: number, zombieType: CellType) => {
-    if (gameState.phase !== 'solo') return;
-    
-    // Zombie automatically attacks player
-    const attackSuccess = Math.random() < (zombieType === 'zombie' ? 0.3 : zombieType === 'zombieGroup' ? 0.5 : 0.8);
-    
-    if (attackSuccess) {
-      // Player dies if no survivors or player loses last survivor
-      if (gameState.survivors === 0) {
-        // Game over - player died
-        addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked and killed you!`);
-        
-        // Game over - show death screen
-        setGameState(prev => ({
-          ...prev,
-          phase: 'dead'
-        }));
-      } else {
-        // Player loses a survivor but survives
-        setGameState(prev => ({
-          ...prev,
-          survivors: prev.survivors - 1,
-          resources: {
-            ...prev.resources,
-            medicine: Math.max(0, prev.resources.medicine - 1)
-          }
-        }));
-        
-        addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked your group! You lost 1 survivor but managed to fight it off.`);
-      }
-    } else {
-      // Player successfully defeats the zombie without moving
-      const newGrid = [...gameState.cityGrid];
-      
-      // Remove the zombie
-      newGrid[zombieIndex] = {
-        type: 'empty',
-        hasPlayer: false
-      };
-      
-      setGameState(prev => ({
-        ...prev,
-        zombies: prev.zombies - (zombieType === 'zombie' ? 1 : zombieType === 'zombieGroup' ? 3 : 5),
-        cityGrid: newGrid
-      }));
-
-      // Force refresh the grid to update the UI
-      setGridRefreshKey(prev => prev + 1);
-      
-      addLog(`A ${zombieType === 'zombie' ? 'zombie' : zombieType === 'zombieGroup' ? 'group of zombies' : 'zombie horde'} attacked, but you successfully defeated it!`);
-      
-      // Chance to find loot from zombie
-      if (Math.random() < 0.4) {
-        findLoot(zombieType);
-      }
-    }
+    // This function is now just a stub - functionality moved to updateZombies
+    // We keep it to prevent breaking existing code references
+    console.log("Combat handled directly in updateZombies");
   };
 
   // Get adjacent cells for a given index
