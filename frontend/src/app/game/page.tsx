@@ -15,6 +15,22 @@ interface CellContents {
   hasPlayer: boolean;
 }
 
+// Interfaces for survivor data
+interface SurvivorData {
+  id: string;
+  name: string;
+  description: string;
+  faction: string | null;
+  disposition: 'friendly' | 'neutral' | 'hostile';
+  skills: string[];
+  isDiscovered: boolean;
+}
+
+// Interface for faction reputation
+interface FactionReputation {
+  [key: string]: number; // Reputation score for each faction (-100 to 100)
+}
+
 // Game state interface
 interface GameState {
   day: number;
@@ -29,6 +45,7 @@ interface GameState {
   scoutRange: number;
   hasMoved: boolean; // Track if player has moved this day
   hasPerformedAction: boolean; // Track if player has performed a camp action this day
+  factionReputations: FactionReputation; // Track reputation with different factions
   resources: {
     food: number;
     water: number;
@@ -125,8 +142,10 @@ export default function Game() {
   const [showCampDialog, setShowCampDialog] = useState(false);
   const [showCombatDialog, setShowCombatDialog] = useState(false);
   const [showSurvivorDialog, setShowSurvivorDialog] = useState(false);
+  const [showContactDialog, setShowContactDialog] = useState(false);
   const [showNightEventDialog, setShowNightEventDialog] = useState(false);
   const [selectedCellIndex, setSelectedCellIndex] = useState<number | null>(null);
+  const [currentSurvivor, setCurrentSurvivor] = useState<SurvivorData | null>(null);
   
   // Generate random player start position
   const getRandomStartPosition = () => {
@@ -147,6 +166,13 @@ export default function Game() {
     scoutRange: 1,
     hasMoved: false,
     hasPerformedAction: false,
+    factionReputations: {
+      'Traders': 0,
+      'Medics': 0,
+      'Raiders': -20, // Start slightly negative with Raiders
+      'Military Remnant': 0,
+      'Scientists': 0
+    },
     resources: {
       food: 10,
       water: 10,
@@ -1096,6 +1122,502 @@ export default function Game() {
     endDay(); // Now end the day after handling the night action
   };
 
+  // Handle cell click for camp mode
+  const handleCampCellClick = (index: number) => {
+    // Don't allow interaction with the camp itself
+    if (index === gameState.campPosition) {
+      addLog("This is your camp. Try clicking on other tiles to perform actions.");
+      return;
+    }
+    
+    // Check if player has already performed an action this day
+    if (gameState.hasPerformedAction) {
+      addLog("You've already performed an action today. End the day or wait until tomorrow.");
+      return;
+    }
+    
+    const cell = gameState.cityGrid[index];
+    
+    // Calculate distance from camp
+    const campRow = Math.floor((gameState.campPosition || 0) / gridSize);
+    const campCol = (gameState.campPosition || 0) % gridSize;
+    const cellRow = Math.floor(index / gridSize);
+    const cellCol = index % gridSize;
+    const distance = Math.abs(campRow - cellRow) + Math.abs(campCol - cellCol);
+    
+    // Check if the cell is within range (based on scout range)
+    if (distance > gameState.scoutRange) {
+      addLog(`That location is too far away. Your scout range is ${gameState.scoutRange} tiles.`);
+      return;
+    }
+    
+    // Handle different cell types
+    switch (cell.type) {
+      case 'empty':
+        exploreArea(index);
+        break;
+      case 'building':
+        scavengeBuilding(index);
+        break;
+      case 'survivor':
+        makeContact(index);
+        break;
+      case 'zombie':
+      case 'zombieGroup':
+      case 'zombieHorde':
+        sendHuntingParty(index);
+        break;
+      case 'resource':
+        gatherResourcesAt(index);
+        break;
+      default:
+        addLog("There's nothing interesting to do at that location.");
+        return;
+    }
+    
+    // Mark that player has performed their daily action
+    setGameState(prev => ({
+      ...prev,
+      hasPerformedAction: true
+    }));
+  };
+
+  // Explore an empty area
+  const exploreArea = (index: number) => {
+    addLog("You sent a team to explore the area.");
+    
+    // Random chance to find something interesting
+    const findChance = Math.random();
+    
+    if (findChance < 0.2) {
+      // Find a small amount of resources
+      const foodFound = Math.floor(Math.random() * 2) + 1;
+      const waterFound = Math.floor(Math.random() * 2) + 1;
+      
+      setGameState(prev => ({
+        ...prev,
+        resources: {
+          ...prev.resources,
+          food: prev.resources.food + foodFound,
+          water: prev.resources.water + waterFound
+        }
+      }));
+      
+      addLog(`Exploration successful! Found +${foodFound} food and +${waterFound} water.`);
+    } else if (findChance < 0.3) {
+      // Discover a new survivor
+      const newGrid = [...gameState.cityGrid];
+      newGrid[index] = {
+        type: 'survivor',
+        hasPlayer: false
+      };
+      
+      setGameState(prev => ({
+        ...prev,
+        cityGrid: newGrid
+      }));
+      
+      addLog("Your exploration team spotted a survivor in the distance!");
+    } else if (findChance < 0.4) {
+      // Find a hidden resource cache
+      const newGrid = [...gameState.cityGrid];
+      newGrid[index] = {
+        type: 'resource',
+        hasPlayer: false
+      };
+      
+      setGameState(prev => ({
+        ...prev,
+        cityGrid: newGrid
+      }));
+      
+      addLog("Your team discovered a hidden resource cache!");
+    } else {
+      addLog("The team explored the area but found nothing of value.");
+    }
+  };
+
+  // Scavenge a building
+  const scavengeBuilding = (index: number) => {
+    addLog("You sent a team to scavenge the building.");
+    
+    // Higher chance of resources but also danger
+    const findChance = Math.random();
+    
+    if (findChance < 0.6) {
+      // Find a good amount of resources
+      const foodFound = Math.floor(Math.random() * 3) + 1;
+      const medicineFound = Math.floor(Math.random() * 2);
+      const ammoFound = Math.floor(Math.random() * 3);
+      
+      setGameState(prev => ({
+        ...prev,
+        resources: {
+          ...prev.resources,
+          food: prev.resources.food + foodFound,
+          medicine: prev.resources.medicine + medicineFound,
+          ammo: prev.resources.ammo + ammoFound
+        }
+      }));
+      
+      addLog(`Scavenging successful! Found +${foodFound} food, +${medicineFound} medicine, and +${ammoFound} ammo.`);
+    } else if (findChance < 0.8) {
+      // Building is empty
+      addLog("The building was already picked clean. Nothing valuable remained.");
+    } else {
+      // Danger - zombies in the building
+      const newGrid = [...gameState.cityGrid];
+      newGrid[index] = {
+        type: 'zombie',
+        hasPlayer: false
+      };
+      
+      // Possible survivor casualty
+      if (gameState.survivors > 0 && Math.random() < 0.3) {
+        setGameState(prev => ({
+          ...prev,
+          survivors: prev.survivors - 1,
+          zombies: prev.zombies + 1,
+          cityGrid: newGrid
+        }));
+        
+        addLog("The scavenging team was ambushed by a zombie! One survivor didn't make it back.");
+      } else {
+        setGameState(prev => ({
+          ...prev,
+          zombies: prev.zombies + 1,
+          cityGrid: newGrid
+        }));
+        
+        addLog("The team encountered a zombie in the building and had to retreat!");
+      }
+    }
+  };
+
+  // Make contact with survivor
+  const makeContact = (index: number) => {
+    addLog("You send a team to make contact with the survivor.");
+    
+    // Generate a random survivor if we don't have stored data
+    const survivorId = `survivor-${index}`;
+    const names = ["Alex", "Morgan", "Casey", "Jordan", "Taylor", "Riley", "Quinn", "Avery", "Blake", "Cameron"];
+    const factions = [null, "Traders", "Medics", "Raiders", "Military Remnant", "Scientists"];
+    const skills = ["Medicine", "Hunting", "Defense", "Engineering", "Crafting", "Leadership", "Scavenging"];
+    
+    // Generate random survivor data
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    const randomFaction = factions[Math.floor(Math.random() * factions.length)];
+    const randomSkills = [skills[Math.floor(Math.random() * skills.length)]];
+    
+    // Determine disposition based on faction reputation
+    let disposition: 'friendly' | 'neutral' | 'hostile' = 'neutral';
+    
+    if (randomFaction) {
+      const factionRep = gameState.factionReputations[randomFaction] || 0;
+      
+      // Calculate base probability for each disposition
+      const friendlyChance = 0.2 + (factionRep > 0 ? factionRep / 200 : 0); // +50 rep = +25% chance
+      const hostileChance = 0.2 + (factionRep < 0 ? Math.abs(factionRep) / 200 : 0); // -50 rep = +25% chance
+      
+      // Roll for disposition with reputation influence
+      const roll = Math.random();
+      
+      if (roll < friendlyChance) {
+        disposition = 'friendly';
+      } else if (roll >= (1 - hostileChance)) {
+        disposition = 'hostile';
+      } else {
+        disposition = 'neutral';
+      }
+    } else {
+      // No faction, completely random disposition
+      const dispositions = ["friendly", "neutral", "hostile"] as const;
+      disposition = dispositions[Math.floor(Math.random() * dispositions.length)];
+    }
+    
+    // Generate description based on faction and disposition
+    let description = `${randomName} is a survivor with ${randomSkills[0]} skills.`;
+    if (randomFaction) {
+      description += ` They are part of the ${randomFaction} faction.`;
+      
+      // Add reputation information if they have a faction
+      const reputation = gameState.factionReputations[randomFaction] || 0;
+      if (reputation >= 50) {
+        description += ` Your group has an excellent reputation with the ${randomFaction}.`;
+      } else if (reputation >= 20) {
+        description += ` Your group is well-regarded by the ${randomFaction}.`;
+      } else if (reputation <= -50) {
+        description += ` The ${randomFaction} are extremely wary of your group.`;
+      } else if (reputation <= -20) {
+        description += ` Your group has a poor reputation with the ${randomFaction}.`;
+      }
+    }
+    
+    switch (disposition) {
+      case "friendly":
+        description += " They seem willing to help and are open to joining your group.";
+        break;
+      case "neutral":
+        description += " They are cautious but not immediately hostile.";
+        break;
+      case "hostile":
+        description += " They appear distrustful and potentially dangerous.";
+        break;
+    }
+    
+    // Create survivor data
+    const survivorData: SurvivorData = {
+      id: survivorId,
+      name: randomName,
+      description,
+      faction: randomFaction,
+      disposition: disposition,
+      skills: randomSkills,
+      isDiscovered: true
+    };
+    
+    // Store survivor data and show contact dialog
+    setCurrentSurvivor(survivorData);
+    setSelectedCellIndex(index);
+    setShowContactDialog(true);
+  };
+
+  // Handle survivor contact resolution
+  const handleSurvivorContact = (action: 'recruit' | 'trade' | 'leave') => {
+    if (!currentSurvivor || selectedCellIndex === null) {
+      setShowContactDialog(false);
+      return;
+    }
+    
+    // Get faction for reputation changes
+    const faction = currentSurvivor.faction;
+    
+    // Handle different actions
+    if (action === 'recruit') {
+      // Only possible with friendly survivors
+      if (currentSurvivor.disposition === 'friendly') {
+        const newGrid = [...gameState.cityGrid];
+        newGrid[selectedCellIndex] = {
+          type: 'empty',
+          hasPlayer: false
+        };
+        
+        setGameState(prev => ({
+          ...prev,
+          survivors: prev.survivors + 1,
+          cityGrid: newGrid
+        }));
+        
+        addLog(`${currentSurvivor.name} was friendly and decided to join your camp! +1 survivor with ${currentSurvivor.skills[0]} skills.`);
+        
+        // Successful recruitment improves faction reputation significantly
+        if (faction) {
+          updateFactionReputation(faction, 15);
+          addLog(`Your reputation with the ${faction} has improved due to recruiting one of their members.`);
+        }
+      } else if (currentSurvivor.disposition === 'neutral') {
+        addLog(`${currentSurvivor.name} wasn't interested in joining your camp at this time.`);
+        
+        // No reputation change for trying
+      } else {
+        // Hostile - chance of injury
+        addLog(`${currentSurvivor.name} reacted with hostility to your recruitment offer!`);
+        
+        if (Math.random() < 0.3 && gameState.survivors > 0) {
+          setGameState(prev => ({
+            ...prev,
+            survivors: prev.survivors - 1
+          }));
+          
+          addLog("One of your people was injured during the encounter.");
+        }
+        
+        // Attempting to recruit a hostile survivor worsens reputation
+        if (faction) {
+          updateFactionReputation(faction, -10);
+          addLog(`Your reputation with the ${faction} has decreased due to the hostile encounter.`);
+        }
+      }
+    } else if (action === 'trade') {
+      // Trading is most successful with neutral survivors
+      if (currentSurvivor.disposition !== 'hostile') {
+        const foodReceived = Math.floor(Math.random() * 3) + 1;
+        const medicineGiven = 1;
+        
+        if (gameState.resources.medicine >= medicineGiven) {
+          setGameState(prev => ({
+            ...prev,
+            resources: {
+              ...prev.resources,
+              food: prev.resources.food + foodReceived,
+              medicine: prev.resources.medicine - medicineGiven
+            }
+          }));
+          
+          addLog(`${currentSurvivor.name} offered to trade. You gave ${medicineGiven} medicine and received ${foodReceived} food.`);
+          
+          // Successful trade slightly improves faction reputation
+          if (faction) {
+            updateFactionReputation(faction, 5);
+            addLog(`Your reputation with the ${faction} has slightly improved due to fair trading.`);
+          }
+        } else {
+          addLog(`${currentSurvivor.name} wanted to trade for medicine, but you didn't have enough.`);
+          
+          // No reputation change if you can't fulfill trade
+        }
+      } else {
+        // Hostile - refused trade
+        addLog(`${currentSurvivor.name} refused to trade and seemed suspicious of your intentions.`);
+        
+        // Very slight negative impact for being refused trade
+        if (faction) {
+          updateFactionReputation(faction, -2);
+        }
+      }
+    } else if (action === 'leave') {
+      // Just leave them be
+      addLog(`You decided to leave ${currentSurvivor.name} alone for now.`);
+      
+      // Very slight positive impact for respecting boundaries
+      if (faction && currentSurvivor.disposition === 'hostile') {
+        updateFactionReputation(faction, 2);
+        addLog(`The ${faction} might appreciate that you didn't press the issue.`);
+      }
+    }
+    
+    setShowContactDialog(false);
+    setCurrentSurvivor(null);
+  };
+
+  // Update faction reputation
+  const updateFactionReputation = (faction: string, change: number) => {
+    // Only proceed if it's a valid faction
+    if (!gameState.factionReputations.hasOwnProperty(faction)) return;
+    
+    setGameState(prev => {
+      // Calculate new reputation value (clamped between -100 and 100)
+      const currentRep = prev.factionReputations[faction] || 0;
+      const newRep = Math.max(-100, Math.min(100, currentRep + change));
+      
+      return {
+        ...prev,
+        factionReputations: {
+          ...prev.factionReputations,
+          [faction]: newRep
+        }
+      };
+    });
+  };
+
+  // Send hunting party against zombies
+  const sendHuntingParty = (index: number) => {
+    const cell = gameState.cityGrid[index];
+    let zombieCount = 1;
+    let successChance = 0.7;
+    let description = "lone zombie";
+    
+    // Different difficulty based on zombie type
+    if (cell.type === 'zombieGroup') {
+      zombieCount = 3;
+      successChance = 0.5;
+      description = "group of zombies";
+    } else if (cell.type === 'zombieHorde') {
+      zombieCount = 10;
+      successChance = 0.2;
+      description = "zombie horde";
+    }
+    
+    addLog(`You sent a hunting party to eliminate the ${description}.`);
+    
+    // Adjust success chance based on number of survivors and ammo
+    const survivorBonus = Math.min(0.3, gameState.survivors * 0.05);
+    const ammoRequired = Math.ceil(zombieCount / 2);
+    
+    if (gameState.resources.ammo < ammoRequired) {
+      successChance -= 0.3;
+      addLog("Your team doesn't have enough ammo for this mission. Success chances are reduced.");
+    } else {
+      // Use ammo
+      setGameState(prev => ({
+        ...prev,
+        resources: {
+          ...prev.resources,
+          ammo: prev.resources.ammo - ammoRequired
+        }
+      }));
+      
+      addLog(`Used ${ammoRequired} ammo for the mission.`);
+    }
+    
+    // Final chance calculation
+    successChance += survivorBonus;
+    
+    // Determine outcome
+    if (Math.random() < successChance) {
+      // Success - clear zombies
+      const newGrid = [...gameState.cityGrid];
+      newGrid[index] = {
+        type: 'empty',
+        hasPlayer: false
+      };
+      
+      setGameState(prev => ({
+        ...prev,
+        zombies: Math.max(0, prev.zombies - zombieCount),
+        cityGrid: newGrid
+      }));
+      
+      addLog(`The hunting party successfully eliminated the ${description}!`);
+    } else {
+      // Failure - casualties possible
+      if (gameState.survivors > 0) {
+        const casualties = Math.min(gameState.survivors, Math.ceil(Math.random() * 2));
+        
+        setGameState(prev => ({
+          ...prev,
+          survivors: prev.survivors - casualties
+        }));
+        
+        addLog(`The mission failed. The team retreated with ${casualties} ${casualties === 1 ? 'casualty' : 'casualties'}.`);
+      } else {
+        addLog("The mission failed. You barely escaped with your life.");
+      }
+    }
+  };
+
+  // Gather resources from a cache
+  const gatherResourcesAt = (index: number) => {
+    addLog("You sent a team to gather resources from the cache.");
+    
+    // Generate random resources
+    const foodFound = Math.floor(Math.random() * 4) + 2;
+    const waterFound = Math.floor(Math.random() * 4) + 2;
+    const medicineFound = Math.floor(Math.random() * 2);
+    const ammoFound = Math.floor(Math.random() * 3);
+    
+    // Clear the resource spot
+    const newGrid = [...gameState.cityGrid];
+    newGrid[index] = {
+      type: 'empty',
+      hasPlayer: false
+    };
+    
+    setGameState(prev => ({
+      ...prev,
+      resources: {
+        ...prev.resources,
+        food: prev.resources.food + foodFound,
+        water: prev.resources.water + waterFound,
+        medicine: prev.resources.medicine + medicineFound,
+        ammo: prev.resources.ammo + ammoFound
+      },
+      cityGrid: newGrid
+    }));
+    
+    addLog(`Resource gathering successful! Found +${foodFound} food, +${waterFound} water, +${medicineFound} medicine, and +${ammoFound} ammo.`);
+  };
+
   if (!mounted) {
     return null; // or a loading spinner
   }
@@ -1216,6 +1738,15 @@ export default function Game() {
                   Your Camp
                 </Typography>
                 
+                {/* Instructions */}
+                <Typography variant="body2" sx={{ color: '#aaa', mb: 2, textAlign: 'center' }}>
+                  Click on a tile to perform your daily action:
+                  • Empty Space: Explore the area
+                  • Building: Scavenge for supplies
+                  • Survivor: Make contact
+                  • Zombie: Send hunting party
+                </Typography>
+                
                 {/* Grid for camp phase */}
                 <Box
                   sx={{
@@ -1239,7 +1770,7 @@ export default function Game() {
                       transition={{ duration: 0.3, delay: index * 0.001 }}
                     >
                       <Tooltip 
-                        title={`${index === gameState.campPosition ? 'Your Camp - ' : ''}${cellGraphics[cell.type].label}`}
+                        title={`${index === gameState.campPosition ? 'Your Camp - ' : ''}${cellGraphics[cell.type].label}${gameState.hasPerformedAction ? ' (Already performed daily action)' : ''}`}
                         arrow
                       >
                         <Box
@@ -1252,11 +1783,17 @@ export default function Game() {
                             alignItems: 'center',
                             justifyContent: 'center',
                             fontSize: 22,
-                            cursor: 'default',
+                            cursor: gameState.hasPerformedAction ? 'default' : 'pointer',
                             position: 'relative',
-                            opacity: index === gameState.campPosition ? 1 : 0.7,
+                            opacity: index === gameState.campPosition || !gameState.hasPerformedAction ? 1 : 0.7,
+                            '&:hover': gameState.hasPerformedAction ? {} : {
+                              transform: 'scale(1.1)',
+                              zIndex: 1,
+                              boxShadow: '0 0 5px rgba(255,255,255,0.5)'
+                            },
                             transition: 'all 0.2s ease',
                           }}
+                          onClick={() => gameState.hasPerformedAction ? null : handleCampCellClick(index)}
                         >
                           {cellGraphics[cell.type].emoji}
                         </Box>
@@ -1265,42 +1802,10 @@ export default function Game() {
                   ))}
                 </Box>
                 
-                {/* Camp Actions */}
-                <Typography variant="h6" sx={{ color: '#ff9800', mb: 2 }}>
-                  Daily Actions
+                {/* Status message */}
+                <Typography variant="body1" sx={{ color: '#ff9800', textAlign: 'center', mb: 2 }}>
+                  {gameState.hasPerformedAction ? 'Daily action completed. End the day when ready.' : 'Choose a tile to perform your daily action.'}
                 </Typography>
-                <Grid container spacing={2} sx={{ mb: 2 }}>
-                  <Grid item xs={4}>
-                    <Button 
-                      variant="outlined" 
-                      fullWidth
-                      sx={{ borderColor: '#ff9800', color: '#ff9800' }}
-                      onClick={gatherResources}
-                    >
-                      Gather Resources
-                    </Button>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Button 
-                      variant="outlined" 
-                      fullWidth
-                      sx={{ borderColor: '#4caf50', color: '#4caf50' }}
-                      onClick={reinforceCamp}
-                    >
-                      Reinforce Camp
-                    </Button>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <Button 
-                      variant="outlined" 
-                      fullWidth
-                      sx={{ borderColor: '#ff4d4d', color: '#ff4d4d' }}
-                      onClick={scoutArea}
-                    >
-                      Scout Area
-                    </Button>
-                  </Grid>
-                </Grid>
                 
                 {/* End Day Button for Camp Phase */}
                 <Button 
@@ -1368,6 +1873,54 @@ export default function Game() {
                 </Typography>
               </Box>
             )}
+            
+            {/* Faction Reputations Section */}
+            <Typography variant="h6" sx={{ mb: 1, color: '#ff4d4d' }}>
+              Faction Relations
+            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5, mb: 2 }}>
+              {Object.entries(gameState.factionReputations).map(([faction, reputation]) => {
+                // Skip showing factions with 0 reputation that haven't been encountered
+                if (reputation === 0 && gameState.day < 5) return null;
+                
+                // Determine status and color
+                let status = '';
+                let color = '#ffffff';
+                if (reputation >= 75) {
+                  status = 'Allied';
+                  color = '#4CAF50'; // green
+                } else if (reputation >= 30) {
+                  status = 'Friendly';
+                  color = '#8BC34A'; // light green
+                } else if (reputation >= 10) {
+                  status = 'Cordial';
+                  color = '#CDDC39'; // lime
+                } else if (reputation > -10) {
+                  status = 'Neutral';
+                  color = '#9E9E9E'; // gray
+                } else if (reputation > -30) {
+                  status = 'Wary';
+                  color = '#FFC107'; // amber
+                } else if (reputation > -75) {
+                  status = 'Hostile';
+                  color = '#FF5722'; // deep orange
+                } else {
+                  status = 'Enemy';
+                  color = '#F44336'; // red
+                }
+                
+                return (
+                  <Box key={faction} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Typography variant="body2" sx={{ color: '#fff' }}>
+                      {faction}:
+                    </Typography>
+                    <Typography variant="body2" sx={{ color }}>
+                      {status} ({reputation})
+                    </Typography>
+                  </Box>
+                );
+              })}
+            </Box>
             
             <Typography variant="h6" sx={{ mb: 2, color: '#ff4d4d' }}>
               Resources
@@ -1555,6 +2108,46 @@ export default function Game() {
             color="secondary"
           >
             Ignore
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Contact Dialog */}
+      <Dialog 
+        open={showContactDialog} 
+        onClose={() => setShowContactDialog(false)}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle sx={{ color: '#ff4d4d' }}>
+          Survivor Contact
+        </DialogTitle>
+        <DialogContent>
+          <Typography sx={{ color: '#fff', my: 2 }}>
+            {currentSurvivor?.description}
+          </Typography>
+        </DialogContent>
+        <DialogActions sx={{ p: 2 }}>
+          <Button 
+            onClick={() => handleSurvivorContact('recruit')}
+            variant="contained"
+            color="primary"
+          >
+            Recruit
+          </Button>
+          <Button 
+            onClick={() => handleSurvivorContact('trade')}
+            variant="contained"
+            color="primary"
+          >
+            Trade
+          </Button>
+          <Button 
+            onClick={() => handleSurvivorContact('leave')}
+            variant="contained"
+            color="secondary"
+          >
+            Leave
           </Button>
         </DialogActions>
       </Dialog>
