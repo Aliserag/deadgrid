@@ -5,6 +5,7 @@ import { Box, Grid, Paper, Typography, IconButton, Button, Dialog, DialogTitle, 
 import { motion } from 'framer-motion';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import PeopleIcon from '@mui/icons-material/People';
 import { useRouter } from 'next/navigation';
 
 // Cell types
@@ -166,6 +167,7 @@ export default function Game() {
   const [showContactDialog, setShowContactDialog] = useState(false);
   const [showNightEventDialog, setShowNightEventDialog] = useState(false);
   const [showInventoryDialog, setShowInventoryDialog] = useState(false);
+  const [showPartyDialog, setShowPartyDialog] = useState(false);
   const [selectedCellIndex, setSelectedCellIndex] = useState<number | null>(null);
   const [currentSurvivor, setCurrentSurvivor] = useState<SurvivorData | null>(null);
   const [selectedLootItem, setSelectedLootItem] = useState<LootItem | null>(null);
@@ -2228,6 +2230,37 @@ export default function Game() {
     setShowCampAttackDialog(false);
   };
 
+  // Toggle party dialog
+  const togglePartyView = () => {
+    setShowPartyDialog(!showPartyDialog);
+  };
+
+  // Generate sample survivors for party view when we don't have individual data
+  const generateSurvivorProfiles = () => {
+    if (gameState.survivors <= 0) return [];
+    
+    const names = ["Alex", "Morgan", "Casey", "Jordan", "Taylor", "Riley", "Quinn", "Avery", "Blake", "Cameron"];
+    const skills = ["Medicine", "Hunting", "Defense", "Engineering", "Crafting", "Leadership", "Scavenging"];
+    const traits = ["Brave", "Cautious", "Optimistic", "Resourceful", "Loyal", "Paranoid", "Quick-witted", "Strong", "Stealthy"];
+    
+    return Array.from({ length: gameState.survivors }).map((_, index) => {
+      // Generate a consistent survivor based on the index to avoid randomizing on every render
+      const nameIndex = index % names.length;
+      const skillIndex1 = (index * 3) % skills.length;
+      const skillIndex2 = (index * 7) % skills.length;
+      const traitIndex1 = (index * 5) % traits.length;
+      const traitIndex2 = (index * 11) % traits.length;
+      
+      return {
+        id: `survivor-${index}`,
+        name: names[nameIndex],
+        skills: [skills[skillIndex1], skillIndex1 !== skillIndex2 ? skills[skillIndex2] : skills[(skillIndex2 + 1) % skills.length]],
+        traits: [traits[traitIndex1], traitIndex1 !== traitIndex2 ? traits[traitIndex2] : traits[(traitIndex2 + 1) % traits.length]],
+        joinedDay: Math.max(1, gameState.day - (index % gameState.day)) // Make sure they joined on a valid day
+      };
+    });
+  };
+
   if (!mounted) {
     return null; // or a loading spinner
   }
@@ -2237,6 +2270,7 @@ export default function Game() {
       sx={{
         minHeight: '100vh',
         background: '#121212',
+        color: '#fff',
         p: 2,
       }}
     >
@@ -2249,21 +2283,35 @@ export default function Game() {
           mb: 2,
         }}
       >
-        <IconButton onClick={() => router.push('/')} sx={{ color: '#ff4d4d' }}>
+        <IconButton
+          onClick={() => router.push('/')}
+          sx={{ color: '#ff4d4d' }}
+        >
           <ArrowBackIcon />
         </IconButton>
+        
         <Typography variant="h6" sx={{ color: '#ff4d4d' }}>
-          Day {gameState.day} 
+          Day {gameState.day} - {gameState.phase === 'solo' ? 'Solo Exploration' : 'Camp Management'}
         </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant="body2" sx={{ color: '#4fc3f7', mr: 2 }}>
-            {gameState.hasCamp ? 'Camp established' : 'No camp yet'}
-          </Typography>
-          <Badge badgeContent={gameState.loot.filter(item => item.equipped).length} color="primary">
-            <IconButton onClick={toggleInventory} sx={{ color: '#ff9800' }}>
+        
+        <Box>
+          <IconButton 
+            onClick={togglePartyView}
+            sx={{ color: '#4caf50', mr: 1 }}
+          >
+            <Badge badgeContent={gameState.survivors} color="primary">
+              <PeopleIcon />
+            </Badge>
+          </IconButton>
+          
+          <IconButton 
+            onClick={toggleInventory}
+            sx={{ color: '#ff9800' }}
+          >
+            <Badge badgeContent={gameState.loot.length} color="primary">
               <InventoryIcon />
-            </IconButton>
-          </Badge>
+            </Badge>
+          </IconButton>
         </Box>
       </Box>
 
@@ -2999,6 +3047,134 @@ export default function Game() {
             ))}
           </Box>
         </DialogContent>
+      </Dialog>
+
+      {/* Party Dialog */}
+      <Dialog 
+        open={showPartyDialog} 
+        onClose={() => setShowPartyDialog(false)}
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle sx={{ color: '#4caf50', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span>Survivor Group</span>
+          <Typography variant="subtitle1" sx={{ color: '#aaa' }}>
+            {gameState.survivors} {gameState.survivors === 1 ? 'Survivor' : 'Survivors'}
+          </Typography>
+        </DialogTitle>
+        <DialogContent>
+          {gameState.survivors <= 0 ? (
+            <Typography sx={{ color: '#aaa', my: 2, textAlign: 'center' }}>
+              You are alone. No other survivors in your group yet.
+            </Typography>
+          ) : (
+            <Box sx={{ my: 2 }}>
+              {generateSurvivorProfiles().map((survivor, index) => (
+                <Paper 
+                  key={survivor.id} 
+                  sx={{ 
+                    p: 2, 
+                    mb: 2, 
+                    background: 'rgba(0,0,0,0.3)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '4px'
+                  }}
+                >
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                    <Box>
+                      <Typography variant="h6" sx={{ color: '#4caf50' }}>
+                        {survivor.name}
+                      </Typography>
+                      <Typography variant="caption" sx={{ color: '#aaa' }}>
+                        Joined on Day {survivor.joinedDay}
+                      </Typography>
+                    </Box>
+                    <Typography variant="body2" sx={{ 
+                      color: '#fff', 
+                      background: 'rgba(76,175,80,0.2)', 
+                      px: 1, 
+                      py: 0.5, 
+                      borderRadius: '4px'
+                    }}>
+                      Survivor #{index + 1}
+                    </Typography>
+                  </Box>
+                  
+                  <Box sx={{ mt: 2 }}>
+                    <Typography variant="body2" sx={{ color: '#ff9800', mb: 0.5 }}>
+                      Skills:
+                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                      {survivor.skills.map(skill => (
+                        <Typography 
+                          key={skill} 
+                          variant="body2" 
+                          sx={{ 
+                            color: '#fff',
+                            background: 'rgba(255,152,0,0.2)',
+                            px: 1, 
+                            py: 0.5,
+                            borderRadius: '4px',
+                            fontSize: '0.8rem'
+                          }}
+                        >
+                          {skill}
+                        </Typography>
+                      ))}
+                    </Box>
+                  </Box>
+                  
+                  <Box sx={{ mt: 2 }}>
+                    <Typography variant="body2" sx={{ color: '#2196f3', mb: 0.5 }}>
+                      Traits:
+                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                      {survivor.traits.map(trait => (
+                        <Typography 
+                          key={trait} 
+                          variant="body2" 
+                          sx={{ 
+                            color: '#fff',
+                            background: 'rgba(33,150,243,0.2)',
+                            px: 1, 
+                            py: 0.5,
+                            borderRadius: '4px',
+                            fontSize: '0.8rem'
+                          }}
+                        >
+                          {trait}
+                        </Typography>
+                      ))}
+                    </Box>
+                  </Box>
+                </Paper>
+              ))}
+            </Box>
+          )}
+          
+          <Box sx={{ mt: 3, p: 2, background: 'rgba(0,0,0,0.2)', borderRadius: '4px' }}>
+            <Typography variant="subtitle1" sx={{ color: '#4caf50', mb: 1 }}>
+              Group Benefits
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#ddd' }}>
+              • Each survivor increases your camp's resource gathering abilities
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#ddd' }}>
+              • Survivors help defend your camp against zombie attacks
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#ddd' }}>
+              • More survivors make hunting parties more effective
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#ddd' }}>
+              • Survivors help reinforce camp defenses more quickly
+            </Typography>
+          </Box>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setShowPartyDialog(false)} color="primary">
+            Close
+          </Button>
+        </DialogActions>
       </Dialog>
     </Box>
   );
