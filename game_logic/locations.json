@@ -25,6 +25,76 @@
       "coords": [
         0,
         0
+      ],
+      "buildings": [
+        {
+          "name": "Abandoned Mega Mart Warehouse",
+          "description": "A sprawling, intact warehouse that once served as the storage hub for a massive retail chain. The interior is a maze of towering shelves, stacked with remnants of pre-apocalypse goods. Flickering emergency lights cast long shadows, and the air smells of dust and decay. The building is eerily quiet, save for the occasional creak of metal or distant shuffling.",
+          "floors": 1,
+          "layout": "+----------------------+\n|  OFFICE  |  BREAK   |\n|          |  ROOM    |\n+-----+----+-----+----+\n|  LOADING  |  MAIN    |\n|  DOCK     |  STORAGE |\n|           |  AREA    |\n+----------------------+",
+          "rooms": [
+            {
+              "name": "Main Storage Area",
+              "description": "A vast open space filled with rows of metal shelves, some toppled over. Crates and boxes are scattered haphazardly.",
+              "contents": [
+                "Pallets of canned goods",
+                "Broken electronics",
+                "Dented metal shelves",
+                "Dusty tarps"
+              ]
+            },
+            {
+              "name": "Loading Dock",
+              "description": "A large area with roll-up doors, where trucks once unloaded merchandise. A few abandoned forklifts sit idle.",
+              "contents": [
+                "Rusted forklifts",
+                "Pallets",
+                "Broken loading equipment",
+                "Dried bloodstains"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "A small, cluttered room with a desk and filing cabinets. Papers are strewn everywhere.",
+              "contents": [
+                "Desk",
+                "Filing cabinets",
+                "Old computer",
+                "Faded paperwork"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "A dingy room with a few tables and chairs. A broken vending machine stands in the corner.",
+              "contents": [
+                "Tables and chairs",
+                "Broken vending machine",
+                "Old coffee maker",
+                "Moldy food wrappers"
+              ]
+            }
+          ],
+          "dangers": [
+            "Zombies lurking behind shelves",
+            "Unstable stacks of crates",
+            "Broken glass",
+            "Dark corners with limited visibility"
+          ],
+          "resources": [
+            "Canned food",
+            "Tools",
+            "Batteries",
+            "Medical supplies",
+            "Clothing"
+          ],
+          "special_features": [
+            "High ceilings with catwalks",
+            "Emergency lighting still functional",
+            "Heavy machinery that could be repurposed"
+          ],
+          "id": "bldg_927",
+          "location_id": "loc_1"
+        }
       ]
     },
     {
@@ -253,6 +323,72 @@
           "location_id": "loc_3"
         }
       ]
+    },
+    {
+      "name": "St. Marrow's Memorial Hospital",
+      "description": "A once-renowned medical facility now stands as a grim monument to the outbreak. The hallways are littered with overturned gurneys and shattered medical equipment, while the flickering fluorescent lights reveal disturbing stains on the walls. The pharmacy remains partially intact, though getting to it requires navigating through treacherous corridors.",
+      "type": "medical",
+      "danger_level": 6,
+      "resources": [
+        "medical supplies",
+        "painkillers",
+        "antibiotics",
+        "surgical tools"
+      ],
+      "features": [
+        "collapsed emergency room entrance",
+        "active backup generator",
+        "quarantine zone with broken containment"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "hidden research lab in basement"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "infected medical staff in hazmat suits"
+        ]
+      },
+      "id": "loc_4",
+      "coords": [
+        35,
+        9
+      ]
+    },
+    {
+      "name": "St. Marrow's Memorial Hospital",
+      "description": "A once-renowned medical facility now stands as a grim monument to the outbreak. The hallways are littered with overturned gurneys and shattered medical equipment, while the flickering fluorescent lights reveal disturbing stains on the walls. The pharmacy remains partially intact, though getting to it requires navigating through treacherous corridors.",
+      "type": "medical",
+      "danger_level": 6,
+      "resources": [
+        "medical supplies",
+        "painkillers",
+        "antibiotics",
+        "surgical tools"
+      ],
+      "features": [
+        "collapsed emergency room entrance",
+        "active backup generator",
+        "quarantine zone with broken containment"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "hidden research lab in basement"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "infected medical staff in hazmat suits"
+        ]
+      },
+      "id": "location_5",
+      "coords": [
+        35,
+        9
+      ],
+      "discovered_day": 11,
+      "visited": false
     }
   ]
 }

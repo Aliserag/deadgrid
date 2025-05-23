@@ -1,19 +1,19 @@
 {
-  "day": 11,
-  "health": 86,
-  "morale": 63,
+  "day": 12,
+  "health": 88,
+  "morale": 60,
   "water": 0,
-  "food": 4,
+  "food": 6,
   "location": [
     0,
     0
   ],
-  "base_defense": 4,
-  "last_action": "scavenge",
+  "base_defense": 5,
+  "last_action": "defend",
   "status_effects": [
     {
       "name": "Fog Anxiety",
-      "duration": 1,
+      "duration": 0,
       "effect": "-5% perception in fog"
     }
   ],
@@ -42,6 +42,12 @@
       "type": "transport",
       "durability": 6,
       "bonus": "+1 inventory slot when scavenging"
+    },
+    {
+      "name": "reinforced flashlight",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "20% brighter beam"
     }
   ],
   "materials": {
@@ -65,7 +71,9 @@
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
-    "Generator Room"
+    "Generator Room",
+    "St. Marrow's Memorial Hospital",
+    "Abandoned Mega Mart Warehouse"
   ],
   "skills": [
     "Silent Salvager"

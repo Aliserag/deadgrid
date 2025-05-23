@@ -14,7 +14,7 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   ########                 ########   #
 #          #                 #      #   #
 #          #                 #      #   #
-#          #                 #      #   #
+#          #                 #     +#   #
 #          ###################      # C #
 #                                   #   #
 #                                   #   #
@@ -54,3 +54,4 @@ G = Generator Room
 - abandoned trains
 - echoing sounds
 - hidden stashes
++ = St. Marrow's Memoria
