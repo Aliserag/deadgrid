@@ -189,6 +189,103 @@
           ],
           "id": "bldg_490",
           "location_id": "loc_2"
+        },
+        {
+          "name": "Sunset Ridge Apartments",
+          "description": "A fortified apartment building in the Sunset Ridge Subdivision, its exterior reinforced with metal barricades and boarded-up windows. The interior shows signs of previous habitation, with makeshift defenses and scavenged supplies. The upper floors provide a vantage point for spotting threats, while the ground floor remains heavily secured.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+--------+--------+\n|  Lobby | Stairs |\n+--------+--------+\n|  Apt 1 |  Apt 2 |\n+--------+--------+\n\nUpper Floors:\n+--------+--------+\n|  Apt 3 |  Apt 4 |\n+--------+--------+\n|  Apt 5 |  Apt 6 |\n+--------+--------+",
+          "rooms": [
+            {
+              "name": "Lobby",
+              "description": "The main entrance area, barricaded with furniture and sandbags.",
+              "contents": [
+                "Barricades",
+                "Broken security camera",
+                "Fallen chairs",
+                "Bloodstains"
+              ]
+            },
+            {
+              "name": "Apartment 1",
+              "description": "A ransacked living space, likely used as a storage area by survivors.",
+              "contents": [
+                "Empty crates",
+                "Dented metal shelves",
+                "Pile of old clothes",
+                "Rusted tools"
+              ]
+            },
+            {
+              "name": "Apartment 2",
+              "description": "A fortified sleeping area with mattresses on the floor.",
+              "contents": [
+                "Mattresses",
+                "Candles",
+                "Handwritten notes",
+                "Improvised weapons"
+              ]
+            },
+            {
+              "name": "Apartment 3",
+              "description": "A lookout post with a clear view of the surrounding streets.",
+              "contents": [
+                "Binoculars",
+                "Drawn maps",
+                "Empty food cans",
+                "Rope ladder"
+              ]
+            },
+            {
+              "name": "Apartment 4",
+              "description": "A makeshift medical area with limited supplies.",
+              "contents": [
+                "Bandages",
+                "Alcohol bottles",
+                "Splints",
+                "Bloody rags"
+              ]
+            },
+            {
+              "name": "Apartment 5",
+              "description": "A scavenged kitchen with a broken stove.",
+              "contents": [
+                "Canned food",
+                "Water jugs",
+                "Cracked pots",
+                "Dull knives"
+              ]
+            },
+            {
+              "name": "Apartment 6",
+              "description": "A collapsed room with a hole in the ceiling.",
+              "contents": [
+                "Broken furniture",
+                "Exposed wires",
+                "Pile of rubble",
+                "Rat traps"
+              ]
+            }
+          ],
+          "dangers": [
+            "Collapsing floor in Apartment 6",
+            "Zombies trapped in stairwell",
+            "Booby-trapped lobby entrance",
+            "Unstable barricades"
+          ],
+          "resources": [
+            "Canned food in Apartment 5",
+            "Medical supplies in Apartment 4",
+            "Binoculars in Apartment 3",
+            "Improvised weapons in Apartment 2"
+          ],
+          "special_features": [
+            "Rooftop access for scouting",
+            "Barricaded windows with firing slits",
+            "Graffiti warnings on walls"
+          ],
+          "id": "bldg_913",
+          "location_id": "loc_2"
         }
       ]
     },

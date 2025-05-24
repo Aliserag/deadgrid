@@ -1,20 +1,25 @@
 {
-  "day": 12,
-  "health": 88,
-  "morale": 60,
+  "day": 13,
+  "health": 85,
+  "morale": 55,
   "water": 0,
-  "food": 6,
+  "food": 8,
   "location": [
     0,
     0
   ],
   "base_defense": 5,
-  "last_action": "defend",
+  "last_action": "signal",
   "status_effects": [
     {
       "name": "Fog Anxiety",
-      "duration": 0,
+      "duration": 1,
       "effect": "-5% perception in fog"
+    },
+    {
+      "name": "Radio Static",
+      "duration": 2,
+      "effect": "Occasional auditory hallucinations"
     }
   ],
   "traits": [
@@ -22,7 +27,8 @@
       "name": "Silent Salvager",
       "level": 1,
       "effect": "Reduces noise while scavenging by 25%"
-    }
+    },
+    "Silent Salvager"
   ],
   "gear": [
     {
@@ -48,6 +54,12 @@
       "type": "tool",
       "durability": 3,
       "bonus": "20% brighter beam"
+    },
+    {
+      "name": "vest",
+      "type": "armor",
+      "durability": 3,
+      "bonus": "+5% damage resistance"
     }
   ],
   "materials": {
@@ -59,12 +71,12 @@
     "watchers": {
       "disposition": "neutral",
       "last_seen": "generator_room",
-      "activity": "fresh markings"
+      "activity": "left radio artifact"
     },
     "caravan_collective": {
       "disposition": "neutral",
-      "last_seen": "south",
-      "activity": "recent passage"
+      "last_seen": "supply_cache",
+      "activity": "responded to signal"
     }
   },
   "threat_level": "moderate",
@@ -73,7 +85,8 @@
     "Rustbelt Tool & Die",
     "Generator Room",
     "St. Marrow's Memorial Hospital",
-    "Abandoned Mega Mart Warehouse"
+    "Abandoned Mega Mart Warehouse",
+    "Supply Cache"
   ],
   "skills": [
     "Silent Salvager"
@@ -89,6 +102,11 @@
       "content": "[static]...repeat...sector 7 compromised...[static]",
       "origin": "watchers?",
       "threat_implication": "medium"
+    },
+    {
+      "content": "[whispering]...burn the growths...",
+      "origin": "local",
+      "threat_implication": "unknown"
     }
   ]
 }

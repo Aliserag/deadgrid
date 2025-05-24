@@ -2,6 +2,7 @@
   "factions": [
     {
       "name": "The Caravan Collective",
+      "emoji": "\ud83d\ude9b",
       "description": "A vast network of traders and scavengers who roam the wasteland, connecting isolated settlements through commerce. They prioritize profit and survival over all else, maintaining neutrality to ensure safe passage. Their caravans are heavily guarded and recognizable by their patchwork banners.",
       "ideology": "Profit through peace. They believe trade is the key to rebuilding civilization and will go to great lengths to protect their business interests.",
       "territory": "Nomadic, but they have established trade hubs in abandoned shopping malls and highway rest stops across the region.",
@@ -22,13 +23,16 @@
         "Internal disputes over profit can lead to infighting"
       ],
       "id": "faction_1",
+      "discovered_day": 15,
       "members": [
         "npc_1",
         "npc_2",
         "npc_3",
-        "npc_4"
+        "npc_4",
+        "npc_5"
       ],
       "relations": {}
     }
-  ]
+  ],
+  "next_id": 2
 }

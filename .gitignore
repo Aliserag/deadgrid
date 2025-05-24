@@ -7,6 +7,10 @@ logs/temp*
 *.plist
 *blockchain_cache.json
 
+# Documentation with sensitive automation details
+ARCHITECTURE.md
+LLM_CONTEXT.md
+
 # Local environment and temporary files
 .env
 .DS_Store

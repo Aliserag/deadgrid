@@ -2,7 +2,10 @@ import { NextResponse } from 'next/server';
 import { spawn } from 'child_process';
 import path from 'path';
 
-export async function POST(request: Request) {
+// Specify that this route should be dynamically rendered
+export const dynamic = 'force-dynamic';
+
+export async function POST(request: Request): Promise<NextResponse> {
   try {
     const body = await request.json();
     const { action, gameState } = body;
@@ -46,7 +49,7 @@ export async function POST(request: Request) {
     console.log('Executing script:', scriptPath);
     console.log('With args:', args);
 
-    return new Promise((resolve, reject) => {
+    return new Promise<NextResponse>((resolve, reject) => {
       const pythonProcess = spawn('python3', [scriptPath, ...args]);
       let outputData = '';
       let errorData = '';

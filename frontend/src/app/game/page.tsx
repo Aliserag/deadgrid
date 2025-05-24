@@ -2365,7 +2365,7 @@ export default function Game() {
     setCurrentAttack(attack);
     
     // Generate defense options based on game state
-    const defenseOptions = [];
+    const defenseOptions: any[] = [];
     
     // Fight Back option - requires ammo and survivors
     if (gameState.resources.ammo >= 3 && gameState.survivors >= 2) {
@@ -2450,7 +2450,7 @@ export default function Game() {
     }
     
     // Calculate resource loss
-    const resourceLoss: {[key: string]: number} = {};
+    const resourceLoss: {[key in keyof typeof gameState.resources]?: number} = {};
     const lossMultiplier = defenseOption.consequences.resourceLoss || 1.0;
     
     if (currentAttack.severity === 'low') {
@@ -2510,10 +2510,11 @@ export default function Game() {
     }
     
     Object.keys(resourceLoss).forEach(resource => {
-      if (resourceLoss[resource] > 0 && newGameState.resources[resource as keyof typeof newGameState.resources] !== undefined) {
-        newGameState.resources[resource as keyof typeof newGameState.resources] = Math.max(
+      const resourceKey = resource as keyof typeof gameState.resources;
+      if (resourceLoss[resourceKey] && resourceLoss[resourceKey]! > 0 && newGameState.resources[resourceKey] !== undefined) {
+        newGameState.resources[resourceKey] = Math.max(
           0, 
-          newGameState.resources[resource as keyof typeof newGameState.resources] - resourceLoss[resource]
+          newGameState.resources[resourceKey] - resourceLoss[resourceKey]!
         );
       }
     });
@@ -2543,10 +2544,11 @@ export default function Game() {
       outcomeMessage += ` Used ${ammoUsed} ammunition.`;
     }
     
-    const resourceMessages = [];
+    const resourceMessages: string[] = [];
     Object.keys(resourceLoss).forEach(resource => {
-      if (resourceLoss[resource] > 0) {
-        resourceMessages.push(`${resourceLoss[resource]} ${resource}`);
+      const resourceKey = resource as keyof typeof gameState.resources;
+      if (resourceLoss[resourceKey] && resourceLoss[resourceKey]! > 0) {
+        resourceMessages.push(`${resourceLoss[resourceKey]} ${resource}`);
       }
     });
     

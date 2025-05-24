@@ -2,6 +2,7 @@
   "npcs": [
     {
       "name": "Dr. Elias Vance",
+      "emoji": "\ud83d\udc68\u200d\u2695\ufe0f",
       "age": 42,
       "background": "Former trauma surgeon who lost his family in the early days of the outbreak. Now uses his medical skills to barter for supplies and information.",
       "description": "Tall and lean with salt-and-pepper hair tied back in a short ponytail. His piercing blue eyes and calm demeanor mask a sharp, calculating mind. Speaks softly but carries an air of quiet authority.",
@@ -20,6 +21,7 @@
       "quirk": "Always hums old jazz tunes while working, even during high-stress situations.",
       "secret": "He's secretly developing an experimental vaccine using spinal fluid harvested from special infected, but hasn't told anyone about the dangerous side effects he's observed.",
       "id": "npc_1",
+      "discovered_day": 15,
       "faction_id": "faction_1",
       "faction_name": "The Caravan Collective",
       "status": "alive",
@@ -27,6 +29,7 @@
     },
     {
       "name": "Marcus 'Ironprice' Holloway",
+      "emoji": "\ud83e\ude96",
       "age": 42,
       "background": "Former Marine Corps logistics officer who specialized in supply chain management. After the outbreak, he put his skills to use keeping trade routes open.",
       "description": "A broad-shouldered man with a salt-and-pepper beard and a permanent squint from years of scanning horizons. Speaks in measured tones but has a dry wit that surfaces unexpectedly.",
@@ -45,6 +48,7 @@
       "quirk": "Always carries a small scale to weigh goods, even when it's clearly unnecessary.",
       "secret": "He's been skimming small percentages from trades to build an emergency stockpile, convinced the Collective's idealism will get them all killed.",
       "id": "npc_2",
+      "discovered_day": 15,
       "faction_id": "faction_1",
       "faction_name": "The Caravan Collective",
       "status": "alive",
@@ -52,6 +56,7 @@
     },
     {
       "name": "Marcus 'Hawk' Callahan",
+      "emoji": "\ud83e\udd85",
       "age": 42,
       "background": "Former Army Ranger turned private security contractor. Specialized in high-risk convoy protection in conflict zones before the outbreak.",
       "description": "A grizzled man with a shaved head and a network of scars across his forearms. His piercing blue eyes constantly scan for threats, but he speaks with surprising warmth when negotiating deals. Wears a modified tactical vest with caravan insignia.",
@@ -70,6 +75,7 @@
       "quirk": "Constantly fidgets with a silver challenge coin from his Ranger days, flipping it between his fingers during tense moments.",
       "secret": "His caravan accidentally transported the infected that overran the Greenbrier settlement, though he's convinced it was sabotage by a rival faction.",
       "id": "npc_3",
+      "discovered_day": 15,
       "faction_id": "faction_1",
       "faction_name": "The Caravan Collective",
       "status": "alive",
@@ -77,6 +83,7 @@
     },
     {
       "name": "Eleanor 'Ellie' Whitmore",
+      "emoji": "\ud83d\udc69\u200d\ud83c\udfeb",
       "age": 42,
       "background": "Former high school history teacher who specialized in ancient trade routes and barter economies. She secretly ran an underground book exchange for banned historical texts.",
       "description": "A wiry woman with salt-and-pepper hair kept in a practical braid, her sharp green eyes always scanning for opportunities. She speaks with measured precision but has a warm, encouraging tone that disarms strangers.",
@@ -95,10 +102,63 @@
       "quirk": "Constantly makes historical comparisons to current situations ('This reminds me of when the Phoenicians...')",
       "secret": "Her underground book exchange accidentally spread the first rumors of the coming apocalypse - she blames herself for not sounding the alarm sooner.",
       "id": "npc_4",
+      "discovered_day": 15,
       "faction_id": "faction_1",
       "faction_name": "The Caravan Collective",
       "status": "alive",
       "relationship": -22
+    },
+    {
+      "name": "Eleanor 'Ellie' Grayson",
+      "age": 42,
+      "background": "Former high school history teacher who specialized in ancient trade routes and barter economies. Her academic knowledge became unexpectedly valuable after the collapse.",
+      "description": "A wiry woman with salt-and-pepper hair tied in a practical braid, deep crow's feet from squinting at blackboards (and now at threats in the fog). Speaks with measured precision but has a dark, unexpected humor that surfaces at tense moments.",
+      "motivation": "To prove civilization can be rebuilt through commerce rather than violence, secretly compiling a 'New Merchant's Guide' with survivalist annotations.",
+      "skills": [
+        "Barter negotiation",
+        "Mapmaking/cartography",
+        "Basic first aid",
+        "Spotting valuable artifacts in ruins"
+      ],
+      "items": [
+        "A laminated pre-collapse world map with handwritten trade routes",
+        "A hollowed-out textbook containing hidden seeds",
+        "A brass bell used to announce 'store hours' at trading posts"
+      ],
+      "quirk": "Absentmindedly writes prices in the air with her finger when evaluating items, even during life-or-death situations.",
+      "secret": "Her 'merchant ledger' contains coded locations of hidden caches... including ones she looted from other survivors during the early chaos.",
+      "id": "npc_5",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": 14
+    },
+    {
+      "name": "Eleanor 'Ellie' Grayson",
+      "age": 42,
+      "background": "Former high school history teacher who specialized in ancient trade routes and barter economies. Her academic knowledge became unexpectedly valuable after the collapse.",
+      "description": "A wiry woman with salt-and-pepper hair tied in a practical braid, deep crow's feet from squinting at blackboards (and now at threats in the fog). Speaks with measured precision but has a dark, unexpected humor that surfaces at tense moments.",
+      "motivation": "To prove civilization can be rebuilt through commerce rather than violence, secretly compiling a 'New Merchant's Guide' with survivalist annotations.",
+      "skills": [
+        "Barter negotiation",
+        "Mapmaking/cartography",
+        "Basic first aid",
+        "Spotting valuable artifacts in ruins"
+      ],
+      "items": [
+        "A laminated pre-collapse world map with handwritten trade routes",
+        "A hollowed-out textbook containing hidden seeds",
+        "A brass bell used to announce 'store hours' at trading posts"
+      ],
+      "quirk": "Absentmindedly writes prices in the air with her finger when evaluating items, even during life-or-death situations.",
+      "secret": "Her 'merchant ledger' contains coded locations of hidden caches... including ones she looted from other survivors during the early chaos.",
+      "id": "npc_6",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": 14,
+      "discovered_day": 12
     }
-  ]
+  ],
+  "next_id": 5
 }
