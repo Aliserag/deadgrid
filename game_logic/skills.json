@@ -32,6 +32,40 @@
         "Silently breaking into a locked safe in an infested building."
       ],
       "id": "skill_1"
+    },
+    {
+      "name": "Morale Boost",
+      "type": "leadership",
+      "description": "This skill allows you to inspire hope and determination in your fellow survivors, temporarily increasing their stamina and resistance to fear. At higher levels, it can even reduce the effects of fatigue and minor injuries.",
+      "prerequisite": "Basic Communication skill or Charisma stat of 5+",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Grants +10% stamina regen to nearby survivors for 30 seconds",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Reduces fear effects by 20% and extends duration to 45 seconds",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Temporarily negates fatigue penalties and provides minor pain resistance for 1 minute",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Field Medic",
+        "Tactical Command",
+        "Crisis Management"
+      ],
+      "usage_examples": [
+        "Rallying survivors during a horde attack to push through exhaustion",
+        "Helping a panicked group maintain composure when surrounded",
+        "Motivating exhausted scavengers for one final push to safety"
+      ],
+      "id": "skill_2"
     }
   ]
 }

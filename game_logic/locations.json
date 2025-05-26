@@ -486,6 +486,39 @@
       ],
       "discovered_day": 11,
       "visited": false
+    },
+    {
+      "name": "Midnight Mall",
+      "description": "A sprawling shopping complex frozen in time, its once-bright storefronts now dark and lifeless. The shattered glass ceilings let in eerie shafts of moonlight that illuminate the occasional abandoned kiosk or overturned fountain. The upper levels have partially collapsed, creating dangerous chokepoints and hidden pathways.",
+      "type": "commercial",
+      "danger_level": 6,
+      "resources": [
+        "camping supplies",
+        "non-perishable food",
+        "first aid kits",
+        "batteries"
+      ],
+      "features": [
+        "collapsed upper walkways creating vertical navigation challenges",
+        "emergency generator still holding some charge",
+        "security office with intact surveillance monitors"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A hidden panic room behind the manager's office containing valuable supplies"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Crawlers (zombies missing lower limbs)",
+          "Screamers (zombies that alert others when agitated)"
+        ]
+      },
+      "id": "loc_6",
+      "coords": [
+        39,
+        8
+      ]
     }
   ]
 }

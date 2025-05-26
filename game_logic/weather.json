@@ -1,29 +1,28 @@
 {
   "current_conditions": {
     "type": "fog",
-    "severity": 2,
+    "severity": 1,
     "duration": 1,
     "effects": [
       "visibility_severely_reduced",
-      "narrative_limited visibility",
-      "narrative_eerie silence"
+      "narrative_limited visibility"
     ]
   },
   "forecast": [
     {
       "day": 1,
       "type": "fog",
-      "severity": 2
+      "severity": 1
     },
     {
       "day": 2,
       "type": "fog",
-      "severity": 2
+      "severity": 1
     },
     {
       "day": 3,
-      "type": "storm",
-      "severity": 3
+      "type": "clear",
+      "severity": 2
     }
   ],
   "season": "spring",
@@ -60,6 +59,11 @@
     },
     {
       "date": "2025-05-24",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-26",
       "conditions": "fog",
       "severity": 2
     }
