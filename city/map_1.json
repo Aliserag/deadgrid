@@ -57,6 +57,36 @@
         2
       ],
       "symbol": "G"
+    },
+    {
+      "name": "The Glass Canopy",
+      "type": "landmark",
+      "description": "A shattered glass dome that once regulated sunlight for plants, now a dangerous field of broken glass and hanging vines",
+      "coords": [
+        15,
+        14
+      ],
+      "symbol": "~"
+    },
+    {
+      "name": "Fungal Grove",
+      "type": "resource area",
+      "description": "A cluster of bioluminescent mushrooms that some survivors claim have medicinal properties",
+      "coords": [
+        25,
+        15
+      ],
+      "symbol": "~"
+    },
+    {
+      "name": "Park Maintenance Shed",
+      "type": "building",
+      "description": "A small storage building overtaken by roots, possibly containing old gardening tools and chemicals",
+      "coords": [
+        7,
+        16
+      ],
+      "symbol": "P"
     }
   ],
   "danger_level": 7,
@@ -74,6 +104,32 @@
     "echoing sounds",
     "hidden stashes"
   ],
-  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#                                   #   #\n#   M                               #   #\n#   #                               #   #\n#   #                               #   #\n#   #                  X            #   #\n#   ##################################   #\n########################################",
-  "id": "map_1"
+  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################",
+  "id": "map_1",
+  "districts": [
+    {
+      "name": "Overgrown Arboretum",
+      "description": "What was once a beautiful underground park has been reclaimed by nature after years of neglect. Vines and mutated plants burst through cracked concrete, creating a dangerous but resource-rich environment. The air smells damp and earthy, with occasional pockets of bioluminescent fungi providing eerie illumination. Survivors report hearing strange rustling in the overgrowth that doesn't sound quite human.",
+      "coords": [
+        3,
+        13,
+        30,
+        5
+      ],
+      "faction_presence": "The Green Thumbs - a group of survivalists who believe in coexisting with the mutated flora",
+      "danger_level": 7,
+      "resources": [
+        "medicinal plants",
+        "fresh water",
+        "fertilizer",
+        "wood",
+        "mushrooms"
+      ],
+      "special_features": [
+        "mutated plants that react to movement",
+        "areas of toxic pollen",
+        "natural camouflage spots"
+      ]
+    }
+  ]
 }

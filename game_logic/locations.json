@@ -519,6 +519,38 @@
         39,
         8
       ]
+    },
+    {
+      "name": "Rustvale Urgent Care",
+      "description": "A small medical outpost that was quickly overrun during the early days of the outbreak. The waiting room is a graveyard of broken chairs and scattered patient files, while the treatment rooms hold the remnants of desperate last stands. The back storage area might still have some usable supplies, but the collapsed ceiling in the west wing makes navigation hazardous.",
+      "type": "medical",
+      "danger_level": 4,
+      "resources": [
+        "bandages",
+        "painkillers",
+        "disinfectant",
+        "splints"
+      ],
+      "features": [
+        "partially collapsed west wing",
+        "emergency generator room",
+        "blood-stained triage area"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "hidden safe behind a framed medical license"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "former medical staff (faster movement in dark areas)"
+        ]
+      },
+      "id": "loc_7",
+      "coords": [
+        37,
+        9
+      ]
     }
   ]
 }

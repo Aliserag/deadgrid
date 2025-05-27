@@ -18,11 +18,11 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #          ###################      # C #
 #                                   #   #
 #                                   #   #
-#                                   #   #
-#   M                               #   #
-#   #                               #   #
-#   #                               #   #
-#   #                  X            #   #
+#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #
+#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #
+#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #
+#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #
+#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #
 #   ##################################   #
 ########################################
 ```
@@ -34,6 +34,9 @@ M = Maintenance Depot
 C = Supply Cache
 X = Collapsed Tunnel
 G = Generator Room
+~ = The Glass Canopy
+~ = Fungal Grove
+P = Park Maintenance Shed
 # = Wall/Boundary
 . = Open Space
 

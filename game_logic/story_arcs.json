@@ -62,7 +62,7 @@
       "failure_consequences": "If the survivor fails, the trapped group is overrun by zombies, and the opportunity for valuable information and allies is lost. The survivor may also attract more zombies to their own hideout.",
       "id": "arc_1",
       "status": "active",
-      "current_day": 4
+      "current_day": 5
     },
     {
       "title": "Silent Siege",
@@ -116,9 +116,9 @@
       "failure_consequences": "If the survivor fails to fortify the safehouse, the Watchers may exploit its weaknesses, leading to a breach or direct confrontation. The unexplained zombie absence could also result in a sudden, overwhelming attack.",
       "id": "arc_2",
       "status": "active",
-      "current_day": 3
+      "current_day": 4
     }
   ],
-  "current_day": 8,
+  "current_day": 9,
   "story_phase": "beginning"
 }
