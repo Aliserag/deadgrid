@@ -2,7 +2,7 @@
   "current_conditions": {
     "type": "clear",
     "severity": 1,
-    "duration": 3,
+    "duration": 2,
     "effects": [
       "narrative_clear skies"
     ]
@@ -69,6 +69,11 @@
     {
       "date": "2025-05-27",
       "conditions": "fog",
+      "severity": 1
+    },
+    {
+      "date": "2025-05-28",
+      "conditions": "clear",
       "severity": 1
     }
   ],

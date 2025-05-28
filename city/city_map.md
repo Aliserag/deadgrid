@@ -20,7 +20,7 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #                                   #   #
 #                                   #   #
 #   M                               #   #
-#   #                               #   #
+#   #                &              #   #
 #   #                               #   #
 #   #                  X            #   #
 #   ##################################   #
@@ -55,3 +55,4 @@ G = Generator Room
 - echoing sounds
 - hidden stashes
 + = St. Marrow's Memoria
+& = Ironclad Foundry

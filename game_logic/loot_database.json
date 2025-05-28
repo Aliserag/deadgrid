@@ -135,7 +135,27 @@
       ],
       "source": "exploration",
       "date_found": "2025-05-26"
+    },
+    {
+      "id": 8,
+      "name": "Heavy-duty Coat of Stability",
+      "description": "A heavy-duty coat offering protection in the dangerous world. Effects: +17 Lightweight, +20 Carrying Capacity.",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "category": "armor",
+      "rarity": "epic",
+      "effects": [
+        {
+          "name": "lightweight",
+          "value": 17
+        },
+        {
+          "name": "carrying_capacity",
+          "value": 20
+        }
+      ],
+      "source": "exploration",
+      "date_found": "2025-05-28"
     }
   ],
-  "next_id": 8
+  "next_id": 9
 }

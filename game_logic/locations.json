@@ -551,6 +551,38 @@
         37,
         9
       ]
+    },
+    {
+      "name": "Ironclad Foundry",
+      "description": "A massive industrial complex that once produced heavy machinery, now silent except for the occasional groan of rusted metal. The cavernous workshops are littered with half-assembled equipment and scattered tools, while the catwalks above creak ominously under unseen weight. The furnaces have long gone cold, but the remnants of their last fires still linger in the air.",
+      "type": "industrial",
+      "danger_level": 6,
+      "resources": [
+        "scrap metal",
+        "industrial tools",
+        "welding torches",
+        "spare parts"
+      ],
+      "features": [
+        "overhead crane system",
+        "partially collapsed furnace room",
+        "network of maintenance tunnels"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "hidden underground bunker beneath the main office"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "armored (rusted metal fragments embedded in flesh)"
+        ]
+      },
+      "id": "loc_8",
+      "coords": [
+        21,
+        15
+      ]
     }
   ]
 }
