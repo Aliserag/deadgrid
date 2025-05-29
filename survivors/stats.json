@@ -1,25 +1,25 @@
 {
-  "day": 13,
-  "health": 85,
-  "morale": 55,
+  "day": 14,
+  "health": 80,
+  "morale": 50,
   "water": 0,
-  "food": 8,
+  "food": 11,
   "location": [
     0,
     0
   ],
-  "base_defense": 5,
-  "last_action": "signal",
+  "base_defense": 7,
+  "last_action": "defend",
   "status_effects": [
     {
-      "name": "Fog Anxiety",
+      "name": "Radio Static",
       "duration": 1,
-      "effect": "-5% perception in fog"
+      "effect": "Occasional auditory hallucinations"
     },
     {
-      "name": "Radio Static",
-      "duration": 2,
-      "effect": "Occasional auditory hallucinations"
+      "name": "Echoes of the Hive",
+      "duration": -1,
+      "effect": "Hear zombie hive whispers, -10% sanity"
     }
   ],
   "traits": [
@@ -60,10 +60,16 @@
       "type": "armor",
       "durability": 3,
       "bonus": "+5% damage resistance"
+    },
+    {
+      "name": "pressure cooker",
+      "type": "tool",
+      "durability": 5,
+      "bonus": "Can purify water if fuel is available"
     }
   ],
   "materials": {
-    "metal": 2,
+    "metal": 1,
     "fabric": 1,
     "circuitry": 0
   },
@@ -71,12 +77,17 @@
     "watchers": {
       "disposition": "neutral",
       "last_seen": "generator_room",
-      "activity": "left radio artifact"
+      "activity": "left boot prints"
     },
     "caravan_collective": {
       "disposition": "neutral",
       "last_seen": "supply_cache",
-      "activity": "responded to signal"
+      "activity": "broadcast fungal warning"
+    },
+    "iron_vanguard": {
+      "disposition": "unknown",
+      "last_seen": "none",
+      "activity": "suspected patrols"
     }
   },
   "threat_level": "moderate",
@@ -86,7 +97,8 @@
     "Generator Room",
     "St. Marrow's Memorial Hospital",
     "Abandoned Mega Mart Warehouse",
-    "Supply Cache"
+    "Supply Cache",
+    "The Glass Canopy"
   ],
   "skills": [
     "Silent Salvager"
@@ -94,19 +106,9 @@
   "active_story_arc": "Silent Siege",
   "radio_transmissions": [
     {
-      "content": "They're learning! Don't let them\u2014 [screams]",
-      "origin": "unknown",
+      "content": "[whispering]...the growths spread underground...[static]",
+      "origin": "caravan_collective",
       "threat_implication": "high"
-    },
-    {
-      "content": "[static]...repeat...sector 7 compromised...[static]",
-      "origin": "watchers?",
-      "threat_implication": "medium"
-    },
-    {
-      "content": "[whispering]...burn the growths...",
-      "origin": "local",
-      "threat_implication": "unknown"
     }
   ]
 }

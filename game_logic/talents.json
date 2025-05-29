@@ -1,0 +1,28 @@
+{
+  "talents": [
+    {
+      "name": "Echoes of the Hive",
+      "type": "mental",
+      "severity": 7,
+      "description": "The survivor begins to hear faint whispers and fragmented thoughts from nearby infected, as if their mind is tuning into a grotesque hive consciousness. These echoes are disjointed and overwhelming, often drowning out their own thoughts.",
+      "appearance": "The survivor's eyes develop a faint, pulsating glow, and their veins occasionally shimmer with bioluminescent traces when the whispers grow louder.",
+      "benefits": [
+        "Can sometimes sense the presence of infected before they are visible",
+        "May pick up on the general direction of large hordes"
+      ],
+      "disadvantages": [
+        "Frequent confusion and difficulty concentrating due to the invasive whispers",
+        "Risk of paranoia or mistaking real voices for the hive's echoes",
+        "Increased stress and mental fatigue"
+      ],
+      "progression": "Over time, the whispers grow louder and more coherent, potentially leading to full auditory hallucinations or even temporary loss of self-identity as the hive's thoughts dominate.",
+      "treatment": "Psychoactive suppressants can temporarily mute the whispers, but prolonged exposure to the fungal groves may worsen the condition. Complete isolation from infected areas might slow progression.",
+      "id": "mutation_1",
+      "related_to": "mutation",
+      "rarity": "unique",
+      "benefit": "Can sometimes sense the presence of infected before they are visible, May pick up on the general direction of large hordes",
+      "drawback": "Frequent confusion and difficulty concentrating due to the invasive whispers, Risk of paranoia or mistaking real voices for the hive's echoes, Increased stress and mental fatigue",
+      "acquisition_method": "Exposure to zombie infection"
+    }
+  ]
+}

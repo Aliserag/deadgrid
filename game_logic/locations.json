@@ -518,6 +518,65 @@
       "coords": [
         39,
         8
+      ],
+      "buildings": [
+        {
+          "name": "Midnight Mall Office Annex",
+          "description": "A partially collapsed office building attached to the Midnight Mall, its upper floors are unstable and littered with debris. The basement remains intact but is pitch-black and likely infested. Flickering emergency lights cast eerie shadows through broken cubicles and overturned furniture.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+-------+-------+\n| RECEPT | HALL |\n+---+---+-------+\n| OFF | STAIRS |\n+---+---+-------+\n\nUpper Floors:\n+---+---+---+\n| O | O | O |\n+---+---+---+\n| O | S | O |\n+---+---+---+\n(Broken walls, partial collapse)",
+          "rooms": [
+            {
+              "name": "Reception Area",
+              "description": "Shattered glass doors, toppled security turnstiles, and bloodstained visitor logs. A zombie in a security uniform shambles behind the desk.",
+              "contents": [
+                "Broken computer",
+                "First aid kit (empty)",
+                "Security baton",
+                "Mall directory"
+              ]
+            },
+            {
+              "name": "Open Office Floor",
+              "description": "Cubicles knocked over like dominos, papers everywhere. A fire axe is embedded in a support beam where someone tried to barricade a door.",
+              "contents": [
+                "Overturned chairs",
+                "Filing cabinets (locked)",
+                "Emergency exit map",
+                "Coffee maker with mold"
+              ]
+            },
+            {
+              "name": "Basement Storage",
+              "description": "Pitch black except for faint light from broken pipes. The sound of dripping water masks shuffling footsteps in the dark.",
+              "contents": [
+                "Industrial shelving units",
+                "Leaking water heater",
+                "Janitorial supplies",
+                "Rat traps"
+              ]
+            }
+          ],
+          "dangers": [
+            "Collapsing floors",
+            "Zombies in ceiling crawlspaces",
+            "Broken glass everywhere",
+            "Gas leak from ruptured pipes"
+          ],
+          "resources": [
+            "Office first aid kits",
+            "Fire axe lodged in beam",
+            "Bottled water in breakroom",
+            "Basement generator (needs repair)"
+          ],
+          "special_features": [
+            "Direct underground access to mall via basement",
+            "Emergency stairwell doors welded shut from outside",
+            "Faint radio signals detectable near rooftop"
+          ],
+          "id": "bldg_666",
+          "location_id": "loc_6"
+        }
       ]
     },
     {

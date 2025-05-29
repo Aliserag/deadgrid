@@ -2,7 +2,7 @@
   "current_conditions": {
     "type": "clear",
     "severity": 1,
-    "duration": 2,
+    "duration": 1,
     "effects": [
       "narrative_clear skies"
     ]
@@ -21,7 +21,7 @@
     {
       "day": 3,
       "type": "clear",
-      "severity": 1
+      "severity": 2
     }
   ],
   "season": "spring",
@@ -75,19 +75,22 @@
       "date": "2025-05-28",
       "conditions": "clear",
       "severity": 1
+    },
+    {
+      "date": "2025-05-29",
+      "conditions": "clear",
+      "severity": 1
     }
   ],
   "current_weather": {
-    "type": "fog",
-    "severity": 2,
+    "type": "clear",
+    "severity": 1,
     "duration": 1,
     "effects": [
-      "visibility_severely_reduced",
-      "narrative_limited visibility",
-      "narrative_eerie silence"
+      "narrative_clear skies"
     ],
-    "day": 12,
-    "date": "2025-05-24"
+    "day": 13,
+    "date": "2025-05-29"
   },
   "weather_history": [
     {
@@ -113,6 +116,16 @@
       ],
       "day": 12,
       "date": "2025-05-24"
+    },
+    {
+      "type": "clear",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_clear skies"
+      ],
+      "day": 13,
+      "date": "2025-05-29"
     }
   ]
 }

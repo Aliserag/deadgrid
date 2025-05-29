@@ -32,6 +32,55 @@
         "npc_5"
       ],
       "relations": {}
+    },
+    {
+      "name": "The Iron Vanguard",
+      "description": "A disciplined, militaristic faction composed of former soldiers and survivalists who believe in strict hierarchy and order. They operate from a fortified subway station, using guerrilla tactics to maintain control and eliminate threats. Their motto: 'Strength through discipline, survival through unity.'",
+      "ideology": "Order and survival above all else. They see chaos as the true enemy and believe only a structured, militarized society can withstand the apocalypse.",
+      "territory": "A heavily fortified subway station and adjacent tunnels, repurposed into a defensible stronghold with barricades and traps.",
+      "resources": [
+        "Armory of military-grade weapons",
+        "Stockpile of preserved rations",
+        "Advanced communication equipment"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Expert ambush tactics",
+        "Highly trained in close-quarters combat",
+        "Efficient scavenging operations"
+      ],
+      "weaknesses": [
+        "Limited numbers due to strict recruitment",
+        "Over-reliance on centralized leadership"
+      ],
+      "id": "faction_2",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Iron Vanguard",
+      "description": "A disciplined, militaristic faction composed of former soldiers and survivalists who believe in strict hierarchy and order. They operate from a fortified subway station, using guerrilla tactics to maintain control and eliminate threats. Their motto: 'Strength through discipline, survival through unity.'",
+      "ideology": "Order and survival above all else. They see chaos as the true enemy and believe only a structured, militarized society can withstand the apocalypse.",
+      "territory": "A heavily fortified subway station and adjacent tunnels, repurposed into a defensible stronghold with barricades and traps.",
+      "resources": [
+        "Armory of military-grade weapons",
+        "Stockpile of preserved rations",
+        "Advanced communication equipment"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Expert ambush tactics",
+        "Highly trained in close-quarters combat",
+        "Efficient scavenging operations"
+      ],
+      "weaknesses": [
+        "Limited numbers due to strict recruitment",
+        "Over-reliance on centralized leadership"
+      ],
+      "id": "faction_3",
+      "members": [],
+      "relations": {},
+      "discovered_day": 13
     }
   ],
   "next_id": 2
