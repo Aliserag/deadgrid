@@ -80,6 +80,11 @@
       "date": "2025-05-29",
       "conditions": "clear",
       "severity": 1
+    },
+    {
+      "date": "2025-05-30",
+      "conditions": "clear",
+      "severity": 1
     }
   ],
   "current_weather": {
@@ -89,8 +94,8 @@
     "effects": [
       "narrative_clear skies"
     ],
-    "day": 13,
-    "date": "2025-05-29"
+    "day": 14,
+    "date": "2025-05-30"
   },
   "weather_history": [
     {
@@ -126,6 +131,16 @@
       ],
       "day": 13,
       "date": "2025-05-29"
+    },
+    {
+      "type": "clear",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_clear skies"
+      ],
+      "day": 14,
+      "date": "2025-05-30"
     }
   ]
 }

@@ -642,6 +642,72 @@
         21,
         15
       ]
+    },
+    {
+      "name": "Whispering Gorge",
+      "description": "A deep, narrow canyon carved by ancient rivers, now eerily silent except for the faint whispers of wind through its crevices. The steep walls provide natural shelter, but the winding paths can easily disorient the unwary. Scattered boulders and dry riverbeds hint at long-lost water sources.",
+      "type": "natural",
+      "danger_level": 5,
+      "resources": [
+        "freshwater springs",
+        "edible lichen",
+        "flint deposits",
+        "wild herbs"
+      ],
+      "features": [
+        "narrow, winding paths",
+        "natural rock shelters",
+        "echoing wind tunnels"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden cave system behind a waterfall (currently dry)"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "Climbers (zombies adapted to scale rocky surfaces)"
+        ]
+      },
+      "id": "loc_9",
+      "coords": [
+        34,
+        10
+      ]
+    },
+    {
+      "name": "Whispering Gorge",
+      "description": "A deep, narrow canyon carved by ancient rivers, now eerily silent except for the faint whispers of wind through its crevices. The steep walls provide natural shelter, but the winding paths can easily disorient the unwary. Scattered boulders and dry riverbeds hint at long-lost water sources.",
+      "type": "natural",
+      "danger_level": 5,
+      "resources": [
+        "freshwater springs",
+        "edible lichen",
+        "flint deposits",
+        "wild herbs"
+      ],
+      "features": [
+        "narrow, winding paths",
+        "natural rock shelters",
+        "echoing wind tunnels"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden cave system behind a waterfall (currently dry)"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "Climbers (zombies adapted to scale rocky surfaces)"
+        ]
+      },
+      "id": "location_10",
+      "coords": [
+        34,
+        10
+      ],
+      "discovered_day": 14,
+      "visited": false
     }
   ]
 }

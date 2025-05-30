@@ -25,6 +25,11 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #
 #   ##################################   #
 ########################################
+#   #                                  #
+# T #..........................        #
+#   #..........................        #
+#   #.......................... F      #
+#   ####################################
 ```
 
 ## Legend
@@ -37,6 +42,8 @@ G = Generator Room
 ~ = The Glass Canopy
 ~ = Fungal Grove
 P = Park Maintenance Shed
+T = Transit Hub
+F = Flooded Passage
 # = Wall/Boundary
 . = Open Space
 
@@ -57,3 +64,6 @@ P = Park Maintenance Shed
 - abandoned trains
 - echoing sounds
 - hidden stashes
+- Broken train cars that can be scavenged for parts
+- Flooded areas that require wading (with potential underwater threats)
+- Working emergency lighting that flickers unpredictably

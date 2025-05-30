@@ -87,6 +87,26 @@
         16
       ],
       "symbol": "P"
+    },
+    {
+      "name": "Transit Hub",
+      "type": "transportation",
+      "description": "A former subway transfer station now filled with abandoned trains and scattered supplies. The flickering emergency lights create eerie shadows.",
+      "coords": [
+        3,
+        20
+      ],
+      "symbol": "T"
+    },
+    {
+      "name": "Flooded Passage",
+      "type": "environmental",
+      "description": "A collapsed section of tunnel partially submerged in stagnant water. Strange ripples suggest something might be moving beneath the surface.",
+      "coords": [
+        32,
+        22
+      ],
+      "symbol": "F"
     }
   ],
   "danger_level": 7,
@@ -102,9 +122,12 @@
     "overgrown fungi",
     "abandoned trains",
     "echoing sounds",
-    "hidden stashes"
+    "hidden stashes",
+    "Broken train cars that can be scavenged for parts",
+    "Flooded areas that require wading (with potential underwater threats)",
+    "Working emergency lighting that flickers unpredictably"
   ],
-  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################",
+  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################",
   "id": "map_1",
   "districts": [
     {
