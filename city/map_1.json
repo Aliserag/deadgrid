@@ -107,6 +107,36 @@
         22
       ],
       "symbol": "F"
+    },
+    {
+      "name": "The Roundhouse",
+      "type": "building",
+      "description": "A converted train maintenance building now serving as the camp's communal shelter and command center.",
+      "coords": [
+        8,
+        16
+      ],
+      "symbol": "R"
+    },
+    {
+      "name": "Signal Light Market",
+      "type": "landmark",
+      "description": "A trading post built around old signal towers where survivors barter goods under colored lights.",
+      "coords": [
+        12,
+        17
+      ],
+      "symbol": "$"
+    },
+    {
+      "name": "Train Car Barricade",
+      "type": "landmark",
+      "description": "Derailed subway cars stacked vertically to form the camp's main defensive wall.",
+      "coords": [
+        6,
+        18
+      ],
+      "symbol": "B"
     }
   ],
   "danger_level": 7,
@@ -152,6 +182,29 @@
         "mutated plants that react to movement",
         "areas of toxic pollen",
         "natural camouflage spots"
+      ]
+    },
+    {
+      "name": "The Last Stop Camp",
+      "description": "A makeshift survivor camp built in an abandoned subway maintenance yard. The survivors have fortified the area with salvaged train parts and subway barriers. Flickering lanterns made from old signal lights cast eerie shadows on the stacked shipping container dwellings. The constant hum of a jury-rigged generator mixes with the distant sounds of the tunnels.",
+      "coords": [
+        5,
+        15,
+        15,
+        5
+      ],
+      "faction_presence": "The Tunnel Rats - a scavenger faction specializing in subway system navigation",
+      "danger_level": 4,
+      "resources": [
+        "Salvaged electronics",
+        "Train parts",
+        "Underground farming",
+        "Clean water collection"
+      ],
+      "special_features": [
+        "Working subway map converted to zombie tracking system",
+        "Ventilation system repurposed for air filtration",
+        "Makeshift chapel in an old ticket booth"
       ]
     }
   ]

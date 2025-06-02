@@ -44,6 +44,9 @@ G = Generator Room
 P = Park Maintenance Shed
 T = Transit Hub
 F = Flooded Passage
+R = The Roundhouse
+$ = Signal Light Market
+B = Train Car Barricade
 # = Wall/Boundary
 . = Open Space
 

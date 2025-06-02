@@ -1,26 +1,31 @@
 {
   "current_conditions": {
-    "type": "clear",
-    "severity": 1,
-    "duration": 1,
+    "type": "storm",
+    "severity": 3,
+    "duration": 3,
     "effects": [
-      "narrative_clear skies"
+      "noise_mask",
+      "movement_severe_penalty",
+      "visibility_severely_reduced",
+      "narrative_howling wind",
+      "narrative_crashing thunder",
+      "narrative_lightning flashes"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "clear",
-      "severity": 1
+      "type": "storm",
+      "severity": 3
     },
     {
       "day": 2,
-      "type": "clear",
-      "severity": 1
+      "type": "storm",
+      "severity": 3
     },
     {
       "day": 3,
-      "type": "clear",
+      "type": "storm",
       "severity": 2
     }
   ],
@@ -85,17 +90,27 @@
       "date": "2025-05-30",
       "conditions": "clear",
       "severity": 1
+    },
+    {
+      "date": "2025-06-02",
+      "conditions": "clear",
+      "severity": 1
     }
   ],
   "current_weather": {
-    "type": "clear",
-    "severity": 1,
-    "duration": 1,
+    "type": "storm",
+    "severity": 3,
+    "duration": 3,
     "effects": [
-      "narrative_clear skies"
+      "noise_mask",
+      "movement_severe_penalty",
+      "visibility_severely_reduced",
+      "narrative_howling wind",
+      "narrative_crashing thunder",
+      "narrative_lightning flashes"
     ],
-    "day": 14,
-    "date": "2025-05-30"
+    "day": 15,
+    "date": "2025-06-02"
   },
   "weather_history": [
     {
@@ -141,6 +156,21 @@
       ],
       "day": 14,
       "date": "2025-05-30"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 3,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 15,
+      "date": "2025-06-02"
     }
   ]
 }

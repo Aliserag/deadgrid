@@ -117,8 +117,79 @@
       "id": "arc_2",
       "status": "completed",
       "current_day": 5
+    },
+    {
+      "title": "Tunnel Wars",
+      "type": "territory conflict",
+      "description": "A rival survivor group has been spotted near Central Station, claiming the tunnels as their territory. The player must either negotiate, fight, or find another way to secure their position before tensions escalate.",
+      "length": 6,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Unwelcome Visitors",
+          "description": "The player notices unfamiliar markings and signs of recent activity in the tunnels. A small group of survivors has left a warning message claiming the area as theirs."
+        },
+        {
+          "day": 2,
+          "title": "First Contact",
+          "description": "The rival group makes direct contact, demanding the player vacate the tunnels. They seem armed but hesitant to attack outright."
+        },
+        {
+          "day": 3,
+          "title": "Scouting the Enemy",
+          "description": "The player has the opportunity to scout the rival group's camp, learning more about their numbers, resources, and weaknesses."
+        },
+        {
+          "day": 4,
+          "title": "Negotiations or Sabotage",
+          "description": "The player can attempt to negotiate a truce or alliance, or sabotage the rival group's supplies to weaken their position."
+        },
+        {
+          "day": 5,
+          "title": "Escalation",
+          "description": "Tensions reach a boiling point. Depending on previous choices, this could lead to a standoff, a fight, or a tense but peaceful resolution."
+        },
+        {
+          "day": 6,
+          "title": "Resolution",
+          "description": "The conflict is resolved\u2014either through force, diplomacy, or the player being forced to retreat. The tunnels' fate is decided."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Secure access to the tunnels and their resources (food, shelter, hidden caches)."
+        },
+        {
+          "type": "relationship",
+          "description": "Potential allies or trading partners if negotiations succeed."
+        },
+        {
+          "type": "information",
+          "description": "Intel on other survivor factions in the area."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Mara",
+          "role": "Leader of the rival survivor group. Pragmatic but distrustful."
+        },
+        {
+          "name": "Jax",
+          "role": "Mara's second-in-command. Aggressive and eager to fight."
+        },
+        {
+          "name": "Lena",
+          "role": "A neutral scavenger who knows both groups and may act as a mediator."
+        }
+      ],
+      "failure_consequences": "The player is forced out of the tunnels, losing access to their shelter and resources. The rival group may become hostile in future encounters.",
+      "id": "arc_3",
+      "status": "active",
+      "current_day": 0
     }
   ],
-  "current_day": 12,
+  "current_day": 13,
   "story_phase": "beginning"
 }

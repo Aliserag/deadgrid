@@ -155,6 +155,16 @@
       ],
       "source": "exploration",
       "date_found": "2025-05-28"
+    },
+    {
+      "type": "weapon",
+      "name": "Axe",
+      "rarity": 17,
+      "durability": 95,
+      "power": 8,
+      "attribute": "Common",
+      "id": "item_9",
+      "discovered_day": 15
     }
   ],
   "next_id": 9
