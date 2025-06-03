@@ -137,6 +137,16 @@
         18
       ],
       "symbol": "B"
+    },
+    {
+      "name": "Ventilation Shaft",
+      "type": "industrial",
+      "description": "A narrow maintenance shaft leading to surface access points. The metal rungs are rusted but sturdy, and faint daylight filters down from above.",
+      "coords": [
+        15,
+        25
+      ],
+      "symbol": "V"
     }
   ],
   "danger_level": 7,
@@ -155,9 +165,12 @@
     "hidden stashes",
     "Broken train cars that can be scavenged for parts",
     "Flooded areas that require wading (with potential underwater threats)",
-    "Working emergency lighting that flickers unpredictably"
+    "Working emergency lighting that flickers unpredictably",
+    "Vertical escape route to surface",
+    "Natural light source in subway tunnels",
+    "Potential zombie ambush point from above"
   ],
-  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################",
+  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################\n#   #                                  #\n#   #.............V...........         #\n#   #..........................        #\n#   ####################################",
   "id": "map_1",
   "districts": [
     {

@@ -30,6 +30,10 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   #..........................        #
 #   #.......................... F      #
 #   ####################################
+#   #                                  #
+#   #.............V...........         #
+#   #..........................        #
+#   ####################################
 ```
 
 ## Legend
@@ -47,6 +51,7 @@ F = Flooded Passage
 R = The Roundhouse
 $ = Signal Light Market
 B = Train Car Barricade
+V = Ventilation Shaft
 # = Wall/Boundary
 . = Open Space
 
@@ -70,3 +75,6 @@ B = Train Car Barricade
 - Broken train cars that can be scavenged for parts
 - Flooded areas that require wading (with potential underwater threats)
 - Working emergency lighting that flickers unpredictably
+- Vertical escape route to surface
+- Natural light source in subway tunnels
+- Potential zombie ambush point from above

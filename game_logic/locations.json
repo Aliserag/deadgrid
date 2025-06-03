@@ -609,6 +609,96 @@
       "coords": [
         37,
         9
+      ],
+      "buildings": [
+        {
+          "name": "Rustvale Urgent Care",
+          "description": "A small but well-stocked pharmacy attached to a defunct urgent care clinic. The building is surprisingly intact, with most of its supplies still on the shelves. Flickering emergency lights cast long shadows across the linoleum floors, and the faint smell of antiseptic lingers in the air. The back rooms contain medical equipment that could be invaluable to survivors.",
+          "floors": 1,
+          "layout": "+----------------+----------------+\n|   WAITING     |   PHARMACY     |\n|    ROOM       |                |\n+-------+--------+--------+-------+\n|  EXAM |  EXAM  |  SUPPLY|  OFFICE |\n| ROOM1 | ROOM2  | CLOSET |        |\n+----------------+--------+-------+",
+          "rooms": [
+            {
+              "name": "Waiting Room",
+              "description": "A cramped waiting area with plastic chairs and outdated magazines. The reception desk is littered with abandoned paperwork.",
+              "contents": [
+                "Broken TV",
+                "Reception desk",
+                "First aid posters",
+                "Scattered patient forms"
+              ]
+            },
+            {
+              "name": "Pharmacy",
+              "description": "The main drug dispensing area with a tall counter and shelves of medications behind protective glass.",
+              "contents": [
+                "Medication shelves",
+                "Prescription computer",
+                "Drug reference books",
+                "Counting trays"
+              ]
+            },
+            {
+              "name": "Exam Room 1",
+              "description": "A standard examination room with an exam table and basic medical equipment.",
+              "contents": [
+                "Exam table",
+                "Blood pressure cuff",
+                "Stethoscope",
+                "Medical waste bin"
+              ]
+            },
+            {
+              "name": "Exam Room 2",
+              "description": "Slightly larger than Exam Room 1, with additional equipment for minor procedures.",
+              "contents": [
+                "Procedure chair",
+                "Suture kit",
+                "Minor surgical tools",
+                "Autoclave"
+              ]
+            },
+            {
+              "name": "Supply Closet",
+              "description": "A cramped storage room packed with medical supplies and spare equipment.",
+              "contents": [
+                "Bandages",
+                "Disinfectants",
+                "IV bags",
+                "Latex gloves"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "The doctor's private office with a desk and patient records.",
+              "contents": [
+                "Locked filing cabinet",
+                "Medical textbooks",
+                "Prescription pad",
+                "Desk lamp"
+              ]
+            }
+          ],
+          "dangers": [
+            "Broken glass near pharmacy counter",
+            "Potential zombie in exam rooms",
+            "Unstable shelving in supply closet",
+            "Trip hazards from scattered supplies"
+          ],
+          "resources": [
+            "Painkillers",
+            "Antibiotics",
+            "First aid kits",
+            "Surgical supplies",
+            "Disinfectants"
+          ],
+          "special_features": [
+            "Pharmacy has a secure metal gate that can be locked from inside",
+            "One exam room has an intact blood pressure monitor that still works",
+            "Office contains patient records that may reveal useful information"
+          ],
+          "id": "bldg_342",
+          "location_id": "loc_7"
+        }
       ]
     },
     {

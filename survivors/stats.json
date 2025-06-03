@@ -1,20 +1,25 @@
 {
-  "day": 16,
-  "health": 80,
-  "morale": 50,
-  "water": 2,
-  "food": 8,
+  "day": 17,
+  "health": 78,
+  "morale": 45,
+  "water": 1,
+  "food": 7,
   "location": [
     0,
     0
   ],
-  "base_defense": 7,
-  "last_action": "craft",
+  "base_defense": 9,
+  "last_action": "defend",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
       "duration": -1,
       "effect": "Hear zombie hive whispers, -10% sanity"
+    },
+    {
+      "name": "Storm Stress",
+      "duration": 1,
+      "effect": "-5 morale from sleepless night"
     }
   ],
   "traits": [
@@ -79,6 +84,24 @@
       "type": "weapon",
       "durability": 8,
       "bonus": "+15% melee damage"
+    },
+    {
+      "name": "Salvage Bicycle",
+      "type": "transport",
+      "durability": 5,
+      "bonus": "+1 inventory slot when scavenging"
+    },
+    {
+      "name": "pressure cooker",
+      "type": "tool",
+      "durability": 4,
+      "bonus": "Can purify water if fuel is available"
+    },
+    {
+      "name": "axe",
+      "type": "weapon",
+      "durability": 7,
+      "bonus": "+15% melee damage"
     }
   ],
   "materials": {
@@ -115,7 +138,8 @@
     "Transit Hub",
     "Flooded Passage",
     "Whispering Gorge",
-    "The Last Stop Camp"
+    "The Last Stop Camp",
+    "Ventilation Shaft"
   ],
   "skills": [
     "Silent Salvager"
