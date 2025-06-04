@@ -1,15 +1,15 @@
 {
-  "day": 17,
-  "health": 78,
-  "morale": 45,
+  "day": 18,
+  "health": 75,
+  "morale": 40,
   "water": 1,
-  "food": 7,
+  "food": 9,
   "location": [
     0,
     0
   ],
   "base_defense": 9,
-  "last_action": "defend",
+  "last_action": "scavenge",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
@@ -28,7 +28,8 @@
       "level": 1,
       "effect": "Reduces noise while scavenging by 25%"
     },
-    "Silent Salvager"
+    "Silent Salvager",
+    "Hive Whisperer"
   ],
   "gear": [
     {
@@ -102,6 +103,12 @@
       "type": "weapon",
       "durability": 7,
       "bonus": "+15% melee damage"
+    },
+    {
+      "name": "map",
+      "type": "tool",
+      "durability": -1,
+      "bonus": "Reveals hidden paths"
     }
   ],
   "materials": {
@@ -121,12 +128,12 @@
       "activity": "broadcast fungal warning"
     },
     "iron_vanguard": {
-      "disposition": "unknown",
-      "last_seen": "central_station",
-      "activity": "territory marking"
+      "disposition": "hostile",
+      "last_seen": "transit_hub",
+      "activity": "threatened player"
     }
   },
-  "threat_level": "moderate",
+  "threat_level": "high",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
@@ -139,10 +146,12 @@
     "Flooded Passage",
     "Whispering Gorge",
     "The Last Stop Camp",
-    "Ventilation Shaft"
+    "Ventilation Shaft",
+    "Willowfen Marsh"
   ],
   "skills": [
-    "Silent Salvager"
+    "Silent Salvager",
+    "Hive Whisperer"
   ],
   "active_story_arc": "Tunnel Wars",
   "radio_transmissions": []

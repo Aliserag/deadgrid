@@ -23,6 +23,17 @@
       "benefit": "Can sometimes sense the presence of infected before they are visible, May pick up on the general direction of large hordes",
       "drawback": "Frequent confusion and difficulty concentrating due to the invasive whispers, Risk of paranoia or mistaking real voices for the hive's echoes, Increased stress and mental fatigue",
       "acquisition_method": "Exposure to zombie infection"
+    },
+    {
+      "name": "Hive Whisperer",
+      "related_to": "mental",
+      "rarity": "uncommon",
+      "description": "You've learned to distinguish the subtle patterns in the whispers of the infected hivemind. The constant murmurs that drive others mad now provide you with early warnings of nearby threats. Your mind has adapted to filter the noise into useful information.",
+      "benefit": "+15% detection range for approaching zombie hordes, reduced penalty to perception checks in areas with hive activity",
+      "drawback": "Permanent -1 to sanity checks due to constant exposure to hive whispers",
+      "acquisition_method": "Developed after prolonged exposure to areas with strong hive presence (e.g., Generator Room during storm events)",
+      "flavor_text": "'The voices don't stop... but now I understand what they're saying.' - Scratched note found near a radio tower",
+      "id": "talent_2"
     }
   ]
 }

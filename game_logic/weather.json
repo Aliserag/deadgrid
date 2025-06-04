@@ -2,7 +2,7 @@
   "current_conditions": {
     "type": "storm",
     "severity": 3,
-    "duration": 2,
+    "duration": 1,
     "effects": [
       "noise_mask",
       "movement_severe_penalty",
@@ -25,8 +25,8 @@
     },
     {
       "day": 3,
-      "type": "storm",
-      "severity": 2
+      "type": "rain",
+      "severity": 3
     }
   ],
   "season": "spring",
@@ -100,12 +100,17 @@
       "date": "2025-06-03",
       "conditions": "storm",
       "severity": 3
+    },
+    {
+      "date": "2025-06-04",
+      "conditions": "storm",
+      "severity": 3
     }
   ],
   "current_weather": {
     "type": "storm",
     "severity": 3,
-    "duration": 2,
+    "duration": 1,
     "effects": [
       "noise_mask",
       "movement_severe_penalty",
@@ -114,8 +119,8 @@
       "narrative_crashing thunder",
       "narrative_lightning flashes"
     ],
-    "day": 16,
-    "date": "2025-06-03"
+    "day": 17,
+    "date": "2025-06-04"
   },
   "weather_history": [
     {
@@ -191,6 +196,21 @@
       ],
       "day": 16,
       "date": "2025-06-03"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 1,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 17,
+      "date": "2025-06-04"
     }
   ]
 }

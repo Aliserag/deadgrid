@@ -165,6 +165,16 @@
       "attribute": "Common",
       "id": "item_9",
       "discovered_day": 15
+    },
+    {
+      "type": "tool",
+      "name": "Map",
+      "rarity": 97,
+      "durability": 75,
+      "power": 48,
+      "attribute": "Legendary",
+      "id": "item_10",
+      "discovered_day": 17
     }
   ],
   "next_id": 9

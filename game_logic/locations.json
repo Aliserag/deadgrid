@@ -798,6 +798,68 @@
       ],
       "discovered_day": 14,
       "visited": false
+    },
+    {
+      "name": "Willowfen Marsh",
+      "description": "A sprawling wetland of shallow pools and dense reeds, where the air hums with the sound of insects and the occasional croak of frogs. The water is surprisingly clear, fed by underground springs, and the soft ground muffles footsteps. Ancient willow trees stand sentinel along the edges, their drooping branches creating natural shelters.",
+      "type": "natural",
+      "danger_level": 1,
+      "resources": [
+        "fresh water",
+        "medicinal herbs",
+        "frogs/fish",
+        "willow bark"
+      ],
+      "features": [
+        "natural spring-fed pools",
+        "dense willow groves",
+        "raised peat mounds"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden dry island in the center of the marsh with an abandoned trapper's cabin"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_11",
+      "coords": [
+        26,
+        15
+      ]
+    },
+    {
+      "name": "Willowfen Marsh",
+      "description": "A sprawling wetland of shallow pools and dense reeds, where the air hums with the sound of insects and the occasional croak of frogs. The water is surprisingly clear, fed by underground springs, and the soft ground muffles footsteps. Ancient willow trees stand sentinel along the edges, their drooping branches creating natural shelters.",
+      "type": "natural",
+      "danger_level": 1,
+      "resources": [
+        "fresh water",
+        "medicinal herbs",
+        "frogs/fish",
+        "willow bark"
+      ],
+      "features": [
+        "natural spring-fed pools",
+        "dense willow groves",
+        "raised peat mounds"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden dry island in the center of the marsh with an abandoned trapper's cabin"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "location_12",
+      "coords": [
+        26,
+        15
+      ],
+      "discovered_day": 17,
+      "visited": false
     }
   ]
 }
