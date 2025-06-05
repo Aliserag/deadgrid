@@ -147,6 +147,36 @@
         25
       ],
       "symbol": "V"
+    },
+    {
+      "name": "Broken Escalator Shaft",
+      "type": "industrial",
+      "description": "A collapsed escalator leading to an upper level mall, now home to feral survivors",
+      "coords": [
+        2,
+        32
+      ],
+      "symbol": "B"
+    },
+    {
+      "name": "Water Filtration Plant",
+      "type": "industrial",
+      "description": "Abandoned maintenance area with large water tanks and filtration systems",
+      "coords": [
+        10,
+        32
+      ],
+      "symbol": "W"
+    },
+    {
+      "name": "Mysterious Chamber",
+      "type": "mystery",
+      "description": "A sealed room with strange markings on the walls and an ominous hum",
+      "coords": [
+        2,
+        34
+      ],
+      "symbol": "?"
     }
   ],
   "danger_level": 7,
@@ -168,9 +198,12 @@
     "Working emergency lighting that flickers unpredictably",
     "Vertical escape route to surface",
     "Natural light source in subway tunnels",
-    "Potential zombie ambush point from above"
+    "Potential zombie ambush point from above",
+    "Flooded western corridor with waist-deep water (movement penalty)",
+    "Broken glass ceiling that lets in daylight (zombies avoid this area)",
+    "Audible dripping water sounds that mask player movement"
   ],
-  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################\n#   #                                  #\n#   #.............V...........         #\n#   #..........................        #\n#   ####################################",
+  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################\n#   #                                  #\n#   #.............V...........         #\n#   #..........................        #\n#   ####################################\n       \n       \n       \n       \n       \n       \n       \n########################################\n#       ########################       #\n#   B   #                    #   W     #\n#       #                    #         #\n#   ?   #                    #         #\n#       #                    #         #\n#       ########################       #\n########################################",
   "id": "map_1",
   "districts": [
     {

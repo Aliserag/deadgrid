@@ -1,32 +1,28 @@
 {
   "current_conditions": {
-    "type": "storm",
-    "severity": 3,
+    "type": "fog",
+    "severity": 1,
     "duration": 1,
     "effects": [
-      "noise_mask",
-      "movement_severe_penalty",
       "visibility_severely_reduced",
-      "narrative_howling wind",
-      "narrative_crashing thunder",
-      "narrative_lightning flashes"
+      "narrative_eerie silence"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "storm",
-      "severity": 3
+      "type": "fog",
+      "severity": 1
     },
     {
       "day": 2,
-      "type": "storm",
-      "severity": 3
+      "type": "fog",
+      "severity": 1
     },
     {
       "day": 3,
-      "type": "rain",
-      "severity": 3
+      "type": "fog",
+      "severity": 1
     }
   ],
   "season": "spring",
@@ -103,6 +99,11 @@
     },
     {
       "date": "2025-06-04",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-06-05",
       "conditions": "storm",
       "severity": 3
     }

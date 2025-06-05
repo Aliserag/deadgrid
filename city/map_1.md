@@ -34,6 +34,21 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   #.............V...........         #
 #   #..........................        #
 #   ####################################
+       
+       
+       
+       
+       
+       
+       
+########################################
+#       ########################       #
+#   B   #                    #   W     #
+#       #                    #         #
+#   ?   #                    #         #
+#       #                    #         #
+#       ########################       #
+########################################
 ```
 
 ## Legend
@@ -52,6 +67,9 @@ R = The Roundhouse
 $ = Signal Light Market
 B = Train Car Barricade
 V = Ventilation Shaft
+B = Broken Escalator Shaft
+W = Water Filtration Plant
+? = Mysterious Chamber
 # = Wall/Boundary
 . = Open Space
 
@@ -78,3 +96,6 @@ V = Ventilation Shaft
 - Vertical escape route to surface
 - Natural light source in subway tunnels
 - Potential zombie ambush point from above
+- Flooded western corridor with waist-deep water (movement penalty)
+- Broken glass ceiling that lets in daylight (zombies avoid this area)
+- Audible dripping water sounds that mask player movement
