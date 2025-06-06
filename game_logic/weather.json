@@ -5,7 +5,7 @@
     "duration": 1,
     "effects": [
       "visibility_severely_reduced",
-      "narrative_eerie silence"
+      "narrative_mysterious shapes"
     ]
   },
   "forecast": [
@@ -21,7 +21,7 @@
     },
     {
       "day": 3,
-      "type": "fog",
+      "type": "cloudy",
       "severity": 1
     }
   ],
@@ -106,6 +106,11 @@
       "date": "2025-06-05",
       "conditions": "storm",
       "severity": 3
+    },
+    {
+      "date": "2025-06-06",
+      "conditions": "fog",
+      "severity": 1
     }
   ],
   "current_weather": {

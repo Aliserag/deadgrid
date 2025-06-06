@@ -187,9 +187,58 @@
       "failure_consequences": "The player is forced out of the tunnels, losing access to their shelter and resources. The rival group may become hostile in future encounters.",
       "id": "arc_3",
       "status": "active",
-      "current_day": 3
+      "current_day": 4
+    },
+    {
+      "title": "The Whispering Shadow",
+      "type": "mysterious stranger",
+      "description": "The survivor encounters a mysterious figure who leaves cryptic messages and supplies in their path. Following the clues leads to a tense confrontation and a revelation about the stranger's motives.",
+      "length": 4,
+      "difficulty": 6,
+      "events": [
+        {
+          "day": 1,
+          "title": "The First Sign",
+          "description": "While scavenging in the tunnels, the survivor finds a small, neatly wrapped package containing medical supplies and a note with a single word: 'Follow.'"
+        },
+        {
+          "day": 2,
+          "title": "The Shadow Moves",
+          "description": "The survivor spots a fleeting figure in the distance, always just out of reach. Another package is left behind, this time with a map pointing to a nearby safehouse."
+        },
+        {
+          "day": 3,
+          "title": "The Safehouse",
+          "description": "The survivor reaches the safehouse, only to find it booby-trapped. The mysterious stranger watches from the shadows, testing the survivor's skills and resolve."
+        },
+        {
+          "day": 4,
+          "title": "The Revelation",
+          "description": "The stranger finally reveals themselves\u2014a former scientist studying the outbreak. They offer valuable information about the zombies' weaknesses before vanishing into the night."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "information",
+          "description": "Knowledge of a zombie weakness (e.g., sensitivity to loud noises)"
+        },
+        {
+          "type": "item",
+          "description": "A rare medical kit"
+        }
+      ],
+      "characters": [
+        {
+          "name": "Dr. Elias Voss",
+          "role": "The mysterious stranger, a rogue scientist studying the outbreak"
+        }
+      ],
+      "failure_consequences": "The survivor gains no additional supplies or information, and the stranger's trail goes cold, leaving them with unanswered questions.",
+      "id": "arc_4",
+      "status": "active",
+      "current_day": 0
     }
   ],
-  "current_day": 16,
+  "current_day": 17,
   "story_phase": "beginning"
 }
