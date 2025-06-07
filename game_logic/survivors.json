@@ -1,0 +1,214 @@
+{
+  "survivors": [
+    {
+      "name": "Eliot 'Rook' Mercer",
+      "gender": "male",
+      "age": 19,
+      "background": "Former parkour instructor and amateur urban explorer. Eliot spent his free time mapping out drainage tunnels and abandoned buildings, skills that became invaluable when the world fell apart.",
+      "appearance": "Lean and wiry with sun-bleached brown hair tied back in a messy knot. His arms are covered in scrapes and fading bruises from constant movement.",
+      "personality": "Restless and observant, with a dark sense of humor that borders on inappropriate. He masks his fear with bravado but has surprising moments of quiet intensity when assessing threats.",
+      "skills": [
+        "Urban navigation",
+        "Parkour/free-running",
+        "Basic first aid",
+        "Improvised trap setting",
+        "Silent movement"
+      ],
+      "weaknesses": [
+        "Impulsive decision-making",
+        "Poor long-term planning",
+        "Mild claustrophobia in unfamiliar enclosed spaces"
+      ],
+      "motivations": [
+        "Finding his missing younger sister",
+        "Proving he's more than just a 'reckless kid'",
+        "Discovering safe vertical spaces to sleep"
+      ],
+      "inventory": [
+        "Grappling hook made from repurposed climbing gear",
+        "Waterlogged notebook of tunnel maps",
+        "Multi-tool stolen from a hardware store",
+        "Fading polaroid of his sister",
+        "Bag of chalk pieces for marking routes"
+      ],
+      "health_status": "Recently sprained ankle (walking but not running at full capacity), mild malnutrition",
+      "backstory": "Eliot was teaching a parkour workshop when the first outbreaks hit. He led his students to relative safety in the storm drain network he'd mapped, but they've all either died or moved on. Now he moves like a ghost through the city's underbelly, using his knowledge of forgotten spaces to avoid both the infected and hostile survivor groups. He's developed a reputation as 'the kid who knows all the back ways' - which brings both opportunities and dangers.",
+      "unique_traits": [
+        "Always humming snippets of songs under his breath",
+        "Counts his steps unconsciously in multiples of three",
+        "Has an irrational hatred of canned peaches"
+      ],
+      "relationships": "Maintains tense trading relationships with a few scavengers who respect his route knowledge. Secretly leaves supplies for a group of elderly survivors holed up in a subway station, though he refuses to stay with them.",
+      "survival_strategy": "Never sleeps in the same place twice, uses verticality and confined spaces larger groups can't access. Prioritizes mobility over firepower, trusting his speed and knowledge of shortcuts over direct confrontation.",
+      "id": "survivor_1"
+    },
+    {
+      "name": "Eleanor 'Granny' Wainwright",
+      "gender": "female",
+      "age": 75,
+      "background": "Former librarian and amateur botanist. Eleanor spent 40 years cataloging books and cultivating rare plants in her greenhouse before the world fell apart.",
+      "appearance": "Silver-haired with sharp green eyes behind cracked glasses, her wiry frame moves with surprising agility. She wears a patched-up cardigan with pockets full of seeds and trinkets.",
+      "personality": "Stubbornly optimistic with a dry wit, Eleanor believes every problem has a solution if you're patient enough. She treats strangers with cautious kindness but has zero tolerance for foolishness.",
+      "skills": [
+        "Herbal medicine",
+        "Trapping small game",
+        "Improvised weapon crafting",
+        "Navigation by stars",
+        "Calming panicked people"
+      ],
+      "weaknesses": [
+        "Poor night vision",
+        "Stubborn independence",
+        "Knee arthritis"
+      ],
+      "motivations": [
+        "Protecting her collection of heirloom seeds",
+        "Documenting the changing ecosystem",
+        "Finding other elderly survivors to form a community"
+      ],
+      "inventory": [
+        "Hand-bound plant encyclopedia",
+        "Modified walking stick (conceals knife)",
+        "Jar of medicinal honey",
+        "Folding solar still",
+        "Petrified oak leaf necklace"
+      ],
+      "health_status": "Mild arthritis in hands and knees, otherwise remarkably healthy for her age",
+      "backstory": "Eleanor survived the initial outbreak by barricading herself in the library's rare books vault. When supplies ran low, she put her botanical knowledge to use, foraging edible plants and medicinal herbs. She now travels between abandoned greenhouses, restoring what she can and leaving coded notes for other survivors.",
+      "unique_traits": [
+        "Whistles old folk songs to calm herself in danger",
+        "Carries a pressed flower from her pre-war garden",
+        "Believes mushrooms are the key to rebuilding society"
+      ],
+      "relationships": "Occasionally trades with younger survivors, teaching them foraging tips in exchange for heavy labor. Has an unspoken rivalry with a mysterious figure who keeps sabotaging her greenhouse projects.",
+      "survival_strategy": "Avoids direct confrontation, using traps and misdirection. Prioritizes sustainable food sources over scavenging. Always sleeps with multiple escape routes.",
+      "id": "survivor_2"
+    },
+    {
+      "name": "Riley 'Patch' Caldwell",
+      "gender": "non-binary",
+      "age": 72,
+      "background": "Former librarian and amateur historian. Spent decades cataloging rare books and preserving local history before the world fell apart.",
+      "appearance": "Thin, wiry frame with silver-streaked hair tied back in a messy bun. Their sharp eyes are magnified by cracked, taped-together glasses.",
+      "personality": "Quiet but intensely observant, with a dry, dark sense of humor. They prefer listening over speaking, but when they do talk, it's usually worth hearing.",
+      "skills": [
+        "Expert scavenger",
+        "Keen observer of patterns",
+        "Basic first aid",
+        "Knowledge of urban infrastructure",
+        "Decent lockpick"
+      ],
+      "weaknesses": [
+        "Slower movement due to age",
+        "Mild hearing loss",
+        "Stubborn independence"
+      ],
+      "motivations": [
+        "Preserving knowledge of the old world",
+        "Finding a safe place to document the apocalypse",
+        "Proving that age doesn't mean helplessness"
+      ],
+      "inventory": [
+        "A battered journal filled with observations",
+        "A multi-tool stolen from a hardware store",
+        "A faded library card they refuse to part with",
+        "Several carefully preserved tea bags",
+        "A makeshift slingshot"
+      ],
+      "health_status": "Mild arthritis in the hands, occasional shortness of breath",
+      "backstory": "Riley was at the library when the first outbreaks hit. They survived the initial chaos by barricading themselves in the rare books vault, emerging weeks later to a changed world. Since then, they've moved through the city like a ghost, observing survivor groups and infected patterns while avoiding direct conflict. The tunnels have become their latest refuge, though they're beginning to suspect they're not alone down here.",
+      "unique_traits": [
+        "Always carries a pencil behind their ear",
+        "Has an uncanny ability to predict weather changes",
+        "Whistles old folk tunes when nervous"
+      ],
+      "relationships": "Maintains distant but respectful relationships with a few scavengers who trade supplies with them. Secretly leaves notes and small gifts for a group of orphans holed up in an old school, though they've never spoken to them directly.",
+      "survival_strategy": "Avoidance and observation. Riley survives by knowing when to hide, when to run, and most importantly, when to stay perfectly still. They prioritize information gathering over confrontation, and have mapped dozens of escape routes through the city's underbelly.",
+      "id": "survivor_3"
+    },
+    {
+      "name": "Remy 'Patchwork' Caldwell",
+      "gender": "non-binary",
+      "age": 72,
+      "background": "Former librarian and amateur historian with a passion for preserving knowledge. Spent decades cataloging rare books before the world fell apart.",
+      "appearance": "Lean frame with silver-streaked hair tied in a messy bun, wearing a patched-up trench coat covered in handwritten notes and maps.",
+      "personality": "Quietly observant with a dry wit, fiercely independent but not unkind. Has a tendency to mutter to themselves when deep in thought.",
+      "skills": [
+        "Expert scavenger",
+        "Keen observer of patterns",
+        "Basic first aid",
+        "Master of urban camouflage",
+        "Deciphering old documents"
+      ],
+      "weaknesses": [
+        "Slow movement due to arthritis",
+        "Stubborn independence",
+        "Poor night vision"
+      ],
+      "motivations": [
+        "Preserving fragments of human knowledge",
+        "Finding a safe place to document the apocalypse",
+        "Proving elders can survive without being burdens"
+      ],
+      "inventory": [
+        "A leather-bound journal filled with observations",
+        "A multi-tool modified for arthritic hands",
+        "A faded library card they refuse to discard",
+        "A tin of homemade salve for joint pain",
+        "A collapsible walking stick with hidden blade"
+      ],
+      "health_status": "Early-stage arthritis and occasional shortness of breath, but otherwise surprisingly fit for their age.",
+      "backstory": "Remy survived the initial outbreak by barricading themselves in the library's rare books vault. When supplies ran low, they began moving through the city's underground tunnels, documenting the collapse while avoiding both the infected and warring factions. Their meticulous notes have become a valuable (if eccentric) record of the apocalypse.",
+      "unique_traits": [
+        "Always carries a pencil behind their ear",
+        "Talks to inanimate objects while scavenging",
+        "Has memorized the Dewey Decimal system"
+      ],
+      "relationships": "Maintains distant but respectful relationships with younger survivors who trade supplies for historical knowledge. Secretly leaves coded messages for 'The Watchers' without knowing if anyone reads them.",
+      "survival_strategy": "Uses their lifetime of observation skills to move unseen, favoring patience over confrontation. Maintains multiple hidden caches throughout the city and never stays anywhere more than three nights.",
+      "id": "survivor_4"
+    },
+    {
+      "name": "Eleanor 'Granny' Vance",
+      "gender": "female",
+      "age": 67,
+      "background": "Former librarian and amateur botanist. Spent her pre-apocalypse days cataloging rare plants and organizing community gardens. Her quiet life was upended when the outbreak began.",
+      "appearance": "Silver-haired with sharp green eyes and a wiry frame. Her hands are calloused from years of gardening, and she wears a tattered floral shawl like armor.",
+      "personality": "Stubborn but wise, with a dry sense of humor. She\u2019s fiercely independent but has a soft spot for those who show genuine kindness. Her patience is thin for fools and loudmouths.",
+      "skills": [
+        "Herbal medicine",
+        "Foraging",
+        "Stealth",
+        "Basic first aid",
+        "Persuasion"
+      ],
+      "weaknesses": [
+        "Slower movement due to arthritis",
+        "Hearing loss in one ear",
+        "Stubborn to a fault"
+      ],
+      "motivations": [
+        "Protecting her hidden garden of medicinal plants",
+        "Finding her missing granddaughter",
+        "Proving she\u2019s still got fight left"
+      ],
+      "inventory": [
+        "A worn leather journal of plant remedies",
+        "A rusted but functional switchblade",
+        "A tin of homemade salve",
+        "A locket with a photo of her granddaughter",
+        "A hollowed-out book hiding seeds"
+      ],
+      "health_status": "Mild arthritis in her hands and knees, but otherwise in surprisingly good health for her age.",
+      "backstory": "Eleanor was tending her community garden when the first screams echoed through the streets. She barricaded herself in the library for weeks, surviving on rainwater and canned food. When the infected overran the building, she escaped through the storm drains, using her knowledge of the city\u2019s hidden spaces to stay alive. Now she moves between abandoned greenhouses and subway tunnels, cultivating what she calls 'the last useful things on Earth.'",
+      "unique_traits": [
+        "Whistles old folk tunes to calm herself in dangerous situations",
+        "Carries a pouch of 'zombie repellent' herbs (it doesn\u2019t work, but she swears by it)",
+        "Has an uncanny ability to find edible plants in the most barren places"
+      ],
+      "relationships": "Keeps to herself but has a tentative alliance with a young scavenger named Rico, who brings her supplies in exchange for her remedies. She\u2019s wary of larger factions, believing they\u2019ll just 'get you killed faster.'",
+      "survival_strategy": "Avoids direct confrontation, relying on stealth and her knowledge of the urban landscape. She moves at night, sleeps in shifts, and never stays in one place more than three days. Her mantra: 'The dead are predictable; it\u2019s the living that\u2019ll gut you.'",
+      "id": "survivor_5"
+    }
+  ]
+}

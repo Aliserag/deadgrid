@@ -1,4 +1,141 @@
 {
-  "active": [],
+  "active": [
+    {
+      "title": "Storm Supplies",
+      "description": "A fellow survivor in the tunnels needs medical supplies delivered to their hideout before the storm worsens. The path is relatively safe, but time is of the essence.",
+      "type": "delivery",
+      "difficulty": 2,
+      "time_limit": 1,
+      "objectives": [
+        {
+          "description": "Deliver the medical supplies to the survivor's hideout in the tunnels",
+          "completed": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "A small cache of food and clean water as thanks"
+        }
+      ],
+      "failure_consequences": "The survivor's condition worsens, and they may not trust you in the future.",
+      "follow_up": "The survivor might ask for help with another task or offer valuable information about safe routes.",
+      "notes": "The tunnels are damp but mostly clear of zombies. Watch for unstable sections and listen for distant growls.",
+      "id": "quest_1",
+      "status": "active",
+      "progress": 0,
+      "day_started": 17
+    },
+    {
+      "title": "Whispers in the Dark",
+      "description": "While scavenging in the tunnels, you hear faint cries for help echoing through the vents. A survivor is trapped in a collapsed section nearby. You must navigate the maze-like tunnels and rescue them before the area becomes overrun with zombies drawn by the noise.",
+      "type": "rescue",
+      "difficulty": 3,
+      "time_limit": 1,
+      "objectives": [
+        {
+          "description": "Locate the trapped survivor by following their cries through the tunnel system.",
+          "completed": false
+        },
+        {
+          "description": "Clear the debris blocking the survivor's path or find an alternate route to reach them.",
+          "completed": false
+        },
+        {
+          "description": "Escort the survivor back to a safe location, avoiding or eliminating any zombies along the way.",
+          "completed": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "The survivor shares a stash of medical supplies as thanks."
+        },
+        {
+          "type": "information",
+          "description": "The survivor reveals the location of a nearby safehouse with working generators."
+        }
+      ],
+      "failure_consequences": "If you take too long, the survivor is either killed by zombies or suffocates under the rubble. The noise also attracts a horde to your current location.",
+      "follow_up": "The survivor may join your group or ask for help securing the safehouse they mentioned.",
+      "notes": "Listen carefully for changes in the cries' direction\u2014some tunnels may be unstable or blocked. The survivor is injured and will slow movement during the escort phase.",
+      "id": "quest_2",
+      "status": "active",
+      "progress": 0,
+      "day_started": 17
+    },
+    {
+      "title": "Drip in the Dark",
+      "description": "The constant dripping in the tunnels is driving you mad. Find the source of the leak and scavenge any usable materials from the area.",
+      "type": "retrieval",
+      "difficulty": 1,
+      "time_limit": 3,
+      "objectives": [
+        {
+          "description": "Locate the source of the dripping sound in the tunnels",
+          "completed": false
+        },
+        {
+          "description": "Scavenge at least 1 usable item (e.g., scrap metal, plastic container, or cloth)",
+          "completed": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "1 random basic crafting material"
+        },
+        {
+          "type": "item",
+          "description": "Small water container (if plastic is found)"
+        }
+      ],
+      "failure_consequences": "The dripping continues to erode your sanity, giving a temporary penalty to perception checks until you leave the tunnels",
+      "follow_up": "Discovering the leak's source might reveal a crack leading to another section of the tunnels",
+      "notes": "The dripping is coming from a specific section of tunnel - follow the sound. Zombies are unlikely in this area due to the confined space.",
+      "id": "quest_3",
+      "status": "active",
+      "progress": 0,
+      "day_started": 17
+    },
+    {
+      "title": "Emergency Light Repairs",
+      "description": "The flickering emergency lights in the tunnels are failing, leaving you vulnerable in the dark. Scavenge for parts and craft a makeshift power regulator to stabilize the lights before they go out completely.",
+      "type": "craft",
+      "difficulty": 6,
+      "time_limit": 2,
+      "objectives": [
+        {
+          "description": "Find 3 broken electronics (e.g., radios, circuit boards) in the tunnels or nearby areas.",
+          "completed": false
+        },
+        {
+          "description": "Craft a power regulator using the scavenged parts and a basic toolkit.",
+          "completed": false
+        },
+        {
+          "description": "Install the regulator in the tunnel's emergency light control panel.",
+          "completed": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "description": "Stable lighting in the tunnels, reducing the risk of zombie ambushes in the dark."
+        },
+        {
+          "type": "resource",
+          "description": "Leftover electronic parts for future crafting."
+        }
+      ],
+      "failure_consequences": "The lights fail entirely, forcing you to navigate the tunnels in darkness. Zombies become harder to detect, and the risk of ambush increases significantly.",
+      "follow_up": "A survivor group may notice the restored lights and attempt to contact you, leading to a new alliance or conflict.",
+      "notes": "Broken electronics are often found in maintenance rooms or abandoned utility crates. Zombies are less active in the tunnels during storms, making it a safer time to scavenge.",
+      "id": "quest_4",
+      "status": "active",
+      "progress": 0,
+      "day_started": 17
+    }
+  ],
   "completed": []
 }

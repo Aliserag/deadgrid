@@ -15,12 +15,12 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #          #                 #      #   #
 #          #                 #      #  M#
 #          #                 #     +#+  #
-#          ###################    ~ # C #
-#                                   #   #
+#          ###################    ~⚔#♠C #
+#                                   # B #
 #                                   #   #
 #                                   #   #
 #   M                               #   #
-#   #                &    ~         #   #
+#   #               #&    ~         #   #
 #   #                               #   #
 #   #                  X            #   #
 #   ##################################   #
@@ -57,3 +57,6 @@ G = Generator Room
 + = St. Marrow's Memoria
 & = Ironclad Foundry
 ~ = Whispering Gorge
+♠ = Blackroot Hollow
+⚔ = Iron Bastion Outpost
+B = The Overrun Bunker

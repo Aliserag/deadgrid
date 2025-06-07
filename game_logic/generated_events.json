@@ -1,0 +1,55 @@
+{
+  "events": [
+    {
+      "title": "Collapsing Passage",
+      "type": "hazard",
+      "description": "As you navigate the dimly lit tunnels, a sudden tremor causes a section of the ceiling to collapse ahead, blocking your path. Dust fills the air, making it hard to breathe. You can hear faint groans from the other side of the rubble\u2014possibly infected drawn by the noise.",
+      "trigger": "Moving through unstable underground tunnels during or after a storm",
+      "duration": "immediate",
+      "impact_level": 3,
+      "choices": [
+        {
+          "option": "Attempt to clear the rubble quickly",
+          "outcome": "You manage to clear a narrow path but make a lot of noise in the process.",
+          "requirements": [
+            "Strength",
+            "Shovel or similar tool"
+          ],
+          "consequences": {
+            "health": -5,
+            "morale": 0,
+            "resources": 0,
+            "relationships": "Others may admire your determination but worry about the noise."
+          }
+        },
+        {
+          "option": "Find an alternate route",
+          "outcome": "You backtrack and find another path, but it takes longer and consumes more resources.",
+          "requirements": [
+            "Navigation",
+            "Map or compass"
+          ],
+          "consequences": {
+            "health": 0,
+            "morale": -5,
+            "resources": -3,
+            "relationships": "Others may appreciate your caution but grow impatient."
+          }
+        }
+      ],
+      "rewards": [
+        "Possible discovery of hidden supplies if clearing rubble",
+        "Knowledge of safer routes if taking an alternate path"
+      ],
+      "risks": [
+        "Attracting infected with noise",
+        "Getting lost in the tunnels",
+        "Further collapses"
+      ],
+      "flavor_text": "The ceiling groans ominously as chunks of concrete and rebar crash down, sealing the way forward. The dust settles like a shroud, and the distant echoes of shuffling feet remind you that time is not on your side.",
+      "id": "event_1"
+    }
+  ],
+  "event_chains": [],
+  "active_events": []
+}

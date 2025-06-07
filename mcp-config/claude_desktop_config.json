@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "nodit": {
+      "command": "npx",
+      "args": ["-y", "@noditlabs/nodit-mcp-server"],
+      "env": {
+        "NODIT_API_KEY": "${NODIT_API_KEY}"
+      }
+    },
+    "deadgrid-game": {
+      "command": "node",
+      "args": ["mcp-integration/deadgrid-mcp-bridge.js"],
+      "env": {
+        "NODIT_API_KEY": "${NODIT_API_KEY}",
+        "CONTRACT_ADDRESS": "${CONTRACT_ADDRESS}",
+        "BASE_SEPOLIA_RPC": "${BASE_SEPOLIA_RPC}",
+        "DEEPSEEK_API_KEY": "${DEEPSEEK_API_KEY}",
+        "PRIVATE_KEY": "${PRIVATE_KEY}"
+      }
+    }
+  }
+} 

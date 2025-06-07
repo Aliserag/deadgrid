@@ -860,6 +860,129 @@
       ],
       "discovered_day": 17,
       "visited": false
+    },
+    {
+      "name": "Blackroot Hollow",
+      "description": "A dense, shadowy forest where the trees are twisted and blackened, as if scorched by some long-forgotten fire. The air is thick with the scent of damp earth and decay, and the ground is littered with gnarled roots that seem to shift when you're not looking. The canopy above is so thick that even at midday, only slivers of light pierce through.",
+      "type": "natural",
+      "danger_level": 8,
+      "resources": [
+        "medicinal herbs",
+        "freshwater springs",
+        "hardwood logs"
+      ],
+      "features": [
+        "twisted, blackened trees",
+        "shifting gnarled roots",
+        "thick, light-blocking canopy"
+      ],
+      "symbol": "\u2660",
+      "secrets": [
+        "A hidden grove where the trees are untouched by the blackening, rumored to have healing properties."
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Rootbound Zombies (zombies entangled and animated by the shifting roots)"
+        ]
+      },
+      "id": "loc_13",
+      "coords": [
+        37,
+        10
+      ]
+    },
+    {
+      "name": "Iron Bastion Outpost",
+      "description": "A heavily fortified military outpost now overrun by the undead, its steel walls scarred by desperate battles. The air reeks of gunpowder and decay, with abandoned vehicles and barricades littering the compound. Flickering floodlights cast eerie shadows, revealing glimpses of movement in the ruined barracks.",
+      "type": "military",
+      "danger_level": 9,
+      "resources": [
+        "assault rifles",
+        "tactical armor",
+        "military rations",
+        "medical supplies"
+      ],
+      "features": [
+        "reinforced perimeter walls with watchtowers",
+        "underground armory accessed by keycard",
+        "jammed radio tower still emitting static"
+      ],
+      "symbol": "\u2694",
+      "secrets": [
+        "classified documents hinting at early outbreak containment attempts"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "armored soldiers",
+          "radioactive hazmat zombies"
+        ]
+      },
+      "id": "loc_14",
+      "coords": [
+        35,
+        10
+      ]
+    },
+    {
+      "name": "Rustbelt Scrapyard",
+      "description": "A sprawling junkyard of abandoned industrial machinery and rusted vehicles, now silent except for the creaking of metal in the wind. Piles of scrap form makeshift corridors, offering both cover and potential hazards. The occasional glint of salvageable materials hints at hidden value beneath the decay.",
+      "type": "industrial",
+      "danger_level": 3,
+      "resources": [
+        "scrap metal",
+        "tools",
+        "vehicle parts",
+        "fuel drums"
+      ],
+      "features": [
+        "towering piles of compacted cars",
+        "partially collapsed crane structures",
+        "a network of narrow paths through the debris"
+      ],
+      "symbol": "#",
+      "secrets": [
+        "a hidden underground workshop with functional equipment"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "rust-infected (slow but armored with jagged metal fragments)"
+        ]
+      },
+      "id": "loc_15",
+      "coords": [
+        20,
+        15
+      ]
+    },
+    {
+      "name": "The Overrun Bunker",
+      "description": "A once-secure underground military bunker now teeming with the undead. The reinforced steel doors hang broken, and the dim emergency lights reveal blood-smeared walls and scattered remains. The air is thick with the stench of decay and the distant echoes of shuffling footsteps.",
+      "type": "military",
+      "danger_level": 9,
+      "resources": [],
+      "features": [
+        "Reinforced blast doors now breached and hanging askew",
+        "Flickering emergency lighting casting eerie shadows",
+        "Blood-smeared walls and scattered human remains"
+      ],
+      "symbol": "B",
+      "secrets": [
+        "A sealed armory that may still contain weapons, if you can bypass the security"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Military-grade zombies in torn uniforms with enhanced strength"
+        ]
+      },
+      "id": "loc_16",
+      "coords": [
+        38,
+        11
+      ]
     }
   ]
 }

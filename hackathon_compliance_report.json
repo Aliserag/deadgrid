@@ -1,0 +1,36 @@
+{
+  "project_name": "DeadGrid",
+  "hackathon": "Nodit AI-Powered DApps Hackathon",
+  "submission_date": "2025-06-07 14:28:35",
+  "requirements_met": {
+    "ai_powered_dapp": true,
+    "nodit_mcp_integration": true,
+    "base_testnet_deployment": true,
+    "deepseek_ai_integration": true,
+    "blockchain_interaction": true,
+    "smart_contract_verified": true
+  },
+  "key_features": [
+    "AI-generated survivor personalities using DeepSeek",
+    "Dynamic mission and event generation",
+    "Blockchain-based NFT survivors on Base Sepolia",
+    "Nodit MCP server integration for AI-blockchain interaction",
+    "Real-time game state management",
+    "Comprehensive content generation system"
+  ],
+  "technical_stack": {
+    "blockchain": "Base Sepolia Testnet",
+    "smart_contracts": "Solidity with Hardhat",
+    "ai_engine": "DeepSeek API",
+    "mcp_integration": "Official Nodit MCP Server",
+    "frontend": "React/Next.js with TypeScript",
+    "rpc_provider": "Nodit Base Sepolia RPC"
+  },
+  "contract_details": {
+    "address": "0x26E9f28c7c3eB5425003959AC4F4279eF373A1c2",
+    "network": "Base Sepolia",
+    "chain_id": 84532,
+    "verified": true,
+    "explorer": "https://sepolia.basescan.org/address/0x26E9f28c7c3eB5425003959AC4F4279eF373A1c2"
+  }
+}

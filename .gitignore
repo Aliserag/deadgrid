@@ -14,3 +14,6 @@ LLM_CONTEXT.md
 # Local environment and temporary files
 .env
 .DS_Store
+/contracts/node_modules
+/contracts/cache
+/contracts/artifacts

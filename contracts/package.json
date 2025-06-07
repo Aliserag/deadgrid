@@ -1,9 +1,26 @@
 {
   "name": "deadgrid-contracts",
   "version": "1.0.0",
-  "description": "Smart contracts for DeadGrid zombie apocalypse game",
+  "description": "Smart contracts for DeadGrid zombie apocalypse game on Base",
   "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:base-sepolia": "hardhat run scripts/deploy.js --network baseSepolia",
+    "deploy:base": "hardhat run scripts/deploy.js --network base",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "verify": "hardhat verify"
+  },
   "dependencies": {
-    "@onflow/flow-sol-utils": "^0.1.0"
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.0",
+    "hardhat": "^2.17.0",
+    "dotenv": "^16.3.0",
+    "ethers": "^6.7.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "chai": "^4.2.0"
   }
 } 

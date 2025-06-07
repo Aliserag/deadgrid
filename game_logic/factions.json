@@ -81,6 +81,78 @@
       "members": [],
       "relations": {},
       "discovered_day": 13
+    },
+    {
+      "name": "The Bloodhound Pack",
+      "description": "A ruthless and highly organized faction of hunters who track both the infected and other survivors for sport and resources. They operate in large, coordinated packs, using brutal tactics to dominate their territory. Their reputation for cruelty is only matched by their efficiency in the field.",
+      "ideology": "Survival of the fittest; the strong prey on the weak. They believe in proving their dominance through hunting and eliminating any threats, human or otherwise.",
+      "territory": "They control vast stretches of urban ruins and surrounding forests, using them as hunting grounds to stalk their prey.",
+      "resources": [
+        "High-powered rifles and melee weapons",
+        "Trained attack dogs",
+        "Vehicles for rapid pursuit"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Expert trackers: Can follow targets over long distances",
+        "Pack tactics: Overwhelm enemies with coordinated attacks"
+      ],
+      "weaknesses": [
+        "Overconfidence: Often underestimate prepared foes",
+        "Reliance on territory: Less effective outside their hunting grounds"
+      ],
+      "id": "faction_4",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Silent Reapers",
+      "description": "A covert militaristic faction specializing in stealth and precision strikes. They operate in the shadows, eliminating threats before they're even aware of their presence. Their members are former special forces operatives who believe in maintaining order through calculated, surgical operations.",
+      "ideology": "Order through precision\u2014eliminate threats swiftly and silently to preserve what remains of civilization. They view chaos as the true enemy, not just the infected.",
+      "territory": "Hidden bunkers and underground tunnels beneath ruined urban centers, often near former military installations.",
+      "resources": [
+        "Advanced silenced weaponry",
+        "Night-vision gear",
+        "Military-grade explosives",
+        "Secure communication networks"
+      ],
+      "hostility": 70,
+      "perks": [
+        "Mastery of stealth tactics",
+        "Ability to execute silent takedowns",
+        "Access to pre-apocalypse military intelligence"
+      ],
+      "weaknesses": [
+        "Limited numbers make prolonged engagements risky",
+        "Reliance on high-tech gear leaves them vulnerable to EMP attacks"
+      ],
+      "id": "faction_5",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Silent Reapers",
+      "description": "A covert militaristic faction specializing in stealth and precision strikes. They operate in the shadows, eliminating threats before they're even aware of their presence. Their existence is rumored, but few have lived to confirm it.",
+      "ideology": "Survival through absolute control and elimination of all potential threats, human or infected. They believe in maintaining order by any means necessary.",
+      "territory": "Underground tunnels and abandoned subway systems, using the labyrinthine networks to their advantage.",
+      "resources": [
+        "Advanced silenced weaponry",
+        "Night-vision gear",
+        "Medical supplies scavenged from military outposts"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Mastery of ambush tactics",
+        "Ability to move undetected in low-light environments",
+        "Highly trained in close-quarters combat"
+      ],
+      "weaknesses": [
+        "Limited numbers due to high attrition rate",
+        "Reliant on controlled environments for optimal effectiveness"
+      ],
+      "id": "faction_6",
+      "members": [],
+      "relations": {}
     }
   ],
   "next_id": 2

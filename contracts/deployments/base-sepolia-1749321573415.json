@@ -1,0 +1,14 @@
+{
+  "network": "baseSepolia",
+  "chainId": "84532",
+  "contractAddress": "0x26E9f28c7c3eB5425003959AC4F4279eF373A1c2",
+  "deployerAddress": "0xCC18E51efc529ed41e48aE5DEa8fCeC60A2baefE",
+  "transactionHash": "0x40747cd086a6f31614dd247875f9277b20429c8c232b04cd6546704bc5a7bcb6",
+  "blockNumber": 26776639,
+  "gasUsed": "3515598",
+  "gasPrice": "1000000000",
+  "deploymentCost": "0.003515598",
+  "timestamp": "2025-06-07T18:39:33.415Z",
+  "contractName": "DeadGrid",
+  "contractSymbol": "DGS"
+}
