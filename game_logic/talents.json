@@ -34,6 +34,17 @@
       "acquisition_method": "Developed after prolonged exposure to areas with strong hive presence (e.g., Generator Room during storm events)",
       "flavor_text": "'The voices don't stop... but now I understand what they're saying.' - Scratched note found near a radio tower",
       "id": "talent_2"
+    },
+    {
+      "name": "Scavenger's Ingenuity",
+      "related_to": "crafting",
+      "rarity": "rare",
+      "description": "Allows the survivor to craft makeshift weapons and tools from seemingly useless scrap. With a keen eye for repurposing, even the most broken items can be turned into something deadly or useful.",
+      "benefit": "Unlocks unique crafting recipes that require fewer resources and can be made from low-quality materials. Increases the durability of improvised items by 25%.",
+      "drawback": "Improvised items may have reduced effectiveness compared to their professionally made counterparts.",
+      "acquisition_method": "Learned after successfully crafting 15 different improvised items or finding a rare 'Junker's Handbook' in abandoned workshops.",
+      "flavor_text": "\"One man's trash is another man's ticket to survival. Just don't ask me to fix your moral compass while I'm at it.\"",
+      "id": "talent_3"
     }
   ]
 }

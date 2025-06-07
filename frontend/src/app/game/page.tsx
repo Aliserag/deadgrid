@@ -7,6 +7,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import PeopleIcon from '@mui/icons-material/People';
 import { useRouter } from 'next/navigation';
+import SurvivorMinter from '../../components/SurvivorMinter';
 
 // Cell types
 type CellType = 'empty' | 'building' | 'resource' | 'zombie' | 'zombieGroup' | 'zombieHorde' | 'survivor' | 'camp';
@@ -3609,6 +3610,19 @@ export default function Game() {
             <Typography variant="body2" sx={{ color: '#ddd' }}>
               • Survivors help reinforce camp defenses more quickly
             </Typography>
+          </Box>
+          
+          {/* Blockchain Integration */}
+          <Box sx={{ mt: 3 }}>
+            <SurvivorMinter 
+              onMintSuccess={(tokenId, txHash) => {
+                addLog(`🔗 Survivor NFT #${tokenId} minted successfully on Base blockchain!`);
+                addLog(`📜 Transaction: ${txHash.slice(0, 10)}...${txHash.slice(-8)}`);
+              }}
+              onMintError={(error) => {
+                addLog(`❌ Failed to mint survivor NFT: ${error}`);
+              }}
+            />
           </Box>
         </DialogContent>
         <DialogActions>

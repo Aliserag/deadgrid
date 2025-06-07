@@ -983,6 +983,38 @@
         38,
         11
       ]
+    },
+    {
+      "name": "Broken Watchtower Complex",
+      "description": "A partially collapsed military watchtower and surrounding barracks, now eerily silent except for the wind whistling through broken windows. The skeletal remains of communication equipment and scattered ammunition crates hint at a hasty evacuation. Bloodstains and bullet holes mark the walls, telling a story of a last stand gone wrong.",
+      "type": "military",
+      "danger_level": 5,
+      "resources": [
+        "ammunition crates",
+        "military rations",
+        "first aid kits",
+        "broken radio parts"
+      ],
+      "features": [
+        "collapsed watchtower with vantage point",
+        "barracks with personal effects",
+        "partially intact perimeter fence"
+      ],
+      "symbol": "T",
+      "secrets": [
+        "hidden underground storage room accessible through a trapdoor in the commander's office"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "former soldiers with kevlar vests"
+        ]
+      },
+      "id": "loc_17",
+      "coords": [
+        38,
+        8
+      ]
     }
   ]
 }

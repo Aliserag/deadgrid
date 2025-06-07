@@ -34,13 +34,15 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   #.............V...........         #
 #   #..........................        #
 #   ####################################
-       
-       
-       
-       
-       
-       
-       
+#   #  HHHHHHHHHHHHHHHHHHHHHHHHHHHHH  #
+#   #  H ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ H  #
+#   #  H ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ H  #
+#   #  H ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ ⌂ H  #
+#   #  HHHHHHHHHHHHHHHHHHHHHHHHHHHHH  #
+#   #                                  #
+#   #.............V...........         #
+#   #..........................        #
+#   ####################################
 ########################################
 #       ########################       #
 #   B   #                    #   W     #
@@ -70,6 +72,9 @@ V = Ventilation Shaft
 B = Broken Escalator Shaft
 W = Water Filtration Plant
 ? = Mysterious Chamber
+⌂ = Watchtower Alpha
+⌂ = The Mess Hall
+H = Barricade Gate
 # = Wall/Boundary
 . = Open Space
 

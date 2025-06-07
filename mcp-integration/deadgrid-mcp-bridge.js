@@ -12,6 +12,8 @@ const { CallToolRequestSchema, ListToolsRequestSchema } = require('@modelcontext
 const { ethers } = require('ethers');
 const { spawn } = require('child_process');
 const path = require('path');
+const express = require('express');
+const cors = require('cors');
 
 // Contract configuration - using the correct environment variable names
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS || "0x26E9f28c7c3eB5425003959AC4F4279eF373A1c2";
@@ -580,4 +582,76 @@ class DeadGridMCPServer {
 
 // Start the server
 const server = new DeadGridMCPServer();
-server.run().catch(console.error); 
+server.run().catch(console.error);
+
+// Quick Win: Add HTTP server for frontend integration
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// HTTP endpoint for content generation
+app.post('/generate-content', async (req, res) => {
+  try {
+    const { contentType, prompt } = req.body;
+    
+    // Call DeepSeek AI for content generation
+    const content = await generateAIContent(contentType, prompt);
+    
+    res.json({
+      success: true,
+      contentType,
+      content,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('Content generation error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Start HTTP server
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`🚀 HTTP server running on port ${PORT}`);
+});
+
+// AI Content Generation Function
+async function generateAIContent(contentType, prompt) {
+  try {
+    const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
+      },
+      body: JSON.stringify({
+        model: 'deepseek-chat',
+        messages: [
+          {
+            role: 'system',
+            content: `You are an AI content generator for DeadGrid, a zombie apocalypse survival game. Generate ${contentType} content that is engaging, realistic, and fits the post-apocalyptic theme.`
+          },
+          {
+            role: 'user',
+            content: prompt
+          }
+        ],
+        max_tokens: 500,
+        temperature: 0.8
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`DeepSeek API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.choices[0].message.content;
+  } catch (error) {
+    console.error('DeepSeek API error:', error);
+    throw error;
+  }
+} 

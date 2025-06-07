@@ -187,7 +187,7 @@
       "failure_consequences": "The player is forced out of the tunnels, losing access to their shelter and resources. The rival group may become hostile in future encounters.",
       "id": "arc_3",
       "status": "active",
-      "current_day": 4
+      "current_day": 5
     },
     {
       "title": "The Whispering Shadow",
@@ -236,9 +236,9 @@
       "failure_consequences": "The survivor gains no additional supplies or information, and the stranger's trail goes cold, leaving them with unanswered questions.",
       "id": "arc_4",
       "status": "active",
-      "current_day": 0
+      "current_day": 1
     }
   ],
-  "current_day": 17,
+  "current_day": 18,
   "story_phase": "beginning"
 }

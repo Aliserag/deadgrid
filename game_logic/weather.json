@@ -1,27 +1,26 @@
 {
   "current_conditions": {
-    "type": "fog",
+    "type": "clear",
     "severity": 1,
-    "duration": 1,
+    "duration": 2,
     "effects": [
-      "visibility_severely_reduced",
-      "narrative_mysterious shapes"
+      "narrative_good visibility"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "fog",
+      "type": "clear",
       "severity": 1
     },
     {
       "day": 2,
-      "type": "fog",
+      "type": "clear",
       "severity": 1
     },
     {
       "day": 3,
-      "type": "cloudy",
+      "type": "clear",
       "severity": 1
     }
   ],
@@ -109,6 +108,11 @@
     },
     {
       "date": "2025-06-06",
+      "conditions": "fog",
+      "severity": 1
+    },
+    {
+      "date": "2025-06-07",
       "conditions": "fog",
       "severity": 1
     }

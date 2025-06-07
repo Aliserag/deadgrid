@@ -1,32 +1,6 @@
 {
   "active": [
     {
-      "title": "Storm Supplies",
-      "description": "A fellow survivor in the tunnels needs medical supplies delivered to their hideout before the storm worsens. The path is relatively safe, but time is of the essence.",
-      "type": "delivery",
-      "difficulty": 2,
-      "time_limit": 1,
-      "objectives": [
-        {
-          "description": "Deliver the medical supplies to the survivor's hideout in the tunnels",
-          "completed": false
-        }
-      ],
-      "rewards": [
-        {
-          "type": "resource",
-          "description": "A small cache of food and clean water as thanks"
-        }
-      ],
-      "failure_consequences": "The survivor's condition worsens, and they may not trust you in the future.",
-      "follow_up": "The survivor might ask for help with another task or offer valuable information about safe routes.",
-      "notes": "The tunnels are damp but mostly clear of zombies. Watch for unstable sections and listen for distant growls.",
-      "id": "quest_1",
-      "status": "active",
-      "progress": 0,
-      "day_started": 17
-    },
-    {
       "title": "Whispers in the Dark",
       "description": "While scavenging in the tunnels, you hear faint cries for help echoing through the vents. A survivor is trapped in a collapsed section nearby. You must navigate the maze-like tunnels and rescue them before the area becomes overrun with zombies drawn by the noise.",
       "type": "rescue",

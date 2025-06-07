@@ -177,6 +177,36 @@
         34
       ],
       "symbol": "?"
+    },
+    {
+      "name": "Watchtower Alpha",
+      "type": "landmark",
+      "description": "A makeshift watchtower built from subway scaffolding, offering a vantage point over the camp's perimeter",
+      "coords": [
+        7,
+        26
+      ],
+      "symbol": "\u2302"
+    },
+    {
+      "name": "The Mess Hall",
+      "type": "building",
+      "description": "A converted subway break room now serving as communal dining area with scavenged kitchen equipment",
+      "coords": [
+        15,
+        27
+      ],
+      "symbol": "\u2302"
+    },
+    {
+      "name": "Barricade Gate",
+      "type": "landmark",
+      "description": "The heavily fortified main entrance to the camp, made from welded subway car parts",
+      "coords": [
+        20,
+        25
+      ],
+      "symbol": "H"
     }
   ],
   "danger_level": 7,
@@ -203,7 +233,7 @@
     "Broken glass ceiling that lets in daylight (zombies avoid this area)",
     "Audible dripping water sounds that mask player movement"
   ],
-  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################\n#   #                                  #\n#   #.............V...........         #\n#   #..........................        #\n#   ####################################\n       \n       \n       \n       \n       \n       \n       \n########################################\n#       ########################       #\n#   B   #                    #   W     #\n#       #                    #         #\n#   ?   #                    #         #\n#       #                    #         #\n#       ########################       #\n########################################",
+  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################\n#   #                                  #\n#   #.............V...........         #\n#   #..........................        #\n#   ####################################\n#   #  HHHHHHHHHHHHHHHHHHHHHHHHHHHHH  #\n#   #  H \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 H  #\n#   #  H \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 H  #\n#   #  H \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 \u2302 H  #\n#   #  HHHHHHHHHHHHHHHHHHHHHHHHHHHHH  #\n#   #                                  #\n#   #.............V...........         #\n#   #..........................        #\n#   ####################################\n########################################\n#       ########################       #\n#   B   #                    #   W     #\n#       #                    #         #\n#   ?   #                    #         #\n#       #                    #         #\n#       ########################       #\n########################################",
   "id": "map_1",
   "districts": [
     {
@@ -251,6 +281,29 @@
         "Working subway map converted to zombie tracking system",
         "Ventilation system repurposed for air filtration",
         "Makeshift chapel in an old ticket booth"
+      ]
+    },
+    {
+      "name": "Underground Haven",
+      "description": "A makeshift survivor camp built within an abandoned subway maintenance area. The space has been converted into living quarters with scavenged materials, protected by barricades and watchtowers. Flickering lanterns and hanging laundry give the space a grim yet lived-in feel. Survivors here have managed to create a fragile sense of community amidst the chaos.",
+      "coords": [
+        5,
+        25,
+        31,
+        5
+      ],
+      "faction_presence": "The Tunnel Rats - a scavenger group that specializes in underground survival",
+      "danger_level": 4,
+      "resources": [
+        "Medical supplies",
+        "Canned food",
+        "Scrap metal",
+        "Clean water"
+      ],
+      "special_features": [
+        "Hidden escape tunnels",
+        "Rainwater collection system",
+        "Underground garden"
       ]
     }
   ]

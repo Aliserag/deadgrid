@@ -13,7 +13,7 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   #      #                 #          #
 #   ########                 ########   #
 #          #                 #      #   #
-#          #                 #      #  M#
+#          #                 #      # TM#
 #          #                 #     +#+  #
 #          ###################    ~⚔#♠C #
 #                                   # B #
@@ -60,3 +60,4 @@ G = Generator Room
 ♠ = Blackroot Hollow
 ⚔ = Iron Bastion Outpost
 B = The Overrun Bunker
+T = Broken Watchtower Co
