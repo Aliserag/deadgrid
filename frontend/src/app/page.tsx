@@ -14,6 +14,7 @@ export default function Home() {
 
   const menuItems = [
     { text: 'New Game', path: '/game' },
+    { text: 'Blockchain Analytics', action: () => setShowAnalytics(!showAnalytics), isAnalytics: true },
     { text: 'Settings', path: '/settings' },
     { text: 'Exit', action: () => window.close() },
   ];
@@ -92,46 +93,17 @@ export default function Home() {
                     border: '1px solid rgba(255, 77, 77, 0.5)',
                   },
                   py: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 1,
                 }}
               >
                 {item.text}
+                {item.isAnalytics && (showAnalytics ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
               </Button>
             </motion.div>
           ))}
-          
-          {/* Blockchain Analytics Toggle */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            <Button
-              variant="contained"
-              color="secondary"
-              size="large"
-              fullWidth
-              onClick={() => setShowAnalytics(!showAnalytics)}
-              sx={{
-                minWidth: 200,
-                background: 'rgba(156, 39, 176, 0.1)',
-                border: '1px solid rgba(156, 39, 176, 0.3)',
-                '&:hover': {
-                  background: 'rgba(156, 39, 176, 0.2)',
-                  border: '1px solid rgba(156, 39, 176, 0.5)',
-                },
-                flexDirection: 'column',
-                py: 2,
-              }}
-            >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                Blockchain Analytics
-                {showAnalytics ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-              </Box>
-              <Typography variant="caption" sx={{ mt: 0.5, opacity: 0.8 }}>
-                🚀 Live Base Network Stats
-              </Typography>
-            </Button>
-          </motion.div>
         </Box>
 
         {/* Blockchain Analytics Section */}

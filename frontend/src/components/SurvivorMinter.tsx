@@ -19,9 +19,10 @@ export default function SurvivorMinter({ onMintSuccess, onMintError }: SurvivorM
 
   const contractAddress = '0x26E9f28c7c3eB5425003959AC4F4279eF373A1c2';
   const contractABI = [
-    "function createSurvivor() payable returns (uint256)",
+    "function createSurvivor(string memory _name, string memory _faction) payable returns (uint256)",
     "function totalSupply() view returns (uint256)",
-    "function getSurvivor(uint256 tokenId) view returns (tuple(uint256 health, uint256 stamina, uint256 intelligence, uint256 strength, uint256 points, bool isAlive))"
+    "function getSurvivor(uint256 tokenId) view returns (tuple(uint256 health, uint256 stamina, uint256 intelligence, uint256 strength, uint256 points, bool isAlive))",
+    "function survivors(uint256 tokenId) view returns (tuple(uint256 id, string name, uint256 health, uint256 stamina, uint256 intelligence, uint256 strength, uint256 experience, uint256 level, string faction, string location, uint256 lastActionTime, bool isAlive, string aiPersonality))"
   ];
 
   const mintSurvivor = async () => {
@@ -78,15 +79,44 @@ export default function SurvivorMinter({ onMintSuccess, onMintError }: SurvivorM
       // Create contract instance
       const contract = new ethers.Contract(contractAddress, contractABI, signer);
       
-      // Mint survivor (0.001 ETH fee)
-      const tx = await contract.createSurvivor({
-        value: ethers.parseEther('0.001')
+      // Check if contract exists and has the function
+      try {
+        const code = await provider.getCode(contractAddress);
+        if (code === '0x') {
+          throw new Error('Contract not found at the specified address');
+        }
+      } catch (codeError) {
+        throw new Error('Unable to verify contract. Please check the contract address.');
+      }
+      
+      // Generate random survivor name and faction
+      const survivorNames = ['Alex', 'Jordan', 'Casey', 'Riley', 'Morgan', 'Avery', 'Quinn', 'Sage'];
+      const factions = ['Survivors', 'Scavengers', 'Guardians', 'Wanderers', 'Rebels'];
+      
+      const randomName = survivorNames[Math.floor(Math.random() * survivorNames.length)];
+      const randomFaction = factions[Math.floor(Math.random() * factions.length)];
+      
+      // Estimate gas first to catch any revert issues
+      try {
+        const gasEstimate = await contract.createSurvivor.estimateGas(randomName, randomFaction, {
+          value: ethers.parseEther('0.001')
+        });
+        console.log('Gas estimate:', gasEstimate.toString());
+      } catch (estimateError: any) {
+        console.error('Gas estimation failed:', estimateError);
+        throw new Error('Transaction would fail. Please check contract state or try again later.');
+      }
+      
+      // Mint survivor with name and faction (0.001 ETH fee)
+      const tx = await contract.createSurvivor(randomName, randomFaction, {
+        value: ethers.parseEther('0.001'),
+        gasLimit: 500000 // Set a reasonable gas limit
       });
       
       // Wait for transaction confirmation
       const receipt = await tx.wait();
       
-      // Get the token ID from the transaction logs
+      // Get the token ID from the transaction logs or by calling totalSupply
       const tokenId = await contract.totalSupply();
       
       setLastMintedId(tokenId.toString());
@@ -98,7 +128,20 @@ export default function SurvivorMinter({ onMintSuccess, onMintError }: SurvivorM
       
     } catch (err: any) {
       console.error('Minting error:', err);
-      const errorMessage = err.reason || err.message || 'Failed to mint survivor';
+      let errorMessage = 'Failed to mint survivor';
+      
+      if (err.code === 'CALL_EXCEPTION') {
+        errorMessage = 'Contract call failed. The contract may be paused or have insufficient permissions.';
+      } else if (err.code === 'INSUFFICIENT_FUNDS') {
+        errorMessage = 'Insufficient funds. You need at least 0.001 ETH plus gas fees.';
+      } else if (err.code === 'USER_REJECTED') {
+        errorMessage = 'Transaction was rejected by user.';
+      } else if (err.reason) {
+        errorMessage = err.reason;
+      } else if (err.message) {
+        errorMessage = err.message;
+      }
+      
       setError(errorMessage);
       
       if (onMintError) {
