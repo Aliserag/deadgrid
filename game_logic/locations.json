@@ -576,6 +576,94 @@
           ],
           "id": "bldg_666",
           "location_id": "loc_6"
+        },
+        {
+          "name": "Midnight Mall Office Annex",
+          "description": "A surprisingly intact office building connected to the Midnight Mall, likely used for administrative purposes before the outbreak. The interior shows signs of a rushed evacuation with overturned furniture and scattered documents. Fluorescent lights flicker intermittently, casting eerie shadows through the glass-walled offices. A faint smell of stale coffee and mildew lingers in the air.",
+          "floors": 3,
+          "layout": "Floor 1:\n+--------+--------+\n| RECEPT | HALL   |\n|        |--------+\n|        | OFFICE |\n+--------+--------+\n\nFloor 2:\n+--------+--------+\n| CONF   | HALL   |\n|        |--------+\n|        | CUBES  |\n+--------+--------+\n\nFloor 3:\n+--------+--------+\n| EXEC   | HALL   |\n|        |--------+\n|        | BREAK  |\n+--------+--------+",
+          "rooms": [
+            {
+              "name": "Reception Area",
+              "description": "The welcoming area with a curved desk and visitor chairs now covered in dust. Security turnstiles stand frozen mid-rotation.",
+              "contents": [
+                "reception desk",
+                "broken computer",
+                "visitor logbook",
+                "dead potted plants"
+              ]
+            },
+            {
+              "name": "Main Hallway",
+              "description": "Central corridor connecting all areas, lined with motivational posters now peeling off the walls.",
+              "contents": [
+                "fire extinguisher",
+                "emergency exit map",
+                "water cooler",
+                "bulletin board"
+              ]
+            },
+            {
+              "name": "Manager's Office",
+              "description": "Corner office with floor-to-ceiling windows overlooking the parking lot. A leather chair lies on its side.",
+              "contents": [
+                "desk safe (locked)",
+                "liquor cabinet",
+                "plasma TV",
+                "executive desk set"
+              ]
+            },
+            {
+              "name": "Conference Room",
+              "description": "Large meeting space with a massive oval table. Projector screen shows the last PowerPoint presentation forever frozen mid-slide.",
+              "contents": [
+                "whiteboard",
+                "projector",
+                "coffee stains",
+                "abandoned briefcases"
+              ]
+            },
+            {
+              "name": "Cubicle Farm",
+              "description": "Open office space with dozens of identical workstations in various states of disarray.",
+              "contents": [
+                "ergonomic chairs",
+                "family photos",
+                "stale snacks",
+                "post-it notes"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "Small kitchenette area with appliances and plastic tables. The refrigerator door hangs open ominously.",
+              "contents": [
+                "microwave",
+                "coffee maker",
+                "vending machine",
+                "moldy leftovers"
+              ]
+            }
+          ],
+          "dangers": [
+            "Zombie office workers trapped in closed offices",
+            "Broken glass from shattered partitions",
+            "Unstable lighting fixtures",
+            "Trip hazards from scattered files and chairs"
+          ],
+          "resources": [
+            "First aid kit in reception",
+            "Bottled water in break room",
+            "Office supplies (paper, pens, scissors)",
+            "Potential weapons (letter openers, fire extinguisher)"
+          ],
+          "special_features": [
+            "Emergency stairwell provides safe vertical movement",
+            "Glass walls allow visibility but may shatter unexpectedly",
+            "Working intercom system that could be repurposed",
+            "Roof access from top floor for potential escape"
+          ],
+          "id": "bldg_296",
+          "location_id": "loc_6"
         }
       ]
     },

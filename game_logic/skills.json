@@ -66,6 +66,75 @@
         "Motivating exhausted scavengers for one final push to safety"
       ],
       "id": "skill_2"
+    },
+    {
+      "name": "Fungal Whisperer",
+      "type": "social",
+      "description": "Allows the survivor to interpret the bioluminescent patterns of fungal growths to predict zombie movements and detect hidden threats. At higher levels, can even use subtle vibrations to temporarily confuse or misdirect infected.",
+      "prerequisite": "Basic survival skill and exposure to fungal-infected zones",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can detect recent zombie activity patterns from fungal glow intensity",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can predict approaching hordes 30 seconds before they arrive via pulsation patterns",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can tap walls to create confusing fungal feedback loops that delay zombies for 10-15 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Stealth",
+        "Environmental Awareness",
+        "Traps"
+      ],
+      "usage_examples": [
+        "Reading fungal veins to choose the safest tunnel path during escape",
+        "Creating false movement signatures to lure zombies away from your shelter",
+        "Detecting hidden infected dormant in fungal clusters before they awaken"
+      ],
+      "id": "skill_3"
+    },
+    {
+      "name": "Fungal Whisperer",
+      "type": "social",
+      "description": "Allows the survivor to interpret the bioluminescent patterns of fungal growths to predict zombie movements and detect hidden threats. At higher levels, can even use subtle vibrations to temporarily confuse or misdirect infected.",
+      "prerequisite": "Basic survival skill and exposure to fungal-infected zones",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can detect recent zombie activity patterns from fungal glow intensity",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can predict approaching hordes 30 seconds before they arrive via pulsation patterns",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can tap walls to create confusing fungal feedback loops that delay zombies for 10-15 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Stealth",
+        "Environmental Awareness",
+        "Traps"
+      ],
+      "usage_examples": [
+        "Reading fungal veins to choose the safest tunnel path during escape",
+        "Creating false movement signatures to lure zombies away from your shelter",
+        "Detecting hidden infected dormant in fungal clusters before they awaken"
+      ],
+      "id": "skill_4",
+      "discovered_day": 19
     }
   ]
 }

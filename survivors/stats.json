@@ -1,20 +1,25 @@
 {
-  "day": 19,
-  "health": 80,
-  "morale": 50,
-  "water": 1,
-  "food": 8,
+  "day": 20,
+  "health": 78,
+  "morale": 48,
+  "water": 2,
+  "food": 7,
   "location": [
     0,
     0
   ],
   "base_defense": 9,
-  "last_action": "rest",
+  "last_action": "defend",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
       "duration": -1,
-      "effect": "Hear zombie hive whispers, -8% sanity (reduced by fog)"
+      "effect": "Hear zombie hive whispers, -10% sanity (amplified by fog)"
+    },
+    {
+      "name": "Fungal Attunement",
+      "duration": 3,
+      "effect": "+5% chance to detect hidden threats via fungal patterns"
     }
   ],
   "traits": [
@@ -122,7 +127,7 @@
     "watchers": {
       "disposition": "neutral",
       "last_seen": "central_station",
-      "activity": "left package"
+      "activity": "left map to Midnight Mall Office Annex"
     },
     "caravan_collective": {
       "disposition": "neutral",
@@ -133,9 +138,14 @@
       "disposition": "hostile",
       "last_seen": "transit_hub",
       "activity": "marked territory"
+    },
+    "fog_dwellers": {
+      "disposition": "unknown",
+      "last_seen": "ventilation_shaft",
+      "activity": "left fungal markers"
     }
   },
-  "threat_level": "high",
+  "threat_level": "medium",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
@@ -150,11 +160,13 @@
     "The Last Stop Camp",
     "Ventilation Shaft",
     "Willowfen Marsh",
-    "Blackfang Chasm"
+    "Blackfang Chasm",
+    "Midnight Mall Office Annex"
   ],
   "skills": [
     "Silent Salvager",
-    "Hive Whisperer"
+    "Hive Whisperer",
+    "Fungal Whisperer (developing)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": []

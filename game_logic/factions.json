@@ -81,6 +81,55 @@
       "members": [],
       "relations": {},
       "discovered_day": 13
+    },
+    {
+      "name": "The Fog Dwellers",
+      "description": "A secretive group of survivors who have adapted to life in the fog-choked subway tunnels. They use the bioluminescent fungal growths to navigate and have developed an almost symbiotic relationship with the underground environment.",
+      "ideology": "Survival through stealth and adaptation. They believe the fog and fungi are nature's way of protecting them from both zombies and hostile survivors.",
+      "territory": "The labyrinthine subway tunnels beneath Central Station, particularly the abandoned maintenance shafts and service tunnels.",
+      "resources": [
+        "Bioluminescent fungi for light and navigation",
+        "Subway maintenance tools repurposed as weapons",
+        "Underground water filtration systems"
+      ],
+      "hostility": 35,
+      "perks": [
+        "Exceptional night vision and low-light combat skills",
+        "Can navigate tunnels silently and efficiently",
+        "Knowledge of fungal growth patterns to predict zombie movements"
+      ],
+      "weaknesses": [
+        "Vulnerable to bright lights and loud noises that disrupt their adapted senses",
+        "Limited surface combat experience"
+      ],
+      "id": "faction_4",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Fog Dwellers",
+      "description": "A secretive group of survivors who have adapted to life in the fog-choked subway tunnels. They use the bioluminescent fungal growths to navigate and have developed an almost symbiotic relationship with the underground environment.",
+      "ideology": "Survival through stealth and adaptation. They believe the fog and fungi are nature's way of protecting them from both zombies and hostile survivors.",
+      "territory": "The labyrinthine subway tunnels beneath Central Station, particularly the abandoned maintenance shafts and service tunnels.",
+      "resources": [
+        "Bioluminescent fungi for light and navigation",
+        "Subway maintenance tools repurposed as weapons",
+        "Underground water filtration systems"
+      ],
+      "hostility": 35,
+      "perks": [
+        "Exceptional night vision and low-light combat skills",
+        "Can navigate tunnels silently and efficiently",
+        "Knowledge of fungal growth patterns to predict zombie movements"
+      ],
+      "weaknesses": [
+        "Vulnerable to bright lights and loud noises that disrupt their adapted senses",
+        "Limited surface combat experience"
+      ],
+      "id": "faction_5",
+      "members": [],
+      "relations": {},
+      "discovered_day": 19
     }
   ],
   "next_id": 2

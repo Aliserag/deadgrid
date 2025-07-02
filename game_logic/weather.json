@@ -2,7 +2,7 @@
   "current_conditions": {
     "type": "fog",
     "severity": 2,
-    "duration": 3,
+    "duration": 2,
     "effects": [
       "visibility_severely_reduced",
       "narrative_mysterious shapes",
@@ -117,18 +117,23 @@
       "date": "2025-07-02",
       "conditions": "fog",
       "severity": 1
+    },
+    {
+      "date": "2025-07-02",
+      "conditions": "fog",
+      "severity": 2
     }
   ],
   "current_weather": {
     "type": "fog",
     "severity": 2,
-    "duration": 3,
+    "duration": 2,
     "effects": [
       "visibility_severely_reduced",
       "narrative_mysterious shapes",
       "narrative_limited visibility"
     ],
-    "day": 18,
+    "day": 19,
     "date": "2025-07-02"
   },
   "weather_history": [
@@ -231,6 +236,18 @@
         "narrative_limited visibility"
       ],
       "day": 18,
+      "date": "2025-07-02"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 2,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_mysterious shapes",
+        "narrative_limited visibility"
+      ],
+      "day": 19,
       "date": "2025-07-02"
     }
   ]
