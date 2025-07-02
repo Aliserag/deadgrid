@@ -860,6 +860,64 @@
       ],
       "discovered_day": 17,
       "visited": false
+    },
+    {
+      "name": "Blackfang Chasm",
+      "description": "A jagged fissure in the earth, its depths shrouded in perpetual darkness. The walls are slick with an unknown, tar-like substance that emits a faint, sickly glow. The air is thick with the scent of decay and the distant echoes of something moving in the shadows.",
+      "type": "natural",
+      "danger_level": 8,
+      "resources": [],
+      "features": [
+        "Tar-like substance on walls that emits a faint glow",
+        "Echoes of unseen creatures in the depths",
+        "Narrow, unstable ledges that crumble underfoot"
+      ],
+      "symbol": "\u25bc",
+      "secrets": [
+        "A hidden cave system beneath the chasm, rumored to hold ancient relics"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Glowfang Zombies (infected with the tar-like substance, emitting a faint glow)",
+          "Echo Stalkers (zombies that mimic sounds to lure prey)"
+        ]
+      },
+      "id": "loc_13",
+      "coords": [
+        22,
+        2
+      ]
+    },
+    {
+      "name": "Blackfang Chasm",
+      "description": "A jagged fissure in the earth, its depths shrouded in perpetual darkness. The walls are slick with an unknown, tar-like substance that emits a faint, sickly glow. The air is thick with the scent of decay and the distant echoes of something moving in the shadows.",
+      "type": "natural",
+      "danger_level": 8,
+      "resources": [],
+      "features": [
+        "Tar-like substance on walls that emits a faint glow",
+        "Echoes of unseen creatures in the depths",
+        "Narrow, unstable ledges that crumble underfoot"
+      ],
+      "symbol": "\u25bc",
+      "secrets": [
+        "A hidden cave system beneath the chasm, rumored to hold ancient relics"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Glowfang Zombies (infected with the tar-like substance, emitting a faint glow)",
+          "Echo Stalkers (zombies that mimic sounds to lure prey)"
+        ]
+      },
+      "id": "location_14",
+      "coords": [
+        22,
+        2
+      ],
+      "discovered_day": 18,
+      "visited": false
     }
   ]
 }

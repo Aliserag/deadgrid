@@ -7,7 +7,7 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 ```
 ########################################
 #   G      ###################          #
-#   #      #                 #          #
+#   #      #          ▼      #          #
 #   #      #                 #          #
 #   #      #        S        #          #
 #   #      #                 #          #
@@ -57,3 +57,4 @@ G = Generator Room
 + = St. Marrow's Memoria
 & = Ironclad Foundry
 ~ = Whispering Gorge
+▼ = Blackfang Chasm

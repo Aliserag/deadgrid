@@ -1,25 +1,20 @@
 {
-  "day": 18,
-  "health": 75,
-  "morale": 40,
+  "day": 19,
+  "health": 80,
+  "morale": 50,
   "water": 1,
-  "food": 9,
+  "food": 8,
   "location": [
     0,
     0
   ],
   "base_defense": 9,
-  "last_action": "scavenge",
+  "last_action": "rest",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
       "duration": -1,
-      "effect": "Hear zombie hive whispers, -10% sanity"
-    },
-    {
-      "name": "Storm Stress",
-      "duration": 1,
-      "effect": "-5 morale from sleepless night"
+      "effect": "Hear zombie hive whispers, -8% sanity (reduced by fog)"
     }
   ],
   "traits": [
@@ -109,28 +104,35 @@
       "type": "tool",
       "durability": -1,
       "bonus": "Reveals hidden paths"
+    },
+    {
+      "name": "radio",
+      "type": "tool",
+      "durability": 5,
+      "bonus": "Can scan for transmissions"
     }
   ],
   "materials": {
     "metal": 0,
     "fabric": 0,
-    "circuitry": 0
+    "circuitry": 0,
+    "medical": 3
   },
   "factions": {
     "watchers": {
       "disposition": "neutral",
-      "last_seen": "generator_room",
-      "activity": "left markings"
+      "last_seen": "central_station",
+      "activity": "left package"
     },
     "caravan_collective": {
       "disposition": "neutral",
       "last_seen": "supply_cache",
-      "activity": "broadcast fungal warning"
+      "activity": "maintained fungal warnings"
     },
     "iron_vanguard": {
       "disposition": "hostile",
       "last_seen": "transit_hub",
-      "activity": "threatened player"
+      "activity": "marked territory"
     }
   },
   "threat_level": "high",
@@ -147,12 +149,13 @@
     "Whispering Gorge",
     "The Last Stop Camp",
     "Ventilation Shaft",
-    "Willowfen Marsh"
+    "Willowfen Marsh",
+    "Blackfang Chasm"
   ],
   "skills": [
     "Silent Salvager",
     "Hive Whisperer"
   ],
-  "active_story_arc": "Tunnel Wars",
+  "active_story_arc": "Whispering Shadow",
   "radio_transmissions": []
 }

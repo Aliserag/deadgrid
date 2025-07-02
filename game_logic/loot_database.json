@@ -175,6 +175,16 @@
       "attribute": "Legendary",
       "id": "item_10",
       "discovered_day": 17
+    },
+    {
+      "type": "tool",
+      "name": "Radio",
+      "rarity": 23,
+      "durability": 75,
+      "power": 11,
+      "attribute": "Common",
+      "id": "item_11",
+      "discovered_day": 18
     }
   ],
   "next_id": 9
