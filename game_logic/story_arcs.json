@@ -236,9 +236,62 @@
       "failure_consequences": "The survivor gains no additional supplies or information, and the stranger's trail goes cold, leaving them with unanswered questions.",
       "id": "arc_4",
       "status": "active",
-      "current_day": 2
+      "current_day": 3
+    },
+    {
+      "title": "The Fog Dwellers",
+      "type": "territory conflict",
+      "description": "The survivor discovers that the moving fog in Central Station hides a group of hostile scavengers who have claimed the tunnels as their territory. The survivor must either negotiate, fight, or evade them to secure safe passage.",
+      "length": 4,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Whispers in the Fog",
+          "description": "The survivor hears faint voices and footsteps in the fog, realizing they are not alone in the tunnels. A shadowy figure disappears into the mist, leaving behind a crude warning symbol."
+        },
+        {
+          "day": 2,
+          "title": "The Scavengers' Demand",
+          "description": "The scavengers reveal themselves, demanding the survivor hand over their supplies or leave the tunnels. They are led by a ruthless figure named Mercer, who seems to know more about the station than they let on."
+        },
+        {
+          "day": 3,
+          "title": "Negotiation or Conflict",
+          "description": "The survivor must choose: negotiate with Mercer for safe passage, fight the scavengers for control of the tunnels, or attempt to sneak past them undetected."
+        },
+        {
+          "day": 4,
+          "title": "Resolution",
+          "description": "Depending on the survivor's actions, they either gain an uneasy alliance with the scavengers, secure the tunnels for themselves, or are forced to flee, leaving behind valuable resources."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Access to a hidden stash of supplies in the tunnels if the survivor wins the conflict or negotiates successfully."
+        },
+        {
+          "type": "information",
+          "description": "Clues about a safer route through the city, hinted at by Mercer if the survivor gains their trust."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Mercer",
+          "role": "Leader of the scavengers, cunning and territorial, but not without reason."
+        },
+        {
+          "name": "Lena",
+          "role": "A reluctant member of the scavengers who might help the survivor if approached carefully."
+        }
+      ],
+      "failure_consequences": "If the survivor fails, they lose valuable supplies and are forced to take a more dangerous route out of the station, increasing the risk of encountering zombies or other threats.",
+      "id": "arc_5",
+      "status": "active",
+      "current_day": 0
     }
   ],
-  "current_day": 19,
+  "current_day": 20,
   "story_phase": "beginning"
 }

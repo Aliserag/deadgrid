@@ -130,6 +130,55 @@
       "members": [],
       "relations": {},
       "discovered_day": 19
+    },
+    {
+      "name": "The Fog Reapers",
+      "description": "A ruthless bandit faction that thrives in the fog-choked tunnels beneath Central Station. They use the unnatural mist as both camouflage and psychological warfare, striking from nowhere and vanishing without a trace. Survivors whisper that they've made some dark pact with whatever lurks in the depths.",
+      "ideology": "Might makes right - they take what they want from the weak and believe the fog protects them. Some members genuinely worship the creeping mist as a living entity.",
+      "territory": "The maintenance tunnels and abandoned subway lines radiating from Central Station",
+      "resources": [
+        "Stolen military-grade gas masks",
+        "Railway maintenance explosives",
+        "A hidden armory in a signal control room"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Can see clearly in fog while others are blinded",
+        "Ambush tactics grant first-strike advantage",
+        "Tunnel knowledge allows rapid disappearance"
+      ],
+      "weaknesses": [
+        "Reliant on confined spaces - weak in open areas",
+        "Leadership disputes frequently turn violent"
+      ],
+      "id": "faction_6",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Fog Reapers",
+      "description": "A ruthless bandit faction that thrives in the fog-choked tunnels beneath Central Station. They use the unnatural mist as both camouflage and psychological warfare, striking from nowhere and vanishing without a trace. Survivors whisper that they've made some dark pact with whatever lurks in the depths.",
+      "ideology": "Might makes right - they take what they want from the weak and believe the fog protects them. Some members genuinely worship the creeping mist as a living entity.",
+      "territory": "The maintenance tunnels and abandoned subway lines radiating from Central Station",
+      "resources": [
+        "Stolen military-grade gas masks",
+        "Railway maintenance explosives",
+        "A hidden armory in a signal control room"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Can see clearly in fog while others are blinded",
+        "Ambush tactics grant first-strike advantage",
+        "Tunnel knowledge allows rapid disappearance"
+      ],
+      "weaknesses": [
+        "Reliant on confined spaces - weak in open areas",
+        "Leadership disputes frequently turn violent"
+      ],
+      "id": "faction_7",
+      "members": [],
+      "relations": {},
+      "discovered_day": 20
     }
   ],
   "next_id": 2

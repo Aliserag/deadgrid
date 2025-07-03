@@ -1,9 +1,9 @@
 {
-  "day": 20,
-  "health": 78,
-  "morale": 48,
+  "day": 21,
+  "health": 75,
+  "morale": 42,
   "water": 2,
-  "food": 7,
+  "food": 6,
   "location": [
     0,
     0
@@ -14,11 +14,11 @@
     {
       "name": "Echoes of the Hive",
       "duration": -1,
-      "effect": "Hear zombie hive whispers, -10% sanity (amplified by fog)"
+      "effect": "Hear zombie hive whispers, -12% sanity (amplified by fog)"
     },
     {
       "name": "Fungal Attunement",
-      "duration": 3,
+      "duration": 2,
       "effect": "+5% chance to detect hidden threats via fungal patterns"
     }
   ],
@@ -121,7 +121,8 @@
     "metal": 0,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 3
+    "medical": 3,
+    "fuel": 0
   },
   "factions": {
     "watchers": {
@@ -143,6 +144,11 @@
       "disposition": "unknown",
       "last_seen": "ventilation_shaft",
       "activity": "left fungal markers"
+    },
+    "fog_reapers": {
+      "disposition": "hostile",
+      "last_seen": "ventilation_shaft",
+      "activity": "left hostile markings"
     }
   },
   "threat_level": "medium",

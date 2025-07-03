@@ -664,6 +664,103 @@
           ],
           "id": "bldg_296",
           "location_id": "loc_6"
+        },
+        {
+          "name": "Midnight Mall Office Annex",
+          "description": "A surprisingly intact office building connected to the Midnight Mall, this annex served as administrative headquarters before the outbreak. The fluorescent lights still flicker intermittently, powered by an aging backup generator. Papers and office supplies are scattered across desks, suggesting a hurried evacuation. The air smells of stale coffee and dust.",
+          "floors": 3,
+          "layout": "Floor 1:\n+--------+--------+\n| RECEPT | HALL   |\n|        |--------|\n|        | OFFICE |\n+--------+--------+\n\nFloor 2:\n+--------+--------+\n| CONF   | CUBE   |\n| ROOM   | FARM   |\n+--------+--------+\n\nFloor 3:\n+--------+--------+\n| EXEC   | FILE   |\n| SUITE  | ROOM   |\n+--------+--------+",
+          "rooms": [
+            {
+              "name": "Reception Area",
+              "description": "The welcoming space with a curved desk and waiting chairs, now covered in dust.",
+              "contents": [
+                "reception desk",
+                "broken computer",
+                "visitor logbook",
+                "shattered nameplate"
+              ]
+            },
+            {
+              "name": "Main Hallway",
+              "description": "Central corridor connecting all ground floor rooms, with emergency lighting.",
+              "contents": [
+                "fire extinguisher",
+                "emergency exit map",
+                "overhead lights",
+                "scattered papers"
+              ]
+            },
+            {
+              "name": "Manager's Office",
+              "description": "Private office with large windows overlooking the mall parking lot.",
+              "contents": [
+                "desk with locked drawer",
+                "leather chair",
+                "wall safe",
+                "family photos"
+              ]
+            },
+            {
+              "name": "Conference Room",
+              "description": "Second floor meeting space with a long table and presentation equipment.",
+              "contents": [
+                "projector",
+                "whiteboard with old notes",
+                "water cooler",
+                "chair pile barricade"
+              ]
+            },
+            {
+              "name": "Cubicle Farm",
+              "description": "Open office space with 12 identical workstations in various states of disarray.",
+              "contents": [
+                "desk phones",
+                "personal effects",
+                "broken monitors",
+                "emergency flashlight"
+              ]
+            },
+            {
+              "name": "Executive Suite",
+              "description": "Lavish top-floor office with private bathroom and seating area.",
+              "contents": [
+                "wet bar",
+                "plush sofa",
+                "wall-mounted TV",
+                "executive bathroom"
+              ]
+            },
+            {
+              "name": "File Room",
+              "description": "Organized storage for documents with heavy fireproof cabinets.",
+              "contents": [
+                "filing cabinets",
+                "paper shredder",
+                "ladder",
+                "dusty blueprints"
+              ]
+            }
+          ],
+          "dangers": [
+            "collapsed ceiling tiles",
+            "broken glass",
+            "zombie in janitor closet",
+            "flickering lights attracting attention"
+          ],
+          "resources": [
+            "first aid kit in reception",
+            "bottled water in conference room",
+            "tools in maintenance closet",
+            "office supplies"
+          ],
+          "special_features": [
+            "still-functioning backup power",
+            "direct roof access from executive suite",
+            "intercom system that still works intermittently"
+          ],
+          "id": "bldg_308",
+          "location_id": "loc_6"
         }
       ]
     },
