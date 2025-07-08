@@ -2,7 +2,7 @@
   "current_conditions": {
     "type": "rain",
     "severity": 2,
-    "duration": 2,
+    "duration": 1,
     "effects": [
       "movement_penalty",
       "visibility_reduced",
@@ -23,7 +23,7 @@
     },
     {
       "day": 3,
-      "type": "rain",
+      "type": "storm",
       "severity": 1
     }
   ],
@@ -238,19 +238,24 @@
       "date": "2025-07-08",
       "conditions": "rain",
       "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
     }
   ],
   "current_weather": {
     "type": "rain",
     "severity": 2,
-    "duration": 2,
+    "duration": 1,
     "effects": [
       "movement_penalty",
       "visibility_reduced",
       "narrative_drumming raindrops",
       "narrative_muddy ground"
     ],
-    "day": 33,
+    "day": 34,
     "date": "2025-07-08"
   },
   "weather_history": [
@@ -549,6 +554,19 @@
         "narrative_muddy ground"
       ],
       "day": 33,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_drumming raindrops",
+        "narrative_muddy ground"
+      ],
+      "day": 34,
       "date": "2025-07-08"
     }
   ]

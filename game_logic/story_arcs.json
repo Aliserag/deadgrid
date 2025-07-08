@@ -392,8 +392,56 @@
       "id": "arc_7",
       "status": "completed",
       "current_day": 4
+    },
+    {
+      "title": "The Station Squatters",
+      "type": "territory conflict",
+      "description": "A group of hostile survivors has taken up residence in the upper levels of Central Station, threatening the player's safe access to critical subway tunnels. The player must either drive them out or negotiate a truce before they become a permanent threat.",
+      "length": 3,
+      "difficulty": 6,
+      "events": [
+        {
+          "day": 1,
+          "title": "Unwelcome Neighbors",
+          "description": "The player discovers signs of recent human activity in the station's upper concourse - fresh footprints, moved debris, and a crude barricade blocking access to the west tunnels."
+        },
+        {
+          "day": 2,
+          "title": "First Contact",
+          "description": "The squatters reveal themselves, demanding supplies in exchange for safe passage. They've booby-trapped several key routes and appear well-armed."
+        },
+        {
+          "day": 3,
+          "title": "Showdown or Settlement",
+          "description": "The player must either confront the squatters directly (through force or stealth) or negotiate a lasting agreement about territory sharing and tunnel access."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Access to previously blocked tunnels containing medical supplies and tools"
+        },
+        {
+          "type": "information",
+          "description": "Intel about safe surface routes from the squatters' scouting"
+        }
+      ],
+      "characters": [
+        {
+          "name": "Mitch 'Rails' Donovan",
+          "role": "Leader of the station squatters, a former transit worker who knows the tunnel layouts"
+        },
+        {
+          "name": "The Twins",
+          "role": "Two silent teenage lookouts who communicate only through hand signals and station graffiti"
+        }
+      ],
+      "failure_consequences": "The squatters permanently block access to critical subway routes, forcing the player to take more dangerous surface paths between locations. They may also stage occasional raids on the player's supplies.",
+      "id": "arc_8",
+      "status": "active",
+      "current_day": 0
     }
   ],
-  "current_day": 42,
+  "current_day": 43,
   "story_phase": "beginning"
 }

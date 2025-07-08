@@ -1,15 +1,15 @@
 {
-  "day": 34,
-  "health": 55,
-  "morale": 25,
-  "water": 9,
+  "day": 35,
+  "health": 53,
+  "morale": 23,
+  "water": 12,
   "food": 0,
   "location": [
     0,
     0
   ],
   "base_defense": 14,
-  "last_action": "explore",
+  "last_action": "craft",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
@@ -232,10 +232,16 @@
       "type": "medical",
       "quantity": 0,
       "bonus": "Cures infections"
+    },
+    {
+      "name": "improved water filtration system",
+      "type": "tool",
+      "durability": 6,
+      "bonus": "+1 water purification efficiency"
     }
   ],
   "materials": {
-    "metal": 2,
+    "metal": 0,
     "fabric": 0,
     "circuitry": 0,
     "medical": 2,
@@ -325,11 +331,7 @@
   "active_quests": [
     {
       "name": "Fungal Whispers",
-      "progress": "Hive excavation 18 hours from completion - safe zones identified"
-    },
-    {
-      "name": "Shadow Watcher",
-      "progress": "Map received - investigate marked locations"
+      "progress": "Hive excavation 16 hours from completion - 3 temporary safe zones identified"
     }
   ],
   "weather": {

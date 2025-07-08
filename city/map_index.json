@@ -13,7 +13,21 @@
       "theme": "urban district",
       "size": "small",
       "danger_level": 8
+    },
+    {
+      "id": "map_3",
+      "name": "Fort Crimson",
+      "theme": "military base",
+      "size": "medium",
+      "danger_level": 7
+    },
+    {
+      "id": "map_5",
+      "name": "Fort Crimson",
+      "theme": "military base",
+      "danger_level": 7,
+      "discovered_day": 34
     }
   ],
-  "active_map": "map_1"
+  "active_map": "map_3"
 }

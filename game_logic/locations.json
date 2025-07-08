@@ -1809,6 +1809,72 @@
       ],
       "discovered_day": 33,
       "visited": false
+    },
+    {
+      "name": "The Hollow Mall",
+      "description": "A once-bustling shopping center now eerily silent, its glass ceilings shattered and letting in the relentless rain. The lower levels are flooded, creating shallow pools that reflect the dim light from broken store signs. Surprisingly, many stores remain intact, their shelves still stocked with forgotten goods.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "canned food",
+        "clothing",
+        "tools",
+        "batteries"
+      ],
+      "features": [
+        "flooded lower levels",
+        "intact storefronts",
+        "collapsed central atrium"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A hidden survivor cache in the manager's office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "drowned (waterlogged zombies in flooded areas)"
+        ]
+      },
+      "id": "loc_33",
+      "coords": [
+        17,
+        2
+      ]
+    },
+    {
+      "name": "The Hollow Mall",
+      "description": "A once-bustling shopping center now eerily silent, its glass ceilings shattered and letting in the relentless rain. The lower levels are flooded, creating shallow pools that reflect the dim light from broken store signs. Surprisingly, many stores remain intact, their shelves still stocked with forgotten goods.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "canned food",
+        "clothing",
+        "tools",
+        "batteries"
+      ],
+      "features": [
+        "flooded lower levels",
+        "intact storefronts",
+        "collapsed central atrium"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A hidden survivor cache in the manager's office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "drowned (waterlogged zombies in flooded areas)"
+        ]
+      },
+      "id": "location_34",
+      "coords": [
+        17,
+        2
+      ],
+      "discovered_day": 34,
+      "visited": false
     }
   ]
 }
