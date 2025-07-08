@@ -22,7 +22,7 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   M                               #   #
 #   #                &    ~         #   #
 #   #                               #   #
-#   #                  X            #   #
+#   #                  X E          #   #
 #   ##################################   #
 ########################################
 ```
@@ -58,3 +58,4 @@ G = Generator Room
 & = Ironclad Foundry
 ~ = Whispering Gorge
 ▼ = Blackfang Chasm
+E = Echo Ridge Estates

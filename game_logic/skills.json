@@ -135,6 +135,75 @@
       ],
       "id": "skill_4",
       "discovered_day": 19
+    },
+    {
+      "name": "Fungal Adaptation",
+      "type": "survival",
+      "description": "Allows the survivor to identify and utilize fungal growths for medicinal and defensive purposes. At higher levels, enables the creation of fungal-based remedies and deterrents against infected creatures.",
+      "prerequisite": "Basic Botany or Herbalism",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify safe fungal growths and harvest basic medicinal properties.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Create fungal poultices to slow infection and minor healing salves.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Brew fungal deterrents that repel infected creatures for short durations.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Herbalism",
+        "Chemistry",
+        "Stealth"
+      ],
+      "usage_examples": [
+        "Harvesting fungal growths in subway tunnels to create infection-slowing remedies.",
+        "Applying fungal deterrents to barricades to keep infected at bay during nighttime.",
+        "Using fungal poultices to treat wounds when medical supplies are scarce."
+      ],
+      "id": "skill_5"
+    },
+    {
+      "name": "Fungal Adaptation",
+      "type": "survival",
+      "description": "Allows the survivor to identify and utilize fungal growths for medicinal and defensive purposes. At higher levels, enables the creation of fungal-based remedies and deterrents against infected creatures.",
+      "prerequisite": "Basic Botany or Herbalism",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify safe fungal growths and harvest basic medicinal properties.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Create fungal poultices to slow infection and minor healing salves.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Brew fungal deterrents that repel infected creatures for short durations.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Herbalism",
+        "Chemistry",
+        "Stealth"
+      ],
+      "usage_examples": [
+        "Harvesting fungal growths in subway tunnels to create infection-slowing remedies.",
+        "Applying fungal deterrents to barricades to keep infected at bay during nighttime.",
+        "Using fungal poultices to treat wounds when medical supplies are scarce."
+      ],
+      "id": "skill_6",
+      "discovered_day": 24
     }
   ]
 }

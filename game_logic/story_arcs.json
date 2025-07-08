@@ -288,10 +288,10 @@
       ],
       "failure_consequences": "If the survivor fails, they lose valuable supplies and are forced to take a more dangerous route out of the station, increasing the risk of encountering zombies or other threats.",
       "id": "arc_5",
-      "status": "active",
-      "current_day": 3
+      "status": "completed",
+      "current_day": 4
     }
   ],
-  "current_day": 23,
+  "current_day": 24,
   "story_phase": "beginning"
 }

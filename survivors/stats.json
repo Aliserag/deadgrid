@@ -1,7 +1,7 @@
 {
-  "day": 24,
-  "health": 73,
-  "morale": 38,
+  "day": 25,
+  "health": 70,
+  "morale": 35,
   "water": 3,
   "food": 3,
   "location": [
@@ -9,7 +9,7 @@
     0
   ],
   "base_defense": 10,
-  "last_action": "craft",
+  "last_action": "signal",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Fungal Sensitivity",
-      "duration": 3,
+      "duration": 2,
       "effect": "+25% detection of fungal-related secrets, -5% sanity per day"
     }
   ],
@@ -31,7 +31,8 @@
     "Silent Salvager",
     "Hive Whisperer",
     "Fog Walker",
-    "Fungal Instincts"
+    "Fungal Instincts",
+    "Fungal Adaptation (developing)"
   ],
   "gear": [
     {
@@ -153,13 +154,19 @@
       "type": "medical",
       "quantity": 5,
       "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "fungal Geiger counter",
+      "type": "tool",
+      "durability": 4,
+      "bonus": "Detects fungal whisper sources"
     }
   ],
   "materials": {
     "metal": 0,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 2,
+    "medical": 4,
     "fuel": 0
   },
   "factions": {
@@ -176,7 +183,7 @@
     "iron_vanguard": {
       "disposition": "hostile",
       "last_seen": "transit_hub",
-      "activity": "setting traps"
+      "activity": "setting advanced traps"
     },
     "fog_dwellers": {
       "disposition": "unknown",
@@ -205,19 +212,21 @@
     "Ventilation Shaft",
     "Willowfen Marsh",
     "Blackfang Chasm",
-    "Midnight Mall Office Annex"
+    "Midnight Mall Office Annex",
+    "Echo Ridge Estates"
   ],
   "skills": [
     "Silent Salvager",
     "Hive Whisperer",
     "Fungal Whisperer (developing)",
     "Fungal Instincts",
-    "Fungal Sensitivity (temporary)"
+    "Fungal Sensitivity (temporary)",
+    "Fungal Adaptation (developing)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [],
   "active_quests": [
     "Fungal Whispers: Locate distress signal source (Supply Cache area)",
-    "Fog Dweller Signs: Investigate fungal markers"
+    "Fog Dweller Signs: Investigate fungal markers leading to Echo Ridge Estates"
   ]
 }

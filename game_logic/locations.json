@@ -1157,6 +1157,72 @@
       ],
       "discovered_day": 18,
       "visited": false
+    },
+    {
+      "name": "Echo Ridge Estates",
+      "description": "A once-upscale suburban neighborhood now overrun by the infected, where the skeletal remains of McMansions loom like tombstones. The streets are choked with overturned vehicles and the air carries the faint scent of rotting wood and rust. Fungal growths pulse ominously from broken windows, suggesting something more sinister than zombies lurks here.",
+      "type": "residential",
+      "danger_level": 9,
+      "resources": [
+        "canned food (pantry remnants)",
+        "medical supplies (abandoned first aid kits)",
+        "tools (garage finds)",
+        "generators (some still functional)"
+      ],
+      "features": [
+        "collapsed rooftops creating deadly traps",
+        "overgrown gardens hiding movement",
+        "basement shelters with barricaded doors"
+      ],
+      "symbol": "E",
+      "secrets": [
+        "A hidden panic room in one house contains a survivor's research notes on the fungal infection"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Fungal Spore Carriers (explode in clouds of toxic spores when killed)"
+        ]
+      },
+      "id": "loc_15",
+      "coords": [
+        25,
+        17
+      ]
+    },
+    {
+      "name": "Echo Ridge Estates",
+      "description": "A once-upscale suburban neighborhood now overrun by the infected, where the skeletal remains of McMansions loom like tombstones. The streets are choked with overturned vehicles and the air carries the faint scent of rotting wood and rust. Fungal growths pulse ominously from broken windows, suggesting something more sinister than zombies lurks here.",
+      "type": "residential",
+      "danger_level": 9,
+      "resources": [
+        "canned food (pantry remnants)",
+        "medical supplies (abandoned first aid kits)",
+        "tools (garage finds)",
+        "generators (some still functional)"
+      ],
+      "features": [
+        "collapsed rooftops creating deadly traps",
+        "overgrown gardens hiding movement",
+        "basement shelters with barricaded doors"
+      ],
+      "symbol": "E",
+      "secrets": [
+        "A hidden panic room in one house contains a survivor's research notes on the fungal infection"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Fungal Spore Carriers (explode in clouds of toxic spores when killed)"
+        ]
+      },
+      "id": "location_16",
+      "coords": [
+        25,
+        17
+      ],
+      "discovered_day": 24,
+      "visited": false
     }
   ]
 }
