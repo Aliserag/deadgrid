@@ -56,6 +56,17 @@
       "acquisition_method": "Learned by observing infected behavior patterns during multiple close encounters",
       "flavor_text": "'They don't smell fear... they smell difference. Stop being different.' - Notes scrawled on a subway tunnel wall",
       "id": "talent_4"
+    },
+    {
+      "name": "Fungal Instincts",
+      "related_to": "scavenging",
+      "rarity": "uncommon",
+      "description": "Exposure to the strange fungal growths has sharpened your senses when searching contaminated areas. You can now detect faint bioluminescent trails left by disturbed fungal colonies, revealing hidden stashes or dangers.",
+      "benefit": "+15% chance to find additional resources in fungal-infested areas, reveals hidden fungal hazards before triggering them.",
+      "drawback": "Causes occasional mild hallucinations in areas with heavy fungal presence (-5% accuracy for 30 seconds after triggering the effect).",
+      "acquisition_method": "Developed after prolonged exposure to fungal zones (requires spending at least 3 nights in contaminated areas).",
+      "flavor_text": "'The glow shows what hands have touched... and what hands have left behind.' - Scratched into a fungal-covered wall",
+      "id": "talent_5"
     }
   ]
 }

@@ -179,7 +179,9 @@
         "Leadership disputes frequently turn violent"
       ],
       "id": "faction_7",
-      "members": [],
+      "members": [
+        "npc_11"
+      ],
       "relations": {},
       "discovered_day": 20
     }

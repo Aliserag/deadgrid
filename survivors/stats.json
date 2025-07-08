@@ -1,20 +1,25 @@
 {
-  "day": 23,
-  "health": 75,
-  "morale": 40,
-  "water": 4,
-  "food": 4,
+  "day": 24,
+  "health": 73,
+  "morale": 38,
+  "water": 3,
+  "food": 3,
   "location": [
     0,
     0
   ],
-  "base_defense": 9,
+  "base_defense": 10,
   "last_action": "craft",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
       "duration": -1,
       "effect": "Hear zombie hive whispers, -12% sanity (amplified by fog)"
+    },
+    {
+      "name": "Fungal Sensitivity",
+      "duration": 3,
+      "effect": "+25% detection of fungal-related secrets, -5% sanity per day"
     }
   ],
   "traits": [
@@ -25,7 +30,8 @@
     },
     "Silent Salvager",
     "Hive Whisperer",
-    "Fog Walker"
+    "Fog Walker",
+    "Fungal Instincts"
   ],
   "gear": [
     {
@@ -135,20 +141,32 @@
       "type": "medical",
       "quantity": 4,
       "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "reinforced vest",
+      "type": "armor",
+      "durability": 8,
+      "bonus": "+7% damage resistance"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 5,
+      "bonus": "+15% healing efficiency"
     }
   ],
   "materials": {
     "metal": 0,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 1,
+    "medical": 2,
     "fuel": 0
   },
   "factions": {
     "watchers": {
       "disposition": "neutral",
-      "last_seen": "central_station",
-      "activity": "documenting fungal growth"
+      "last_seen": "generator_room",
+      "activity": "leaving ominous warnings"
     },
     "caravan_collective": {
       "disposition": "neutral",
@@ -163,7 +181,7 @@
     "fog_dwellers": {
       "disposition": "unknown",
       "last_seen": "ventilation_shaft",
-      "activity": "left fungal markers"
+      "activity": "leaving fungal trail markers"
     },
     "fog_reapers": {
       "disposition": "hostile",
@@ -171,7 +189,7 @@
       "activity": "left hostile markings"
     }
   },
-  "threat_level": "medium",
+  "threat_level": "medium-high",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
@@ -192,8 +210,14 @@
   "skills": [
     "Silent Salvager",
     "Hive Whisperer",
-    "Fungal Whisperer (developing)"
+    "Fungal Whisperer (developing)",
+    "Fungal Instincts",
+    "Fungal Sensitivity (temporary)"
   ],
   "active_story_arc": "Whispering Shadow",
-  "radio_transmissions": []
+  "radio_transmissions": [],
+  "active_quests": [
+    "Fungal Whispers: Locate distress signal source (Supply Cache area)",
+    "Fog Dweller Signs: Investigate fungal markers"
+  ]
 }

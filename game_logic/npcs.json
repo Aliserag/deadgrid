@@ -260,6 +260,57 @@
       "status": "alive",
       "relationship": -47,
       "discovered_day": 22
+    },
+    {
+      "name": "Silas 'Mossback' Grayson",
+      "age": 42,
+      "background": "Former big-game hunter and survival instructor who disappeared into the wilderness years before the outbreak. Rumors say he was wanted for poaching endangered species.",
+      "description": "A grizzled man with a salt-and-pepper beard matted with fungal growths, his skin permanently stained greenish-gray from living in the fog. Speaks in slow, deliberate growls and moves with unsettling silence. Believes the fog whispers truths to those strong enough to listen.",
+      "motivation": "To prove himself worthy of the fog's favor by bringing it fresh prey - human or otherwise.",
+      "skills": [
+        "Fungal camouflage",
+        "Silent stalking",
+        "Toxin resistance",
+        "Tracking by scent"
+      ],
+      "items": [
+        "A bone knife wrapped in glowing mycelium",
+        "A jar of hallucinogenic fog condensate",
+        "A necklace of mummified fingers"
+      ],
+      "quirk": "Constantly licks his fungal-stained teeth and talks to the mist like it's answering him.",
+      "secret": "The fungal growths are slowly consuming him - he's begun seeing visions of becoming one with the fog permanently.",
+      "id": "npc_11",
+      "faction_id": "faction_7",
+      "faction_name": "The Fog Reapers",
+      "status": "alive",
+      "relationship": 6
+    },
+    {
+      "name": "Silas 'Mossback' Grayson",
+      "age": 42,
+      "background": "Former big-game hunter and survival instructor who disappeared into the wilderness years before the outbreak. Rumors say he was wanted for poaching endangered species.",
+      "description": "A grizzled man with a salt-and-pepper beard matted with fungal growths, his skin permanently stained greenish-gray from living in the fog. Speaks in slow, deliberate growls and moves with unsettling silence. Believes the fog whispers truths to those strong enough to listen.",
+      "motivation": "To prove himself worthy of the fog's favor by bringing it fresh prey - human or otherwise.",
+      "skills": [
+        "Fungal camouflage",
+        "Silent stalking",
+        "Toxin resistance",
+        "Tracking by scent"
+      ],
+      "items": [
+        "A bone knife wrapped in glowing mycelium",
+        "A jar of hallucinogenic fog condensate",
+        "A necklace of mummified fingers"
+      ],
+      "quirk": "Constantly licks his fungal-stained teeth and talks to the mist like it's answering him.",
+      "secret": "The fungal growths are slowly consuming him - he's begun seeing visions of becoming one with the fog permanently.",
+      "id": "npc_12",
+      "faction_id": "faction_7",
+      "faction_name": "The Fog Reapers",
+      "status": "alive",
+      "relationship": 6,
+      "discovered_day": 23
     }
   ],
   "next_id": 5
