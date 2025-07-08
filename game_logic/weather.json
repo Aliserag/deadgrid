@@ -2,7 +2,7 @@
   "current_conditions": {
     "type": "cloudy",
     "severity": 1,
-    "duration": 2,
+    "duration": 1,
     "effects": [
       "narrative_diffused light"
     ]
@@ -20,8 +20,8 @@
     },
     {
       "day": 3,
-      "type": "cloudy",
-      "severity": 1
+      "type": "clear",
+      "severity": 3
     }
   ],
   "season": "spring",
@@ -200,6 +200,11 @@
       "date": "2025-07-08",
       "conditions": "storm",
       "severity": 3
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
     }
   ],
   "current_weather": {

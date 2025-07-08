@@ -20,7 +20,7 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #                                   #&  #
 #                                   #   #
 #   M                               #   #
-#   #                &    ~         #   #
+#   #               ⚡&    ~         #   #
 #   #  +               M            #   #
 #   #                  X E          #   #
 #   ##################################   #
@@ -59,3 +59,4 @@ G = Generator Room
 ~ = Whispering Gorge
 ▼ = Blackfang Chasm
 E = Echo Ridge Estates
+⚡ = The Flooded Power St

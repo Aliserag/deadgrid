@@ -1560,6 +1560,33 @@
           "location_id": "location_24"
         }
       ]
+    },
+    {
+      "name": "The Flooded Power Station",
+      "description": "A once-critical power substation now partially submerged under stagnant water from burst pipes. The flooded lower levels hide submerged electrical hazards, while the upper catwalks sway dangerously in the storm winds. The smell of ozone and rotting insulation hangs thick in the air.",
+      "type": "infrastructure",
+      "danger_level": 7,
+      "resources": [],
+      "features": [
+        "Partially submerged control rooms with sparking equipment",
+        "Unstable metal catwalks swaying 30 feet above the water",
+        "Massive transformers humming with residual charge"
+      ],
+      "symbol": "\u26a1",
+      "secrets": [
+        "A maintenance tunnel leading to undiscovered underground facilities"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Electrocuted zombies with shocking touch"
+        ]
+      },
+      "id": "loc_25",
+      "coords": [
+        20,
+        15
+      ]
     }
   ]
 }

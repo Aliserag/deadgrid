@@ -34,13 +34,11 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #   #.............V...........         #
 #   #..........................        #
 #   ####################################
-       
-       
-       
-       
-       
-       
-       
+#   #  RRRRRRRRRRRRRRRRRRRRRRRRRRRR   #
+#   #  R ^   R  R  R  R  R  R  R  R   #
+#   #  R R R R  R  R  R  R  R  R  R   #
+#   #  R R R R  R  R  R  R  R  R  R   #
+#   #  RRRRRRRRRRRRRRRRRRRRRRRRRRRR   #
 ########################################
 #       ########################       #
 #   B   #                    #   W     #
@@ -70,6 +68,9 @@ V = Ventilation Shaft
 B = Broken Escalator Shaft
 W = Water Filtration Plant
 ? = Mysterious Chamber
+^ = Watchtower Alpha
+R = Barter Square
+R = The Rat's Nest
 # = Wall/Boundary
 . = Open Space
 

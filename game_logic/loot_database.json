@@ -215,7 +215,39 @@
       "attribute": "Common",
       "id": "item_14",
       "discovered_day": 27
+    },
+    {
+      "id": 9,
+      "name": "Military Hat",
+      "description": "A military hat offering protection in the dangerous world. Effects: +11 Carrying Capacity.",
+      "emoji": "\ud83e\uddba",
+      "category": "armor",
+      "rarity": "common",
+      "effects": [
+        {
+          "name": "carrying_capacity",
+          "value": 11
+        }
+      ],
+      "source": "building",
+      "date_found": "2025-07-08"
+    },
+    {
+      "id": 10,
+      "name": "Makeshift Chainsaw",
+      "description": "A makeshift chainsaw that could save your life in the right situation. Effects: +20 Stealth.",
+      "emoji": "\ud83e\ude9a",
+      "category": "weapon",
+      "rarity": "uncommon",
+      "effects": [
+        {
+          "name": "stealth",
+          "value": 20
+        }
+      ],
+      "source": "building",
+      "date_found": "2025-07-08"
     }
   ],
-  "next_id": 9
+  "next_id": 11
 }
