@@ -204,6 +204,75 @@
       ],
       "id": "skill_6",
       "discovered_day": 24
+    },
+    {
+      "name": "Hydrostatic Purification",
+      "type": "water",
+      "description": "Allows the survivor to purify contaminated water sources using improvised filtration techniques and natural elements. At higher levels, enables extraction of drinkable water from unlikely sources like condensation or fungal growths.",
+      "prerequisite": "Basic Survival 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can boil water to remove basic contaminants. +10% hydration efficiency from purified water.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can construct charcoal/sand filters. Identifies toxic water sources by appearance. Unlocks condensation collection technique.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can safely extract water from fungal growths and radioactive pools (with proper equipment). Purified water provides temporary +5% disease resistance.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Chemistry",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Turning a flooded subway tunnel into a sustainable water source by filtering seepage through layered debris",
+        "Harvesting drinkable droplets from bioluminescent fungal clusters in abandoned sewers",
+        "Creating an emergency still to extract water from zombie corpses during drought conditions"
+      ],
+      "id": "skill_7"
+    },
+    {
+      "name": "Hydrostatic Purification",
+      "type": "water",
+      "description": "Allows the survivor to purify contaminated water sources using improvised filtration techniques and natural elements. At higher levels, enables extraction of drinkable water from unlikely sources like condensation or fungal growths.",
+      "prerequisite": "Basic Survival 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can boil water to remove basic contaminants. +10% hydration efficiency from purified water.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can construct charcoal/sand filters. Identifies toxic water sources by appearance. Unlocks condensation collection technique.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can safely extract water from fungal growths and radioactive pools (with proper equipment). Purified water provides temporary +5% disease resistance.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Chemistry",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Turning a flooded subway tunnel into a sustainable water source by filtering seepage through layered debris",
+        "Harvesting drinkable droplets from bioluminescent fungal clusters in abandoned sewers",
+        "Creating an emergency still to extract water from zombie corpses during drought conditions"
+      ],
+      "id": "skill_8",
+      "discovered_day": 28
     }
   ]
 }

@@ -1399,6 +1399,64 @@
       ],
       "discovered_day": 27,
       "visited": false
+    },
+    {
+      "name": "The Overrun Mega-Mart",
+      "description": "A sprawling superstore that became a death trap when the outbreak hit, its cavernous aisles now filled with the shambling remnants of frenzied shoppers. Collapsed shelves and rotting merchandise create a maze of hazards, while the flickering emergency lights cast long shadows of lurking figures. The stench of decay is overwhelming, mixed with the acrid smell of spilled chemicals from the ruined cleaning aisle.",
+      "type": "commercial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Collapsed ceiling sections creating deadly chokepoints",
+        "Motion-activated holiday displays still cycling through broken animations",
+        "A flooded electronics department with live wires sparking in standing water"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A sealed manager's office with emergency supplies, accessible only via the collapsing roof"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Screamer zombies (trigger hordes with loud wails)",
+          "Berserker zombies (enhanced strength from gym equipment impalements)"
+        ]
+      },
+      "id": "loc_23",
+      "coords": [
+        23,
+        16
+      ]
+    },
+    {
+      "name": "The Overrun Mega-Mart",
+      "description": "A sprawling superstore that became a death trap when the outbreak hit, its cavernous aisles now filled with the shambling remnants of frenzied shoppers. Collapsed shelves and rotting merchandise create a maze of hazards, while the flickering emergency lights cast long shadows of lurking figures. The stench of decay is overwhelming, mixed with the acrid smell of spilled chemicals from the ruined cleaning aisle.",
+      "type": "commercial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Collapsed ceiling sections creating deadly chokepoints",
+        "Motion-activated holiday displays still cycling through broken animations",
+        "A flooded electronics department with live wires sparking in standing water"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A sealed manager's office with emergency supplies, accessible only via the collapsing roof"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Screamer zombies (trigger hordes with loud wails)",
+          "Berserker zombies (enhanced strength from gym equipment impalements)"
+        ]
+      },
+      "id": "location_24",
+      "coords": [
+        23,
+        16
+      ],
+      "discovered_day": 28,
+      "visited": false
     }
   ]
 }
