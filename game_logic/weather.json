@@ -2,7 +2,7 @@
   "current_conditions": {
     "type": "storm",
     "severity": 3,
-    "duration": 3,
+    "duration": 2,
     "effects": [
       "noise_mask",
       "movement_severe_penalty",
@@ -185,6 +185,11 @@
       "date": "2025-07-08",
       "conditions": "fog",
       "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "storm",
+      "severity": 3
     },
     {
       "date": "2025-07-08",

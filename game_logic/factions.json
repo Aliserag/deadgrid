@@ -210,7 +210,9 @@
         "Dependent on Fungal Growths: Lose power in sterile environments"
       ],
       "id": "faction_8",
-      "members": [],
+      "members": [
+        "npc_16"
+      ],
       "relations": {}
     }
   ],

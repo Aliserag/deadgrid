@@ -387,6 +387,31 @@
       "faction_name": "The Fog Reapers",
       "status": "alive",
       "relationship": -17
+    },
+    {
+      "name": "Brother Elias 'The Nourisher' Voss",
+      "age": 42,
+      "background": "Former executive chef at a high-end organic restaurant, specializing in wild mushroom foraging and fermentation techniques. Lost his family in the early outbreaks and found purpose in the Choir's teachings.",
+      "description": "A gaunt man with fungal growths creeping up his neck like elaborate chef's tattoos. Speaks in measured, almost reverent tones about 'flavor profiles of the blessed flesh'. Carries himself with the precision of a kitchen veteran, even when performing grotesque rituals.",
+      "motivation": "To prepare the ultimate sacrament - a dish so infused with the fungal essence that it will trigger instant 'ascension' in those who consume it.",
+      "skills": [
+        "Expert mycologist (especially regarding parasitic fungi)",
+        "Precision knife work (both culinary and combat)",
+        "Persuasive sermonizing through food metaphors",
+        "Identifying edible/medicinal growths in infected zones"
+      ],
+      "items": [
+        "A set of surgical-grade chef's knives with bioluminescent fungal handles",
+        "A leather-bound 'recipe book' containing notes on infected tissue preparation",
+        "A portable still for distilling fungal essences into potent sacramental liquors"
+      ],
+      "quirk": "Constantly tastes things - licks his knives, samples the air, even tests infected flesh (which he's developed an immunity to). Refers to everything as 'underseasoned'.",
+      "secret": "His signature dish requires a specific rare ingredient - the pituitary gland of an uninfected human. He's been discreetly hunting a 'pure' survivor for weeks.",
+      "id": "npc_16",
+      "faction_id": "faction_8",
+      "faction_name": "The Luminous Choir",
+      "status": "alive",
+      "relationship": -14
     }
   ],
   "next_id": 5

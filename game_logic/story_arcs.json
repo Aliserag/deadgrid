@@ -290,8 +290,57 @@
       "id": "arc_5",
       "status": "completed",
       "current_day": 4
+    },
+    {
+      "title": "The Whispering Tunnels",
+      "type": "mysterious stranger",
+      "description": "The survivor encounters a mysterious figure who seems to know about the fungal growths. This stranger leads them on a dangerous journey through the tunnels, revealing unsettling truths about the infection.",
+      "length": 4,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Echoes in the Dark",
+          "description": "While scavenging in the tunnels, the survivor hears faint whispers. A shadowy figure watches from a distance, disappearing before they can get a clear look."
+        },
+        {
+          "day": 2,
+          "title": "The Stranger's Mark",
+          "description": "The survivor finds a strange symbol carved into the tunnel wall, leading to a hidden passage. The mysterious figure appears briefly, gesturing for them to follow."
+        },
+        {
+          "day": 3,
+          "title": "Fungal Secrets",
+          "description": "The stranger reveals themselves as a former scientist studying the fungal infection. They show the survivor a hidden lab, but it's overrun with mutated zombies."
+        },
+        {
+          "day": 4,
+          "title": "The Truth Beneath",
+          "description": "The scientist explains the fungal growths are part of a larger network, possibly sentient. They give the survivor a device to detect fungal hotspots before vanishing into the tunnels."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "description": "Fungal Detector: A device that warns of nearby fungal hotspots and infected areas."
+        },
+        {
+          "type": "information",
+          "description": "Knowledge about the fungal network's behavior and potential weaknesses."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Dr. Elias Voss",
+          "role": "A former scientist studying the fungal infection, now a wandering survivor with crucial knowledge."
+        }
+      ],
+      "failure_consequences": "The survivor gains no insight into the fungal threat and remains vulnerable to unexpected outbreaks. Dr. Voss disappears, taking his knowledge with him.",
+      "id": "arc_6",
+      "status": "active",
+      "current_day": 0
     }
   ],
-  "current_day": 32,
+  "current_day": 33,
   "story_phase": "beginning"
 }
