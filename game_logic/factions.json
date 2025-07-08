@@ -103,7 +103,9 @@
         "Limited surface combat experience"
       ],
       "id": "faction_4",
-      "members": [],
+      "members": [
+        "npc_7"
+      ],
       "relations": {}
     },
     {

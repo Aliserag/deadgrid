@@ -34,6 +34,17 @@
       "acquisition_method": "Developed after prolonged exposure to areas with strong hive presence (e.g., Generator Room during storm events)",
       "flavor_text": "'The voices don't stop... but now I understand what they're saying.' - Scratched note found near a radio tower",
       "id": "talent_2"
+    },
+    {
+      "name": "Fog Walker",
+      "related_to": "combat",
+      "rarity": "common",
+      "description": "Years of navigating the eerie, shifting fog have honed your senses. You move silently and strike with precision when visibility is low. Attacks made in fog or low-light conditions gain a slight accuracy boost.",
+      "benefit": "+10% accuracy in fog or low-light conditions",
+      "drawback": "No benefit in clear or well-lit areas",
+      "acquisition_method": "Learned after surviving 3 nights in heavy fog conditions",
+      "flavor_text": "'The fog doesn't hide you from them\u2014it hides them from you.' - Unknown survivor",
+      "id": "talent_3"
     }
   ]
 }

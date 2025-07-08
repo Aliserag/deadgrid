@@ -1012,6 +1012,60 @@
       "coords": [
         26,
         15
+      ],
+      "buildings": [
+        {
+          "name": "Willowfen Watchtower",
+          "description": "A fortified observation facility built on stilts above Willowfen Marsh. Originally used by park rangers, it has been heavily reinforced with scrap metal and wooden barricades. The elevated position provides clear sightlines across the boggy terrain, making it a strategic outpost. Faded maps and weather equipment suggest it was once a monitoring station.",
+          "floors": 2,
+          "layout": "Ground Floor:\n+------+\n|  \ud83d\udeaa  |\n|      |\n|  \ud83d\udd25  |\n+------+\nUpper Floor:\n+------+\n|  \ud83e\ude9f\ud83e\ude9f |\n|  \ud83e\ude91   |\n|  \ud83d\udd2d  |\n+------+",
+          "rooms": [
+            {
+              "name": "Entry Hold",
+              "description": "Sandbag-reinforced foyer with murder holes covering the entrance",
+              "contents": [
+                "Shotgun shell casings",
+                "Improvised alarm cans",
+                "Bloody bandages"
+              ]
+            },
+            {
+              "name": "Bunk Room",
+              "description": "Converted sleeping area with hammocks strung between support beams",
+              "contents": [
+                "Moldy sleeping bags",
+                "Hand-crank radio",
+                "Rusty bear traps"
+              ]
+            },
+            {
+              "name": "Watch Post",
+              "description": "360-degree observation deck with mounted spotting scope",
+              "contents": [
+                "Binoculars",
+                "Hand-drawn zombie movement charts",
+                "Flares"
+              ]
+            }
+          ],
+          "dangers": [
+            "Weakened floorboards near eastern wall",
+            "Aggressive swamp mosquitoes",
+            "Rusted metal edges on barricades"
+          ],
+          "resources": [
+            "Clean water collection system",
+            "High ground for sniper position",
+            "Stockpile of fishing gear"
+          ],
+          "special_features": [
+            "Retractable ladder system",
+            "Marsh gas warning bells",
+            "Sun-bleached skulls marking sniper ranges"
+          ],
+          "id": "bldg_654",
+          "location_id": "loc_11"
+        }
       ]
     },
     {

@@ -235,8 +235,8 @@
       ],
       "failure_consequences": "The survivor gains no additional supplies or information, and the stranger's trail goes cold, leaving them with unanswered questions.",
       "id": "arc_4",
-      "status": "active",
-      "current_day": 3
+      "status": "completed",
+      "current_day": 4
     },
     {
       "title": "The Fog Dwellers",
@@ -289,9 +289,9 @@
       "failure_consequences": "If the survivor fails, they lose valuable supplies and are forced to take a more dangerous route out of the station, increasing the risk of encountering zombies or other threats.",
       "id": "arc_5",
       "status": "active",
-      "current_day": 0
+      "current_day": 1
     }
   ],
-  "current_day": 20,
+  "current_day": 21,
   "story_phase": "beginning"
 }

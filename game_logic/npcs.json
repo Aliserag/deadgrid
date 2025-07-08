@@ -158,6 +158,57 @@
       "status": "alive",
       "relationship": 14,
       "discovered_day": 12
+    },
+    {
+      "name": "Silas 'Shade' Mercer",
+      "age": 42,
+      "background": "Former big-game hunter and wilderness guide who specialized in tracking elusive prey through dense forests and foggy terrain.",
+      "description": "A gaunt, wiry man with piercing grey eyes that seem to glow faintly in the fog. His skin is covered in intricate fungal tattoos that pulse slightly when the mist thickens. Speaks in a low, measured tone and moves with unnatural silence.",
+      "motivation": "Believes he's been chosen by the fog to protect the last remnants of humanity by teaching them to become invisible to both the dead and the living.",
+      "skills": [
+        "Master tracker",
+        "Fog navigation",
+        "Silent movement",
+        "Fungal lore"
+      ],
+      "items": [
+        "A bone whistle that mimics zombie vocalizations",
+        "A fungal growth in a glass vial that glows in sync with the mist",
+        "A journal filled with pulsing spore patterns"
+      ],
+      "quirk": "Constantly sniffs the air and licks his fingers to test wind direction and spore density.",
+      "secret": "The fungal tattoos aren't just decorative - they're slowly spreading through his nervous system, and he's starting to hear the same whispers in the fog that the zombies respond to.",
+      "id": "npc_7",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -1
+    },
+    {
+      "name": "Silas 'Shade' Mercer",
+      "age": 42,
+      "background": "Former big-game hunter and wilderness guide who specialized in tracking elusive prey through dense forests and foggy terrain.",
+      "description": "A gaunt, wiry man with piercing grey eyes that seem to glow faintly in the fog. His skin is covered in intricate fungal tattoos that pulse slightly when the mist thickens. Speaks in a low, measured tone and moves with unnatural silence.",
+      "motivation": "Believes he's been chosen by the fog to protect the last remnants of humanity by teaching them to become invisible to both the dead and the living.",
+      "skills": [
+        "Master tracker",
+        "Fog navigation",
+        "Silent movement",
+        "Fungal lore"
+      ],
+      "items": [
+        "A bone whistle that mimics zombie vocalizations",
+        "A fungal growth in a glass vial that glows in sync with the mist",
+        "A journal filled with pulsing spore patterns"
+      ],
+      "quirk": "Constantly sniffs the air and licks his fingers to test wind direction and spore density.",
+      "secret": "The fungal tattoos aren't just decorative - they're slowly spreading through his nervous system, and he's starting to hear the same whispers in the fog that the zombies respond to.",
+      "id": "npc_8",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -1,
+      "discovered_day": 21
     }
   ],
   "next_id": 5

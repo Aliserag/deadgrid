@@ -1,15 +1,15 @@
 {
-  "day": 21,
-  "health": 75,
-  "morale": 42,
-  "water": 2,
-  "food": 6,
+  "day": 22,
+  "health": 78,
+  "morale": 45,
+  "water": 3,
+  "food": 5,
   "location": [
     0,
     0
   ],
   "base_defense": 9,
-  "last_action": "defend",
+  "last_action": "craft",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Fungal Attunement",
-      "duration": 2,
+      "duration": 1,
       "effect": "+5% chance to detect hidden threats via fungal patterns"
     }
   ],
@@ -29,7 +29,8 @@
       "effect": "Reduces noise while scavenging by 25%"
     },
     "Silent Salvager",
-    "Hive Whisperer"
+    "Hive Whisperer",
+    "Fog Walker"
   ],
   "gear": [
     {
@@ -115,30 +116,42 @@
       "type": "tool",
       "durability": 5,
       "bonus": "Can scan for transmissions"
+    },
+    {
+      "name": "reinforced flashlight",
+      "type": "tool",
+      "durability": 6,
+      "bonus": "20% brighter beam"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 3,
+      "bonus": "+15% healing efficiency"
     }
   ],
   "materials": {
     "metal": 0,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 3,
+    "medical": 1,
     "fuel": 0
   },
   "factions": {
     "watchers": {
       "disposition": "neutral",
       "last_seen": "central_station",
-      "activity": "left map to Midnight Mall Office Annex"
+      "activity": "documenting fungal growth"
     },
     "caravan_collective": {
       "disposition": "neutral",
       "last_seen": "supply_cache",
-      "activity": "maintained fungal warnings"
+      "activity": "interpreting Fog Dweller signs"
     },
     "iron_vanguard": {
       "disposition": "hostile",
       "last_seen": "transit_hub",
-      "activity": "marked territory"
+      "activity": "setting traps"
     },
     "fog_dwellers": {
       "disposition": "unknown",
