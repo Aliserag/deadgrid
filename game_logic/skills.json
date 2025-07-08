@@ -342,6 +342,75 @@
       ],
       "id": "skill_10",
       "discovered_day": 29
+    },
+    {
+      "name": "Shadow Harmony",
+      "type": "stealth",
+      "description": "Allows the survivor to synchronize their movements with environmental sounds and shadows, becoming nearly undetectable during chaotic conditions. At higher levels, the survivor can even use storms or other loud events to mask their presence completely.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces detection chance by 20% during storms or loud environmental events",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Allows brief moments of near-invisibility when moving in sync with flickering lights or sudden loud noises",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can actively use environmental sounds (like thunder or collapsing debris) to completely mask movement sounds for 5 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Sound Discipline",
+        "Light Footed"
+      ],
+      "usage_examples": [
+        "Slipping past a horde of infected during a thunderstorm by moving with each thunderclap",
+        "Using flickering emergency lights to cross a guarded area undetected",
+        "Escaping pursuit by disappearing into the shadows when a nearby structure collapses"
+      ],
+      "id": "skill_11"
+    },
+    {
+      "name": "Shadow Harmony",
+      "type": "stealth",
+      "description": "Allows the survivor to synchronize their movements with environmental sounds and shadows, becoming nearly undetectable during chaotic conditions. At higher levels, the survivor can even use storms or other loud events to mask their presence completely.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces detection chance by 20% during storms or loud environmental events",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Allows brief moments of near-invisibility when moving in sync with flickering lights or sudden loud noises",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can actively use environmental sounds (like thunder or collapsing debris) to completely mask movement sounds for 5 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Sound Discipline",
+        "Light Footed"
+      ],
+      "usage_examples": [
+        "Slipping past a horde of infected during a thunderstorm by moving with each thunderclap",
+        "Using flickering emergency lights to cross a guarded area undetected",
+        "Escaping pursuit by disappearing into the shadows when a nearby structure collapses"
+      ],
+      "id": "skill_12",
+      "discovered_day": 31
     }
   ]
 }

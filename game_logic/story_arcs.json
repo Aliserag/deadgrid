@@ -337,10 +337,63 @@
       ],
       "failure_consequences": "The survivor gains no insight into the fungal threat and remains vulnerable to unexpected outbreaks. Dr. Voss disappears, taking his knowledge with him.",
       "id": "arc_6",
+      "status": "completed",
+      "current_day": 4
+    },
+    {
+      "title": "The Whispering Tunnels",
+      "type": "mysterious stranger",
+      "description": "The survivor discovers cryptic messages left by a mysterious figure in the tunnels, leading to a tense encounter and a potential alliance. The stranger seems to know more about the fungal outbreak than they let on.",
+      "length": 4,
+      "difficulty": 6,
+      "events": [
+        {
+          "day": 1,
+          "title": "Echoes in the Dark",
+          "description": "While scavenging, the survivor finds strange symbols carved into the tunnel walls, along with a fresh trail of supplies leading deeper into the station."
+        },
+        {
+          "day": 2,
+          "title": "The Shadow Watcher",
+          "description": "The survivor spots a cloaked figure observing them from a distance. When approached, the figure vanishes, leaving behind a map with marked safe zones."
+        },
+        {
+          "day": 3,
+          "title": "The Meeting",
+          "description": "The stranger finally makes contact, revealing they\u2019ve been tracking the survivor. They offer information about a hidden cache in exchange for help clearing a blocked tunnel."
+        },
+        {
+          "day": 4,
+          "title": "A Fragile Trust",
+          "description": "After completing the task, the stranger shares a cryptic warning about the fungal zombies evolving. They vanish again, but leave behind a way to contact them in the future."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "A cache of medical supplies and ammunition."
+        },
+        {
+          "type": "information",
+          "description": "Clues about the origins of the fungal outbreak and potential safe zones."
+        },
+        {
+          "type": "relationship",
+          "description": "A tentative alliance with the mysterious stranger, who may reappear in the main story."
+        }
+      ],
+      "characters": [
+        {
+          "name": "The Whisper",
+          "role": "A enigmatic survivor who knows more than they reveal, possibly connected to the outbreak."
+        }
+      ],
+      "failure_consequences": "The stranger disappears permanently, taking valuable information with them. The survivor misses out on the cache and potential future aid.",
+      "id": "arc_7",
       "status": "active",
-      "current_day": 3
+      "current_day": 1
     }
   ],
-  "current_day": 36,
+  "current_day": 39,
   "story_phase": "beginning"
 }

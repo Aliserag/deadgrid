@@ -20,9 +20,9 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #                                   #&  #
 #                                   #   #
 #   M                               #   #
-#   #               ⚡&    ~         #   #
+#   #              C⚡&    ~         #   #
 #   #  +               M            #   #
-#   #                  X E          #   #
+#   #                  XLE          #   #
 #   ##################################   #
 ########################################
 ```
@@ -60,3 +60,4 @@ G = Generator Room
 ▼ = Blackfang Chasm
 E = Echo Ridge Estates
 ⚡ = The Flooded Power St
+L = Abandoned University

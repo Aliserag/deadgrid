@@ -78,6 +78,42 @@
       "acquisition_method": "Earned by successfully leading a group through a dangerous encounter without casualties.",
       "flavor_text": "'When the world falls apart, someone has to hold it together\u2014might as well be you.'",
       "id": "talent_6"
+    },
+    {
+      "name": "Storm Chaser's Instinct",
+      "related_to": "scavenging",
+      "rarity": "uncommon",
+      "description": "Years of tracking rare finds during violent storms have honed your ability to locate valuable items in chaotic conditions. You instinctively know where to look when the wind howls and debris flies.",
+      "benefit": "+25% chance to find rare components/items during severe weather events. Storm-related search actions take 30% less time.",
+      "drawback": "Normal scavenging efficiency decreases slightly (-10%) in calm conditions due to over-reliance on storm patterns.",
+      "acquisition_method": "Learned after surviving 3 major storms while actively scavenging, or from an old meteorologist survivor.",
+      "flavor_text": "'The best treasures aren't buried - they're blown right to your feet, if you know how to dance with the wind.'",
+      "id": "talent_7"
+    },
+    {
+      "name": "Stormcaller Husk",
+      "type": "hybrid",
+      "severity": 7,
+      "description": "A fungal-electrical hybrid mutation that thrives in storm conditions, causing infected to emit bioelectric discharges. The mutation synchronizes with atmospheric electricity, making these zombies dangerously unpredictable during thunderstorms.",
+      "appearance": "Crackling blue fungal veins pulse beneath translucent gray skin, with static-charged hair standing permanently on end. Eyes glow faintly during electrical discharges.",
+      "benefits": [
+        "Can sense electrical currents and storms from miles away",
+        "Generates painful bioelectric shocks on contact",
+        "Becomes more agile and aggressive during storms"
+      ],
+      "disadvantages": [
+        "Extremely visible due to constant electrical arcing in dark environments",
+        "Vulnerable to rubber-coated weapons and insulated armor",
+        "Prone to explosive overload when struck by lightning"
+      ],
+      "progression": "Over time, the fungal networks expand to form living lightning rods across the body. In final stages, the mutation causes spontaneous combustion during electrical storms.",
+      "treatment": "High-voltage electrocution may purge the fungal colonies, but risks triggering a catastrophic discharge. Faraday cage containment is the safest option.",
+      "id": "mutation_8",
+      "related_to": "mutation",
+      "rarity": "unique",
+      "benefit": "Can sense electrical currents and storms from miles away, Generates painful bioelectric shocks on contact, Becomes more agile and aggressive during storms",
+      "drawback": "Extremely visible due to constant electrical arcing in dark environments, Vulnerable to rubber-coated weapons and insulated armor, Prone to explosive overload when struck by lightning",
+      "acquisition_method": "Exposure to zombie infection"
     }
   ]
 }

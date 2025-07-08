@@ -1,21 +1,21 @@
 {
   "current_conditions": {
-    "type": "cloudy",
+    "type": "clear",
     "severity": 1,
     "duration": 1,
     "effects": [
-      "narrative_diffused light"
+      "narrative_good visibility"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "cloudy",
+      "type": "clear",
       "severity": 1
     },
     {
       "day": 2,
-      "type": "cloudy",
+      "type": "clear",
       "severity": 1
     },
     {
@@ -205,21 +205,34 @@
       "date": "2025-07-08",
       "conditions": "cloudy",
       "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
     }
   ],
   "current_weather": {
-    "type": "storm",
-    "severity": 3,
-    "duration": 1,
+    "type": "rain",
+    "severity": 2,
+    "duration": 2,
     "effects": [
-      "noise_mask",
-      "movement_severe_penalty",
-      "visibility_severely_reduced",
-      "narrative_howling wind",
-      "narrative_crashing thunder",
-      "narrative_lightning flashes"
+      "movement_penalty",
+      "visibility_reduced",
+      "narrative_drumming raindrops",
+      "narrative_wet conditions"
     ],
-    "day": 29,
+    "day": 31,
     "date": "2025-07-08"
   },
   "weather_history": [
@@ -456,6 +469,29 @@
         "narrative_lightning flashes"
       ],
       "day": 29,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "cloudy",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_diffused light"
+      ],
+      "day": 30,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 2,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_drumming raindrops",
+        "narrative_wet conditions"
+      ],
+      "day": 31,
       "date": "2025-07-08"
     }
   ]

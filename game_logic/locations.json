@@ -1587,6 +1587,90 @@
         20,
         15
       ]
+    },
+    {
+      "name": "Abandoned University Library",
+      "description": "The once-prestigious university library now stands as a hollowed-out ruin, its grand reading rooms littered with overturned bookshelves and the remnants of frantic last stands. The upper floors have partially collapsed, creating precarious walkways over piles of academic debris. The scent of mildew and old paper mixes with something far more sinister lingering in the shadows.",
+      "type": "educational",
+      "danger_level": 6,
+      "resources": [],
+      "features": [
+        "Collapsed upper floors creating dangerous vertical navigation",
+        "Special collections vault with reinforced doors still intact",
+        "Emergency lighting system flickers erratically"
+      ],
+      "symbol": "L",
+      "secrets": [
+        "A hidden professor's office contains unfinished research on the outbreak"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Librarian (enhanced hearing)"
+        ]
+      },
+      "id": "loc_26",
+      "coords": [
+        24,
+        17
+      ]
+    },
+    {
+      "name": "The Flooded Power Station",
+      "description": "A once-critical power substation now partially submerged under stagnant water from burst pipes. The flooded lower levels hide submerged electrical hazards, while the upper catwalks sway dangerously in the storm winds. The smell of ozone and rotting insulation hangs thick in the air.",
+      "type": "infrastructure",
+      "danger_level": 7,
+      "resources": [],
+      "features": [
+        "Partially submerged control rooms with sparking equipment",
+        "Unstable metal catwalks swaying 30 feet above the water",
+        "Massive transformers humming with residual charge"
+      ],
+      "symbol": "\u26a1",
+      "secrets": [
+        "A maintenance tunnel leading to undiscovered underground facilities"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Electrocuted zombies with shocking touch"
+        ]
+      },
+      "id": "location_27",
+      "coords": [
+        20,
+        15
+      ],
+      "discovered_day": 30,
+      "visited": false
+    },
+    {
+      "name": "The Overrun Condominiums",
+      "description": "A once-luxurious high-rise condominium now stands as a towering death trap, its halls filled with the moans of the infected. The lower floors are completely overrun, while the upper levels remain unstable due to structural damage from fires and explosions. The air reeks of decay and the faint, lingering scent of desperation from those who tried to shelter here.",
+      "type": "residential",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Collapsed stairwells blocking access to upper floors",
+        "Elevator shafts now serve as vertical death pits",
+        "Balconies with precarious views of the ruined city below"
+      ],
+      "symbol": "C",
+      "secrets": [
+        "A hidden panic room on the penthouse floor, untouched but inaccessible"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Bloaters (infected swollen with toxic gas)",
+          "Crawlers (zombies with broken limbs that drag themselves)"
+        ]
+      },
+      "id": "loc_28",
+      "coords": [
+        19,
+        15
+      ]
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "day": 30,
-  "health": 65,
-  "morale": 25,
-  "water": 6,
-  "food": 1,
+  "day": 31,
+  "health": 63,
+  "morale": 23,
+  "water": 5,
+  "food": 0,
   "location": [
     0,
     0
   ],
   "base_defense": 14,
-  "last_action": "rest",
+  "last_action": "signal",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
@@ -17,9 +17,9 @@
       "effect": "Can now distinguish individual digging directions, -15% sanity"
     },
     {
-      "name": "Storm Shelter",
-      "duration": 0,
-      "effect": "expired"
+      "name": "Fungal Rash",
+      "duration": 3,
+      "effect": "-2 health/day until treated"
     }
   ],
   "traits": [
@@ -190,14 +190,32 @@
       "type": "medical",
       "quantity": 1,
       "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "improved water filtration system",
+      "type": "tool",
+      "durability": 5,
+      "bonus": "+1 water purification efficiency"
+    },
+    {
+      "name": "reinforced vest",
+      "type": "armor",
+      "durability": 9,
+      "bonus": "+7% damage resistance"
+    },
+    {
+      "name": "serrated knife (upgraded)",
+      "type": "weapon",
+      "durability": 8,
+      "bonus": "+15% damage against fungal enemies"
     }
   ],
   "materials": {
     "metal": 2,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 1,
-    "fuel": 1
+    "medical": 0,
+    "fuel": 0
   },
   "factions": {
     "watchers": {
@@ -226,9 +244,9 @@
       "activity": "setting fungal traps"
     },
     "sporebound": {
-      "disposition": "cautious",
+      "disposition": "friendly",
       "last_seen": "flooded_passage",
-      "activity": "offering fungal trade"
+      "activity": "acknowledged trade offering"
     }
   },
   "threat_level": "critical (storm-induced hive agitation)",
@@ -248,7 +266,9 @@
     "Willowfen Marsh",
     "Blackfang Chasm",
     "Midnight Mall Office Annex",
-    "Echo Ridge Estates"
+    "Echo Ridge Estates",
+    "The Flooded Power Station",
+    "Abandoned University Library"
   ],
   "skills": [
     "Silent Salvager",
@@ -259,7 +279,9 @@
     "Fungal Adaptation (developing)",
     "Fungal Instincts (improved)",
     "Fungal Adaptation (advanced)",
-    "Fungal Purification (basic)"
+    "Fungal Purification (basic)",
+    "Storm Chaser's Instinct",
+    "Shadow Harmony (discovered)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [
@@ -272,11 +294,12 @@
   "active_quests": [
     {
       "name": "Fungal Whispers",
-      "progress": "Hive excavation confirmed under Transit Hub - 48 hours estimated"
+      "progress": "Hive excavation confirmed under Transit Hub - 24 hours estimated"
     }
   ],
   "weather": {
     "next_day": "Storm (Severity: 5/5)",
-    "effect": "Structural collapse risk, fungal mobility extreme"
+    "effect": "Structural collapse risk, fungal mobility extreme",
+    "current": "Cloudy (Severity: 1/5)"
   }
 }

@@ -263,6 +263,31 @@
       "members": [],
       "relations": {},
       "discovered_day": 29
+    },
+    {
+      "name": "The Rust Reavers",
+      "description": "A ruthless band of scavengers who prey on survivors and settlements, stripping anything of value from their victims. They operate in small, mobile groups to avoid detection and specialize in ambush tactics. Known for leaving behind only rusted scraps and bloodstains where they strike.",
+      "ideology": "Survival of the fittest through absolute domination. They believe the strong should take what they need from the weak, and view the apocalypse as an opportunity to carve out their own brutal kingdom.",
+      "territory": "Nomadic, but frequently haunt abandoned industrial zones, rail yards, and subway tunnels where they can ambush travelers and hide their loot.",
+      "resources": [
+        "Scrap metal and salvage",
+        "Stolen weapons and ammunition",
+        "Improvised explosives",
+        "Captured vehicles"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Master ambushers - excel at surprise attacks",
+        "Mechanical savants - can jury-rig nearly anything into a weapon or trap",
+        "Fear tactics - use gruesome displays to intimidate foes"
+      ],
+      "weaknesses": [
+        "Poor discipline - prone to infighting over spoils",
+        "No permanent base - vulnerable when caught in the open"
+      ],
+      "id": "faction_11",
+      "members": [],
+      "relations": {}
     }
   ],
   "next_id": 2
