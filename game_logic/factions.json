@@ -104,7 +104,8 @@
       ],
       "id": "faction_4",
       "members": [
-        "npc_7"
+        "npc_7",
+        "npc_9"
       ],
       "relations": {}
     },

@@ -1,9 +1,9 @@
 {
-  "day": 22,
-  "health": 78,
-  "morale": 45,
-  "water": 3,
-  "food": 5,
+  "day": 23,
+  "health": 75,
+  "morale": 40,
+  "water": 4,
+  "food": 4,
   "location": [
     0,
     0
@@ -15,11 +15,6 @@
       "name": "Echoes of the Hive",
       "duration": -1,
       "effect": "Hear zombie hive whispers, -12% sanity (amplified by fog)"
-    },
-    {
-      "name": "Fungal Attunement",
-      "duration": 1,
-      "effect": "+5% chance to detect hidden threats via fungal patterns"
     }
   ],
   "traits": [
@@ -127,6 +122,18 @@
       "name": "sterile bandages",
       "type": "medical",
       "quantity": 3,
+      "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "reinforced vest",
+      "type": "armor",
+      "durability": 6,
+      "bonus": "+5% damage resistance"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 4,
       "bonus": "+15% healing efficiency"
     }
   ],

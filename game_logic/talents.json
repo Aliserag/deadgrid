@@ -45,6 +45,17 @@
       "acquisition_method": "Learned after surviving 3 nights in heavy fog conditions",
       "flavor_text": "'The fog doesn't hide you from them\u2014it hides them from you.' - Unknown survivor",
       "id": "talent_3"
+    },
+    {
+      "name": "Hive Whisperer",
+      "related_to": "social",
+      "rarity": "common",
+      "description": "You've learned to mimic the guttural sounds and pheromone signals of the infected, allowing you to blend in briefly among shambling hordes. While not perfect, it buys precious seconds to slip past undead patrols or avoid direct confrontation.",
+      "benefit": "+15% chance to avoid detection when moving slowly through zombie-infested areas",
+      "drawback": "Effect breaks if you run, attack, or make sudden movements",
+      "acquisition_method": "Learned by observing infected behavior patterns during multiple close encounters",
+      "flavor_text": "'They don't smell fear... they smell difference. Stop being different.' - Notes scrawled on a subway tunnel wall",
+      "id": "talent_4"
     }
   ]
 }

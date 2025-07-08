@@ -209,6 +209,57 @@
       "status": "alive",
       "relationship": -1,
       "discovered_day": 21
+    },
+    {
+      "name": "Silas 'Ghost' Mercer",
+      "age": 42,
+      "background": "Former wildlife tracker and survival instructor who spent years living off-grid before the outbreak. His intimate knowledge of urban wildlife made him invaluable when the cities fell.",
+      "description": "A gaunt, wiry man with fungal growths creeping up his left arm like living tattoos. Moves with unnatural silence, speaks in hushed tones as if afraid to disturb the fog. His piercing gray eyes seem to see through both darkness and deception.",
+      "motivation": "To prove humanity can evolve alongside the fungal infection rather than fight it, believing symbiosis is the only path to survival.",
+      "skills": [
+        "Fungal spore tracking",
+        "Absolute silence movement",
+        "Improvised toxin crafting",
+        "Urban camouflage"
+      ],
+      "items": [
+        "A bioluminescent fungal compass",
+        "Zombie-scented camouflage paste",
+        "A journal of infected behavioral patterns"
+      ],
+      "quirk": "Constantly collects fungal samples in small vials, whispering to them like they're pets",
+      "secret": "His fungal arm occasionally twitches with a will of its own, and he's starting to hear whispers in the fog",
+      "id": "npc_9",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -47
+    },
+    {
+      "name": "Silas 'Ghost' Mercer",
+      "age": 42,
+      "background": "Former wildlife tracker and survival instructor who spent years living off-grid before the outbreak. His intimate knowledge of urban wildlife made him invaluable when the cities fell.",
+      "description": "A gaunt, wiry man with fungal growths creeping up his left arm like living tattoos. Moves with unnatural silence, speaks in hushed tones as if afraid to disturb the fog. His piercing gray eyes seem to see through both darkness and deception.",
+      "motivation": "To prove humanity can evolve alongside the fungal infection rather than fight it, believing symbiosis is the only path to survival.",
+      "skills": [
+        "Fungal spore tracking",
+        "Absolute silence movement",
+        "Improvised toxin crafting",
+        "Urban camouflage"
+      ],
+      "items": [
+        "A bioluminescent fungal compass",
+        "Zombie-scented camouflage paste",
+        "A journal of infected behavioral patterns"
+      ],
+      "quirk": "Constantly collects fungal samples in small vials, whispering to them like they're pets",
+      "secret": "His fungal arm occasionally twitches with a will of its own, and he's starting to hear whispers in the fog",
+      "id": "npc_10",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -47,
+      "discovered_day": 22
     }
   ],
   "next_id": 5
