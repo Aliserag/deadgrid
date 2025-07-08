@@ -18,7 +18,7 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #          ###################    ~ # C #
 #                                   #   #
 #                                   #&  #
-#                                   #   #
+#                 ☣                 #   #
 #   M                               #   #
 #   #              C⚡&    ~         #   #
 #   #  +               M            #   #
@@ -62,3 +62,4 @@ E = Echo Ridge Estates
 ⚡ = The Flooded Power St
 L = Abandoned University
 Æ = The Fungal Chasm
+☣ = The Necrotic Bio-Lab

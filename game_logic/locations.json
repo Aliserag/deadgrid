@@ -1739,6 +1739,76 @@
       ],
       "discovered_day": 31,
       "visited": false
+    },
+    {
+      "name": "The Necrotic Bio-Lab",
+      "description": "A former high-security medical research facility now overrun with grotesque, mutated specimens. The halls are lined with shattered containment units, their former inhabitants now roaming freely. The air is thick with the stench of rotting flesh and acrid chemicals, making every breath a struggle.",
+      "type": "medical",
+      "danger_level": 10,
+      "resources": [
+        "experimental serums",
+        "surgical tools",
+        "biohazard suits",
+        "medical journals"
+      ],
+      "features": [
+        "broken containment chambers leaking unknown fluids",
+        "flickering emergency lights casting eerie shadows",
+        "walls covered in pulsating organic growths"
+      ],
+      "symbol": "\u2623",
+      "secrets": [
+        "A hidden underground lab with a potential cure prototype"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Mutated Lab Subjects",
+          "Biohazard Zombies",
+          "Necrotic Surgeons"
+        ]
+      },
+      "id": "loc_31",
+      "coords": [
+        18,
+        13
+      ]
+    },
+    {
+      "name": "The Necrotic Bio-Lab",
+      "description": "A former high-security medical research facility now overrun with grotesque, mutated specimens. The halls are lined with shattered containment units, their former inhabitants now roaming freely. The air is thick with the stench of rotting flesh and acrid chemicals, making every breath a struggle.",
+      "type": "medical",
+      "danger_level": 10,
+      "resources": [
+        "experimental serums",
+        "surgical tools",
+        "biohazard suits",
+        "medical journals"
+      ],
+      "features": [
+        "broken containment chambers leaking unknown fluids",
+        "flickering emergency lights casting eerie shadows",
+        "walls covered in pulsating organic growths"
+      ],
+      "symbol": "\u2623",
+      "secrets": [
+        "A hidden underground lab with a potential cure prototype"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Mutated Lab Subjects",
+          "Biohazard Zombies",
+          "Necrotic Surgeons"
+        ]
+      },
+      "id": "location_32",
+      "coords": [
+        18,
+        13
+      ],
+      "discovered_day": 33,
+      "visited": false
     }
   ]
 }

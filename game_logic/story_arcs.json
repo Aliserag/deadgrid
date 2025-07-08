@@ -390,10 +390,10 @@
       ],
       "failure_consequences": "The stranger disappears permanently, taking valuable information with them. The survivor misses out on the cache and potential future aid.",
       "id": "arc_7",
-      "status": "active",
-      "current_day": 3
+      "status": "completed",
+      "current_day": 4
     }
   ],
-  "current_day": 41,
+  "current_day": 42,
   "story_phase": "beginning"
 }

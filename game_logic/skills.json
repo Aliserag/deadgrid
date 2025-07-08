@@ -478,6 +478,75 @@
       ],
       "id": "skill_14",
       "discovered_day": 31
+    },
+    {
+      "name": "Fungal Cloak",
+      "type": "stealth",
+      "description": "Allows the survivor to blend into fungal-infested environments by mimicking the slow, rhythmic movements of infected flora. At higher levels, the user can temporarily mask their scent with fungal spores, making them nearly undetectable to infected creatures.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces movement noise by 30% in fungal areas and slightly decreases detection range by infected.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Movement noise reduction increases to 50% and adds a 20% chance to avoid detection when stationary among fungal growths.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Grants temporary scent masking for 60 seconds (5-minute cooldown) and allows movement through fungal tendrils without triggering them.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Mycology",
+        "Urban Camouflage"
+      ],
+      "usage_examples": [
+        "Sneaking past a fungal bloom where infected are nesting",
+        "Evading pursuit by disappearing into a glowing fungal grove",
+        "Scavenging spore-covered supplies without alerting nearby roamers"
+      ],
+      "id": "skill_15"
+    },
+    {
+      "name": "Fungal Cloak",
+      "type": "stealth",
+      "description": "Allows the survivor to blend into fungal-infested environments by mimicking the slow, rhythmic movements of infected flora. At higher levels, the user can temporarily mask their scent with fungal spores, making them nearly undetectable to infected creatures.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces movement noise by 30% in fungal areas and slightly decreases detection range by infected.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Movement noise reduction increases to 50% and adds a 20% chance to avoid detection when stationary among fungal growths.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Grants temporary scent masking for 60 seconds (5-minute cooldown) and allows movement through fungal tendrils without triggering them.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Mycology",
+        "Urban Camouflage"
+      ],
+      "usage_examples": [
+        "Sneaking past a fungal bloom where infected are nesting",
+        "Evading pursuit by disappearing into a glowing fungal grove",
+        "Scavenging spore-covered supplies without alerting nearby roamers"
+      ],
+      "id": "skill_16",
+      "discovered_day": 33
     }
   ]
 }

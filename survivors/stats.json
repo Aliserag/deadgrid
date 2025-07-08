@@ -1,25 +1,20 @@
 {
-  "day": 33,
-  "health": 58,
-  "morale": 28,
-  "water": 7,
+  "day": 34,
+  "health": 55,
+  "morale": 25,
+  "water": 9,
   "food": 0,
   "location": [
     0,
     0
   ],
   "base_defense": 14,
-  "last_action": "signal",
+  "last_action": "explore",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
       "duration": -1,
       "effect": "Can now distinguish individual digging directions, -15% sanity"
-    },
-    {
-      "name": "Fungal Rash",
-      "duration": 1,
-      "effect": "-2 health/day until treated"
     },
     {
       "name": "Fungal Sensitivity",
@@ -42,7 +37,8 @@
     "Hive Whisperer",
     "Fog Walker",
     "Fungal Instincts",
-    "Fungal Adaptation (developing)"
+    "Fungal Adaptation (developing)",
+    "Fungal Cloak (discovered)"
   ],
   "gear": [
     {
@@ -230,20 +226,26 @@
       "type": "medical",
       "quantity": 1,
       "bonus": "Cures infections"
+    },
+    {
+      "name": "antibiotics",
+      "type": "medical",
+      "quantity": 0,
+      "bonus": "Cures infections"
     }
   ],
   "materials": {
     "metal": 2,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 3,
+    "medical": 2,
     "fuel": 0
   },
   "factions": {
     "watchers": {
       "disposition": "neutral",
-      "last_seen": "generator_room",
-      "activity": "leaving fungal warnings"
+      "last_seen": "central_station",
+      "activity": "marking territory"
     },
     "caravan_collective": {
       "disposition": "neutral",
@@ -262,8 +264,8 @@
     },
     "fog_reapers": {
       "disposition": "hostile",
-      "last_seen": "transit_hub",
-      "activity": "increased trap placement"
+      "last_seen": "signal_site",
+      "activity": "leaving traps"
     },
     "sporebound": {
       "disposition": "friendly",
@@ -271,7 +273,7 @@
       "activity": "acknowledged trade offering"
     }
   },
-  "threat_level": "critical (storm-induced hive agitation)",
+  "threat_level": "high (watcher activity + fungal bloom)",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
@@ -293,7 +295,8 @@
     "Abandoned University Library",
     "The Fungal Chasm",
     "Lost & Found Depot",
-    "Old Control Room"
+    "Old Control Room",
+    "Necrotic Bio-Lab"
   ],
   "skills": [
     "Silent Salvager",
@@ -308,7 +311,8 @@
     "Storm Chaser's Instinct",
     "Shadow Harmony (discovered)",
     "Fungal Forager (basic)",
-    "Chitin Utilization (discovered)"
+    "Chitin Utilization (discovered)",
+    "Fungal Cloak (discovered)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [
