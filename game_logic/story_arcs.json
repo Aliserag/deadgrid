@@ -338,9 +338,9 @@
       "failure_consequences": "The survivor gains no insight into the fungal threat and remains vulnerable to unexpected outbreaks. Dr. Voss disappears, taking his knowledge with him.",
       "id": "arc_6",
       "status": "active",
-      "current_day": 0
+      "current_day": 2
     }
   ],
-  "current_day": 33,
+  "current_day": 35,
   "story_phase": "beginning"
 }

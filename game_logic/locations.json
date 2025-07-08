@@ -1456,7 +1456,110 @@
         16
       ],
       "discovered_day": 28,
-      "visited": false
+      "visited": false,
+      "buildings": [
+        {
+          "name": "The Overrun Mega-Mart",
+          "description": "Once a bustling retail giant, this Mega-Mart has been fortified by survivors into a makeshift stronghold. The exterior is lined with barricades of shopping carts and debris, while the interior is a maze of repurposed shelves and storage areas. The upper floors provide vantage points for snipers, and the ground floor is a chaotic blend of scavenged goods and defensive structures. The scent of decay and gunpowder lingers in the air.",
+          "floors": 2,
+          "layout": "Ground Floor:\n+---------------------+\n| ENTRANCE  | STORAGE |\n+-----+-----+----+-----+\n| CASHIER | SHELVES |\n+-----+-----+----+-----+\n| OFFICE   | BREAK   |\n+---------------------+\n\nUpper Floor:\n+---------------------+\n| SNIPER'S NEST      |\n+-----+-----+----+-----+\n| STOCK   | EMPTY    |\n+-----+-----+----+-----+\n| ARMORY  | BARRACKS |\n+---------------------+",
+          "rooms": [
+            {
+              "name": "Entrance",
+              "description": "The main entry point, heavily barricaded with shopping carts and metal sheets. A narrow path allows entry, flanked by makeshift guard posts.",
+              "contents": [
+                "Barricades",
+                "Guard posts",
+                "Tripwire alarms"
+              ]
+            },
+            {
+              "name": "Storage",
+              "description": "A chaotic mess of repurposed shelves and crates, filled with scavenged goods and supplies.",
+              "contents": [
+                "Canned food",
+                "Bottled water",
+                "Tools",
+                "Clothing"
+              ]
+            },
+            {
+              "name": "Cashier Area",
+              "description": "The former checkout lanes, now used as a central hub for distributing supplies and coordinating defenses.",
+              "contents": [
+                "Makeshift counter",
+                "Supply logs",
+                "Weapon racks"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "A small, locked room that serves as the leader's quarters and planning area.",
+              "contents": [
+                "Maps",
+                "Radio equipment",
+                "Locked safe"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "Converted into a communal living space with sleeping bags and a small cooking area.",
+              "contents": [
+                "Sleeping bags",
+                "Portable stove",
+                "Medical supplies"
+              ]
+            },
+            {
+              "name": "Sniper's Nest",
+              "description": "A vantage point on the upper floor with clear views of the surrounding area.",
+              "contents": [
+                "Sandbags",
+                "Sniper rifle",
+                "Binoculars"
+              ]
+            },
+            {
+              "name": "Armory",
+              "description": "A heavily guarded room stocked with weapons and ammunition.",
+              "contents": [
+                "Assault rifles",
+                "Handguns",
+                "Ammo crates",
+                "Grenades"
+              ]
+            },
+            {
+              "name": "Barracks",
+              "description": "Sleeping quarters for the resident survivors, lined with cots and personal belongings.",
+              "contents": [
+                "Cots",
+                "Personal items",
+                "Lanterns"
+              ]
+            }
+          ],
+          "dangers": [
+            "Zombie hordes occasionally breach the perimeter",
+            "Traps set by survivors can be triggered accidentally",
+            "Rival scavenger groups may attack"
+          ],
+          "resources": [
+            "Ammunition",
+            "Canned food",
+            "Medical supplies",
+            "Tools",
+            "Clothing"
+          ],
+          "special_features": [
+            "Makeshift watchtowers on the roof",
+            "Hidden escape routes through the stockroom",
+            "A functioning radio in the office for communication"
+          ],
+          "id": "bldg_630",
+          "location_id": "location_24"
+        }
+      ]
     }
   ]
 }

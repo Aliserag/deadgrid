@@ -1,32 +1,27 @@
 {
   "current_conditions": {
-    "type": "storm",
-    "severity": 3,
+    "type": "cloudy",
+    "severity": 1,
     "duration": 2,
     "effects": [
-      "noise_mask",
-      "movement_severe_penalty",
-      "visibility_severely_reduced",
-      "narrative_howling wind",
-      "narrative_crashing thunder",
-      "narrative_lightning flashes"
+      "narrative_diffused light"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "storm",
-      "severity": 3
+      "type": "cloudy",
+      "severity": 1
     },
     {
       "day": 2,
-      "type": "storm",
-      "severity": 3
+      "type": "cloudy",
+      "severity": 1
     },
     {
       "day": 3,
-      "type": "storm",
-      "severity": 2
+      "type": "cloudy",
+      "severity": 1
     }
   ],
   "season": "spring",
@@ -195,12 +190,22 @@
       "date": "2025-07-08",
       "conditions": "storm",
       "severity": 3
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "storm",
+      "severity": 3
     }
   ],
   "current_weather": {
     "type": "storm",
     "severity": 3,
-    "duration": 3,
+    "duration": 1,
     "effects": [
       "noise_mask",
       "movement_severe_penalty",
@@ -209,7 +214,7 @@
       "narrative_crashing thunder",
       "narrative_lightning flashes"
     ],
-    "day": 28,
+    "day": 29,
     "date": "2025-07-08"
   },
   "weather_history": [
@@ -431,6 +436,21 @@
         "narrative_lightning flashes"
       ],
       "day": 28,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 1,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 29,
       "date": "2025-07-08"
     }
   ]

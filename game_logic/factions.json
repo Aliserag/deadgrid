@@ -214,6 +214,55 @@
         "npc_16"
       ],
       "relations": {}
+    },
+    {
+      "name": "The Sporebound",
+      "description": "A small commune of survivors who believe the fungal growths are a form of higher intelligence. They have learned to coexist with the infection, using it to their advantage. Their base is hidden deep within the tunnel network, where the fungal pulses guide their decisions.",
+      "ideology": "They worship the fungal growths as a sentient force, believing it will eventually cleanse the world of the unworthy. Their goal is to spread the 'gospel' of the spores and convert or eliminate non-believers.",
+      "territory": "The underground maintenance tunnels and adjacent subway stations, where fungal growths are most dense.",
+      "resources": [
+        "Fungal-based remedies",
+        "Salvaged tunneling equipment",
+        "Bio-luminescent fungi for light"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Immune to fungal infections",
+        "Can predict zombie movements via fungal pulses",
+        "Blend in with fungal environments"
+      ],
+      "weaknesses": [
+        "Vulnerable to fire and anti-fungal agents",
+        "Limited visibility in non-fungal areas"
+      ],
+      "id": "faction_9",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Sporebound",
+      "description": "A small commune of survivors who believe the fungal growths are a form of higher intelligence. They have learned to coexist with the infection, using it to their advantage. Their base is hidden deep within the tunnel network, where the fungal pulses guide their decisions.",
+      "ideology": "They worship the fungal growths as a sentient force, believing it will eventually cleanse the world of the unworthy. Their goal is to spread the 'gospel' of the spores and convert or eliminate non-believers.",
+      "territory": "The underground maintenance tunnels and adjacent subway stations, where fungal growths are most dense.",
+      "resources": [
+        "Fungal-based remedies",
+        "Salvaged tunneling equipment",
+        "Bio-luminescent fungi for light"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Immune to fungal infections",
+        "Can predict zombie movements via fungal pulses",
+        "Blend in with fungal environments"
+      ],
+      "weaknesses": [
+        "Vulnerable to fire and anti-fungal agents",
+        "Limited visibility in non-fungal areas"
+      ],
+      "id": "faction_10",
+      "members": [],
+      "relations": {},
+      "discovered_day": 29
     }
   ],
   "next_id": 2

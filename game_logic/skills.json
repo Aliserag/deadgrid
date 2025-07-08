@@ -273,6 +273,75 @@
       ],
       "id": "skill_8",
       "discovered_day": 28
+    },
+    {
+      "name": "Fungal Purification",
+      "type": "water",
+      "description": "Allows the survivor to safely extract and purify water from fungal-infested sources. At higher levels, can even neutralize toxic spores and convert them into usable nutrients.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can identify fungal growths that indicate relatively safe water sources. Basic filtration removes visible contaminants.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Able to distill water from heavily infested sources. Reduces spore toxicity by 50%.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Full spore neutralization. Purified water provides temporary resistance to fungal infections (+2 hours).",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Mycology",
+        "Field Medicine",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Harvesting drinkable water from pulsating fungal nodes in subway tunnels",
+        "Creating safe hydration stations in infested urban areas",
+        "Providing clean water during spore storms when surface water is contaminated"
+      ],
+      "id": "skill_9"
+    },
+    {
+      "name": "Fungal Purification",
+      "type": "water",
+      "description": "Allows the survivor to safely extract and purify water from fungal-infested sources. At higher levels, can even neutralize toxic spores and convert them into usable nutrients.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can identify fungal growths that indicate relatively safe water sources. Basic filtration removes visible contaminants.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Able to distill water from heavily infested sources. Reduces spore toxicity by 50%.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Full spore neutralization. Purified water provides temporary resistance to fungal infections (+2 hours).",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Mycology",
+        "Field Medicine",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Harvesting drinkable water from pulsating fungal nodes in subway tunnels",
+        "Creating safe hydration stations in infested urban areas",
+        "Providing clean water during spore storms when surface water is contaminated"
+      ],
+      "id": "skill_10",
+      "discovered_day": 29
     }
   ]
 }

@@ -1,30 +1,25 @@
 {
-  "day": 29,
-  "health": 68,
-  "morale": 23,
-  "water": 3,
+  "day": 30,
+  "health": 65,
+  "morale": 25,
+  "water": 6,
   "food": 1,
   "location": [
     0,
     0
   ],
-  "base_defense": 11,
+  "base_defense": 14,
   "last_action": "rest",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
       "duration": -1,
-      "effect": "Hive whispers now include digging sounds, -20% sanity"
-    },
-    {
-      "name": "Fungal Sensitivity",
-      "duration": 2,
-      "effect": "+35% detection range, -10% sanity per day"
+      "effect": "Can now distinguish individual digging directions, -15% sanity"
     },
     {
       "name": "Storm Shelter",
-      "duration": 1,
-      "effect": "Water collection active, +5% health recovery"
+      "duration": 0,
+      "effect": "expired"
     }
   ],
   "traits": [
@@ -201,7 +196,7 @@
     "metal": 2,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 2,
+    "medical": 1,
     "fuel": 1
   },
   "factions": {
@@ -229,6 +224,11 @@
       "disposition": "hostile",
       "last_seen": "ventilation_shaft",
       "activity": "setting fungal traps"
+    },
+    "sporebound": {
+      "disposition": "cautious",
+      "last_seen": "flooded_passage",
+      "activity": "offering fungal trade"
     }
   },
   "threat_level": "critical (storm-induced hive agitation)",
@@ -258,7 +258,8 @@
     "Fungal Sensitivity (temporary)",
     "Fungal Adaptation (developing)",
     "Fungal Instincts (improved)",
-    "Fungal Adaptation (advanced)"
+    "Fungal Adaptation (advanced)",
+    "Fungal Purification (basic)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [
@@ -271,11 +272,7 @@
   "active_quests": [
     {
       "name": "Fungal Whispers",
-      "progress": "Confirmed hive excavation near Collapsed Tunnel - tunnels approaching Generator Room"
-    },
-    {
-      "name": "Watcher Warnings",
-      "progress": "Deciphered map shows 72 hours until hive breach"
+      "progress": "Hive excavation confirmed under Transit Hub - 48 hours estimated"
     }
   ],
   "weather": {
