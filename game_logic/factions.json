@@ -187,6 +187,31 @@
       ],
       "relations": {},
       "discovered_day": 20
+    },
+    {
+      "name": "The Luminous Choir",
+      "description": "A fanatical cult that worships the bioluminescent fungal growths as divine manifestations. They believe the fungal infection is a sacred transformation, guiding humanity to a higher state of being. Their followers are known for their eerie chants and glowing fungal tattoos.",
+      "ideology": "The Luminous Choir seeks to spread the 'gift' of the fungal infection, viewing it as a divine blessing. They believe the apocalypse is a necessary purification, and those who resist are heretics to be converted or eradicated.",
+      "territory": "They dominate the underground tunnels and subway systems, where the fungal growths thrive. Their main stronghold is the abandoned Grand Central Station, now a glowing cathedral of fungal tendrils.",
+      "resources": [
+        "Bioluminescent fungal spores",
+        "Underground water filtration systems",
+        "Salvaged subway maintenance equipment",
+        "Converted survivors as labor force"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Fungal Immunity: Members are resistant to fungal infections",
+        "Bioluminescent Camouflage: Can blend into fungal-lit environments",
+        "Fanatic Zeal: Fearless in battle, believing death brings divine union"
+      ],
+      "weaknesses": [
+        "Light Sensitivity: Vulnerable to bright artificial light",
+        "Dependent on Fungal Growths: Lose power in sterile environments"
+      ],
+      "id": "faction_8",
+      "members": [],
+      "relations": {}
     }
   ],
   "next_id": 2

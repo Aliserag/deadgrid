@@ -1287,6 +1287,118 @@
         37,
         12
       ]
+    },
+    {
+      "name": "Willowbrook Trailer Park",
+      "description": "A quiet, overgrown trailer park where nature has reclaimed the cracked asphalt roads. The rusted husks of mobile homes sit in eerie silence, their doors swaying gently in the wind. The air smells of damp earth and mildew, with no signs of recent human activity.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [],
+      "features": [
+        "Overgrown vegetation creeping through broken windows",
+        "A lone, rusted swing set creaking in the breeze"
+      ],
+      "symbol": "~",
+      "secrets": [],
+      "zombies": {
+        "presence": "none",
+        "special_types": []
+      },
+      "id": "loc_19",
+      "coords": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Willowbrook Trailer Park",
+      "description": "A quiet, overgrown trailer park where nature has reclaimed the cracked asphalt roads. The rusted husks of mobile homes sit in eerie silence, their doors swaying gently in the wind. The air smells of damp earth and mildew, with no signs of recent human activity.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [],
+      "features": [
+        "Overgrown vegetation creeping through broken windows",
+        "A lone, rusted swing set creaking in the breeze"
+      ],
+      "symbol": "~",
+      "secrets": [],
+      "zombies": {
+        "presence": "none",
+        "special_types": []
+      },
+      "id": "location_20",
+      "coords": [
+        1,
+        1
+      ],
+      "discovered_day": 26,
+      "visited": false
+    },
+    {
+      "name": "Sunnyvale Mini-Mall",
+      "description": "A small, half-collapsed shopping center with most storefronts looted long ago. The remaining structures creak ominously in the wind, but the pharmacy and hardware store still hold some untouched supplies behind their security gates. Faded sale signs flutter like ghosts from the broken windows.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "medical supplies",
+        "tools",
+        "canned goods",
+        "batteries"
+      ],
+      "features": [
+        "intact pharmacy with security gate",
+        "collapsed food court with edible mushrooms growing",
+        "working emergency exit lights powered by solar"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "hidden underground storage room accessible through pharmacy back office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "shamblers (slow, decayed zombies trapped under debris)"
+        ]
+      },
+      "id": "loc_21",
+      "coords": [
+        32,
+        9
+      ]
+    },
+    {
+      "name": "Sunnyvale Mini-Mall",
+      "description": "A small, half-collapsed shopping center with most storefronts looted long ago. The remaining structures creak ominously in the wind, but the pharmacy and hardware store still hold some untouched supplies behind their security gates. Faded sale signs flutter like ghosts from the broken windows.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "medical supplies",
+        "tools",
+        "canned goods",
+        "batteries"
+      ],
+      "features": [
+        "intact pharmacy with security gate",
+        "collapsed food court with edible mushrooms growing",
+        "working emergency exit lights powered by solar"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "hidden underground storage room accessible through pharmacy back office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "shamblers (slow, decayed zombies trapped under debris)"
+        ]
+      },
+      "id": "location_22",
+      "coords": [
+        32,
+        9
+      ],
+      "discovered_day": 27,
+      "visited": false
     }
   ]
 }

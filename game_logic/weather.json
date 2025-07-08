@@ -1,29 +1,32 @@
 {
   "current_conditions": {
-    "type": "fog",
-    "severity": 2,
-    "duration": 3,
+    "type": "storm",
+    "severity": 3,
+    "duration": 4,
     "effects": [
+      "noise_mask",
+      "movement_severe_penalty",
       "visibility_severely_reduced",
-      "narrative_limited visibility",
-      "narrative_eerie silence"
+      "narrative_howling wind",
+      "narrative_crashing thunder",
+      "narrative_lightning flashes"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "fog",
-      "severity": 2
+      "type": "storm",
+      "severity": 3
     },
     {
       "day": 2,
-      "type": "fog",
-      "severity": 2
+      "type": "storm",
+      "severity": 3
     },
     {
       "day": 3,
-      "type": "fog",
-      "severity": 1
+      "type": "storm",
+      "severity": 2
     }
   ],
   "season": "spring",
@@ -167,19 +170,36 @@
       "date": "2025-07-08",
       "conditions": "rain",
       "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
     }
   ],
   "current_weather": {
-    "type": "rain",
-    "severity": 2,
-    "duration": 3,
+    "type": "storm",
+    "severity": 3,
+    "duration": 4,
     "effects": [
-      "movement_penalty",
-      "visibility_reduced",
-      "narrative_muddy ground",
-      "narrative_drumming raindrops"
+      "noise_mask",
+      "movement_severe_penalty",
+      "visibility_severely_reduced",
+      "narrative_howling wind",
+      "narrative_crashing thunder",
+      "narrative_lightning flashes"
     ],
-    "day": 25,
+    "day": 27,
     "date": "2025-07-08"
   },
   "weather_history": [
@@ -359,6 +379,33 @@
         "narrative_drumming raindrops"
       ],
       "day": 25,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_limited visibility",
+        "narrative_eerie silence"
+      ],
+      "day": 26,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 4,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 27,
       "date": "2025-07-08"
     }
   ]
