@@ -1875,6 +1875,64 @@
       ],
       "discovered_day": 34,
       "visited": false
+    },
+    {
+      "name": "The Rupture Foundry",
+      "description": "A massive industrial complex where molten metal once flowed like rivers, now frozen in grotesque formations. The air is thick with toxic fumes from ruptured chemical vats, and the ground trembles occasionally from unstable machinery. The entire facility hums with residual energy, creating an eerie glow in the perpetual twilight.",
+      "type": "industrial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Molten metal sculptures formed during the catastrophe",
+        "Unstable chemical vats that periodically explode",
+        "A network of catwalks suspended over pools of toxic sludge"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "A hidden control room with access to the facility's self-destruct sequence"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Corroded Walkers (zombies covered in acid burns and metal shards)",
+          "Furnace Ghouls (zombies that burst into flames when agitated)"
+        ]
+      },
+      "id": "loc_35",
+      "coords": [
+        8,
+        1
+      ]
+    },
+    {
+      "name": "The Rupture Foundry",
+      "description": "A massive industrial complex where molten metal once flowed like rivers, now frozen in grotesque formations. The air is thick with toxic fumes from ruptured chemical vats, and the ground trembles occasionally from unstable machinery. The entire facility hums with residual energy, creating an eerie glow in the perpetual twilight.",
+      "type": "industrial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Molten metal sculptures formed during the catastrophe",
+        "Unstable chemical vats that periodically explode",
+        "A network of catwalks suspended over pools of toxic sludge"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "A hidden control room with access to the facility's self-destruct sequence"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Corroded Walkers (zombies covered in acid burns and metal shards)",
+          "Furnace Ghouls (zombies that burst into flames when agitated)"
+        ]
+      },
+      "id": "location_36",
+      "coords": [
+        8,
+        1
+      ],
+      "discovered_day": 35,
+      "visited": false
     }
   ]
 }

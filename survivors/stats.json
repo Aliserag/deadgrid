@@ -1,15 +1,15 @@
 {
-  "day": 35,
-  "health": 53,
-  "morale": 23,
-  "water": 12,
+  "day": 36,
+  "health": 56,
+  "morale": 18,
+  "water": 14,
   "food": 0,
   "location": [
     0,
     0
   ],
   "base_defense": 14,
-  "last_action": "craft",
+  "last_action": "rest",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
@@ -25,6 +25,11 @@
       "name": "Chitinous Carapace",
       "duration": -1,
       "effect": "+3 armor, -15% mobility"
+    },
+    {
+      "name": "Sleep Deprivation",
+      "duration": 1,
+      "effect": "-10% perception"
     }
   ],
   "traits": [
@@ -244,7 +249,7 @@
     "metal": 0,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 2,
+    "medical": 1,
     "fuel": 0
   },
   "factions": {
@@ -279,7 +284,7 @@
       "activity": "acknowledged trade offering"
     }
   },
-  "threat_level": "high (watcher activity + fungal bloom)",
+  "threat_level": "critical (human intruders + fungal bloom)",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
@@ -331,12 +336,16 @@
   "active_quests": [
     {
       "name": "Fungal Whispers",
-      "progress": "Hive excavation 16 hours from completion - 3 temporary safe zones identified"
+      "progress": "Hive excavation 12 hours from completion - vibration patterns suggest imminent breach"
+    },
+    {
+      "name": "The Station Squatters",
+      "progress": "Evidence of hostile human activity discovered"
     }
   ],
   "weather": {
     "next_day": "Storm (Severity: 5/5)",
     "effect": "Fungal expansion accelerated, water sources replenished",
-    "current": "Rain (Severity: 3/5)"
+    "current": "Fog (Severity: 2/5)"
   }
 }

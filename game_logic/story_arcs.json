@@ -439,9 +439,9 @@
       "failure_consequences": "The squatters permanently block access to critical subway routes, forcing the player to take more dangerous surface paths between locations. They may also stage occasional raids on the player's supplies.",
       "id": "arc_8",
       "status": "active",
-      "current_day": 0
+      "current_day": 1
     }
   ],
-  "current_day": 43,
+  "current_day": 44,
   "story_phase": "beginning"
 }

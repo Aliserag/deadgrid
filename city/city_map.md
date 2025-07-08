@@ -6,7 +6,7 @@ A partially overrun military outpost that once served as a regional command cent
 
 ```
 ##############################
-#G.........#...........A#
+#G......&..#...........A#
 # ###.#####.#####.##### #
 # #........C.......# # #
 # #.######.######.# # #
@@ -49,3 +49,4 @@ U = Underground Bunker
 - Motion-activated turrets may still be operational
 - Underground tunnel system connects key buildings
 - Zombies in military uniforms have enhanced armor
+& = The Rupture Foundry
