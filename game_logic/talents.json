@@ -67,6 +67,17 @@
       "acquisition_method": "Developed after prolonged exposure to fungal zones (requires spending at least 3 nights in contaminated areas).",
       "flavor_text": "'The glow shows what hands have touched... and what hands have left behind.' - Scratched into a fungal-covered wall",
       "id": "talent_5"
+    },
+    {
+      "name": "Rallying Presence",
+      "related_to": "leadership",
+      "rarity": "uncommon",
+      "description": "Your calm demeanor and decisive actions inspire those around you. In moments of crisis, you can rally nearby survivors, temporarily boosting their morale and combat effectiveness.",
+      "benefit": "Allies within a 10-meter radius gain +10% damage resistance and +5% movement speed for 30 seconds. Can be used once per hour.",
+      "drawback": "Using this ability draws attention, increasing the chance of nearby zombies detecting your group.",
+      "acquisition_method": "Earned by successfully leading a group through a dangerous encounter without casualties.",
+      "flavor_text": "'When the world falls apart, someone has to hold it together\u2014might as well be you.'",
+      "id": "talent_6"
     }
   ]
 }

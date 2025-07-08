@@ -1,27 +1,29 @@
 {
   "current_conditions": {
-    "type": "cloudy",
-    "severity": 1,
-    "duration": 1,
+    "type": "fog",
+    "severity": 2,
+    "duration": 3,
     "effects": [
-      "narrative_diffused light"
+      "visibility_severely_reduced",
+      "narrative_limited visibility",
+      "narrative_eerie silence"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "cloudy",
-      "severity": 1
+      "type": "fog",
+      "severity": 2
     },
     {
       "day": 2,
-      "type": "cloudy",
-      "severity": 1
+      "type": "fog",
+      "severity": 2
     },
     {
       "day": 3,
-      "type": "cloudy",
-      "severity": 3
+      "type": "fog",
+      "severity": 1
     }
   ],
   "season": "spring",
@@ -145,16 +147,39 @@
       "date": "2025-07-08",
       "conditions": "cloudy",
       "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
     }
   ],
   "current_weather": {
-    "type": "cloudy",
-    "severity": 1,
-    "duration": 1,
+    "type": "rain",
+    "severity": 2,
+    "duration": 3,
     "effects": [
-      "narrative_diffused light"
+      "movement_penalty",
+      "visibility_reduced",
+      "narrative_muddy ground",
+      "narrative_drumming raindrops"
     ],
-    "day": 24,
+    "day": 25,
     "date": "2025-07-08"
   },
   "weather_history": [
@@ -321,6 +346,19 @@
         "narrative_diffused light"
       ],
       "day": 24,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 3,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_muddy ground",
+        "narrative_drumming raindrops"
+      ],
+      "day": 25,
       "date": "2025-07-08"
     }
   ]

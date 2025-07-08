@@ -130,7 +130,9 @@
         "Limited surface combat experience"
       ],
       "id": "faction_5",
-      "members": [],
+      "members": [
+        "npc_13"
+      ],
       "relations": {},
       "discovered_day": 19
     },
@@ -180,7 +182,8 @@
       ],
       "id": "faction_7",
       "members": [
-        "npc_11"
+        "npc_11",
+        "npc_15"
       ],
       "relations": {},
       "discovered_day": 20

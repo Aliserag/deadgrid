@@ -1,15 +1,15 @@
 {
-  "day": 25,
-  "health": 70,
-  "morale": 35,
-  "water": 3,
-  "food": 3,
+  "day": 26,
+  "health": 68,
+  "morale": 30,
+  "water": 4,
+  "food": 5,
   "location": [
     0,
     0
   ],
-  "base_defense": 10,
-  "last_action": "signal",
+  "base_defense": 12,
+  "last_action": "scavenge",
   "status_effects": [
     {
       "name": "Echoes of the Hive",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Fungal Sensitivity",
-      "duration": 2,
+      "duration": 1,
       "effect": "+25% detection of fungal-related secrets, -5% sanity per day"
     }
   ],
@@ -160,14 +160,20 @@
       "type": "tool",
       "durability": 4,
       "bonus": "Detects fungal whisper sources"
+    },
+    {
+      "name": "serrated knife",
+      "type": "weapon",
+      "durability": 6,
+      "bonus": "+10% damage against fungal enemies"
     }
   ],
   "materials": {
-    "metal": 0,
-    "fabric": 0,
+    "metal": 2,
+    "fabric": 1,
     "circuitry": 0,
     "medical": 4,
-    "fuel": 0
+    "fuel": 1
   },
   "factions": {
     "watchers": {
@@ -187,8 +193,8 @@
     },
     "fog_dwellers": {
       "disposition": "unknown",
-      "last_seen": "ventilation_shaft",
-      "activity": "leaving fungal trail markers"
+      "last_seen": "maintenance_depot",
+      "activity": "harvesting fungal samples"
     },
     "fog_reapers": {
       "disposition": "hostile",
@@ -196,7 +202,7 @@
       "activity": "left hostile markings"
     }
   },
-  "threat_level": "medium-high",
+  "threat_level": "high",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
@@ -226,7 +232,7 @@
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [],
   "active_quests": [
-    "Fungal Whispers: Locate distress signal source (Supply Cache area)",
-    "Fog Dweller Signs: Investigate fungal markers leading to Echo Ridge Estates"
+    "Fungal Whispers: Geiger counter detects strongest signals near Collapsed Tunnel",
+    "Watcher Warnings: Investigate 'roots' message at Generator Room"
   ]
 }

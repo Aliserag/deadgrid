@@ -185,6 +185,16 @@
       "attribute": "Common",
       "id": "item_11",
       "discovered_day": 18
+    },
+    {
+      "type": "weapon",
+      "name": "Knife",
+      "rarity": 9,
+      "durability": 72,
+      "power": 4,
+      "attribute": "Common",
+      "id": "item_12",
+      "discovered_day": 25
     }
   ],
   "next_id": 9

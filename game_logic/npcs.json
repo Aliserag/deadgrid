@@ -311,6 +311,82 @@
       "status": "alive",
       "relationship": 6,
       "discovered_day": 23
+    },
+    {
+      "name": "Dr. Elias Voss",
+      "age": 42,
+      "background": "Former mycologist specializing in parasitic fungi. Worked on classified bioweapon research before the outbreak.",
+      "description": "Tall and gaunt with fungal growths creeping up his left arm. Speaks in measured tones but his eyes dart constantly, as if tracking invisible spores. Believes the fungal networks are a form of collective intelligence.",
+      "motivation": "Seeks to prove the fungal mutations represent the next stage of human evolution and wants to merge survivors with the mycelium network.",
+      "skills": [
+        "Advanced mycology knowledge",
+        "Stealth movement in fog-covered areas",
+        "Creating fungal-based remedies (and toxins)",
+        "Deciphering spore patterns as communication"
+      ],
+      "items": [
+        "A bioluminescent fungal culture in a glass vial",
+        "Modified gas mask that filters but preserves spore traces",
+        "Journal written in fungal spore patterns"
+      ],
+      "quirk": "Constantly rubs his fungal arm when lying or nervous, causing luminescent spores to puff from the growths.",
+      "secret": "His fungal arm is slowly spreading, and he's secretly inoculating other survivors with controlled spore doses to test his theories.",
+      "id": "npc_13",
+      "faction_id": "faction_5",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": 15
+    },
+    {
+      "name": "Dr. Elias Voss",
+      "age": 42,
+      "background": "Former mycologist specializing in parasitic fungi. Worked on classified bioweapon research before the outbreak.",
+      "description": "Tall and gaunt with fungal growths creeping up his left arm. Speaks in measured tones but his eyes dart constantly, as if tracking invisible spores. Believes the fungal networks are a form of collective intelligence.",
+      "motivation": "Seeks to prove the fungal mutations represent the next stage of human evolution and wants to merge survivors with the mycelium network.",
+      "skills": [
+        "Advanced mycology knowledge",
+        "Stealth movement in fog-covered areas",
+        "Creating fungal-based remedies (and toxins)",
+        "Deciphering spore patterns as communication"
+      ],
+      "items": [
+        "A bioluminescent fungal culture in a glass vial",
+        "Modified gas mask that filters but preserves spore traces",
+        "Journal written in fungal spore patterns"
+      ],
+      "quirk": "Constantly rubs his fungal arm when lying or nervous, causing luminescent spores to puff from the growths.",
+      "secret": "His fungal arm is slowly spreading, and he's secretly inoculating other survivors with controlled spore doses to test his theories.",
+      "id": "npc_14",
+      "faction_id": "faction_5",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": 15,
+      "discovered_day": 25
+    },
+    {
+      "name": "Silas 'Mistwalker' Graves",
+      "age": 42,
+      "background": "Former big-game hunter and survivalist guide who led wealthy clients on dangerous expeditions. When the world fell, he found his skills were perfectly suited to the new order.",
+      "description": "A grizzled man with a permanent squint from years of tracking prey. His face is crisscrossed with scars, and his left ear is missing. Speaks in a low, gravelly voice and moves with predatory silence. Believes the fog whispers secrets to those who listen.",
+      "motivation": "To prove himself worthy of the fog's favor by becoming the ultimate predator in this ruined world.",
+      "skills": [
+        "Expert tracker",
+        "Silent movement",
+        "Toxin crafting (from fungal growths)",
+        "Interrogation through pain"
+      ],
+      "items": [
+        "A bone-handled hunting knife with fungal growth along the blade",
+        "A necklace of shriveled ears from his kills",
+        "A fog-stained leather duster that seems to shift colors in low light"
+      ],
+      "quirk": "Constantly sniffs the air and licks his fingers to test wind direction, even when indoors.",
+      "secret": "He's begun seeing visions in the fog - and sometimes they come true. This terrifies him more than he'd ever admit.",
+      "id": "npc_15",
+      "faction_id": "faction_7",
+      "faction_name": "The Fog Reapers",
+      "status": "alive",
+      "relationship": -17
     }
   ],
   "next_id": 5

@@ -1223,6 +1223,70 @@
       ],
       "discovered_day": 24,
       "visited": false
+    },
+    {
+      "name": "St. Marrow's Clinic",
+      "description": "A small, abandoned medical clinic with shattered windows and bloodstained walls. The flickering emergency lights cast eerie shadows over the ransacked shelves, while the faint hum of a backup generator suggests some systems might still be operational. The scent of antiseptic lingers beneath the stench of decay.",
+      "type": "medical",
+      "danger_level": 4,
+      "resources": [
+        "medical supplies",
+        "painkillers",
+        "bandages",
+        "emergency generator fuel"
+      ],
+      "features": [
+        "partially functional backup generator",
+        "broken pharmacy cabinet",
+        "bloodstained triage area"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "A hidden basement storage room with untouched medical supplies"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "infected medical staff (slightly faster than normal zombies)"
+        ]
+      },
+      "id": "loc_17",
+      "coords": [
+        7,
+        16
+      ]
+    },
+    {
+      "name": "The Rustbelt Overpass",
+      "description": "A crumbling highway overpass that once connected the city's industrial districts, now a skeletal ruin of twisted rebar and fractured concrete. The underpass has become a makeshift shelter for desperate survivors, evidenced by scattered campfires and barricaded alcoves. The constant groaning of metal under stress suggests it could collapse at any moment.",
+      "type": "infrastructure",
+      "danger_level": 7,
+      "resources": [
+        "construction tools",
+        "abandoned vehicle parts",
+        "emergency flares",
+        "rusted fuel drums"
+      ],
+      "features": [
+        "precariously dangling highway segments",
+        "makeshift survivor barricades",
+        "partially collapsed maintenance tunnels"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "a hidden survivor cache beneath a collapsed truck"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "climbers (zombies that scale vertical surfaces)"
+        ]
+      },
+      "id": "loc_18",
+      "coords": [
+        37,
+        12
+      ]
     }
   ]
 }
