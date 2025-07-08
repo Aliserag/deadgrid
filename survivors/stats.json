@@ -1,7 +1,7 @@
 {
-  "day": 32,
-  "health": 60,
-  "morale": 26,
+  "day": 33,
+  "health": 58,
+  "morale": 28,
   "water": 7,
   "food": 0,
   "location": [
@@ -18,13 +18,18 @@
     },
     {
       "name": "Fungal Rash",
-      "duration": 2,
+      "duration": 1,
       "effect": "-2 health/day until treated"
     },
     {
       "name": "Fungal Sensitivity",
       "duration": -1,
       "effect": "Can detect hive activity through fungal vibrations"
+    },
+    {
+      "name": "Chitinous Carapace",
+      "duration": -1,
+      "effect": "+3 armor, -15% mobility"
     }
   ],
   "traits": [
@@ -219,13 +224,19 @@
       "type": "tool",
       "durability": 1,
       "bonus": "Reveals 3 safe zones"
+    },
+    {
+      "name": "antibiotics",
+      "type": "medical",
+      "quantity": 1,
+      "bonus": "Cures infections"
     }
   ],
   "materials": {
     "metal": 2,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 0,
+    "medical": 3,
     "fuel": 0
   },
   "factions": {
@@ -251,8 +262,8 @@
     },
     "fog_reapers": {
       "disposition": "hostile",
-      "last_seen": "ventilation_shaft",
-      "activity": "setting fungal traps"
+      "last_seen": "transit_hub",
+      "activity": "increased trap placement"
     },
     "sporebound": {
       "disposition": "friendly",
@@ -296,7 +307,8 @@
     "Fungal Purification (basic)",
     "Storm Chaser's Instinct",
     "Shadow Harmony (discovered)",
-    "Fungal Forager (basic)"
+    "Fungal Forager (basic)",
+    "Chitin Utilization (discovered)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [

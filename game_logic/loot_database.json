@@ -247,6 +247,16 @@
       ],
       "source": "building",
       "date_found": "2025-07-08"
+    },
+    {
+      "type": "medical",
+      "name": "Antibiotics",
+      "rarity": 97,
+      "durability": 94,
+      "power": 48,
+      "attribute": "Legendary",
+      "id": "item_17",
+      "discovered_day": 32
     }
   ],
   "next_id": 11

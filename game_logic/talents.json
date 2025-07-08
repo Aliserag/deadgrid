@@ -114,6 +114,32 @@
       "benefit": "Can sense electrical currents and storms from miles away, Generates painful bioelectric shocks on contact, Becomes more agile and aggressive during storms",
       "drawback": "Extremely visible due to constant electrical arcing in dark environments, Vulnerable to rubber-coated weapons and insulated armor, Prone to explosive overload when struck by lightning",
       "acquisition_method": "Exposure to zombie infection"
+    },
+    {
+      "name": "Chitinous Carapace",
+      "type": "physical",
+      "severity": 8,
+      "description": "A rapid calcification process transforms the skin into a hardened, segmented exoskeleton resembling insect chitin. The mutation provides incredible protection but severely limits mobility and flexibility.",
+      "appearance": "The skin darkens to a glossy black or deep amber, forming overlapping armored plates with visible joints. The plates emit a faint bioluminescent glow along the seams in low light.",
+      "benefits": [
+        "Near immunity to bites and blunt trauma",
+        "Resistance to environmental hazards (radiation, extreme temperatures)",
+        "Enhanced strength to support the added weight"
+      ],
+      "disadvantages": [
+        "Severely reduced movement speed and agility",
+        "Inability to wear conventional armor or clothing",
+        "Metabolic strain requires 3x normal caloric intake",
+        "Gradual loss of fine motor skills"
+      ],
+      "progression": "The carapace continues thickening until movement becomes impossible without external aid. Eventually, the host becomes a stationary, cocoon-like structure that may develop new mutations.",
+      "treatment": "High-dose chelation therapy can slow progression, but complete reversal requires surgical debridement of affected tissue (extremely risky). Some survivors report fungal suppressants temporarily soften the plates.",
+      "id": "mutation_9",
+      "related_to": "mutation",
+      "rarity": "unique",
+      "benefit": "Near immunity to bites and blunt trauma, Resistance to environmental hazards (radiation, extreme temperatures), Enhanced strength to support the added weight",
+      "drawback": "Severely reduced movement speed and agility, Inability to wear conventional armor or clothing, Metabolic strain requires 3x normal caloric intake, Gradual loss of fine motor skills",
+      "acquisition_method": "Exposure to zombie infection"
     }
   ]
 }
