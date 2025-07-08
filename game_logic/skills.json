@@ -411,6 +411,73 @@
       ],
       "id": "skill_12",
       "discovered_day": 31
+    },
+    {
+      "name": "Fungal Forager",
+      "type": "scavenging",
+      "description": "Allows survivors to safely identify and harvest mutated fungi growing in ruined urban environments. Higher levels reveal rare medicinal properties and temporary buffs from certain fungal strains.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify 3 common edible fungal types, avoid poisonous varieties",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Harvest bioluminescent fungi for light sources, recognize early warning fungal growth patterns near infected areas",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Extract temporary stat-boosting compounds from rare crimson cap fungi, cultivate fungal colonies in controlled environments",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Tracker",
+        "Field Medicine"
+      ],
+      "usage_examples": [
+        "Finding nutritious food sources in collapsed subway tunnels where normal plants won't grow",
+        "Harvesting glowing mushrooms to create non-electrical light sources in safehouses",
+        "Identifying when fungal overgrowth indicates nearby zombie nest activity"
+      ],
+      "id": "skill_13"
+    },
+    {
+      "name": "Fungal Forager",
+      "type": "scavenging",
+      "description": "Allows survivors to safely identify and harvest mutated fungi growing in ruined urban environments. Higher levels reveal rare medicinal properties and temporary buffs from certain fungal strains.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify 3 common edible fungal types, avoid poisonous varieties",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Harvest bioluminescent fungi for light sources, recognize early warning fungal growth patterns near infected areas",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Extract temporary stat-boosting compounds from rare crimson cap fungi, cultivate fungal colonies in controlled environments",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Tracker",
+        "Field Medicine"
+      ],
+      "usage_examples": [
+        "Finding nutritious food sources in collapsed subway tunnels where normal plants won't grow",
+        "Harvesting glowing mushrooms to create non-electrical light sources in safehouses",
+        "Identifying when fungal overgrowth indicates nearby zombie nest activity"
+      ],
+      "id": "skill_14",
+      "discovered_day": 31
     }
   ]
 }

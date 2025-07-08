@@ -47,6 +47,13 @@ A sprawling underground network of subway tunnels and stations, now overgrown wi
 #       #                    #         #
 #       ########################       #
 ########################################
+#       ########################       #
+#   L   #                    #         #
+#       #                    #         #
+#   O   #                    #         #
+#       #                    #         #
+#       ########################       #
+########################################
 ```
 
 ## Legend
@@ -71,6 +78,8 @@ W = Water Filtration Plant
 ^ = Watchtower Alpha
 R = Barter Square
 R = The Rat's Nest
+L = Lost & Found Depot
+O = Old Control Room
 # = Wall/Boundary
 . = Open Space
 
@@ -100,3 +109,6 @@ R = The Rat's Nest
 - Flooded western corridor with waist-deep water (movement penalty)
 - Broken glass ceiling that lets in daylight (zombies avoid this area)
 - Audible dripping water sounds that mask player movement
+- Partially collapsed ceiling with light filtering through
+- Graffiti-covered walls showing survivor messages
+- Railroad tracks partially buried under debris

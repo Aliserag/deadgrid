@@ -1,8 +1,8 @@
 {
-  "day": 31,
-  "health": 63,
-  "morale": 23,
-  "water": 5,
+  "day": 32,
+  "health": 60,
+  "morale": 26,
+  "water": 7,
   "food": 0,
   "location": [
     0,
@@ -18,8 +18,13 @@
     },
     {
       "name": "Fungal Rash",
-      "duration": 3,
+      "duration": 2,
       "effect": "-2 health/day until treated"
+    },
+    {
+      "name": "Fungal Sensitivity",
+      "duration": -1,
+      "effect": "Can detect hive activity through fungal vibrations"
     }
   ],
   "traits": [
@@ -208,6 +213,12 @@
       "type": "weapon",
       "durability": 8,
       "bonus": "+15% damage against fungal enemies"
+    },
+    {
+      "name": "crude fungal map",
+      "type": "tool",
+      "durability": 1,
+      "bonus": "Reveals 3 safe zones"
     }
   ],
   "materials": {
@@ -268,7 +279,10 @@
     "Midnight Mall Office Annex",
     "Echo Ridge Estates",
     "The Flooded Power Station",
-    "Abandoned University Library"
+    "Abandoned University Library",
+    "The Fungal Chasm",
+    "Lost & Found Depot",
+    "Old Control Room"
   ],
   "skills": [
     "Silent Salvager",
@@ -281,7 +295,8 @@
     "Fungal Adaptation (advanced)",
     "Fungal Purification (basic)",
     "Storm Chaser's Instinct",
-    "Shadow Harmony (discovered)"
+    "Shadow Harmony (discovered)",
+    "Fungal Forager (basic)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [
@@ -294,12 +309,16 @@
   "active_quests": [
     {
       "name": "Fungal Whispers",
-      "progress": "Hive excavation confirmed under Transit Hub - 24 hours estimated"
+      "progress": "Hive excavation 18 hours from completion - safe zones identified"
+    },
+    {
+      "name": "Shadow Watcher",
+      "progress": "Map received - investigate marked locations"
     }
   ],
   "weather": {
     "next_day": "Storm (Severity: 5/5)",
-    "effect": "Structural collapse risk, fungal mobility extreme",
-    "current": "Cloudy (Severity: 1/5)"
+    "effect": "Fungal expansion accelerated, water sources replenished",
+    "current": "Rain (Severity: 3/5)"
   }
 }

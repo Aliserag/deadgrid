@@ -1,27 +1,30 @@
 {
   "current_conditions": {
-    "type": "clear",
-    "severity": 1,
-    "duration": 1,
+    "type": "rain",
+    "severity": 2,
+    "duration": 2,
     "effects": [
-      "narrative_good visibility"
+      "movement_penalty",
+      "visibility_reduced",
+      "narrative_muddy ground",
+      "narrative_drumming raindrops"
     ]
   },
   "forecast": [
     {
       "day": 1,
-      "type": "clear",
-      "severity": 1
+      "type": "rain",
+      "severity": 2
     },
     {
       "day": 2,
-      "type": "clear",
-      "severity": 1
+      "type": "rain",
+      "severity": 2
     },
     {
       "day": 3,
-      "type": "clear",
-      "severity": 3
+      "type": "rain",
+      "severity": 1
     }
   ],
   "season": "spring",
@@ -220,6 +223,11 @@
       "date": "2025-07-08",
       "conditions": "rain",
       "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "clear",
+      "severity": 1
     }
   ],
   "current_weather": {
@@ -229,8 +237,8 @@
     "effects": [
       "movement_penalty",
       "visibility_reduced",
-      "narrative_drumming raindrops",
-      "narrative_wet conditions"
+      "narrative_muddy ground",
+      "narrative_drumming raindrops"
     ],
     "day": 31,
     "date": "2025-07-08"
@@ -490,6 +498,19 @@
         "visibility_reduced",
         "narrative_drumming raindrops",
         "narrative_wet conditions"
+      ],
+      "day": 31,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 2,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_muddy ground",
+        "narrative_drumming raindrops"
       ],
       "day": 31,
       "date": "2025-07-08"

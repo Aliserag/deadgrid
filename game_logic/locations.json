@@ -1671,6 +1671,74 @@
         19,
         15
       ]
+    },
+    {
+      "name": "The Fungal Chasm",
+      "description": "A deep, gaping fissure in the earth, now overgrown with pulsating fungal growths that emit a sickly bioluminescent glow. The air is thick with spores that distort vision and induce hallucinations. The walls seem to breathe, covered in a living carpet of mycelium that reacts to movement.",
+      "type": "natural",
+      "danger_level": 9,
+      "resources": [
+        "bioluminescent fungi (potentially medicinal)",
+        "rare minerals in crevices",
+        "filtered rainwater pools",
+        "strangely untouched pre-apocalypse supplies in deeper pockets"
+      ],
+      "features": [
+        "spore clouds that impair vision and cognition",
+        "unstable terrain with hidden crevices",
+        "bioluminescent lighting that attracts both zombies and desperate survivors"
+      ],
+      "symbol": "\u00c6",
+      "secrets": [
+        "a hidden underground stream that may lead to an untouched bunker"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "spore-infected zombies that release toxic clouds when agitated",
+          "fungal symbiote zombies with enhanced regeneration"
+        ]
+      },
+      "id": "loc_29",
+      "coords": [
+        3,
+        2
+      ]
+    },
+    {
+      "name": "The Fungal Chasm",
+      "description": "A deep, gaping fissure in the earth, now overgrown with pulsating fungal growths that emit a sickly bioluminescent glow. The air is thick with spores that distort vision and induce hallucinations. The walls seem to breathe, covered in a living carpet of mycelium that reacts to movement.",
+      "type": "natural",
+      "danger_level": 9,
+      "resources": [
+        "bioluminescent fungi (potentially medicinal)",
+        "rare minerals in crevices",
+        "filtered rainwater pools",
+        "strangely untouched pre-apocalypse supplies in deeper pockets"
+      ],
+      "features": [
+        "spore clouds that impair vision and cognition",
+        "unstable terrain with hidden crevices",
+        "bioluminescent lighting that attracts both zombies and desperate survivors"
+      ],
+      "symbol": "\u00c6",
+      "secrets": [
+        "a hidden underground stream that may lead to an untouched bunker"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "spore-infected zombies that release toxic clouds when agitated",
+          "fungal symbiote zombies with enhanced regeneration"
+        ]
+      },
+      "id": "location_30",
+      "coords": [
+        3,
+        2
+      ],
+      "discovered_day": 31,
+      "visited": false
     }
   ]
 }
