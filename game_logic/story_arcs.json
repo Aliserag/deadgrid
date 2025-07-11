@@ -438,10 +438,71 @@
       ],
       "failure_consequences": "The squatters permanently block access to critical subway routes, forcing the player to take more dangerous surface paths between locations. They may also stage occasional raids on the player's supplies.",
       "id": "arc_8",
+      "status": "completed",
+      "current_day": 3
+    },
+    {
+      "title": "The Crimson Perimeter",
+      "type": "fortification",
+      "description": "The survivor notices increasing zombie activity near Fort Crimson and must reinforce the defenses before a predicted horde arrives. This involves scavenging for materials, setting up traps, and rallying other survivors to help.",
+      "length": 4,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Signs of the Storm",
+          "description": "The survivor observes unusual zombie movements near the fort. Fungal whispers intensify, hinting at an impending horde. A decision is made to start fortifying immediately."
+        },
+        {
+          "day": 2,
+          "title": "Scavenging for Supplies",
+          "description": "The survivor ventures out to nearby ruins to gather materials like wood, metal, and nails. They must avoid or fight off zombies while collecting enough to reinforce the fort."
+        },
+        {
+          "day": 3,
+          "title": "Traps and Defenses",
+          "description": "With materials gathered, the survivor sets up barricades, spikes, and alarm systems around Fort Crimson. Other survivors are recruited to help, but trust is scarce."
+        },
+        {
+          "day": 4,
+          "title": "The Horde Arrives",
+          "description": "The predicted horde attacks at dusk. The survivor and their makeshift team must defend the fort using the newly set up defenses. Success means survival; failure means overrun."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Gain reinforced defenses for Fort Crimson, reducing future zombie threats."
+        },
+        {
+          "type": "relationship",
+          "description": "Earn trust and loyalty from other survivors, unlocking new allies."
+        },
+        {
+          "type": "information",
+          "description": "Learn more about the fungal whispers and their connection to zombie behavior."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Riley",
+          "role": "Scavenger with knowledge of nearby supply caches"
+        },
+        {
+          "name": "Doc",
+          "role": "Medic who can treat injuries sustained during fortification"
+        },
+        {
+          "name": "Jax",
+          "role": "Former soldier who helps set up traps and defenses"
+        }
+      ],
+      "failure_consequences": "If the survivor fails, Fort Crimson is overrun by the horde, forcing them to flee and lose all progress made in fortifying the location. Allies may be lost, and future survival becomes significantly harder.",
+      "id": "arc_9",
       "status": "active",
-      "current_day": 1
+      "current_day": 0
     }
   ],
-  "current_day": 44,
+  "current_day": 50,
   "story_phase": "beginning"
 }

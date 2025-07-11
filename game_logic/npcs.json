@@ -412,6 +412,57 @@
       "faction_name": "The Luminous Choir",
       "status": "alive",
       "relationship": -14
+    },
+    {
+      "name": "Gabriel 'Spore' Moreau",
+      "age": 42,
+      "background": "Former executive chef at a Michelin-starred restaurant, known for his experimental fungal-based cuisine. His fascination with mycology made him an early convert to the Luminous Choir.",
+      "description": "Tall and gaunt with veins that pulse with bioluminescent fungal growths. His once-pristine chef's coat is now stained with organic patterns. Speaks in a melodic, almost hypnotic cadence, seasoning his speech with culinary metaphors.",
+      "motivation": "To create the 'perfect communion feast' that will convert even the most resistant survivors through sublime fungal gastronomy",
+      "skills": [
+        "Expert mycologist",
+        "Master of food-based persuasion",
+        "Can identify edible/medicinal fungi instantly",
+        "Exceptional knife skills (both culinary and combat)"
+      ],
+      "items": [
+        "A set of surgical-grade chef's knives fused with fungal growth",
+        "A leather-bound 'Gospel of Spores' recipe book",
+        "A portable still for distilling psychoactive mushroom extracts"
+      ],
+      "quirk": "Constantly tastes and sniffs the air, judging the 'flavor profile' of people and environments",
+      "secret": "Deep down, he misses the simple pleasure of cooking for people who could truly appreciate his art, not just consume it as a means of conversion",
+      "id": "npc_17",
+      "faction_id": "faction_8",
+      "faction_name": "The Luminous Choir",
+      "status": "alive",
+      "relationship": 32
+    },
+    {
+      "name": "Gabriel 'Spore' Moreau",
+      "age": 42,
+      "background": "Former executive chef at a Michelin-starred restaurant, known for his experimental fungal-based cuisine. His fascination with mycology made him an early convert to the Luminous Choir.",
+      "description": "Tall and gaunt with veins that pulse with bioluminescent fungal growths. His once-pristine chef's coat is now stained with organic patterns. Speaks in a melodic, almost hypnotic cadence, seasoning his speech with culinary metaphors.",
+      "motivation": "To create the 'perfect communion feast' that will convert even the most resistant survivors through sublime fungal gastronomy",
+      "skills": [
+        "Expert mycologist",
+        "Master of food-based persuasion",
+        "Can identify edible/medicinal fungi instantly",
+        "Exceptional knife skills (both culinary and combat)"
+      ],
+      "items": [
+        "A set of surgical-grade chef's knives fused with fungal growth",
+        "A leather-bound 'Gospel of Spores' recipe book",
+        "A portable still for distilling psychoactive mushroom extracts"
+      ],
+      "quirk": "Constantly tastes and sniffs the air, judging the 'flavor profile' of people and environments",
+      "secret": "Deep down, he misses the simple pleasure of cooking for people who could truly appreciate his art, not just consume it as a means of conversion",
+      "id": "npc_18",
+      "faction_id": "faction_8",
+      "faction_name": "The Luminous Choir",
+      "status": "alive",
+      "relationship": 32,
+      "discovered_day": 39
     }
   ],
   "next_id": 5

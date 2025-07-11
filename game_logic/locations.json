@@ -1933,6 +1933,247 @@
       ],
       "discovered_day": 35,
       "visited": false
+    },
+    {
+      "name": "Willowridge Estates",
+      "description": "A quiet suburban neighborhood frozen in time, its manicured lawns now overgrown and its picket fences broken. Most houses stand eerily intact, their windows boarded up or shattered. The silence is punctuated only by the occasional creak of a swinging porch swing.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [],
+      "features": [
+        "Overgrown gardens with wild herbs",
+        "Abandoned family photos in dusty frames",
+        "Shattered children's toys scattered on driveways"
+      ],
+      "symbol": "H",
+      "secrets": [],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_37",
+      "coords": [
+        4,
+        13
+      ]
+    },
+    {
+      "name": "Pineview Trailer Park",
+      "description": "A small, rundown trailer park where time seems to have stopped. The trailers are weathered and many have been looted, but some still contain remnants of past lives. The air is eerily still, broken only by the occasional creak of a loose door or the rustle of wind through broken windows.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [
+        "old canned food",
+        "rusty tools",
+        "worn-out clothing",
+        "broken furniture"
+      ],
+      "features": [
+        "abandoned trailers with personal belongings",
+        "a small playground overgrown with weeds",
+        "a communal fire pit filled with ashes"
+      ],
+      "symbol": "T",
+      "secrets": [
+        "a hidden stash of sentimental items under one of the trailers"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_38",
+      "coords": [
+        2,
+        13
+      ]
+    },
+    {
+      "name": "Pineview Trailer Park",
+      "description": "A small, rundown trailer park where time seems to have stopped. The trailers are weathered and many have been looted, but some still contain remnants of past lives. The air is eerily still, broken only by the occasional creak of a loose door or the rustle of wind through broken windows.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [
+        "old canned food",
+        "rusty tools",
+        "worn-out clothing",
+        "broken furniture"
+      ],
+      "features": [
+        "abandoned trailers with personal belongings",
+        "a small playground overgrown with weeds",
+        "a communal fire pit filled with ashes"
+      ],
+      "symbol": "T",
+      "secrets": [
+        "a hidden stash of sentimental items under one of the trailers"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "location_39",
+      "coords": [
+        2,
+        13
+      ],
+      "discovered_day": 36,
+      "visited": false
+    },
+    {
+      "name": "Rustbolt Scrapyard",
+      "description": "A sprawling industrial scrapyard filled with rusting machinery, stacked metal husks, and forgotten industrial equipment. The skeletal remains of cranes loom overhead, their chains swaying gently in the wind. Despite its decay, there's still usable salvage among the wreckage.",
+      "type": "industrial",
+      "danger_level": 3,
+      "resources": [
+        "scrap metal",
+        "salvaged tools",
+        "industrial lubricant",
+        "battery cells"
+      ],
+      "features": [
+        "towering piles of crushed cars",
+        "a partially collapsed crane",
+        "an old office trailer with intact blueprints"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "a hidden underground storage room beneath the office trailer"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "rust-infected (slow but armored with metal fragments)"
+        ]
+      },
+      "id": "loc_40",
+      "coords": [
+        19,
+        13
+      ]
+    },
+    {
+      "name": "Rustbolt Scrapyard",
+      "description": "A sprawling industrial scrapyard filled with rusting machinery, stacked metal husks, and forgotten industrial equipment. The skeletal remains of cranes loom overhead, their chains swaying gently in the wind. Despite its decay, there's still usable salvage among the wreckage.",
+      "type": "industrial",
+      "danger_level": 3,
+      "resources": [
+        "scrap metal",
+        "salvaged tools",
+        "industrial lubricant",
+        "battery cells"
+      ],
+      "features": [
+        "towering piles of crushed cars",
+        "a partially collapsed crane",
+        "an old office trailer with intact blueprints"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "a hidden underground storage room beneath the office trailer"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "rust-infected (slow but armored with metal fragments)"
+        ]
+      },
+      "id": "location_41",
+      "coords": [
+        19,
+        13
+      ],
+      "discovered_day": 37,
+      "visited": false
+    },
+    {
+      "name": "Overwatch Base Sigma",
+      "description": "A once-secret military outpost now overrun by the infected. The high-security perimeter is breached in multiple places, with bodies of both soldiers and zombies littering the compound. The air smells of gunpowder and decay, with distant growls echoing from the barracks.",
+      "type": "military",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Heavily fortified command center with blast doors still intact",
+        "Armory with visible weapon racks (all cleared out)",
+        "Radio tower emitting a faint distress signal on loop"
+      ],
+      "symbol": "\u03a3",
+      "secrets": [
+        "Classified documents about early outbreak containment efforts in the commander's office safe"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Military-grade infected (armored, tactical movement)",
+          "Radioactive screamers (distort comms)"
+        ]
+      },
+      "id": "loc_42",
+      "coords": [
+        21,
+        1
+      ]
+    },
+    {
+      "name": "Overwatch Base Sigma",
+      "description": "A once-secret military outpost now overrun by the infected. The high-security perimeter is breached in multiple places, with bodies of both soldiers and zombies littering the compound. The air smells of gunpowder and decay, with distant growls echoing from the barracks.",
+      "type": "military",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Heavily fortified command center with blast doors still intact",
+        "Armory with visible weapon racks (all cleared out)",
+        "Radio tower emitting a faint distress signal on loop"
+      ],
+      "symbol": "\u03a3",
+      "secrets": [
+        "Classified documents about early outbreak containment efforts in the commander's office safe"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Military-grade infected (armored, tactical movement)",
+          "Radioactive screamers (distort comms)"
+        ]
+      },
+      "id": "location_43",
+      "coords": [
+        21,
+        1
+      ],
+      "discovered_day": 38,
+      "visited": false
+    },
+    {
+      "name": "The Foundry",
+      "description": "An abandoned steel foundry with towering smokestacks and rusted conveyor belts. The furnaces have long gone cold, but scattered tools and raw materials remain among the ash-coated floors. The cavernous interior echoes with the occasional groan of shifting metal.",
+      "type": "industrial",
+      "danger_level": 3,
+      "resources": [
+        "steel ingots",
+        "industrial tools",
+        "scrap metal",
+        "coal"
+      ],
+      "features": [
+        "massive dormant furnace",
+        "overhead crane system",
+        "partially collapsed catwalks"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "hidden underground maintenance tunnels"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "ash-covered zombies that blend with the environment"
+        ]
+      },
+      "id": "loc_44",
+      "coords": [
+        3,
+        13
+      ]
     }
   ]
 }

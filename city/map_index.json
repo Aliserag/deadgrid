@@ -27,6 +27,20 @@
       "theme": "military base",
       "danger_level": 7,
       "discovered_day": 34
+    },
+    {
+      "id": "map_5",
+      "name": "Carnival of the Damned",
+      "theme": "amusement park",
+      "size": "medium",
+      "danger_level": 7
+    },
+    {
+      "id": "map_6",
+      "name": "Carnival of the Damned",
+      "theme": "amusement park",
+      "danger_level": 7,
+      "discovered_day": 39
     }
   ],
   "active_map": "map_3"

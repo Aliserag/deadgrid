@@ -6,7 +6,7 @@ A partially overrun military outpost that once served as a regional command cent
 
 ```
 ##############################
-#G......&..#...........A#
+#G......&..#.........Σ.A#
 # ###.#####.#####.##### #
 # #........C.......# # #
 # #.######.######.# # #
@@ -18,7 +18,7 @@ A partially overrun military outpost that once served as a regional command cent
 # ############### # #
 #B...................#
 # #################U#
-#                   #
+# T&H              &#
 ##############################
 ```
 
@@ -50,3 +50,6 @@ U = Underground Bunker
 - Underground tunnel system connects key buildings
 - Zombies in military uniforms have enhanced armor
 & = The Rupture Foundry
+H = Willowridge Estates
+T = Pineview Trailer Par
+Σ = Overwatch Base Sigma

@@ -267,6 +267,26 @@
       "attribute": "Common",
       "id": "item_18",
       "discovered_day": 35
+    },
+    {
+      "type": "tool",
+      "name": "Radio",
+      "rarity": 25,
+      "durability": 76,
+      "power": 12,
+      "attribute": "Common",
+      "id": "item_19",
+      "discovered_day": 36
+    },
+    {
+      "type": "tool",
+      "name": "Radio",
+      "rarity": 17,
+      "durability": 74,
+      "power": 8,
+      "attribute": "Common",
+      "id": "item_20",
+      "discovered_day": 38
     }
   ],
   "next_id": 11

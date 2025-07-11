@@ -547,6 +547,75 @@
       ],
       "id": "skill_16",
       "discovered_day": 33
+    },
+    {
+      "name": "Fogwalker",
+      "type": "stealth",
+      "description": "Allows the survivor to move silently and unseen through dense fog and low-visibility conditions. At higher levels, the survivor can even use the fog to mask their scent and body heat from infected.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces noise made while moving in fog by 30% and decreases visibility to enemies by 20%",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Eliminates all footstep sounds in fog and reduces visibility to enemies by 40%. Slight masking of scent.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Complete visual concealment in fog, 70% scent masking, and minor body heat suppression against thermal detection.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Fungal Sensitivity",
+        "Shadow Movement"
+      ],
+      "usage_examples": [
+        "Evading a horde of infected during heavy morning fog",
+        "Sneaking past fungal spore towers that rely on movement detection",
+        "Ambushing raiders who rely on thermal scopes in low visibility"
+      ],
+      "id": "skill_17"
+    },
+    {
+      "name": "Fogwalker",
+      "type": "stealth",
+      "description": "Allows the survivor to move silently and unseen through dense fog and low-visibility conditions. At higher levels, the survivor can even use the fog to mask their scent and body heat from infected.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces noise made while moving in fog by 30% and decreases visibility to enemies by 20%",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Eliminates all footstep sounds in fog and reduces visibility to enemies by 40%. Slight masking of scent.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Complete visual concealment in fog, 70% scent masking, and minor body heat suppression against thermal detection.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Fungal Sensitivity",
+        "Shadow Movement"
+      ],
+      "usage_examples": [
+        "Evading a horde of infected during heavy morning fog",
+        "Sneaking past fungal spore towers that rely on movement detection",
+        "Ambushing raiders who rely on thermal scopes in low visibility"
+      ],
+      "id": "skill_18",
+      "discovered_day": 37
     }
   ]
 }

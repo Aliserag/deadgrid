@@ -1,35 +1,20 @@
 {
-  "day": 36,
-  "health": 56,
-  "morale": 18,
-  "water": 14,
+  "day": 40,
+  "health": 70,
+  "morale": 15,
+  "water": 13,
   "food": 0,
   "location": [
     0,
     0
   ],
-  "base_defense": 14,
-  "last_action": "rest",
+  "base_defense": 15,
+  "last_action": "craft",
   "status_effects": [
     {
-      "name": "Echoes of the Hive",
-      "duration": -1,
-      "effect": "Can now distinguish individual digging directions, -15% sanity"
-    },
-    {
-      "name": "Fungal Sensitivity",
-      "duration": -1,
-      "effect": "Can detect hive activity through fungal vibrations"
-    },
-    {
-      "name": "Chitinous Carapace",
-      "duration": -1,
-      "effect": "+3 armor, -15% mobility"
-    },
-    {
-      "name": "Sleep Deprivation",
+      "name": "Fungal Synchronization",
       "duration": 1,
-      "effect": "-10% perception"
+      "effect": "Can sometimes predict zombie movements, +12% perception but -7% sanity per hour"
     }
   ],
   "traits": [
@@ -243,20 +228,44 @@
       "type": "tool",
       "durability": 6,
       "bonus": "+1 water purification efficiency"
+    },
+    {
+      "name": "military radio",
+      "type": "tool",
+      "durability": 4,
+      "bonus": "Enhanced signal tracking"
+    },
+    {
+      "name": "military radio",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "Enhanced signal tracking"
+    },
+    {
+      "name": "military field manual",
+      "type": "tool",
+      "durability": 1,
+      "bonus": "Reveals bunker access codes"
+    },
+    {
+      "name": "fungal pressure cooker",
+      "type": "tool",
+      "durability": 7,
+      "bonus": "Purifies water with 50% efficiency, minor fungal contamination"
     }
   ],
   "materials": {
     "metal": 0,
     "fabric": 0,
     "circuitry": 0,
-    "medical": 1,
+    "medical": 0,
     "fuel": 0
   },
   "factions": {
     "watchers": {
       "disposition": "neutral",
-      "last_seen": "central_station",
-      "activity": "marking territory"
+      "last_seen": "Fort Crimson",
+      "activity": "left marker stone"
     },
     "caravan_collective": {
       "disposition": "neutral",
@@ -284,7 +293,7 @@
       "activity": "acknowledged trade offering"
     }
   },
-  "threat_level": "critical (human intruders + fungal bloom)",
+  "threat_level": "high (storm preparations)",
   "discovered_locations": [
     "Sunset Ridge Subdivision",
     "Rustbelt Tool & Die",
@@ -307,7 +316,10 @@
     "The Fungal Chasm",
     "Lost & Found Depot",
     "Old Control Room",
-    "Necrotic Bio-Lab"
+    "Necrotic Bio-Lab",
+    "Rustbolt Scrapyard",
+    "Overwatch Base Sigma",
+    "Carnival of the Damned"
   ],
   "skills": [
     "Silent Salvager",
@@ -323,29 +335,33 @@
     "Shadow Harmony (discovered)",
     "Fungal Forager (basic)",
     "Chitin Utilization (discovered)",
-    "Fungal Cloak (discovered)"
+    "Fungal Cloak (discovered)",
+    "Frequency Tracking (basic)",
+    "Fungal Cloak (improved)",
+    "Storm Chaser's Instinct (developing)"
   ],
   "active_story_arc": "Whispering Shadow",
   "radio_transmissions": [
     {
       "type": "morse_code",
-      "content": "... --- ... (repeated)",
-      "origin": "unknown"
+      "content": "... --- ... .-. .. -.. --. .",
+      "origin": "Ridge sector",
+      "decoded": true
     }
   ],
   "active_quests": [
     {
       "name": "Fungal Whispers",
-      "progress": "Hive excavation 12 hours from completion - vibration patterns suggest imminent breach"
+      "progress": "Hive excavation 8 hours from completion - seismic activity detected"
     },
     {
-      "name": "The Station Squatters",
-      "progress": "Evidence of hostile human activity discovered"
+      "name": "The Crimson Perimeter",
+      "progress": "Initial defenses established (15/100)"
     }
   ],
   "weather": {
-    "next_day": "Storm (Severity: 5/5)",
-    "effect": "Fungal expansion accelerated, water sources replenished",
-    "current": "Fog (Severity: 2/5)"
+    "next_day": "Heavy Rain (Severity: 4/5)",
+    "effect": "Continued fungal expansion, possible flooding",
+    "current": "Clear (Severity: 1/5)"
   }
 }

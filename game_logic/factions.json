@@ -211,7 +211,8 @@
       ],
       "id": "faction_8",
       "members": [
-        "npc_16"
+        "npc_16",
+        "npc_17"
       ],
       "relations": {}
     },
