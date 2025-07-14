@@ -1,20 +1,20 @@
 {
-  "day": 40,
+  "day": 41,
   "health": 70,
-  "morale": 15,
+  "morale": 17,
   "water": 13,
-  "food": 0,
+  "food": 3,
   "location": [
     0,
     0
   ],
   "base_defense": 15,
-  "last_action": "craft",
+  "last_action": "scavenge",
   "status_effects": [
     {
       "name": "Fungal Synchronization",
-      "duration": 1,
-      "effect": "Can sometimes predict zombie movements, +12% perception but -7% sanity per hour"
+      "duration": 2,
+      "effect": "Can sometimes predict zombie movements, +15% perception but -10% sanity per hour during storms"
     }
   ],
   "traits": [
@@ -252,12 +252,24 @@
       "type": "tool",
       "durability": 7,
       "bonus": "Purifies water with 50% efficiency, minor fungal contamination"
+    },
+    {
+      "name": "military field manual",
+      "type": "tool",
+      "durability": 2,
+      "bonus": "Contains bunker access codes"
+    },
+    {
+      "name": "motion sensor",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "30% detection chance when repaired"
     }
   ],
   "materials": {
-    "metal": 0,
-    "fabric": 0,
-    "circuitry": 0,
+    "metal": 2,
+    "fabric": 1,
+    "circuitry": 1,
     "medical": 0,
     "fuel": 0
   },
@@ -351,17 +363,13 @@
   ],
   "active_quests": [
     {
-      "name": "Fungal Whispers",
-      "progress": "Hive excavation 8 hours from completion - seismic activity detected"
-    },
-    {
       "name": "The Crimson Perimeter",
-      "progress": "Initial defenses established (15/100)"
+      "progress": "Bunker access secured (25/100)"
     }
   ],
   "weather": {
     "next_day": "Heavy Rain (Severity: 4/5)",
     "effect": "Continued fungal expansion, possible flooding",
-    "current": "Clear (Severity: 1/5)"
+    "current": "Storm (Severity: 3/5)"
   }
 }

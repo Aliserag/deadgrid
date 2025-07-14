@@ -78,7 +78,9 @@
         "Over-reliance on centralized leadership"
       ],
       "id": "faction_3",
-      "members": [],
+      "members": [
+        "npc_19"
+      ],
       "relations": {},
       "discovered_day": 13
     },

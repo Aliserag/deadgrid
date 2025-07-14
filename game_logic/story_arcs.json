@@ -500,9 +500,9 @@
       "failure_consequences": "If the survivor fails, Fort Crimson is overrun by the horde, forcing them to flee and lose all progress made in fortifying the location. Allies may be lost, and future survival becomes significantly harder.",
       "id": "arc_9",
       "status": "active",
-      "current_day": 0
+      "current_day": 1
     }
   ],
-  "current_day": 50,
+  "current_day": 51,
   "story_phase": "beginning"
 }

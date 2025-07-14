@@ -463,6 +463,57 @@
       "status": "alive",
       "relationship": 32,
       "discovered_day": 39
+    },
+    {
+      "name": "Captain Elias 'Gears' Voss",
+      "age": 42,
+      "background": "Former mechanical engineer and military contractor who specialized in fortification systems. Designed blast doors for government bunkers before the outbreak.",
+      "description": "A broad-shouldered man with a shaved head covered in intricate circuit-board tattoos. His left eye is a mechanical prosthetic that glows faintly blue in low light. Speaks in clipped, precise sentences and never wastes movement.",
+      "motivation": "To prove that human ingenuity can outlast any catastrophe through perfect systems and protocols.",
+      "skills": [
+        "Structural reinforcement",
+        "Tactical demolition",
+        "Improvised energy systems",
+        "Precision marksmanship"
+      ],
+      "items": [
+        "A prototype seismic stabilizer vest",
+        "Blueprints for 'Project Bastion' (folded in armored case)",
+        "A wrench with blood groove modifications"
+      ],
+      "quirk": "Constantly taps rhythmic patterns on surfaces to test their structural integrity",
+      "secret": "His mechanical eye contains footage of the initial outbreak at a government facility - and he knows who caused it.",
+      "id": "npc_19",
+      "faction_id": "faction_3",
+      "faction_name": "The Iron Vanguard",
+      "status": "alive",
+      "relationship": -3
+    },
+    {
+      "name": "Captain Elias 'Gears' Voss",
+      "age": 42,
+      "background": "Former mechanical engineer and military contractor who specialized in fortification systems. Designed blast doors for government bunkers before the outbreak.",
+      "description": "A broad-shouldered man with a shaved head covered in intricate circuit-board tattoos. His left eye is a mechanical prosthetic that glows faintly blue in low light. Speaks in clipped, precise sentences and never wastes movement.",
+      "motivation": "To prove that human ingenuity can outlast any catastrophe through perfect systems and protocols.",
+      "skills": [
+        "Structural reinforcement",
+        "Tactical demolition",
+        "Improvised energy systems",
+        "Precision marksmanship"
+      ],
+      "items": [
+        "A prototype seismic stabilizer vest",
+        "Blueprints for 'Project Bastion' (folded in armored case)",
+        "A wrench with blood groove modifications"
+      ],
+      "quirk": "Constantly taps rhythmic patterns on surfaces to test their structural integrity",
+      "secret": "His mechanical eye contains footage of the initial outbreak at a government facility - and he knows who caused it.",
+      "id": "npc_20",
+      "faction_id": "faction_3",
+      "faction_name": "The Iron Vanguard",
+      "status": "alive",
+      "relationship": -3,
+      "discovered_day": 40
     }
   ],
   "next_id": 5
