@@ -149,8 +149,8 @@ export class EventGenerator extends ContentGeneratorBase<IGameEvent> {
   private generateChoices(templates: ChoiceTemplate[], seed?: string): IEventChoice[] {
     return templates.map((template, index) => ({
       id: `choice_${index}`,
-      text: this.fillTemplate(template.textTemplate, seed + index),
-      effects: this.generateEffectsForChoice(template.effectTypes, seed + index)
+      text: this.fillTemplate(template.textTemplate, (seed || '') + index),
+      effects: this.generateEffectsForChoice(template.effectTypes, (seed || '') + index)
     }));
   }
   

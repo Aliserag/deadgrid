@@ -11,6 +11,6 @@ const SimpleGame = dynamic(() => import('@/components/SimpleGame'), {
   )
 });
 
-export default function Home() {
+export default function GamePage() {
   return <SimpleGame />;
 }
