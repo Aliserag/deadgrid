@@ -1,0 +1,79 @@
+{
+  "name": "Fort Crimson",
+  "theme": "military base",
+  "description": "A partially overrun military outpost that once served as a regional command center. The outer perimeter is compromised, but the armory and underground bunker may still hold valuable supplies. Bloodstains and spent shell casings suggest a last stand occurred here. The base's floodlights still flicker intermittently, casting eerie shadows across the compound.",
+  "size": "medium",
+  "dimensions": [
+    30,
+    15
+  ],
+  "points_of_interest": [
+    {
+      "name": "Main Gate",
+      "type": "military",
+      "description": "Breached entrance with overturned Humvees and sandbag barricades",
+      "coords": [
+        0,
+        7
+      ],
+      "symbol": "G"
+    },
+    {
+      "name": "Armory",
+      "type": "military",
+      "description": "Heavily fortified building with potential weapons cache",
+      "coords": [
+        22,
+        3
+      ],
+      "symbol": "A"
+    },
+    {
+      "name": "Command Center",
+      "type": "military",
+      "description": "Destroyed communications hub with possible intel",
+      "coords": [
+        15,
+        7
+      ],
+      "symbol": "C"
+    },
+    {
+      "name": "Barracks",
+      "type": "military",
+      "description": "Living quarters with personal effects and potential supplies",
+      "coords": [
+        5,
+        12
+      ],
+      "symbol": "B"
+    },
+    {
+      "name": "Underground Bunker",
+      "type": "military",
+      "description": "Sealed blast doors lead to potentially untouched supplies",
+      "coords": [
+        27,
+        12
+      ],
+      "symbol": "U"
+    }
+  ],
+  "danger_level": 7,
+  "resources": [
+    "weapons",
+    "ammunition",
+    "military rations",
+    "medical supplies",
+    "fuel",
+    "radio equipment"
+  ],
+  "special_features": [
+    "Functional floodlights create shifting safe zones",
+    "Motion-activated turrets may still be operational",
+    "Underground tunnel system connects key buildings",
+    "Zombies in military uniforms have enhanced armor"
+  ],
+  "ascii_map": "##############################\n#G.........#...........A#\n# ###.#####.#####.##### #\n# #........C.......# # #\n# #.######.######.# # #\n# #.#          #.# # #\n# #.#          #.# # #\n# #.#          #.# # #\n# #.############.# # #\n# #..............# # #\n# ############### # #\n#B...................#\n# #################U#\n#                   #\n##############################",
+  "id": "map_3"
+}

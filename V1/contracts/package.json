@@ -1,0 +1,9 @@
+{
+  "name": "deadgrid-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for DeadGrid zombie apocalypse game",
+  "private": true,
+  "dependencies": {
+    "@onflow/flow-sol-utils": "^0.1.0"
+  }
+} 

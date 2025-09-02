@@ -1,0 +1,145 @@
+{
+  "talents": [
+    {
+      "name": "Echoes of the Hive",
+      "type": "mental",
+      "severity": 7,
+      "description": "The survivor begins to hear faint whispers and fragmented thoughts from nearby infected, as if their mind is tuning into a grotesque hive consciousness. These echoes are disjointed and overwhelming, often drowning out their own thoughts.",
+      "appearance": "The survivor's eyes develop a faint, pulsating glow, and their veins occasionally shimmer with bioluminescent traces when the whispers grow louder.",
+      "benefits": [
+        "Can sometimes sense the presence of infected before they are visible",
+        "May pick up on the general direction of large hordes"
+      ],
+      "disadvantages": [
+        "Frequent confusion and difficulty concentrating due to the invasive whispers",
+        "Risk of paranoia or mistaking real voices for the hive's echoes",
+        "Increased stress and mental fatigue"
+      ],
+      "progression": "Over time, the whispers grow louder and more coherent, potentially leading to full auditory hallucinations or even temporary loss of self-identity as the hive's thoughts dominate.",
+      "treatment": "Psychoactive suppressants can temporarily mute the whispers, but prolonged exposure to the fungal groves may worsen the condition. Complete isolation from infected areas might slow progression.",
+      "id": "mutation_1",
+      "related_to": "mutation",
+      "rarity": "unique",
+      "benefit": "Can sometimes sense the presence of infected before they are visible, May pick up on the general direction of large hordes",
+      "drawback": "Frequent confusion and difficulty concentrating due to the invasive whispers, Risk of paranoia or mistaking real voices for the hive's echoes, Increased stress and mental fatigue",
+      "acquisition_method": "Exposure to zombie infection"
+    },
+    {
+      "name": "Hive Whisperer",
+      "related_to": "mental",
+      "rarity": "uncommon",
+      "description": "You've learned to distinguish the subtle patterns in the whispers of the infected hivemind. The constant murmurs that drive others mad now provide you with early warnings of nearby threats. Your mind has adapted to filter the noise into useful information.",
+      "benefit": "+15% detection range for approaching zombie hordes, reduced penalty to perception checks in areas with hive activity",
+      "drawback": "Permanent -1 to sanity checks due to constant exposure to hive whispers",
+      "acquisition_method": "Developed after prolonged exposure to areas with strong hive presence (e.g., Generator Room during storm events)",
+      "flavor_text": "'The voices don't stop... but now I understand what they're saying.' - Scratched note found near a radio tower",
+      "id": "talent_2"
+    },
+    {
+      "name": "Fog Walker",
+      "related_to": "combat",
+      "rarity": "common",
+      "description": "Years of navigating the eerie, shifting fog have honed your senses. You move silently and strike with precision when visibility is low. Attacks made in fog or low-light conditions gain a slight accuracy boost.",
+      "benefit": "+10% accuracy in fog or low-light conditions",
+      "drawback": "No benefit in clear or well-lit areas",
+      "acquisition_method": "Learned after surviving 3 nights in heavy fog conditions",
+      "flavor_text": "'The fog doesn't hide you from them\u2014it hides them from you.' - Unknown survivor",
+      "id": "talent_3"
+    },
+    {
+      "name": "Hive Whisperer",
+      "related_to": "social",
+      "rarity": "common",
+      "description": "You've learned to mimic the guttural sounds and pheromone signals of the infected, allowing you to blend in briefly among shambling hordes. While not perfect, it buys precious seconds to slip past undead patrols or avoid direct confrontation.",
+      "benefit": "+15% chance to avoid detection when moving slowly through zombie-infested areas",
+      "drawback": "Effect breaks if you run, attack, or make sudden movements",
+      "acquisition_method": "Learned by observing infected behavior patterns during multiple close encounters",
+      "flavor_text": "'They don't smell fear... they smell difference. Stop being different.' - Notes scrawled on a subway tunnel wall",
+      "id": "talent_4"
+    },
+    {
+      "name": "Fungal Instincts",
+      "related_to": "scavenging",
+      "rarity": "uncommon",
+      "description": "Exposure to the strange fungal growths has sharpened your senses when searching contaminated areas. You can now detect faint bioluminescent trails left by disturbed fungal colonies, revealing hidden stashes or dangers.",
+      "benefit": "+15% chance to find additional resources in fungal-infested areas, reveals hidden fungal hazards before triggering them.",
+      "drawback": "Causes occasional mild hallucinations in areas with heavy fungal presence (-5% accuracy for 30 seconds after triggering the effect).",
+      "acquisition_method": "Developed after prolonged exposure to fungal zones (requires spending at least 3 nights in contaminated areas).",
+      "flavor_text": "'The glow shows what hands have touched... and what hands have left behind.' - Scratched into a fungal-covered wall",
+      "id": "talent_5"
+    },
+    {
+      "name": "Rallying Presence",
+      "related_to": "leadership",
+      "rarity": "uncommon",
+      "description": "Your calm demeanor and decisive actions inspire those around you. In moments of crisis, you can rally nearby survivors, temporarily boosting their morale and combat effectiveness.",
+      "benefit": "Allies within a 10-meter radius gain +10% damage resistance and +5% movement speed for 30 seconds. Can be used once per hour.",
+      "drawback": "Using this ability draws attention, increasing the chance of nearby zombies detecting your group.",
+      "acquisition_method": "Earned by successfully leading a group through a dangerous encounter without casualties.",
+      "flavor_text": "'When the world falls apart, someone has to hold it together\u2014might as well be you.'",
+      "id": "talent_6"
+    },
+    {
+      "name": "Storm Chaser's Instinct",
+      "related_to": "scavenging",
+      "rarity": "uncommon",
+      "description": "Years of tracking rare finds during violent storms have honed your ability to locate valuable items in chaotic conditions. You instinctively know where to look when the wind howls and debris flies.",
+      "benefit": "+25% chance to find rare components/items during severe weather events. Storm-related search actions take 30% less time.",
+      "drawback": "Normal scavenging efficiency decreases slightly (-10%) in calm conditions due to over-reliance on storm patterns.",
+      "acquisition_method": "Learned after surviving 3 major storms while actively scavenging, or from an old meteorologist survivor.",
+      "flavor_text": "'The best treasures aren't buried - they're blown right to your feet, if you know how to dance with the wind.'",
+      "id": "talent_7"
+    },
+    {
+      "name": "Stormcaller Husk",
+      "type": "hybrid",
+      "severity": 7,
+      "description": "A fungal-electrical hybrid mutation that thrives in storm conditions, causing infected to emit bioelectric discharges. The mutation synchronizes with atmospheric electricity, making these zombies dangerously unpredictable during thunderstorms.",
+      "appearance": "Crackling blue fungal veins pulse beneath translucent gray skin, with static-charged hair standing permanently on end. Eyes glow faintly during electrical discharges.",
+      "benefits": [
+        "Can sense electrical currents and storms from miles away",
+        "Generates painful bioelectric shocks on contact",
+        "Becomes more agile and aggressive during storms"
+      ],
+      "disadvantages": [
+        "Extremely visible due to constant electrical arcing in dark environments",
+        "Vulnerable to rubber-coated weapons and insulated armor",
+        "Prone to explosive overload when struck by lightning"
+      ],
+      "progression": "Over time, the fungal networks expand to form living lightning rods across the body. In final stages, the mutation causes spontaneous combustion during electrical storms.",
+      "treatment": "High-voltage electrocution may purge the fungal colonies, but risks triggering a catastrophic discharge. Faraday cage containment is the safest option.",
+      "id": "mutation_8",
+      "related_to": "mutation",
+      "rarity": "unique",
+      "benefit": "Can sense electrical currents and storms from miles away, Generates painful bioelectric shocks on contact, Becomes more agile and aggressive during storms",
+      "drawback": "Extremely visible due to constant electrical arcing in dark environments, Vulnerable to rubber-coated weapons and insulated armor, Prone to explosive overload when struck by lightning",
+      "acquisition_method": "Exposure to zombie infection"
+    },
+    {
+      "name": "Chitinous Carapace",
+      "type": "physical",
+      "severity": 8,
+      "description": "A rapid calcification process transforms the skin into a hardened, segmented exoskeleton resembling insect chitin. The mutation provides incredible protection but severely limits mobility and flexibility.",
+      "appearance": "The skin darkens to a glossy black or deep amber, forming overlapping armored plates with visible joints. The plates emit a faint bioluminescent glow along the seams in low light.",
+      "benefits": [
+        "Near immunity to bites and blunt trauma",
+        "Resistance to environmental hazards (radiation, extreme temperatures)",
+        "Enhanced strength to support the added weight"
+      ],
+      "disadvantages": [
+        "Severely reduced movement speed and agility",
+        "Inability to wear conventional armor or clothing",
+        "Metabolic strain requires 3x normal caloric intake",
+        "Gradual loss of fine motor skills"
+      ],
+      "progression": "The carapace continues thickening until movement becomes impossible without external aid. Eventually, the host becomes a stationary, cocoon-like structure that may develop new mutations.",
+      "treatment": "High-dose chelation therapy can slow progression, but complete reversal requires surgical debridement of affected tissue (extremely risky). Some survivors report fungal suppressants temporarily soften the plates.",
+      "id": "mutation_9",
+      "related_to": "mutation",
+      "rarity": "unique",
+      "benefit": "Near immunity to bites and blunt trauma, Resistance to environmental hazards (radiation, extreme temperatures), Enhanced strength to support the added weight",
+      "drawback": "Severely reduced movement speed and agility, Inability to wear conventional armor or clothing, Metabolic strain requires 3x normal caloric intake, Gradual loss of fine motor skills",
+      "acquisition_method": "Exposure to zombie infection"
+    }
+  ]
+}

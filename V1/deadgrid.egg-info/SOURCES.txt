@@ -1,0 +1,7 @@
+README.md
+setup.py
+deadgrid.egg-info/PKG-INFO
+deadgrid.egg-info/SOURCES.txt
+deadgrid.egg-info/dependency_links.txt
+deadgrid.egg-info/requires.txt
+deadgrid.egg-info/top_level.txt

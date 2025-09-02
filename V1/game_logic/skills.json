@@ -1,0 +1,621 @@
+{
+  "skills": [
+    {
+      "name": "Silent Salvager",
+      "type": "scavenging",
+      "description": "Allows the survivor to scavenge quietly, reducing the chance of attracting zombies. At higher levels, it also increases the speed and efficiency of scavenging in high-risk areas.",
+      "prerequisite": "Basic Scavenging level 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces noise made while scavenging by 25%, lowering zombie attraction chance.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Increases scavenging speed by 15% in high-risk areas and further reduces noise by 35%.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Grants a 50% noise reduction and a 25% speed boost in all scavenging activities. Unlocks the ability to silently open locked containers.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Stealth",
+        "Lockpicking"
+      ],
+      "usage_examples": [
+        "Quietly looting a pharmacy surrounded by zombies.",
+        "Quickly gathering supplies from a overrun military checkpoint without alerting the horde.",
+        "Silently breaking into a locked safe in an infested building."
+      ],
+      "id": "skill_1"
+    },
+    {
+      "name": "Morale Boost",
+      "type": "leadership",
+      "description": "This skill allows you to inspire hope and determination in your fellow survivors, temporarily increasing their stamina and resistance to fear. At higher levels, it can even reduce the effects of fatigue and minor injuries.",
+      "prerequisite": "Basic Communication skill or Charisma stat of 5+",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Grants +10% stamina regen to nearby survivors for 30 seconds",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Reduces fear effects by 20% and extends duration to 45 seconds",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Temporarily negates fatigue penalties and provides minor pain resistance for 1 minute",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Field Medic",
+        "Tactical Command",
+        "Crisis Management"
+      ],
+      "usage_examples": [
+        "Rallying survivors during a horde attack to push through exhaustion",
+        "Helping a panicked group maintain composure when surrounded",
+        "Motivating exhausted scavengers for one final push to safety"
+      ],
+      "id": "skill_2"
+    },
+    {
+      "name": "Fungal Whisperer",
+      "type": "social",
+      "description": "Allows the survivor to interpret the bioluminescent patterns of fungal growths to predict zombie movements and detect hidden threats. At higher levels, can even use subtle vibrations to temporarily confuse or misdirect infected.",
+      "prerequisite": "Basic survival skill and exposure to fungal-infected zones",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can detect recent zombie activity patterns from fungal glow intensity",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can predict approaching hordes 30 seconds before they arrive via pulsation patterns",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can tap walls to create confusing fungal feedback loops that delay zombies for 10-15 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Stealth",
+        "Environmental Awareness",
+        "Traps"
+      ],
+      "usage_examples": [
+        "Reading fungal veins to choose the safest tunnel path during escape",
+        "Creating false movement signatures to lure zombies away from your shelter",
+        "Detecting hidden infected dormant in fungal clusters before they awaken"
+      ],
+      "id": "skill_3"
+    },
+    {
+      "name": "Fungal Whisperer",
+      "type": "social",
+      "description": "Allows the survivor to interpret the bioluminescent patterns of fungal growths to predict zombie movements and detect hidden threats. At higher levels, can even use subtle vibrations to temporarily confuse or misdirect infected.",
+      "prerequisite": "Basic survival skill and exposure to fungal-infected zones",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can detect recent zombie activity patterns from fungal glow intensity",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can predict approaching hordes 30 seconds before they arrive via pulsation patterns",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can tap walls to create confusing fungal feedback loops that delay zombies for 10-15 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Stealth",
+        "Environmental Awareness",
+        "Traps"
+      ],
+      "usage_examples": [
+        "Reading fungal veins to choose the safest tunnel path during escape",
+        "Creating false movement signatures to lure zombies away from your shelter",
+        "Detecting hidden infected dormant in fungal clusters before they awaken"
+      ],
+      "id": "skill_4",
+      "discovered_day": 19
+    },
+    {
+      "name": "Fungal Adaptation",
+      "type": "survival",
+      "description": "Allows the survivor to identify and utilize fungal growths for medicinal and defensive purposes. At higher levels, enables the creation of fungal-based remedies and deterrents against infected creatures.",
+      "prerequisite": "Basic Botany or Herbalism",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify safe fungal growths and harvest basic medicinal properties.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Create fungal poultices to slow infection and minor healing salves.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Brew fungal deterrents that repel infected creatures for short durations.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Herbalism",
+        "Chemistry",
+        "Stealth"
+      ],
+      "usage_examples": [
+        "Harvesting fungal growths in subway tunnels to create infection-slowing remedies.",
+        "Applying fungal deterrents to barricades to keep infected at bay during nighttime.",
+        "Using fungal poultices to treat wounds when medical supplies are scarce."
+      ],
+      "id": "skill_5"
+    },
+    {
+      "name": "Fungal Adaptation",
+      "type": "survival",
+      "description": "Allows the survivor to identify and utilize fungal growths for medicinal and defensive purposes. At higher levels, enables the creation of fungal-based remedies and deterrents against infected creatures.",
+      "prerequisite": "Basic Botany or Herbalism",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify safe fungal growths and harvest basic medicinal properties.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Create fungal poultices to slow infection and minor healing salves.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Brew fungal deterrents that repel infected creatures for short durations.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Herbalism",
+        "Chemistry",
+        "Stealth"
+      ],
+      "usage_examples": [
+        "Harvesting fungal growths in subway tunnels to create infection-slowing remedies.",
+        "Applying fungal deterrents to barricades to keep infected at bay during nighttime.",
+        "Using fungal poultices to treat wounds when medical supplies are scarce."
+      ],
+      "id": "skill_6",
+      "discovered_day": 24
+    },
+    {
+      "name": "Hydrostatic Purification",
+      "type": "water",
+      "description": "Allows the survivor to purify contaminated water sources using improvised filtration techniques and natural elements. At higher levels, enables extraction of drinkable water from unlikely sources like condensation or fungal growths.",
+      "prerequisite": "Basic Survival 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can boil water to remove basic contaminants. +10% hydration efficiency from purified water.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can construct charcoal/sand filters. Identifies toxic water sources by appearance. Unlocks condensation collection technique.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can safely extract water from fungal growths and radioactive pools (with proper equipment). Purified water provides temporary +5% disease resistance.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Chemistry",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Turning a flooded subway tunnel into a sustainable water source by filtering seepage through layered debris",
+        "Harvesting drinkable droplets from bioluminescent fungal clusters in abandoned sewers",
+        "Creating an emergency still to extract water from zombie corpses during drought conditions"
+      ],
+      "id": "skill_7"
+    },
+    {
+      "name": "Hydrostatic Purification",
+      "type": "water",
+      "description": "Allows the survivor to purify contaminated water sources using improvised filtration techniques and natural elements. At higher levels, enables extraction of drinkable water from unlikely sources like condensation or fungal growths.",
+      "prerequisite": "Basic Survival 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can boil water to remove basic contaminants. +10% hydration efficiency from purified water.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Can construct charcoal/sand filters. Identifies toxic water sources by appearance. Unlocks condensation collection technique.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can safely extract water from fungal growths and radioactive pools (with proper equipment). Purified water provides temporary +5% disease resistance.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Chemistry",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Turning a flooded subway tunnel into a sustainable water source by filtering seepage through layered debris",
+        "Harvesting drinkable droplets from bioluminescent fungal clusters in abandoned sewers",
+        "Creating an emergency still to extract water from zombie corpses during drought conditions"
+      ],
+      "id": "skill_8",
+      "discovered_day": 28
+    },
+    {
+      "name": "Fungal Purification",
+      "type": "water",
+      "description": "Allows the survivor to safely extract and purify water from fungal-infested sources. At higher levels, can even neutralize toxic spores and convert them into usable nutrients.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can identify fungal growths that indicate relatively safe water sources. Basic filtration removes visible contaminants.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Able to distill water from heavily infested sources. Reduces spore toxicity by 50%.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Full spore neutralization. Purified water provides temporary resistance to fungal infections (+2 hours).",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Mycology",
+        "Field Medicine",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Harvesting drinkable water from pulsating fungal nodes in subway tunnels",
+        "Creating safe hydration stations in infested urban areas",
+        "Providing clean water during spore storms when surface water is contaminated"
+      ],
+      "id": "skill_9"
+    },
+    {
+      "name": "Fungal Purification",
+      "type": "water",
+      "description": "Allows the survivor to safely extract and purify water from fungal-infested sources. At higher levels, can even neutralize toxic spores and convert them into usable nutrients.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Can identify fungal growths that indicate relatively safe water sources. Basic filtration removes visible contaminants.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Able to distill water from heavily infested sources. Reduces spore toxicity by 50%.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Full spore neutralization. Purified water provides temporary resistance to fungal infections (+2 hours).",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Mycology",
+        "Field Medicine",
+        "Scavenging"
+      ],
+      "usage_examples": [
+        "Harvesting drinkable water from pulsating fungal nodes in subway tunnels",
+        "Creating safe hydration stations in infested urban areas",
+        "Providing clean water during spore storms when surface water is contaminated"
+      ],
+      "id": "skill_10",
+      "discovered_day": 29
+    },
+    {
+      "name": "Shadow Harmony",
+      "type": "stealth",
+      "description": "Allows the survivor to synchronize their movements with environmental sounds and shadows, becoming nearly undetectable during chaotic conditions. At higher levels, the survivor can even use storms or other loud events to mask their presence completely.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces detection chance by 20% during storms or loud environmental events",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Allows brief moments of near-invisibility when moving in sync with flickering lights or sudden loud noises",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can actively use environmental sounds (like thunder or collapsing debris) to completely mask movement sounds for 5 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Sound Discipline",
+        "Light Footed"
+      ],
+      "usage_examples": [
+        "Slipping past a horde of infected during a thunderstorm by moving with each thunderclap",
+        "Using flickering emergency lights to cross a guarded area undetected",
+        "Escaping pursuit by disappearing into the shadows when a nearby structure collapses"
+      ],
+      "id": "skill_11"
+    },
+    {
+      "name": "Shadow Harmony",
+      "type": "stealth",
+      "description": "Allows the survivor to synchronize their movements with environmental sounds and shadows, becoming nearly undetectable during chaotic conditions. At higher levels, the survivor can even use storms or other loud events to mask their presence completely.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces detection chance by 20% during storms or loud environmental events",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Allows brief moments of near-invisibility when moving in sync with flickering lights or sudden loud noises",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Can actively use environmental sounds (like thunder or collapsing debris) to completely mask movement sounds for 5 seconds",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Sound Discipline",
+        "Light Footed"
+      ],
+      "usage_examples": [
+        "Slipping past a horde of infected during a thunderstorm by moving with each thunderclap",
+        "Using flickering emergency lights to cross a guarded area undetected",
+        "Escaping pursuit by disappearing into the shadows when a nearby structure collapses"
+      ],
+      "id": "skill_12",
+      "discovered_day": 31
+    },
+    {
+      "name": "Fungal Forager",
+      "type": "scavenging",
+      "description": "Allows survivors to safely identify and harvest mutated fungi growing in ruined urban environments. Higher levels reveal rare medicinal properties and temporary buffs from certain fungal strains.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify 3 common edible fungal types, avoid poisonous varieties",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Harvest bioluminescent fungi for light sources, recognize early warning fungal growth patterns near infected areas",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Extract temporary stat-boosting compounds from rare crimson cap fungi, cultivate fungal colonies in controlled environments",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Tracker",
+        "Field Medicine"
+      ],
+      "usage_examples": [
+        "Finding nutritious food sources in collapsed subway tunnels where normal plants won't grow",
+        "Harvesting glowing mushrooms to create non-electrical light sources in safehouses",
+        "Identifying when fungal overgrowth indicates nearby zombie nest activity"
+      ],
+      "id": "skill_13"
+    },
+    {
+      "name": "Fungal Forager",
+      "type": "scavenging",
+      "description": "Allows survivors to safely identify and harvest mutated fungi growing in ruined urban environments. Higher levels reveal rare medicinal properties and temporary buffs from certain fungal strains.",
+      "prerequisite": "Basic Botany 1",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Identify 3 common edible fungal types, avoid poisonous varieties",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Harvest bioluminescent fungi for light sources, recognize early warning fungal growth patterns near infected areas",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Extract temporary stat-boosting compounds from rare crimson cap fungi, cultivate fungal colonies in controlled environments",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Tracker",
+        "Field Medicine"
+      ],
+      "usage_examples": [
+        "Finding nutritious food sources in collapsed subway tunnels where normal plants won't grow",
+        "Harvesting glowing mushrooms to create non-electrical light sources in safehouses",
+        "Identifying when fungal overgrowth indicates nearby zombie nest activity"
+      ],
+      "id": "skill_14",
+      "discovered_day": 31
+    },
+    {
+      "name": "Fungal Cloak",
+      "type": "stealth",
+      "description": "Allows the survivor to blend into fungal-infested environments by mimicking the slow, rhythmic movements of infected flora. At higher levels, the user can temporarily mask their scent with fungal spores, making them nearly undetectable to infected creatures.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces movement noise by 30% in fungal areas and slightly decreases detection range by infected.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Movement noise reduction increases to 50% and adds a 20% chance to avoid detection when stationary among fungal growths.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Grants temporary scent masking for 60 seconds (5-minute cooldown) and allows movement through fungal tendrils without triggering them.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Mycology",
+        "Urban Camouflage"
+      ],
+      "usage_examples": [
+        "Sneaking past a fungal bloom where infected are nesting",
+        "Evading pursuit by disappearing into a glowing fungal grove",
+        "Scavenging spore-covered supplies without alerting nearby roamers"
+      ],
+      "id": "skill_15"
+    },
+    {
+      "name": "Fungal Cloak",
+      "type": "stealth",
+      "description": "Allows the survivor to blend into fungal-infested environments by mimicking the slow, rhythmic movements of infected flora. At higher levels, the user can temporarily mask their scent with fungal spores, making them nearly undetectable to infected creatures.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces movement noise by 30% in fungal areas and slightly decreases detection range by infected.",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Movement noise reduction increases to 50% and adds a 20% chance to avoid detection when stationary among fungal growths.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Grants temporary scent masking for 60 seconds (5-minute cooldown) and allows movement through fungal tendrils without triggering them.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Botany",
+        "Mycology",
+        "Urban Camouflage"
+      ],
+      "usage_examples": [
+        "Sneaking past a fungal bloom where infected are nesting",
+        "Evading pursuit by disappearing into a glowing fungal grove",
+        "Scavenging spore-covered supplies without alerting nearby roamers"
+      ],
+      "id": "skill_16",
+      "discovered_day": 33
+    },
+    {
+      "name": "Fogwalker",
+      "type": "stealth",
+      "description": "Allows the survivor to move silently and unseen through dense fog and low-visibility conditions. At higher levels, the survivor can even use the fog to mask their scent and body heat from infected.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces noise made while moving in fog by 30% and decreases visibility to enemies by 20%",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Eliminates all footstep sounds in fog and reduces visibility to enemies by 40%. Slight masking of scent.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Complete visual concealment in fog, 70% scent masking, and minor body heat suppression against thermal detection.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Fungal Sensitivity",
+        "Shadow Movement"
+      ],
+      "usage_examples": [
+        "Evading a horde of infected during heavy morning fog",
+        "Sneaking past fungal spore towers that rely on movement detection",
+        "Ambushing raiders who rely on thermal scopes in low visibility"
+      ],
+      "id": "skill_17"
+    },
+    {
+      "name": "Fogwalker",
+      "type": "stealth",
+      "description": "Allows the survivor to move silently and unseen through dense fog and low-visibility conditions. At higher levels, the survivor can even use the fog to mask their scent and body heat from infected.",
+      "prerequisite": "Basic Stealth level 2",
+      "level_progression": [
+        {
+          "level": 1,
+          "benefit": "Reduces noise made while moving in fog by 30% and decreases visibility to enemies by 20%",
+          "xp_required": 0
+        },
+        {
+          "level": 2,
+          "benefit": "Eliminates all footstep sounds in fog and reduces visibility to enemies by 40%. Slight masking of scent.",
+          "xp_required": 100
+        },
+        {
+          "level": 3,
+          "benefit": "Complete visual concealment in fog, 70% scent masking, and minor body heat suppression against thermal detection.",
+          "xp_required": 300
+        }
+      ],
+      "synergies": [
+        "Urban Camouflage",
+        "Fungal Sensitivity",
+        "Shadow Movement"
+      ],
+      "usage_examples": [
+        "Evading a horde of infected during heavy morning fog",
+        "Sneaking past fungal spore towers that rely on movement detection",
+        "Ambushing raiders who rely on thermal scopes in low visibility"
+      ],
+      "id": "skill_18",
+      "discovered_day": 37
+    }
+  ]
+}

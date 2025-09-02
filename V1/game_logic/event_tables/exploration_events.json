@@ -1,0 +1,701 @@
+{
+  "exploration_events": [
+    {
+      "id": "explore_001",
+      "name": "Abandoned Pharmacy",
+      "emoji": "💊",
+      "description": "You discover a small pharmacy that seems untouched by looters. The front door is barricaded, but there might be a way in through the back.",
+      "triggers": {
+        "location_types": ["commercial", "medical"],
+        "weather_conditions": ["clear", "overcast", "light_rain"],
+        "min_day": 1,
+        "max_day": 999,
+        "required_skills": [],
+        "faction_relations": {}
+      },
+      "weight": 25,
+      "choices": [
+        {
+          "id": "choice_001_a",
+          "text": "Break down the front barricade",
+          "emoji": "🪓",
+          "requirements": {
+            "tools": ["crowbar", "axe", "hammer"],
+            "stamina_cost": 15
+          },
+          "outcomes": [
+            {
+              "probability": 60,
+              "type": "success",
+              "description": "You successfully break through and find medical supplies inside.",
+              "rewards": {
+                "items": ["medical_supplies", "painkillers", "bandages"],
+                "experience": 10
+              },
+              "consequences": {
+                "noise_level": "high",
+                "zombie_attraction": 30
+              }
+            },
+            {
+              "probability": 25,
+              "type": "partial_success",
+              "description": "You break in but trigger an alarm system, attracting unwanted attention.",
+              "rewards": {
+                "items": ["medical_supplies"],
+                "experience": 5
+              },
+              "consequences": {
+                "noise_level": "very_high",
+                "zombie_attraction": 60,
+                "spawn_zombies": 2
+              }
+            },
+            {
+              "probability": 15,
+              "type": "failure",
+              "description": "The barricade is too strong and you exhaust yourself trying.",
+              "consequences": {
+                "stamina_loss": 20,
+                "morale_loss": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_001_b",
+          "text": "Search for a back entrance",
+          "emoji": "🔍",
+          "requirements": {
+            "stamina_cost": 5
+          },
+          "outcomes": [
+            {
+              "probability": 70,
+              "type": "success",
+              "description": "You find an unlocked service door and slip inside quietly.",
+              "rewards": {
+                "items": ["medical_supplies", "prescription_drugs"],
+                "experience": 15
+              },
+              "consequences": {
+                "noise_level": "low",
+                "zombie_attraction": 5
+              }
+            },
+            {
+              "probability": 20,
+              "type": "discovery",
+              "description": "You find the back door but also discover a survivor hiding inside.",
+              "rewards": {
+                "items": ["medical_supplies"],
+                "experience": 10
+              },
+              "consequences": {
+                "trigger_event": "survivor_encounter",
+                "npc_spawn": true
+              }
+            },
+            {
+              "probability": 10,
+              "type": "trap",
+              "description": "The back door is rigged with a makeshift alarm. You trigger it accidentally.",
+              "consequences": {
+                "noise_level": "high",
+                "zombie_attraction": 40,
+                "spawn_zombies": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_001_c",
+          "text": "Mark location and return later",
+          "emoji": "📍",
+          "requirements": {},
+          "outcomes": [
+            {
+              "probability": 100,
+              "type": "deferred",
+              "description": "You mark the location on your map for future exploration.",
+              "rewards": {
+                "experience": 2
+              },
+              "consequences": {
+                "add_location_marker": true,
+                "future_event_chance": 15
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_002",
+      "name": "Crashed Military Vehicle",
+      "emoji": "🚗",
+      "description": "A military humvee has crashed into a building. The vehicle appears to have been abandoned in haste, with equipment scattered around.",
+      "triggers": {
+        "location_types": ["military", "street", "industrial"],
+        "weather_conditions": ["any"],
+        "min_day": 5,
+        "max_day": 999,
+        "required_skills": [],
+        "faction_relations": {}
+      },
+      "weight": 15,
+      "choices": [
+        {
+          "id": "choice_002_a",
+          "text": "Search the vehicle thoroughly",
+          "emoji": "🔍",
+          "requirements": {
+            "stamina_cost": 10
+          },
+          "outcomes": [
+            {
+              "probability": 50,
+              "type": "success",
+              "description": "You find military-grade equipment and ammunition.",
+              "rewards": {
+                "items": ["military_rifle", "ammo", "tactical_vest"],
+                "experience": 20
+              },
+              "consequences": {
+                "noise_level": "medium"
+              }
+            },
+            {
+              "probability": 30,
+              "type": "discovery",
+              "description": "You find equipment but also discover classified documents.",
+              "rewards": {
+                "items": ["military_gear", "classified_documents"],
+                "experience": 25
+              },
+              "consequences": {
+                "trigger_event": "government_interest",
+                "faction_attention": "military_remnants"
+              }
+            },
+            {
+              "probability": 20,
+              "type": "danger",
+              "description": "The vehicle's fuel tank is leaking and catches fire while you search.",
+              "rewards": {
+                "items": ["damaged_gear"]
+              },
+              "consequences": {
+                "health_loss": 15,
+                "noise_level": "very_high",
+                "zombie_attraction": 80,
+                "spawn_zombies": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_002_b",
+          "text": "Check for survivors first",
+          "emoji": "🩺",
+          "requirements": {
+            "stamina_cost": 5
+          },
+          "outcomes": [
+            {
+              "probability": 40,
+              "type": "empty",
+              "description": "No survivors found, but you can search safely now.",
+              "consequences": {
+                "enable_choice": "choice_002_a",
+                "safety_bonus": 20
+              }
+            },
+            {
+              "probability": 35,
+              "type": "wounded_soldier",
+              "description": "You find a wounded soldier who shares intel before dying.",
+              "rewards": {
+                "items": ["military_intel", "dog_tags"],
+                "experience": 15
+              },
+              "consequences": {
+                "morale_loss": 5,
+                "trigger_event": "military_contact"
+              }
+            },
+            {
+              "probability": 25,
+              "type": "infected_soldier",
+              "description": "You find an infected soldier who turns aggressive.",
+              "consequences": {
+                "trigger_combat": "infected_soldier",
+                "combat_difficulty": "medium"
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_002_c",
+          "text": "Salvage fuel and parts",
+          "emoji": "⛽",
+          "requirements": {
+            "tools": ["wrench", "container"],
+            "stamina_cost": 15
+          },
+          "outcomes": [
+            {
+              "probability": 70,
+              "type": "success",
+              "description": "You successfully salvage fuel and useful vehicle parts.",
+              "rewards": {
+                "items": ["fuel", "vehicle_parts", "scrap_metal"],
+                "experience": 12
+              }
+            },
+            {
+              "probability": 30,
+              "type": "accident",
+              "description": "You accidentally puncture the fuel tank, causing a small explosion.",
+              "rewards": {
+                "items": ["scrap_metal"]
+              },
+              "consequences": {
+                "health_loss": 10,
+                "noise_level": "high",
+                "zombie_attraction": 50
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_003",
+      "name": "Hidden Underground Bunker",
+      "emoji": "🕳️",
+      "description": "While exploring a basement, you discover a hidden entrance to what appears to be a private bunker. The entrance is sealed but not locked.",
+      "triggers": {
+        "location_types": ["residential", "government", "industrial"],
+        "weather_conditions": ["any"],
+        "min_day": 10,
+        "max_day": 999,
+        "required_skills": [],
+        "faction_relations": {}
+      },
+      "weight": 8,
+      "choices": [
+        {
+          "id": "choice_003_a",
+          "text": "Enter the bunker alone",
+          "emoji": "🔦",
+          "requirements": {
+            "tools": ["flashlight"],
+            "stamina_cost": 10
+          },
+          "outcomes": [
+            {
+              "probability": 45,
+              "type": "treasure_trove",
+              "description": "You discover a well-stocked survival bunker with months of supplies.",
+              "rewards": {
+                "items": ["canned_food", "water_purifier", "survival_gear", "generator"],
+                "experience": 30,
+                "location_unlock": "private_bunker"
+              },
+              "consequences": {
+                "add_safe_house": true
+              }
+            },
+            {
+              "probability": 25,
+              "type": "occupied",
+              "description": "The bunker is occupied by a paranoid survivalist who doesn't trust you.",
+              "consequences": {
+                "trigger_event": "survivalist_encounter",
+                "npc_spawn": true,
+                "npc_disposition": "hostile"
+              }
+            },
+            {
+              "probability": 20,
+              "type": "trapped",
+              "description": "The bunker is booby-trapped. You trigger a mechanism that seals you inside temporarily.",
+              "consequences": {
+                "trapped_duration": 2,
+                "stamina_loss": 25,
+                "trigger_event": "escape_bunker"
+              }
+            },
+            {
+              "probability": 10,
+              "type": "infected_bunker",
+              "description": "The bunker contains infected individuals who have been trapped inside.",
+              "consequences": {
+                "trigger_combat": "bunker_infected",
+                "combat_difficulty": "hard",
+                "infection_risk": 30
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_003_b",
+          "text": "Return with backup",
+          "emoji": "👥",
+          "requirements": {
+            "companions": 1,
+            "stamina_cost": 5
+          },
+          "outcomes": [
+            {
+              "probability": 60,
+              "type": "safe_exploration",
+              "description": "With backup, you safely explore the bunker and share the findings.",
+              "rewards": {
+                "items": ["survival_supplies", "equipment"],
+                "experience": 20,
+                "companion_loyalty": 10
+              }
+            },
+            {
+              "probability": 40,
+              "type": "contested_claim",
+              "description": "Your companions want a larger share of whatever you find inside.",
+              "consequences": {
+                "trigger_event": "resource_dispute",
+                "companion_loyalty": -5
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_003_c",
+          "text": "Seal the entrance and mark it",
+          "emoji": "🔒",
+          "requirements": {
+            "tools": ["materials"],
+            "stamina_cost": 8
+          },
+          "outcomes": [
+            {
+              "probability": 100,
+              "type": "secured",
+              "description": "You seal the bunker to prevent others from accessing it and mark its location.",
+              "rewards": {
+                "experience": 5
+              },
+              "consequences": {
+                "add_location_marker": true,
+                "exclusive_access": true,
+                "future_event_chance": 25
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_004",
+      "name": "Abandoned Research Facility",
+      "emoji": "🧪",
+      "description": "You stumble upon a research facility that was hastily evacuated. Warning signs indicate biological hazards, but the security systems appear to be offline.",
+      "triggers": {
+        "location_types": ["government", "medical", "industrial"],
+        "weather_conditions": ["any"],
+        "min_day": 15,
+        "max_day": 999,
+        "required_skills": [],
+        "faction_relations": {}
+      },
+      "weight": 5,
+      "choices": [
+        {
+          "id": "choice_004_a",
+          "text": "Enter with full protective gear",
+          "emoji": "🦺",
+          "requirements": {
+            "items": ["hazmat_suit", "gas_mask"],
+            "stamina_cost": 20
+          },
+          "outcomes": [
+            {
+              "probability": 50,
+              "type": "scientific_discovery",
+              "description": "You discover research data and experimental compounds that could be valuable.",
+              "rewards": {
+                "items": ["research_data", "experimental_serum", "lab_equipment"],
+                "experience": 40,
+                "knowledge_gain": "biological_research"
+              },
+              "consequences": {
+                "faction_interest": "scientists_remnant"
+              }
+            },
+            {
+              "probability": 30,
+              "type": "contamination_risk",
+              "description": "You find valuable research but are exposed to unknown pathogens.",
+              "rewards": {
+                "items": ["research_data"],
+                "experience": 25
+              },
+              "consequences": {
+                "infection_risk": 40,
+                "trigger_event": "unknown_pathogen"
+              }
+            },
+            {
+              "probability": 20,
+              "type": "security_system",
+              "description": "Automated security systems activate, trapping you inside temporarily.",
+              "consequences": {
+                "trapped_duration": 3,
+                "trigger_event": "facility_lockdown"
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_004_b",
+          "text": "Search the exterior offices only",
+          "emoji": "📋",
+          "requirements": {
+            "stamina_cost": 10
+          },
+          "outcomes": [
+            {
+              "probability": 70,
+              "type": "safe_intel",
+              "description": "You find research notes and contact information for other facilities.",
+              "rewards": {
+                "items": ["research_notes", "facility_map"],
+                "experience": 15,
+                "location_reveals": 2
+              }
+            },
+            {
+              "probability": 30,
+              "type": "incomplete_picture",
+              "description": "The exterior files are mostly destroyed, giving you only fragments of information.",
+              "rewards": {
+                "items": ["damaged_documents"],
+                "experience": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_004_c",
+          "text": "Report location to authorities",
+          "emoji": "📞",
+          "requirements": {
+            "items": ["radio", "communication_device"],
+            "faction_relations": {
+              "government_remnants": "positive"
+            }
+          },
+          "outcomes": [
+            {
+              "probability": 60,
+              "type": "official_response",
+              "description": "Government remnants respond and reward you for the information.",
+              "rewards": {
+                "items": ["government_supplies", "official_recognition"],
+                "experience": 20,
+                "faction_reputation": {
+                  "government_remnants": 25
+                }
+              }
+            },
+            {
+              "probability": 40,
+              "type": "no_response",
+              "description": "Your transmission goes unanswered, suggesting the authorities may be compromised.",
+              "consequences": {
+                "morale_loss": 10,
+                "knowledge_gain": "government_status"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_005",
+      "name": "Survivor Camp Ruins",
+      "emoji": "⛺",
+      "description": "You discover the remains of what was once a thriving survivor camp. Tents are torn, supplies scattered, and there are signs of a violent struggle.",
+      "triggers": {
+        "location_types": ["outdoor", "residential", "commercial"],
+        "weather_conditions": ["any"],
+        "min_day": 8,
+        "max_day": 999,
+        "required_skills": [],
+        "faction_relations": {}
+      },
+      "weight": 18,
+      "choices": [
+        {
+          "id": "choice_005_a",
+          "text": "Investigate what happened",
+          "emoji": "🔍",
+          "requirements": {
+            "stamina_cost": 12
+          },
+          "outcomes": [
+            {
+              "probability": 40,
+              "type": "raider_attack",
+              "description": "Evidence suggests the camp was overrun by raiders. You find a survivor's journal detailing the attack.",
+              "rewards": {
+                "items": ["survivor_journal", "scattered_supplies"],
+                "experience": 18,
+                "knowledge_gain": "raider_tactics"
+              },
+              "consequences": {
+                "faction_awareness": "raiders",
+                "threat_level_increase": 5
+              }
+            },
+            {
+              "probability": 35,
+              "type": "zombie_horde",
+              "description": "The camp was overwhelmed by a zombie horde. You find defensive preparations that failed.",
+              "rewards": {
+                "items": ["makeshift_weapons", "barricade_materials"],
+                "experience": 15,
+                "knowledge_gain": "horde_patterns"
+              },
+              "consequences": {
+                "zombie_threat_awareness": true
+              }
+            },
+            {
+              "probability": 25,
+              "type": "internal_conflict",
+              "description": "The camp fell apart due to internal strife and resource disputes.",
+              "rewards": {
+                "items": ["personal_belongings", "camp_supplies"],
+                "experience": 12,
+                "knowledge_gain": "group_dynamics"
+              },
+              "consequences": {
+                "morale_loss": 8,
+                "trust_issues": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_005_b",
+          "text": "Salvage useful materials",
+          "emoji": "🔧",
+          "requirements": {
+            "stamina_cost": 15
+          },
+          "outcomes": [
+            {
+              "probability": 65,
+              "type": "successful_salvage",
+              "description": "You recover useful materials and supplies from the abandoned camp.",
+              "rewards": {
+                "items": ["tent_materials", "cooking_equipment", "tools", "rope"],
+                "experience": 10
+              }
+            },
+            {
+              "probability": 25,
+              "type": "booby_trap",
+              "description": "Some supplies were booby-trapped by the former inhabitants.",
+              "rewards": {
+                "items": ["damaged_supplies"]
+              },
+              "consequences": {
+                "health_loss": 12,
+                "noise_level": "medium"
+              }
+            },
+            {
+              "probability": 10,
+              "type": "survivor_return",
+              "description": "While salvaging, you're confronted by a returning survivor who claims ownership.",
+              "consequences": {
+                "trigger_event": "ownership_dispute",
+                "npc_spawn": true,
+                "npc_disposition": "aggressive"
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_005_c",
+          "text": "Pay respects and move on",
+          "emoji": "🙏",
+          "requirements": {
+            "stamina_cost": 3
+          },
+          "outcomes": [
+            {
+              "probability": 100,
+              "type": "respectful_departure",
+              "description": "You take a moment to honor the fallen and learn from their fate.",
+              "rewards": {
+                "experience": 8,
+                "morale_gain": 5
+              },
+              "consequences": {
+                "wisdom_gain": true,
+                "karma_positive": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global_modifiers": {
+    "weather_effects": {
+      "storm": {
+        "exploration_chance": -30,
+        "danger_increase": 20
+      },
+      "fog": {
+        "discovery_chance": -15,
+        "stealth_bonus": 25
+      },
+      "clear": {
+        "exploration_chance": 10,
+        "visibility_bonus": 20
+      }
+    },
+    "seasonal_effects": {
+      "winter": {
+        "exploration_difficulty": 25,
+        "resource_scarcity": 30
+      },
+      "spring": {
+        "exploration_bonus": 15,
+        "growth_events": 20
+      },
+      "summer": {
+        "exploration_range": 20,
+        "heat_stress": 15
+      },
+      "fall": {
+        "preparation_events": 25,
+        "resource_abundance": 10
+      }
+    },
+    "faction_modifiers": {
+      "high_reputation": {
+        "safe_passage": 30,
+        "information_access": 25
+      },
+      "low_reputation": {
+        "hostility_chance": 40,
+        "resource_denial": 20
+      }
+    }
+  }
+} 

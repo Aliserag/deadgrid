@@ -1,0 +1,98 @@
+{
+  "name": "Carnival of the Damned",
+  "theme": "amusement park",
+  "description": "Once a vibrant amusement park, now a decaying playground for the infected. The rusting roller coasters loom like skeletal remains, while fungal growths pulsate through the ticket booths. The carnival games now serve as macabre traps, and the Ferris wheel creaks ominously in the wind. Survivors whisper about something unnatural lurking in the funhouse mirrors.",
+  "size": "medium",
+  "dimensions": [
+    30,
+    15
+  ],
+  "points_of_interest": [
+    {
+      "name": "Main Gate",
+      "type": "commercial",
+      "description": "Collapsed ticket booths with fungal vines growing through the turnstiles",
+      "coords": [
+        2,
+        7
+      ],
+      "symbol": "G"
+    },
+    {
+      "name": "Haunted Mansion",
+      "type": "attraction",
+      "description": "Now actually haunted by fungal-infected former employees",
+      "coords": [
+        8,
+        3
+      ],
+      "symbol": "H"
+    },
+    {
+      "name": "Ferris Wheel",
+      "type": "attraction",
+      "description": "Partially collapsed, with infected trapped in some gondolas",
+      "coords": [
+        20,
+        2
+      ],
+      "symbol": "F"
+    },
+    {
+      "name": "Food Court",
+      "type": "commercial",
+      "description": "Rotten concession stands that might still contain canned goods",
+      "coords": [
+        15,
+        10
+      ],
+      "symbol": "C"
+    },
+    {
+      "name": "Roller Coaster",
+      "type": "attraction",
+      "description": "Twisted metal track with infected hanging from the loops",
+      "coords": [
+        25,
+        5
+      ],
+      "symbol": "R"
+    },
+    {
+      "name": "Funhouse",
+      "type": "attraction",
+      "description": "Distorted mirrors hide something unnatural in the reflections",
+      "coords": [
+        10,
+        12
+      ],
+      "symbol": "M"
+    },
+    {
+      "name": "Maintenance Shed",
+      "type": "industrial",
+      "description": "Potential tools and parts, but watch for infected workers",
+      "coords": [
+        28,
+        13
+      ],
+      "symbol": "S"
+    }
+  ],
+  "danger_level": 7,
+  "resources": [
+    "canned food",
+    "tools",
+    "melee weapons",
+    "medical supplies",
+    "mechanical parts"
+  ],
+  "special_features": [
+    "fungal growths that react to movement",
+    "distorted funhouse mirrors that show glimpses of the future",
+    "roller coaster that can be used as an escape route"
+  ],
+  "ascii_map": "##############################\n#          F       R       #\n#  H       ##      #       #\n# #######  #       #       #\n# #     #  #       #       #\n# #     #  #       ####### #\n#G      #  #             . #\n##########  #       C     .#\n#          ###           .#\n#   .      M  #          .#\n#   .......   #   ....... #\n#            ###          #\n#               S        .#\n#                        .#\n##############################",
+  "id": "map_6",
+  "discovered_day": 39
+}

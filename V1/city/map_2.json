@@ -1,0 +1,66 @@
+{
+  "name": "Fungal Overgrowth District",
+  "theme": "urban district",
+  "description": "A once-bustling commercial block now consumed by pulsating fungal growths. The skeletal remains of storefronts peek through veils of bioluminescent tendrils. Underground tunnels breathe beneath cracked pavement, their metallic groans echoing through the ruins. The air hums with dangerous spores that cling to every surface.",
+  "size": "small",
+  "dimensions": [
+    20,
+    10
+  ],
+  "points_of_interest": [
+    {
+      "name": "Pharmacy Ruins",
+      "type": "commercial",
+      "description": "Shattered medicine cabinets with some intact supplies behind fungal barriers",
+      "coords": [
+        3,
+        2
+      ],
+      "symbol": "P"
+    },
+    {
+      "name": "Subway Breach",
+      "type": "industrial",
+      "description": "Collapsed tunnel entrance with faint glowing tendrils reaching upward",
+      "coords": [
+        15,
+        7
+      ],
+      "symbol": "S"
+    },
+    {
+      "name": "Infested Apartments",
+      "type": "residential",
+      "description": "Three-story building with fungal vines bursting through windows",
+      "coords": [
+        8,
+        5
+      ],
+      "symbol": "A"
+    },
+    {
+      "name": "Emergency Broadcast Tower",
+      "type": "industrial",
+      "description": "Tilted metal structure still emitting sporadic static",
+      "coords": [
+        18,
+        1
+      ],
+      "symbol": "E"
+    }
+  ],
+  "danger_level": 8,
+  "resources": [
+    "medical supplies",
+    "scrap metal",
+    "batteries",
+    "canned food"
+  ],
+  "special_features": [
+    "Bioluminescent fungal growths that pulse at night",
+    "Underground tremors every 2-3 hours",
+    "Spore clouds that reduce visibility"
+  ],
+  "ascii_map": "####################\n# E      #   P    #\n# ###### # ##### #\n# #    # #     # #\n# #    ###     # #\n# A    #       # #\n#      #   S   # #\n### ############ #\n#                #\n####################",
+  "id": "map_2"
+}

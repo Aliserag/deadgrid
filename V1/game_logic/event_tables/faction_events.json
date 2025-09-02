@@ -1,0 +1,608 @@
+{
+  "faction_events": [
+    {
+      "id": "faction_001",
+      "name": "Trade Dispute",
+      "emoji": "⚖️",
+      "description": "Two factions are arguing over trade route rights through your territory. Both sides want your support.",
+      "triggers": {
+        "min_factions": 2,
+        "min_day": 20,
+        "player_territory": true,
+        "faction_relations": {
+          "any_hostile": true
+        }
+      },
+      "weight": 20,
+      "choices": [
+        {
+          "id": "choice_faction_001_a",
+          "text": "Support the stronger faction",
+          "emoji": "💪",
+          "requirements": {},
+          "outcomes": [
+            {
+              "probability": 70,
+              "type": "diplomatic_success",
+              "description": "The stronger faction appreciates your support and grants you favorable trade terms.",
+              "rewards": {
+                "faction_reputation": {
+                  "stronger_faction": 30
+                },
+                "items": ["trade_goods", "protection_contract"],
+                "experience": 15
+              },
+              "consequences": {
+                "faction_reputation": {
+                  "weaker_faction": -20
+                },
+                "trigger_event": "faction_rivalry"
+              }
+            },
+            {
+              "probability": 30,
+              "type": "backfire",
+              "description": "The stronger faction takes your support for granted and offers poor terms.",
+              "rewards": {
+                "faction_reputation": {
+                  "stronger_faction": 10
+                }
+              },
+              "consequences": {
+                "faction_reputation": {
+                  "weaker_faction": -15
+                },
+                "morale_loss": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_001_b",
+          "text": "Support the underdog",
+          "emoji": "🤝",
+          "requirements": {},
+          "outcomes": [
+            {
+              "probability": 60,
+              "type": "loyalty_gained",
+              "description": "The weaker faction is extremely grateful for your support and becomes a loyal ally.",
+              "rewards": {
+                "faction_reputation": {
+                  "weaker_faction": 40
+                },
+                "items": ["loyalty_token", "emergency_aid"],
+                "experience": 20
+              },
+              "consequences": {
+                "faction_reputation": {
+                  "stronger_faction": -25
+                },
+                "future_support": "weaker_faction"
+              }
+            },
+            {
+              "probability": 40,
+              "type": "crushing_defeat",
+              "description": "Despite your support, the weaker faction is crushed, and you're marked as an enemy.",
+              "consequences": {
+                "faction_reputation": {
+                  "stronger_faction": -40,
+                  "weaker_faction": -10
+                },
+                "threat_level_increase": 15,
+                "trigger_event": "faction_vendetta"
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_001_c",
+          "text": "Propose a compromise",
+          "emoji": "🕊️",
+          "requirements": {
+            "skills": ["negotiation", "diplomacy"]
+          },
+          "outcomes": [
+            {
+              "probability": 50,
+              "type": "diplomatic_triumph",
+              "description": "Your compromise satisfies both factions and establishes you as a respected mediator.",
+              "rewards": {
+                "faction_reputation": {
+                  "all_factions": 20
+                },
+                "items": ["mediator_badge", "diplomatic_immunity"],
+                "experience": 30,
+                "reputation_bonus": "diplomat"
+              }
+            },
+            {
+              "probability": 30,
+              "type": "partial_success",
+              "description": "The compromise works temporarily, but tensions remain high.",
+              "rewards": {
+                "faction_reputation": {
+                  "all_factions": 10
+                },
+                "experience": 15
+              },
+              "consequences": {
+                "future_event_chance": 25,
+                "trigger_event": "renewed_tensions"
+              }
+            },
+            {
+              "probability": 20,
+              "type": "rejected_mediation",
+              "description": "Both factions reject your compromise and view you as naive.",
+              "consequences": {
+                "faction_reputation": {
+                  "all_factions": -10
+                },
+                "morale_loss": 15
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faction_002",
+      "name": "Faction Merger Proposal",
+      "emoji": "🤝",
+      "description": "A smaller faction approaches you with a proposal to merge with your group for mutual protection and resource sharing.",
+      "triggers": {
+        "min_day": 30,
+        "player_reputation": "positive",
+        "camp_established": true,
+        "faction_relations": {
+          "any_positive": true
+        }
+      },
+      "weight": 12,
+      "choices": [
+        {
+          "id": "choice_faction_002_a",
+          "text": "Accept the merger",
+          "emoji": "✅",
+          "requirements": {
+            "resources": {
+              "food": 50,
+              "space": 10
+            }
+          },
+          "outcomes": [
+            {
+              "probability": 70,
+              "type": "successful_integration",
+              "description": "The merger goes smoothly, significantly strengthening your group.",
+              "rewards": {
+                "survivors": 8,
+                "items": ["faction_resources", "specialized_equipment"],
+                "skills_unlocked": ["faction_specialties"],
+                "experience": 25
+              },
+              "consequences": {
+                "resource_consumption_increase": 30,
+                "management_complexity": 15
+              }
+            },
+            {
+              "probability": 20,
+              "type": "cultural_clash",
+              "description": "Integration is difficult due to conflicting values and methods.",
+              "rewards": {
+                "survivors": 5,
+                "items": ["basic_supplies"]
+              },
+              "consequences": {
+                "morale_loss": 20,
+                "internal_conflict": true,
+                "trigger_event": "integration_problems"
+              }
+            },
+            {
+              "probability": 10,
+              "type": "infiltration",
+              "description": "The merger was a ruse - some members are spies from a hostile faction.",
+              "rewards": {
+                "survivors": 3
+              },
+              "consequences": {
+                "security_breach": true,
+                "trust_loss": 30,
+                "trigger_event": "spy_network"
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_002_b",
+          "text": "Propose an alliance instead",
+          "emoji": "🤝",
+          "requirements": {},
+          "outcomes": [
+            {
+              "probability": 80,
+              "type": "alliance_formed",
+              "description": "You form a strong alliance while maintaining independence.",
+              "rewards": {
+                "faction_reputation": {
+                  "proposing_faction": 35
+                },
+                "items": ["alliance_treaty", "mutual_aid_pact"],
+                "experience": 20
+              },
+              "consequences": {
+                "alliance_obligations": true,
+                "shared_enemies": true
+              }
+            },
+            {
+              "probability": 20,
+              "type": "disappointed_rejection",
+              "description": "The faction wanted full merger and feels rejected by your counter-proposal.",
+              "consequences": {
+                "faction_reputation": {
+                  "proposing_faction": -15
+                },
+                "missed_opportunity": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_002_c",
+          "text": "Decline politely",
+          "emoji": "🙏",
+          "requirements": {},
+          "outcomes": [
+            {
+              "probability": 60,
+              "type": "respectful_decline",
+              "description": "The faction understands your position and maintains friendly relations.",
+              "rewards": {
+                "faction_reputation": {
+                  "proposing_faction": 5
+                },
+                "experience": 8
+              }
+            },
+            {
+              "probability": 40,
+              "type": "desperate_faction",
+              "description": "The faction was desperate and your rejection leaves them vulnerable to enemies.",
+              "consequences": {
+                "faction_reputation": {
+                  "proposing_faction": -10
+                },
+                "trigger_event": "faction_collapse",
+                "guilt_burden": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faction_003",
+      "name": "Faction War Outbreak",
+      "emoji": "⚔️",
+      "description": "Two major factions have declared war on each other. The conflict is escalating and both sides are pressuring neutrals to choose a side.",
+      "triggers": {
+        "min_factions": 3,
+        "min_day": 45,
+        "faction_relations": {
+          "hostile_pairs": 1
+        }
+      },
+      "weight": 8,
+      "choices": [
+        {
+          "id": "choice_faction_003_a",
+          "text": "Join the war on the stronger side",
+          "emoji": "⚔️",
+          "requirements": {
+            "military_strength": 15
+          },
+          "outcomes": [
+            {
+              "probability": 60,
+              "type": "victorious_alliance",
+              "description": "Your side wins the war and you're rewarded for your loyalty.",
+              "rewards": {
+                "faction_reputation": {
+                  "allied_faction": 50
+                },
+                "items": ["war_spoils", "territory_rights", "military_honors"],
+                "experience": 40
+              },
+              "consequences": {
+                "faction_reputation": {
+                  "enemy_faction": -60
+                },
+                "war_veteran_status": true
+              }
+            },
+            {
+              "probability": 25,
+              "type": "pyrrhic_victory",
+              "description": "Your side wins but at great cost. The victory feels hollow.",
+              "rewards": {
+                "faction_reputation": {
+                  "allied_faction": 30
+                },
+                "items": ["damaged_spoils"],
+                "experience": 25
+              },
+              "consequences": {
+                "survivors_lost": 3,
+                "morale_loss": 20,
+                "trauma_effects": true
+              }
+            },
+            {
+              "probability": 15,
+              "type": "devastating_defeat",
+              "description": "Your side loses catastrophically. You barely escape with your life.",
+              "consequences": {
+                "faction_reputation": {
+                  "allied_faction": -20,
+                  "enemy_faction": -40
+                },
+                "survivors_lost": 5,
+                "resources_lost": 50,
+                "trigger_event": "war_refugee"
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_003_b",
+          "text": "Remain neutral and offer aid to civilians",
+          "emoji": "🏥",
+          "requirements": {
+            "medical_supplies": 20
+          },
+          "outcomes": [
+            {
+              "probability": 70,
+              "type": "humanitarian_respect",
+              "description": "Both sides respect your humanitarian efforts and leave you alone.",
+              "rewards": {
+                "faction_reputation": {
+                  "all_factions": 15
+                },
+                "items": ["humanitarian_recognition", "refugee_gratitude"],
+                "experience": 30,
+                "moral_authority": 25
+              }
+            },
+            {
+              "probability": 30,
+              "type": "targeted_neutrality",
+              "description": "One faction sees your neutrality as supporting their enemies.",
+              "rewards": {
+                "faction_reputation": {
+                  "one_faction": 20
+                }
+              },
+              "consequences": {
+                "faction_reputation": {
+                  "other_faction": -30
+                },
+                "threat_level_increase": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_003_c",
+          "text": "Evacuate to avoid the conflict",
+          "emoji": "🏃",
+          "requirements": {
+            "transportation": true
+          },
+          "outcomes": [
+            {
+              "probability": 80,
+              "type": "successful_evacuation",
+              "description": "You successfully relocate to a safer area away from the conflict.",
+              "rewards": {
+                "experience": 15,
+                "new_territory": true
+              },
+              "consequences": {
+                "territory_lost": true,
+                "faction_reputation": {
+                  "all_factions": -5
+                },
+                "relocation_costs": 30
+              }
+            },
+            {
+              "probability": 20,
+              "type": "caught_in_crossfire",
+              "description": "You're caught in the conflict while trying to evacuate.",
+              "consequences": {
+                "survivors_lost": 2,
+                "resources_lost": 25,
+                "trigger_combat": "faction_soldiers"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faction_004",
+      "name": "Faction Defector",
+      "emoji": "🏃‍♂️",
+      "description": "A high-ranking member of a faction approaches you secretly, offering valuable intelligence in exchange for protection from their former allies.",
+      "triggers": {
+        "min_day": 25,
+        "faction_relations": {
+          "any_negative": true
+        }
+      },
+      "weight": 15,
+      "choices": [
+        {
+          "id": "choice_faction_004_a",
+          "text": "Accept the defector",
+          "emoji": "🤝",
+          "requirements": {
+            "security_level": 10
+          },
+          "outcomes": [
+            {
+              "probability": 60,
+              "type": "valuable_intelligence",
+              "description": "The defector provides crucial intelligence about faction operations and weaknesses.",
+              "rewards": {
+                "items": ["faction_intelligence", "strategic_maps", "contact_lists"],
+                "experience": 25,
+                "knowledge_gain": "faction_secrets"
+              },
+              "consequences": {
+                "faction_reputation": {
+                  "defector_faction": -40
+                },
+                "target_status": true,
+                "protection_obligation": true
+              }
+            },
+            {
+              "probability": 25,
+              "type": "double_agent",
+              "description": "The defector is actually a double agent feeding information back to their faction.",
+              "consequences": {
+                "security_breach": true,
+                "faction_reputation": {
+                  "defector_faction": -20
+                },
+                "intelligence_compromised": true,
+                "trigger_event": "infiltration_discovered"
+              }
+            },
+            {
+              "probability": 15,
+              "type": "assassination_target",
+              "description": "The defector is assassinated before they can share much information.",
+              "rewards": {
+                "items": ["partial_intelligence"]
+              },
+              "consequences": {
+                "morale_loss": 15,
+                "security_concerns": true,
+                "trigger_event": "faction_assassins"
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_004_b",
+          "text": "Report the defector to their faction",
+          "emoji": "📞",
+          "requirements": {
+            "communication_device": true
+          },
+          "outcomes": [
+            {
+              "probability": 70,
+              "type": "faction_gratitude",
+              "description": "The faction is grateful for your loyalty and rewards you handsomely.",
+              "rewards": {
+                "faction_reputation": {
+                  "defector_faction": 35
+                },
+                "items": ["loyalty_reward", "faction_favor"],
+                "experience": 20
+              },
+              "consequences": {
+                "reputation_boost": "trustworthy",
+                "missed_intelligence": true
+              }
+            },
+            {
+              "probability": 30,
+              "type": "faction_suspicion",
+              "description": "The faction wonders why the defector approached you in the first place.",
+              "rewards": {
+                "faction_reputation": {
+                  "defector_faction": 15
+                }
+              },
+              "consequences": {
+                "faction_surveillance": true,
+                "trust_questioned": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice_faction_004_c",
+          "text": "Refuse involvement",
+          "emoji": "🚫",
+          "requirements": {},
+          "outcomes": [
+            {
+              "probability": 80,
+              "type": "neutral_stance",
+              "description": "You avoid getting involved in faction politics and maintain neutrality.",
+              "rewards": {
+                "experience": 5
+              },
+              "consequences": {
+                "missed_opportunity": true,
+                "reputation_neutral": true
+              }
+            },
+            {
+              "probability": 20,
+              "type": "defector_revenge",
+              "description": "The rejected defector becomes hostile and spreads rumors about you.",
+              "consequences": {
+                "faction_reputation": {
+                  "random_factions": -10
+                },
+                "reputation_damage": "unreliable"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faction_relationship_modifiers": {
+    "alliance": {
+      "reputation_bonus": 25,
+      "trade_bonus": 30,
+      "military_support": true
+    },
+    "neutral": {
+      "reputation_bonus": 0,
+      "trade_bonus": 0,
+      "military_support": false
+    },
+    "hostile": {
+      "reputation_bonus": -25,
+      "trade_penalty": -50,
+      "attack_chance": 15
+    },
+    "war": {
+      "reputation_bonus": -50,
+      "trade_penalty": -100,
+      "attack_chance": 40
+    }
+  },
+  "reputation_thresholds": {
+    "trusted_ally": 75,
+    "friendly": 50,
+    "neutral": 0,
+    "suspicious": -25,
+    "hostile": -50,
+    "enemy": -75
+  }
+} 

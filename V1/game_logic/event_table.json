@@ -1,0 +1,15 @@
+{
+  "night_actions": ["scavenge", "rest", "defend", "craft", "signal"],
+  "events": [
+    {"name": "raider_attack", "chance": 0.12},
+    {"name": "stranger_offers_help", "chance": 0.09},
+    {"name": "hallucination", "chance": 0.07},
+    {"name": "supply_drop", "chance": 0.10},
+    {"name": "base_fire", "chance": 0.05},
+    {"name": "new_faction_sighting", "chance": 0.05},
+    {"name": "discovered_artifact", "chance": 0.05},
+    {"name": "gear_buff", "chance": 0.07},
+    {"name": "build_structure", "chance": 0.10},
+    {"name": "nothing", "chance": 0.30}
+  ]
+}

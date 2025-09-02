@@ -1,0 +1,72 @@
+{
+  "active": [],
+  "completed": [],
+  "quests": [
+    {
+      "title": "Signal in the Static",
+      "description": "A faint radio signal cuts through the fungal interference\u2014someone is broadcasting from the old subway control room. They're asking for spare parts to boost their signal. Deliver the requested components before their batteries die.",
+      "type": "delivery",
+      "difficulty": 2,
+      "time_limit": 1,
+      "objectives": [
+        {
+          "description": "Retrieve a functioning radio capacitor from the abandoned tech stall in Concourse B",
+          "completed": false
+        },
+        {
+          "description": "Deliver the capacitor to the marked control room before the signal cuts out",
+          "completed": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "information",
+          "description": "Access to a new safe zone frequency and partial subway system maps"
+        },
+        {
+          "type": "resource",
+          "description": "Reward of 3 antibiotic tablets (rare medical item)"
+        }
+      ],
+      "failure_consequences": "The signal goes dark permanently, locking away potential ally locations and resources",
+      "follow_up": "The broadcaster may request help fortifying their position after establishing contact",
+      "notes": "Watch for fungal growths near electronics\u2014they cause hallucinations. The tech stall is guarded by a single dormant 'Husher' zombie (slow but deadly in enclosed spaces).",
+      "id": "quest_1",
+      "status": "available",
+      "progress": 0,
+      "day_started": 22,
+      "discovered_day": 22
+    },
+    {
+      "title": "Fungal Whispers",
+      "description": "A faint distress signal crackles over your radio\u2014someone is trapped in the fungal-infested subway tunnels near Central Station. They claim to have vital information about the glowing growths, but their signal is fading fast.",
+      "type": "rescue",
+      "difficulty": 3,
+      "time_limit": 1,
+      "objectives": [
+        {
+          "description": "Navigate the fungal tunnels to locate the source of the distress signal before the survivor succumbs to the spores.",
+          "completed": false
+        }
+      ],
+      "rewards": [
+        {
+          "type": "information",
+          "description": "Clues about the origin and behavior of the bioluminescent fungus, potentially revealing weak points or useful properties."
+        },
+        {
+          "type": "resource",
+          "description": "The survivor's small stash of medical supplies as gratitude."
+        }
+      ],
+      "failure_consequences": "The survivor is consumed by the fungal growths, their knowledge lost. The fungal patches in the area become more aggressive for 24 hours.",
+      "follow_up": "The survivor may lead you to a hidden research outpost studying the fungus, if kept alive.",
+      "notes": "The fungal patches react to movement\u2014move slowly to avoid triggering spore bursts. The survivor's location is marked by a flickering emergency light.",
+      "id": "quest_2",
+      "status": "available",
+      "progress": 0,
+      "day_started": 23,
+      "discovered_day": 23
+    }
+  ]
+}
