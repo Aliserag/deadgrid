@@ -1,0 +1,2179 @@
+{
+  "locations": [
+    {
+      "name": "Abandoned Mega Mart",
+      "description": "A once-bustling retail giant now stands as a hollow shell of consumerism, its automatic doors permanently jammed open. The flickering emergency lights cast eerie shadows across overturned shopping carts and scattered debris. The faint smell of rotting produce mixes with something more sinister deeper in the store.",
+      "type": "commercial",
+      "danger_level": 7,
+      "resources": [],
+      "features": [
+        "Collapsed shelving creating hazardous pathways",
+        "Bloody handprints leading to the stockroom",
+        "Shattered glass everywhere from looted electronics section"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "Rumored manager's office safe still intact behind barricaded door"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Stockroom Stalkers (zombies that hide in shelves and ambush survivors)"
+        ]
+      },
+      "id": "loc_1",
+      "coords": [
+        0,
+        0
+      ],
+      "buildings": [
+        {
+          "name": "Abandoned Mega Mart Warehouse",
+          "description": "A sprawling, intact warehouse that once served as the storage hub for a massive retail chain. The interior is a maze of towering shelves, stacked with remnants of pre-apocalypse goods. Flickering emergency lights cast long shadows, and the air smells of dust and decay. The building is eerily quiet, save for the occasional creak of metal or distant shuffling.",
+          "floors": 1,
+          "layout": "+----------------------+\n|  OFFICE  |  BREAK   |\n|          |  ROOM    |\n+-----+----+-----+----+\n|  LOADING  |  MAIN    |\n|  DOCK     |  STORAGE |\n|           |  AREA    |\n+----------------------+",
+          "rooms": [
+            {
+              "name": "Main Storage Area",
+              "description": "A vast open space filled with rows of metal shelves, some toppled over. Crates and boxes are scattered haphazardly.",
+              "contents": [
+                "Pallets of canned goods",
+                "Broken electronics",
+                "Dented metal shelves",
+                "Dusty tarps"
+              ]
+            },
+            {
+              "name": "Loading Dock",
+              "description": "A large area with roll-up doors, where trucks once unloaded merchandise. A few abandoned forklifts sit idle.",
+              "contents": [
+                "Rusted forklifts",
+                "Pallets",
+                "Broken loading equipment",
+                "Dried bloodstains"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "A small, cluttered room with a desk and filing cabinets. Papers are strewn everywhere.",
+              "contents": [
+                "Desk",
+                "Filing cabinets",
+                "Old computer",
+                "Faded paperwork"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "A dingy room with a few tables and chairs. A broken vending machine stands in the corner.",
+              "contents": [
+                "Tables and chairs",
+                "Broken vending machine",
+                "Old coffee maker",
+                "Moldy food wrappers"
+              ]
+            }
+          ],
+          "dangers": [
+            "Zombies lurking behind shelves",
+            "Unstable stacks of crates",
+            "Broken glass",
+            "Dark corners with limited visibility"
+          ],
+          "resources": [
+            "Canned food",
+            "Tools",
+            "Batteries",
+            "Medical supplies",
+            "Clothing"
+          ],
+          "special_features": [
+            "High ceilings with catwalks",
+            "Emergency lighting still functional",
+            "Heavy machinery that could be repurposed"
+          ],
+          "id": "bldg_927",
+          "location_id": "loc_1"
+        }
+      ]
+    },
+    {
+      "name": "Sunset Ridge Subdivision",
+      "description": "A quiet suburban neighborhood frozen in time, with overgrown lawns and abandoned bicycles still lying in driveways. Most houses remain intact though some show signs of forced entry and struggle. The occasional wind chime creates an eerie soundtrack to the apocalypse.",
+      "type": "residential",
+      "danger_level": 2,
+      "resources": [
+        "canned food",
+        "first aid supplies",
+        "tools",
+        "clean linens"
+      ],
+      "features": [
+        "well-maintained community garden",
+        "partially boarded-up houses",
+        "functional rainwater collection system"
+      ],
+      "symbol": "H",
+      "secrets": [
+        "One basement contains a survivor's detailed apocalypse journal"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_2",
+      "coords": [
+        0,
+        0
+      ],
+      "buildings": [
+        {
+          "name": "Sunset Ridge Apartments",
+          "description": "A well-preserved apartment complex in the Sunset Ridge Subdivision, this building has remained largely untouched by the chaos outside. The exterior is clean, and the interior shows signs of recent habitation before being abandoned. Faded posters and scattered personal items hint at the lives once lived here. The building offers a relatively safe haven with multiple entry points and clear lines of sight.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+--------+--------+--------+\n|        |        |        |\n|  Lobby | Stairs |  Mail  |\n|        |        |  Room  |\n+--------+--------+--------+\n|        |        |        |\n|  Apt   |  Hall  |  Apt   |\n|  101   |  Way   |  102   |\n+--------+--------+--------+\n\nUpper Floors (2-3):\n+--------+--------+--------+\n|        |        |        |\n|  Apt   | Stairs |  Apt   |\n|  201/301|        | 202/302|\n+--------+--------+--------+\n|        |        |        |\n|  Apt   |  Hall  |  Apt   |\n|  203/303|  Way   | 204/304|\n+--------+--------+--------+",
+          "rooms": [
+            {
+              "name": "Lobby",
+              "description": "The main entrance area with a front desk and seating area.",
+              "contents": [
+                "Broken security camera",
+                "Scattered newspapers",
+                "Empty water cooler"
+              ]
+            },
+            {
+              "name": "Mail Room",
+              "description": "A small room with mailboxes and package storage.",
+              "contents": [
+                "Unopened packages",
+                "Rusted keys",
+                "Piles of junk mail"
+              ]
+            },
+            {
+              "name": "Apartment Units",
+              "description": "Standard living spaces with bedrooms, kitchens, and bathrooms.",
+              "contents": [
+                "Furniture",
+                "Personal belongings",
+                "Kitchen supplies",
+                "Medications"
+              ]
+            },
+            {
+              "name": "Stairwell",
+              "description": "Central staircase connecting all floors.",
+              "contents": [
+                "Emergency exit signs",
+                "Fire extinguisher",
+                "Graffiti"
+              ]
+            }
+          ],
+          "dangers": [
+            "Potential zombie horde in dark corners",
+            "Trip hazards from debris",
+            "Weak floorboards in some units"
+          ],
+          "resources": [
+            "Canned food in apartments",
+            "First aid kits",
+            "Tools in maintenance closet",
+            "Bottled water"
+          ],
+          "special_features": [
+            "Functional elevators (power-dependent)",
+            "Rooftop access with good vantage points",
+            "Some units have working gas stoves"
+          ],
+          "id": "bldg_490",
+          "location_id": "loc_2"
+        },
+        {
+          "name": "Sunset Ridge Apartments",
+          "description": "A fortified apartment building in the Sunset Ridge Subdivision, its exterior reinforced with metal barricades and boarded-up windows. The interior shows signs of previous habitation, with makeshift defenses and scavenged supplies. The upper floors provide a vantage point for spotting threats, while the ground floor remains heavily secured.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+--------+--------+\n|  Lobby | Stairs |\n+--------+--------+\n|  Apt 1 |  Apt 2 |\n+--------+--------+\n\nUpper Floors:\n+--------+--------+\n|  Apt 3 |  Apt 4 |\n+--------+--------+\n|  Apt 5 |  Apt 6 |\n+--------+--------+",
+          "rooms": [
+            {
+              "name": "Lobby",
+              "description": "The main entrance area, barricaded with furniture and sandbags.",
+              "contents": [
+                "Barricades",
+                "Broken security camera",
+                "Fallen chairs",
+                "Bloodstains"
+              ]
+            },
+            {
+              "name": "Apartment 1",
+              "description": "A ransacked living space, likely used as a storage area by survivors.",
+              "contents": [
+                "Empty crates",
+                "Dented metal shelves",
+                "Pile of old clothes",
+                "Rusted tools"
+              ]
+            },
+            {
+              "name": "Apartment 2",
+              "description": "A fortified sleeping area with mattresses on the floor.",
+              "contents": [
+                "Mattresses",
+                "Candles",
+                "Handwritten notes",
+                "Improvised weapons"
+              ]
+            },
+            {
+              "name": "Apartment 3",
+              "description": "A lookout post with a clear view of the surrounding streets.",
+              "contents": [
+                "Binoculars",
+                "Drawn maps",
+                "Empty food cans",
+                "Rope ladder"
+              ]
+            },
+            {
+              "name": "Apartment 4",
+              "description": "A makeshift medical area with limited supplies.",
+              "contents": [
+                "Bandages",
+                "Alcohol bottles",
+                "Splints",
+                "Bloody rags"
+              ]
+            },
+            {
+              "name": "Apartment 5",
+              "description": "A scavenged kitchen with a broken stove.",
+              "contents": [
+                "Canned food",
+                "Water jugs",
+                "Cracked pots",
+                "Dull knives"
+              ]
+            },
+            {
+              "name": "Apartment 6",
+              "description": "A collapsed room with a hole in the ceiling.",
+              "contents": [
+                "Broken furniture",
+                "Exposed wires",
+                "Pile of rubble",
+                "Rat traps"
+              ]
+            }
+          ],
+          "dangers": [
+            "Collapsing floor in Apartment 6",
+            "Zombies trapped in stairwell",
+            "Booby-trapped lobby entrance",
+            "Unstable barricades"
+          ],
+          "resources": [
+            "Canned food in Apartment 5",
+            "Medical supplies in Apartment 4",
+            "Binoculars in Apartment 3",
+            "Improvised weapons in Apartment 2"
+          ],
+          "special_features": [
+            "Rooftop access for scouting",
+            "Barricaded windows with firing slits",
+            "Graffiti warnings on walls"
+          ],
+          "id": "bldg_913",
+          "location_id": "loc_2"
+        }
+      ]
+    },
+    {
+      "name": "Rustbelt Tool & Die",
+      "description": "A small manufacturing plant that once produced precision machine parts, now silent except for the occasional creak of metal settling. The skeletal remains of industrial equipment loom in the dim light filtering through broken skylights. A thin layer of metal dust coats every surface, muffling footsteps.",
+      "type": "industrial",
+      "danger_level": 2,
+      "resources": [
+        "scrap metal",
+        "industrial lubricants",
+        "tool fragments",
+        "steel cables"
+      ],
+      "features": [
+        "overhead crane system",
+        "partially disassembled machinery",
+        "employee break room with intact vending machine"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "hidden safe in manager's office containing emergency cash"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "rusted zombies (covered in metal shards)"
+        ]
+      },
+      "id": "loc_3",
+      "coords": [
+        0,
+        0
+      ],
+      "buildings": [
+        {
+          "name": "Rustbelt Tool & Die",
+          "description": "A once-thriving industrial factory now stands as a fortified bastion against the undead. The reinforced steel doors and boarded-up windows suggest survivors have been here recently. The interior is a maze of machinery and makeshift barricades, with the faint smell of oil and decay lingering in the air. The upper floors provide a vantage point for scouting the surrounding area.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+----------------+\n| Office | Break |\n+--------+-------+\n| Main  | Storage|\n| Floor | Room  |\n+--------+-------+\n| Workshop | Exit |\n+----------------+\n\nUpper Floors:\n+----------------+\n| Catwalk | Sniper|\n|--------+ Nest  |\n| Storage| Lookout|\n+----------------+",
+          "rooms": [
+            {
+              "name": "Main Floor",
+              "description": "The heart of the factory, filled with heavy machinery and workbenches.",
+              "contents": [
+                "Industrial presses",
+                "Workbenches",
+                "Tool racks",
+                "Barricades"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "A small administrative area with a view of the main floor.",
+              "contents": [
+                "Desk",
+                "Filing cabinets",
+                "Broken computer",
+                "Survivor notes"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "A place where workers once took their breaks, now repurposed for survival.",
+              "contents": [
+                "Rusted fridge",
+                "Tables and chairs",
+                "Old coffee maker",
+                "First aid supplies"
+              ]
+            },
+            {
+              "name": "Storage Room",
+              "description": "Cluttered with spare parts and supplies, some still usable.",
+              "contents": [
+                "Metal scraps",
+                "Spare tools",
+                "Dusty crates",
+                "Rusted chains"
+              ]
+            },
+            {
+              "name": "Workshop",
+              "description": "A well-equipped area for repairing and crafting items.",
+              "contents": [
+                "Welding gear",
+                "Bench grinder",
+                "Toolboxes",
+                "Blueprint scraps"
+              ]
+            },
+            {
+              "name": "Catwalk",
+              "description": "A metal walkway overlooking the main floor, providing a strategic advantage.",
+              "contents": [
+                "Rusted railings",
+                "Overhead lights",
+                "Zipline anchor",
+                "Rope ladder"
+              ]
+            },
+            {
+              "name": "Sniper Nest",
+              "description": "A fortified position with a clear view of the surroundings.",
+              "contents": [
+                "Sandbags",
+                "Wooden crates",
+                "Empty shell casings",
+                "Binoculars"
+              ]
+            }
+          ],
+          "dangers": [
+            "Collapsing catwalks",
+            "Rusted metal edges",
+            "Zombies trapped in machinery",
+            "Booby traps set by survivors"
+          ],
+          "resources": [
+            "Industrial tools",
+            "Scrap metal",
+            "First aid supplies",
+            "Ammunition casings"
+          ],
+          "special_features": [
+            "Fortified entry points",
+            "Overhead catwalks for scouting",
+            "Workshop for crafting repairs",
+            "Sniper nest with vantage points"
+          ],
+          "id": "bldg_317",
+          "location_id": "loc_3"
+        }
+      ]
+    },
+    {
+      "name": "St. Marrow's Memorial Hospital",
+      "description": "A once-renowned medical facility now stands as a grim monument to the outbreak. The hallways are littered with overturned gurneys and shattered medical equipment, while the flickering fluorescent lights reveal disturbing stains on the walls. The pharmacy remains partially intact, though getting to it requires navigating through treacherous corridors.",
+      "type": "medical",
+      "danger_level": 6,
+      "resources": [
+        "medical supplies",
+        "painkillers",
+        "antibiotics",
+        "surgical tools"
+      ],
+      "features": [
+        "collapsed emergency room entrance",
+        "active backup generator",
+        "quarantine zone with broken containment"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "hidden research lab in basement"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "infected medical staff in hazmat suits"
+        ]
+      },
+      "id": "loc_4",
+      "coords": [
+        35,
+        9
+      ]
+    },
+    {
+      "name": "St. Marrow's Memorial Hospital",
+      "description": "A once-renowned medical facility now stands as a grim monument to the outbreak. The hallways are littered with overturned gurneys and shattered medical equipment, while the flickering fluorescent lights reveal disturbing stains on the walls. The pharmacy remains partially intact, though getting to it requires navigating through treacherous corridors.",
+      "type": "medical",
+      "danger_level": 6,
+      "resources": [
+        "medical supplies",
+        "painkillers",
+        "antibiotics",
+        "surgical tools"
+      ],
+      "features": [
+        "collapsed emergency room entrance",
+        "active backup generator",
+        "quarantine zone with broken containment"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "hidden research lab in basement"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "infected medical staff in hazmat suits"
+        ]
+      },
+      "id": "location_5",
+      "coords": [
+        35,
+        9
+      ],
+      "discovered_day": 11,
+      "visited": false
+    },
+    {
+      "name": "Midnight Mall",
+      "description": "A sprawling shopping complex frozen in time, its once-bright storefronts now dark and lifeless. The shattered glass ceilings let in eerie shafts of moonlight that illuminate the occasional abandoned kiosk or overturned fountain. The upper levels have partially collapsed, creating dangerous chokepoints and hidden pathways.",
+      "type": "commercial",
+      "danger_level": 6,
+      "resources": [
+        "camping supplies",
+        "non-perishable food",
+        "first aid kits",
+        "batteries"
+      ],
+      "features": [
+        "collapsed upper walkways creating vertical navigation challenges",
+        "emergency generator still holding some charge",
+        "security office with intact surveillance monitors"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A hidden panic room behind the manager's office containing valuable supplies"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Crawlers (zombies missing lower limbs)",
+          "Screamers (zombies that alert others when agitated)"
+        ]
+      },
+      "id": "loc_6",
+      "coords": [
+        39,
+        8
+      ],
+      "buildings": [
+        {
+          "name": "Midnight Mall Office Annex",
+          "description": "A partially collapsed office building attached to the Midnight Mall, its upper floors are unstable and littered with debris. The basement remains intact but is pitch-black and likely infested. Flickering emergency lights cast eerie shadows through broken cubicles and overturned furniture.",
+          "floors": 3,
+          "layout": "Ground Floor:\n+-------+-------+\n| RECEPT | HALL |\n+---+---+-------+\n| OFF | STAIRS |\n+---+---+-------+\n\nUpper Floors:\n+---+---+---+\n| O | O | O |\n+---+---+---+\n| O | S | O |\n+---+---+---+\n(Broken walls, partial collapse)",
+          "rooms": [
+            {
+              "name": "Reception Area",
+              "description": "Shattered glass doors, toppled security turnstiles, and bloodstained visitor logs. A zombie in a security uniform shambles behind the desk.",
+              "contents": [
+                "Broken computer",
+                "First aid kit (empty)",
+                "Security baton",
+                "Mall directory"
+              ]
+            },
+            {
+              "name": "Open Office Floor",
+              "description": "Cubicles knocked over like dominos, papers everywhere. A fire axe is embedded in a support beam where someone tried to barricade a door.",
+              "contents": [
+                "Overturned chairs",
+                "Filing cabinets (locked)",
+                "Emergency exit map",
+                "Coffee maker with mold"
+              ]
+            },
+            {
+              "name": "Basement Storage",
+              "description": "Pitch black except for faint light from broken pipes. The sound of dripping water masks shuffling footsteps in the dark.",
+              "contents": [
+                "Industrial shelving units",
+                "Leaking water heater",
+                "Janitorial supplies",
+                "Rat traps"
+              ]
+            }
+          ],
+          "dangers": [
+            "Collapsing floors",
+            "Zombies in ceiling crawlspaces",
+            "Broken glass everywhere",
+            "Gas leak from ruptured pipes"
+          ],
+          "resources": [
+            "Office first aid kits",
+            "Fire axe lodged in beam",
+            "Bottled water in breakroom",
+            "Basement generator (needs repair)"
+          ],
+          "special_features": [
+            "Direct underground access to mall via basement",
+            "Emergency stairwell doors welded shut from outside",
+            "Faint radio signals detectable near rooftop"
+          ],
+          "id": "bldg_666",
+          "location_id": "loc_6"
+        },
+        {
+          "name": "Midnight Mall Office Annex",
+          "description": "A surprisingly intact office building connected to the Midnight Mall, likely used for administrative purposes before the outbreak. The interior shows signs of a rushed evacuation with overturned furniture and scattered documents. Fluorescent lights flicker intermittently, casting eerie shadows through the glass-walled offices. A faint smell of stale coffee and mildew lingers in the air.",
+          "floors": 3,
+          "layout": "Floor 1:\n+--------+--------+\n| RECEPT | HALL   |\n|        |--------+\n|        | OFFICE |\n+--------+--------+\n\nFloor 2:\n+--------+--------+\n| CONF   | HALL   |\n|        |--------+\n|        | CUBES  |\n+--------+--------+\n\nFloor 3:\n+--------+--------+\n| EXEC   | HALL   |\n|        |--------+\n|        | BREAK  |\n+--------+--------+",
+          "rooms": [
+            {
+              "name": "Reception Area",
+              "description": "The welcoming area with a curved desk and visitor chairs now covered in dust. Security turnstiles stand frozen mid-rotation.",
+              "contents": [
+                "reception desk",
+                "broken computer",
+                "visitor logbook",
+                "dead potted plants"
+              ]
+            },
+            {
+              "name": "Main Hallway",
+              "description": "Central corridor connecting all areas, lined with motivational posters now peeling off the walls.",
+              "contents": [
+                "fire extinguisher",
+                "emergency exit map",
+                "water cooler",
+                "bulletin board"
+              ]
+            },
+            {
+              "name": "Manager's Office",
+              "description": "Corner office with floor-to-ceiling windows overlooking the parking lot. A leather chair lies on its side.",
+              "contents": [
+                "desk safe (locked)",
+                "liquor cabinet",
+                "plasma TV",
+                "executive desk set"
+              ]
+            },
+            {
+              "name": "Conference Room",
+              "description": "Large meeting space with a massive oval table. Projector screen shows the last PowerPoint presentation forever frozen mid-slide.",
+              "contents": [
+                "whiteboard",
+                "projector",
+                "coffee stains",
+                "abandoned briefcases"
+              ]
+            },
+            {
+              "name": "Cubicle Farm",
+              "description": "Open office space with dozens of identical workstations in various states of disarray.",
+              "contents": [
+                "ergonomic chairs",
+                "family photos",
+                "stale snacks",
+                "post-it notes"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "Small kitchenette area with appliances and plastic tables. The refrigerator door hangs open ominously.",
+              "contents": [
+                "microwave",
+                "coffee maker",
+                "vending machine",
+                "moldy leftovers"
+              ]
+            }
+          ],
+          "dangers": [
+            "Zombie office workers trapped in closed offices",
+            "Broken glass from shattered partitions",
+            "Unstable lighting fixtures",
+            "Trip hazards from scattered files and chairs"
+          ],
+          "resources": [
+            "First aid kit in reception",
+            "Bottled water in break room",
+            "Office supplies (paper, pens, scissors)",
+            "Potential weapons (letter openers, fire extinguisher)"
+          ],
+          "special_features": [
+            "Emergency stairwell provides safe vertical movement",
+            "Glass walls allow visibility but may shatter unexpectedly",
+            "Working intercom system that could be repurposed",
+            "Roof access from top floor for potential escape"
+          ],
+          "id": "bldg_296",
+          "location_id": "loc_6"
+        },
+        {
+          "name": "Midnight Mall Office Annex",
+          "description": "A surprisingly intact office building connected to the Midnight Mall, this annex served as administrative headquarters before the outbreak. The fluorescent lights still flicker intermittently, powered by an aging backup generator. Papers and office supplies are scattered across desks, suggesting a hurried evacuation. The air smells of stale coffee and dust.",
+          "floors": 3,
+          "layout": "Floor 1:\n+--------+--------+\n| RECEPT | HALL   |\n|        |--------|\n|        | OFFICE |\n+--------+--------+\n\nFloor 2:\n+--------+--------+\n| CONF   | CUBE   |\n| ROOM   | FARM   |\n+--------+--------+\n\nFloor 3:\n+--------+--------+\n| EXEC   | FILE   |\n| SUITE  | ROOM   |\n+--------+--------+",
+          "rooms": [
+            {
+              "name": "Reception Area",
+              "description": "The welcoming space with a curved desk and waiting chairs, now covered in dust.",
+              "contents": [
+                "reception desk",
+                "broken computer",
+                "visitor logbook",
+                "shattered nameplate"
+              ]
+            },
+            {
+              "name": "Main Hallway",
+              "description": "Central corridor connecting all ground floor rooms, with emergency lighting.",
+              "contents": [
+                "fire extinguisher",
+                "emergency exit map",
+                "overhead lights",
+                "scattered papers"
+              ]
+            },
+            {
+              "name": "Manager's Office",
+              "description": "Private office with large windows overlooking the mall parking lot.",
+              "contents": [
+                "desk with locked drawer",
+                "leather chair",
+                "wall safe",
+                "family photos"
+              ]
+            },
+            {
+              "name": "Conference Room",
+              "description": "Second floor meeting space with a long table and presentation equipment.",
+              "contents": [
+                "projector",
+                "whiteboard with old notes",
+                "water cooler",
+                "chair pile barricade"
+              ]
+            },
+            {
+              "name": "Cubicle Farm",
+              "description": "Open office space with 12 identical workstations in various states of disarray.",
+              "contents": [
+                "desk phones",
+                "personal effects",
+                "broken monitors",
+                "emergency flashlight"
+              ]
+            },
+            {
+              "name": "Executive Suite",
+              "description": "Lavish top-floor office with private bathroom and seating area.",
+              "contents": [
+                "wet bar",
+                "plush sofa",
+                "wall-mounted TV",
+                "executive bathroom"
+              ]
+            },
+            {
+              "name": "File Room",
+              "description": "Organized storage for documents with heavy fireproof cabinets.",
+              "contents": [
+                "filing cabinets",
+                "paper shredder",
+                "ladder",
+                "dusty blueprints"
+              ]
+            }
+          ],
+          "dangers": [
+            "collapsed ceiling tiles",
+            "broken glass",
+            "zombie in janitor closet",
+            "flickering lights attracting attention"
+          ],
+          "resources": [
+            "first aid kit in reception",
+            "bottled water in conference room",
+            "tools in maintenance closet",
+            "office supplies"
+          ],
+          "special_features": [
+            "still-functioning backup power",
+            "direct roof access from executive suite",
+            "intercom system that still works intermittently"
+          ],
+          "id": "bldg_308",
+          "location_id": "loc_6"
+        }
+      ]
+    },
+    {
+      "name": "Rustvale Urgent Care",
+      "description": "A small medical outpost that was quickly overrun during the early days of the outbreak. The waiting room is a graveyard of broken chairs and scattered patient files, while the treatment rooms hold the remnants of desperate last stands. The back storage area might still have some usable supplies, but the collapsed ceiling in the west wing makes navigation hazardous.",
+      "type": "medical",
+      "danger_level": 4,
+      "resources": [
+        "bandages",
+        "painkillers",
+        "disinfectant",
+        "splints"
+      ],
+      "features": [
+        "partially collapsed west wing",
+        "emergency generator room",
+        "blood-stained triage area"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "hidden safe behind a framed medical license"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "former medical staff (faster movement in dark areas)"
+        ]
+      },
+      "id": "loc_7",
+      "coords": [
+        37,
+        9
+      ],
+      "buildings": [
+        {
+          "name": "Rustvale Urgent Care",
+          "description": "A small but well-stocked pharmacy attached to a defunct urgent care clinic. The building is surprisingly intact, with most of its supplies still on the shelves. Flickering emergency lights cast long shadows across the linoleum floors, and the faint smell of antiseptic lingers in the air. The back rooms contain medical equipment that could be invaluable to survivors.",
+          "floors": 1,
+          "layout": "+----------------+----------------+\n|   WAITING     |   PHARMACY     |\n|    ROOM       |                |\n+-------+--------+--------+-------+\n|  EXAM |  EXAM  |  SUPPLY|  OFFICE |\n| ROOM1 | ROOM2  | CLOSET |        |\n+----------------+--------+-------+",
+          "rooms": [
+            {
+              "name": "Waiting Room",
+              "description": "A cramped waiting area with plastic chairs and outdated magazines. The reception desk is littered with abandoned paperwork.",
+              "contents": [
+                "Broken TV",
+                "Reception desk",
+                "First aid posters",
+                "Scattered patient forms"
+              ]
+            },
+            {
+              "name": "Pharmacy",
+              "description": "The main drug dispensing area with a tall counter and shelves of medications behind protective glass.",
+              "contents": [
+                "Medication shelves",
+                "Prescription computer",
+                "Drug reference books",
+                "Counting trays"
+              ]
+            },
+            {
+              "name": "Exam Room 1",
+              "description": "A standard examination room with an exam table and basic medical equipment.",
+              "contents": [
+                "Exam table",
+                "Blood pressure cuff",
+                "Stethoscope",
+                "Medical waste bin"
+              ]
+            },
+            {
+              "name": "Exam Room 2",
+              "description": "Slightly larger than Exam Room 1, with additional equipment for minor procedures.",
+              "contents": [
+                "Procedure chair",
+                "Suture kit",
+                "Minor surgical tools",
+                "Autoclave"
+              ]
+            },
+            {
+              "name": "Supply Closet",
+              "description": "A cramped storage room packed with medical supplies and spare equipment.",
+              "contents": [
+                "Bandages",
+                "Disinfectants",
+                "IV bags",
+                "Latex gloves"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "The doctor's private office with a desk and patient records.",
+              "contents": [
+                "Locked filing cabinet",
+                "Medical textbooks",
+                "Prescription pad",
+                "Desk lamp"
+              ]
+            }
+          ],
+          "dangers": [
+            "Broken glass near pharmacy counter",
+            "Potential zombie in exam rooms",
+            "Unstable shelving in supply closet",
+            "Trip hazards from scattered supplies"
+          ],
+          "resources": [
+            "Painkillers",
+            "Antibiotics",
+            "First aid kits",
+            "Surgical supplies",
+            "Disinfectants"
+          ],
+          "special_features": [
+            "Pharmacy has a secure metal gate that can be locked from inside",
+            "One exam room has an intact blood pressure monitor that still works",
+            "Office contains patient records that may reveal useful information"
+          ],
+          "id": "bldg_342",
+          "location_id": "loc_7"
+        }
+      ]
+    },
+    {
+      "name": "Ironclad Foundry",
+      "description": "A massive industrial complex that once produced heavy machinery, now silent except for the occasional groan of rusted metal. The cavernous workshops are littered with half-assembled equipment and scattered tools, while the catwalks above creak ominously under unseen weight. The furnaces have long gone cold, but the remnants of their last fires still linger in the air.",
+      "type": "industrial",
+      "danger_level": 6,
+      "resources": [
+        "scrap metal",
+        "industrial tools",
+        "welding torches",
+        "spare parts"
+      ],
+      "features": [
+        "overhead crane system",
+        "partially collapsed furnace room",
+        "network of maintenance tunnels"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "hidden underground bunker beneath the main office"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "armored (rusted metal fragments embedded in flesh)"
+        ]
+      },
+      "id": "loc_8",
+      "coords": [
+        21,
+        15
+      ]
+    },
+    {
+      "name": "Whispering Gorge",
+      "description": "A deep, narrow canyon carved by ancient rivers, now eerily silent except for the faint whispers of wind through its crevices. The steep walls provide natural shelter, but the winding paths can easily disorient the unwary. Scattered boulders and dry riverbeds hint at long-lost water sources.",
+      "type": "natural",
+      "danger_level": 5,
+      "resources": [
+        "freshwater springs",
+        "edible lichen",
+        "flint deposits",
+        "wild herbs"
+      ],
+      "features": [
+        "narrow, winding paths",
+        "natural rock shelters",
+        "echoing wind tunnels"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden cave system behind a waterfall (currently dry)"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "Climbers (zombies adapted to scale rocky surfaces)"
+        ]
+      },
+      "id": "loc_9",
+      "coords": [
+        34,
+        10
+      ]
+    },
+    {
+      "name": "Whispering Gorge",
+      "description": "A deep, narrow canyon carved by ancient rivers, now eerily silent except for the faint whispers of wind through its crevices. The steep walls provide natural shelter, but the winding paths can easily disorient the unwary. Scattered boulders and dry riverbeds hint at long-lost water sources.",
+      "type": "natural",
+      "danger_level": 5,
+      "resources": [
+        "freshwater springs",
+        "edible lichen",
+        "flint deposits",
+        "wild herbs"
+      ],
+      "features": [
+        "narrow, winding paths",
+        "natural rock shelters",
+        "echoing wind tunnels"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden cave system behind a waterfall (currently dry)"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "Climbers (zombies adapted to scale rocky surfaces)"
+        ]
+      },
+      "id": "location_10",
+      "coords": [
+        34,
+        10
+      ],
+      "discovered_day": 14,
+      "visited": false
+    },
+    {
+      "name": "Willowfen Marsh",
+      "description": "A sprawling wetland of shallow pools and dense reeds, where the air hums with the sound of insects and the occasional croak of frogs. The water is surprisingly clear, fed by underground springs, and the soft ground muffles footsteps. Ancient willow trees stand sentinel along the edges, their drooping branches creating natural shelters.",
+      "type": "natural",
+      "danger_level": 1,
+      "resources": [
+        "fresh water",
+        "medicinal herbs",
+        "frogs/fish",
+        "willow bark"
+      ],
+      "features": [
+        "natural spring-fed pools",
+        "dense willow groves",
+        "raised peat mounds"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden dry island in the center of the marsh with an abandoned trapper's cabin"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_11",
+      "coords": [
+        26,
+        15
+      ],
+      "buildings": [
+        {
+          "name": "Willowfen Watchtower",
+          "description": "A fortified observation facility built on stilts above Willowfen Marsh. Originally used by park rangers, it has been heavily reinforced with scrap metal and wooden barricades. The elevated position provides clear sightlines across the boggy terrain, making it a strategic outpost. Faded maps and weather equipment suggest it was once a monitoring station.",
+          "floors": 2,
+          "layout": "Ground Floor:\n+------+\n|  \ud83d\udeaa  |\n|      |\n|  \ud83d\udd25  |\n+------+\nUpper Floor:\n+------+\n|  \ud83e\ude9f\ud83e\ude9f |\n|  \ud83e\ude91   |\n|  \ud83d\udd2d  |\n+------+",
+          "rooms": [
+            {
+              "name": "Entry Hold",
+              "description": "Sandbag-reinforced foyer with murder holes covering the entrance",
+              "contents": [
+                "Shotgun shell casings",
+                "Improvised alarm cans",
+                "Bloody bandages"
+              ]
+            },
+            {
+              "name": "Bunk Room",
+              "description": "Converted sleeping area with hammocks strung between support beams",
+              "contents": [
+                "Moldy sleeping bags",
+                "Hand-crank radio",
+                "Rusty bear traps"
+              ]
+            },
+            {
+              "name": "Watch Post",
+              "description": "360-degree observation deck with mounted spotting scope",
+              "contents": [
+                "Binoculars",
+                "Hand-drawn zombie movement charts",
+                "Flares"
+              ]
+            }
+          ],
+          "dangers": [
+            "Weakened floorboards near eastern wall",
+            "Aggressive swamp mosquitoes",
+            "Rusted metal edges on barricades"
+          ],
+          "resources": [
+            "Clean water collection system",
+            "High ground for sniper position",
+            "Stockpile of fishing gear"
+          ],
+          "special_features": [
+            "Retractable ladder system",
+            "Marsh gas warning bells",
+            "Sun-bleached skulls marking sniper ranges"
+          ],
+          "id": "bldg_654",
+          "location_id": "loc_11"
+        }
+      ]
+    },
+    {
+      "name": "Willowfen Marsh",
+      "description": "A sprawling wetland of shallow pools and dense reeds, where the air hums with the sound of insects and the occasional croak of frogs. The water is surprisingly clear, fed by underground springs, and the soft ground muffles footsteps. Ancient willow trees stand sentinel along the edges, their drooping branches creating natural shelters.",
+      "type": "natural",
+      "danger_level": 1,
+      "resources": [
+        "fresh water",
+        "medicinal herbs",
+        "frogs/fish",
+        "willow bark"
+      ],
+      "features": [
+        "natural spring-fed pools",
+        "dense willow groves",
+        "raised peat mounds"
+      ],
+      "symbol": "~",
+      "secrets": [
+        "A hidden dry island in the center of the marsh with an abandoned trapper's cabin"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "location_12",
+      "coords": [
+        26,
+        15
+      ],
+      "discovered_day": 17,
+      "visited": false
+    },
+    {
+      "name": "Blackfang Chasm",
+      "description": "A jagged fissure in the earth, its depths shrouded in perpetual darkness. The walls are slick with an unknown, tar-like substance that emits a faint, sickly glow. The air is thick with the scent of decay and the distant echoes of something moving in the shadows.",
+      "type": "natural",
+      "danger_level": 8,
+      "resources": [],
+      "features": [
+        "Tar-like substance on walls that emits a faint glow",
+        "Echoes of unseen creatures in the depths",
+        "Narrow, unstable ledges that crumble underfoot"
+      ],
+      "symbol": "\u25bc",
+      "secrets": [
+        "A hidden cave system beneath the chasm, rumored to hold ancient relics"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Glowfang Zombies (infected with the tar-like substance, emitting a faint glow)",
+          "Echo Stalkers (zombies that mimic sounds to lure prey)"
+        ]
+      },
+      "id": "loc_13",
+      "coords": [
+        22,
+        2
+      ]
+    },
+    {
+      "name": "Blackfang Chasm",
+      "description": "A jagged fissure in the earth, its depths shrouded in perpetual darkness. The walls are slick with an unknown, tar-like substance that emits a faint, sickly glow. The air is thick with the scent of decay and the distant echoes of something moving in the shadows.",
+      "type": "natural",
+      "danger_level": 8,
+      "resources": [],
+      "features": [
+        "Tar-like substance on walls that emits a faint glow",
+        "Echoes of unseen creatures in the depths",
+        "Narrow, unstable ledges that crumble underfoot"
+      ],
+      "symbol": "\u25bc",
+      "secrets": [
+        "A hidden cave system beneath the chasm, rumored to hold ancient relics"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Glowfang Zombies (infected with the tar-like substance, emitting a faint glow)",
+          "Echo Stalkers (zombies that mimic sounds to lure prey)"
+        ]
+      },
+      "id": "location_14",
+      "coords": [
+        22,
+        2
+      ],
+      "discovered_day": 18,
+      "visited": false
+    },
+    {
+      "name": "Echo Ridge Estates",
+      "description": "A once-upscale suburban neighborhood now overrun by the infected, where the skeletal remains of McMansions loom like tombstones. The streets are choked with overturned vehicles and the air carries the faint scent of rotting wood and rust. Fungal growths pulse ominously from broken windows, suggesting something more sinister than zombies lurks here.",
+      "type": "residential",
+      "danger_level": 9,
+      "resources": [
+        "canned food (pantry remnants)",
+        "medical supplies (abandoned first aid kits)",
+        "tools (garage finds)",
+        "generators (some still functional)"
+      ],
+      "features": [
+        "collapsed rooftops creating deadly traps",
+        "overgrown gardens hiding movement",
+        "basement shelters with barricaded doors"
+      ],
+      "symbol": "E",
+      "secrets": [
+        "A hidden panic room in one house contains a survivor's research notes on the fungal infection"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Fungal Spore Carriers (explode in clouds of toxic spores when killed)"
+        ]
+      },
+      "id": "loc_15",
+      "coords": [
+        25,
+        17
+      ]
+    },
+    {
+      "name": "Echo Ridge Estates",
+      "description": "A once-upscale suburban neighborhood now overrun by the infected, where the skeletal remains of McMansions loom like tombstones. The streets are choked with overturned vehicles and the air carries the faint scent of rotting wood and rust. Fungal growths pulse ominously from broken windows, suggesting something more sinister than zombies lurks here.",
+      "type": "residential",
+      "danger_level": 9,
+      "resources": [
+        "canned food (pantry remnants)",
+        "medical supplies (abandoned first aid kits)",
+        "tools (garage finds)",
+        "generators (some still functional)"
+      ],
+      "features": [
+        "collapsed rooftops creating deadly traps",
+        "overgrown gardens hiding movement",
+        "basement shelters with barricaded doors"
+      ],
+      "symbol": "E",
+      "secrets": [
+        "A hidden panic room in one house contains a survivor's research notes on the fungal infection"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Fungal Spore Carriers (explode in clouds of toxic spores when killed)"
+        ]
+      },
+      "id": "location_16",
+      "coords": [
+        25,
+        17
+      ],
+      "discovered_day": 24,
+      "visited": false
+    },
+    {
+      "name": "St. Marrow's Clinic",
+      "description": "A small, abandoned medical clinic with shattered windows and bloodstained walls. The flickering emergency lights cast eerie shadows over the ransacked shelves, while the faint hum of a backup generator suggests some systems might still be operational. The scent of antiseptic lingers beneath the stench of decay.",
+      "type": "medical",
+      "danger_level": 4,
+      "resources": [
+        "medical supplies",
+        "painkillers",
+        "bandages",
+        "emergency generator fuel"
+      ],
+      "features": [
+        "partially functional backup generator",
+        "broken pharmacy cabinet",
+        "bloodstained triage area"
+      ],
+      "symbol": "+",
+      "secrets": [
+        "A hidden basement storage room with untouched medical supplies"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "infected medical staff (slightly faster than normal zombies)"
+        ]
+      },
+      "id": "loc_17",
+      "coords": [
+        7,
+        16
+      ]
+    },
+    {
+      "name": "The Rustbelt Overpass",
+      "description": "A crumbling highway overpass that once connected the city's industrial districts, now a skeletal ruin of twisted rebar and fractured concrete. The underpass has become a makeshift shelter for desperate survivors, evidenced by scattered campfires and barricaded alcoves. The constant groaning of metal under stress suggests it could collapse at any moment.",
+      "type": "infrastructure",
+      "danger_level": 7,
+      "resources": [
+        "construction tools",
+        "abandoned vehicle parts",
+        "emergency flares",
+        "rusted fuel drums"
+      ],
+      "features": [
+        "precariously dangling highway segments",
+        "makeshift survivor barricades",
+        "partially collapsed maintenance tunnels"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "a hidden survivor cache beneath a collapsed truck"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "climbers (zombies that scale vertical surfaces)"
+        ]
+      },
+      "id": "loc_18",
+      "coords": [
+        37,
+        12
+      ]
+    },
+    {
+      "name": "Willowbrook Trailer Park",
+      "description": "A quiet, overgrown trailer park where nature has reclaimed the cracked asphalt roads. The rusted husks of mobile homes sit in eerie silence, their doors swaying gently in the wind. The air smells of damp earth and mildew, with no signs of recent human activity.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [],
+      "features": [
+        "Overgrown vegetation creeping through broken windows",
+        "A lone, rusted swing set creaking in the breeze"
+      ],
+      "symbol": "~",
+      "secrets": [],
+      "zombies": {
+        "presence": "none",
+        "special_types": []
+      },
+      "id": "loc_19",
+      "coords": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Willowbrook Trailer Park",
+      "description": "A quiet, overgrown trailer park where nature has reclaimed the cracked asphalt roads. The rusted husks of mobile homes sit in eerie silence, their doors swaying gently in the wind. The air smells of damp earth and mildew, with no signs of recent human activity.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [],
+      "features": [
+        "Overgrown vegetation creeping through broken windows",
+        "A lone, rusted swing set creaking in the breeze"
+      ],
+      "symbol": "~",
+      "secrets": [],
+      "zombies": {
+        "presence": "none",
+        "special_types": []
+      },
+      "id": "location_20",
+      "coords": [
+        1,
+        1
+      ],
+      "discovered_day": 26,
+      "visited": false
+    },
+    {
+      "name": "Sunnyvale Mini-Mall",
+      "description": "A small, half-collapsed shopping center with most storefronts looted long ago. The remaining structures creak ominously in the wind, but the pharmacy and hardware store still hold some untouched supplies behind their security gates. Faded sale signs flutter like ghosts from the broken windows.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "medical supplies",
+        "tools",
+        "canned goods",
+        "batteries"
+      ],
+      "features": [
+        "intact pharmacy with security gate",
+        "collapsed food court with edible mushrooms growing",
+        "working emergency exit lights powered by solar"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "hidden underground storage room accessible through pharmacy back office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "shamblers (slow, decayed zombies trapped under debris)"
+        ]
+      },
+      "id": "loc_21",
+      "coords": [
+        32,
+        9
+      ]
+    },
+    {
+      "name": "Sunnyvale Mini-Mall",
+      "description": "A small, half-collapsed shopping center with most storefronts looted long ago. The remaining structures creak ominously in the wind, but the pharmacy and hardware store still hold some untouched supplies behind their security gates. Faded sale signs flutter like ghosts from the broken windows.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "medical supplies",
+        "tools",
+        "canned goods",
+        "batteries"
+      ],
+      "features": [
+        "intact pharmacy with security gate",
+        "collapsed food court with edible mushrooms growing",
+        "working emergency exit lights powered by solar"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "hidden underground storage room accessible through pharmacy back office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "shamblers (slow, decayed zombies trapped under debris)"
+        ]
+      },
+      "id": "location_22",
+      "coords": [
+        32,
+        9
+      ],
+      "discovered_day": 27,
+      "visited": false
+    },
+    {
+      "name": "The Overrun Mega-Mart",
+      "description": "A sprawling superstore that became a death trap when the outbreak hit, its cavernous aisles now filled with the shambling remnants of frenzied shoppers. Collapsed shelves and rotting merchandise create a maze of hazards, while the flickering emergency lights cast long shadows of lurking figures. The stench of decay is overwhelming, mixed with the acrid smell of spilled chemicals from the ruined cleaning aisle.",
+      "type": "commercial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Collapsed ceiling sections creating deadly chokepoints",
+        "Motion-activated holiday displays still cycling through broken animations",
+        "A flooded electronics department with live wires sparking in standing water"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A sealed manager's office with emergency supplies, accessible only via the collapsing roof"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Screamer zombies (trigger hordes with loud wails)",
+          "Berserker zombies (enhanced strength from gym equipment impalements)"
+        ]
+      },
+      "id": "loc_23",
+      "coords": [
+        23,
+        16
+      ]
+    },
+    {
+      "name": "The Overrun Mega-Mart",
+      "description": "A sprawling superstore that became a death trap when the outbreak hit, its cavernous aisles now filled with the shambling remnants of frenzied shoppers. Collapsed shelves and rotting merchandise create a maze of hazards, while the flickering emergency lights cast long shadows of lurking figures. The stench of decay is overwhelming, mixed with the acrid smell of spilled chemicals from the ruined cleaning aisle.",
+      "type": "commercial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Collapsed ceiling sections creating deadly chokepoints",
+        "Motion-activated holiday displays still cycling through broken animations",
+        "A flooded electronics department with live wires sparking in standing water"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A sealed manager's office with emergency supplies, accessible only via the collapsing roof"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Screamer zombies (trigger hordes with loud wails)",
+          "Berserker zombies (enhanced strength from gym equipment impalements)"
+        ]
+      },
+      "id": "location_24",
+      "coords": [
+        23,
+        16
+      ],
+      "discovered_day": 28,
+      "visited": false,
+      "buildings": [
+        {
+          "name": "The Overrun Mega-Mart",
+          "description": "Once a bustling retail giant, this Mega-Mart has been fortified by survivors into a makeshift stronghold. The exterior is lined with barricades of shopping carts and debris, while the interior is a maze of repurposed shelves and storage areas. The upper floors provide vantage points for snipers, and the ground floor is a chaotic blend of scavenged goods and defensive structures. The scent of decay and gunpowder lingers in the air.",
+          "floors": 2,
+          "layout": "Ground Floor:\n+---------------------+\n| ENTRANCE  | STORAGE |\n+-----+-----+----+-----+\n| CASHIER | SHELVES |\n+-----+-----+----+-----+\n| OFFICE   | BREAK   |\n+---------------------+\n\nUpper Floor:\n+---------------------+\n| SNIPER'S NEST      |\n+-----+-----+----+-----+\n| STOCK   | EMPTY    |\n+-----+-----+----+-----+\n| ARMORY  | BARRACKS |\n+---------------------+",
+          "rooms": [
+            {
+              "name": "Entrance",
+              "description": "The main entry point, heavily barricaded with shopping carts and metal sheets. A narrow path allows entry, flanked by makeshift guard posts.",
+              "contents": [
+                "Barricades",
+                "Guard posts",
+                "Tripwire alarms"
+              ]
+            },
+            {
+              "name": "Storage",
+              "description": "A chaotic mess of repurposed shelves and crates, filled with scavenged goods and supplies.",
+              "contents": [
+                "Canned food",
+                "Bottled water",
+                "Tools",
+                "Clothing"
+              ]
+            },
+            {
+              "name": "Cashier Area",
+              "description": "The former checkout lanes, now used as a central hub for distributing supplies and coordinating defenses.",
+              "contents": [
+                "Makeshift counter",
+                "Supply logs",
+                "Weapon racks"
+              ]
+            },
+            {
+              "name": "Office",
+              "description": "A small, locked room that serves as the leader's quarters and planning area.",
+              "contents": [
+                "Maps",
+                "Radio equipment",
+                "Locked safe"
+              ]
+            },
+            {
+              "name": "Break Room",
+              "description": "Converted into a communal living space with sleeping bags and a small cooking area.",
+              "contents": [
+                "Sleeping bags",
+                "Portable stove",
+                "Medical supplies"
+              ]
+            },
+            {
+              "name": "Sniper's Nest",
+              "description": "A vantage point on the upper floor with clear views of the surrounding area.",
+              "contents": [
+                "Sandbags",
+                "Sniper rifle",
+                "Binoculars"
+              ]
+            },
+            {
+              "name": "Armory",
+              "description": "A heavily guarded room stocked with weapons and ammunition.",
+              "contents": [
+                "Assault rifles",
+                "Handguns",
+                "Ammo crates",
+                "Grenades"
+              ]
+            },
+            {
+              "name": "Barracks",
+              "description": "Sleeping quarters for the resident survivors, lined with cots and personal belongings.",
+              "contents": [
+                "Cots",
+                "Personal items",
+                "Lanterns"
+              ]
+            }
+          ],
+          "dangers": [
+            "Zombie hordes occasionally breach the perimeter",
+            "Traps set by survivors can be triggered accidentally",
+            "Rival scavenger groups may attack"
+          ],
+          "resources": [
+            "Ammunition",
+            "Canned food",
+            "Medical supplies",
+            "Tools",
+            "Clothing"
+          ],
+          "special_features": [
+            "Makeshift watchtowers on the roof",
+            "Hidden escape routes through the stockroom",
+            "A functioning radio in the office for communication"
+          ],
+          "id": "bldg_630",
+          "location_id": "location_24"
+        }
+      ]
+    },
+    {
+      "name": "The Flooded Power Station",
+      "description": "A once-critical power substation now partially submerged under stagnant water from burst pipes. The flooded lower levels hide submerged electrical hazards, while the upper catwalks sway dangerously in the storm winds. The smell of ozone and rotting insulation hangs thick in the air.",
+      "type": "infrastructure",
+      "danger_level": 7,
+      "resources": [],
+      "features": [
+        "Partially submerged control rooms with sparking equipment",
+        "Unstable metal catwalks swaying 30 feet above the water",
+        "Massive transformers humming with residual charge"
+      ],
+      "symbol": "\u26a1",
+      "secrets": [
+        "A maintenance tunnel leading to undiscovered underground facilities"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Electrocuted zombies with shocking touch"
+        ]
+      },
+      "id": "loc_25",
+      "coords": [
+        20,
+        15
+      ]
+    },
+    {
+      "name": "Abandoned University Library",
+      "description": "The once-prestigious university library now stands as a hollowed-out ruin, its grand reading rooms littered with overturned bookshelves and the remnants of frantic last stands. The upper floors have partially collapsed, creating precarious walkways over piles of academic debris. The scent of mildew and old paper mixes with something far more sinister lingering in the shadows.",
+      "type": "educational",
+      "danger_level": 6,
+      "resources": [],
+      "features": [
+        "Collapsed upper floors creating dangerous vertical navigation",
+        "Special collections vault with reinforced doors still intact",
+        "Emergency lighting system flickers erratically"
+      ],
+      "symbol": "L",
+      "secrets": [
+        "A hidden professor's office contains unfinished research on the outbreak"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Librarian (enhanced hearing)"
+        ]
+      },
+      "id": "loc_26",
+      "coords": [
+        24,
+        17
+      ]
+    },
+    {
+      "name": "The Flooded Power Station",
+      "description": "A once-critical power substation now partially submerged under stagnant water from burst pipes. The flooded lower levels hide submerged electrical hazards, while the upper catwalks sway dangerously in the storm winds. The smell of ozone and rotting insulation hangs thick in the air.",
+      "type": "infrastructure",
+      "danger_level": 7,
+      "resources": [],
+      "features": [
+        "Partially submerged control rooms with sparking equipment",
+        "Unstable metal catwalks swaying 30 feet above the water",
+        "Massive transformers humming with residual charge"
+      ],
+      "symbol": "\u26a1",
+      "secrets": [
+        "A maintenance tunnel leading to undiscovered underground facilities"
+      ],
+      "zombies": {
+        "presence": "moderate",
+        "special_types": [
+          "Electrocuted zombies with shocking touch"
+        ]
+      },
+      "id": "location_27",
+      "coords": [
+        20,
+        15
+      ],
+      "discovered_day": 30,
+      "visited": false
+    },
+    {
+      "name": "The Overrun Condominiums",
+      "description": "A once-luxurious high-rise condominium now stands as a towering death trap, its halls filled with the moans of the infected. The lower floors are completely overrun, while the upper levels remain unstable due to structural damage from fires and explosions. The air reeks of decay and the faint, lingering scent of desperation from those who tried to shelter here.",
+      "type": "residential",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Collapsed stairwells blocking access to upper floors",
+        "Elevator shafts now serve as vertical death pits",
+        "Balconies with precarious views of the ruined city below"
+      ],
+      "symbol": "C",
+      "secrets": [
+        "A hidden panic room on the penthouse floor, untouched but inaccessible"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Bloaters (infected swollen with toxic gas)",
+          "Crawlers (zombies with broken limbs that drag themselves)"
+        ]
+      },
+      "id": "loc_28",
+      "coords": [
+        19,
+        15
+      ]
+    },
+    {
+      "name": "The Fungal Chasm",
+      "description": "A deep, gaping fissure in the earth, now overgrown with pulsating fungal growths that emit a sickly bioluminescent glow. The air is thick with spores that distort vision and induce hallucinations. The walls seem to breathe, covered in a living carpet of mycelium that reacts to movement.",
+      "type": "natural",
+      "danger_level": 9,
+      "resources": [
+        "bioluminescent fungi (potentially medicinal)",
+        "rare minerals in crevices",
+        "filtered rainwater pools",
+        "strangely untouched pre-apocalypse supplies in deeper pockets"
+      ],
+      "features": [
+        "spore clouds that impair vision and cognition",
+        "unstable terrain with hidden crevices",
+        "bioluminescent lighting that attracts both zombies and desperate survivors"
+      ],
+      "symbol": "\u00c6",
+      "secrets": [
+        "a hidden underground stream that may lead to an untouched bunker"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "spore-infected zombies that release toxic clouds when agitated",
+          "fungal symbiote zombies with enhanced regeneration"
+        ]
+      },
+      "id": "loc_29",
+      "coords": [
+        3,
+        2
+      ]
+    },
+    {
+      "name": "The Fungal Chasm",
+      "description": "A deep, gaping fissure in the earth, now overgrown with pulsating fungal growths that emit a sickly bioluminescent glow. The air is thick with spores that distort vision and induce hallucinations. The walls seem to breathe, covered in a living carpet of mycelium that reacts to movement.",
+      "type": "natural",
+      "danger_level": 9,
+      "resources": [
+        "bioluminescent fungi (potentially medicinal)",
+        "rare minerals in crevices",
+        "filtered rainwater pools",
+        "strangely untouched pre-apocalypse supplies in deeper pockets"
+      ],
+      "features": [
+        "spore clouds that impair vision and cognition",
+        "unstable terrain with hidden crevices",
+        "bioluminescent lighting that attracts both zombies and desperate survivors"
+      ],
+      "symbol": "\u00c6",
+      "secrets": [
+        "a hidden underground stream that may lead to an untouched bunker"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "spore-infected zombies that release toxic clouds when agitated",
+          "fungal symbiote zombies with enhanced regeneration"
+        ]
+      },
+      "id": "location_30",
+      "coords": [
+        3,
+        2
+      ],
+      "discovered_day": 31,
+      "visited": false
+    },
+    {
+      "name": "The Necrotic Bio-Lab",
+      "description": "A former high-security medical research facility now overrun with grotesque, mutated specimens. The halls are lined with shattered containment units, their former inhabitants now roaming freely. The air is thick with the stench of rotting flesh and acrid chemicals, making every breath a struggle.",
+      "type": "medical",
+      "danger_level": 10,
+      "resources": [
+        "experimental serums",
+        "surgical tools",
+        "biohazard suits",
+        "medical journals"
+      ],
+      "features": [
+        "broken containment chambers leaking unknown fluids",
+        "flickering emergency lights casting eerie shadows",
+        "walls covered in pulsating organic growths"
+      ],
+      "symbol": "\u2623",
+      "secrets": [
+        "A hidden underground lab with a potential cure prototype"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Mutated Lab Subjects",
+          "Biohazard Zombies",
+          "Necrotic Surgeons"
+        ]
+      },
+      "id": "loc_31",
+      "coords": [
+        18,
+        13
+      ]
+    },
+    {
+      "name": "The Necrotic Bio-Lab",
+      "description": "A former high-security medical research facility now overrun with grotesque, mutated specimens. The halls are lined with shattered containment units, their former inhabitants now roaming freely. The air is thick with the stench of rotting flesh and acrid chemicals, making every breath a struggle.",
+      "type": "medical",
+      "danger_level": 10,
+      "resources": [
+        "experimental serums",
+        "surgical tools",
+        "biohazard suits",
+        "medical journals"
+      ],
+      "features": [
+        "broken containment chambers leaking unknown fluids",
+        "flickering emergency lights casting eerie shadows",
+        "walls covered in pulsating organic growths"
+      ],
+      "symbol": "\u2623",
+      "secrets": [
+        "A hidden underground lab with a potential cure prototype"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Mutated Lab Subjects",
+          "Biohazard Zombies",
+          "Necrotic Surgeons"
+        ]
+      },
+      "id": "location_32",
+      "coords": [
+        18,
+        13
+      ],
+      "discovered_day": 33,
+      "visited": false
+    },
+    {
+      "name": "The Hollow Mall",
+      "description": "A once-bustling shopping center now eerily silent, its glass ceilings shattered and letting in the relentless rain. The lower levels are flooded, creating shallow pools that reflect the dim light from broken store signs. Surprisingly, many stores remain intact, their shelves still stocked with forgotten goods.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "canned food",
+        "clothing",
+        "tools",
+        "batteries"
+      ],
+      "features": [
+        "flooded lower levels",
+        "intact storefronts",
+        "collapsed central atrium"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A hidden survivor cache in the manager's office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "drowned (waterlogged zombies in flooded areas)"
+        ]
+      },
+      "id": "loc_33",
+      "coords": [
+        17,
+        2
+      ]
+    },
+    {
+      "name": "The Hollow Mall",
+      "description": "A once-bustling shopping center now eerily silent, its glass ceilings shattered and letting in the relentless rain. The lower levels are flooded, creating shallow pools that reflect the dim light from broken store signs. Surprisingly, many stores remain intact, their shelves still stocked with forgotten goods.",
+      "type": "commercial",
+      "danger_level": 2,
+      "resources": [
+        "canned food",
+        "clothing",
+        "tools",
+        "batteries"
+      ],
+      "features": [
+        "flooded lower levels",
+        "intact storefronts",
+        "collapsed central atrium"
+      ],
+      "symbol": "M",
+      "secrets": [
+        "A hidden survivor cache in the manager's office"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "drowned (waterlogged zombies in flooded areas)"
+        ]
+      },
+      "id": "location_34",
+      "coords": [
+        17,
+        2
+      ],
+      "discovered_day": 34,
+      "visited": false
+    },
+    {
+      "name": "The Rupture Foundry",
+      "description": "A massive industrial complex where molten metal once flowed like rivers, now frozen in grotesque formations. The air is thick with toxic fumes from ruptured chemical vats, and the ground trembles occasionally from unstable machinery. The entire facility hums with residual energy, creating an eerie glow in the perpetual twilight.",
+      "type": "industrial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Molten metal sculptures formed during the catastrophe",
+        "Unstable chemical vats that periodically explode",
+        "A network of catwalks suspended over pools of toxic sludge"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "A hidden control room with access to the facility's self-destruct sequence"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Corroded Walkers (zombies covered in acid burns and metal shards)",
+          "Furnace Ghouls (zombies that burst into flames when agitated)"
+        ]
+      },
+      "id": "loc_35",
+      "coords": [
+        8,
+        1
+      ]
+    },
+    {
+      "name": "The Rupture Foundry",
+      "description": "A massive industrial complex where molten metal once flowed like rivers, now frozen in grotesque formations. The air is thick with toxic fumes from ruptured chemical vats, and the ground trembles occasionally from unstable machinery. The entire facility hums with residual energy, creating an eerie glow in the perpetual twilight.",
+      "type": "industrial",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Molten metal sculptures formed during the catastrophe",
+        "Unstable chemical vats that periodically explode",
+        "A network of catwalks suspended over pools of toxic sludge"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "A hidden control room with access to the facility's self-destruct sequence"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Corroded Walkers (zombies covered in acid burns and metal shards)",
+          "Furnace Ghouls (zombies that burst into flames when agitated)"
+        ]
+      },
+      "id": "location_36",
+      "coords": [
+        8,
+        1
+      ],
+      "discovered_day": 35,
+      "visited": false
+    },
+    {
+      "name": "Willowridge Estates",
+      "description": "A quiet suburban neighborhood frozen in time, its manicured lawns now overgrown and its picket fences broken. Most houses stand eerily intact, their windows boarded up or shattered. The silence is punctuated only by the occasional creak of a swinging porch swing.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [],
+      "features": [
+        "Overgrown gardens with wild herbs",
+        "Abandoned family photos in dusty frames",
+        "Shattered children's toys scattered on driveways"
+      ],
+      "symbol": "H",
+      "secrets": [],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_37",
+      "coords": [
+        4,
+        13
+      ]
+    },
+    {
+      "name": "Pineview Trailer Park",
+      "description": "A small, rundown trailer park where time seems to have stopped. The trailers are weathered and many have been looted, but some still contain remnants of past lives. The air is eerily still, broken only by the occasional creak of a loose door or the rustle of wind through broken windows.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [
+        "old canned food",
+        "rusty tools",
+        "worn-out clothing",
+        "broken furniture"
+      ],
+      "features": [
+        "abandoned trailers with personal belongings",
+        "a small playground overgrown with weeds",
+        "a communal fire pit filled with ashes"
+      ],
+      "symbol": "T",
+      "secrets": [
+        "a hidden stash of sentimental items under one of the trailers"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "loc_38",
+      "coords": [
+        2,
+        13
+      ]
+    },
+    {
+      "name": "Pineview Trailer Park",
+      "description": "A small, rundown trailer park where time seems to have stopped. The trailers are weathered and many have been looted, but some still contain remnants of past lives. The air is eerily still, broken only by the occasional creak of a loose door or the rustle of wind through broken windows.",
+      "type": "residential",
+      "danger_level": 1,
+      "resources": [
+        "old canned food",
+        "rusty tools",
+        "worn-out clothing",
+        "broken furniture"
+      ],
+      "features": [
+        "abandoned trailers with personal belongings",
+        "a small playground overgrown with weeds",
+        "a communal fire pit filled with ashes"
+      ],
+      "symbol": "T",
+      "secrets": [
+        "a hidden stash of sentimental items under one of the trailers"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": []
+      },
+      "id": "location_39",
+      "coords": [
+        2,
+        13
+      ],
+      "discovered_day": 36,
+      "visited": false
+    },
+    {
+      "name": "Rustbolt Scrapyard",
+      "description": "A sprawling industrial scrapyard filled with rusting machinery, stacked metal husks, and forgotten industrial equipment. The skeletal remains of cranes loom overhead, their chains swaying gently in the wind. Despite its decay, there's still usable salvage among the wreckage.",
+      "type": "industrial",
+      "danger_level": 3,
+      "resources": [
+        "scrap metal",
+        "salvaged tools",
+        "industrial lubricant",
+        "battery cells"
+      ],
+      "features": [
+        "towering piles of crushed cars",
+        "a partially collapsed crane",
+        "an old office trailer with intact blueprints"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "a hidden underground storage room beneath the office trailer"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "rust-infected (slow but armored with metal fragments)"
+        ]
+      },
+      "id": "loc_40",
+      "coords": [
+        19,
+        13
+      ]
+    },
+    {
+      "name": "Rustbolt Scrapyard",
+      "description": "A sprawling industrial scrapyard filled with rusting machinery, stacked metal husks, and forgotten industrial equipment. The skeletal remains of cranes loom overhead, their chains swaying gently in the wind. Despite its decay, there's still usable salvage among the wreckage.",
+      "type": "industrial",
+      "danger_level": 3,
+      "resources": [
+        "scrap metal",
+        "salvaged tools",
+        "industrial lubricant",
+        "battery cells"
+      ],
+      "features": [
+        "towering piles of crushed cars",
+        "a partially collapsed crane",
+        "an old office trailer with intact blueprints"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "a hidden underground storage room beneath the office trailer"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "rust-infected (slow but armored with metal fragments)"
+        ]
+      },
+      "id": "location_41",
+      "coords": [
+        19,
+        13
+      ],
+      "discovered_day": 37,
+      "visited": false
+    },
+    {
+      "name": "Overwatch Base Sigma",
+      "description": "A once-secret military outpost now overrun by the infected. The high-security perimeter is breached in multiple places, with bodies of both soldiers and zombies littering the compound. The air smells of gunpowder and decay, with distant growls echoing from the barracks.",
+      "type": "military",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Heavily fortified command center with blast doors still intact",
+        "Armory with visible weapon racks (all cleared out)",
+        "Radio tower emitting a faint distress signal on loop"
+      ],
+      "symbol": "\u03a3",
+      "secrets": [
+        "Classified documents about early outbreak containment efforts in the commander's office safe"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Military-grade infected (armored, tactical movement)",
+          "Radioactive screamers (distort comms)"
+        ]
+      },
+      "id": "loc_42",
+      "coords": [
+        21,
+        1
+      ]
+    },
+    {
+      "name": "Overwatch Base Sigma",
+      "description": "A once-secret military outpost now overrun by the infected. The high-security perimeter is breached in multiple places, with bodies of both soldiers and zombies littering the compound. The air smells of gunpowder and decay, with distant growls echoing from the barracks.",
+      "type": "military",
+      "danger_level": 10,
+      "resources": [],
+      "features": [
+        "Heavily fortified command center with blast doors still intact",
+        "Armory with visible weapon racks (all cleared out)",
+        "Radio tower emitting a faint distress signal on loop"
+      ],
+      "symbol": "\u03a3",
+      "secrets": [
+        "Classified documents about early outbreak containment efforts in the commander's office safe"
+      ],
+      "zombies": {
+        "presence": "many",
+        "special_types": [
+          "Military-grade infected (armored, tactical movement)",
+          "Radioactive screamers (distort comms)"
+        ]
+      },
+      "id": "location_43",
+      "coords": [
+        21,
+        1
+      ],
+      "discovered_day": 38,
+      "visited": false
+    },
+    {
+      "name": "The Foundry",
+      "description": "An abandoned steel foundry with towering smokestacks and rusted conveyor belts. The furnaces have long gone cold, but scattered tools and raw materials remain among the ash-coated floors. The cavernous interior echoes with the occasional groan of shifting metal.",
+      "type": "industrial",
+      "danger_level": 3,
+      "resources": [
+        "steel ingots",
+        "industrial tools",
+        "scrap metal",
+        "coal"
+      ],
+      "features": [
+        "massive dormant furnace",
+        "overhead crane system",
+        "partially collapsed catwalks"
+      ],
+      "symbol": "&",
+      "secrets": [
+        "hidden underground maintenance tunnels"
+      ],
+      "zombies": {
+        "presence": "few",
+        "special_types": [
+          "ash-covered zombies that blend with the environment"
+        ]
+      },
+      "id": "loc_44",
+      "coords": [
+        3,
+        13
+      ]
+    }
+  ]
+}

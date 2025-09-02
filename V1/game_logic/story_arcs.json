@@ -1,0 +1,508 @@
+{
+  "main_arc": {},
+  "side_arcs": [
+    {
+      "title": "The Last Transmission",
+      "type": "rescue mission",
+      "description": "The survivor intercepts a desperate radio transmission from a nearby survivor group under siege by zombies. They must decide whether to risk venturing out to rescue them or stay safe in their hideout.",
+      "length": 6,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Static and Screams",
+          "description": "While scavenging for supplies, the survivor picks up a faint radio transmission. A panicked voice pleads for help before the signal cuts out."
+        },
+        {
+          "day": 2,
+          "title": "The Decision",
+          "description": "The survivor debates whether to investigate the transmission. They recall the increased zombie activity and the risks involved."
+        },
+        {
+          "day": 3,
+          "title": "Scouting the Area",
+          "description": "The survivor cautiously scouts the area mentioned in the transmission, finding signs of a recent struggle but no survivors."
+        },
+        {
+          "day": 4,
+          "title": "Trapped",
+          "description": "The survivor discovers the source of the transmission\u2014a small group barricaded in a nearby building, surrounded by zombies."
+        },
+        {
+          "day": 5,
+          "title": "The Rescue",
+          "description": "The survivor devises a plan to distract the zombies and lead the trapped group to safety."
+        },
+        {
+          "day": 6,
+          "title": "Aftermath",
+          "description": "The rescued group shares valuable information about the zombie movements and a potential safe zone, but the survivor must decide whether to trust them."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "information",
+          "description": "Details about a potential safe zone and zombie movement patterns."
+        },
+        {
+          "type": "relationship",
+          "description": "Gains trust with the rescued group, potentially leading to future alliances."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Dr. Elena Vasquez",
+          "role": "Leader of the trapped survivor group, a former scientist with knowledge of the zombie outbreak."
+        },
+        {
+          "name": "Marcus Greene",
+          "role": "A former soldier in the group, skilled in combat and survival tactics."
+        }
+      ],
+      "failure_consequences": "If the survivor fails, the trapped group is overrun by zombies, and the opportunity for valuable information and allies is lost. The survivor may also attract more zombies to their own hideout.",
+      "id": "arc_1",
+      "status": "completed",
+      "current_day": 6
+    },
+    {
+      "title": "Silent Siege",
+      "type": "fortification",
+      "description": "The eerie silence outside the safehouse is unsettling. The survivor must fortify their shelter against an unseen threat while uncovering the reason behind the zombies' sudden disappearance.",
+      "length": 5,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "The Quiet Before the Storm",
+          "description": "The survivor notices the complete absence of zombies in the area. They decide to use this opportunity to scout for materials to reinforce the safehouse."
+        },
+        {
+          "day": 2,
+          "title": "Gathering Supplies",
+          "description": "The survivor ventures out to nearby buildings, collecting wood, nails, and other fortification materials. They hear distant, unfamiliar noises but see nothing."
+        },
+        {
+          "day": 3,
+          "title": "Strange Discoveries",
+          "description": "While reinforcing the safehouse, the survivor finds strange markings on the walls outside. They also discover a journal hinting at a 'Watchers' group observing the area."
+        },
+        {
+          "day": 4,
+          "title": "The Watchers' Signal",
+          "description": "The survivor spots a flare in the distance, followed by the sound of engines. It seems the Watchers are signaling something\u2014or someone."
+        },
+        {
+          "day": 5,
+          "title": "Fortified but Watched",
+          "description": "The survivor completes the fortifications, but the safehouse now feels like a target. The Watchers' presence looms, and the zombies' absence remains unexplained."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Gain additional fortification materials and a temporary safehouse defense bonus."
+        },
+        {
+          "type": "information",
+          "description": "Learn about the Watchers and their possible connection to the zombies' behavior."
+        }
+      ],
+      "characters": [
+        {
+          "name": "The Watcher",
+          "role": "A mysterious figure observing the survivor's movements from afar."
+        }
+      ],
+      "failure_consequences": "If the survivor fails to fortify the safehouse, the Watchers may exploit its weaknesses, leading to a breach or direct confrontation. The unexplained zombie absence could also result in a sudden, overwhelming attack.",
+      "id": "arc_2",
+      "status": "completed",
+      "current_day": 5
+    },
+    {
+      "title": "Tunnel Wars",
+      "type": "territory conflict",
+      "description": "A rival survivor group has been spotted near Central Station, claiming the tunnels as their territory. The player must either negotiate, fight, or find another way to secure their position before tensions escalate.",
+      "length": 6,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Unwelcome Visitors",
+          "description": "The player notices unfamiliar markings and signs of recent activity in the tunnels. A small group of survivors has left a warning message claiming the area as theirs."
+        },
+        {
+          "day": 2,
+          "title": "First Contact",
+          "description": "The rival group makes direct contact, demanding the player vacate the tunnels. They seem armed but hesitant to attack outright."
+        },
+        {
+          "day": 3,
+          "title": "Scouting the Enemy",
+          "description": "The player has the opportunity to scout the rival group's camp, learning more about their numbers, resources, and weaknesses."
+        },
+        {
+          "day": 4,
+          "title": "Negotiations or Sabotage",
+          "description": "The player can attempt to negotiate a truce or alliance, or sabotage the rival group's supplies to weaken their position."
+        },
+        {
+          "day": 5,
+          "title": "Escalation",
+          "description": "Tensions reach a boiling point. Depending on previous choices, this could lead to a standoff, a fight, or a tense but peaceful resolution."
+        },
+        {
+          "day": 6,
+          "title": "Resolution",
+          "description": "The conflict is resolved\u2014either through force, diplomacy, or the player being forced to retreat. The tunnels' fate is decided."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Secure access to the tunnels and their resources (food, shelter, hidden caches)."
+        },
+        {
+          "type": "relationship",
+          "description": "Potential allies or trading partners if negotiations succeed."
+        },
+        {
+          "type": "information",
+          "description": "Intel on other survivor factions in the area."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Mara",
+          "role": "Leader of the rival survivor group. Pragmatic but distrustful."
+        },
+        {
+          "name": "Jax",
+          "role": "Mara's second-in-command. Aggressive and eager to fight."
+        },
+        {
+          "name": "Lena",
+          "role": "A neutral scavenger who knows both groups and may act as a mediator."
+        }
+      ],
+      "failure_consequences": "The player is forced out of the tunnels, losing access to their shelter and resources. The rival group may become hostile in future encounters.",
+      "id": "arc_3",
+      "status": "completed",
+      "current_day": 6
+    },
+    {
+      "title": "The Whispering Shadow",
+      "type": "mysterious stranger",
+      "description": "The survivor encounters a mysterious figure who leaves cryptic messages and supplies in their path. Following the clues leads to a tense confrontation and a revelation about the stranger's motives.",
+      "length": 4,
+      "difficulty": 6,
+      "events": [
+        {
+          "day": 1,
+          "title": "The First Sign",
+          "description": "While scavenging in the tunnels, the survivor finds a small, neatly wrapped package containing medical supplies and a note with a single word: 'Follow.'"
+        },
+        {
+          "day": 2,
+          "title": "The Shadow Moves",
+          "description": "The survivor spots a fleeting figure in the distance, always just out of reach. Another package is left behind, this time with a map pointing to a nearby safehouse."
+        },
+        {
+          "day": 3,
+          "title": "The Safehouse",
+          "description": "The survivor reaches the safehouse, only to find it booby-trapped. The mysterious stranger watches from the shadows, testing the survivor's skills and resolve."
+        },
+        {
+          "day": 4,
+          "title": "The Revelation",
+          "description": "The stranger finally reveals themselves\u2014a former scientist studying the outbreak. They offer valuable information about the zombies' weaknesses before vanishing into the night."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "information",
+          "description": "Knowledge of a zombie weakness (e.g., sensitivity to loud noises)"
+        },
+        {
+          "type": "item",
+          "description": "A rare medical kit"
+        }
+      ],
+      "characters": [
+        {
+          "name": "Dr. Elias Voss",
+          "role": "The mysterious stranger, a rogue scientist studying the outbreak"
+        }
+      ],
+      "failure_consequences": "The survivor gains no additional supplies or information, and the stranger's trail goes cold, leaving them with unanswered questions.",
+      "id": "arc_4",
+      "status": "completed",
+      "current_day": 4
+    },
+    {
+      "title": "The Fog Dwellers",
+      "type": "territory conflict",
+      "description": "The survivor discovers that the moving fog in Central Station hides a group of hostile scavengers who have claimed the tunnels as their territory. The survivor must either negotiate, fight, or evade them to secure safe passage.",
+      "length": 4,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Whispers in the Fog",
+          "description": "The survivor hears faint voices and footsteps in the fog, realizing they are not alone in the tunnels. A shadowy figure disappears into the mist, leaving behind a crude warning symbol."
+        },
+        {
+          "day": 2,
+          "title": "The Scavengers' Demand",
+          "description": "The scavengers reveal themselves, demanding the survivor hand over their supplies or leave the tunnels. They are led by a ruthless figure named Mercer, who seems to know more about the station than they let on."
+        },
+        {
+          "day": 3,
+          "title": "Negotiation or Conflict",
+          "description": "The survivor must choose: negotiate with Mercer for safe passage, fight the scavengers for control of the tunnels, or attempt to sneak past them undetected."
+        },
+        {
+          "day": 4,
+          "title": "Resolution",
+          "description": "Depending on the survivor's actions, they either gain an uneasy alliance with the scavengers, secure the tunnels for themselves, or are forced to flee, leaving behind valuable resources."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Access to a hidden stash of supplies in the tunnels if the survivor wins the conflict or negotiates successfully."
+        },
+        {
+          "type": "information",
+          "description": "Clues about a safer route through the city, hinted at by Mercer if the survivor gains their trust."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Mercer",
+          "role": "Leader of the scavengers, cunning and territorial, but not without reason."
+        },
+        {
+          "name": "Lena",
+          "role": "A reluctant member of the scavengers who might help the survivor if approached carefully."
+        }
+      ],
+      "failure_consequences": "If the survivor fails, they lose valuable supplies and are forced to take a more dangerous route out of the station, increasing the risk of encountering zombies or other threats.",
+      "id": "arc_5",
+      "status": "completed",
+      "current_day": 4
+    },
+    {
+      "title": "The Whispering Tunnels",
+      "type": "mysterious stranger",
+      "description": "The survivor encounters a mysterious figure who seems to know about the fungal growths. This stranger leads them on a dangerous journey through the tunnels, revealing unsettling truths about the infection.",
+      "length": 4,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Echoes in the Dark",
+          "description": "While scavenging in the tunnels, the survivor hears faint whispers. A shadowy figure watches from a distance, disappearing before they can get a clear look."
+        },
+        {
+          "day": 2,
+          "title": "The Stranger's Mark",
+          "description": "The survivor finds a strange symbol carved into the tunnel wall, leading to a hidden passage. The mysterious figure appears briefly, gesturing for them to follow."
+        },
+        {
+          "day": 3,
+          "title": "Fungal Secrets",
+          "description": "The stranger reveals themselves as a former scientist studying the fungal infection. They show the survivor a hidden lab, but it's overrun with mutated zombies."
+        },
+        {
+          "day": 4,
+          "title": "The Truth Beneath",
+          "description": "The scientist explains the fungal growths are part of a larger network, possibly sentient. They give the survivor a device to detect fungal hotspots before vanishing into the tunnels."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "item",
+          "description": "Fungal Detector: A device that warns of nearby fungal hotspots and infected areas."
+        },
+        {
+          "type": "information",
+          "description": "Knowledge about the fungal network's behavior and potential weaknesses."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Dr. Elias Voss",
+          "role": "A former scientist studying the fungal infection, now a wandering survivor with crucial knowledge."
+        }
+      ],
+      "failure_consequences": "The survivor gains no insight into the fungal threat and remains vulnerable to unexpected outbreaks. Dr. Voss disappears, taking his knowledge with him.",
+      "id": "arc_6",
+      "status": "completed",
+      "current_day": 4
+    },
+    {
+      "title": "The Whispering Tunnels",
+      "type": "mysterious stranger",
+      "description": "The survivor discovers cryptic messages left by a mysterious figure in the tunnels, leading to a tense encounter and a potential alliance. The stranger seems to know more about the fungal outbreak than they let on.",
+      "length": 4,
+      "difficulty": 6,
+      "events": [
+        {
+          "day": 1,
+          "title": "Echoes in the Dark",
+          "description": "While scavenging, the survivor finds strange symbols carved into the tunnel walls, along with a fresh trail of supplies leading deeper into the station."
+        },
+        {
+          "day": 2,
+          "title": "The Shadow Watcher",
+          "description": "The survivor spots a cloaked figure observing them from a distance. When approached, the figure vanishes, leaving behind a map with marked safe zones."
+        },
+        {
+          "day": 3,
+          "title": "The Meeting",
+          "description": "The stranger finally makes contact, revealing they\u2019ve been tracking the survivor. They offer information about a hidden cache in exchange for help clearing a blocked tunnel."
+        },
+        {
+          "day": 4,
+          "title": "A Fragile Trust",
+          "description": "After completing the task, the stranger shares a cryptic warning about the fungal zombies evolving. They vanish again, but leave behind a way to contact them in the future."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "A cache of medical supplies and ammunition."
+        },
+        {
+          "type": "information",
+          "description": "Clues about the origins of the fungal outbreak and potential safe zones."
+        },
+        {
+          "type": "relationship",
+          "description": "A tentative alliance with the mysterious stranger, who may reappear in the main story."
+        }
+      ],
+      "characters": [
+        {
+          "name": "The Whisper",
+          "role": "A enigmatic survivor who knows more than they reveal, possibly connected to the outbreak."
+        }
+      ],
+      "failure_consequences": "The stranger disappears permanently, taking valuable information with them. The survivor misses out on the cache and potential future aid.",
+      "id": "arc_7",
+      "status": "completed",
+      "current_day": 4
+    },
+    {
+      "title": "The Station Squatters",
+      "type": "territory conflict",
+      "description": "A group of hostile survivors has taken up residence in the upper levels of Central Station, threatening the player's safe access to critical subway tunnels. The player must either drive them out or negotiate a truce before they become a permanent threat.",
+      "length": 3,
+      "difficulty": 6,
+      "events": [
+        {
+          "day": 1,
+          "title": "Unwelcome Neighbors",
+          "description": "The player discovers signs of recent human activity in the station's upper concourse - fresh footprints, moved debris, and a crude barricade blocking access to the west tunnels."
+        },
+        {
+          "day": 2,
+          "title": "First Contact",
+          "description": "The squatters reveal themselves, demanding supplies in exchange for safe passage. They've booby-trapped several key routes and appear well-armed."
+        },
+        {
+          "day": 3,
+          "title": "Showdown or Settlement",
+          "description": "The player must either confront the squatters directly (through force or stealth) or negotiate a lasting agreement about territory sharing and tunnel access."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Access to previously blocked tunnels containing medical supplies and tools"
+        },
+        {
+          "type": "information",
+          "description": "Intel about safe surface routes from the squatters' scouting"
+        }
+      ],
+      "characters": [
+        {
+          "name": "Mitch 'Rails' Donovan",
+          "role": "Leader of the station squatters, a former transit worker who knows the tunnel layouts"
+        },
+        {
+          "name": "The Twins",
+          "role": "Two silent teenage lookouts who communicate only through hand signals and station graffiti"
+        }
+      ],
+      "failure_consequences": "The squatters permanently block access to critical subway routes, forcing the player to take more dangerous surface paths between locations. They may also stage occasional raids on the player's supplies.",
+      "id": "arc_8",
+      "status": "completed",
+      "current_day": 3
+    },
+    {
+      "title": "The Crimson Perimeter",
+      "type": "fortification",
+      "description": "The survivor notices increasing zombie activity near Fort Crimson and must reinforce the defenses before a predicted horde arrives. This involves scavenging for materials, setting up traps, and rallying other survivors to help.",
+      "length": 4,
+      "difficulty": 7,
+      "events": [
+        {
+          "day": 1,
+          "title": "Signs of the Storm",
+          "description": "The survivor observes unusual zombie movements near the fort. Fungal whispers intensify, hinting at an impending horde. A decision is made to start fortifying immediately."
+        },
+        {
+          "day": 2,
+          "title": "Scavenging for Supplies",
+          "description": "The survivor ventures out to nearby ruins to gather materials like wood, metal, and nails. They must avoid or fight off zombies while collecting enough to reinforce the fort."
+        },
+        {
+          "day": 3,
+          "title": "Traps and Defenses",
+          "description": "With materials gathered, the survivor sets up barricades, spikes, and alarm systems around Fort Crimson. Other survivors are recruited to help, but trust is scarce."
+        },
+        {
+          "day": 4,
+          "title": "The Horde Arrives",
+          "description": "The predicted horde attacks at dusk. The survivor and their makeshift team must defend the fort using the newly set up defenses. Success means survival; failure means overrun."
+        }
+      ],
+      "rewards": [
+        {
+          "type": "resource",
+          "description": "Gain reinforced defenses for Fort Crimson, reducing future zombie threats."
+        },
+        {
+          "type": "relationship",
+          "description": "Earn trust and loyalty from other survivors, unlocking new allies."
+        },
+        {
+          "type": "information",
+          "description": "Learn more about the fungal whispers and their connection to zombie behavior."
+        }
+      ],
+      "characters": [
+        {
+          "name": "Riley",
+          "role": "Scavenger with knowledge of nearby supply caches"
+        },
+        {
+          "name": "Doc",
+          "role": "Medic who can treat injuries sustained during fortification"
+        },
+        {
+          "name": "Jax",
+          "role": "Former soldier who helps set up traps and defenses"
+        }
+      ],
+      "failure_consequences": "If the survivor fails, Fort Crimson is overrun by the horde, forcing them to flee and lose all progress made in fortifying the location. Allies may be lost, and future survival becomes significantly harder.",
+      "id": "arc_9",
+      "status": "active",
+      "current_day": 1
+    }
+  ],
+  "current_day": 51,
+  "story_phase": "beginning"
+}

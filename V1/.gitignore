@@ -1,0 +1,18 @@
+# Automation and AI logic
+run_daily_sim.sh
+setup_cron.sh
+ai_engine/
+logs/temp*
+*.log
+*.plist
+*blockchain_cache.json
+
+# Documentation with sensitive automation details
+ARCHITECTURE.md
+LLM_CONTEXT.md
+
+# Local environment and temporary files
+.env
+.DS_Store
+setup_daily_random_scheduler.sh
+daily_schedule_generator.sh

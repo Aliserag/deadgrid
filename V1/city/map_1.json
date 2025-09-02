@@ -1,0 +1,333 @@
+{
+  "name": "The Forgotten Tunnels",
+  "theme": "subway system",
+  "description": "A sprawling underground network of subway tunnels and stations, now overgrown with strange fungi and littered with abandoned trains. The air is thick with the smell of damp concrete and decay. Flickering emergency lights cast eerie shadows, and the distant sound of dripping water echoes through the tunnels. Survivors whisper of something moving in the deeper, unexplored sections.",
+  "size": "large",
+  "dimensions": [
+    40,
+    20
+  ],
+  "points_of_interest": [
+    {
+      "name": "Central Station",
+      "type": "commercial",
+      "description": "A once-bustling transit hub, now a maze of broken ticket booths and overturned benches. The main concourse is relatively clear, but the platforms are overrun.",
+      "coords": [
+        20,
+        5
+      ],
+      "symbol": "S"
+    },
+    {
+      "name": "Maintenance Depot",
+      "type": "industrial",
+      "description": "A workshop filled with rusted tools and broken machinery. Could still have usable parts if you're brave enough to dig through the wreckage.",
+      "coords": [
+        5,
+        15
+      ],
+      "symbol": "M"
+    },
+    {
+      "name": "Supply Cache",
+      "type": "residential",
+      "description": "A hidden stash left by previous survivors, tucked away in an old employee break room. The door is barricaded from the inside.",
+      "coords": [
+        35,
+        10
+      ],
+      "symbol": "C"
+    },
+    {
+      "name": "Collapsed Tunnel",
+      "type": "hazard",
+      "description": "A section of the tunnel that has caved in, creating a dangerous bottleneck. Something seems to be moving in the rubble.",
+      "coords": [
+        25,
+        18
+      ],
+      "symbol": "X"
+    },
+    {
+      "name": "Generator Room",
+      "type": "industrial",
+      "description": "A small room housing backup generators. With some work, they might still provide power to parts of the station.",
+      "coords": [
+        10,
+        2
+      ],
+      "symbol": "G"
+    },
+    {
+      "name": "The Glass Canopy",
+      "type": "landmark",
+      "description": "A shattered glass dome that once regulated sunlight for plants, now a dangerous field of broken glass and hanging vines",
+      "coords": [
+        15,
+        14
+      ],
+      "symbol": "~"
+    },
+    {
+      "name": "Fungal Grove",
+      "type": "resource area",
+      "description": "A cluster of bioluminescent mushrooms that some survivors claim have medicinal properties",
+      "coords": [
+        25,
+        15
+      ],
+      "symbol": "~"
+    },
+    {
+      "name": "Park Maintenance Shed",
+      "type": "building",
+      "description": "A small storage building overtaken by roots, possibly containing old gardening tools and chemicals",
+      "coords": [
+        7,
+        16
+      ],
+      "symbol": "P"
+    },
+    {
+      "name": "Transit Hub",
+      "type": "transportation",
+      "description": "A former subway transfer station now filled with abandoned trains and scattered supplies. The flickering emergency lights create eerie shadows.",
+      "coords": [
+        3,
+        20
+      ],
+      "symbol": "T"
+    },
+    {
+      "name": "Flooded Passage",
+      "type": "environmental",
+      "description": "A collapsed section of tunnel partially submerged in stagnant water. Strange ripples suggest something might be moving beneath the surface.",
+      "coords": [
+        32,
+        22
+      ],
+      "symbol": "F"
+    },
+    {
+      "name": "The Roundhouse",
+      "type": "building",
+      "description": "A converted train maintenance building now serving as the camp's communal shelter and command center.",
+      "coords": [
+        8,
+        16
+      ],
+      "symbol": "R"
+    },
+    {
+      "name": "Signal Light Market",
+      "type": "landmark",
+      "description": "A trading post built around old signal towers where survivors barter goods under colored lights.",
+      "coords": [
+        12,
+        17
+      ],
+      "symbol": "$"
+    },
+    {
+      "name": "Train Car Barricade",
+      "type": "landmark",
+      "description": "Derailed subway cars stacked vertically to form the camp's main defensive wall.",
+      "coords": [
+        6,
+        18
+      ],
+      "symbol": "B"
+    },
+    {
+      "name": "Ventilation Shaft",
+      "type": "industrial",
+      "description": "A narrow maintenance shaft leading to surface access points. The metal rungs are rusted but sturdy, and faint daylight filters down from above.",
+      "coords": [
+        15,
+        25
+      ],
+      "symbol": "V"
+    },
+    {
+      "name": "Broken Escalator Shaft",
+      "type": "industrial",
+      "description": "A collapsed escalator leading to an upper level mall, now home to feral survivors",
+      "coords": [
+        2,
+        32
+      ],
+      "symbol": "B"
+    },
+    {
+      "name": "Water Filtration Plant",
+      "type": "industrial",
+      "description": "Abandoned maintenance area with large water tanks and filtration systems",
+      "coords": [
+        10,
+        32
+      ],
+      "symbol": "W"
+    },
+    {
+      "name": "Mysterious Chamber",
+      "type": "mystery",
+      "description": "A sealed room with strange markings on the walls and an ominous hum",
+      "coords": [
+        2,
+        34
+      ],
+      "symbol": "?"
+    },
+    {
+      "name": "Watchtower Alpha",
+      "type": "landmark",
+      "description": "A scaffold tower with sandbag reinforcements, offering clear sightlines down both tunnel approaches",
+      "coords": [
+        7,
+        25
+      ],
+      "symbol": "^"
+    },
+    {
+      "name": "Barter Square",
+      "type": "building",
+      "description": "A cluster of stalls where survivors trade scavenged goods under armed supervision",
+      "coords": [
+        15,
+        26
+      ],
+      "symbol": "R"
+    },
+    {
+      "name": "The Rat's Nest",
+      "type": "building",
+      "description": "A cramped medical station where the camp's doctor treats wounds with scavenged supplies",
+      "coords": [
+        25,
+        27
+      ],
+      "symbol": "R"
+    },
+    {
+      "name": "Lost & Found Depot",
+      "type": "commercial",
+      "description": "A pre-apocalypse lost & found storage area, now scavenged but may contain overlooked items",
+      "coords": [
+        3,
+        42
+      ],
+      "symbol": "L"
+    },
+    {
+      "name": "Old Control Room",
+      "type": "industrial",
+      "description": "Abandoned subway control room with broken monitors and scattered documents",
+      "coords": [
+        3,
+        44
+      ],
+      "symbol": "O"
+    }
+  ],
+  "danger_level": 7,
+  "resources": [
+    "medical supplies",
+    "tools",
+    "scrap metal",
+    "food rations",
+    "batteries"
+  ],
+  "special_features": [
+    "flickering emergency lights",
+    "overgrown fungi",
+    "abandoned trains",
+    "echoing sounds",
+    "hidden stashes",
+    "Broken train cars that can be scavenged for parts",
+    "Flooded areas that require wading (with potential underwater threats)",
+    "Working emergency lighting that flickers unpredictably",
+    "Vertical escape route to surface",
+    "Natural light source in subway tunnels",
+    "Potential zombie ambush point from above",
+    "Flooded western corridor with waist-deep water (movement penalty)",
+    "Broken glass ceiling that lets in daylight (zombies avoid this area)",
+    "Audible dripping water sounds that mask player movement",
+    "Partially collapsed ceiling with light filtering through",
+    "Graffiti-covered walls showing survivor messages",
+    "Railroad tracks partially buried under debris"
+  ],
+  "ascii_map": "########################################\n#   G      ###################          #\n#   #      #                 #          #\n#   #      #                 #          #\n#   #      #        S        #          #\n#   #      #                 #          #\n#   ########                 ########   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          #                 #      #   #\n#          ###################      # C #\n#                                   #   #\n#                                   #   #\n#   PPPPPPPPPPPPPPPPPPPPPPPPPPP     #   #\n#   M P~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~P~~P~P~~P~P     #   #\n#   # P~~~~P~~~~P~~~~P~~~~P~~~~P     #   #\n#   # P~P~P~~P~P~~P~X~~P~P~~P~P     #   #\n#   ##################################   #\n########################################\n#   #                                  #\n# T #..........................        #\n#   #..........................        #\n#   #.......................... F      #\n#   ####################################\n#   #                                  #\n#   #.............V...........         #\n#   #..........................        #\n#   ####################################\n#   #  RRRRRRRRRRRRRRRRRRRRRRRRRRRR   #\n#   #  R ^   R  R  R  R  R  R  R  R   #\n#   #  R R R R  R  R  R  R  R  R  R   #\n#   #  R R R R  R  R  R  R  R  R  R   #\n#   #  RRRRRRRRRRRRRRRRRRRRRRRRRRRR   #\n########################################\n#       ########################       #\n#   B   #                    #   W     #\n#       #                    #         #\n#   ?   #                    #         #\n#       #                    #         #\n#       ########################       #\n########################################\n#       ########################       #\n#   L   #                    #         #\n#       #                    #         #\n#   O   #                    #         #\n#       #                    #         #\n#       ########################       #\n########################################",
+  "id": "map_1",
+  "districts": [
+    {
+      "name": "Overgrown Arboretum",
+      "description": "What was once a beautiful underground park has been reclaimed by nature after years of neglect. Vines and mutated plants burst through cracked concrete, creating a dangerous but resource-rich environment. The air smells damp and earthy, with occasional pockets of bioluminescent fungi providing eerie illumination. Survivors report hearing strange rustling in the overgrowth that doesn't sound quite human.",
+      "coords": [
+        3,
+        13,
+        30,
+        5
+      ],
+      "faction_presence": "The Green Thumbs - a group of survivalists who believe in coexisting with the mutated flora",
+      "danger_level": 7,
+      "resources": [
+        "medicinal plants",
+        "fresh water",
+        "fertilizer",
+        "wood",
+        "mushrooms"
+      ],
+      "special_features": [
+        "mutated plants that react to movement",
+        "areas of toxic pollen",
+        "natural camouflage spots"
+      ]
+    },
+    {
+      "name": "The Last Stop Camp",
+      "description": "A makeshift survivor camp built in an abandoned subway maintenance yard. The survivors have fortified the area with salvaged train parts and subway barriers. Flickering lanterns made from old signal lights cast eerie shadows on the stacked shipping container dwellings. The constant hum of a jury-rigged generator mixes with the distant sounds of the tunnels.",
+      "coords": [
+        5,
+        15,
+        15,
+        5
+      ],
+      "faction_presence": "The Tunnel Rats - a scavenger faction specializing in subway system navigation",
+      "danger_level": 4,
+      "resources": [
+        "Salvaged electronics",
+        "Train parts",
+        "Underground farming",
+        "Clean water collection"
+      ],
+      "special_features": [
+        "Working subway map converted to zombie tracking system",
+        "Ventilation system repurposed for air filtration",
+        "Makeshift chapel in an old ticket booth"
+      ]
+    },
+    {
+      "name": "Tunnel Refuge",
+      "description": "A makeshift survivor camp built within a repurposed subway maintenance tunnel. The walls are lined with scavenged materials and flickering emergency lights. Makeshift barricades and watchtowers guard the entrance, while the sound of hushed conversations and clanging cookware echoes through the damp tunnels. The air smells of damp concrete and boiled rations.",
+      "coords": [
+        5,
+        24,
+        30,
+        5
+      ],
+      "faction_presence": "Tunnel Rats (survivor militia)",
+      "danger_level": 4,
+      "resources": [
+        "medical supplies",
+        "canned food",
+        "salvaged electronics",
+        "clean water"
+      ],
+      "special_features": [
+        "rotating guard shifts",
+        "hidden escape tunnels",
+        "fungal growth quarantine zone"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "maps": [
+    {
+      "id": "map_1",
+      "name": "The Forgotten Tunnels",
+      "theme": "subway system",
+      "size": "large",
+      "danger_level": 7
+    },
+    {
+      "id": "map_2",
+      "name": "Fungal Overgrowth District",
+      "theme": "urban district",
+      "size": "small",
+      "danger_level": 8
+    },
+    {
+      "id": "map_3",
+      "name": "Fort Crimson",
+      "theme": "military base",
+      "size": "medium",
+      "danger_level": 7
+    },
+    {
+      "id": "map_5",
+      "name": "Fort Crimson",
+      "theme": "military base",
+      "danger_level": 7,
+      "discovered_day": 34
+    },
+    {
+      "id": "map_5",
+      "name": "Carnival of the Damned",
+      "theme": "amusement park",
+      "size": "medium",
+      "danger_level": 7
+    },
+    {
+      "id": "map_6",
+      "name": "Carnival of the Damned",
+      "theme": "amusement park",
+      "danger_level": 7,
+      "discovered_day": 39
+    }
+  ],
+  "active_map": "map_3"
+}

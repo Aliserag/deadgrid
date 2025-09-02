@@ -1,0 +1,679 @@
+{
+  "current_conditions": {
+    "type": "storm",
+    "severity": 3,
+    "duration": 2,
+    "effects": [
+      "noise_mask",
+      "movement_severe_penalty",
+      "visibility_severely_reduced",
+      "narrative_howling wind",
+      "narrative_lightning flashes",
+      "narrative_crashing thunder"
+    ]
+  },
+  "forecast": [
+    {
+      "day": 1,
+      "type": "storm",
+      "severity": 3
+    },
+    {
+      "day": 2,
+      "type": "storm",
+      "severity": 3
+    },
+    {
+      "day": 3,
+      "type": "storm",
+      "severity": 2
+    }
+  ],
+  "season": "spring",
+  "history": [
+    {
+      "date": "2025-05-22",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-05-22",
+      "conditions": "clear",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-22",
+      "conditions": "clear",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-22",
+      "conditions": "clear",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-22",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-23",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-24",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-26",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-05-27",
+      "conditions": "fog",
+      "severity": 1
+    },
+    {
+      "date": "2025-05-28",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-05-29",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-05-30",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-06-02",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-06-03",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-06-04",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-06-05",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-06-06",
+      "conditions": "fog",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-02",
+      "conditions": "fog",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-02",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-03",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "cloudy",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "rain",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-08",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-09",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-09",
+      "conditions": "fog",
+      "severity": 2
+    },
+    {
+      "date": "2025-07-09",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-10",
+      "conditions": "clear",
+      "severity": 1
+    },
+    {
+      "date": "2025-07-11",
+      "conditions": "storm",
+      "severity": 3
+    },
+    {
+      "date": "2025-07-14",
+      "conditions": "storm",
+      "severity": 3
+    }
+  ],
+  "current_weather": {
+    "type": "storm",
+    "severity": 3,
+    "duration": 2,
+    "effects": [
+      "noise_mask",
+      "movement_severe_penalty",
+      "visibility_severely_reduced",
+      "narrative_howling wind",
+      "narrative_lightning flashes",
+      "narrative_crashing thunder"
+    ],
+    "day": 40,
+    "date": "2025-07-14"
+  },
+  "weather_history": [
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_limited visibility",
+        "narrative_eerie silence"
+      ],
+      "day": 12,
+      "date": "2025-05-24"
+    },
+    {
+      "type": "clear",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_clear skies"
+      ],
+      "day": 13,
+      "date": "2025-05-29"
+    },
+    {
+      "type": "clear",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_clear skies"
+      ],
+      "day": 14,
+      "date": "2025-05-30"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 3,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 15,
+      "date": "2025-06-02"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 2,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 16,
+      "date": "2025-06-03"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 1,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 17,
+      "date": "2025-06-04"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 3,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_mysterious shapes",
+        "narrative_limited visibility"
+      ],
+      "day": 18,
+      "date": "2025-07-02"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 2,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_mysterious shapes",
+        "narrative_limited visibility"
+      ],
+      "day": 19,
+      "date": "2025-07-02"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_mysterious shapes",
+        "narrative_limited visibility"
+      ],
+      "day": 20,
+      "date": "2025-07-03"
+    },
+    {
+      "type": "cloudy",
+      "severity": 1,
+      "duration": 2,
+      "effects": [
+        "narrative_diffused light"
+      ],
+      "day": 21,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "cloudy",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_diffused light"
+      ],
+      "day": 22,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "cloudy",
+      "severity": 1,
+      "duration": 2,
+      "effects": [
+        "narrative_diffused light"
+      ],
+      "day": 23,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "cloudy",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_diffused light"
+      ],
+      "day": 24,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 3,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_muddy ground",
+        "narrative_drumming raindrops"
+      ],
+      "day": 25,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_limited visibility",
+        "narrative_eerie silence"
+      ],
+      "day": 26,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 4,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 27,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 3,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 28,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 1,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_crashing thunder",
+        "narrative_lightning flashes"
+      ],
+      "day": 29,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "cloudy",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_diffused light"
+      ],
+      "day": 30,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 2,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_drumming raindrops",
+        "narrative_wet conditions"
+      ],
+      "day": 31,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 2,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_muddy ground",
+        "narrative_drumming raindrops"
+      ],
+      "day": 31,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_muddy ground",
+        "narrative_drumming raindrops"
+      ],
+      "day": 32,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 2,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_drumming raindrops",
+        "narrative_muddy ground"
+      ],
+      "day": 33,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "rain",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "movement_penalty",
+        "visibility_reduced",
+        "narrative_drumming raindrops",
+        "narrative_muddy ground"
+      ],
+      "day": 34,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 3,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_mysterious shapes",
+        "narrative_eerie silence"
+      ],
+      "day": 35,
+      "date": "2025-07-08"
+    },
+    {
+      "type": "fog",
+      "severity": 2,
+      "duration": 1,
+      "effects": [
+        "visibility_severely_reduced",
+        "narrative_mysterious shapes",
+        "narrative_eerie silence"
+      ],
+      "day": 36,
+      "date": "2025-07-09"
+    },
+    {
+      "type": "clear",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_clear skies"
+      ],
+      "day": 37,
+      "date": "2025-07-09"
+    },
+    {
+      "type": "clear",
+      "severity": 1,
+      "duration": 1,
+      "effects": [
+        "narrative_clear skies"
+      ],
+      "day": 38,
+      "date": "2025-07-09"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 3,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_lightning flashes",
+        "narrative_crashing thunder"
+      ],
+      "day": 39,
+      "date": "2025-07-11"
+    },
+    {
+      "type": "storm",
+      "severity": 3,
+      "duration": 2,
+      "effects": [
+        "noise_mask",
+        "movement_severe_penalty",
+        "visibility_severely_reduced",
+        "narrative_howling wind",
+        "narrative_lightning flashes",
+        "narrative_crashing thunder"
+      ],
+      "day": 40,
+      "date": "2025-07-14"
+    }
+  ]
+}

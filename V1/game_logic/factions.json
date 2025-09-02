@@ -1,0 +1,297 @@
+{
+  "factions": [
+    {
+      "name": "The Caravan Collective",
+      "emoji": "\ud83d\ude9b",
+      "description": "A vast network of traders and scavengers who roam the wasteland, connecting isolated settlements through commerce. They prioritize profit and survival over all else, maintaining neutrality to ensure safe passage. Their caravans are heavily guarded and recognizable by their patchwork banners.",
+      "ideology": "Profit through peace. They believe trade is the key to rebuilding civilization and will go to great lengths to protect their business interests.",
+      "territory": "Nomadic, but they have established trade hubs in abandoned shopping malls and highway rest stops across the region.",
+      "resources": [
+        "Scavenged goods",
+        "Black market weapons",
+        "Medicines and first aid supplies",
+        "Information and rumors"
+      ],
+      "hostility": 30,
+      "perks": [
+        "Extensive trade network with reliable contacts",
+        "Well-armed caravan guards",
+        "Knowledge of safe routes and hidden caches"
+      ],
+      "weaknesses": [
+        "Over-reliance on trade routes makes them predictable",
+        "Internal disputes over profit can lead to infighting"
+      ],
+      "id": "faction_1",
+      "discovered_day": 15,
+      "members": [
+        "npc_1",
+        "npc_2",
+        "npc_3",
+        "npc_4",
+        "npc_5"
+      ],
+      "relations": {}
+    },
+    {
+      "name": "The Iron Vanguard",
+      "description": "A disciplined, militaristic faction composed of former soldiers and survivalists who believe in strict hierarchy and order. They operate from a fortified subway station, using guerrilla tactics to maintain control and eliminate threats. Their motto: 'Strength through discipline, survival through unity.'",
+      "ideology": "Order and survival above all else. They see chaos as the true enemy and believe only a structured, militarized society can withstand the apocalypse.",
+      "territory": "A heavily fortified subway station and adjacent tunnels, repurposed into a defensible stronghold with barricades and traps.",
+      "resources": [
+        "Armory of military-grade weapons",
+        "Stockpile of preserved rations",
+        "Advanced communication equipment"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Expert ambush tactics",
+        "Highly trained in close-quarters combat",
+        "Efficient scavenging operations"
+      ],
+      "weaknesses": [
+        "Limited numbers due to strict recruitment",
+        "Over-reliance on centralized leadership"
+      ],
+      "id": "faction_2",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Iron Vanguard",
+      "description": "A disciplined, militaristic faction composed of former soldiers and survivalists who believe in strict hierarchy and order. They operate from a fortified subway station, using guerrilla tactics to maintain control and eliminate threats. Their motto: 'Strength through discipline, survival through unity.'",
+      "ideology": "Order and survival above all else. They see chaos as the true enemy and believe only a structured, militarized society can withstand the apocalypse.",
+      "territory": "A heavily fortified subway station and adjacent tunnels, repurposed into a defensible stronghold with barricades and traps.",
+      "resources": [
+        "Armory of military-grade weapons",
+        "Stockpile of preserved rations",
+        "Advanced communication equipment"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Expert ambush tactics",
+        "Highly trained in close-quarters combat",
+        "Efficient scavenging operations"
+      ],
+      "weaknesses": [
+        "Limited numbers due to strict recruitment",
+        "Over-reliance on centralized leadership"
+      ],
+      "id": "faction_3",
+      "members": [
+        "npc_19"
+      ],
+      "relations": {},
+      "discovered_day": 13
+    },
+    {
+      "name": "The Fog Dwellers",
+      "description": "A secretive group of survivors who have adapted to life in the fog-choked subway tunnels. They use the bioluminescent fungal growths to navigate and have developed an almost symbiotic relationship with the underground environment.",
+      "ideology": "Survival through stealth and adaptation. They believe the fog and fungi are nature's way of protecting them from both zombies and hostile survivors.",
+      "territory": "The labyrinthine subway tunnels beneath Central Station, particularly the abandoned maintenance shafts and service tunnels.",
+      "resources": [
+        "Bioluminescent fungi for light and navigation",
+        "Subway maintenance tools repurposed as weapons",
+        "Underground water filtration systems"
+      ],
+      "hostility": 35,
+      "perks": [
+        "Exceptional night vision and low-light combat skills",
+        "Can navigate tunnels silently and efficiently",
+        "Knowledge of fungal growth patterns to predict zombie movements"
+      ],
+      "weaknesses": [
+        "Vulnerable to bright lights and loud noises that disrupt their adapted senses",
+        "Limited surface combat experience"
+      ],
+      "id": "faction_4",
+      "members": [
+        "npc_7",
+        "npc_9"
+      ],
+      "relations": {}
+    },
+    {
+      "name": "The Fog Dwellers",
+      "description": "A secretive group of survivors who have adapted to life in the fog-choked subway tunnels. They use the bioluminescent fungal growths to navigate and have developed an almost symbiotic relationship with the underground environment.",
+      "ideology": "Survival through stealth and adaptation. They believe the fog and fungi are nature's way of protecting them from both zombies and hostile survivors.",
+      "territory": "The labyrinthine subway tunnels beneath Central Station, particularly the abandoned maintenance shafts and service tunnels.",
+      "resources": [
+        "Bioluminescent fungi for light and navigation",
+        "Subway maintenance tools repurposed as weapons",
+        "Underground water filtration systems"
+      ],
+      "hostility": 35,
+      "perks": [
+        "Exceptional night vision and low-light combat skills",
+        "Can navigate tunnels silently and efficiently",
+        "Knowledge of fungal growth patterns to predict zombie movements"
+      ],
+      "weaknesses": [
+        "Vulnerable to bright lights and loud noises that disrupt their adapted senses",
+        "Limited surface combat experience"
+      ],
+      "id": "faction_5",
+      "members": [
+        "npc_13"
+      ],
+      "relations": {},
+      "discovered_day": 19
+    },
+    {
+      "name": "The Fog Reapers",
+      "description": "A ruthless bandit faction that thrives in the fog-choked tunnels beneath Central Station. They use the unnatural mist as both camouflage and psychological warfare, striking from nowhere and vanishing without a trace. Survivors whisper that they've made some dark pact with whatever lurks in the depths.",
+      "ideology": "Might makes right - they take what they want from the weak and believe the fog protects them. Some members genuinely worship the creeping mist as a living entity.",
+      "territory": "The maintenance tunnels and abandoned subway lines radiating from Central Station",
+      "resources": [
+        "Stolen military-grade gas masks",
+        "Railway maintenance explosives",
+        "A hidden armory in a signal control room"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Can see clearly in fog while others are blinded",
+        "Ambush tactics grant first-strike advantage",
+        "Tunnel knowledge allows rapid disappearance"
+      ],
+      "weaknesses": [
+        "Reliant on confined spaces - weak in open areas",
+        "Leadership disputes frequently turn violent"
+      ],
+      "id": "faction_6",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Fog Reapers",
+      "description": "A ruthless bandit faction that thrives in the fog-choked tunnels beneath Central Station. They use the unnatural mist as both camouflage and psychological warfare, striking from nowhere and vanishing without a trace. Survivors whisper that they've made some dark pact with whatever lurks in the depths.",
+      "ideology": "Might makes right - they take what they want from the weak and believe the fog protects them. Some members genuinely worship the creeping mist as a living entity.",
+      "territory": "The maintenance tunnels and abandoned subway lines radiating from Central Station",
+      "resources": [
+        "Stolen military-grade gas masks",
+        "Railway maintenance explosives",
+        "A hidden armory in a signal control room"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Can see clearly in fog while others are blinded",
+        "Ambush tactics grant first-strike advantage",
+        "Tunnel knowledge allows rapid disappearance"
+      ],
+      "weaknesses": [
+        "Reliant on confined spaces - weak in open areas",
+        "Leadership disputes frequently turn violent"
+      ],
+      "id": "faction_7",
+      "members": [
+        "npc_11",
+        "npc_15"
+      ],
+      "relations": {},
+      "discovered_day": 20
+    },
+    {
+      "name": "The Luminous Choir",
+      "description": "A fanatical cult that worships the bioluminescent fungal growths as divine manifestations. They believe the fungal infection is a sacred transformation, guiding humanity to a higher state of being. Their followers are known for their eerie chants and glowing fungal tattoos.",
+      "ideology": "The Luminous Choir seeks to spread the 'gift' of the fungal infection, viewing it as a divine blessing. They believe the apocalypse is a necessary purification, and those who resist are heretics to be converted or eradicated.",
+      "territory": "They dominate the underground tunnels and subway systems, where the fungal growths thrive. Their main stronghold is the abandoned Grand Central Station, now a glowing cathedral of fungal tendrils.",
+      "resources": [
+        "Bioluminescent fungal spores",
+        "Underground water filtration systems",
+        "Salvaged subway maintenance equipment",
+        "Converted survivors as labor force"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Fungal Immunity: Members are resistant to fungal infections",
+        "Bioluminescent Camouflage: Can blend into fungal-lit environments",
+        "Fanatic Zeal: Fearless in battle, believing death brings divine union"
+      ],
+      "weaknesses": [
+        "Light Sensitivity: Vulnerable to bright artificial light",
+        "Dependent on Fungal Growths: Lose power in sterile environments"
+      ],
+      "id": "faction_8",
+      "members": [
+        "npc_16",
+        "npc_17"
+      ],
+      "relations": {}
+    },
+    {
+      "name": "The Sporebound",
+      "description": "A small commune of survivors who believe the fungal growths are a form of higher intelligence. They have learned to coexist with the infection, using it to their advantage. Their base is hidden deep within the tunnel network, where the fungal pulses guide their decisions.",
+      "ideology": "They worship the fungal growths as a sentient force, believing it will eventually cleanse the world of the unworthy. Their goal is to spread the 'gospel' of the spores and convert or eliminate non-believers.",
+      "territory": "The underground maintenance tunnels and adjacent subway stations, where fungal growths are most dense.",
+      "resources": [
+        "Fungal-based remedies",
+        "Salvaged tunneling equipment",
+        "Bio-luminescent fungi for light"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Immune to fungal infections",
+        "Can predict zombie movements via fungal pulses",
+        "Blend in with fungal environments"
+      ],
+      "weaknesses": [
+        "Vulnerable to fire and anti-fungal agents",
+        "Limited visibility in non-fungal areas"
+      ],
+      "id": "faction_9",
+      "members": [],
+      "relations": {}
+    },
+    {
+      "name": "The Sporebound",
+      "description": "A small commune of survivors who believe the fungal growths are a form of higher intelligence. They have learned to coexist with the infection, using it to their advantage. Their base is hidden deep within the tunnel network, where the fungal pulses guide their decisions.",
+      "ideology": "They worship the fungal growths as a sentient force, believing it will eventually cleanse the world of the unworthy. Their goal is to spread the 'gospel' of the spores and convert or eliminate non-believers.",
+      "territory": "The underground maintenance tunnels and adjacent subway stations, where fungal growths are most dense.",
+      "resources": [
+        "Fungal-based remedies",
+        "Salvaged tunneling equipment",
+        "Bio-luminescent fungi for light"
+      ],
+      "hostility": 75,
+      "perks": [
+        "Immune to fungal infections",
+        "Can predict zombie movements via fungal pulses",
+        "Blend in with fungal environments"
+      ],
+      "weaknesses": [
+        "Vulnerable to fire and anti-fungal agents",
+        "Limited visibility in non-fungal areas"
+      ],
+      "id": "faction_10",
+      "members": [],
+      "relations": {},
+      "discovered_day": 29
+    },
+    {
+      "name": "The Rust Reavers",
+      "description": "A ruthless band of scavengers who prey on survivors and settlements, stripping anything of value from their victims. They operate in small, mobile groups to avoid detection and specialize in ambush tactics. Known for leaving behind only rusted scraps and bloodstains where they strike.",
+      "ideology": "Survival of the fittest through absolute domination. They believe the strong should take what they need from the weak, and view the apocalypse as an opportunity to carve out their own brutal kingdom.",
+      "territory": "Nomadic, but frequently haunt abandoned industrial zones, rail yards, and subway tunnels where they can ambush travelers and hide their loot.",
+      "resources": [
+        "Scrap metal and salvage",
+        "Stolen weapons and ammunition",
+        "Improvised explosives",
+        "Captured vehicles"
+      ],
+      "hostility": 85,
+      "perks": [
+        "Master ambushers - excel at surprise attacks",
+        "Mechanical savants - can jury-rig nearly anything into a weapon or trap",
+        "Fear tactics - use gruesome displays to intimidate foes"
+      ],
+      "weaknesses": [
+        "Poor discipline - prone to infighting over spoils",
+        "No permanent base - vulnerable when caught in the open"
+      ],
+      "id": "faction_11",
+      "members": [],
+      "relations": {}
+    }
+  ],
+  "next_id": 2
+}

@@ -1,0 +1,520 @@
+{
+  "npcs": [
+    {
+      "name": "Dr. Elias Vance",
+      "emoji": "\ud83d\udc68\u200d\u2695\ufe0f",
+      "age": 42,
+      "background": "Former trauma surgeon who lost his family in the early days of the outbreak. Now uses his medical skills to barter for supplies and information.",
+      "description": "Tall and lean with salt-and-pepper hair tied back in a short ponytail. His piercing blue eyes and calm demeanor mask a sharp, calculating mind. Speaks softly but carries an air of quiet authority.",
+      "motivation": "To create a network of safe trade routes where knowledge and medical supplies can flow freely between survivor groups.",
+      "skills": [
+        "Advanced medical knowledge",
+        "Negotiation",
+        "Field surgery",
+        "Herbal remedy preparation"
+      ],
+      "items": [
+        "A leather-bound journal of zombie bite reactions and treatments",
+        "A silver pocket watch that belonged to his late wife",
+        "A custom-made bone saw for emergency amputations"
+      ],
+      "quirk": "Always hums old jazz tunes while working, even during high-stress situations.",
+      "secret": "He's secretly developing an experimental vaccine using spinal fluid harvested from special infected, but hasn't told anyone about the dangerous side effects he's observed.",
+      "id": "npc_1",
+      "discovered_day": 15,
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": -10
+    },
+    {
+      "name": "Marcus 'Ironprice' Holloway",
+      "emoji": "\ud83e\ude96",
+      "age": 42,
+      "background": "Former Marine Corps logistics officer who specialized in supply chain management. After the outbreak, he put his skills to use keeping trade routes open.",
+      "description": "A broad-shouldered man with a salt-and-pepper beard and a permanent squint from years of scanning horizons. Speaks in measured tones but has a dry wit that surfaces unexpectedly.",
+      "motivation": "Believes civilization can be rebuilt one trade deal at a time, and will protect caravan routes at all costs.",
+      "skills": [
+        "Route planning",
+        "Crisis negotiation",
+        "Defensive driving",
+        "Weapons maintenance"
+      ],
+      "items": [
+        "A modified GPS unit with safe routes mapped",
+        "A silver Zippo with 'Semper Fi' engraved",
+        "A ledger of every trade deal he's brokered"
+      ],
+      "quirk": "Always carries a small scale to weigh goods, even when it's clearly unnecessary.",
+      "secret": "He's been skimming small percentages from trades to build an emergency stockpile, convinced the Collective's idealism will get them all killed.",
+      "id": "npc_2",
+      "discovered_day": 15,
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": -31
+    },
+    {
+      "name": "Marcus 'Hawk' Callahan",
+      "emoji": "\ud83e\udd85",
+      "age": 42,
+      "background": "Former Army Ranger turned private security contractor. Specialized in high-risk convoy protection in conflict zones before the outbreak.",
+      "description": "A grizzled man with a shaved head and a network of scars across his forearms. His piercing blue eyes constantly scan for threats, but he speaks with surprising warmth when negotiating deals. Wears a modified tactical vest with caravan insignia.",
+      "motivation": "Believes secure trade routes are the only way to prevent humanity from descending into complete barbarism. Secretly hopes to find his estranged daughter among the survivor settlements.",
+      "skills": [
+        "Convoy defense tactics",
+        "Hand-to-hand combat",
+        "Negotiation under pressure",
+        "Improvised weapon crafting"
+      ],
+      "items": [
+        "Customized ballistic briefcase (doubles as shield)",
+        "Dog-eared ledger of trade routes and safehouses",
+        "Pre-war military issue compass that always points north"
+      ],
+      "quirk": "Constantly fidgets with a silver challenge coin from his Ranger days, flipping it between his fingers during tense moments.",
+      "secret": "His caravan accidentally transported the infected that overran the Greenbrier settlement, though he's convinced it was sabotage by a rival faction.",
+      "id": "npc_3",
+      "discovered_day": 15,
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": 31
+    },
+    {
+      "name": "Eleanor 'Ellie' Whitmore",
+      "emoji": "\ud83d\udc69\u200d\ud83c\udfeb",
+      "age": 42,
+      "background": "Former high school history teacher who specialized in ancient trade routes and barter economies. She secretly ran an underground book exchange for banned historical texts.",
+      "description": "A wiry woman with salt-and-pepper hair kept in a practical braid, her sharp green eyes always scanning for opportunities. She speaks with measured precision but has a warm, encouraging tone that disarms strangers.",
+      "motivation": "To rebuild civilization through a network of safe trade routes, proving humanity can cooperate even in darkness.",
+      "skills": [
+        "Bartering & negotiation",
+        "Historical knowledge of trade systems",
+        "Basic first aid",
+        "Persuasive storytelling"
+      ],
+      "items": [
+        "A dog-eared copy of 'The Silk Road: A History'",
+        "A brass compass that always points to the last safe trade post",
+        "A hidden ledger of favors owed"
+      ],
+      "quirk": "Constantly makes historical comparisons to current situations ('This reminds me of when the Phoenicians...')",
+      "secret": "Her underground book exchange accidentally spread the first rumors of the coming apocalypse - she blames herself for not sounding the alarm sooner.",
+      "id": "npc_4",
+      "discovered_day": 15,
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": -22
+    },
+    {
+      "name": "Eleanor 'Ellie' Grayson",
+      "age": 42,
+      "background": "Former high school history teacher who specialized in ancient trade routes and barter economies. Her academic knowledge became unexpectedly valuable after the collapse.",
+      "description": "A wiry woman with salt-and-pepper hair tied in a practical braid, deep crow's feet from squinting at blackboards (and now at threats in the fog). Speaks with measured precision but has a dark, unexpected humor that surfaces at tense moments.",
+      "motivation": "To prove civilization can be rebuilt through commerce rather than violence, secretly compiling a 'New Merchant's Guide' with survivalist annotations.",
+      "skills": [
+        "Barter negotiation",
+        "Mapmaking/cartography",
+        "Basic first aid",
+        "Spotting valuable artifacts in ruins"
+      ],
+      "items": [
+        "A laminated pre-collapse world map with handwritten trade routes",
+        "A hollowed-out textbook containing hidden seeds",
+        "A brass bell used to announce 'store hours' at trading posts"
+      ],
+      "quirk": "Absentmindedly writes prices in the air with her finger when evaluating items, even during life-or-death situations.",
+      "secret": "Her 'merchant ledger' contains coded locations of hidden caches... including ones she looted from other survivors during the early chaos.",
+      "id": "npc_5",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": 14
+    },
+    {
+      "name": "Eleanor 'Ellie' Grayson",
+      "age": 42,
+      "background": "Former high school history teacher who specialized in ancient trade routes and barter economies. Her academic knowledge became unexpectedly valuable after the collapse.",
+      "description": "A wiry woman with salt-and-pepper hair tied in a practical braid, deep crow's feet from squinting at blackboards (and now at threats in the fog). Speaks with measured precision but has a dark, unexpected humor that surfaces at tense moments.",
+      "motivation": "To prove civilization can be rebuilt through commerce rather than violence, secretly compiling a 'New Merchant's Guide' with survivalist annotations.",
+      "skills": [
+        "Barter negotiation",
+        "Mapmaking/cartography",
+        "Basic first aid",
+        "Spotting valuable artifacts in ruins"
+      ],
+      "items": [
+        "A laminated pre-collapse world map with handwritten trade routes",
+        "A hollowed-out textbook containing hidden seeds",
+        "A brass bell used to announce 'store hours' at trading posts"
+      ],
+      "quirk": "Absentmindedly writes prices in the air with her finger when evaluating items, even during life-or-death situations.",
+      "secret": "Her 'merchant ledger' contains coded locations of hidden caches... including ones she looted from other survivors during the early chaos.",
+      "id": "npc_6",
+      "faction_id": "faction_1",
+      "faction_name": "The Caravan Collective",
+      "status": "alive",
+      "relationship": 14,
+      "discovered_day": 12
+    },
+    {
+      "name": "Silas 'Shade' Mercer",
+      "age": 42,
+      "background": "Former big-game hunter and wilderness guide who specialized in tracking elusive prey through dense forests and foggy terrain.",
+      "description": "A gaunt, wiry man with piercing grey eyes that seem to glow faintly in the fog. His skin is covered in intricate fungal tattoos that pulse slightly when the mist thickens. Speaks in a low, measured tone and moves with unnatural silence.",
+      "motivation": "Believes he's been chosen by the fog to protect the last remnants of humanity by teaching them to become invisible to both the dead and the living.",
+      "skills": [
+        "Master tracker",
+        "Fog navigation",
+        "Silent movement",
+        "Fungal lore"
+      ],
+      "items": [
+        "A bone whistle that mimics zombie vocalizations",
+        "A fungal growth in a glass vial that glows in sync with the mist",
+        "A journal filled with pulsing spore patterns"
+      ],
+      "quirk": "Constantly sniffs the air and licks his fingers to test wind direction and spore density.",
+      "secret": "The fungal tattoos aren't just decorative - they're slowly spreading through his nervous system, and he's starting to hear the same whispers in the fog that the zombies respond to.",
+      "id": "npc_7",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -1
+    },
+    {
+      "name": "Silas 'Shade' Mercer",
+      "age": 42,
+      "background": "Former big-game hunter and wilderness guide who specialized in tracking elusive prey through dense forests and foggy terrain.",
+      "description": "A gaunt, wiry man with piercing grey eyes that seem to glow faintly in the fog. His skin is covered in intricate fungal tattoos that pulse slightly when the mist thickens. Speaks in a low, measured tone and moves with unnatural silence.",
+      "motivation": "Believes he's been chosen by the fog to protect the last remnants of humanity by teaching them to become invisible to both the dead and the living.",
+      "skills": [
+        "Master tracker",
+        "Fog navigation",
+        "Silent movement",
+        "Fungal lore"
+      ],
+      "items": [
+        "A bone whistle that mimics zombie vocalizations",
+        "A fungal growth in a glass vial that glows in sync with the mist",
+        "A journal filled with pulsing spore patterns"
+      ],
+      "quirk": "Constantly sniffs the air and licks his fingers to test wind direction and spore density.",
+      "secret": "The fungal tattoos aren't just decorative - they're slowly spreading through his nervous system, and he's starting to hear the same whispers in the fog that the zombies respond to.",
+      "id": "npc_8",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -1,
+      "discovered_day": 21
+    },
+    {
+      "name": "Silas 'Ghost' Mercer",
+      "age": 42,
+      "background": "Former wildlife tracker and survival instructor who spent years living off-grid before the outbreak. His intimate knowledge of urban wildlife made him invaluable when the cities fell.",
+      "description": "A gaunt, wiry man with fungal growths creeping up his left arm like living tattoos. Moves with unnatural silence, speaks in hushed tones as if afraid to disturb the fog. His piercing gray eyes seem to see through both darkness and deception.",
+      "motivation": "To prove humanity can evolve alongside the fungal infection rather than fight it, believing symbiosis is the only path to survival.",
+      "skills": [
+        "Fungal spore tracking",
+        "Absolute silence movement",
+        "Improvised toxin crafting",
+        "Urban camouflage"
+      ],
+      "items": [
+        "A bioluminescent fungal compass",
+        "Zombie-scented camouflage paste",
+        "A journal of infected behavioral patterns"
+      ],
+      "quirk": "Constantly collects fungal samples in small vials, whispering to them like they're pets",
+      "secret": "His fungal arm occasionally twitches with a will of its own, and he's starting to hear whispers in the fog",
+      "id": "npc_9",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -47
+    },
+    {
+      "name": "Silas 'Ghost' Mercer",
+      "age": 42,
+      "background": "Former wildlife tracker and survival instructor who spent years living off-grid before the outbreak. His intimate knowledge of urban wildlife made him invaluable when the cities fell.",
+      "description": "A gaunt, wiry man with fungal growths creeping up his left arm like living tattoos. Moves with unnatural silence, speaks in hushed tones as if afraid to disturb the fog. His piercing gray eyes seem to see through both darkness and deception.",
+      "motivation": "To prove humanity can evolve alongside the fungal infection rather than fight it, believing symbiosis is the only path to survival.",
+      "skills": [
+        "Fungal spore tracking",
+        "Absolute silence movement",
+        "Improvised toxin crafting",
+        "Urban camouflage"
+      ],
+      "items": [
+        "A bioluminescent fungal compass",
+        "Zombie-scented camouflage paste",
+        "A journal of infected behavioral patterns"
+      ],
+      "quirk": "Constantly collects fungal samples in small vials, whispering to them like they're pets",
+      "secret": "His fungal arm occasionally twitches with a will of its own, and he's starting to hear whispers in the fog",
+      "id": "npc_10",
+      "faction_id": "faction_4",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": -47,
+      "discovered_day": 22
+    },
+    {
+      "name": "Silas 'Mossback' Grayson",
+      "age": 42,
+      "background": "Former big-game hunter and survival instructor who disappeared into the wilderness years before the outbreak. Rumors say he was wanted for poaching endangered species.",
+      "description": "A grizzled man with a salt-and-pepper beard matted with fungal growths, his skin permanently stained greenish-gray from living in the fog. Speaks in slow, deliberate growls and moves with unsettling silence. Believes the fog whispers truths to those strong enough to listen.",
+      "motivation": "To prove himself worthy of the fog's favor by bringing it fresh prey - human or otherwise.",
+      "skills": [
+        "Fungal camouflage",
+        "Silent stalking",
+        "Toxin resistance",
+        "Tracking by scent"
+      ],
+      "items": [
+        "A bone knife wrapped in glowing mycelium",
+        "A jar of hallucinogenic fog condensate",
+        "A necklace of mummified fingers"
+      ],
+      "quirk": "Constantly licks his fungal-stained teeth and talks to the mist like it's answering him.",
+      "secret": "The fungal growths are slowly consuming him - he's begun seeing visions of becoming one with the fog permanently.",
+      "id": "npc_11",
+      "faction_id": "faction_7",
+      "faction_name": "The Fog Reapers",
+      "status": "alive",
+      "relationship": 6
+    },
+    {
+      "name": "Silas 'Mossback' Grayson",
+      "age": 42,
+      "background": "Former big-game hunter and survival instructor who disappeared into the wilderness years before the outbreak. Rumors say he was wanted for poaching endangered species.",
+      "description": "A grizzled man with a salt-and-pepper beard matted with fungal growths, his skin permanently stained greenish-gray from living in the fog. Speaks in slow, deliberate growls and moves with unsettling silence. Believes the fog whispers truths to those strong enough to listen.",
+      "motivation": "To prove himself worthy of the fog's favor by bringing it fresh prey - human or otherwise.",
+      "skills": [
+        "Fungal camouflage",
+        "Silent stalking",
+        "Toxin resistance",
+        "Tracking by scent"
+      ],
+      "items": [
+        "A bone knife wrapped in glowing mycelium",
+        "A jar of hallucinogenic fog condensate",
+        "A necklace of mummified fingers"
+      ],
+      "quirk": "Constantly licks his fungal-stained teeth and talks to the mist like it's answering him.",
+      "secret": "The fungal growths are slowly consuming him - he's begun seeing visions of becoming one with the fog permanently.",
+      "id": "npc_12",
+      "faction_id": "faction_7",
+      "faction_name": "The Fog Reapers",
+      "status": "alive",
+      "relationship": 6,
+      "discovered_day": 23
+    },
+    {
+      "name": "Dr. Elias Voss",
+      "age": 42,
+      "background": "Former mycologist specializing in parasitic fungi. Worked on classified bioweapon research before the outbreak.",
+      "description": "Tall and gaunt with fungal growths creeping up his left arm. Speaks in measured tones but his eyes dart constantly, as if tracking invisible spores. Believes the fungal networks are a form of collective intelligence.",
+      "motivation": "Seeks to prove the fungal mutations represent the next stage of human evolution and wants to merge survivors with the mycelium network.",
+      "skills": [
+        "Advanced mycology knowledge",
+        "Stealth movement in fog-covered areas",
+        "Creating fungal-based remedies (and toxins)",
+        "Deciphering spore patterns as communication"
+      ],
+      "items": [
+        "A bioluminescent fungal culture in a glass vial",
+        "Modified gas mask that filters but preserves spore traces",
+        "Journal written in fungal spore patterns"
+      ],
+      "quirk": "Constantly rubs his fungal arm when lying or nervous, causing luminescent spores to puff from the growths.",
+      "secret": "His fungal arm is slowly spreading, and he's secretly inoculating other survivors with controlled spore doses to test his theories.",
+      "id": "npc_13",
+      "faction_id": "faction_5",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": 15
+    },
+    {
+      "name": "Dr. Elias Voss",
+      "age": 42,
+      "background": "Former mycologist specializing in parasitic fungi. Worked on classified bioweapon research before the outbreak.",
+      "description": "Tall and gaunt with fungal growths creeping up his left arm. Speaks in measured tones but his eyes dart constantly, as if tracking invisible spores. Believes the fungal networks are a form of collective intelligence.",
+      "motivation": "Seeks to prove the fungal mutations represent the next stage of human evolution and wants to merge survivors with the mycelium network.",
+      "skills": [
+        "Advanced mycology knowledge",
+        "Stealth movement in fog-covered areas",
+        "Creating fungal-based remedies (and toxins)",
+        "Deciphering spore patterns as communication"
+      ],
+      "items": [
+        "A bioluminescent fungal culture in a glass vial",
+        "Modified gas mask that filters but preserves spore traces",
+        "Journal written in fungal spore patterns"
+      ],
+      "quirk": "Constantly rubs his fungal arm when lying or nervous, causing luminescent spores to puff from the growths.",
+      "secret": "His fungal arm is slowly spreading, and he's secretly inoculating other survivors with controlled spore doses to test his theories.",
+      "id": "npc_14",
+      "faction_id": "faction_5",
+      "faction_name": "The Fog Dwellers",
+      "status": "alive",
+      "relationship": 15,
+      "discovered_day": 25
+    },
+    {
+      "name": "Silas 'Mistwalker' Graves",
+      "age": 42,
+      "background": "Former big-game hunter and survivalist guide who led wealthy clients on dangerous expeditions. When the world fell, he found his skills were perfectly suited to the new order.",
+      "description": "A grizzled man with a permanent squint from years of tracking prey. His face is crisscrossed with scars, and his left ear is missing. Speaks in a low, gravelly voice and moves with predatory silence. Believes the fog whispers secrets to those who listen.",
+      "motivation": "To prove himself worthy of the fog's favor by becoming the ultimate predator in this ruined world.",
+      "skills": [
+        "Expert tracker",
+        "Silent movement",
+        "Toxin crafting (from fungal growths)",
+        "Interrogation through pain"
+      ],
+      "items": [
+        "A bone-handled hunting knife with fungal growth along the blade",
+        "A necklace of shriveled ears from his kills",
+        "A fog-stained leather duster that seems to shift colors in low light"
+      ],
+      "quirk": "Constantly sniffs the air and licks his fingers to test wind direction, even when indoors.",
+      "secret": "He's begun seeing visions in the fog - and sometimes they come true. This terrifies him more than he'd ever admit.",
+      "id": "npc_15",
+      "faction_id": "faction_7",
+      "faction_name": "The Fog Reapers",
+      "status": "alive",
+      "relationship": -17
+    },
+    {
+      "name": "Brother Elias 'The Nourisher' Voss",
+      "age": 42,
+      "background": "Former executive chef at a high-end organic restaurant, specializing in wild mushroom foraging and fermentation techniques. Lost his family in the early outbreaks and found purpose in the Choir's teachings.",
+      "description": "A gaunt man with fungal growths creeping up his neck like elaborate chef's tattoos. Speaks in measured, almost reverent tones about 'flavor profiles of the blessed flesh'. Carries himself with the precision of a kitchen veteran, even when performing grotesque rituals.",
+      "motivation": "To prepare the ultimate sacrament - a dish so infused with the fungal essence that it will trigger instant 'ascension' in those who consume it.",
+      "skills": [
+        "Expert mycologist (especially regarding parasitic fungi)",
+        "Precision knife work (both culinary and combat)",
+        "Persuasive sermonizing through food metaphors",
+        "Identifying edible/medicinal growths in infected zones"
+      ],
+      "items": [
+        "A set of surgical-grade chef's knives with bioluminescent fungal handles",
+        "A leather-bound 'recipe book' containing notes on infected tissue preparation",
+        "A portable still for distilling fungal essences into potent sacramental liquors"
+      ],
+      "quirk": "Constantly tastes things - licks his knives, samples the air, even tests infected flesh (which he's developed an immunity to). Refers to everything as 'underseasoned'.",
+      "secret": "His signature dish requires a specific rare ingredient - the pituitary gland of an uninfected human. He's been discreetly hunting a 'pure' survivor for weeks.",
+      "id": "npc_16",
+      "faction_id": "faction_8",
+      "faction_name": "The Luminous Choir",
+      "status": "alive",
+      "relationship": -14
+    },
+    {
+      "name": "Gabriel 'Spore' Moreau",
+      "age": 42,
+      "background": "Former executive chef at a Michelin-starred restaurant, known for his experimental fungal-based cuisine. His fascination with mycology made him an early convert to the Luminous Choir.",
+      "description": "Tall and gaunt with veins that pulse with bioluminescent fungal growths. His once-pristine chef's coat is now stained with organic patterns. Speaks in a melodic, almost hypnotic cadence, seasoning his speech with culinary metaphors.",
+      "motivation": "To create the 'perfect communion feast' that will convert even the most resistant survivors through sublime fungal gastronomy",
+      "skills": [
+        "Expert mycologist",
+        "Master of food-based persuasion",
+        "Can identify edible/medicinal fungi instantly",
+        "Exceptional knife skills (both culinary and combat)"
+      ],
+      "items": [
+        "A set of surgical-grade chef's knives fused with fungal growth",
+        "A leather-bound 'Gospel of Spores' recipe book",
+        "A portable still for distilling psychoactive mushroom extracts"
+      ],
+      "quirk": "Constantly tastes and sniffs the air, judging the 'flavor profile' of people and environments",
+      "secret": "Deep down, he misses the simple pleasure of cooking for people who could truly appreciate his art, not just consume it as a means of conversion",
+      "id": "npc_17",
+      "faction_id": "faction_8",
+      "faction_name": "The Luminous Choir",
+      "status": "alive",
+      "relationship": 32
+    },
+    {
+      "name": "Gabriel 'Spore' Moreau",
+      "age": 42,
+      "background": "Former executive chef at a Michelin-starred restaurant, known for his experimental fungal-based cuisine. His fascination with mycology made him an early convert to the Luminous Choir.",
+      "description": "Tall and gaunt with veins that pulse with bioluminescent fungal growths. His once-pristine chef's coat is now stained with organic patterns. Speaks in a melodic, almost hypnotic cadence, seasoning his speech with culinary metaphors.",
+      "motivation": "To create the 'perfect communion feast' that will convert even the most resistant survivors through sublime fungal gastronomy",
+      "skills": [
+        "Expert mycologist",
+        "Master of food-based persuasion",
+        "Can identify edible/medicinal fungi instantly",
+        "Exceptional knife skills (both culinary and combat)"
+      ],
+      "items": [
+        "A set of surgical-grade chef's knives fused with fungal growth",
+        "A leather-bound 'Gospel of Spores' recipe book",
+        "A portable still for distilling psychoactive mushroom extracts"
+      ],
+      "quirk": "Constantly tastes and sniffs the air, judging the 'flavor profile' of people and environments",
+      "secret": "Deep down, he misses the simple pleasure of cooking for people who could truly appreciate his art, not just consume it as a means of conversion",
+      "id": "npc_18",
+      "faction_id": "faction_8",
+      "faction_name": "The Luminous Choir",
+      "status": "alive",
+      "relationship": 32,
+      "discovered_day": 39
+    },
+    {
+      "name": "Captain Elias 'Gears' Voss",
+      "age": 42,
+      "background": "Former mechanical engineer and military contractor who specialized in fortification systems. Designed blast doors for government bunkers before the outbreak.",
+      "description": "A broad-shouldered man with a shaved head covered in intricate circuit-board tattoos. His left eye is a mechanical prosthetic that glows faintly blue in low light. Speaks in clipped, precise sentences and never wastes movement.",
+      "motivation": "To prove that human ingenuity can outlast any catastrophe through perfect systems and protocols.",
+      "skills": [
+        "Structural reinforcement",
+        "Tactical demolition",
+        "Improvised energy systems",
+        "Precision marksmanship"
+      ],
+      "items": [
+        "A prototype seismic stabilizer vest",
+        "Blueprints for 'Project Bastion' (folded in armored case)",
+        "A wrench with blood groove modifications"
+      ],
+      "quirk": "Constantly taps rhythmic patterns on surfaces to test their structural integrity",
+      "secret": "His mechanical eye contains footage of the initial outbreak at a government facility - and he knows who caused it.",
+      "id": "npc_19",
+      "faction_id": "faction_3",
+      "faction_name": "The Iron Vanguard",
+      "status": "alive",
+      "relationship": -3
+    },
+    {
+      "name": "Captain Elias 'Gears' Voss",
+      "age": 42,
+      "background": "Former mechanical engineer and military contractor who specialized in fortification systems. Designed blast doors for government bunkers before the outbreak.",
+      "description": "A broad-shouldered man with a shaved head covered in intricate circuit-board tattoos. His left eye is a mechanical prosthetic that glows faintly blue in low light. Speaks in clipped, precise sentences and never wastes movement.",
+      "motivation": "To prove that human ingenuity can outlast any catastrophe through perfect systems and protocols.",
+      "skills": [
+        "Structural reinforcement",
+        "Tactical demolition",
+        "Improvised energy systems",
+        "Precision marksmanship"
+      ],
+      "items": [
+        "A prototype seismic stabilizer vest",
+        "Blueprints for 'Project Bastion' (folded in armored case)",
+        "A wrench with blood groove modifications"
+      ],
+      "quirk": "Constantly taps rhythmic patterns on surfaces to test their structural integrity",
+      "secret": "His mechanical eye contains footage of the initial outbreak at a government facility - and he knows who caused it.",
+      "id": "npc_20",
+      "faction_id": "faction_3",
+      "faction_name": "The Iron Vanguard",
+      "status": "alive",
+      "relationship": -3,
+      "discovered_day": 40
+    }
+  ],
+  "next_id": 5
+}

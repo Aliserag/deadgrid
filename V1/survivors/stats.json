@@ -1,0 +1,375 @@
+{
+  "day": 41,
+  "health": 70,
+  "morale": 17,
+  "water": 13,
+  "food": 3,
+  "location": [
+    0,
+    0
+  ],
+  "base_defense": 15,
+  "last_action": "scavenge",
+  "status_effects": [
+    {
+      "name": "Fungal Synchronization",
+      "duration": 2,
+      "effect": "Can sometimes predict zombie movements, +15% perception but -10% sanity per hour during storms"
+    }
+  ],
+  "traits": [
+    {
+      "name": "Silent Salvager",
+      "level": 1,
+      "effect": "Reduces noise while scavenging by 25%"
+    },
+    "Silent Salvager",
+    "Hive Whisperer",
+    "Fog Walker",
+    "Fungal Instincts",
+    "Fungal Adaptation (developing)",
+    "Fungal Cloak (discovered)"
+  ],
+  "gear": [
+    {
+      "name": "reinforced flashlight",
+      "type": "tool",
+      "durability": 4,
+      "bonus": "20% brighter beam"
+    },
+    {
+      "name": "vest",
+      "type": "armor",
+      "durability": 4,
+      "bonus": "+5% damage resistance"
+    },
+    {
+      "name": "Salvage Bicycle",
+      "type": "transport",
+      "durability": 6,
+      "bonus": "+1 inventory slot when scavenging"
+    },
+    {
+      "name": "reinforced flashlight",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "20% brighter beam"
+    },
+    {
+      "name": "vest",
+      "type": "armor",
+      "durability": 3,
+      "bonus": "+5% damage resistance"
+    },
+    {
+      "name": "pressure cooker",
+      "type": "tool",
+      "durability": 5,
+      "bonus": "Can purify water if fuel is available"
+    },
+    {
+      "name": "reinforced flashlight",
+      "type": "tool",
+      "durability": 5,
+      "bonus": "20% brighter beam"
+    },
+    {
+      "name": "vest",
+      "type": "armor",
+      "durability": 5,
+      "bonus": "+5% damage resistance"
+    },
+    {
+      "name": "axe",
+      "type": "weapon",
+      "durability": 8,
+      "bonus": "+15% melee damage"
+    },
+    {
+      "name": "Salvage Bicycle",
+      "type": "transport",
+      "durability": 5,
+      "bonus": "+1 inventory slot when scavenging"
+    },
+    {
+      "name": "pressure cooker",
+      "type": "tool",
+      "durability": 4,
+      "bonus": "Can purify water if fuel is available"
+    },
+    {
+      "name": "axe",
+      "type": "weapon",
+      "durability": 7,
+      "bonus": "+15% melee damage"
+    },
+    {
+      "name": "map",
+      "type": "tool",
+      "durability": -1,
+      "bonus": "Reveals hidden paths"
+    },
+    {
+      "name": "radio",
+      "type": "tool",
+      "durability": 5,
+      "bonus": "Can scan for transmissions"
+    },
+    {
+      "name": "reinforced flashlight",
+      "type": "tool",
+      "durability": 6,
+      "bonus": "20% brighter beam"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 3,
+      "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "reinforced vest",
+      "type": "armor",
+      "durability": 6,
+      "bonus": "+5% damage resistance"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 4,
+      "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "reinforced vest",
+      "type": "armor",
+      "durability": 8,
+      "bonus": "+7% damage resistance"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 5,
+      "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "fungal Geiger counter",
+      "type": "tool",
+      "durability": 4,
+      "bonus": "Detects fungal whisper sources"
+    },
+    {
+      "name": "serrated knife",
+      "type": "weapon",
+      "durability": 6,
+      "bonus": "+10% damage against fungal enemies"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 2,
+      "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "pressure cooker",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "Can purify water if fuel is available"
+    },
+    {
+      "name": "fungal Geiger counter",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "Detects fungal whisper sources (now auto-maps fungal hotspots)"
+    },
+    {
+      "name": "sterile bandages",
+      "type": "medical",
+      "quantity": 1,
+      "bonus": "+15% healing efficiency"
+    },
+    {
+      "name": "improved water filtration system",
+      "type": "tool",
+      "durability": 5,
+      "bonus": "+1 water purification efficiency"
+    },
+    {
+      "name": "reinforced vest",
+      "type": "armor",
+      "durability": 9,
+      "bonus": "+7% damage resistance"
+    },
+    {
+      "name": "serrated knife (upgraded)",
+      "type": "weapon",
+      "durability": 8,
+      "bonus": "+15% damage against fungal enemies"
+    },
+    {
+      "name": "crude fungal map",
+      "type": "tool",
+      "durability": 1,
+      "bonus": "Reveals 3 safe zones"
+    },
+    {
+      "name": "antibiotics",
+      "type": "medical",
+      "quantity": 1,
+      "bonus": "Cures infections"
+    },
+    {
+      "name": "antibiotics",
+      "type": "medical",
+      "quantity": 0,
+      "bonus": "Cures infections"
+    },
+    {
+      "name": "improved water filtration system",
+      "type": "tool",
+      "durability": 6,
+      "bonus": "+1 water purification efficiency"
+    },
+    {
+      "name": "military radio",
+      "type": "tool",
+      "durability": 4,
+      "bonus": "Enhanced signal tracking"
+    },
+    {
+      "name": "military radio",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "Enhanced signal tracking"
+    },
+    {
+      "name": "military field manual",
+      "type": "tool",
+      "durability": 1,
+      "bonus": "Reveals bunker access codes"
+    },
+    {
+      "name": "fungal pressure cooker",
+      "type": "tool",
+      "durability": 7,
+      "bonus": "Purifies water with 50% efficiency, minor fungal contamination"
+    },
+    {
+      "name": "military field manual",
+      "type": "tool",
+      "durability": 2,
+      "bonus": "Contains bunker access codes"
+    },
+    {
+      "name": "motion sensor",
+      "type": "tool",
+      "durability": 3,
+      "bonus": "30% detection chance when repaired"
+    }
+  ],
+  "materials": {
+    "metal": 2,
+    "fabric": 1,
+    "circuitry": 1,
+    "medical": 0,
+    "fuel": 0
+  },
+  "factions": {
+    "watchers": {
+      "disposition": "neutral",
+      "last_seen": "Fort Crimson",
+      "activity": "left marker stone"
+    },
+    "caravan_collective": {
+      "disposition": "neutral",
+      "last_seen": "supply_cache",
+      "activity": "interpreting Fog Dweller signs"
+    },
+    "iron_vanguard": {
+      "disposition": "hostile",
+      "last_seen": "transit_hub",
+      "activity": "setting advanced traps"
+    },
+    "fog_dwellers": {
+      "disposition": "unknown",
+      "last_seen": "maintenance_depot",
+      "activity": "harvesting fungal samples"
+    },
+    "fog_reapers": {
+      "disposition": "hostile",
+      "last_seen": "signal_site",
+      "activity": "leaving traps"
+    },
+    "sporebound": {
+      "disposition": "friendly",
+      "last_seen": "flooded_passage",
+      "activity": "acknowledged trade offering"
+    }
+  },
+  "threat_level": "high (storm preparations)",
+  "discovered_locations": [
+    "Sunset Ridge Subdivision",
+    "Rustbelt Tool & Die",
+    "Generator Room",
+    "St. Marrow's Memorial Hospital",
+    "Abandoned Mega Mart Warehouse",
+    "Supply Cache",
+    "The Glass Canopy",
+    "Transit Hub",
+    "Flooded Passage",
+    "Whispering Gorge",
+    "The Last Stop Camp",
+    "Ventilation Shaft",
+    "Willowfen Marsh",
+    "Blackfang Chasm",
+    "Midnight Mall Office Annex",
+    "Echo Ridge Estates",
+    "The Flooded Power Station",
+    "Abandoned University Library",
+    "The Fungal Chasm",
+    "Lost & Found Depot",
+    "Old Control Room",
+    "Necrotic Bio-Lab",
+    "Rustbolt Scrapyard",
+    "Overwatch Base Sigma",
+    "Carnival of the Damned"
+  ],
+  "skills": [
+    "Silent Salvager",
+    "Hive Whisperer",
+    "Fungal Whisperer (developing)",
+    "Fungal Instincts",
+    "Fungal Sensitivity (temporary)",
+    "Fungal Adaptation (developing)",
+    "Fungal Instincts (improved)",
+    "Fungal Adaptation (advanced)",
+    "Fungal Purification (basic)",
+    "Storm Chaser's Instinct",
+    "Shadow Harmony (discovered)",
+    "Fungal Forager (basic)",
+    "Chitin Utilization (discovered)",
+    "Fungal Cloak (discovered)",
+    "Frequency Tracking (basic)",
+    "Fungal Cloak (improved)",
+    "Storm Chaser's Instinct (developing)"
+  ],
+  "active_story_arc": "Whispering Shadow",
+  "radio_transmissions": [
+    {
+      "type": "morse_code",
+      "content": "... --- ... .-. .. -.. --. .",
+      "origin": "Ridge sector",
+      "decoded": true
+    }
+  ],
+  "active_quests": [
+    {
+      "name": "The Crimson Perimeter",
+      "progress": "Bunker access secured (25/100)"
+    }
+  ],
+  "weather": {
+    "next_day": "Heavy Rain (Severity: 4/5)",
+    "effect": "Continued fungal expansion, possible flooding",
+    "current": "Storm (Severity: 3/5)"
+  }
+}
