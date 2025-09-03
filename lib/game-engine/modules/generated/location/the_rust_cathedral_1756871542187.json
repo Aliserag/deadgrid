@@ -1,0 +1,15 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Feral ghouls, mutated rats, and a territorial pack of irradiated dogs",
+  "notable_features": [
+    "Repurposed pre-war cathedral with rusted sheet metal reinforcements",
+    "Improvised wind chimes made from scrap metal that alert inhabitants to intruders",
+    "A functioning pipe organ modified to produce deafening sonic deterrents",
+    "Hidden underground crypts used as a storage cache by previous scavengers"
+  ],
+  "exploration_notes": "Players will find signs of recent scavenger activity, makeshift barricades, and journals detailing failed attempts to restore the organ. The upper balcony offers a strategic vantage point but is unstable."
+}

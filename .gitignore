@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Documentation that reveals automation
+CLAUDE.md
+claude.md
+
+scripts/auto-evolve.js
+scripts/setup-cron*.sh
+scripts/run-evolution.sh
+scripts/cron-evolution.sh
+
+# Evolution logs
+logs/
+evolution.log
+*.log
