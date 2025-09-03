@@ -2,15 +2,15 @@
 
 import dynamic from 'next/dynamic';
 
-const SimpleGame = dynamic(() => import('@/components/SimpleGame'), {
+const TurnBasedGame = dynamic(() => import('@/components/TurnBasedGame'), {
   ssr: false,
   loading: () => (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="text-green-400 text-2xl animate-pulse">Loading DeadGrid...</div>
+      <div className="text-red-600 text-3xl animate-pulse">Initializing DeadGrid...</div>
     </div>
   )
 });
 
 export default function Home() {
-  return <SimpleGame />;
+  return <TurnBasedGame />;
 }
