@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const CompleteDeadGrid = dynamic(() => import('@/components/game/CompleteDeadGrid'), {
+const WorkingDeadGrid = dynamic(() => import('@/components/game/WorkingDeadGrid'), {
   ssr: false,
   loading: () => (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -12,5 +12,5 @@ const CompleteDeadGrid = dynamic(() => import('@/components/game/CompleteDeadGri
 });
 
 export default function Home() {
-  return <CompleteDeadGrid />;
+  return <WorkingDeadGrid />;
 }

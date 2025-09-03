@@ -288,30 +288,39 @@ DEEPSEEK_API_KEY=sk-88d05991389d45fbaee750ee9724a38c
 
 ## 📚 Code Structure
 ```
-/components
-  /game
-    - TurnBasedGame.tsx (main game component)
-    - GameMap.tsx (world map)
-    - CombatSystem.tsx
-    - InventorySystem.tsx
-    - NPCManager.tsx
-    - BaseBuilder.tsx
-/lib
-  /game
-    /systems
-      - TurnManager.ts
-      - ZombieAI.ts
-      - NPCBehavior.ts
-      - LootGenerator.ts
-    /procedural
-      - EventGenerator.ts
-      - DeepSeekClient.ts
-      - ContentScheduler.ts
-/public
-  /assets
-    /sprites (zombie, survivor, item sprites)
-    /sounds (ambient, combat, UI sounds)
-    /maps (tileset images)
+/components/game/
+  - UltimateDeadGrid.tsx    # Main game with full V1 mechanics
+  - CompleteDeadGrid.tsx    # Previous version with inventory
+  - FixedDeadGrid.tsx       # Simple version with basic controls
+  - SimpleGameTest.tsx      # Sprite testing component
+  
+/lib/game/
+  - AssetManager.ts         # Centralized Post-Apocalypse asset loading
+  - GridManager.ts          # Grid-based positioning and collision
+  - TurnManager.ts          # Turn-based mechanics (Player→Enemies→Environment)
+  
+/lib/game/entities/
+  - BaseEntity.ts           # Entity base class with health/movement
+  - Player.ts               # Player entity with inventory/combat
+  - Zombie.ts               # Zombie entity with detection AI
+
+/public/assets/PostApocalypse_AssetPack_v1.1.2/
+  /Character/               
+    /Main/                  # Player sprites (idle, run, death)
+    /Bat/                   # Melee weapon sprites
+    /Guns/                  # Ranged weapon sprites
+  /Enemies/
+    /Zombie_Small/          # Small zombie sprites with death animations
+    /Zombie_Big/            # Big zombie sprites with death animations
+    /Zombie_Axe/            # Axe zombie sprites with death animations
+  /Objects/
+    /Pickable/              # Loot items (ammo, medkits, weapons)
+    /Buildings/             # Base structures (tents, walls)
+    /Vehicles/              # Abandoned vehicles
+  /UI/
+    /HP/                    # Heart health indicators
+    /Inventory/             # Inventory UI and item icons
+  /Tiles/                   # Background tilesets
 ```
 
 ## 🎯 Design Principles
