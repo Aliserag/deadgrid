@@ -2,15 +2,15 @@
 
 import dynamic from 'next/dynamic';
 
-const TurnBasedGame = dynamic(() => import('@/components/TurnBasedGame'), {
+const CompleteDeadGrid = dynamic(() => import('@/components/game/CompleteDeadGrid'), {
   ssr: false,
   loading: () => (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="text-red-600 text-3xl animate-pulse">Initializing DeadGrid...</div>
+      <div className="text-red-600 text-3xl animate-pulse">Loading DeadGrid...</div>
     </div>
   )
 });
 
 export default function Home() {
-  return <TurnBasedGame />;
+  return <CompleteDeadGrid />;
 }
