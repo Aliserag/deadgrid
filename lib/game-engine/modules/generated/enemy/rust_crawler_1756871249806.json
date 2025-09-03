@@ -1,0 +1,20 @@
+{
+  "name": "Rust-Crawler",
+  "type": "machine",
+  "tier": 3,
+  "health": "180-220",
+  "damage": "25-40",
+  "speed": "normal",
+  "behavior": "stalker",
+  "abilities": [
+    "Electro-Shock Burst",
+    "Magnetic Pull",
+    "Self-Destruct Sequence"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Copper Wiring",
+    "Rare: Damaged Power Core"
+  ],
+  "description": "A repurposed industrial maintenance bot, now twisted and hostile. Its rusted, segmented body moves on six spindly legs, with a single cracked optic sensor glowing red. Jagged welding scars and exposed wiring cover its chassis, and it emits a low, grinding hum as it stalks prey."
+}
