@@ -1,0 +1,15 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Rust-Worshippers cult, mutated feral hounds",
+  "notable_features": [
+    "Towering spire made of fused scrap metal",
+    "Interior maze of corroded hallways",
+    "Altar that hums with residual radiation",
+    "Ancient industrial machinery repurposed for rituals"
+  ],
+  "exploration_notes": "Players will find scavenged tech modified for occult purposes, journals detailing the cult's descent into madness, and hidden caches of pre-war energy cells. The upper spire offers a vantage point over the toxic marshes, but is heavily guarded."
+}
