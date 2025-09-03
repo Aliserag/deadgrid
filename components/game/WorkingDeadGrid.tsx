@@ -503,7 +503,7 @@ class WorkingDeadGridScene extends Phaser.Scene {
       // Simple AI: move towards player if within 5 tiles
       const distance = Math.abs(this.player.x - zombie.x) + Math.abs(this.player.y - zombie.y);
       
-      if (distance <= 5 && distance > 1) {
+      if (distance <= 5 && distance >= 1) { // Changed to >= to allow attacks at distance 1
         // Choose to move horizontally or vertically
         let newX = zombie.x;
         let newY = zombie.y;
@@ -537,9 +537,18 @@ class WorkingDeadGridScene extends Phaser.Scene {
             duration: 300,
             ease: 'Power2',
             onComplete: () => {
-              // Check if zombie reached player
-              if (zombie.x === this.player.x && zombie.y === this.player.y) {
+              // Check if zombie is adjacent to player for attack
+              const attackDistance = Math.abs(zombie.x - this.player.x) + Math.abs(zombie.y - this.player.y);
+              if (attackDistance === 1 || (zombie.x === this.player.x && zombie.y === this.player.y)) {
+                console.log('Zombie attacking!');
                 this.damagePlayer(10);
+                // Attack animation
+                zombie.sprite.setTint(0xff0000);
+                this.time.delayedCall(200, () => {
+                  if (zombie.sprite && zombie.sprite.active) {
+                    zombie.sprite.setTint(0xaa8888);
+                  }
+                });
               }
               
               zombieIndex++;
@@ -563,12 +572,76 @@ class WorkingDeadGridScene extends Phaser.Scene {
   damagePlayer(amount: number): void {
     this.playerHealth -= amount;
     this.cameras.main.flash(200, 255, 0, 0, false);
+    this.cameras.main.shake(100, 0.01);
+    this.showMessage(`-${amount} Health!`);
     
     if (this.playerHealth <= 0) {
       this.gameOver();
     }
     
     this.updateUI();
+  }
+  
+  createInventoryDisplay(): void {
+    // Create inventory panel (hidden by default)
+    const inventoryBg = this.add.rectangle(650, 300, 250, 400, 0x222222, 0.9);
+    inventoryBg.setStrokeStyle(2, 0x666666);
+    inventoryBg.setScrollFactor(0);
+    inventoryBg.setDepth(150);
+    inventoryBg.setVisible(false);
+    inventoryBg.setData('isInventory', true);
+    
+    const inventoryTitle = this.add.text(650, 120, 'INVENTORY', {
+      fontSize: '20px',
+      color: '#ffff00',
+      fontFamily: 'monospace'
+    });
+    inventoryTitle.setOrigin(0.5);
+    inventoryTitle.setScrollFactor(0);
+    inventoryTitle.setDepth(151);
+    inventoryTitle.setVisible(false);
+    inventoryTitle.setData('isInventory', true);
+    
+    const inventoryText = this.add.text(550, 160, '', {
+      fontSize: '12px',
+      color: '#ffffff',
+      fontFamily: 'monospace',
+      lineSpacing: 5
+    });
+    inventoryText.setScrollFactor(0);
+    inventoryText.setDepth(151);
+    inventoryText.setVisible(false);
+    inventoryText.setData('isInventory', true);
+    inventoryText.setData('inventoryText', true);
+  }
+  
+  toggleInventory(): void {
+    // Toggle inventory visibility
+    const inventoryItems = this.children.getChildren().filter(
+      child => child.getData('isInventory')
+    );
+    
+    const isVisible = inventoryItems.length > 0 && inventoryItems[0].visible;
+    
+    inventoryItems.forEach(item => {
+      item.setVisible(!isVisible);
+    });
+    
+    if (!isVisible) {
+      // Update inventory text
+      const inventoryText = this.children.getChildren().find(
+        child => child.getData('inventoryText')
+      ) as Phaser.GameObjects.Text;
+      
+      if (inventoryText) {
+        if (this.inventory.length === 0) {
+          inventoryText.setText('Empty');
+        } else {
+          const items = this.inventory.slice(-15); // Show last 15 items
+          inventoryText.setText(items.join('\n'));
+        }
+      }
+    }
   }
 
   interact(): void {
