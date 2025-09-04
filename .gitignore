@@ -44,10 +44,10 @@ next-env.d.ts
 CLAUDE.md
 claude.md
 
-scripts/auto-evolve.js
-scripts/setup-cron*.sh
-scripts/run-evolution.sh
-scripts/cron-evolution.sh
+# Hide ALL automation scripts
+scripts/
+*.log
+logs/
 
 # Evolution logs
 logs/
