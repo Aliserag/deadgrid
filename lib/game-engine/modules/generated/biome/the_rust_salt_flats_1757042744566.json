@@ -1,0 +1,31 @@
+{
+  "name": "The Rust-Salt Flats",
+  "description": "A vast, desolate expanse where ancient industrial ruins are slowly being consumed by crystalline salt formations. The air carries a metallic tang and the ground crunches underfoot with a mix of rust flakes and salt crystals. Strange, bioluminescent lichen glows faintly across the salt-crusted machinery.",
+  "terrain_type": "Salt flat with industrial debris",
+  "hazards": [
+    "Corrosive salt storms",
+    "Unstable ground pockets",
+    "Rust-metal shrapnel winds",
+    "Bioluminescent lichen toxicity"
+  ],
+  "resources": [
+    "Salvaged electronics",
+    "Salt crystals",
+    "Rare metal scraps",
+    "Purified water deposits",
+    "Bioluminescent fungus samples"
+  ],
+  "ambient_sounds": [
+    "Distant metallic groaning",
+    "Constant gritty wind",
+    "Crackling salt crystals",
+    "Faint humming from buried machinery"
+  ],
+  "weather_patterns": [
+    "Static-charged salt fog",
+    "Corrosive salt rainfall",
+    "Clear metallic-skied nights",
+    "Sudden rust-storms"
+  ],
+  "entry_message": "The air turns sharp and metallic as your boots crunch through a landscape of rust-red salt and forgotten industry. Glowing patches of lichen pulse rhythmically across collapsed structures, casting long shadows in the hazy light."
+}
