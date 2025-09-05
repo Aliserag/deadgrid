@@ -1,4 +1,2 @@
-// Auto-generated index for biome modules
-
-export { default as Theglimmeringmire1756871619966 } from './biome/the_glimmering_mire_1756871619966';
-export { default as Therustwastes1756872373495 } from './biome/the_rust_wastes_1756872373495';
+export { default as Therustwastes1757040887313 } from './biome/the_rust_wastes_1757040887313';
+export { default as Therustsaltflats1757042744566 } from './biome/the_rust_salt_flats_1757042744566';

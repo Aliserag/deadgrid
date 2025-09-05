@@ -1,0 +1,29 @@
+{
+  "title": "The Last Harvest",
+  "protagonist": {
+    "name": "Elara Vance",
+    "age": 32,
+    "backstory": "Former agricultural scientist who lost her family during the initial collapse. Survived by hiding in rural research stations and using her knowledge of hydroponics to stay alive. Carries guilt over not being able to save her younger sister."
+  },
+  "setting": {
+    "location": "Abandoned Biosphere Research Facility in the Sierra Nevada foothills",
+    "time": "Late autumn, 12 years after the Collapse"
+  },
+  "situation": "Elara's community of 23 survivors faces starvation after their primary food supply was contaminated by radioactive rainfall. Their emergency rations will last only two more weeks. The facility's hydroponic systems have failed due to parts degradation, and winter is approaching rapidly. Children are already showing signs of malnutrition, and tensions are rising among desperate adults who haven't eaten properly in days.",
+  "attempted_solution": "Elara organized a salvage team to retrieve replacement parts from a larger agricultural research center 20 miles east. She believed the center's advanced hydroponic components could be adapted to repair their systems. The team packed light, bringing tools, radiation gear, and three days' rations. They planned to move quickly, avoid populated areas, and return within 48 hours. Elara studied old maps and believed they could navigate through the forest to avoid raider territories.",
+  "complications": "Heavy autumn storms forced the team to take shelter in a compromised building, exposing two members to structural collapse. Marcus, their best scout, broke his leg. Then they discovered the research center had been completely looted years earlier—only broken equipment remained. During their retreat, raiders ambushed them, taking their remaining supplies and weapons. Elara made the agonizing choice to leave Marcus hidden while she led the others back for help, promising to return with reinforcements.",
+  "resolution": "Elara returned with a rescue party only to find Marcus had succumbed to his injuries and exposure. The failed mission cost them precious resources and morale. In desperation, Elara risked experimenting with mutated local flora, creating a nutrient paste that could sustain life but caused mild hallucinations. The community survived the winter, but trust in Elara's leadership was permanently damaged. They survived, but at significant psychological cost.",
+  "lesson_learned": "Never risk essential personnel on salvage missions without confirmed intelligence. Sometimes the greater survival strategy means accepting short-term hunger rather than risking catastrophic loss. Adaptation to available resources is more reliable than counting on recovering lost technology.",
+  "casualties": [
+    "Marcus Chen (scout, broken leg and exposure)",
+    "Lena Petrova (crush injuries from building collapse)"
+  ],
+  "resources_gained": [
+    "Knowledge of edible mutated plants",
+    " salvaged copper wiring",
+    " two functional solar panels from abandoned outpost",
+    " raider maps showing territory boundaries"
+  ],
+  "moral_choice": "Whether to administer the hallucinogenic nutrient paste to children knowing it would keep them alive but potentially cause developmental harm, or let them starve with clearer minds.",
+  "long_term_impact": "The community became divided between those who trusted Elara's difficult decisions and those who saw her as reckless. They developed a dependency on the psychoactive plants, which affected their collective mental health but ensured survival. The incident led to establishing stricter risk-assessment protocols but also created lasting trauma and distrust that would shape community decisions for years."
+}

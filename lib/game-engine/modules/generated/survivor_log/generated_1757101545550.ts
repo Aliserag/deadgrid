@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena with two daughters (Sophie, 8 and Maya, 5). Was writing a book about the Great Barrier Reef's recovery and dreamed of taking his family sailing around the world.",
+      "day_number": 147,
+      "location": "Abandoned lighthouse keeper's cottage, Northern California coast. The structure groans with each gust of wind, salt crusting every window. Faded maritime charts still paper the walls, and the rotating beam above casts periodic shadows through the rotting floorboards.",
+      "entry": "The storm finally broke today. Three days of howling wind and horizontal rain that made the lighthouse feel like a stone tossed in a furious sea. I spent most of it huddled in the basement, counting canned goods by candlelight and trying not to think about whether the foundation would hold.\n\nThis morning, I found a body washed up on the rocks below. Young man, maybe early twenties. No obvious bites or wounds—probably drowned trying to ride out the storm. He had a photograph in his pocket: him and an older woman, maybe his mother, standing in front of a bakery. Both smiling like the world hadn't ended.\n\nI buried him above the tide line. Took me two hours to dig through the rocky soil. Said what prayers I could remember. It felt important to do it properly, even though part of me screamed that I was wasting calories and daylight.\n\nFound his journal too. Waterlogged but still legible. His name was Elijah. He was trying to reach his sister in Seattle. Last entry was about hoping the storm would pass quickly. I added his journal to my collection of other stories. Sometimes I read them aloud to remember how many different worlds ended when this began.\n\nThe worst part wasn't the body. It was realizing I felt more connection to this dead stranger than I've felt to any living person in months. We're becoming ghosts to each other, all of us who remain. Human contact has become this terrifying, dangerous thing—every silhouette a potential threat, every voice a possible death sentence.\n\nTonight, the beacon still turns. Automated systems holding on long after their makers have fallen. Sometimes I imagine it's calling to ships that will never come.",
+      "condition": "Physically: Malnourished (15 lbs underweight), saltwater sores on hands and lips, chronic cough from damp conditions. Mentally: Haunted by memories, increasingly detached from reality, talks to photographs and journals as if they're people.",
+      "discoveries": "The infected avoid saltwater—they won't cross even ankle-deep tidal pools. Heavy rain and storms seem to disorient them temporarily. Their hearing is far more acute than their vision after dark.",
+      "warnings": "Never travel during storms regardless of infected activity—environment kills more than they do. Salt lines around shelters provide some protection. Burn any bodies found near your location—the scent draws them from miles away.",
+      "last_meal": "Canned peaches (half) and rainwater collected from roof runoff, 14 hours ago",
+      "companions": "Alone. Lost wife and daughters during evacuation chaos Day 12. Occasionally trades with a fisherman named Old Tom who appears on moonless nights, but hasn't seen him in three weeks.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757101545557;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;

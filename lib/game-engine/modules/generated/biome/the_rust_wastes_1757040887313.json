@@ -1,0 +1,33 @@
+{
+  "name": "The Rust-Wastes",
+  "description": "A vast expanse of corroded metal and industrial decay where the ruins of ancient factories merge with the earth. Toxic pools of chemical sludge bubble between jagged metal formations, and the air carries the permanent scent of ozone and rust. Strange crystalline growths have begun to consume the decaying structures, creating an eerie landscape of industrial and biological fusion.",
+  "terrain_type": "Industrial wasteland with metallic plateaus and chemical marshes",
+  "hazards": [
+    "Corrosive acid pools",
+    "Unstable metal structures that may collapse",
+    "Toxic airborne particles that require breathing filters",
+    "Electromagnetic anomalies that disrupt electronics"
+  ],
+  "resources": [
+    "Salvaged electronics",
+    "Rare metal alloys",
+    "Chemical compounds",
+    "Crystalline energy cores",
+    "Filter masks",
+    "Reinforced building materials"
+  ],
+  "ambient_sounds": [
+    "Distant metallic groaning and shifting",
+    "Faint bubbling of chemical pools",
+    "Crackling static from electromagnetic disturbances",
+    "Echoing drips in hollow metal structures",
+    "Low-frequency humming from crystalline formations"
+  ],
+  "weather_patterns": [
+    "Acid rain showers",
+    "Toxic fog banks that reduce visibility",
+    "Static storms that interfere with electronics",
+    "Occasional metal-shard winds"
+  ],
+  "entry_message": "The ground shifts beneath your feet with the groan of aging metal. Jagged silhouettes of decaying industry pierce the orange-hazed sky, while strange crystalline growths pulse with faint energy. The air tastes of copper and decay - welcome to the Rust-Wastes."
+}
