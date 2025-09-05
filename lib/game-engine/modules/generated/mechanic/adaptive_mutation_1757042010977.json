@@ -1,0 +1,42 @@
+{
+  "name": "Adaptive Mutation",
+  "category": "survival",
+  "description": "A dynamic system where prolonged exposure to environmental hazards or specific enemy types triggers temporary or permanent physiological mutations. Players can develop unique adaptations that provide specialized survival advantages, but each mutation comes with physical and social consequences. Mutations activate automatically when triggered by specific conditions and remain active for a duration based on exposure level and player's radiation/toxin resistance stats.",
+  "requirements": {
+    "minimum_exposure": "30 seconds continuous contact with hazard/enemy type",
+    "resources": "None required (triggered by environment)",
+    "prerequisites": "Radiation resistance level 2+ or Toxin immunity perk"
+  },
+  "benefits": [
+    "Gain temporary immunity to specific damage types",
+    "Develop enhanced sensory perception in related environments",
+    "Acquire unique combat abilities against triggering enemy types",
+    "Obtain passive resource generation from hazardous areas"
+  ],
+  "drawbacks": [
+    "Visible physical deformities that affect social interactions",
+    "Increased resource consumption (food/water)",
+    "Potential hostility from non-mutated NPC factions",
+    "Random negative side effects (vision impairment, reduced movement speed)",
+    "Mutations can become permanent with overuse"
+  ],
+  "progression": {
+    "improvement_method": "Increased exposure to specific hazards/enemies",
+    "skill_tree": "Mutation Control perk tree",
+    "upgrade_paths": [
+      "Duration extension",
+      "Side effect reduction",
+      "Selective mutation activation",
+      "Mutation reversal capability"
+    ],
+    "max_level": "5 mutations active simultaneously (with mastery)"
+  },
+  "ui_elements": [
+    "Mutation status bar (shows active/inactive mutations)",
+    "Exposure meter for each hazard type",
+    "Mutation wheel (quick selection for activated mutations)",
+    "Physical change indicator (character model preview)",
+    "Side effect warning system",
+    "Mutation duration timer"
+  ]
+}
