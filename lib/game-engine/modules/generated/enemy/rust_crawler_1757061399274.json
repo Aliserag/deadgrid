@@ -1,0 +1,21 @@
+{
+  "name": "Rust-Crawler",
+  "type": "machine",
+  "tier": 3,
+  "health": "120-180",
+  "damage": "25-40",
+  "speed": "normal",
+  "behavior": "stalker",
+  "abilities": [
+    "EMP Burst (disables electronics in 10m radius)",
+    "Corrosive Spit (applies armor degradation)",
+    "Self-Destruct Sequence (activates at 10% health)"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Energy Cell",
+    "Corroded Circuitry",
+    "Rare: Intact CPU"
+  ],
+  "description": "A spider-like autonomous security drone, roughly the size of a large dog, with rusted metal plating and exposed wiring. Its central optic sensor glows with a faint red light, and it moves with unnerving precision on six jointed legs. Often found lurking in shadowy corners of ruined facilities before initiating ambushes."
+}
