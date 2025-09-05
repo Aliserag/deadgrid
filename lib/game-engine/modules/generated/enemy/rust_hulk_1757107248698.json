@@ -1,0 +1,21 @@
+{
+  "name": "Rust-Hulk",
+  "type": "mutant",
+  "tier": 3,
+  "health": "180-220",
+  "damage": "25-40",
+  "speed": "normal",
+  "behavior": "aggressive",
+  "abilities": [
+    "Corrosive Spit",
+    "Metal Crush",
+    "Rust Aura"
+  ],
+  "loot": [
+    "Mutated Gland",
+    "Scrap Metal",
+    "Rusted Components",
+    "Tainted Flesh"
+  ],
+  "description": "A hulking humanoid mutant with patchy, rust-colored skin and metallic growths fused to its body. Its hands are oversized, ending in crude metal claws, and its mouth constantly drips a corrosive, brownish fluid. Moves with a heavy, deliberate gait, leaving rust flakes in its wake."
+}
