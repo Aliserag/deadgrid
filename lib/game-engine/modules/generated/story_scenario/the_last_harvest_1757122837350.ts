@@ -1,0 +1,91 @@
+/**
+ * story_scenario: The Last Harvest
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface TheLastHarvestData {
+  title: string;
+  protagonist: any;
+  setting: string;
+  situation: string;
+  attempted_solution: string;
+  complications: string;
+  resolution: string;
+  lesson_learned: string;
+  casualties: any[];
+  resources_gained: any[];
+  moral_choice: string;
+  long_term_impact: string;
+}
+
+export class TheLastHarvestModule extends GameModule {
+  static readonly metadata: TheLastHarvestData = {
+      "title": "The Last Harvest",
+      "protagonist": {
+          "name": "Dr. Aris Thorne",
+          "backstory": "Former agricultural scientist who lost her family in the early collapse. Survived by turning her university greenhouse into a fortified settlement, using her knowledge to grow food where others starved."
+      },
+      "setting": "Ruined University of Eastern Agriculture, 12 years after the Collapse. The once-lush campus is now a maze of crumbling concrete and overgrown vegetation, with Aris's greenhouse standing as the last bastion of cultivated life.",
+      "situation": "A prolonged drought and mutated blight have devastated Aris's crops. Her community of 23 survivors faces starvation within weeks. The emergency food reserves were contaminated by radiation from a nearby storm. Children are already showing signs of malnutrition, and tensions are rising as people realize the scale of the crisis. Aris watches her life's work—the last known sustainable food source—wither before her eyes.",
+      "attempted_solution": "Aris led a team to scavenge the university's abandoned agricultural research labs, hoping to find preserved seeds or drought-resistant plant samples. They risked venturing into unstable buildings, wearing makeshift radiation gear. For three days, they carefully searched laboratories and storage facilities, avoiding collapsed sections and radiation hotspots. They found several sealed containers that might hold viable genetic material or emergency seed banks from before the collapse.",
+      "complications": "While retrieving the last container, a support beam collapsed, trapping two scavengers under debris. The noise attracted a pack of mutated predators that had been nesting nearby. In the chaos, half the containers were smashed or contaminated. Aris had to choose between saving her people or saving the seeds. She chose her people, but during the rescue, radiation alarms indicated they'd been exposed to lethal doses. They escaped with only three intact seed containers.",
+      "resolution": "Two scavengers died from radiation poisoning within days. The remaining seeds yielded only one viable strain—a hardy root vegetable that could grow in poor conditions. It wasn't enough to save everyone. Aris made the agonizing decision to prioritize children and essential workers for rations. Five adults voluntarily starved themselves to give others a chance. The new crop eventually took root, but the community was forever changed by the losses and terrible choices made.",
+      "lesson_learned": "Preservation requires sacrifice, but some sacrifices cost more than resources—they cost humanity. Never put all survival hopes in one solution, and always have multiple backup plans for essential resources.",
+      "casualties": [
+          "Markus (engineer, radiation poisoning)",
+          "Lena (medic, crushed in collapse)",
+          "Five adult volunteers who rationed their food to others"
+      ],
+      "resources_gained": [
+          "3 containers of drought-resistant root vegetable seeds",
+          "2 functional radiation suits",
+          "Agricultural research data on soil remediation",
+          "8 liters of purified water from lab emergency supplies"
+      ],
+      "moral_choice": "Whether to sacrifice two trapped team members to save the potentially life-saving seeds, or risk everyone to attempt rescue and possibly lose everything.",
+      "long_term_impact": "The community developed deep psychological scars and divided into those who supported Aris's decisions and those who blamed her. Trust was eroded, leading to stricter governance and rationing systems. However, the resilient crop strain became the foundation of their survival, eventually allowing them to establish trade with other settlements. Aris became both revered and feared—a leader who made unbearable choices but ensured some survived."
+  };
+  
+  static readonly type = 'story_scenario';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757122837352;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(TheLastHarvestModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered story_scenario: The Last Harvest`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default TheLastHarvestModule;

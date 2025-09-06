@@ -418,11 +418,12 @@ class DeadGridScene extends Phaser.Scene implements TurnListener {
     });
     
     if (closestZombie) {
-      closestZombie.takeDamage(damage);
+      const zombie = closestZombie as Zombie;
+      zombie.takeDamage(damage);
       
-      if (!closestZombie.getIsAlive()) {
-        this.gridManager.removeEntity(closestZombie.getId());
-        this.zombies.delete(closestZombie.getId());
+      if (!zombie.getIsAlive()) {
+        this.gridManager.removeEntity(zombie.getId());
+        this.zombies.delete(zombie.getId());
       }
     }
   }

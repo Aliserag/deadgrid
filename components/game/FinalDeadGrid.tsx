@@ -22,7 +22,7 @@ interface GridEntity {
 interface Camp {
   x: number;
   y: number;
-  sprite: Phaser.GameObjects.Sprite;
+  sprite: Phaser.GameObjects.Image;
   level: number;
   survivors: number;
 }

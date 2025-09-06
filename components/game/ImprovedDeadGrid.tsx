@@ -722,7 +722,9 @@ class ImprovedDeadGridScene extends Phaser.Scene {
         fontFamily: 'monospace'
       }).setOrigin(0.5);
       
-      this.eventModal.add([optionBg, optionText]);
+      if (this.eventModal) {
+        this.eventModal.add([optionBg, optionText]);
+      }
       
       // Keyboard shortcut
       this.input.keyboard!.once(`keydown-${index + 1}`, option.effect);

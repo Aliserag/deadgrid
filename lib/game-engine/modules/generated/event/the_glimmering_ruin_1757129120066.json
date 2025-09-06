@@ -1,0 +1,25 @@
+{
+  "title": "The Glimmering Ruin",
+  "trigger_condition": "Player enters an abandoned industrial zone at night",
+  "description": "A faint, rhythmic blue glow pulses from a collapsed factory building. Strange, harmonic humming echoes through the rusted structures, and the air smells of ozone and decay. Scavenger birds circle overhead but refuse to land near the source.",
+  "choices": [
+    {
+      "option": "Investigate the light source cautiously",
+      "consequence": "Discover a functional pre-collapse energy core. Gain +2 Energy Cells but risk radiation exposure (-15% health if failed protection check)"
+    },
+    {
+      "option": "Scavenge the perimeter for useful materials",
+      "consequence": "Find abandoned toolboxes and wiring. Gain +1 Scrap Parts and +1 Electronics without danger"
+    },
+    {
+      "option": "Mark the location and leave immediately",
+      "consequence": "Avoid all risks. Gain +1 Map Data for future exploration"
+    },
+    {
+      "option": "Attempt to sabotage the phenomenon from a distance",
+      "consequence": "Cause an energy backlash. 50% chance to destroy the source (gaining nothing) or cause a chain reaction that reveals hidden loot (+3 Rare Components)"
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "Until dawn (in-game 8 hours)"
+}

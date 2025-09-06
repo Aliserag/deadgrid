@@ -490,7 +490,8 @@ class CombatDeadGridScene extends Phaser.Scene {
     }
     
     this.modeText.setText(`MODE: ${modeText}`);
-    this.modeText.setColor(Phaser.Display.Color.IntegerToRGB(modeColor).rgba);
+    const colorObj = Phaser.Display.Color.IntegerToRGB(modeColor);
+    this.modeText.setColor(`rgb(${colorObj.r}, ${colorObj.g}, ${colorObj.b})`);
   }
 
   handleInput(dx: number, dy: number): void {
@@ -938,18 +939,18 @@ class CombatDeadGridScene extends Phaser.Scene {
     
     if (this.inventoryOpen) {
       // Update inventory display
-      const itemsText = this.inventoryContainer.getByName('itemsText') || 
-                       this.inventoryContainer.list.find(c => c.getData('itemsText')) as Phaser.GameObjects.Text;
+      const itemsText = (this.inventoryContainer.getByName('itemsText') || 
+                       this.inventoryContainer.list.find(c => c.getData('itemsText'))) as Phaser.GameObjects.Text;
       
-      if (itemsText) {
+      if (itemsText && itemsText.setText) {
         const items = this.inventory.slice(-10).join('\n') || 'Empty';
         itemsText.setText(`Items:\n${items}`);
       }
       
-      const resourcesText = this.inventoryContainer.getByName('resourcesText') ||
-                           this.inventoryContainer.list.find(c => c.getData('resourcesText')) as Phaser.GameObjects.Text;
+      const resourcesText = (this.inventoryContainer.getByName('resourcesText') ||
+                           this.inventoryContainer.list.find(c => c.getData('resourcesText'))) as Phaser.GameObjects.Text;
       
-      if (resourcesText) {
+      if (resourcesText && resourcesText.setText) {
         resourcesText.setText(
           `Resources:\nFood: ${this.food}\nWater: ${this.water}\nMedicine: ${this.medicine}`
         );

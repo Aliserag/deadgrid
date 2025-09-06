@@ -819,8 +819,11 @@ class UltimateDeadGridScene extends Phaser.Scene {
     });
     
     if (target) {
+      const zombieTarget = target as GridEntity;
       const damage = 35 + Math.floor(Math.random() * 15);
-      target.health! -= damage;
+      if (zombieTarget.health) {
+        zombieTarget.health -= damage;
+      }
       
       // Muzzle flash effect
       const flash = this.add.circle(this.player.sprite.x, this.player.sprite.y, 10, 0xffff00);
@@ -834,15 +837,15 @@ class UltimateDeadGridScene extends Phaser.Scene {
       });
       
       // Blood effect on target
-      this.createBloodEffect(target.sprite.x, target.sprite.y);
+      this.createBloodEffect(zombieTarget.sprite.x, zombieTarget.sprite.y);
       
-      target.sprite.setTint(0xff0000);
-      this.time.delayedCall(100, () => target!.sprite.clearTint());
+      zombieTarget.sprite.setTint(0xff0000);
+      this.time.delayedCall(100, () => zombieTarget.sprite.clearTint());
       
-      this.showFloatingText(target.sprite.x, target.sprite.y, `-${damage}`, 0xffff00);
+      this.showFloatingText(zombieTarget.sprite.x, zombieTarget.sprite.y, `-${damage}`, 0xffff00);
       
-      if (target.health! <= 0) {
-        this.events.emit('zombieDeath', target);
+      if (zombieTarget.health && zombieTarget.health <= 0) {
+        this.events.emit('zombieDeath', zombieTarget);
       }
     }
   }

@@ -40,27 +40,21 @@ export class EventManager {
   
   async generateDailyEvent(day: number, context?: any): Promise<GameEvent | null> {
     try {
-      const event = await this.client.generateEvent({
-        day,
-        playerHealth: context?.health || 100,
-        resources: context?.resources || {},
-        baseDefense: context?.baseDefense || 0,
-        survivors: context?.survivors || 1
-      });
+      const event = await this.client.generateEvent() as any;
       
-      if (event) {
+      if (event && event.title) {
         const gameEvent: GameEvent = {
           id: `event_${day}_${Date.now()}`,
           title: event.title,
-          description: event.description,
-          choices: event.choices.map(c => ({
-            text: c.text,
+          description: event.description || 'An event occurs...',
+          choices: (event.choices || []).map((c: any) => ({
+            text: c.text || 'Continue',
             outcome: {
-              description: c.outcome,
-              effects: this.parseEffects(c.outcome)
+              description: c.outcome || 'Unknown outcome',
+              effects: this.parseEffects(c.outcome || '')
             }
           })),
-          type: this.determineEventType(event.description),
+          type: this.determineEventType(event.description || ''),
           day
         };
         
@@ -114,10 +108,7 @@ export class EventManager {
   
   async generateNPCEncounter(faction?: string): Promise<any> {
     try {
-      const npc = await this.client.generateNPC({
-        faction: faction || undefined,
-        day: this.currentDay
-      });
+      const npc = await this.client.generateNPC();
       
       return npc;
     } catch (error) {
@@ -128,7 +119,7 @@ export class EventManager {
   
   async generateWeatherEvent(): Promise<any> {
     try {
-      const weather = await this.client.generateWeather();
+      const weather = await this.client.generateWeatherEvent();
       return weather;
     } catch (error) {
       console.error('Failed to generate weather:', error);
@@ -138,7 +129,7 @@ export class EventManager {
   
   async generateLocationDescription(locationType: string): Promise<string> {
     try {
-      const location = await this.client.generateLocation({ type: locationType });
+      const location = await this.client.generateLocation() as any;
       return location?.description || 'An abandoned place, eerily quiet.';
     } catch (error) {
       console.error('Failed to generate location:', error);
