@@ -229,14 +229,14 @@ export class BaseBuilderScene extends Phaser.Scene {
 
   getAllBuildings() {
     return [
-      { name: 'Wall', cost: { materials: 10 }, defense: 10, icon: '🧱' },
-      { name: 'Gate', cost: { materials: 15 }, defense: 5, icon: '🚪' },
-      { name: 'Watchtower', cost: { materials: 25 }, defense: 15, icon: '🗼' },
-      { name: 'Storage', cost: { materials: 20 }, capacity: 50, icon: '📦' },
-      { name: 'Workshop', cost: { materials: 30 }, production: 5, icon: '🔧' },
-      { name: 'Medical Bay', cost: { materials: 35, medicine: 10 }, healing: 10, icon: '🏥' },
-      { name: 'Garden', cost: { materials: 15, water: 10 }, food: 5, icon: '🌱' },
-      { name: 'Water Collector', cost: { materials: 20 }, water: 10, icon: '💧' }
+      { name: 'Wall', cost: { materials: 10 } as Record<string, number>, defense: 10, icon: '🧱' },
+      { name: 'Gate', cost: { materials: 15 } as Record<string, number>, defense: 5, icon: '🚪' },
+      { name: 'Watchtower', cost: { materials: 25 } as Record<string, number>, defense: 15, icon: '🗼' },
+      { name: 'Storage', cost: { materials: 20 } as Record<string, number>, capacity: 50, icon: '📦' },
+      { name: 'Workshop', cost: { materials: 30 } as Record<string, number>, production: 5, icon: '🔧' },
+      { name: 'Medical Bay', cost: { materials: 35, medicine: 10 } as Record<string, number>, healing: 10, icon: '🏥' },
+      { name: 'Garden', cost: { materials: 15, water: 10 } as Record<string, number>, food: 5, icon: '🌱' },
+      { name: 'Water Collector', cost: { materials: 20 } as Record<string, number>, water: 10, icon: '💧' }
     ];
   }
 

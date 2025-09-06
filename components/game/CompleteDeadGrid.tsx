@@ -192,7 +192,7 @@ class CompleteDeadGridScene extends Phaser.Scene {
     
     objects.forEach(objConfig => {
       for (let i = 0; i < objConfig.count; i++) {
-        let pos;
+        let pos: { x: number; y: number } = { x: 0, y: 0 };
         let attempts = 0;
         
         do {
@@ -638,7 +638,7 @@ class CompleteDeadGridScene extends Phaser.Scene {
     let closestZombie: Phaser.GameObjects.Sprite | null = null;
     let closestDist = Infinity;
     
-    this.zombies.forEach(zombie => {
+    this.zombies.forEach((zombie: Phaser.GameObjects.Sprite) => {
       if (!zombie.active) return;
       const zPos = zombie.getData('gridPos');
       const dist = Math.abs(this.playerGridPos.x - zPos.x) + 
@@ -650,16 +650,17 @@ class CompleteDeadGridScene extends Phaser.Scene {
     });
     
     if (closestZombie) {
-      const health = closestZombie.getData('health') - 35;
-      closestZombie.setData('health', health);
+      const zombie = closestZombie as Phaser.GameObjects.Sprite;
+      const health = zombie.getData('health') - 35;
+      zombie.setData('health', health);
       
-      closestZombie.setTint(0xff0000);
-      this.time.delayedCall(100, () => closestZombie!.clearTint());
+      zombie.setTint(0xff0000);
+      this.time.delayedCall(100, () => zombie.clearTint());
       
-      this.showDamage(closestZombie.x, closestZombie.y, 35);
+      this.showDamage(zombie.x, zombie.y, 35);
       
       if (health <= 0) {
-        this.killZombie(closestZombie);
+        this.killZombie(zombie);
       }
     }
   }
