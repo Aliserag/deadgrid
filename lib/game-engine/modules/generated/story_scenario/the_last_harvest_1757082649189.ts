@@ -6,7 +6,7 @@ import { GameModule } from '../../../core/GameModule';
 
 export interface TheLastHarvestData {
   title: string;
-  protagonist: string;
+  protagonist: any;
   setting: string;
   situation: string;
   attempted_solution: string;

@@ -35,6 +35,7 @@ class WorkingDeadGridScene extends Phaser.Scene {
   private food = 20;
   private water = 15;
   private medicine = 5;
+  private inventory: string[] = [];
   
   // UI
   private healthText!: Phaser.GameObjects.Text;
@@ -621,10 +622,14 @@ class WorkingDeadGridScene extends Phaser.Scene {
       child => child.getData('isInventory')
     );
     
-    const isVisible = inventoryItems.length > 0 && inventoryItems[0].visible;
+    const firstItem = inventoryItems[0] as Phaser.GameObjects.GameObject & { visible?: boolean };
+    const isVisible = inventoryItems.length > 0 && firstItem?.visible;
     
     inventoryItems.forEach(item => {
-      item.setVisible(!isVisible);
+      const gameObj = item as any;
+      if (gameObj.setVisible) {
+        gameObj.setVisible(!isVisible);
+      }
     });
     
     if (!isVisible) {

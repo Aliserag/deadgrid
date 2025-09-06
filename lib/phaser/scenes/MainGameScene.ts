@@ -57,7 +57,7 @@ export class MainGameScene extends Phaser.Scene {
 
   generateSprites() {
     // Create canvas textures for sprites
-    const graphics = this.make.graphics({ x: 0, y: 0, add: false });
+    const graphics = this.make.graphics({ x: 0, y: 0 } as any);
     
     // Player sprite (green)
     graphics.fillStyle(0x4CAF50);
@@ -375,7 +375,7 @@ export class MainGameScene extends Phaser.Scene {
         
         // Update score
         const gameStore = useGameStore.getState();
-        gameStore.player.score += 10;
+        (gameStore.player as any).score = ((gameStore.player as any).score || 0) + 10;
       } else {
         zombie.setData('health', health);
       }

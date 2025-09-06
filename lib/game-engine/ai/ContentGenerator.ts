@@ -265,10 +265,40 @@ export class ${this.toCamelCase(content.data.name)}Enemy {
   }
 }
 
-export default ${this.toCamelCase(content.data.name)}Enemy;`
+export default ${this.toCamelCase(content.data.name)}Enemy;`,
+      
+      quest: `/**
+ * Auto-generated Quest: ${content.data.title || content.data.name}
+ * Generated: ${new Date(content.timestamp).toISOString()}
+ */
+
+export class ${this.toCamelCase(content.data.title || content.data.name)}Quest {
+  static metadata = ${JSON.stringify(content.data, null, 2)};
+  
+  static initialize(engine) {
+    engine.getQuestSystem().registerQuest(this.metadata);
+  }
+}
+
+export default ${this.toCamelCase(content.data.title || content.data.name)}Quest;`,
+      
+      survivor_log: `/**
+ * Auto-generated Survivor Log: ${content.data.author_name}
+ * Generated: ${new Date(content.timestamp).toISOString()}
+ */
+
+export class ${this.toCamelCase(content.data.author_name || 'Unknown')}Log {
+  static metadata = ${JSON.stringify(content.data, null, 2)};
+  
+  static initialize(engine) {
+    engine.getLoreSystem().addSurvivorLog(this.metadata);
+  }
+}
+
+export default ${this.toCamelCase(content.data.author_name || 'Unknown')}Log;`
     };
     
-    return templates[content.type] || templates.item;
+    return templates[content.type as keyof typeof templates] || templates.item;
   }
   
   private generateFileName(content: GeneratedContent): string {

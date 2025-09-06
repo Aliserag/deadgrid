@@ -172,7 +172,7 @@ export class HUDScene extends Phaser.Scene {
     const gameStore = useGameStore.getState();
     
     this.dayText?.setText(`Day ${gameStore.day}`);
-    this.scoreText?.setText(`Score: ${gameStore.player.score || 0}`);
+    this.scoreText?.setText(`Score: ${(gameStore.player as any).score || 0}`);
     this.ammoText?.setText(`Ammo: ${gameStore.resources.ammo}`);
   }
 

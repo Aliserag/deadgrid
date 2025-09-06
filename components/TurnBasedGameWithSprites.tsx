@@ -574,6 +574,7 @@ class GameScene extends Phaser.Scene {
     });
     
     if (closestTarget) {
+      const target = closestTarget as any;
       this.playerAmmo--;
       this.ammoText.setText(`🔫 Ammo: ${this.playerAmmo}`);
       
@@ -581,8 +582,8 @@ class GameScene extends Phaser.Scene {
       const bullet = this.add.circle(this.player.x, this.player.y, 2, 0xffff00);
       this.tweens.add({
         targets: bullet,
-        x: closestTarget.sprite.x,
-        y: closestTarget.sprite.y,
+        x: target.sprite.x,
+        y: target.sprite.y,
         duration: 100,
         onComplete: () => {
           bullet.destroy();
@@ -590,27 +591,27 @@ class GameScene extends Phaser.Scene {
           // Apply damage
           const damage = Math.floor(Math.random() * 20) + 15;
           
-          if ('type' in closestTarget) {
-            closestTarget.health -= damage;
+          if ('type' in target) {
+            target.health -= damage;
             
             // Update health bar
-            const healthBar = closestTarget.sprite.getData('healthBar');
+            const healthBar = target.sprite.getData('healthBar');
             if (healthBar) {
-              const healthPercent = closestTarget.health / closestTarget.maxHealth;
+              const healthPercent = target.health / target.maxHealth;
               healthBar.setScale(healthPercent, 1);
             }
             
-            this.showDamage(closestTarget.sprite, damage);
+            this.showDamage(target.sprite, damage);
             
-            if (closestTarget.health <= 0) {
-              this.killZombie(closestTarget);
+            if (target.health <= 0) {
+              this.killZombie(target);
             }
           } else {
-            closestTarget.health -= damage;
-            this.showDamage(closestTarget.sprite, damage);
+            target.health -= damage;
+            this.showDamage(target.sprite, damage);
             
-            if (closestTarget.health <= 0) {
-              this.killNPC(closestTarget);
+            if (target.health <= 0) {
+              this.killNPC(target);
             }
           }
         }
@@ -1043,7 +1044,9 @@ class GameScene extends Phaser.Scene {
     // Background
     const bg = this.add.rectangle(0, 0, 600, 400, 0x000000, 0.95);
     bg.setStrokeStyle(3, 0x444444);
-    this.eventUI.add(bg);
+    if (this.eventUI) {
+      this.eventUI.add(bg);
+    }
     
     // Event type indicator
     const typeColor = event.type === 'crisis' ? '#ff0000' :
@@ -1056,7 +1059,9 @@ class GameScene extends Phaser.Scene {
       fontFamily: 'monospace',
       fontStyle: 'bold'
     }).setOrigin(0.5);
-    this.eventUI.add(typeText);
+    if (this.eventUI) {
+      this.eventUI.add(typeText);
+    }
     
     // Title
     const titleText = this.add.text(0, -150, event.title, {
@@ -1065,7 +1070,9 @@ class GameScene extends Phaser.Scene {
       fontFamily: 'monospace',
       fontStyle: 'bold'
     }).setOrigin(0.5);
-    this.eventUI.add(titleText);
+    if (this.eventUI) {
+      this.eventUI.add(titleText);
+    }
     
     // Description
     const descText = this.add.text(0, -80, event.description, {
@@ -1075,7 +1082,9 @@ class GameScene extends Phaser.Scene {
       wordWrap: { width: 550 },
       align: 'center'
     }).setOrigin(0.5);
-    this.eventUI.add(descText);
+    if (this.eventUI) {
+      this.eventUI.add(descText);
+    }
     
     // Choices
     event.choices.forEach((choice, index) => {
@@ -1084,14 +1093,18 @@ class GameScene extends Phaser.Scene {
       const choiceBtn = this.add.rectangle(0, y, 500, 50, 0x222222);
       choiceBtn.setStrokeStyle(2, 0x666666);
       choiceBtn.setInteractive();
-      this.eventUI.add(choiceBtn);
+      if (this.eventUI) {
+        this.eventUI.add(choiceBtn);
+      }
       
       const choiceText = this.add.text(0, y, choice.text, {
         fontSize: '16px',
         color: '#ffffff',
         fontFamily: 'monospace'
       }).setOrigin(0.5);
-      this.eventUI.add(choiceText);
+      if (this.eventUI) {
+        this.eventUI.add(choiceText);
+      }
       
       choiceBtn.on('pointerover', () => {
         choiceBtn.setFillStyle(0x333333);
