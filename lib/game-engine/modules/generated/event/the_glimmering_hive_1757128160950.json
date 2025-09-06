@@ -1,0 +1,25 @@
+{
+  "title": "The Glimmering Hive",
+  "trigger_condition": "Player enters an abandoned industrial zone at night",
+  "description": "A faint, pulsating blue glow emanates from a collapsed factory. Inside, a hive of mutated bioluminescent insects has made its home, their light revealing scattered pre-war machinery and supplies—but the buzzing grows louder as you approach.",
+  "choices": [
+    {
+      "option": "Harvest the glow-sacs quietly",
+      "consequence": "Gain 3 Biolight Pods (usable as light sources), but risk 25% chance of alerting the hive and taking minor poison damage."
+    },
+    {
+      "option": "Lure a Scavenger Mongrel into the hive as distraction",
+      "consequence": "Lose 1 Raw Meat bait, but safely loot 2 Random Electronic Components and 1 Energy Cell with no combat."
+    },
+    {
+      "option": "Set the hive ablaze with makeshift fuel",
+      "consequence": "Gain 5 Insect Chitin (crafting material) and clear the area permanently, but destroy all other loot and draw attention from nearby hostile creatures."
+    },
+    {
+      "option": "Leave immediately and seal the entrance",
+      "consequence": "Avoid all risk, but gain nothing. Area remains inaccessible for 7 days."
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "Until dawn (in-game 8 hours) or until player resolves the event"
+}
