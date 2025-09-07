@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena with two daughters, Sofia (8) and Maya (6). Was writing a book about symbiotic relationships in marine life and dreamed of leading conservation efforts in the Great Barrier Reef.",
+      "day_number": 327,
+      "location": "Abandoned lighthouse keeper's cottage, Northern California coast. Salt-crusted windows, peeling blue paint, the constant groan of wind through cracked timbers, and the distant crash of waves on rocks below.",
+      "entry": "The rain hasn't stopped for three days. It drums against the roof in a relentless rhythm that matches the throbbing in my leg. I found myself talking to Lena today—full conversations, as if she were sitting across from me at our kitchen table. The emptiness that follows these moments is more crushing than any hunger.\n\nToday I had to make a choice. A young woman—couldn't have been more than twenty—stumbled into my perimeter. She was bleeding from a bite on her arm, already showing the grayish pallor. She begged me for help, for water, for anything. I stood behind the barricaded door with my rifle, watching through the cracks as she deteriorated over hours. Her pleas turned to rasps, then to nothing at all.\n\nI could have ended her suffering. The rifle was right there. But the last bullet... I'm saving it. Not for them. For me, if it comes to that. The guilt sits in my stomach like a stone. Lena would have insisted we help her. She always believed in the good in people, even at the end.\n\nThe worst part? When she finally turned and shambled away, I felt relief. Not horror at what she'd become, but sheer gratitude that she was leaving. When did I become this person? The man who measured a human life against his last can of beans?",
+      "condition": "Physically: Limping from an infected cut on left calf, wrapped in torn cloth. Malnourished, down about 40 pounds from pre-outbreak weight. Mentally: Severe isolation-induced auditory hallucinations, bouts of paralyzing guilt, maintaining scientific observation as coping mechanism.",
+      "discoveries": "The infected avoid salt water—they won't cross even shallow tidal pools. Their deterioration accelerates in damp environments. Also found that writing in this journal helps anchor me to reality when the loneliness becomes unbearable.",
+      "warnings": "Never trust silence near coastal caves—they gather there during storms. Boil all water, even rainwater—something in the air contaminates it. The infected can recognize familiar voices—don't call out to anyone until you're certain.",
+      "last_meal": "Half a can of cold beans and a handful of boiled seaweed, 14 hours ago. Found the beans in a submerged cooler near the old pier.",
+      "companions": "Alone. Lost Lena and the girls during the evacuation from Berkeley. Last saw them being pulled into a overwhelmed rescue vehicle while I fought off infected. Never learned if they made it. Sometimes I imagine they're in some safe zone, waiting for me. Other times I know better.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757286637722;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
