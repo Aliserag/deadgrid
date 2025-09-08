@@ -1,0 +1,16 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Rust-Worshippers cult, mutated rodents, automated defense systems",
+  "notable_features": [
+    "Repurposed pre-war industrial cathedral with welded scrap metal additions",
+    "Functioning steam-powered clockwork mechanisms throughout",
+    "Acid-rain collection and filtration system",
+    "Hidden underground printing press producing cult propaganda",
+    "Bell tower that doubles as a signal tower for nearby settlements"
+  ],
+  "exploration_notes": "Players will find a heavily fortified structure that blends religious iconography with industrial machinery. The interior features dangerous moving parts, cultists who attack on sight, and valuable pre-war manufacturing equipment. The upper levels contain the cult's living quarters and ritual spaces, while the basement holds their printing operation and stored supplies. Careful exploration reveals hidden compartments containing rare blueprints and mechanical components."
+}
