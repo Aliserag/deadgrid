@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in deep-sea ecosystems. Married to Elena with two daughters, Sofia (8) and Maya (6). Dreamed of leading oceanic conservation efforts and sailing around the world with his family.",
+      "day_number": 347,
+      "location": "Abandoned lighthouse keeper's cottage, Northern Maine coast. The structure groans with each gust of wind, salt crusting every window. Faded nautical charts still paper the walls, and the rotating beam above casts periodic shadows through water-stained ceilings.",
+      "entry": "The storm finally broke today. Three days of howling winds that sounded like the damned themselves were trying to breach these stone walls. I watched the waves devour what remained of the fishing pier below—another piece of the old world gone forever.\n\nFound a child's drawing wedged behind the bedframe today. Crude crayon sun, stick figures holding hands. It undid me completely. Sat on the floor weeping for what felt like hours, the paper trembling in my salt-raw hands. I keep seeing Sofia's smile in the rain-streaked glass, Maya's laughter in the gulls' cries.\n\nYesterday I had to choose between boarding up the last window or salvaging medicine from the wrecked clinic. Chose the window. Old man Henderson down in the village probably didn't make it through the night. These choices carve away pieces of who I used to be.\n\nBut this evening, as the clouds parted, I saw it—a green shoot pushing through cracks in the lighthouse steps. Life, stubborn and defiant. I poured my last precious drops of fresh water around its roots. Maybe that makes me a fool. But today, I needed to nurture something instead of destroy.",
+      "condition": "Physically: Malnourished (down 40 lbs), saltwater lesions on hands and face, chronic cough from damp conditions. Mentally: Haunted by guilt over family's fate, but experiencing brief moments of clarity between depressive episodes.",
+      "discoveries": "Saltwater contamination extends further inland than previously believed. Coastal settlements may become uninhabitable within years. Also discovered that certain lichens growing on north-facing rocks can be boiled into a paste that prevents infection in wounds.",
+      "warnings": "Never trust calm waters after a storm—the changed ones become more active when pressure changes. Saltwater burns must be treated immediately with fresh water or urine to prevent flesh necrosis. Always check seafood for iridescent sheen—contaminated shellfish cause violent hallucinations.",
+      "last_meal": "Boiled periwinkles and dandelion greens (14 hours ago), scavenged from rocks below lighthouse at low tide. Ate half and saved rest for tomorrow.",
+      "companions": "Alone since Day 289 when Elias sacrificed himself drawing the horde away from our shelter. Wife and daughters presumed lost in initial evacuation chaos (Day 17). Sometimes talks to seagulls he's named 'Elena' and 'Sofia'.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757351736312;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
