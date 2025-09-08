@@ -1,0 +1,21 @@
+{
+  "name": "Rust-Stalker",
+  "type": "machine",
+  "tier": 3,
+  "health": "120-160",
+  "damage": "25-40",
+  "speed": "fast",
+  "behavior": "stalker",
+  "abilities": [
+    "Electro-Lash Whip",
+    "Stealth Cloaking",
+    "Overcharge Burst"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Energy Cell",
+    "Rusted Processor",
+    "Worn Servos"
+  ],
+  "description": "A pre-war security automaton repurposed by scavengers, now roaming the wastes autonomously. It stands 7 feet tall with a rust-pitted metallic frame, multiple red optical sensors, and a retractable electro-lash whip extending from its right arm. Moves with unnerving silence despite its size, often concealing itself in shadows or debris before striking."
+}
