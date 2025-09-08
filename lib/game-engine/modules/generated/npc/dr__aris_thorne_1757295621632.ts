@@ -4,7 +4,7 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface Dr.ArisThorneData {
+export interface DrArisThorneData {
   name: string;
   occupation: string;
   personality: any[];
@@ -15,8 +15,8 @@ export interface Dr.ArisThorneData {
   backstory: string;
 }
 
-export class Dr.ArisThorneModule extends GameModule {
-  static readonly metadata: Dr.ArisThorneData = {
+export class DrArisThorneModule extends GameModule {
+  static readonly metadata: DrArisThorneData = {
       "name": "Dr. Aris Thorne",
       "occupation": "Botanical Geneticist",
       "personality": [
@@ -58,7 +58,7 @@ export class Dr.ArisThorneModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(Dr.ArisThorneModule.metadata);
+      await system.register(DrArisThorneModule.metadata);
     }
     
     // Log registration
@@ -91,4 +91,4 @@ export class Dr.ArisThorneModule extends GameModule {
   }
 }
 
-export default Dr.ArisThorneModule;
+export default DrArisThorneModule;
