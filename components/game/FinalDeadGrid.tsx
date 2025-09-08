@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import * as Phaser from 'phaser';
+import StacksWallet from '@/components/StacksWallet';
 
 const GRID_WIDTH = 25;
 const GRID_HEIGHT = 18;
@@ -1315,10 +1316,14 @@ export default function FinalDeadGrid() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+      <div className="absolute top-4 right-4 z-10">
+        <StacksWallet />
+      </div>
       <div id="game-container" className="border-4 border-gray-700 rounded-lg shadow-2xl" />
       <div className="mt-4 text-gray-400 text-center">
         <p className="text-xl font-bold text-red-500 mb-2">DEADGRID: SURVIVAL</p>
         <p className="text-sm">Click zombies to shoot (5 ammo) • Walk into them for melee • Establish camps for bonuses</p>
+        <p className="text-xs mt-2 text-orange-400">Connect your Stacks wallet to mint survivor NFTs!</p>
       </div>
     </div>
   );
