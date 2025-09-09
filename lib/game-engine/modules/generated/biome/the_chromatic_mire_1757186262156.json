@@ -1,0 +1,30 @@
+{
+  "name": "The Chromatic Mire",
+  "description": "A vast wetland where chemical spills from the Old World have permanently altered the landscape. The ground oozes iridescent sludge that shifts colors under the pale sun, and twisted, crystalline flora grows in toxic pools. The air carries a faint metallic tang that lingers on the tongue.",
+  "terrain_type": "Toxic wetlands with unstable ground and crystalline formations",
+  "hazards": [
+    "Corrosive pools",
+    "Unstable crystalline spikes that shatter violently",
+    "Toxic fog that causes hallucinations",
+    "Sinkholes filled with acidic sludge"
+  ],
+  "resources": [
+    "Purified chemical compounds",
+    "Crystalline shards",
+    "Radiation-resistant flora samples",
+    "Salvaged pre-collapse laboratory equipment"
+  ],
+  "ambient_sounds": [
+    "Faint bubbling of chemical pools",
+    "Eerie crystalline humming",
+    "Distant cracking of shifting formations",
+    "Low-frequency vibrations from deep underground"
+  ],
+  "weather_patterns": [
+    "Acid rain showers",
+    "Iridescent fog banks",
+    "Static-charged electrical storms",
+    "Toxic mist events"
+  ],
+  "entry_message": "The air grows thick with the scent of ozone and decay. Before you stretches a landscape of impossible colors—pools of shimmering violet and emerald sludge bubble beneath twisted crystalline structures that hum with unnatural energy. Proceed with extreme caution: nothing here is as it appears."
+}
