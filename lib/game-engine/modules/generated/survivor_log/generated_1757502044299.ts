@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Elena Vasquez",
+      "author_background": "Structural engineer, married with a 5-year-old daughter. Was designing sustainable housing projects and dreamed of building a self-sufficient eco-community. Played cello in a community orchestra on weekends.",
+      "day_number": 327,
+      "location": "Abandoned elementary school music room, St. Augustine, Florida. Dusty afternoon light filters through cracked windows, illuminating faded posters of musical notes and a child's forgotten crayon drawing still taped to the wall.",
+      "entry": "The silence is the worst part. I used to complain about noise pollution - traffic, construction, Maya's cartoons blaring at 6 AM. Now I'd give my left arm to hear that cacophony again. Found a child's recorder today in the music room cupboard. Put it to my lips but couldn't bring myself to blow. What if something hears? What if nothing hears? Both possibilities terrify me in different ways.\n\nWe buried Mrs. Gable this morning behind the playground. Infection got her three days ago. She was a retired librarian who'd survived everything this hellscape threw at us - raiders, infected, starvation winter - only to die from a rusty nail wound. I held her hand while she went. She kept asking about her cats, long since gone. I lied and said they were waiting for her. The first moral compromise felt like losing a limb; now these lies come easier than truth.\n\nMaya would have started second grade this year. Sometimes I see her reflection in broken windows - just for a second - before it's gone. I talk to her anyway. Tell her about the birds returning, about how we found canned peaches yesterday. Keep her alive in the only way left to me.\n\nToday I realized: we're not surviving for some better future. We're surviving for each other's stories. Mrs. Gable's cats, Carlos's baseball games, my daughter's laughter. These are the things worth preserving, even if only in memory.",
+      "condition": "Physically: Malnourished (down 15kg), healing gash on right forearm, chronic cough from dust inhalation. Mentally: Grief-haunted but functional, experiences auditory hallucinations of pre-outbreak sounds, sleeps in 2-hour intervals.",
+      "discoveries": "Vinegar and salt solution effectively disinfects wounds when medical supplies are unavailable. The infected avoid standing water - possibly instinctual fear of drowning remains. Found a working solar calculator that still holds charge after 11 months.",
+      "warnings": "Never travel during thunderstorms - the infected become more aggressive in low pressure systems. Canned goods with rounded lids are dangerous (botulism risk). Trust no one who claims to have 'government sanctuary' information - it's always a trap.",
+      "last_meal": "Cold canned kidney beans and two saltine crackers (14 hours ago), shared water from purified rainwater collection.",
+      "companions": "Currently with Carlos Mendoza (former high school science teacher, lost his entire family). Recently lost Mrs. Gable (librarian, infection). Still searching for any sign of husband David and daughter Maya, separated during evacuation day 17.",
+      "hope_level": 4
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757502044301;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
