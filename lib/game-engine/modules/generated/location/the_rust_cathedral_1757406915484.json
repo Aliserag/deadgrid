@@ -1,0 +1,15 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Rust-Walkers (mutated humans with metallic skin), Scrap-Scavengers, and feral cyber-hounds",
+  "notable_features": [
+    "Former pre-war data center now overgrown with bioluminescent fungi",
+    "Still-active server banks that occasionally emit distorted broadcasts",
+    "Network of maintenance tunnels flooded with corrosive coolant",
+    "Central atrium with a massive, non-functional quantum computer core"
+  ],
+  "exploration_notes": "Players will find valuable pre-war tech components, encrypted data drives, and rare chemicals in preserved labs. The upper levels are relatively safe but poorly lit, while the lower sub-levels contain aggressive mutants and environmental hazards. Strange electromagnetic phenomena interfere with electronics throughout the structure."
+}

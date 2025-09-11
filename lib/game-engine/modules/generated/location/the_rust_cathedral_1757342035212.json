@@ -1,0 +1,19 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": [
+    "Rust-Eater mutants",
+    "Scavenger clans (temporary)",
+    "Mechanical guardians"
+  ],
+  "notable_features": [
+    "Former pre-war data archive with partially functional terminals",
+    "Giant rusted dome that amplifies sound dangerously",
+    "Hidden sub-level with experimental technology",
+    "Acid pools from corroded chemical storage"
+  ],
+  "exploration_notes": "Players will find decaying server racks with recoverable data fragments, automated defense systems that still activate, and strange mutations among the Rust-Eaters that suggest chemical exposure. The upper levels are unstable but contain valuable pre-war blueprints, while the lower levels require hazmat gear due to toxic leakage."
+}

@@ -1,0 +1,19 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": [
+    "Rust-Cultists",
+    "Scrap-Golems",
+    "Rad-Ravens"
+  ],
+  "notable_features": [
+    "Pre-war industrial cathedral converted into a scrap-metal shrine",
+    "Functioning forge powered by geothermal vents",
+    "Moving platforms made from repurposed conveyor belts",
+    "Acid-rain collection system that purifies water"
+  ],
+  "exploration_notes": "Players discover the main hall contains a massive scrap-metal idol surrounded by working forges. Upper levels contain living quarters and ritual spaces where cultists meld flesh with scrap. The basement holds geothermal machinery and the cult's stockpile of rare metals and pre-war technology. Environmental hazards include falling debris, toxic fumes from forges, and automated defense systems still active in restricted areas."
+}

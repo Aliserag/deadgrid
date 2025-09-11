@@ -1,0 +1,14 @@
+{
+  "name": "Rust-Eater's Reckoning",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 850,
+  "stats": {
+    "damage": 45,
+    "durability": 120,
+    "attack_speed": 0.8
+  },
+  "description": "Forged from the hull of a pre-collapse warship and fused with anomalous radiation-corroded steel, this massive hammer was wielded by the legendary scavenger-chief 'Rust-Eater' to defend the Scrap-Fort of Veridia. It is said the weapon hums with the lingering echoes of the old world's final battle.",
+  "special_effects": "On hit, has a 25% chance to inflict 'Corroding Wound', dealing 5 radiation damage per second for 6 seconds and reducing the target's armor by 15% for the duration."
+}

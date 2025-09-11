@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Elena Vasquez",
+      "author_background": "High school biology teacher, married with a 7-year-old daughter named Sofia. Dreamed of writing children's science books and visiting every national park. Lost her family during the initial evacuation chaos.",
+      "day_number": 327,
+      "location": "Abandoned elementary school library in what was once Bellingham, Washington. Rain taps rhythmically against broken windows while mold creeps up walls where colorful student artwork once hung.",
+      "entry": "The rain hasn't stopped for three days. I keep finding myself tracing the faded letters on the children's books—'Where the Wild Things Are,' Sofia's favorite. Today I did something terrible. I took a can of beans from a hiding spot I knew belonged to the old man who sometimes scavenges in this neighborhood. I watched him earlier this week, moving like a ghost between houses. My hands shook the entire time. When I got back to the library, I couldn't open it. Just sat holding this stupid can while rain dripped through the ceiling into a growing puddle. I ended up putting it back exactly where I found it, my empty stomach screaming at me the whole time. What's left of us if we become thieves to people just as desperate? Mom always said the measure of a person isn't what they do when times are easy, but what they refuse to do when times are hard. I hope she'd be proud I put it back. The silence in this library is heavier than any noise I remember from before. Sometimes I read aloud to no one, just to hear a human voice.",
+      "condition": "Physically weakened from sustained malnutrition—ribs visible, persistent cough from damp conditions. Mentally oscillating between sharp clarity and emotional detachment. Hands show signs of mild tremors.",
+      "discoveries": "Mold growing on damp paper produces a faint luminescence at night—could be used as natural lighting. Also realized desperation makes time contract into singular moments of decision rather than long stretches of endurance.",
+      "warnings": "Canned goods with bulging ends can kill you faster than hunger. Trust is more dangerous than any infected—but loneliness will rot you from the inside out. Always check ceiling integrity in old buildings during rain.",
+      "last_meal": "Half a can of cold lentils (found behind pharmacy counter) and dandelion greens, approximately 14 hours ago.",
+      "companions": "Officially alone. Maintains imaginary conversations with her daughter. Occasionally sees an elderly scavenger (never spoken). Lost her husband Mark during highway evacuation panic, daughter Sofia to fever in week 42.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757619934586;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;

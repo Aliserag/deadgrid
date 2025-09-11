@@ -1,0 +1,25 @@
+{
+  "title": "The Glimmering Ruin",
+  "trigger_condition": "Player enters an abandoned industrial zone at night",
+  "description": "A faint, rhythmic humming draws your attention to a half-collapsed factory. Through a cracked window, you see a soft blue glow pulsating from machinery that somehow still has power. The air smells of ozone and rust.",
+  "choices": [
+    {
+      "option": "Investigate the source of the glow",
+      "consequence": "Find a functioning power core (+1 Energy Cell), but trigger a security system (-15 Health)"
+    },
+    {
+      "option": "Attempt to scavenge nearby debris quietly",
+      "consequence": "Find some usable scrap metal (+3 Scrap), but alert nearby feral dogs"
+    },
+    {
+      "option": "Mark the location and leave immediately",
+      "consequence": "No immediate rewards, but location is added to map for future exploration"
+    },
+    {
+      "option": "Set up an ambush for other scavengers",
+      "consequence": "Gain supplies from unaware travelers (+2 Food, +1 Medicine), but lose reputation with nearby factions"
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "Until dawn (6 in-game hours)"
+}
