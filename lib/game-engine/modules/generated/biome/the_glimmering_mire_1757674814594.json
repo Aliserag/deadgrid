@@ -1,0 +1,26 @@
+{
+  "name": "The Glimmering Mire",
+  "description": "A treacherous wetland where bioluminescent fungi and algae cast an eerie glow across the landscape. The ground is a mix of unstable peat and shallow, stagnant water, hiding both resources and dangers beneath its shimmering surface.",
+  "terrain_type": "Swamp",
+  "hazards": [
+    "Sinkholes",
+    "Toxic Spore Clouds",
+    "Aggressive Mutated Leeches"
+  ],
+  "resources": [
+    "Glowshroom Caps",
+    "Purified Water Nodes",
+    "Rust-Proof Alloy Scraps"
+  ],
+  "ambient_sounds": [
+    "Faint, echoing drips",
+    "Low hum of bioluminescence",
+    "Occasional squelching movements in the mud"
+  ],
+  "weather_patterns": [
+    "Thick Acidic Fog",
+    "Bioluminescent Rain Showers",
+    "Still, Heavy Humidity"
+  ],
+  "entry_message": "The air grows thick and humid as you step into the Glimmering Mire. An otherworldly blue-green glow illuminates the bog, reflecting off murky waters and strange fungal growths. Every step sinks slightly into the soft ground, and distant, wet sounds hint at unseen life."
+}
