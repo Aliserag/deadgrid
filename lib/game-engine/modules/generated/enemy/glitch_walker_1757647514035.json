@@ -1,0 +1,21 @@
+{
+  "name": "Glitch-Walker",
+  "type": "machine",
+  "tier": 3,
+  "health": "120-180",
+  "damage": "25-40",
+  "speed": "normal",
+  "behavior": "stalker",
+  "abilities": [
+    "EMP Burst (disables electronics in 10m radius)",
+    "Target Lock (increased accuracy on next attack)",
+    "Self-Repair (regains 10 HP if not damaged for 5s)"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Energy Cell",
+    "Damaged Circuit Board",
+    "Rusted Bolts"
+  ],
+  "description": "A pre-war security drone, now corroded and malfunctioning. Its once-sleek chrome frame is pitted with rust and scorch marks, with one optical sensor flickering erratically. Moves with jerky, uneven motions, emitting a low hum interspersed with static bursts. Often found lurking in shadows of ruined buildings before engaging."
+}
