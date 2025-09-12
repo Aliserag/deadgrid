@@ -1,0 +1,27 @@
+{
+  "name": "The Glimmering Ashen Wastes",
+  "description": "A vast, desolate expanse covered in fine, phosphorescent ash that glows faintly in the dark. The remnants of a cataclysmic event have left the soil unstable, with pockets of toxic gas and shifting terrain. Strange, bioluminescent fungi dot the landscape, providing the only source of natural light.",
+  "terrain_type": "Sandy ash dunes with unstable sinkholes",
+  "hazards": [
+    "Toxic gas vents",
+    "Quicksand-like ash pits",
+    "Radiation storms"
+  ],
+  "resources": [
+    "Phosphorescent spores",
+    "Scrap metal",
+    "Purified water caches",
+    "Rare crystalline shards"
+  ],
+  "ambient_sounds": [
+    "Low, eerie hum from glowing fungi",
+    "Distant howling winds",
+    "Occasional toxic gas hisses"
+  ],
+  "weather_patterns": [
+    "Ash storms",
+    "Acidic drizzle",
+    "Calm but hazy nights"
+  ],
+  "entry_message": "You step into the Glimmering Ashen Wastes. The ground crunches underfoot, emitting a soft, eerie glow. The air tastes of ozone and decay."
+}
