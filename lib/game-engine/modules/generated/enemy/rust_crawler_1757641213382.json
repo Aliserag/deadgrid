@@ -1,0 +1,21 @@
+{
+  "name": "Rust-Crawler",
+  "type": "machine",
+  "tier": 3,
+  "health": "180-220",
+  "damage": "25-40",
+  "speed": "normal",
+  "behavior": "stalker",
+  "abilities": [
+    "Electro-Lash (ranged stun attack)",
+    "Overload (self-destruct when near death)",
+    "Stealth Cloaking (temporary invisibility)"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Broken Circuitry",
+    "Energy Cell",
+    "Rare: Intact Servo Motor"
+  ],
+  "description": "A pre-war security drone, now rusted and corrupted. Moves on four spider-like legs with a central optic sensor that glows faintly red. Its body is covered in patchwork armor plating and exposed wiring, often sparking erratically. Emits a low, mechanical hum when inactive."
+}
