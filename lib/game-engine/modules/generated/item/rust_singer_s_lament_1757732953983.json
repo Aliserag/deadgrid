@@ -1,0 +1,14 @@
+{
+  "name": "Rust-Singer's Lament",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 850,
+  "stats": {
+    "damage": 45,
+    "durability": 120,
+    "attack_speed": 0.8
+  },
+  "description": "Forged from the hull of a pre-Collapse naval vessel, this massive blade hums with a mournful resonance when swung. The steel still bears faint traces of saltwater corrosion, and those who listen closely claim they can hear echoes of the ocean's final song before the world fell silent.",
+  "special_effects": "On hit, has a 25% chance to inflict 'Sonorous Dissonance' on targets, causing disorientation and reducing their accuracy for 10 seconds. The humming grows louder near sources of radiation, serving as an improvised Geiger counter."
+}
