@@ -1,0 +1,21 @@
+{
+  "title": "The Scavenger's Bargain",
+  "trigger_condition": "Player enters an abandoned market district during daylight hours",
+  "description": "A hunched figure emerges from a ruined storefront, clutching a burlap sack. They offer to trade rare supplies for a favor—retrieving a family heirloom from a nearby infested building.",
+  "choices": [
+    {
+      "option": "Accept the trade",
+      "consequence": "Gain +1 Rare Item, but suffer -15 Health from fighting creatures in the building"
+    },
+    {
+      "option": "Refuse and demand supplies",
+      "consequence": "50% chance to gain +1 Common Item, 50% chance the scavenger flees and you get nothing"
+    },
+    {
+      "option": "Attack the scavenger",
+      "consequence": "Gain +2 Common Items from the sack, but suffer -10 Morale and future traders avoid you"
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "15 minutes (in-game time)"
+}
