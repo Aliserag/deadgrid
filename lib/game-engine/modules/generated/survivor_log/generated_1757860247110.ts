@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena with two daughters (Sophie, 8 and Maya, 5). Was preparing for a six-month research expedition to the Great Barrier Reef when the outbreak began. Dreamed of publishing groundbreaking research on coral adaptation to climate change.",
+      "day_number": 347,
+      "location": "Abandoned lighthouse keeper's cottage, Northern California coast. The structure groans with each gust of wind off the Pacific, salt crusting every window. Faded maritime charts still paper the walls, and the scent of damp wool and decay hangs heavy in the air.",
+      "entry": "The rain hasn't stopped for three days. It drums a frantic rhythm on the rusted tin roof, a sound that's become both comfort and torture. Three hundred forty-seven days since the world ended not with a bang, but with a fever. I keep count on the wall by the door, a tally of survival, each mark a monument to someone I couldn't save.\n\nToday I almost shot a child.\n\nI was checking the crab traps down in the cove when movement in the mist made me freeze. A small figure, stumbling through the surf. My finger was on the trigger before I registered the tattered pink backpack, the way it moved—too clumsy, too human to be one of Them. It was just a girl, maybe ten years old, half-drowned and terrified. She saw the rifle and screamed, and that sound—raw, human fear—nearly broke me.\n\nI brought her back to the lighthouse. She hasn't spoken a word, just stares at the wall with eyes that have seen too much. I gave her my last can of peaches, the syrup like liquid gold in this gray world. She ate like she'd forgotten how food works.\n\nWhat kind of world makes a man aim a gun at a child? What kind of man does that make me? Lena would have known what to say to her. She always knew how to make the girls feel safe after a nightmare. Now all nightmares are real, and I'm just a scared old man with a gun and fading memories of coral reefs.\n\nThe lighthouse beam still turns at night, powered by solar panels I rigged months ago. Sometimes I imagine it's calling to other survivors across the dark water. Mostly I know it's just calling to things better left in the deep.",
+      "condition": "Physically: Malnourished but functional, with saltwater cracks in his hands and a persistent cough from damp conditions. Mentally: Haunted by guilt and isolation, prone to long periods of staring at the ocean. Sleeps with his rifle across his chest.",
+      "discoveries": "The infected avoid saltwater—they won't cross even shallow tidal pools. Their coordination deteriorates significantly in wet conditions. Also found that seabirds are largely unaffected by whatever caused the outbreak, making them a safe food source if you can catch them.",
+      "warnings": "Don't trust clear weather—storms provide cover for movement but also mask approaching threats. Always boil seawater twice—once to evaporate, then condense the steam. Direct consumption will kill you faster than any infected. Check crab traps at low tide only, and never at night.",
+      "last_meal": "Boiled kelp and two small rock crabs (about 8 hours ago). Drank condensed steam from seawater.",
+      "companions": "Previously with wife Lena and daughters Sophie and Maya (lost during evacuation chaos on day 14). Currently with unnamed mute girl found today. Before today: completely alone for 193 days.",
+      "hope_level": 4
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757860247112;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
