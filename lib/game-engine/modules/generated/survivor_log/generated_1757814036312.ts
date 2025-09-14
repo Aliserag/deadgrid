@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Elara Vance",
+      "author_background": "Architect specializing in sustainable design, married to David with two children (Sophie, 8 and Leo, 5). Dreamed of building self-sufficient eco-communities. Last project was a net-zero energy housing development in Portland.",
+      "day_number": 327,
+      "location": "Abandoned elementary school library, Eugene, Oregon. Dust motes dance in slanted afternoon light through broken windows. Shelves stand like skeletal remains, water-stained books scattered across moldy carpets. The faint scent of decaying paper and regret hangs heavy in the air.",
+      "entry": "Day 327. Found a child's drawing tucked between books today - a crayon sun with a smiling face. It broke something in me. I used to help Leo with his drawings while Sophie practiced reading in this very kind of library. Now I'm alone in this ghost of childhood, surrounded by stories that will never be read again.\n\nThree days ago, I had to make the choice. David's fever was burning through him, that awful grey rash spreading up his neck. The medicine we'd scavenged wasn't working. When the coughing started - that wet, rattling sound that means the end - I knew. I kissed his forehead, told him about our first date at the waterfront, then put the pillow over his face. Our children were already gone, taken in the first wave. Now him too.\n\nI keep having this nightmare where I'm back in my architecture studio, designing beautiful buildings that will never exist. Woke up screaming today, my hands still feeling the weight of that pillow. The worst part? Part of me is relieved. Relieved I don't have to watch him turn, relieved I don't have to see that intelligent light in his eyes go out slowly. What kind of person feels relief after killing their husband of twelve years?\n\nI found cans of beans behind the librarian's desk today. Ate one cold, saving the others. The taste of metal and guilt. I keep talking to David as if he's still here. Maybe madness is the only sanity left in this world.",
+      "condition": "Physically: Malnourished (down 15kg), healing cut on left forearm from broken glass, chronic cough. Mentally: Severe grief with dissociative episodes, haunted by recent euthanasia of infected husband, fluctuating between numbness and overwhelming guilt.",
+      "discoveries": "The infected are drawn to consistent noise patterns - established settlements become death traps. They avoid areas with certain chemical smells (bleach, ammonia). Found notes suggesting some survivors are intentionally infecting others to create 'distractions'.",
+      "warnings": "Don't stay anywhere more than 3 days. Burn any clothing with blood stains immediately. Trust no one who appears too clean or well-fed - they're either dangerous or lying. The mercy killings never feel merciful afterward.",
+      "last_meal": "Cold canned beans and rainwater collected in a plastic bin, 6 hours ago",
+      "companions": "Recently lost husband David to infection (euthanized). Children Sophie and Leo presumed dead in initial outbreak. Currently alone.",
+      "hope_level": 2
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757814036313;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
