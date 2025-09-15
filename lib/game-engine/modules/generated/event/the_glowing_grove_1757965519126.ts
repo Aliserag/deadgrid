@@ -1,0 +1,84 @@
+/**
+ * event: The Glowing Grove
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface TheGlowingGroveData {
+  title: string;
+  trigger_condition: string;
+  description: string;
+  choices: any[];
+  rarity: string;
+  duration: string;
+}
+
+export class TheGlowingGroveModule extends GameModule {
+  static readonly metadata: TheGlowingGroveData = {
+      "title": "The Glowing Grove",
+      "trigger_condition": "Player enters a forest biome at night",
+      "description": "You stumble upon a small grove where the trees and undergrowth emit a soft, pulsating blue glow. The air hums with strange energy, and you notice unusual mushrooms growing in patterns around a central, crystalline formation.",
+      "choices": [
+          {
+              "option": "Harvest the glowing mushrooms",
+              "consequence": "Gain 3 Bioluminescent Mushrooms (crafting component), but suffer -10 Radiation for 2 hours"
+          },
+          {
+              "option": "Investigate the crystalline formation",
+              "consequence": "Discover a hidden cache with Rare components, but trigger a trap that deals 15 damage"
+          },
+          {
+              "option": "Mark the location and leave quietly",
+              "consequence": "Gain +5 Perception for discovering a hidden location, no immediate rewards"
+          },
+          {
+              "option": "Attempt to destroy the grove",
+              "consequence": "Gain 50 XP and clear radiation in area, but anger local mutated creatures who will hunt you for 24 hours"
+          }
+      ],
+      "rarity": "uncommon",
+      "duration": "24 hours (location remains until destroyed or harvested)"
+  };
+  
+  static readonly type = 'event';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757965519127;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(TheGlowingGroveModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered event: The Glowing Grove`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default TheGlowingGroveModule;
