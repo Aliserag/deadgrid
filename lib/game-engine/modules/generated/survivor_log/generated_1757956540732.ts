@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena with two daughters (Sophie, 8 and Maya, 5). Was writing a book about the Great Barrier Reef's recovery and dreamed of taking his family sailing around the world.",
+      "day_number": 347,
+      "location": "Abandoned lighthouse keeper's cottage, Northern California coast. The structure groans with each gust of wind, salt crusting every window. The rotating beam still cuts through the fog every night, powered by solar panels I managed to repair.",
+      "entry": "The rain hasn't stopped for three days. It drums against the tin roof in a rhythm that's become both comfort and torture. Today I found myself talking to the seagulls again—named them after my colleagues from the university. Dr. Evans (the greedy one with the crooked beak) stole half my ration of dried fish this morning.\n\nI almost shot a child today.\n\nThe sound of breaking glass from the old gift shop below sent me grabbing the rifle. When I saw movement through the scope, my finger was already on the trigger. Then I saw how small the shape was—just a boy, couldn't have been more than ten, shivering and searching for shelter like the rest of us.\n\nI lowered the weapon and watched him through the rain-streaked window. He found a can of peaches in the rubble and his entire body shook with joy. I should have called out to him. Offered him shelter. But the memory of what happened with the last group I tried to help—the blood on the floor, Lena's scream—froze me in place.\n\nWhen I finally worked up the courage to go down, he was gone. Left behind the peach can, unopened. Maybe he thought it was poisoned. Or maybe he was being more human than I've become.\n\nThe beam rotates above me as I write this. Light. Darkness. Light. Darkness. Some nights I wonder if I should just let the batteries die.",
+      "condition": "Physically: Malnourished (down 15kg), saltwater sores on hands that won't heal, chronic cough from damp conditions. Mentally: Episodes of paranoia alternating with profound guilt. Sleeps only 3-4 hours per night, haunted by memories of his family's final moments.",
+      "discoveries": "The infected avoid saltwater—even mist from crashing waves seems to repel them. Heavy rainfall masks human scent and movement. Solar panels still function better than expected after all this time.",
+      "warnings": "Never trust canned goods with bulging lids—botulism is a slower, more terrible death than infection. Keep at least two escape routes at all times. The infected are learning to use tools—saw one trying to turn a doorknob yesterday.",
+      "last_meal": "Boiled kelp and one small rockfish caught off the lighthouse rocks (approximately 14 hours ago)",
+      "companions": "Alone since Day 89. Wife Lena and daughter Maya confirmed infected. Daughter Sophie's status unknown—separated during evacuation. Sometimes imagines conversations with the previous lighthouse keeper whose journals he found.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757956540733;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
