@@ -4,3 +4,9 @@ export { default as Thechromaticmire1757186262156 } from './biome/the_chromatic_
 export { default as Therustwastes1757387361260 } from './biome/the_rust_wastes_1757387361260';
 export { default as Thechromaticmire1757468420564 } from './biome/the_chromatic_mire_1757468420564';
 export { default as Therustwastes1757610916726 } from './biome/the_rust_wastes_1757610916726';
+export { default as Therustwastes1757666116787 } from './biome/the_rust_wastes_1757666116787';
+export { default as Theglimmeringmire1757674814594 } from './biome/the_glimmering_mire_1757674814594';
+export { default as Theglimmeringashenwastes1757712016418 } from './biome/the_glimmering_ashen_wastes_1757712016418';
+export { default as Therustwastes1757727615760 } from './biome/the_rust_wastes_1757727615760';
+export { default as Theglimmeringwaste1757819359209 } from './biome/the_glimmering_waste_1757819359209';
+export { default as Therustwastes1757847617038 } from './biome/the_rust_wastes_1757847617038';
