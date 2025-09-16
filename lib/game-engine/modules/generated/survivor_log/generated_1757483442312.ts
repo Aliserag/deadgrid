@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Elena with two daughters (Sophia, age 8 and Lily, age 6). Was finalizing research on thermal-resistant coral strains when the outbreak began. Dreamed of establishing marine conservation programs in developing nations.",
+      "day_number": 347,
+      "location": "Abandoned lighthouse keeper's quarters, Northern California coast. Salt-crusted windows rattle with each gust of wind. The rotating beam still functions erratically, casting sweeping shadows across water-stained walls.",
+      "entry": "The storm finally broke today. Three days of howling wind and horizontal rain that made the old lighthouse groan like a dying animal. I found another body washed up in the cove this morning—a young woman with military tags. No bites, just starvation and exposure. She had a photograph tucked in her vest: two children smiling on a swing set. I buried her above the tide line beside the fourteen others.\n\nSometimes I talk to Elena out loud, describing the gulls riding the thermals or the way the fog settles in the coves. The madness of it strikes me moments later—this pathetic pantomime of marriage to a woman who's probably been dust for a year. I keep expecting to wake from this nightmare to her warmth beside me, to Sophia's laughter echoing down the hallway.\n\nThe worst moments come at dusk. That's when I imagine I hear the girls calling from the shoreline. Every time, some desperate part of me considers answering. Today I nearly did—stood at the door with my hand on the latch until my knuckles turned white. The infected don't swim, but they'll wade out chest-deep. They know how we cling to the memory of human voices.\n\nI've started marking the days on the lighthouse wall. Not for hope of rescue, but to remember that I was once a man who studied life instead of counting deaths.",
+      "condition": "Physically: Malnourished (down 40 lbs), saltwater sores on hands and lips, chronic cough from damp conditions. Mentally: Severe depressive episodes interspersed with hyper-vigilance. Experiences auditory hallucinations of family members. Sleeps in 2-hour intervals maximum.",
+      "discoveries": "Saltwater effectively purifies wounds but accelerates dehydration. The infected avoid submerged areas during high tide. Seagull eggs remain edible even weeks after being abandoned. Heavy rain masks human scent from infected for approximately 6-8 hours.",
+      "warnings": "Never approach beached corpses—they're often bait traps. The infected can remain dormant underwater for hours. Coastal fog carries sound unpredictably—what seems distant may be much closer. Trust no human voices calling from the water after dark.",
+      "last_meal": "Boiled kelp and two raw mussels (scraped from lighthouse foundations 14 hours ago). Drank rainwater collected in tarpaulin.",
+      "companions": "None living. Witnessed wife and daughters succumb to infection during evacuation boat crisis (Day 18). Traveled for two months with retired fisherman Marcus (drowned Day 109).",
+      "hope_level": 2
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757483442313;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;

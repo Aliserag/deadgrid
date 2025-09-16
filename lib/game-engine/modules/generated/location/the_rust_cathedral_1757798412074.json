@@ -1,0 +1,14 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Scrap-Eater mutants and a territorial clan of Tech-Scavengers",
+  "notable_features": [
+    "A towering spire made of fused car frames and scrap metal",
+    "An interior illuminated by bioluminescent fungi cultivated on old wiring",
+    "A functioning pipe organ retrofitted to sound alarms using steam pressure"
+  ],
+  "exploration_notes": "Players will discover makeshift shrines to forgotten machinery, hidden caches of pre-collapse tech, and evidence of ongoing conflicts between the mutants and scavengers over control of the structure's resources."
+}

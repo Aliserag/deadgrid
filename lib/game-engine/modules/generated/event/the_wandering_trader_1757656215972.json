@@ -1,0 +1,25 @@
+{
+  "title": "The Wandering Trader",
+  "trigger_condition": "Player enters a previously cleared urban area during daylight hours",
+  "description": "A lone figure pushing a heavily modified shopping cart approaches your position. The cart is covered in makeshift armor plating and adorned with various trinkets and supplies. The trader wears a patched-up hazmat suit and offers a cautious but friendly wave.",
+  "choices": [
+    {
+      "option": "Trade peacefully",
+      "consequence": "Gain rare crafting materials and information about nearby locations, but lose some common supplies"
+    },
+    {
+      "option": "Rob the trader",
+      "consequence": "Gain all trader's goods immediately, but suffer reputation loss with future NPCs and risk injury from hidden defenses"
+    },
+    {
+      "option": "Ignore and move on",
+      "consequence": "No gains or losses, but miss potential opportunities"
+    },
+    {
+      "option": "Offer protection in exchange for goods",
+      "consequence": "Gain moderate supplies and temporary follower, but attract unwanted attention from raiders"
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "15 minutes (in-game time)"
+}

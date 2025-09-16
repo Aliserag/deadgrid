@@ -1,0 +1,21 @@
+{
+  "name": "Glitch-Hound",
+  "type": "machine",
+  "tier": 3,
+  "health": "120-180",
+  "damage": "25-40",
+  "speed": "fast",
+  "behavior": "stalker",
+  "abilities": [
+    "EMP Burst (disables electronics in 10m radius)",
+    "Target Lock (increased accuracy on next attack)",
+    "Self-Repair (regains 20 HP if not interrupted)"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Energy Cell",
+    "Broken Circuitry",
+    "Rusted Bolts"
+  ],
+  "description": "A quadrupedal robotic unit with rusted titanium plating and exposed wiring. Its single red optic sensor glows ominously as it tracks prey. Moves with unnerving silence except for the occasional whir of servos and spark of malfunctioning components."
+}

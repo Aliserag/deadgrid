@@ -1,0 +1,15 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Feral ghouls, mutated rats, and a territorial Glow-Warden (irradiated humanoid with bioluminescent fungus growths)",
+  "notable_features": [
+    "Repurposed pre-war industrial cathedral with rusted metal spires",
+    "Active radiation leaks from buried reactor core beneath the main hall",
+    "Functioning pipe organ that emits distorted, haunting melodies when wind passes through",
+    "Stained glass windows depicting industrial motifs, now cracked and partially shattered"
+  ],
+  "exploration_notes": "Players will find decaying pews made of scrap metal, makeshift altars adorned with pre-war tech offerings, and a hidden sub-basement containing valuable energy cells and rare crafting schematics—guarded by the Glow-Warden."
+}

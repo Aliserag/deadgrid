@@ -1,0 +1,14 @@
+{
+  "name": "Rust-Singer's Lament",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 450,
+  "stats": {
+    "damage": 38,
+    "durability": 120,
+    "attack_speed": 0.8
+  },
+  "description": "Forged from the hull of a pre-Collapse naval vessel, this massive blade hums with a mournful resonance when swung. Survivors claim it still carries the salt of forgotten oceans and the whispers of drowned crews. The edge appears to shift like waves in certain light, and it's cold to the touch even under the scorching sun.",
+  "special_effects": "On hit, has a 25% chance to inflict 'Sea-Fever' - causing disorientation and slowed movement in targets for 5 seconds. The humming sound attracts certain mutated aquatic creatures from up to 50 meters away."
+}

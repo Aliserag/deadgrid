@@ -1,0 +1,82 @@
+/**
+ * story_scenario: The Last Harvest
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface TheLastHarvestData {
+  title: string;
+  protagonist: string;
+  setting: string;
+  situation: string;
+  attempted_solution: string;
+  complications: string;
+  resolution: string;
+  lesson_learned: string;
+  casualties: string;
+  resources_gained: string;
+  moral_choice: string;
+  long_term_impact: string;
+}
+
+export class TheLastHarvestModule extends GameModule {
+  static readonly metadata: TheLastHarvestData = {
+      "title": "The Last Harvest",
+      "protagonist": {
+          "name": "Elara Vance",
+          "backstory": "A former botanist and community gardener who lost her family in the early days of the collapse. She now leads a small group of survivors, using her knowledge to cultivate hidden rooftop gardens in the ruins of Chicago."
+      },
+      "setting": "The overgrown ruins of Chicago, 15 years after the Great Collapse. Winter is approaching, and the group is sheltering in a reinforced library, relying on Elara’s rooftop greenhouse for food.",
+      "situation": "A sudden, early frost threatens to destroy the group’s entire food supply—the rooftop greenhouse crops, which are their only source of fresh nutrients. Without the harvest, starvation is imminent. The survivors grow desperate, tensions rising as hope withers with each frozen leaf. Elara must act quickly to save what remains, but the cold is relentless, and the greenhouse’s heating system failed years ago.",
+      "attempted_solution": "Elara proposed moving the most vital plants indoors, using salvaged space heaters and insulating blankets. The group worked through the night, carefully transporting seedlings and mature plants to the library’s central hall. They rationed their remaining fuel to power the heaters, believing they could sustain just enough warmth to save the crops until the frost passed.",
+      "complications": "The heaters overloaded the aging electrical system, causing a blackout and a small fire that destroyed part of their stored food. In the chaos, two children, Leo and Mia, were exposed to the freezing temperatures and developed severe hypothermia. The group’s medical supplies were insufficient, and the survivors were torn between saving the crops and saving the children.",
+      "resolution": "Elara made the agonizing choice to prioritize the children, diverting fuel to warm them and abandoning the remaining plants. The crops were lost, but Leo and Mia survived. The group now faces a lean winter, relying on scavenged canned goods and bartering with other survivors. Elara has vowed to develop frost-resistant strains for the future.",
+      "lesson_learned": "Human lives must always come before resources; adaptability and preparation for environmental extremes are essential for long-term survival.",
+      "casualties": "No lives were lost, but the group’s trust in technology was shattered. Old Man Harris, their electrician, succumbed to guilt and withdrew from the community.",
+      "resources_gained": "Salvaged wiring and insulation from the damaged heaters, a cache of canned goods discovered behind a false wall during repairs, and a working hand-crank generator.",
+      "moral_choice": "Elara faced the decision to save the greenhouse (ensuring food for many) or save the children (prioritizing immediate lives over future security). She chose the children, reaffirming the group’s humanity but risking their future.",
+      "long_term_impact": "The group became more self-reliant, focusing on low-tech solutions and community cohesion. Elara’s leadership was strengthened, but the loss of the greenhouse forced them to seek riskier alliances with other survivor factions, altering their isolationist policies."
+  };
+  
+  static readonly type = 'story_scenario';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757805035647;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(TheLastHarvestModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered story_scenario: The Last Harvest`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default TheLastHarvestModule;

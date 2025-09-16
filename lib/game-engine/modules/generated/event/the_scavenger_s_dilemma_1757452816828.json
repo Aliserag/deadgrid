@@ -1,0 +1,25 @@
+{
+  "title": "The Scavenger's Dilemma",
+  "trigger_condition": "Entering an abandoned industrial zone at night",
+  "description": "You stumble upon a flickering light coming from a half-collapsed warehouse. Inside, you find a lone scavenger desperately trying to pry open a reinforced storage container. They notice you and nervously offer a deal: help them open it, and you can take your pick of the contents—but they get first choice.",
+  "choices": [
+    {
+      "option": "Agree to help and split the loot",
+      "consequence": "Gain a random rare item, but lose 15 Stamina from the effort."
+    },
+    {
+      "option": "Threaten the scavenger and take everything",
+      "consequence": "Gain all items from the container, but suffer a -10 Reputation with nearby factions."
+    },
+    {
+      "option": "Ignore the scavenger and leave the area",
+      "consequence": "No gains or losses, but the opportunity is lost."
+    },
+    {
+      "option": "Attempt to open the container alone after scaring the scavenger off",
+      "consequence": "50% chance to gain all items, 50% chance to trigger a trap, losing 20 Health."
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "15 minutes"
+}

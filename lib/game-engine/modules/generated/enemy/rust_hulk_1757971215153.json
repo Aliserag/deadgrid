@@ -1,0 +1,21 @@
+{
+  "name": "Rust-Hulk",
+  "type": "machine",
+  "tier": 4,
+  "health": "350-450",
+  "damage": "40-60",
+  "speed": "slow",
+  "behavior": "aggressive",
+  "abilities": [
+    "Magnetic Crush",
+    "Scrap Cannon",
+    "Overload Pulse"
+  ],
+  "loot": [
+    "Scrap Metal x10",
+    "Rusted Circuitry x5",
+    "Energy Core (rare)",
+    "High-Grade Bolts x3"
+  ],
+  "description": "A towering, rust-covered automaton standing over 8 feet tall, assembled from scavenged industrial parts, vehicle frames, and broken machinery. Its movements are heavy and deliberate, accompanied by the grinding of metal and sporadic sparks from exposed wiring. Glowing red photoreceptors scan the environment from within a welded helmet-like head."
+}

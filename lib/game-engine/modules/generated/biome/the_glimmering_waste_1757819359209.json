@@ -1,0 +1,30 @@
+{
+  "name": "The Glimmering Waste",
+  "description": "A vast expanse of crystalline formations that grew from chemical spills and mutated flora after the collapse. The jagged structures refract light in disorienting patterns, creating mirages and hidden dangers. Survivors tread carefully here, as the very ground can shift without warning.",
+  "terrain_type": "Crystalline desert with unstable plateaus and glass-like dunes",
+  "hazards": [
+    "Light refraction mirages",
+    "Fragile crystalline structures that collapse under weight",
+    "Toxic shimmer-dust storms",
+    "Solar magnifiers that cause spontaneous combustion"
+  ],
+  "resources": [
+    "Purified crystalline shards",
+    "Rare chemical catalysts",
+    "Solar energy cells",
+    "Mutated flora samples",
+    "Ancient data chips preserved in crystal"
+  ],
+  "ambient_sounds": [
+    "Constant low hum from vibrating crystals",
+    "Crackling like breaking glass",
+    "Distant harmonic resonances",
+    "Whispering wind through crystalline structures"
+  ],
+  "weather_patterns": [
+    "Calm refraction days with intense mirages",
+    "Shimmer-dust storms that reduce visibility and cause respiratory damage",
+    "Solar amplification events that dramatically increase temperature"
+  ],
+  "entry_message": "The air shimmers with unnatural light as you step into the Glimmering Waste. Jagged crystal formations tower around you, casting rainbow prisms across the barren landscape. Every step echoes with the sound of fragile structures waiting to give way."
+}

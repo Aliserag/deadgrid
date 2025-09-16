@@ -1,0 +1,26 @@
+{
+  "name": "The Rust-Wastes",
+  "description": "A vast expanse of corroded metal and toxic soil, where the remnants of industrial civilization have bled into the earth. Strange, phosphorescent fungi grow in patches, casting an eerie glow across the shattered landscape.",
+  "terrain_type": "Metal-scarred plains with acidic pools and rust dunes",
+  "hazards": [
+    "Corrosive acid rain",
+    "Unstable ground prone to collapse",
+    "Toxic spore clouds from glowing fungi"
+  ],
+  "resources": [
+    "Salvaged scrap metal",
+    "Rare phosphorescent fungi (used for bioluminescent crafting)",
+    "Filtered acid (for chemical refining)"
+  ],
+  "ambient_sounds": [
+    "Distant groaning of shifting metal",
+    "Faint sizzling from acidic pools",
+    "Echoing drips in rusted structures"
+  ],
+  "weather_patterns": [
+    "Acid downpours",
+    "Static-charged metal dust storms",
+    "Occasional eerie calm with glowing fog"
+  ],
+  "entry_message": "The air grows thick with the scent of rust and decay. Before you stretches a wasteland of corroded metal and glowing fungi—every step risks the ground giving way."
+}

@@ -1,0 +1,82 @@
+/**
+ * story_scenario: The Last Harvest
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface TheLastHarvestData {
+  title: string;
+  protagonist: string;
+  setting: string;
+  situation: string;
+  attempted_solution: string;
+  complications: string;
+  resolution: string;
+  lesson_learned: string;
+  casualties: string;
+  resources_gained: string;
+  moral_choice: string;
+  long_term_impact: string;
+}
+
+export class TheLastHarvestModule extends GameModule {
+  static readonly metadata: TheLastHarvestData = {
+      "title": "The Last Harvest",
+      "protagonist": {
+          "name": "Elara Vance",
+          "backstory": "Former agricultural scientist who lost her family during the initial collapse. Survived by turning her suburban home into a fortified greenhouse, using her knowledge to grow food in contaminated soil."
+      },
+      "setting": "Ruined outskirts of Chicago, 12 years after the bio-engineered crop blight wiped out global food supplies. Permanent twilight from atmospheric ash, with skeletal skyscrapers visible on the horizon.",
+      "situation": "Elara's greenhouse has been failing for months. The soil remediation system broke down, and her remaining crops are withering. Her small community of eight survivors faces starvation within weeks. When scavengers report spotting functioning hydroponic equipment in an old research facility, Elara knows they must attempt the dangerous journey. The facility lies in the 'Glass Fields' - a zone where thermal bombs melted entire suburbs into jagged, treacherous landscapes.",
+      "attempted_solution": "Elara led four volunteers through the Glass Fields, using radiation maps from before the collapse. They moved at night to avoid heat sensors, wrapping themselves in insulation blankets. For two days they picked through the surreal landscape of fused buildings and twisted metal, finding the research facility partially intact. Using her scientific knowledge, Elara bypassed security systems and located the hydroponic lab - miraculously still powered by geothermal backups. They began carefully extracting the most critical components.",
+      "complications": "As they worked, movement sensors triggered an ancient security protocol. Reinforced shutters slammed shut, trapping them inside. The system began pumping out neuro-toxin as an anti-looting measure. Jax, their best mechanic, sacrificed himself to manually override the air filtration. Then they discovered the hydroponic systems were symbiotically linked to the building's core - removing them would trigger a meltdown of the geothermal generator. They had minutes to decide: take the equipment and risk catastrophic radiation release, or leave empty-handed.",
+      "resolution": "Elara made the brutal calculation. She directed her team to take only the seed bank and nutrient solutions, leaving the main equipment. As they fled, the facility went critical behind them. Radiation alarms screamed as they staggered back to camp, Jax's body left behind in the toxic ruins. The seeds and nutrients would sustain them temporarily, but the greater prize was lost. Elara collapsed at camp gates, vomiting from radiation sickness and guilt.",
+      "lesson_learned": "Some solutions create bigger problems than they solve. Survival sometimes means accepting lesser gains to avoid catastrophic losses.",
+      "casualties": "Jax (succumbed to neuro-toxin), Dr. Chen (radiation poisoning days later), two scouts (killed by glass field hazards on return journey).",
+      "resources_gained": "17 varieties of blight-resistant seeds, 40 liters of concentrated nutrient solution, geothermal battery array, research data on soil remediation.",
+      "moral_choice": "Whether to sacrifice the potential salvation of their community (by taking the equipment and risking widespread contamination) or condemn them to slower starvation (by taking only partial resources).",
+      "long_term_impact": "The radiation leak created a new exclusion zone, cutting off access to Chicago's western ruins. Elara's community survived on the seeds but became isolated. Her leadership was questioned, creating factions that eventually splintered the group. The research data led to better growing techniques, but the memory of what they almost gained - and lost - haunted survivors for generations."
+  };
+  
+  static readonly type = 'story_scenario';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757773844625;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(TheLastHarvestModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered story_scenario: The Last Harvest`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default TheLastHarvestModule;

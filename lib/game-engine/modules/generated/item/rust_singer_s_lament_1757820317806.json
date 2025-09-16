@@ -1,0 +1,19 @@
+{
+  "name": "Rust-Singer's Lament",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 450,
+  "stats": {
+    "damage": 28,
+    "durability": 120,
+    "attack_speed": 0.8,
+    "armor_penetration": 15
+  },
+  "description": "Forged from the hull of a pre-Collapse naval vessel and wrapped in salvaged copper wiring, this massive axe hums with residual energy when swung. The blade bears etched markings that tell the tragic story of its creator, a shipbreaker who turned the tools of his trade into instruments of survival. Those who listen closely claim they can still hear the ghost of the sea in its metallic song.",
+  "special_effects": {
+    "Resonant Hum": "Successful hits build a charge that releases an electromagnetic pulse on the third consecutive strike, temporarily disabling nearby energy-based devices and robotics",
+    "Salt-Corroded Edge": "Deals 25% additional damage to mechanical enemies and constructs",
+    "Heavy Striker": "Chance to stagger opponents on hit, interrupting their actions"
+  }
+}

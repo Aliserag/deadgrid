@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import StacksService from '@/lib/stacks/StacksService';
+import StacksServiceSimple from '@/lib/stacks/StacksServiceSimple';
 
 interface StacksWalletProps {
   className?: string;
@@ -14,7 +14,7 @@ const StacksWallet: React.FC<StacksWalletProps> = ({ className = '' }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   
-  const stacksService = StacksService.getInstance();
+  const stacksService = StacksServiceSimple.getInstance();
 
   useEffect(() => {
     checkConnection();

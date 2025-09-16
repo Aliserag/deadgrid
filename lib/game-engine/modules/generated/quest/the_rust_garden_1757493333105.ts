@@ -1,0 +1,113 @@
+/**
+ * quest: The Rust Garden
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface TheRustGardenData {
+  id: string;
+  title: string;
+  giver: string;
+  description: string;
+  objectives: any[];
+  rewards: string;
+  prerequisites: string;
+  dialogue: string;
+}
+
+export class TheRustGardenModule extends GameModule {
+  static readonly metadata: TheRustGardenData = {
+      "id": "quest_rust_garden",
+      "title": "The Rust Garden",
+      "giver": "Old Man Hemlock",
+      "description": "Old Man Hemlock, one of the last botanists from before the Fall, believes he can cultivate a strain of radiation-resistant crops using seeds preserved in an ancient seed vault. However, the vault is located deep within the overgrown ruins of the old botanical research center, now inhabited by mutated flora and territorial scavengers.",
+      "objectives": [
+          "Navigate through the overgrown research center ruins",
+          "Retrieve the seed vault key from the head botanist's office",
+          "Secure the seed vault and collect the preserved seed packets",
+          "Return to Old Man Hemlock with the seeds"
+      ],
+      "rewards": {
+          "experience": 750,
+          "items": [
+              "Rad-Resistant Crop Seeds x5",
+              "Stimpak x3",
+              "Hemlock's Trusty Trowel"
+          ],
+          "reputation": {
+              "Settlement": 25
+          }
+      },
+      "prerequisites": {
+          "level": 5,
+          "completed_quests": [
+              "first_steps"
+          ],
+          "skills": [
+              "Lockpicking 25"
+          ]
+      },
+      "dialogue": {
+          "initial": {
+              "Hemlock": "These barren lands... they don't have to stay this way. I've got a lead on something that could change everything - a seed vault from the old world. But it's not going to be easy to reach. You look capable. Interested in helping an old man try to grow something new?",
+              "options": [
+                  "Tell me more about these seeds.",
+                  "What's in it for me?",
+                  "I'm not a gardener. (Refuse quest)",
+                  "I'll help you."
+              ]
+          },
+          "accept": {
+              "Hemlock": "Thank you! The research center is east of here, past the broken highway. Be careful - the plants there... they aren't what they used to be. Look for the head botanist's office first - the vault key should be there."
+          },
+          "refuse": {
+              "Hemlock": "Suit yourself. But remember - when the canned goods run out, we'll all wish we had someone willing to get their hands dirty."
+          },
+          "completion": {
+              "Hemlock": "You did it! These seeds... they're perfect! With careful cultivation, we might just see green fields again someday. Take these - you've earned them, and more."
+          }
+      }
+  };
+  
+  static readonly type = 'quest';
+  static readonly version = '1.0.0';
+  static readonly generated = 1757493333106;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(TheRustGardenModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered quest: The Rust Garden`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default TheRustGardenModule;
