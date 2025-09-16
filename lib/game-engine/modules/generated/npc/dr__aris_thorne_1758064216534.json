@@ -1,0 +1,30 @@
+{
+  "name": "Dr. Aris Thorne",
+  "occupation": "Botanist",
+  "personality": [
+    "Analytical",
+    "Cautious",
+    "Idealistic",
+    "Obsessive"
+  ],
+  "faction": "The Greenhouse Collective",
+  "dialogue_style": "Precise and academic, with occasional bursts of excitement when discussing plants",
+  "inventory": [
+    "Seed preservation kit",
+    "Botany journal",
+    "Improvised herbal remedies",
+    "Water filtration straw",
+    "Weathered lab coat"
+  ],
+  "quests": [
+    {
+      "name": "Pollen from the Ashes",
+      "description": "Retrieve rare mutated plant samples from the irradiated Red Zone for research"
+    },
+    {
+      "name": "Thirsty Roots",
+      "description": "Establish a clean water irrigation system for the greenhouse without attracting raiders"
+    }
+  ],
+  "backstory": "Dr. Thorne was conducting agricultural research when the collapse occurred. Using his knowledge, he secured a university greenhouse and now leads a group of survivors trying to develop sustainable food sources and counteract environmental mutations. He believes botanical science holds the key to humanity's survival."
+}
