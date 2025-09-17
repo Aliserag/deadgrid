@@ -1,0 +1,27 @@
+{
+  "name": "The Rust-Wastes",
+  "description": "A vast expanse of corroded metal and decaying industrial structures, reclaimed by nature in twisted forms. The air is thick with the scent of rust and ozone, and strange, phosphorescent fungi glow faintly among the wreckage.",
+  "terrain_type": "Metal plains with scattered ruins and sinkholes",
+  "hazards": [
+    "Acid rain",
+    "Unstable ground prone to collapse",
+    "Corrosive mist that damages equipment"
+  ],
+  "resources": [
+    "Salvaged electronics",
+    "Rare metal alloys",
+    "Chemically purified water",
+    "Glowing fungi (used for bioluminescence)"
+  ],
+  "ambient_sounds": [
+    "Distant creaking of metal",
+    "Faint, eerie hum from underground generators",
+    "Occasional metallic crashes as structures collapse"
+  ],
+  "weather_patterns": [
+    "Acid downpours",
+    "Static-charged fog",
+    "Occasional metallic dust storms"
+  ],
+  "entry_message": "You step into the Rust-Wastes. The ground crunches underfoot with oxidized metal, and the horizon shimmers with the ghosts of industry long dead."
+}
