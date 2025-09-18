@@ -1,0 +1,14 @@
+{
+  "name": "Rust-Eater's Reckoning",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 450,
+  "stats": {
+    "damage": 18,
+    "durability": 85,
+    "attack_speed": 0.8
+  },
+  "description": "Forged from the hull of a pre-Collapse warship and sharpened on irradiated stone, this massive cleaver hums with residual energy. Its edge seems to shimmer with a faint green glow, and those struck by it often report visions of the ocean depths—or what remains of them.",
+  "special_effects": "On hit, has a 25% chance to inflict 'Corroding Wound,' dealing 5 damage per second for 6 seconds and reducing the target's armor by 15% for the duration."
+}
