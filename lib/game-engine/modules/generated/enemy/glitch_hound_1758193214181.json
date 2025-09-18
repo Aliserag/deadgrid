@@ -1,0 +1,21 @@
+{
+  "name": "Glitch-Hound",
+  "type": "machine",
+  "tier": 3,
+  "health": "180-220",
+  "damage": "25-40",
+  "speed": "fast",
+  "behavior": "stalker",
+  "abilities": [
+    "EMP Burst (disables electronics in a 10m radius)",
+    "Target Lock (increased accuracy and damage on marked targets)",
+    "Self-Repair (regenerates 2 HP per second when not in combat)"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Energy Cell",
+    "Damaged Circuit Board",
+    "Rusted Bolts"
+  ],
+  "description": "A quadrupedal robotic unit with a corroded metal frame and exposed wiring. Its single red photoreceptor scans erratically, and its movements are accompanied by the whir of strained servos and the clank of loose components. Originally a pre-war security drone, it now prowls ruined urban zones, hunting anything with a power signature."
+}
