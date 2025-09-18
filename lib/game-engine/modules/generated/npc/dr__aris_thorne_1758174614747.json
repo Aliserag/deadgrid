@@ -1,0 +1,30 @@
+{
+  "name": "Dr. Aris Thorne",
+  "occupation": "Botanist",
+  "personality": [
+    "Analytical",
+    "Cautious",
+    "Obsessive",
+    "Secretive"
+  ],
+  "faction": "The Verdant Guild",
+  "dialogue_style": "Precise and academic, with occasional bursts of excitement when discussing plants",
+  "inventory": [
+    "Botany journal",
+    "Seed pouch",
+    "Crude plant extract still",
+    "Worn machete",
+    "5 dried ration bars"
+  ],
+  "quests": [
+    {
+      "name": "Seeds of Hope",
+      "description": "Retrieve rare pre-war seeds from an overgrown research facility"
+    },
+    {
+      "name": "Toxic Bloom",
+      "description": "Investigate mutated flora that's poisoning the local water supply"
+    }
+  ],
+  "backstory": "Dr. Thorne was studying plant mutations when the collapse occurred. Using his knowledge, he founded the Verdant Guild to preserve botanical knowledge and develop sustainable food sources. He carries guilt over experimental plants that escaped containment after the fall."
+}
