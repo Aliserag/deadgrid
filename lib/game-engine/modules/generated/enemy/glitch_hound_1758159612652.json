@@ -1,0 +1,21 @@
+{
+  "name": "Glitch-Hound",
+  "type": "machine",
+  "tier": 3,
+  "health": "120-180 HP",
+  "damage": "25-40 per bite",
+  "speed": "fast",
+  "behavior": "stalker",
+  "abilities": [
+    "EMP Burst (disables electronics in 10m radius)",
+    "Overcharge Lunge (double damage on next attack)",
+    "Target Lock (ignores stealth and cover)"
+  ],
+  "loot": [
+    "Scrap Metal",
+    "Energy Cell",
+    "Damaged Circuitry",
+    "Rare: Hound's Targeting Chip"
+  ],
+  "description": "A quadrupedal robotic hunter with rusted titanium plating and exposed wiring. Its single red photoreceptor scans erratically, and hydraulic joints emit a low hiss when moving. Jagged metal teeth line its crushing jaw assembly, and sparks occasionally leap from damaged panels along its spine."
+}
