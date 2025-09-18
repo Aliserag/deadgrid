@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Elena Vasquez",
+      "author_background": "Elementary school art teacher, married to David (architect), mother to Sofia (age 7). Dreamed of opening a community art center for underprivileged children. Spent weekends painting landscapes and teaching Sofia to mix colors.",
+      "day_number": 187,
+      "location": "Abandoned elementary school library, Cedar Creek, Ohio. Dust motes dance in the slivers of light cutting through boarded windows. The scent of mildew and old paper hangs heavy. Tiny handprint paintings still adorn the walls, frozen in time.",
+      "entry": "Day 187. Found this journal in a teacher's desk today. The paper smells like pencil shavings and hope. I never kept one Before—too busy living to write about living. Now I'm etching words onto paper like they're rations. We're holed up in the library Sofia loved. Her tiny handprint is still on the wall near the picture books. God, I miss the sound of her laughter between these shelves. Today, I had to choose. A man stumbled into the schoolyard—ragged, bleeding from a bite on his arm. He begged for help, but his eyes were already glazing over. Marcus wanted to put him down immediately. Sarah argued we should try to isolate him, see if he was different. I stood there, frozen, holding a fire extinguisher like a weapon. In the end, he turned before we decided. Marcus put a bolt through his skull. The sound still echoes in here. I keep washing my hands, but they feel stained. What kind of teacher am I now? What would Sofia think of her mom, standing idle while a man dies? The guilt is a colder companion than any of the dead outside. But we barred three more windows today. We're still here. Still breathing.",
+      "condition": "Physically exhausted—malnourished, with a persistent cough from dust exposure. Mentally frayed; jumps at shadows, experiences flashbacks of Sofia's disappearance. Hands tremble slightly, but focus sharpens during moments of danger.",
+      "discoveries": "The infected are drawn to consistent noise—like a dripping pipe or humming generator—more than sporadic sounds. Also discovered that children's books make decent kindling when hope feels too heavy to carry.",
+      "warnings": "Never investigate cries for help alone. Always check for secondary bites—they sometimes hide them. Trust is a currency we can't afford anymore, but cruelty is a debt that compounds too fast.",
+      "last_meal": "Half a can of cold beans and two dry crackers, shared with Marcus and Sarah 9 hours ago. Found the cans in the teacher's lounge, buried under collapsed ceiling tiles.",
+      "companions": "Marcus (former mechanic, lost his wife to the outbreak), Sarah (nursing student, separated from her cohort during the evacuation). Sofia—missing since Day 12. David—didn't make it home from work on Day 1.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1758237035631;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
