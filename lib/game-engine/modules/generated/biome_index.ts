@@ -10,3 +10,12 @@ export { default as Theglimmeringashenwastes1757712016418 } from './biome/the_gl
 export { default as Therustwastes1757727615760 } from './biome/the_rust_wastes_1757727615760';
 export { default as Theglimmeringwaste1757819359209 } from './biome/the_glimmering_waste_1757819359209';
 export { default as Therustwastes1757847617038 } from './biome/the_rust_wastes_1757847617038';
+export { default as Theglimmeringwastes1758051916045 } from './biome/the_glimmering_wastes_1758051916045';
+export { default as Theglimmeringrustwastes1758057618952 } from './biome/the_glimmering_rust_wastes_1758057618952';
+export { default as Theglimmeringwastes1758073217590 } from './biome/the_glimmering_wastes_1758073217590';
+export { default as Theglimmeringwastes1758106819106 } from './biome/the_glimmering_wastes_1758106819106';
+export { default as Therustwastes1758138315432 } from './biome/the_rust_wastes_1758138315432';
+export { default as Therustwastes1758164958256 } from './biome/the_rust_wastes_1758164958256';
+export { default as Theglimmeringmire1758246016823 } from './biome/the_glimmering_mire_1758246016823';
+export { default as Theglimmeringwastes1758261016688 } from './biome/the_glimmering_wastes_1758261016688';
+export { default as Theglimmerwood1758279616586 } from './biome/the_glimmerwood_1758279616586';
