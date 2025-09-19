@@ -1,0 +1,27 @@
+{
+  "name": "The Glimmerwood",
+  "description": "A forest where the trees have absorbed residual radiation, causing them to glow with an eerie bioluminescence. The air hums with unstable energy, and strange, mutated flora carpets the forest floor. Navigating this biome requires caution, as its beauty masks numerous dangers.",
+  "terrain_type": "Luminous forest with soft, spongy ground",
+  "hazards": [
+    "Radiation hotspots",
+    "Bioluminescent spores that cause hallucinations",
+    "Unstable energy discharges from trees"
+  ],
+  "resources": [
+    "Glow-wood",
+    "Mutated herbs",
+    "Energy crystals",
+    "Purified water from glowing streams"
+  ],
+  "ambient_sounds": [
+    "Faint humming from energy-charged trees",
+    "Soft crackling of bioluminescent plants",
+    "Distant, distorted animal calls"
+  ],
+  "weather_patterns": [
+    "Energy storms with visible arcs of electricity",
+    "Heavy fog that amplifies radiation effects",
+    "Calm, clear nights with intensified glowing"
+  ],
+  "entry_message": "You step into the Glimmerwood, where an otherworldly glow casts long, shifting shadows. The air tingles with energy, and the forest seems to breathe around you."
+}

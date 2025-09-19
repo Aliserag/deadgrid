@@ -1,0 +1,30 @@
+{
+  "name": "The Glimmering Rust-Wastes",
+  "description": "A vast expanse of metallic debris and crystalline growths, where old-world machinery has fused with strange minerals. The air shimmers with faint energy, and jagged spires of rusted steel pierce the sky. Survivors speak of whispers on the wind and sudden, disorienting shifts in light.",
+  "terrain_type": "Metallic plains with crystalline outcrops",
+  "hazards": [
+    "Energy surges that disrupt electronics",
+    "Unstable ground prone to collapse",
+    "Corrosive acidic pools",
+    "Temporary blindness from intense glimmers"
+  ],
+  "resources": [
+    "Salvaged electronics",
+    "Rare energy crystals",
+    "Reinforced scrap metal",
+    "Purified water from condensation collectors"
+  ],
+  "ambient_sounds": [
+    "Low hum of dormant machinery",
+    "Echoing metallic creaks and groans",
+    "Faint crystalline chimes carried by the wind",
+    "Distant electrical crackles"
+  ],
+  "weather_patterns": [
+    "Static storms with visible energy arcs",
+    "Acid fog that reduces visibility and damages equipment",
+    "Intense glimmer events that refract light dangerously",
+    "Calm periods with eerie stillness"
+  ],
+  "entry_message": "The air grows heavy with the scent of ozone and rust. Before you stretches a field of wreckage and shining crystal, where the very light seems to bend and warp. Tread carefully—this place is as beautiful as it is deadly."
+}

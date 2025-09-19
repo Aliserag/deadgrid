@@ -1,0 +1,15 @@
+{
+  "name": "The Rust-Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Feral Ghouls, Rust-Crawlers (mutated insects), and a territorial Scrap-Scavenger clan",
+  "notable_features": [
+    "Repurposed pre-war industrial cathedral with towering rusted spires",
+    "Interior maze of conveyor belts and catwalks suspended over acidic vats",
+    "Functioning but unstable steam-powered forge in the central nave",
+    "Whispering echoes that seem to guide or mislead explorers"
+  ],
+  "exploration_notes": "Players may discover rare crafting blueprints near the forge, salvageable steam-tech components, and a hidden sub-level containing pre-war chemical reserves—guarded by a bloated Glow-Ghoul abomination."
+}

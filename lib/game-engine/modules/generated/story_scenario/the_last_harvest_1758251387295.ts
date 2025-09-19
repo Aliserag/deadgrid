@@ -1,0 +1,79 @@
+/**
+ * story_scenario: The Last Harvest
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface TheLastHarvestData {
+  title: string;
+  protagonist: string;
+  setting: string;
+  situation: string;
+  attempted_solution: string;
+  complications: string;
+  resolution: string;
+  lesson_learned: string;
+  casualties: string;
+  resources_gained: string;
+  moral_choice: string;
+  long_term_impact: string;
+}
+
+export class TheLastHarvestModule extends GameModule {
+  static readonly metadata: TheLastHarvestData = {
+      "title": "The Last Harvest",
+      "protagonist": "Elara Vance, a former agricultural scientist who survived the initial collapse by fortifying her family's farm. Haunted by the loss of her parents to raiders early in the crisis, she is driven by a desperate hope to restore sustainable food sources and protect those she cares for.",
+      "setting": "The irradiated plains of what was once Nebraska, five years after the nuclear winter began. The setting is Elara's fortified farmstead, surrounded by dead soil and the crumbling remnants of civilization, under a perpetually gray sky.",
+      "situation": "Elara's community is starving. Their seed bank is depleted, and the soil is too contaminated to yield crops. When a scavenger brings rumors of a pre-collapse seed vault in an old university research facility, hope ignites. The vault supposedly contains heirloom seeds resistant to radiation. But the facility is deep in raider territory, and the journey is fraught with danger. The community's survival hinges on retrieving those seeds, making the risk unbearable to ignore.",
+      "attempted_solution": "Elara assembled a small team: Marcus, a skilled scout; Jada, a medic; and Leo, a strong but inexperienced volunteer. They planned a stealth mission, traveling by night and avoiding main roads. Using old maps, they navigated through derelict suburbs, hoping to slip in and out unnoticed. Elara carried soil testing kits, dreaming of the first green sprouts back home. They moved with practiced silence, hearts pounding at every shadow, driven by the vision of full bellies and renewed life.",
+      "complications": "As they reached the university, they found it not abandoned, but occupied by a desperate, armed group calling themselves the 'Ash-Dwellers,' who were also starving. Negotiations turned hostile when the Ash-Dwellers accused them of being raiders. Leo panicked and fired a shot, triggering a chaotic firefight. In the confusion, Jada was hit, and Marcus was captured. Elara and Leo barely escaped into the decaying campus, now hunted, their mission in ruins and their friends in grave peril.",
+      "resolution": "Cornered in a collapsed laboratory, Elara made a desperate choice: she offered the Ash-Dwellers half the seeds and her knowledge of radiation-resistant farming in exchange for Marcus's release and safe passage. Their leader, a gaunt woman named Cora, reluctantly agreed, seeing a chance for her own people's survival. With heavy hearts, they carried Jada's body and a single crate of seeds back home. Marcus was wounded but alive. The community now had hope, but it was stained with loss and the grim reality of compromise.",
+      "lesson_learned": "Hope must be tempered with caution; desperation makes both allies and enemies unpredictable. Trust must be earned, not assumed, and sometimes survival means sharing resources to avoid mutual destruction.",
+      "casualties": "Jada, the medic, was killed in the firefight. Leo suffered a severe leg injury that left him with a permanent limp.",
+      "resources_gained": "One crate of heirloom seeds (mostly root vegetables and grains), a partially damaged soil revitalization manual, and a functional Geiger counter salvaged from the lab.",
+      "moral_choice": "Elara faced the dilemma of either fighting to take all the seeds for her own community, ensuring their best chance but guaranteeing more bloodshed, or offering to share knowledge and resources with the Ash-Dwellers, potentially saving both groups but risking her people's resentment and a smaller harvest.",
+      "long_term_impact": "The shared knowledge led to an uneasy truce and eventual trade between the two communities, fostering a fragile alliance. However, the loss of Jada created a lasting void in medical expertise, and the limited seeds meant slower agricultural recovery, forcing harder choices about rationing and priorities for years to come."
+  };
+  
+  static readonly type = 'story_scenario';
+  static readonly version = '1.0.0';
+  static readonly generated = 1758251387295;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(TheLastHarvestModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered story_scenario: The Last Harvest`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default TheLastHarvestModule;

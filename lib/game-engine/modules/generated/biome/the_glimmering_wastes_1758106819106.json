@@ -1,0 +1,29 @@
+{
+  "name": "The Glimmering Wastes",
+  "description": "A vast desert where ancient nanites have fused with the sand, creating shimmering dunes that shift unnaturally. The air hums with residual energy from long-forgotten technology buried beneath the surface.",
+  "terrain_type": "Nanite-infused desert with crystalline formations",
+  "hazards": [
+    "Nanite swarms that disintegrate organic matter",
+    "Sudden sinkholes revealing unstable underground structures",
+    "Energy discharges from crystalline formations"
+  ],
+  "resources": [
+    "Purified nanite clusters",
+    "Ancient data chips",
+    "Crystalline power cores",
+    "Salvaged tech components"
+  ],
+  "ambient_sounds": [
+    "Low electronic humming",
+    "Shifting crystalline sands",
+    "Distant energy crackles",
+    "Faint mechanical whirring beneath the surface"
+  ],
+  "weather_patterns": [
+    "Static storms that interfere with electronics",
+    "Nanite dust devils",
+    "Intense heat waves with visual distortions",
+    "Rare crystalline rainfalls that leave temporary energy deposits"
+  ],
+  "entry_message": "The air shimmers with unnatural light as endless dunes of crystalline sand stretch to the horizon. Your gear hums with interference, and the ground beneath your feet feels alive with hidden energy."
+}

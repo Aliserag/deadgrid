@@ -1,0 +1,29 @@
+{
+  "name": "The Rust-Wastes",
+  "description": "A vast expanse of corroded metal and industrial decay, where the remnants of old-world machinery have fused with the earth. Toxic pools of chemical runoff dot the landscape, and twisted metal structures loom like skeletal giants.",
+  "terrain_type": "Industrial wasteland with metallic plains and chemical marshes",
+  "hazards": [
+    "Corrosive acid pools",
+    "Unstable metal structures that may collapse",
+    "Toxic air requiring respiratory protection"
+  ],
+  "resources": [
+    "Salvaged electronics",
+    "Scrap metal",
+    "Rare chemical compounds",
+    "Filtered water from condensation collectors"
+  ],
+  "ambient_sounds": [
+    "Distant groaning of metal under stress",
+    "Dripping chemicals",
+    "Faint hum of dormant machinery",
+    "Scuttling of mutated insects"
+  ],
+  "weather_patterns": [
+    "Acid rain showers",
+    "Metal-shard dust storms",
+    "Heavy toxic fogs",
+    "Occasional clear but hazardous skies"
+  ],
+  "entry_message": "You step into the Rust-Wastes. The air burns with the scent of oxidation and decay. Towering ruins of industry cast long shadows, and the ground crunches underfoot with fragments of forgotten machinery."
+}

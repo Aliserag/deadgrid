@@ -1,0 +1,21 @@
+{
+  "title": "The Scavenger's Bargain",
+  "trigger_condition": "Player enters an abandoned market district during daylight hours",
+  "description": "A hunched figure emerges from behind a collapsed storefront, clutching a makeshift bag. They offer to trade rare supplies for a favor—retrieving a family heirloom from a nearby infested building.",
+  "choices": [
+    {
+      "option": "Accept the trade",
+      "consequence": "Gain +1 Rare Item, but lose -15 Health from radiation exposure in the infested building"
+    },
+    {
+      "option": "Demand immediate payment",
+      "consequence": "50% chance to gain +1 Uncommon Item; 50% chance the scavenger flees and you gain nothing"
+    },
+    {
+      "option": "Refuse and move on",
+      "consequence": "No gains or losses, but the scavenger mutters a curse—future trades in this area may be more expensive"
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "10 minutes (in-game time)"
+}

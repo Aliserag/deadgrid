@@ -1,0 +1,15 @@
+{
+  "name": "Rust-Singer's Lament",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 850,
+  "stats": {
+    "damage": 45,
+    "durability": 120,
+    "attack_speed": 0.8,
+    "armor_penetration": 15
+  },
+  "description": "Forged from the hull of a pre-Collapse naval vessel, this massive axe hums with a low, resonant frequency when swung. The blade is etched with tidal patterns that seem to shift in certain lights, and the haft is wrapped in salt-cured leather that never seems to wear down. Survivors whisper that it was crafted by a lonely smith who listened too long to the corroding songs of the sea.",
+  "special_effects": "On hit, has a 25% chance to inflict 'Corroded' status on target, reducing their armor by 20% for 10 seconds. The humming sound attracts nearby Scrap-Scuttlers but repels larger predators."
+}
