@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena with two daughters (Sophie, 8 and Maya, 6). Was writing a book about the Great Barrier Reef's recovery and dreamed of taking his family sailing around the world.",
+      "day_number": 347,
+      "location": "Abandoned lighthouse keeper's cottage, Northern California coast. The structure groans with each gust of wind, salt crusting every window. Faded nautical charts still paper the walls, and the rotating beam above casts periodic shadows through broken floorboards.",
+      "entry": "The storm finally broke today. Three days of howling wind and horizontal rain that made the lighthouse feel like a stone at the bottom of the sea. I watched the waves devour what remained of the pier below—another piece of the old world gone forever.\n\nFound a child's drawing wedged behind the bed today. Crude crayon sun, smiling stick figures holding hands. It undid me completely. Sat on the floor sobbing until my throat burned. I keep seeing Sophie's face in the rain-streaked glass, Maya's laughter in the gulls' cries.\n\nYesterday I had to choose between boarding up the last window or salvaging medicine from the flooded clinic. Chose the window. Old man Henderson down in the cove probably needed those antibiotics more than I needed light. Found him cold this morning. Another choice, another consequence.\n\nBut today—today the sun returned. And with it, the most extraordinary thing: a single monarch butterfly, orange wings like stained glass, battering against the salt-caked pane. I opened the window, let it dance out over the churning gray waters. Such a fragile thing to survive all this.\n\nMaybe we're all just butterflies in the storm now. Maybe fragility isn't weakness, but a different kind of strength.",
+      "condition": "Physically: Malnourished (down 15kg), saltwater sores on hands, chronic cough from damp conditions. Mentally: Grief comes in waves rather than constant drowning, moments of clarity between periods of numbness. Hands shake slightly when tired.",
+      "discoveries": "Saltwater gradually ruins everything metal—even stainless steel. But wax-sealed containers in cool, dark places can preserve medicines for years. Also learned that gulls won't approach areas where other birds have died—possible early warning system.",
+      "warnings": "Don't trust clear water pools after storms—saltwater surge contaminates everything. Boil all water twice. Watch for rust-colored stains on concrete—sign of structural weakness. And never, ever go out during the red tides—what washes up isn't just dead fish anymore.",
+      "last_meal": "Boiled dulse seaweed and two canned pears (found in lighthouse storage) 14 hours ago. Drank rainwater collected from roof runoff.",
+      "companions": "Alone. Lost Lena to the first wave in San Francisco. The girls... couldn't get to their school in time. Sometimes talk to the ghost of old lighthouse keeper whose journals I found. His words feel more real than most people I knew.",
+      "hope_level": 4
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1758323442139;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
