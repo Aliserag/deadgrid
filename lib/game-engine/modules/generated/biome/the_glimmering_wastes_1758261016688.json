@@ -1,0 +1,27 @@
+{
+  "name": "The Glimmering Wastes",
+  "description": "A vast expanse of crystalline desert where the ground shimmers with fractured light. Strange, glass-like flora grows in sparse clusters, and the air hums with residual energy from an ancient cataclysm.",
+  "terrain_type": "Shattered crystalline plains with shifting dunes of reflective sand",
+  "hazards": [
+    "Solar flares that cause radiation burns",
+    "Mirror mirages that disorient navigation",
+    "Sharp crystalline formations that inflict bleeding wounds"
+  ],
+  "resources": [
+    "Polished energy shards",
+    "Solar-charged batteries",
+    "Reflective plating",
+    "Purified silica"
+  ],
+  "ambient_sounds": [
+    "Faint harmonic humming from crystalline structures",
+    "Whispering winds carrying echoes of past voices",
+    "Occasional glass-like cracking underfoot"
+  ],
+  "weather_patterns": [
+    "Intense solar storms",
+    "Mirror-fog that reduces visibility but reflects danger",
+    "Calm but blindingly bright days"
+  ],
+  "entry_message": "The air shimmers with deceptive beauty as you step into the Glimmering Wastes. Your vision dances with refracted light, and a low hum vibrates through your bones."
+}
