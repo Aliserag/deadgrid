@@ -1,0 +1,30 @@
+{
+  "name": "Dr. Aris Thorne",
+  "occupation": "Botanist",
+  "personality": [
+    "Analytical",
+    "Cautious",
+    "Idealistic",
+    "Obsessive"
+  ],
+  "faction": "The Greenthumb Collective",
+  "dialogue_style": "Precise and academic, with occasional bursts of enthusiasm when discussing plants",
+  "inventory": [
+    "Seed preservation kit",
+    "Botany journal",
+    "Improvised plant extracts",
+    "Worn leather satchel",
+    "Water filtration straw"
+  ],
+  "quests": [
+    {
+      "name": "Seeds of Hope",
+      "description": "Recover rare pre-collapse seeds from an abandoned agricultural research facility"
+    },
+    {
+      "name": "Toxic Bloom",
+      "description": "Investigate and collect samples from mutated flora in the contaminated zones"
+    }
+  ],
+  "backstory": "Dr. Thorne was conducting research on drought-resistant crops when the collapse occurred. She survived by bartering her knowledge of edible and medicinal plants, eventually forming the Greenthumb Collective - a group dedicated to preserving botanical knowledge and rebuilding sustainable agriculture."
+}
