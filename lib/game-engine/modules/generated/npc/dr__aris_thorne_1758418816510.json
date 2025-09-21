@@ -1,0 +1,31 @@
+{
+  "name": "Dr. Aris Thorne",
+  "occupation": "Botanical Geneticist",
+  "personality": [
+    "Analytical",
+    "Cautious",
+    "Idealistic",
+    "Obsessive",
+    "Secretive"
+  ],
+  "faction": "The Verdant Covenant",
+  "dialogue_style": "Precise and academic, with occasional lapses into passionate monologues about plant biology",
+  "inventory": [
+    "Mutated seed samples",
+    "Hand-crank DNA sequencer",
+    "Botany journal with coded notes",
+    "Improvised plant-based antitoxin",
+    "Worn lab coat with protective patches"
+  ],
+  "quests": [
+    {
+      "name": "Seeds of Salvation",
+      "description": "Retrieve rare pre-war seeds from an overgrown agricultural research station"
+    },
+    {
+      "name": "The Blight's Source",
+      "description": "Investigate the mysterious plant disease affecting the Covenant's crops"
+    }
+  ],
+  "backstory": "Before the collapse, Dr. Thorne worked on developing drought-resistant crops. When society fell, she used her knowledge to help found the Verdant Covenant - a group dedicated to restoring agriculture. She secretly experiments with mutated plants, believing they hold the key to humanity's survival, but keeps her most radical research hidden from her own faction."
+}
