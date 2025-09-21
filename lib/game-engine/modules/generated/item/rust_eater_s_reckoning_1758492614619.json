@@ -1,0 +1,14 @@
+{
+  "name": "Rust-Eater's Reckoning",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 450,
+  "stats": {
+    "damage": 28,
+    "durability": 120,
+    "attack_speed": 0.8
+  },
+  "description": "Forged from the hull of a pre-Collapse warship and sharpened on irradiated stone, this massive cleaver was the signature weapon of the Rust-Eater clan—scavengers who believed metal should 'bleed' like flesh. Its jagged, corroded edge is notorious for leaving wounds that never fully heal.",
+  "special_effects": "Inflicts 'Festering Wound' on hit: targets bleed for 3 damage per second for 10 seconds and receive 20% more damage from acid and corrosion attacks while bleeding."
+}
