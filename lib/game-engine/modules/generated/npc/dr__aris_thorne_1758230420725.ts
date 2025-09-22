@@ -1,0 +1,97 @@
+/**
+ * npc: Dr. Aris Thorne
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface Dr.ArisThorneData {
+  name: string;
+  occupation: string;
+  personality: any[];
+  faction: string;
+  dialogue_style: string;
+  inventory: any[];
+  quests: any[];
+  backstory: string;
+}
+
+export class Dr.ArisThorneModule extends GameModule {
+  static readonly metadata: Dr.ArisThorneData = {
+      "name": "Dr. Aris Thorne",
+      "occupation": "Botanical Geneticist",
+      "personality": [
+          "Analytical",
+          "Cautious",
+          "Idealistic",
+          "Obsessive",
+          "Resourceful"
+      ],
+      "faction": "The Greenthumb Collective",
+      "dialogue_style": "Precise and academic, with occasional bursts of passionate urgency when discussing botany or survival techniques",
+      "inventory": [
+          "Customized seed vault",
+          "Hand-crank DNA sequencer",
+          "Botany field journal",
+          "Improvised plant toxin antidotes",
+          "Rusty trowel",
+          "5 dried ration packs"
+      ],
+      "quests": [
+          {
+              "name": "Seeds of Hope",
+              "description": "Retrieve rare pre-war seeds from an abandoned agricultural research station"
+          },
+          {
+              "name": "Toxic Bloom",
+              "description": "Collect samples of mutated flora in the irradiated zones for study"
+          },
+          {
+              "name": "Root Network",
+              "description": "Establish communication with isolated farming communities to share survival knowledge"
+          }
+      ],
+      "backstory": "Before the collapse, Dr. Thorne worked on developing drought-resistant crops for arid regions. When society fell, she used her knowledge to help survivors identify edible plants and avoid poisonous mutations. She founded the Greenthumb Collective—a network of botanists, farmers, and foragers dedicated to preserving agricultural knowledge and developing sustainable food sources in the wasteland. She carries guilt over not being able to save her original research team, who perished during the initial chaos, and now dedicates her life to ensuring no one starves due to ignorance of the land."
+  };
+  
+  static readonly type = 'npc';
+  static readonly version = '1.0.0';
+  static readonly generated = 1758230420726;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(Dr.ArisThorneModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered npc: Dr. Aris Thorne`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default Dr.ArisThorneModule;
