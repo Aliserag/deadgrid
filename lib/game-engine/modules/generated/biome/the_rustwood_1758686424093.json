@@ -1,0 +1,31 @@
+{
+  "name": "The Rustwood",
+  "description": "A bizarre forest where metal and nature have fused in the aftermath of the cataclysm. Trees grow with steel bark and copper leaves, while rust-colored moss carpets the ground. The air carries the scent of ozone and damp earth, creating an unsettling blend of industrial decay and organic growth.",
+  "terrain_type": "Metallic forest with rolling hills and crystalline outcroppings",
+  "hazards": [
+    "Corrosive rain that damages equipment",
+    "Magnetic anomalies that disrupt electronics",
+    "Aggressive rust-vines that constrict intruders",
+    "Unstable ground where metal plates shift unexpectedly"
+  ],
+  "resources": [
+    "Conductive copper leaves",
+    "Reinforced steelwood lumber",
+    "Purified water from crystalline springs",
+    "Salvageable pre-fall technology",
+    "Rare earth elements in crystal formations"
+  ],
+  "ambient_sounds": [
+    "Metallic creaking of swaying trees",
+    "Distant electrical humming from crystalline formations",
+    "Gentle pinging of copper leaves colliding",
+    "Echoing drips from corrosive condensation"
+  ],
+  "weather_patterns": [
+    "Acid fog that reduces visibility and corrodes metal",
+    "Magnetic storms that create temporary energy surges",
+    "Clear nights with bizarre auroras from mineral particulates",
+    "Heavy rust-storms that coat everything in orange dust"
+  ],
+  "entry_message": "The air shifts as you cross into the Rustwood. Metallic trees tower overhead, their copper leaves chiming softly in the breeze. Strange energies make your hair stand on end, and the ground beneath your feet feels unnaturally solid."
+}
