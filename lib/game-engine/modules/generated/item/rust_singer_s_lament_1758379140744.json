@@ -1,0 +1,19 @@
+{
+  "name": "Rust-Singer's Lament",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 850,
+  "stats": {
+    "damage": 45,
+    "durability": 120,
+    "attack_speed": 0.8,
+    "armor_penetration": 30
+  },
+  "description": "Forged from the remains of a pre-Collapse industrial saw blade and wrapped in salvaged copper wiring, this massive two-handed sword hums with residual energy. The blade bears faint etchings that some scavengers claim are the last words of the legendary smith who created it during the Great Blackout. When struck, it emits a low, mournful resonance that echoes through ruined structures.",
+  "special_effects": [
+    "Deals bonus electrical damage to robotic enemies and creatures with metallic exoskeletons",
+    "Emits a faint glow in areas with high radiation",
+    "Successful hits have a 15% chance to temporarily stun organic targets due to sonic vibration"
+  ]
+}

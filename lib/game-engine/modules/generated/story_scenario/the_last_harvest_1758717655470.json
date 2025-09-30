@@ -1,0 +1,29 @@
+{
+  "title": "The Last Harvest",
+  "protagonist": {
+    "name": "Dr. Aris Thorne",
+    "backstory": "Former agricultural scientist specializing in drought-resistant crops. Lost his family during the Great Collapse when food riots overwhelmed emergency shelters. Now survives by applying his knowledge to scavenged seeds, haunted by memories of watching his daughter starve."
+  },
+  "setting": {
+    "location": "The Glasshouse - a repurposed botanical garden greenhouse on the outskirts of dead Chicago",
+    "time": "17 years after the Great Collapse. Permanent dust storms have turned the Midwest into a sepia-toned wasteland."
+  },
+  "situation": "Aris has nurtured a secret potato crop for six months - the first successful large-scale growth he's seen since the Collapse. The plants represent hope for sustainable food. But two problems emerge simultaneously: a mutated blight is spreading through the leaves, and raider scouts have spotted the greenhouse's unusual greenery. He has three days until harvest, but the blight will destroy the crop in two, and the raiders will arrive in four. The potatoes need specific chemicals to survive - chemicals available only in the contaminated ruins of his old university lab.",
+  "attempted_solution": "Aris recruited two survivors: Maya, a stealthy scavenger who knew the university routes, and Eli, a former chemistry student. Their plan was precise: slip into the lab during a dust storm for cover, locate the antifungal compounds, and return before the raiders mobilized. Aris would stay to defend the greenhouse, setting traps and disguising the vegetation with dust coatings. They practiced the route with maps drawn from memory, calculating they had a 72-hour window. Aris gave them his last functional gas mask and the community's only working vehicle - a solar-charged electric buggy with limited range.",
+  "complications": "The university was not as abandoned as believed. A cult called the Cleaners had occupied the science building, worshipping 'purity' and destroying anything they considered 'contaminated' - including modern medicine and technology. Maya and Eli walked into an ambush. Eli was captured immediately while Maya barely escaped. Meanwhile, the dust storm intensified beyond predictions, coating the greenhouse panels and reducing photosynthesis to critical levels. The blight spread faster than anticipated. Back at the greenhouse, raider scouts arrived early, forcing Aris to trigger his traps prematurely and reveal his defensive capabilities. Now wounded and low on ammunition, he faced an impossible choice: abandon the crop to rescue his friends or let them die to save the food.",
+  "resolution": "Aris chose the crop. He rationalized that saving the food would honor Eli and Maya's sacrifice. But as he watched the potatoes wither under the accelerated blight, his conviction shattered. In a desperate reversal, he took the remaining solar charge from the greenhouse climate systems to power the buggy and raced toward the university. He arrived to find Eli dead - sacrificed in a Cleaner ritual - but rescued Maya. Together they fought back to the greenhouse, arriving to find the raiders had breached the defenses. The final potatoes were trampled into the dust. The harvest was lost, but Aris and Maya survived with vials of the antifungal chemicals clutched in their hands.",
+  "lesson_learned": "Humanity cannot be cultivated like crops. Survival requires balancing hope for the future with responsibility to the present. No sustainable future can be built on abandoned loyalties.",
+  "casualties": [
+    "Eli - captured and executed by the Cleaners",
+    "The entire potato crop - destroyed by raiders and blight",
+    "Three raiders - killed in Aris's traps"
+  ],
+  "resources_gained": [
+    "5 vials of specialized antifungal chemicals",
+    "University lab maps showing untouched storage areas",
+    "Maya's loyalty and scavenging expertise",
+    "Knowledge of the Cleaners' movements and beliefs"
+  ],
+  "moral_choice": "Whether to prioritize the potential salvation of thousands (the food crop) over the certain salvation of two people who trusted him. Aris initially chose the abstract many over the concrete few, then reversed his decision when confronted with the human cost.",
+  "long_term_impact": "The failed harvest crushed the community's hope for agricultural renewal, causing several families to abandon the settlement. However, the rescued chemicals later allowed Aris to save smaller, hidden crops. The knowledge of the Cleaners' presence redirected scavenging routes and eventually led to alliances with other groups threatened by the cult. Most profoundly, Aris abandoned his solitary focus on food science and began mentoring others, recognizing that sustainable survival required investing in people, not just plants."
+}

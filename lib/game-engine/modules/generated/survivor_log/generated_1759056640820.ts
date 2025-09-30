@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena for 12 years, father to 8-year-old Maya. Was leading a research expedition in the Florida Keys when the outbreak began. Dreamed of establishing marine conservation programs that would protect vulnerable species for future generations.",
+      "day_number": 127,
+      "location": "Abandoned aquarium research facility, Marathon, Florida Keys. The building smells of salt, decay, and desperation. Flickering emergency lights cast eerie blue shadows across broken tanks where exotic fish once swam. The hum of backup generators provides the only constant sound.",
+      "entry": "Day 127. The generators will fail soon. I can hear their labored breathing, like an old man on his deathbed. Lena would have known how to fix them - she always understood machines better than people. Better than me, certainly.\n\nFound another body today. Dr. Chen, my former colleague, slumped over his workstation. He'd taken the easy way out, a small pistol still clutched in his hand. The note simply read: 'The reefs are dead. What's the point?'\n\nI buried him in the coral garden out back, what's left of it. The bleaching started before the outbreak, but whatever poison they unleashed finished the job. White skeletons stretch as far as I can see through the observation windows, a graveyard of what once teemed with life.\n\nMaya loved this place. Her small hands pressed against the glass, watching the clownfish dart between anemones. 'Daddy, they're dancing!' she'd say. Now the tanks hold only ghosts and rotting seaweed.\n\nI keep having the same dream - Maya's laughter echoing through these halls, the vibrant colors of healthy coral, Lena's hand in mine. Then I wake to this blue-tinted silence. Sometimes I think I hear scratching at the doors, but it's probably just my mind playing tricks. Or the crabs. They've grown bold with so few humans left.\n\nToday I did something terrible. I used the last of the fresh water to clean a small cut on my hand. Survival manuals say to prioritize drinking, but I couldn't bear the thought of infection setting in. Not after watching Martinez die that way last month. The guilt tastes like salt and failure.\n\nI talk to the specimens sometimes. The preserved ones in jars, the skeletal displays. They don't answer, but they don't judge either. Better company than most humans I've encountered these past months.",
+      "condition": "Physically: Malnourished (15 lbs underweight), dehydrated, healing cut on left hand, sunburned skin peeling. Mentally: Suffering from severe depression with intermittent hallucinations, sleep-deprived, haunted by memories of family, maintaining scientific detachment as coping mechanism.",
+      "discoveries": "The marine die-off appears to be accelerating - whatever caused the human outbreak also affected oceanic ecosystems catastrophically. Saltwater can be used to preserve certain foods longer than expected. The infected avoid large bodies of water, possibly due to sensitivity to salt or inability to swim effectively.",
+      "warnings": "Never trust standing water - contamination levels are unpredictable. Coastal areas provide some protection from the infected but present their own dangers with degraded infrastructure and limited resources. Preserved specimens in formalin can be used as emergency disinfectant but are toxic if ingested.",
+      "last_meal": "Canned tuna (found in staff breakroom) and rehydrated seaweed - 14 hours ago. Drank minimally to conserve water supply.",
+      "companions": "Alone. Wife Lena and daughter Maya presumed dead after separation during initial evacuation. Research team of 6 all confirmed dead - 3 by infection, 2 by suicide, 1 drowned during storm surge.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1759056640821;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;

@@ -13,3 +13,4 @@ export { default as Thewhisperinggrove1758224718382 } from './event/the_whisperi
 export { default as Thelastbroadcast1758252318721 } from './event/the_last_broadcast_1758252318721';
 export { default as Thescavengersbargain1758270919956 } from './event/the_scavenger_s_bargain_1758270919956';
 export { default as Theglimmeringcache1758292215761 } from './event/the_glimmering_cache_1758292215761';
+export { default as Theweepinggrove1758751520394 } from './event/the_weeping_grove_1758751520394';

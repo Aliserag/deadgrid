@@ -1,0 +1,25 @@
+{
+  "title": "The Last Harvest",
+  "protagonist": {
+    "name": "Elara Vance",
+    "backstory": "Former botanist and community gardener who lost her family during the initial collapse. Survived by turning her urban apartment complex into a fortified greenhouse, becoming a reluctant leader for 12 other survivors."
+  },
+  "setting": "Ruined metro station converted into vertical farm, 17 years after the Great Collapse. perpetual twilight from atmospheric dust, constant below-freezing temperatures outside.",
+  "situation": "The station's power core is failing, threatening the artificial sun lamps that sustain their crops. Without immediate repair, their entire food supply will die within days. The community faces starvation, and Elara must lead a dangerous expedition to scavenge replacement parts from the radioactive ruins of the old university engineering lab, known to be inhabited by mutated creatures and rival scavengers.",
+  "attempted_solution": "Elara assembled a team of four: Markus for protection, Ji-hoon for technical skills, Lena for medical support, and young Tom as a nimble scout. They planned a swift night approach using old maintenance tunnels to avoid surface dangers. They brought precious battery packs to power the core long enough for extraction, with strict orders to avoid engagement and return within 36 hours. Elara carried seeds from their rarest crops, hoping to trade if encountered peaceful survivors.",
+  "complications": "The tunnels had collapsed, forcing them to traverse the irradiated surface during a sudden acid rain storm. Markus was critically injured protecting Tom from a mutated predator. Their remaining batteries were damaged by moisture. At the lab, they found a starving family already scavenging the parts they needed. When Ji-hoon tried to negotiate, panicked gunfire erupted, leaving Lena mortally wounded and the family's father dead. The remaining family members barricaded themselves with the crucial components.",
+  "resolution": "Elara made the agonizing choice to retreat, carrying the dying Lena while Tom supported the injured Markus. They returned with only two partially functional batteries—enough to extend their crop survival by mere days. Using her botanical knowledge, Elara grafted the most vital plants together to reduce their light requirements. The community implemented strict rationing while she prepared for another expedition, this time to seek alliance rather than confrontation with the surviving family.",
+  "lesson_learned": "Preparation means planning for human variables, not just environmental ones. The right tool is worthless without the right approach to those who guard it.",
+  "casualties": [
+    "Lena Chen (medic)",
+    "Unnamed father from scavenger family"
+  ],
+  "resources_gained": [
+    "2 partial power cells (40% functionality)",
+    "University lab coordinates",
+    "Knowledge of tunnel collapses",
+    "3 doses of antibiotics from Lena's kit"
+  ],
+  "moral_choice": "Whether to sacrifice their remaining medical supplies to ease Lena's painful death or conserve them for future survivors. Elara chose to use them, watching their precious medicine vanish with her friend's last breaths.",
+  "long_term_impact": "The community became deeply divided between those who saw the scavenger family as enemies and those who believed they could have been allies. Elara's authority was challenged for the first time, forcing her to become more diplomatic. The incident ultimately led to the establishment of formal negotiation protocols and the realization that lasting survival required building connections beyond their station."
+}

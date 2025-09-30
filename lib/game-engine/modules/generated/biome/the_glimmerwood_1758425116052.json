@@ -1,0 +1,27 @@
+{
+  "name": "The Glimmerwood",
+  "description": "A forest where the trees have absorbed radiation and now glow with a faint, eerie luminescence. The ground is soft and spongy, covered in bioluminescent fungi that pulse with a slow, rhythmic light.",
+  "terrain_type": "Luminous Forest",
+  "hazards": [
+    "Radiation Pockets",
+    "Sporadic Fungal Spores",
+    "Unstable, Sinkhole-Prone Ground"
+  ],
+  "resources": [
+    "Glowcap Mushrooms",
+    "Irradiated Wood",
+    "Rare Crystalline Shards",
+    "Purified Water from Hidden Springs"
+  ],
+  "ambient_sounds": [
+    "Faint, rhythmic pulsing hum",
+    "Distant, echoing drips",
+    "Soft rustling of glowing leaves"
+  ],
+  "weather_patterns": [
+    "Acid Rain Showers",
+    "Radiation Fog",
+    "Bioluminescent Storms"
+  ],
+  "entry_message": "You step into the Glimmerwood. The air hums with energy, and an otherworldly glow casts long, shifting shadows. Every step sinks slightly into the soft, fungal ground."
+}

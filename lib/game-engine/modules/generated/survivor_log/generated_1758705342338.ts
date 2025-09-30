@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist specializing in coral reef ecosystems. Married to Lena with a 4-year-old daughter named Maya. Was leading a research expedition in the Pacific when the outbreak began. Dreamed of establishing marine conservation zones and teaching Maya to snorkel.",
+      "day_number": 347,
+      "location": "Abandoned coastal research station on what was once the Great Barrier Reef. The station tilts precariously over bleached coral skeletons. Salt crusts every surface, and the constant groan of stressed metal fills the air. The ocean smells wrong - metallic and stagnant.",
+      "entry": "Day 347. The rain finally stopped, but the silence it left behind is worse. I watched the last of the freshwater trickle through the cracks in the roof collection system. Another failure. Lena would have known how to fix it properly. She was always the practical one. I found Maya's drawing tucked in my field journal today - three stick figures holding hands under a yellow sun. The paper is so fragile now, the colors faded to ghosts. I traced the lines until my vision blurred. Sometimes I talk to them both, just to remember what my voice sounds like when it's not screaming or whispering. Today I told Maya about the clownfish we studied, how they'd dance among the anemones. Now the anemones are gone, and the fish... god, the fish. Their eyes were the first to turn milky. I should have burned my research when I had the chance. Every data point feels like an epitaph for a world we murdered long before the plague finished the job. The guilt is a physical weight, a stone in my chest that makes it hard to breathe. I keep the emergency flare gun loaded not for rescue, but for the things that sometimes climb up from the water at night. They still look almost human until they get close enough for you to see their mouths.",
+      "condition": "Severely dehydrated with cracked lips and sunken eyes. Left arm shows early signs of infection from coral cuts. Mentally oscillating between sharp clarity and dissociative episodes where he relives memories as if they're present. Sleeps in 20-minute intervals, haunted by dreams of drowning in a sea of dead fish.",
+      "discoveries": "The mutation spreads through water contact, not just bites. Saltwater accelerates the decomposition of infected tissue but doesn't kill the pathogen. Found that vinegar (from spoiled wine) temporarily neutralizes the metallic scent that attracts the infected.",
+      "warnings": "Never trust rainwater that tastes sweet - it's contaminated with airborne spores. The infected are drawn to electrical currents; avoid using generators near coastal areas. If you see bioluminescence in the water at night, it means the infection has reached planktonic levels - get inland immediately.",
+      "last_meal": "Three canned pears in heavy syrup (found in a submerged pantry) 36 hours ago. Drank the syrup slowly to make it last.",
+      "companions": "Officially alone since Day 218 when Lena sacrificed herself drawing the infected away from our hiding spot. Unofficially, maintains conversations with a family of ghost crabs that inhabit the station's lower levels. Named the largest one 'Simon' after his graduate advisor.",
+      "hope_level": 2
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1758705342340;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
