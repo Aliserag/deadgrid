@@ -19,3 +19,6 @@ export { default as Therustwastes1758164958256 } from './biome/the_rust_wastes_1
 export { default as Theglimmeringmire1758246016823 } from './biome/the_glimmering_mire_1758246016823';
 export { default as Theglimmeringwastes1758261016688 } from './biome/the_glimmering_wastes_1758261016688';
 export { default as Theglimmerwood1758279616586 } from './biome/the_glimmerwood_1758279616586';
+export { default as Theglimmerwood1758425116052 } from './biome/the_glimmerwood_1758425116052';
+export { default as Therustwood1758686424093 } from './biome/the_rustwood_1758686424093';
+export { default as Theglimmerwood1758760223318 } from './biome/the_glimmerwood_1758760223318';
