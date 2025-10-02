@@ -27,3 +27,4 @@ jobs:
       # 2025-10-02: Added mechanic test for Adaptive Mutation
       # 2025-10-02: Added item test for Whisper's Echo
       # 2025-10-02: Added survivor_log test for feature
+      # 2025-10-02: Added event test for feature
