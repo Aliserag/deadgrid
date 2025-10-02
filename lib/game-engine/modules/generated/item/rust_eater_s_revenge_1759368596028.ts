@@ -1,0 +1,80 @@
+/**
+ * item: Rust-Eater's Revenge
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface RustEater'SRevengeData {
+  name: string;
+  category: string;
+  rarity: string;
+  weight: number;
+  value: number;
+  stats: string;
+  description: string;
+  special_effects: string;
+}
+
+export class RustEater'SRevengeModule extends GameModule {
+  static readonly metadata: RustEater'SRevengeData = {
+      "name": "Rust-Eater's Revenge",
+      "category": "weapon",
+      "rarity": "epic",
+      "weight": 3.2,
+      "value": 450,
+      "stats": {
+          "damage": 28,
+          "durability": 85,
+          "attack_speed": 0.8,
+          "range": 1.5
+      },
+      "description": "Forged from the remains of a pre-Collapse industrial shredder, this massive blade bears deep grooves where its teeth once spun. The metal has been reforged with scavenged titanium alloys, giving it an unsettling gray-purple sheen. Legends say the original machine consumed entire buildings during the Resource Wars, and some survivors claim the blade still hums with that destructive hunger.",
+      "special_effects": {
+          "Corrosive Bite": "Deals 15% bonus damage against robotic enemies and mechanical constructs",
+          "Jagged Wounds": "Successful hits have a 25% chance to cause bleeding damage over time",
+          "Industrial Resonance": "When striking metal surfaces, creates a disorienting shriek that staggers nearby enemies"
+      }
+  };
+  
+  static readonly type = 'item';
+  static readonly version = '1.0.0';
+  static readonly generated = 1759368596029;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(RustEater'SRevengeModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered item: Rust-Eater's Revenge`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default RustEater'SRevengeModule;
