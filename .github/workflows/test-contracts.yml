@@ -23,3 +23,4 @@ jobs:
       # Auto-generated test steps below
       # 2025-10-02: Added item test for Rust-Eater's Revenge
       # 2025-10-02: Added story_scenario test for feature
+      # 2025-10-02: Added biome test for The Chromatic Mire
