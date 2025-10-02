@@ -445,4 +445,37 @@ function calculateChromaticMireHazards(int32 x, int32 y, LocationType locationTy
     return (hazardLevel, resourceBonus);
 }
 
+
+/**
+ * @notice Calculate Rustwood Tangle biome hazards and resource bonuses
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return hazardLevel The calculated hazard level (0-100)
+ * @return energyCrystals Number of energy crystals available
+ */
+function calculateRustwoodTangleEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 hazardLevel, uint32 energyCrystals) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rustwood_tangle")));
+    
+    // Base hazard from terrain type
+    if (locationType == LocationType.DUNGEON) {
+        hazardLevel = 65;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        hazardLevel = 55;
+    } else if (locationType == LocationType.WASTELAND) {
+        hazardLevel = 45;
+    } else {
+        hazardLevel = 35;
+    }
+    
+    // Add electromagnetic instability from biome
+    uint256 instability = positionHash % 35;
+    hazardLevel += uint32(instability);
+    
+    // Calculate energy crystals from crystalline formations
+    energyCrystals = uint32((positionHash % 25) + 15);
+    
+    return (hazardLevel, energyCrystals);
+}
+
 }
