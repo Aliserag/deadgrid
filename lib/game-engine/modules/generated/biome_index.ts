@@ -22,3 +22,5 @@ export { default as Theglimmerwood1758279616586 } from './biome/the_glimmerwood_
 export { default as Theglimmerwood1758425116052 } from './biome/the_glimmerwood_1758425116052';
 export { default as Therustwood1758686424093 } from './biome/the_rustwood_1758686424093';
 export { default as Theglimmerwood1758760223318 } from './biome/the_glimmerwood_1758760223318';
+export { default as Theshimmeringwastes1759367383810 } from './biome/the_shimmering_wastes_1759367383810';
+export { default as Thechromaticmire1759374555578 } from './biome/the_chromatic_mire_1759374555578';
