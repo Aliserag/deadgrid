@@ -318,4 +318,12 @@ contract ItemNFT is ERC1155, AccessControl, IDeadGrid {
     function supportsInterface(bytes4 interfaceId) public view override(ERC1155, AccessControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
+
+/**
+ * @notice Initialize Rust-Eater's Revenge weapon from content data
+ */
+function initializeRustEatersRevenge() private {
+    createItem("Rust-Eater's Revenge", "Forged from the remains of a pre-Collapse industrial shredder, this massive blade bears deep grooves where its teeth once spun. The metal has been reforged with scavenged titanium alloys, giving it an unsettling gray-purple sheen. Legends say the original machine consumed entire buildings during the Resource Wars, and some survivors claim the blade still hums with that destructive hunger.", ItemType.WEAPON, Rarity.EPIC, 1);
+}
+
 }
