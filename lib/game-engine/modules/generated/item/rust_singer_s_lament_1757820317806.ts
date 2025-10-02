@@ -4,19 +4,19 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface RustSinger'SLamentData {
+export interface RustSingerSLamentData {
   name: string;
   category: string;
   rarity: string;
   weight: number;
   value: number;
-  stats: string;
+  stats: any;
   description: string;
-  special_effects: string;
+  special_effects: any;
 }
 
-export class RustSinger'SLamentModule extends GameModule {
-  static readonly metadata: RustSinger'SLamentData = {
+export class RustSingerSLamentModule extends GameModule {
+  static readonly metadata: RustSingerSLamentData = {
       "name": "Rust-Singer's Lament",
       "category": "weapon",
       "rarity": "epic",
@@ -44,7 +44,7 @@ export class RustSinger'SLamentModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(RustSinger'SLamentModule.metadata);
+      await system.register(RustSingerSLamentModule.metadata);
     }
     
     // Log registration
@@ -77,4 +77,4 @@ export class RustSinger'SLamentModule extends GameModule {
   }
 }
 
-export default RustSinger'SLamentModule;
+export default RustSingerSLamentModule;

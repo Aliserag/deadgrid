@@ -22,14 +22,8 @@ export class CorpseCrawlerModule extends GameModule {
       "name": "Corpse-Crawler",
       "type": "mutant",
       "tier": 2,
-      "health": {
-          "min": 80,
-          "max": 120
-      },
-      "damage": {
-          "min": 15,
-          "max": 25
-      },
+      "health": "80-120",
+      "damage": "15-25",
       "speed": "normal",
       "behavior": "stalker",
       "abilities": [

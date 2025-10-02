@@ -4,7 +4,7 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface TheScavenger'SDilemmaData {
+export interface TheScavengerSDilemmaData {
   title: string;
   trigger_condition: string;
   description: string;
@@ -13,8 +13,8 @@ export interface TheScavenger'SDilemmaData {
   duration: string;
 }
 
-export class TheScavenger'SDilemmaModule extends GameModule {
-  static readonly metadata: TheScavenger'SDilemmaData = {
+export class TheScavengerSDilemmaModule extends GameModule {
+  static readonly metadata: TheScavengerSDilemmaData = {
       "title": "The Scavenger's Dilemma",
       "trigger_condition": "Entering an abandoned industrial zone at night",
       "description": "You stumble upon a flickering light coming from a half-collapsed warehouse. Inside, you find a lone scavenger desperately trying to pry open a reinforced storage container. They notice you and nervously offer a deal: help them open it, and you can take your pick of the contents—but they get first choice.",
@@ -48,7 +48,7 @@ export class TheScavenger'SDilemmaModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(TheScavenger'SDilemmaModule.metadata);
+      await system.register(TheScavengerSDilemmaModule.metadata);
     }
     
     // Log registration
@@ -81,4 +81,4 @@ export class TheScavenger'SDilemmaModule extends GameModule {
   }
 }
 
-export default TheScavenger'SDilemmaModule;
+export default TheScavengerSDilemmaModule;

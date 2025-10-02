@@ -1,10 +1,10 @@
 /**
- * npc: Dr. Aris Thorne
+ * npc: Dr Aris Thorne
  */
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface Dr.ArisThorneData {
+export interface DrArisThorneData {
   name: string;
   occupation: string;
   personality: any[];
@@ -12,11 +12,11 @@ export interface Dr.ArisThorneData {
   dialogue_style: string;
   inventory: any[];
   quests: any[];
-  backstory: string;
+  backstory: any;
 }
 
-export class Dr.ArisThorneModule extends GameModule {
-  static readonly metadata: Dr.ArisThorneData = {
+export class DrArisThorneModule extends GameModule {
+  static readonly metadata: DrArisThorneData = {
       "name": "Dr. Aris Thorne",
       "occupation": "Botanical Geneticist",
       "personality": [
@@ -45,7 +45,7 @@ export class Dr.ArisThorneModule extends GameModule {
               "description": "Investigate the mysterious plant disease affecting the Covenant's crops"
           }
       ],
-      "backstory": "Before the collapse, Dr. Thorne worked on developing drought-resistant crops. When society fell, she used her knowledge to help found the Verdant Covenant - a group dedicated to restoring agriculture. She secretly experiments with mutated plants, believing they hold the key to humanity's survival, but keeps her most radical research hidden from her own faction."
+      "backstory": "Before the collapse, Dr Thorne worked on developing drought-resistant crops. When society fell, she used her knowledge to help found the Verdant Covenant - a group dedicated to restoring agriculture. She secretly experiments with mutated plants, believing they hold the key to humanity's survival, but keeps her most radical research hidden from her own faction."
   };
   
   static readonly type = 'npc';
@@ -56,11 +56,11 @@ export class Dr.ArisThorneModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(Dr.ArisThorneModule.metadata);
+      await system.register(DrArisThorneModule.metadata);
     }
     
     // Log registration
-    console.log(`[Module] Registered npc: Dr. Aris Thorne`);
+    console.log(`[Module] Registered npc: Dr Aris Thorne`);
   }
   
   private getTargetSystem(engine: any): any {
@@ -89,4 +89,4 @@ export class Dr.ArisThorneModule extends GameModule {
   }
 }
 
-export default Dr.ArisThorneModule;
+export default DrArisThorneModule;

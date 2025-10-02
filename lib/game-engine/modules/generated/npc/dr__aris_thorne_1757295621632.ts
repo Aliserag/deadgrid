@@ -1,5 +1,5 @@
 /**
- * npc: Dr. Aris Thorne
+ * npc: Dr Aris Thorne
  */
 
 import { GameModule } from '../../../core/GameModule';
@@ -12,7 +12,7 @@ export interface DrArisThorneData {
   dialogue_style: string;
   inventory: any[];
   quests: any[];
-  backstory: string;
+  backstory: any;
 }
 
 export class DrArisThorneModule extends GameModule {
@@ -62,7 +62,7 @@ export class DrArisThorneModule extends GameModule {
     }
     
     // Log registration
-    console.log(`[Module] Registered npc: Dr. Aris Thorne`);
+    console.log(`[Module] Registered npc: Dr Aris Thorne`);
   }
   
   private getTargetSystem(engine: any): any {

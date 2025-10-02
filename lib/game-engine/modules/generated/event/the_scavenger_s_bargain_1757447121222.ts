@@ -4,7 +4,7 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface TheScavenger'SBargainData {
+export interface TheScavengerSBargainData {
   title: string;
   trigger_condition: string;
   description: string;
@@ -13,8 +13,8 @@ export interface TheScavenger'SBargainData {
   duration: string;
 }
 
-export class TheScavenger'SBargainModule extends GameModule {
-  static readonly metadata: TheScavenger'SBargainData = {
+export class TheScavengerSBargainModule extends GameModule {
+  static readonly metadata: TheScavengerSBargainData = {
       "title": "The Scavenger's Bargain",
       "trigger_condition": "Player enters an abandoned market district with less than 3 days of food supplies",
       "description": "A gaunt figure emerges from behind a collapsed storefront, holding up a surprisingly intact canned good. 'Trade?' they rasp, eyeing your gear suspiciously. They seem to have a small stash of supplies hidden nearby, but their nervous glances suggest they might not be working alone.",
@@ -48,7 +48,7 @@ export class TheScavenger'SBargainModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(TheScavenger'SBargainModule.metadata);
+      await system.register(TheScavengerSBargainModule.metadata);
     }
     
     // Log registration
@@ -81,4 +81,4 @@ export class TheScavenger'SBargainModule extends GameModule {
   }
 }
 
-export default TheScavenger'SBargainModule;
+export default TheScavengerSBargainModule;
