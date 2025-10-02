@@ -1,0 +1,21 @@
+{
+  "name": "Whisper's Echo",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 1.2,
+  "value": 850,
+  "stats": {
+    "damage": 45,
+    "fire_rate": 2,
+    "accuracy": 85,
+    "durability": 120,
+    "noise_level": 5
+  },
+  "description": "A custom-built suppressed sniper rifle from before the Fall. Originally crafted by a legendary assassin known only as 'Whisper,' this weapon was designed for eliminating high-value targets without alerting nearby infected. The barrel bears faint etchings of ghostly figures, and the stock shows signs of countless hours of careful maintenance. Found in an abandoned bunker deep in the Quarantine Zone, it seems to almost hum with silent purpose.",
+  "special_effects": [
+    "Silent Strikes: Kills with this weapon do not alert nearby enemies within 50 meters",
+    "Ghost's Mark: Headshots against human targets have a 25% chance to instantly kill regardless of health",
+    "Echo Location: Successful kills reveal all enemies within 30 meters of the target for 3 seconds",
+    "Whisper's Legacy: While aiming, movement speed is reduced by 60% less than normal sniper rifles"
+  ]
+}

@@ -315,4 +315,25 @@ function _generateBackground(uint256 dna, string memory occupation) internal pur
     return backgrounds[(dna / 100000000) % 10];
 }
 
+
+/**
+ * @notice Generate survivor's mental state based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return mentalState The generated mental state description
+ */
+function _generateMentalState(uint256 dna, uint256 daysSurvived) internal pure returns (string memory) {
+    string[8] memory mentalStates = [
+        "Stable and focused, maintaining routines and hope",
+        "Mild depression with moments of determination",
+        "Severe isolation effects, talks to imaginary companions",
+        "Resourceful but haunted by past losses",
+        "Auditory hallucinations of lost loved ones",
+        "Pragmatic survivor, suppresses emotions to function",
+        "Obsessively documents experiences and discoveries",
+        "Finds solace in small routines and memories"
+    ];
+    
+    return mentalStates[(dna + daysSurvived) % 8];
+}
 }

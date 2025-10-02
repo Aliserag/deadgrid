@@ -1,0 +1,31 @@
+{
+  "name": "The Chromatic Mire",
+  "description": "A vast wetland where chemical spills have permanently altered the landscape, creating shimmering, iridescent pools and bizarre crystalline formations. The air hums with residual energy, and strange flora glows with unnatural bioluminescence. Survivors must navigate carefully between the beautiful but deadly chemical pools and the unstable ground.",
+  "terrain_type": "Toxic wetland with crystalline formations",
+  "hazards": [
+    "Chemical burns from acidic pools",
+    "Unstable crystalline structures that may collapse",
+    "Toxic fumes in low-lying areas",
+    "Mutated wildlife drawn to the energy sources"
+  ],
+  "resources": [
+    "Purified chemical catalysts",
+    "Glowing fungal samples",
+    "Stable crystalline shards",
+    "Rare metal deposits",
+    "Radiation-shielding materials"
+  ],
+  "ambient_sounds": [
+    "Faint crystalline humming",
+    "Gentle bubbling from chemical pools",
+    "Distant cracking of shifting crystals",
+    "Echoing drips in underground caverns"
+  ],
+  "weather_patterns": [
+    "Acidic mist that reduces visibility",
+    "Energy storms that cause temporary equipment malfunctions",
+    "Heavy rains that flood lower areas with toxic water",
+    "Clear nights with enhanced bioluminescence"
+  ],
+  "entry_message": "The air grows thick with the scent of ozone and chemicals. Before you stretches a landscape of impossible beauty - shimmering pools of rainbow-colored liquids glow beneath twisted crystalline spires that pierce the hazy sky. Every surface seems to pulse with faint light, and a low hum vibrates through the ground beneath your feet."
+}

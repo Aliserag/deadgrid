@@ -326,4 +326,11 @@ function initializeRustEatersRevenge() private {
     createItem("Rust-Eater's Revenge", "Forged from the remains of a pre-Collapse industrial shredder, this massive blade bears deep grooves where its teeth once spun. The metal has been reforged with scavenged titanium alloys, giving it an unsettling gray-purple sheen. Legends say the original machine consumed entire buildings during the Resource Wars, and some survivors claim the blade still hums with that destructive hunger.", ItemType.WEAPON, Rarity.EPIC, 1);
 }
 
+
+/**
+ * @notice Initialize Whisper's Echo weapon from content data
+ */
+function initializeWhispersEcho() private {
+    createItem("Whisper's Echo", "A custom-built suppressed sniper rifle from before the Fall. Originally crafted by a legendary assassin known only as 'Whisper,' this weapon was designed for eliminating high-value targets without alerting nearby infected. The barrel bears faint etchings of ghostly figures, and the stock shows signs of countless hours of careful maintenance. Found in an abandoned bunker deep in the Quarantine Zone, it seems to almost hum with silent purpose.", ItemType.WEAPON, Rarity.EPIC, 1);
+}
 }

@@ -38,4 +38,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-02**: Added survivor_log - Dr. Aris Thorne
+- **2025-10-02**: Added item - Whisper's Echo
+- **2025-10-02**: Added mechanic - Adaptive Mutation
+- **2025-10-02**: Added biome - The Chromatic Mire
+- **2025-10-02**: Added story_scenario - The Last Harvest
 - **2025-10-02**: Added item - Rust-Eater's Revenge

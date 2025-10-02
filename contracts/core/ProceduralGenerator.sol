@@ -488,4 +488,22 @@ function generateGlitchWalkerEncounter(uint256 locationId) external view returns
     ));
 }
 
+
+/**
+ * @notice Generate seed vault encounter based on story scenario
+ */
+function generateSeedVaultEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 seedVarieties = _random(locationId) % 3 + 1; // 1-3 seed varieties
+    uint256 raiderThreat = _random(block.timestamp) % 51 + 50; // 50-100 threat level
+    
+    return string(abi.encodePacked(
+        "Abandoned Seed Vault discovered at location ",
+        _uintToString(locationId),
+        ". Contains ",
+        _uintToString(seedVarieties),
+        " rare seed varieties. Raiders present - threat level: ",
+        _uintToString(raiderThreat),
+        ". Chemical hazards detected - gas masks required."
+    ));
+}
 }
