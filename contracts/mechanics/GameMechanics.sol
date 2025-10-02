@@ -410,4 +410,55 @@ contract GameMechanics is AccessControl, IDeadGrid {
     function trade(uint256[] memory, uint256[] memory, address) external pure override {
         // Implemented in trading contract
     }
+
+/**
+ * @notice Check if survivor meets conditions for adaptive mutation activation
+ * @param survivorId The ID of the survivor to check
+ * @return mutationType The type of mutation that would activate (0 = none, 1 = night vision, 2 = radiation resistance, 3 = strength boost, 4 = stealth)
+ * @return readiness The activation readiness percentage (0-100)
+ */
+function checkMutationReadiness(uint256 survivorId) external view returns (uint8 mutationType, uint8 readiness) {
+    SurvivalStatus memory status = survivalStatus[survivorId];
+    uint8 maxReadiness = 0;
+    uint8 potentialMutation = 0;
+    
+    // Check health threshold for strength mutation
+    if (status.healthLevel <= 15) {
+        uint8 healthReadiness = uint8((15 - status.healthLevel) * 100 / 15);
+        if (healthReadiness > maxReadiness) {
+            maxReadiness = healthReadiness;
+            potentialMutation = 3;
+        }
+    }
+    
+    // Check radiation threshold for radiation resistance mutation
+    if (status.radiationLevel >= 85) {
+        uint8 radiationReadiness = uint8((status.radiationLevel - 85) * 100 / 15);
+        if (radiationReadiness > maxReadiness) {
+            maxReadiness = radiationReadiness;
+            potentialMutation = 2;
+        }
+    }
+    
+    // Check fatigue threshold for stealth mutation
+    if (status.fatigueLevel >= 85) {
+        uint8 fatigueReadiness = uint8((status.fatigueLevel - 85) * 100 / 15);
+        if (fatigueReadiness > maxReadiness) {
+            maxReadiness = fatigueReadiness;
+            potentialMutation = 4;
+        }
+    }
+    
+    // Check hunger threshold for night vision mutation
+    if (status.hungerLevel >= 85) {
+        uint8 hungerReadiness = uint8((status.hungerLevel - 85) * 100 / 15);
+        if (hungerReadiness > maxReadiness) {
+            maxReadiness = hungerReadiness;
+            potentialMutation = 1;
+        }
+    }
+    
+    return (potentialMutation, maxReadiness);
+}
+
 }
