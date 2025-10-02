@@ -1,0 +1,25 @@
+{
+  "title": "The Whispering Grove",
+  "trigger_condition": "When traveling through a forest region at night with high radiation levels",
+  "description": "You stumble upon a grove where the trees glow with an eerie blue luminescence. The air hums with energy, and strange, whispering voices seem to emanate from the twisted trunks. Strange, bioluminescent fungi grow in intricate patterns across the ground, pulsating in rhythm with the whispers.",
+  "choices": [
+    {
+      "option": "Investigate the glowing fungi",
+      "consequence": "Gain 3 units of Glowing Spores (rare crafting material), but suffer -15% health from radiation exposure"
+    },
+    {
+      "option": "Attempt to communicate with the whispers",
+      "consequence": "Learn a fragment of pre-collapse knowledge (+1 Intelligence permanently), but risk temporary insanity (-20% sanity)"
+    },
+    {
+      "option": "Harvest the luminescent bark from the trees",
+      "consequence": "Obtain 5 units of Glowing Wood (uncommon building material), angering the grove spirits (-25 reputation with Forest Faction)"
+    },
+    {
+      "option": "Leave immediately and avoid the area",
+      "consequence": "No immediate gains or losses, but miss potential rewards"
+    }
+  ],
+  "rarity": "rare",
+  "duration": "Single encounter (immediate consequences)"
+}
