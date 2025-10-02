@@ -1,0 +1,25 @@
+{
+  "title": "The Whispering Grove",
+  "trigger_condition": "When the player enters a forest biome during a full moon night",
+  "description": "You stumble upon an ancient grove where the trees seem to whisper in an unknown language. Strange, bioluminescent fungi pulse with soft light, casting eerie shadows. In the center stands a petrified tree with glowing runes carved into its bark, and the air hums with ancient energy.",
+  "choices": [
+    {
+      "option": "Investigate the petrified tree",
+      "consequence": "Gain +1 Intelligence and learn an ancient survival technique, but attract the attention of spectral guardians who will hunt you for the next 3 days"
+    },
+    {
+      "option": "Harvest the glowing fungi",
+      "consequence": "Collect 5 Bioluminescent Spores (valuable crafting material), but the grove's magic fades permanently, reducing future rare encounters in this area by 50%"
+    },
+    {
+      "option": "Listen carefully to the whispers",
+      "consequence": "Decipher a fragment of the ancient language, unlocking hidden lore and gaining temporary night vision for 24 hours, but suffer -1 Sanity from the disturbing revelations"
+    },
+    {
+      "option": "Leave immediately",
+      "consequence": "Avoid all risks, but the grove vanishes and cannot be found again, missing potential rewards"
+    }
+  ],
+  "rarity": "rare",
+  "duration": "Until dawn (approximately 8 hours in-game time)"
+}
