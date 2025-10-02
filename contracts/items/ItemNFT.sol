@@ -333,4 +333,12 @@ function initializeRustEatersRevenge() private {
 function initializeWhispersEcho() private {
     createItem("Whisper's Echo", "A custom-built suppressed sniper rifle from before the Fall. Originally crafted by a legendary assassin known only as 'Whisper,' this weapon was designed for eliminating high-value targets without alerting nearby infected. The barrel bears faint etchings of ghostly figures, and the stock shows signs of countless hours of careful maintenance. Found in an abandoned bunker deep in the Quarantine Zone, it seems to almost hum with silent purpose.", ItemType.WEAPON, Rarity.EPIC, 1);
 }
+
+/**
+ * @notice Initialize Rust-Singer's Lament weapon from content data
+ */
+function initializeRustSingersLament() private {
+    createItem("Rust-Singer's Lament", "Forged from the remains of a pre-Collapse industrial saw blade and wrapped in salvaged copper wiring, this massive sword hums with residual energy. The blade bears faint etchings of assembly line schematics and the serial number 'AX-7' - believed to be from the automated factory that caused the Detroit Meltdown. Those who wield it sometimes hear faint whispers of the machine spirit that once inhabited the manufacturing AI.", ItemType.WEAPON, Rarity.EPIC, 1);
+}
+
 }
