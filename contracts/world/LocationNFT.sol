@@ -412,4 +412,37 @@ contract LocationNFT is ERC721Enumerable, AccessControl, IDeadGrid {
     function supportsInterface(bytes4 interfaceId) public view override(ERC721Enumerable, AccessControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
+
+/**
+ * @notice Calculate chemical hazard effects for Chromatic Mire biome
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate hazards for
+ * @return hazardLevel The calculated hazard level (0-100)
+ * @return resourceBonus Bonus resources available due to chemical richness
+ */
+function calculateChromaticMireHazards(int32 x, int32 y, LocationType locationType) public pure returns (uint32 hazardLevel, uint32 resourceBonus) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "chromatic_mire")));
+    
+    // Base hazard from terrain type
+    if (locationType == LocationType.INFECTED_ZONE) {
+        hazardLevel = 70;
+    } else if (locationType == LocationType.DUNGEON) {
+        hazardLevel = 60;
+    } else if (locationType == LocationType.WASTELAND) {
+        hazardLevel = 50;
+    } else {
+        hazardLevel = 40;
+    }
+    
+    // Add random chemical instability
+    uint256 instability = positionHash % 30;
+    hazardLevel += uint32(instability);
+    
+    // Calculate resource bonus from chemical richness
+    resourceBonus = uint32((positionHash % 20) + 10);
+    
+    return (hazardLevel, resourceBonus);
+}
+
 }
