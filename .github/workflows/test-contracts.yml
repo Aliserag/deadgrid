@@ -25,3 +25,4 @@ jobs:
       # 2025-10-02: Added story_scenario test for feature
       # 2025-10-02: Added biome test for The Chromatic Mire
       # 2025-10-02: Added mechanic test for Adaptive Mutation
+      # 2025-10-02: Added item test for Whisper's Echo
