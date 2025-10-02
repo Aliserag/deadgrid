@@ -1,0 +1,31 @@
+{
+  "name": "The Shimmering Wastes",
+  "description": "A vast expanse of crystalline formations that grew after the Great Collapse, creating a landscape of glittering spires and fractured plains. The crystals emit a faint, hypnotic glow that can disorient travelers, while strange energy fields cause reality to warp unpredictably throughout the region.",
+  "terrain_type": "Crystalline desert with glass-like plains and towering crystal formations",
+  "hazards": [
+    "Reality distortion fields that cause hallucinations",
+    "Sharp crystal shards that can cause deep lacerations",
+    "Energy discharges from charged crystal formations",
+    "Temporary memory loss from prolonged exposure to the shimmer"
+  ],
+  "resources": [
+    "Pure crystalline shards",
+    "Rare energy cores",
+    "Ancient tech fragments embedded in crystal",
+    "Radioactive isotopes",
+    "Purified water collected in crystal basins"
+  ],
+  "ambient_sounds": [
+    "Faint crystalline humming",
+    "Crackling energy discharges",
+    "Glass-like tinkling as crystals shift",
+    "Distant, distorted echoes of past events"
+  ],
+  "weather_patterns": [
+    "Energy storms that scramble electronics",
+    "Crystal dust storms that reduce visibility",
+    "Reality-shimmer events that warp perception",
+    "Clear, unnaturally silent nights with enhanced crystal glow"
+  ],
+  "entry_message": "The air shimmers before you as reality itself seems to warp. Towering crystalline structures catch the fading light, casting rainbow prisms across the glassy plains. A faint hum vibrates through your bones, and you feel the unsettling sensation of being watched by the landscape itself."
+}
