@@ -291,4 +291,28 @@ contract SurvivorNFT is ERC721Enumerable, AccessControl, IDeadGrid {
     function trade(uint256[] memory, uint256[] memory, address) external pure override {
         // Implemented by trading contract
     }
+
+/**
+ * @notice Generate survivor background story based on DNA and occupation
+ * @param dna The survivor's DNA value
+ * @param occupation The survivor's occupation
+ * @return background The generated background story
+ */
+function _generateBackground(uint256 dna, string memory occupation) internal pure returns (string memory) {
+    string[10] memory backgrounds = [
+        "Former marine biologist specializing in coral reefs. Lost family during evacuation. Now survives alone in coastal ruins.",
+        "Ex-military medic turned scavenger. Carries memories of fallen comrades. Expert in field medicine and trauma care.",
+        "Urban engineer who designed safe zones. Witnessed infrastructure collapse firsthand. Practical and resourceful.",
+        "Elementary teacher who protected students during outbreak. Now uses teaching skills to train new survivors.",
+        "Fisherman with coastal survival knowledge. Lost fishing community to the infected. Knows edible sea life and preservation.",
+        "Research scientist studying environmental collapse. Documents ecosystem changes while searching for cure.",
+        "Farmer with agricultural expertise. Maintains hope through small gardens. Believes in rebuilding society.",
+        "Mechanic who keeps old generators running. Values functional tools and systems. Pragmatic and hands-on.",
+        "Journalist documenting survivor stories. Seeks truth amidst the chaos. Carries camera and notebooks everywhere.",
+        "Chef who creates meals from scavenged ingredients. Believes good food maintains humanity in dark times."
+    ];
+    
+    return backgrounds[(dna / 100000000) % 10];
+}
+
 }
