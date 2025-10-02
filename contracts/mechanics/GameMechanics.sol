@@ -496,4 +496,33 @@ function triggerWhisperingGrove(uint256 survivorId, uint8 choice) external retur
     emit WhisperingGroveTriggered(survivorId, choice);
     return true;
 }
+
+/**
+ * @notice Check if survivor meets conditions to encounter the Whispering Grove
+ * @param survivorId The ID of the survivor to check
+ * @param currentRegion The current region type (0 = forest, 1 = urban, 2 = desert, 3 = mountain)
+ * @param isNight Whether it's currently night time
+ * @return canEncounter Whether the survivor can encounter the grove
+ * @return radiationBonus Additional radiation level required for higher encounter chance
+ */
+function checkWhisperingGroveEncounter(uint256 survivorId, uint8 currentRegion, bool isNight) external view returns (bool canEncounter, uint8 radiationBonus) {
+    SurvivalStatus memory status = survivalStatus[survivorId];
+    
+    // Base condition: must be in forest region at night
+    if (currentRegion != 0 || !isNight) {
+        return (false, 0);
+    }
+    
+    // Higher radiation levels increase encounter chance
+    radiationBonus = status.radiationLevel >= 70 ? uint8((status.radiationLevel - 70) / 2) : 0;
+    
+    // Sanity check affects encounter probability
+    uint8 sanityModifier = status.sanity > 80 ? 20 : (status.sanity > 50 ? 10 : 0);
+    
+    // Calculate final encounter chance
+    uint8 encounterChance = 30 + radiationBonus + sanityModifier;
+    
+    canEncounter = encounterChance >= 50;
+    return (canEncounter, radiationBonus);
+}
 }
