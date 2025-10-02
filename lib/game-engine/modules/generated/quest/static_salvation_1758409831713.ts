@@ -10,9 +10,9 @@ export interface StaticSalvationData {
   giver: string;
   description: string;
   objectives: any[];
-  rewards: string;
-  prerequisites: string;
-  dialogue: string;
+  rewards: any;
+  prerequisites: any;
+  dialogue: any;
 }
 
 export class StaticSalvationModule extends GameModule {

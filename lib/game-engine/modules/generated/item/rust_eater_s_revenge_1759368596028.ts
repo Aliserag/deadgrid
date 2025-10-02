@@ -4,19 +4,19 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface RustEater'SRevengeData {
+export interface RustEaterSRevengeData {
   name: string;
   category: string;
   rarity: string;
   weight: number;
   value: number;
-  stats: string;
+  stats: any;
   description: string;
-  special_effects: string;
+  special_effects: any;
 }
 
-export class RustEater'SRevengeModule extends GameModule {
-  static readonly metadata: RustEater'SRevengeData = {
+export class RustEaterSRevengeModule extends GameModule {
+  static readonly metadata: RustEaterSRevengeData = {
       "name": "Rust-Eater's Revenge",
       "category": "weapon",
       "rarity": "epic",
@@ -44,7 +44,7 @@ export class RustEater'SRevengeModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(RustEater'SRevengeModule.metadata);
+      await system.register(RustEaterSRevengeModule.metadata);
     }
     
     // Log registration
@@ -77,4 +77,4 @@ export class RustEater'SRevengeModule extends GameModule {
   }
 }
 
-export default RustEater'SRevengeModule;
+export default RustEaterSRevengeModule;

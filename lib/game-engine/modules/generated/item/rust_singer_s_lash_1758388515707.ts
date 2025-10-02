@@ -4,19 +4,19 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface RustSinger'SLashData {
+export interface RustSingerSLashData {
   name: string;
   category: string;
   rarity: string;
   weight: number;
   value: number;
-  stats: string;
+  stats: any;
   description: string;
-  special_effects: string;
+  special_effects: any;
 }
 
-export class RustSinger'SLashModule extends GameModule {
-  static readonly metadata: RustSinger'SLashData = {
+export class RustSingerSLashModule extends GameModule {
+  static readonly metadata: RustSingerSLashData = {
       "name": "Rust-Singer's Lash",
       "category": "weapon",
       "rarity": "epic",
@@ -40,7 +40,7 @@ export class RustSinger'SLashModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(RustSinger'SLashModule.metadata);
+      await system.register(RustSingerSLashModule.metadata);
     }
     
     // Log registration
@@ -73,4 +73,4 @@ export class RustSinger'SLashModule extends GameModule {
   }
 }
 
-export default RustSinger'SLashModule;
+export default RustSingerSLashModule;

@@ -8,11 +8,11 @@ export interface AdaptiveMutationData {
   name: string;
   category: string;
   description: string;
-  requirements: string;
-  benefits: string;
-  drawbacks: string;
-  progression: string;
-  ui_elements: string;
+  requirements: any;
+  benefits: any;
+  drawbacks: any;
+  progression: any;
+  ui_elements: any;
 }
 
 export class AdaptiveMutationModule extends GameModule {

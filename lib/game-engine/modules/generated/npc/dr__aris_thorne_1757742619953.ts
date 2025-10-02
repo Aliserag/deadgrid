@@ -1,10 +1,10 @@
 /**
- * npc: Dr. Aris Thorne
+ * npc: Dr Aris Thorne
  */
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface Dr.ArisThorneData {
+export interface DrArisThorneData {
   name: string;
   occupation: string;
   personality: any[];
@@ -12,11 +12,11 @@ export interface Dr.ArisThorneData {
   dialogue_style: string;
   inventory: any[];
   quests: any[];
-  backstory: string;
+  backstory: any;
 }
 
-export class Dr.ArisThorneModule extends GameModule {
-  static readonly metadata: Dr.ArisThorneData = {
+export class DrArisThorneModule extends GameModule {
+  static readonly metadata: DrArisThorneData = {
       "name": "Dr. Aris Thorne",
       "occupation": "Botanist and Geneticist",
       "personality": [
@@ -46,7 +46,7 @@ export class Dr.ArisThorneModule extends GameModule {
               "description": "Collect samples of a mysterious plant disease affecting safe zones; dangerous but critical for research."
           }
       ],
-      "backstory": "Before the collapse, Dr. Thorne worked on developing drought-resistant crops. When society fell, he used his knowledge to help found the Greenthumb Collective—a group dedicated to preserving botanical knowledge and creating sustainable food sources. He carries guilt over a failed experiment that may have contributed to one of the more aggressive mutated plant species now roaming the wastes."
+      "backstory": "Before the collapse, Dr Thorne worked on developing drought-resistant crops. When society fell, he used his knowledge to help found the Greenthumb Collective—a group dedicated to preserving botanical knowledge and creating sustainable food sources. He carries guilt over a failed experiment that may have contributed to one of the more aggressive mutated plant species now roaming the wastes."
   };
   
   static readonly type = 'npc';
@@ -57,11 +57,11 @@ export class Dr.ArisThorneModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(Dr.ArisThorneModule.metadata);
+      await system.register(DrArisThorneModule.metadata);
     }
     
     // Log registration
-    console.log(`[Module] Registered npc: Dr. Aris Thorne`);
+    console.log(`[Module] Registered npc: Dr Aris Thorne`);
   }
   
   private getTargetSystem(engine: any): any {
@@ -90,4 +90,4 @@ export class Dr.ArisThorneModule extends GameModule {
   }
 }
 
-export default Dr.ArisThorneModule;
+export default DrArisThorneModule;

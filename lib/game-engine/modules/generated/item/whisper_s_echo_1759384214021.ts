@@ -4,19 +4,19 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface Whisper'SEchoData {
+export interface WhisperSEchoData {
   name: string;
   category: string;
   rarity: string;
   weight: number;
   value: number;
-  stats: string;
+  stats: any;
   description: string;
   special_effects: any[];
 }
 
-export class Whisper'SEchoModule extends GameModule {
-  static readonly metadata: Whisper'SEchoData = {
+export class WhisperSEchoModule extends GameModule {
+  static readonly metadata: WhisperSEchoData = {
       "name": "Whisper's Echo",
       "category": "weapon",
       "rarity": "epic",
@@ -46,7 +46,7 @@ export class Whisper'SEchoModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(Whisper'SEchoModule.metadata);
+      await system.register(WhisperSEchoModule.metadata);
     }
     
     // Log registration
@@ -79,4 +79,4 @@ export class Whisper'SEchoModule extends GameModule {
   }
 }
 
-export default Whisper'SEchoModule;
+export default WhisperSEchoModule;

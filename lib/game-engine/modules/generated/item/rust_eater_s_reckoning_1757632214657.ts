@@ -4,19 +4,19 @@
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface RustEater'SReckoningData {
+export interface RustEaterSReckoningData {
   name: string;
   category: string;
   rarity: string;
   weight: number;
   value: number;
-  stats: string;
+  stats: any;
   description: string;
-  special_effects: string;
+  special_effects: any;
 }
 
-export class RustEater'SReckoningModule extends GameModule {
-  static readonly metadata: RustEater'SReckoningData = {
+export class RustEaterSReckoningModule extends GameModule {
+  static readonly metadata: RustEaterSReckoningData = {
       "name": "Rust-Eater's Reckoning",
       "category": "weapon",
       "rarity": "epic",
@@ -39,7 +39,7 @@ export class RustEater'SReckoningModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(RustEater'SReckoningModule.metadata);
+      await system.register(RustEaterSReckoningModule.metadata);
     }
     
     // Log registration
@@ -72,4 +72,4 @@ export class RustEater'SReckoningModule extends GameModule {
   }
 }
 
-export default RustEater'SReckoningModule;
+export default RustEaterSReckoningModule;

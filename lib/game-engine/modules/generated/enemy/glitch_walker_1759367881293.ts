@@ -22,14 +22,8 @@ export class GlitchWalkerModule extends GameModule {
       "name": "Glitch-Walker",
       "type": "machine",
       "tier": 3,
-      "health": {
-          "min": 180,
-          "max": 220
-      },
-      "damage": {
-          "min": 25,
-          "max": 40
-      },
+      "health": "180-220",
+      "damage": "25-40",
       "speed": "normal",
       "behavior": "stalker",
       "abilities": [

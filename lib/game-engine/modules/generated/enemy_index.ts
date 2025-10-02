@@ -8,3 +8,4 @@ export { default as Rusthulk1757971215153 } from './enemy/rust_hulk_175797121515
 export { default as Glitchhound1758159612652 } from './enemy/glitch_hound_1758159612652';
 export { default as Glitchhound1758193214181 } from './enemy/glitch_hound_1758193214181';
 export { default as Corpsecrawler1759223717011 } from './enemy/corpse_crawler_1759223717011';
+export { default as Glitchwalker1759367881293 } from './enemy/glitch_walker_1759367881293';

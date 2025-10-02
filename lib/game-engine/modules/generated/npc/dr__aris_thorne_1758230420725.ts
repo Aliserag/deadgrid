@@ -1,10 +1,10 @@
 /**
- * npc: Dr. Aris Thorne
+ * npc: Dr Aris Thorne
  */
 
 import { GameModule } from '../../../core/GameModule';
 
-export interface Dr.ArisThorneData {
+export interface DrArisThorneData {
   name: string;
   occupation: string;
   personality: any[];
@@ -12,11 +12,11 @@ export interface Dr.ArisThorneData {
   dialogue_style: string;
   inventory: any[];
   quests: any[];
-  backstory: string;
+  backstory: any;
 }
 
-export class Dr.ArisThorneModule extends GameModule {
-  static readonly metadata: Dr.ArisThorneData = {
+export class DrArisThorneModule extends GameModule {
+  static readonly metadata: DrArisThorneData = {
       "name": "Dr. Aris Thorne",
       "occupation": "Botanical Geneticist",
       "personality": [
@@ -50,7 +50,7 @@ export class Dr.ArisThorneModule extends GameModule {
               "description": "Establish communication with isolated farming communities to share survival knowledge"
           }
       ],
-      "backstory": "Before the collapse, Dr. Thorne worked on developing drought-resistant crops for arid regions. When society fell, she used her knowledge to help survivors identify edible plants and avoid poisonous mutations. She founded the Greenthumb Collective—a network of botanists, farmers, and foragers dedicated to preserving agricultural knowledge and developing sustainable food sources in the wasteland. She carries guilt over not being able to save her original research team, who perished during the initial chaos, and now dedicates her life to ensuring no one starves due to ignorance of the land."
+      "backstory": "Before the collapse, Dr Thorne worked on developing drought-resistant crops for arid regions. When society fell, she used her knowledge to help survivors identify edible plants and avoid poisonous mutations. She founded the Greenthumb Collective—a network of botanists, farmers, and foragers dedicated to preserving agricultural knowledge and developing sustainable food sources in the wasteland. She carries guilt over not being able to save her original research team, who perished during the initial chaos, and now dedicates her life to ensuring no one starves due to ignorance of the land."
   };
   
   static readonly type = 'npc';
@@ -61,11 +61,11 @@ export class Dr.ArisThorneModule extends GameModule {
     // Register with appropriate system
     const system = this.getTargetSystem(engine);
     if (system) {
-      await system.register(Dr.ArisThorneModule.metadata);
+      await system.register(DrArisThorneModule.metadata);
     }
     
     // Log registration
-    console.log(`[Module] Registered npc: Dr. Aris Thorne`);
+    console.log(`[Module] Registered npc: Dr Aris Thorne`);
   }
   
   private getTargetSystem(engine: any): any {
@@ -94,4 +94,4 @@ export class Dr.ArisThorneModule extends GameModule {
   }
 }
 
-export default Dr.ArisThorneModule;
+export default DrArisThorneModule;

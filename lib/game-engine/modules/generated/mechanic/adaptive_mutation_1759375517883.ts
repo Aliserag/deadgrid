@@ -8,10 +8,10 @@ export interface AdaptiveMutationData {
   name: string;
   category: string;
   description: string;
-  requirements: string;
+  requirements: any;
   benefits: any[];
   drawbacks: any[];
-  progression: string;
+  progression: any;
   ui_elements: any[];
 }
 

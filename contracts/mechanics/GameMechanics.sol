@@ -461,4 +461,39 @@ function checkMutationReadiness(uint256 survivorId) external view returns (uint8
     return (potentialMutation, maxReadiness);
 }
 
+
+/**
+ * @notice Trigger the Whispering Grove event for a survivor
+ * @param survivorId The ID of the survivor entering the grove
+ * @param choice The player's choice (0-3) from the event options
+ * @return success Whether the event was successfully triggered
+ */
+function triggerWhisperingGrove(uint256 survivorId, uint8 choice) external returns (bool success) {
+    require(choice < 4, "Invalid choice");
+    
+    SurvivalStatus storage status = survivalStatus[survivorId];
+    
+    if (choice == 0) {
+        // Investigate petrified tree
+        status.intelligence += 1;
+        status.spectralGuardians = 3; // Hunted for 3 days
+    } else if (choice == 1) {
+        // Harvest glowing fungi
+        uint256[] memory spores = new uint256[](5);
+        for (uint256 i = 0; i < 5; i++) {
+            spores[i] = _mintItem(survivorId, ITEM_BIOLUMINESCENT_SPORE);
+        }
+        status.groveMagicFaded = true;
+    } else if (choice == 2) {
+        // Listen to whispers
+        status.nightVision = 24; // Hours
+        if (status.sanity > 0) {
+            status.sanity -= 1;
+        }
+    }
+    // Choice 3 (Leave) has no effect
+    
+    emit WhisperingGroveTriggered(survivorId, choice);
+    return true;
+}
 }

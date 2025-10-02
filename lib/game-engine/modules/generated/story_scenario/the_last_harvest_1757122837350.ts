@@ -7,16 +7,16 @@ import { GameModule } from '../../../core/GameModule';
 export interface TheLastHarvestData {
   title: string;
   protagonist: any;
-  setting: string;
+  setting: any;
   situation: string;
-  attempted_solution: string;
+  attempted_solution: any;
   complications: string;
-  resolution: string;
+  resolution: any;
   lesson_learned: string;
   casualties: any[];
   resources_gained: any[];
   moral_choice: string;
-  long_term_impact: string;
+  long_term_impact: any;
 }
 
 export class TheLastHarvestModule extends GameModule {
