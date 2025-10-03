@@ -524,4 +524,23 @@ function generateAgriculturalResearchEncounter(uint256 locationId) external view
         ". Climate control failing - immediate action required."
     ));
 }
+
+/**
+ * @notice Generate fungal blight encounter based on story scenario
+ */
+function generateFungalBlightEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 cropLoss = _random(locationId) % 41 + 30; // 30-70% crop loss
+    uint256 sporeContamination = _random(block.timestamp) % 51 + 50; // 50-100 contamination level
+    
+    return string(abi.encodePacked(
+        "Fungal Blight detected at location ",
+        _uintToString(locationId),
+        ". Crop loss: ",
+        _uintToString(cropLoss),
+        "%. Spore contamination: ",
+        _uintToString(sporeContamination),
+        "%. Antifungal treatment required - protective gear mandatory."
+    ));
+}
+
 }
