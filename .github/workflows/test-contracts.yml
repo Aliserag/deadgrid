@@ -30,3 +30,4 @@ jobs:
       # 2025-10-02: Added event test for feature
       # 2025-10-02: Added item test for Rust-Singer's Lament
       # 2025-10-02: Added biome test for The Rustwood Tangle
+      # 2025-10-03: Added story_scenario test for feature
