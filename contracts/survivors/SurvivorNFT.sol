@@ -336,4 +336,23 @@ function _generateMentalState(uint256 dna, uint256 daysSurvived) internal pure r
     
     return mentalStates[(dna + daysSurvived) % 8];
 }
+
+/**
+ * @notice Generate survivor's salt water resistance based on DNA and discoveries
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return saltWaterResistance The generated salt water resistance level
+ */
+function _generateSaltWaterResistance(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[5] memory resistanceLevels = [
+        "Vulnerable to salt water exposure",
+        "Basic salt water tolerance",
+        "Moderate salt water resistance",
+        "High salt water immunity",
+        "Complete salt water adaptation"
+    ];
+    
+    return resistanceLevels[(dna + daysSurvived) % 5];
+}
+
 }
