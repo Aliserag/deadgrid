@@ -12,12 +12,17 @@
     "@stacks/connect": "^8.2.0",
     "@stacks/network": "^7.2.0",
     "@stacks/transactions": "^7.2.0",
+    "@tanstack/react-query": "^5.90.2",
+    "@web3modal/ethereum": "^2.7.1",
+    "@web3modal/wagmi": "^5.1.11",
     "next": "15.5.2",
     "node-fetch": "^2.7.0",
     "phaser": "^3.90.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-use-measure": "^2.1.7",
+    "viem": "^2.37.12",
+    "wagmi": "^2.17.5",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
