@@ -603,4 +603,31 @@ function triggerScavengerBargain(uint256 survivorId, uint8 choice) external retu
     emit ScavengerBargainTriggered(survivorId, choice);
     return true;
 }
+
+/**
+ * @notice Check if a survivor can encounter the Scavenger's Bargain event
+ * @param survivorId The ID of the survivor to check
+ * @param currentRegion The current region the survivor is in
+ * @param hungerPercentage The survivor's current hunger percentage
+ * @return canEncounter Whether the survivor can encounter the event
+ * @return hostilityChance The chance the scavenger becomes hostile if refusing trade
+ */
+function checkScavengerBargainEncounter(uint256 survivorId, uint8 currentRegion, uint8 hungerPercentage) external view returns (bool canEncounter, uint8 hostilityChance) {
+    SurvivalStatus memory status = survivalStatus[survivorId];
+    
+    // Base condition: must be in market district with at least 50% hunger
+    if (currentRegion != 2 || hungerPercentage < 50) {
+        return (false, 0);
+    }
+    
+    // Higher hunger increases encounter chance
+    uint8 hungerBonus = hungerPercentage >= 80 ? 30 : (hungerPercentage >= 65 ? 20 : 10);
+    
+    // Calculate final encounter chance
+    uint8 encounterChance = 40 + hungerBonus;
+    
+    canEncounter = encounterChance >= 50;
+    hostilityChance = 25; // Fixed 25% chance scavenger becomes hostile if refusing trade
+    return (canEncounter, hostilityChance);
+}
 }
