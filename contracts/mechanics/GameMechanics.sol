@@ -567,4 +567,40 @@ function triggerWhisperingFog(uint256 survivorId, uint8 choice) external returns
     emit WhisperingFogTriggered(survivorId, choice);
     return true;
 }
+
+/**
+ * @notice Trigger the Scavenger's Bargain event for a survivor
+ * @param survivorId The ID of the survivor encountering the scavenger
+ * @param choice The player's trade choice (0-3) from the event options
+ * @return success Whether the event was successfully triggered
+ */
+function triggerScavengerBargain(uint256 survivorId, uint8 choice) external returns (bool success) {
+    require(choice < 4, "Invalid choice");
+    
+    SurvivalStatus storage status = survivalStatus[survivorId];
+    
+    if (choice == 0) {
+        // Trade for medical supplies
+        _consumeItem(survivorId, ITEM_CLEAN_WATER, 3);
+        _mintItem(survivorId, ITEM_MEDKIT);
+        _mintItem(survivorId, ITEM_MEDKIT);
+        _mintItem(survivorId, ITEM_ANTIBIOTIC);
+    } else if (choice == 1) {
+        // Trade for ammunition
+        _consumeItem(survivorId, ITEM_FOOD_RATION, 2);
+        _mintItem(survivorId, ITEM_AMMO_COMMON);
+        _mintItem(survivorId, ITEM_AMMO_COMMON);
+        _mintItem(survivorId, ITEM_AMMO_COMMON);
+    } else if (choice == 2) {
+        // Trade for information
+        _consumeItem(survivorId, ITEM_VALUABLE_TRINKET, 1);
+        status.hiddenCacheRevealed = true;
+    } else if (choice == 3) {
+        // Decline and move on
+        status.scavengerReputation += 1;
+    }
+    
+    emit ScavengerBargainTriggered(survivorId, choice);
+    return true;
+}
 }
