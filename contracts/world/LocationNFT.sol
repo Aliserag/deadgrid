@@ -478,4 +478,36 @@ function calculateRustwoodTangleEffects(int32 x, int32 y, LocationType locationT
     return (hazardLevel, energyCrystals);
 }
 
+
+/**
+ * @notice Calculate magnetic anomaly effects for Rustwood Tangle biome
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate anomalies for
+ * @return anomalyStrength The calculated magnetic anomaly strength (0-100)
+ * @return bioMetallicAlloys Amount of bio-metallic alloys available
+ */
+function calculateRustwoodTangleMagneticAnomalies(int32 x, int32 y, LocationType locationType) public pure returns (uint32 anomalyStrength, uint32 bioMetallicAlloys) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rustwood_magnetic")));
+    
+    // Base anomaly strength from terrain type
+    if (locationType == LocationType.DUNGEON) {
+        anomalyStrength = 75;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        anomalyStrength = 60;
+    } else if (locationType == LocationType.WASTELAND) {
+        anomalyStrength = 50;
+    } else {
+        anomalyStrength = 40;
+    }
+    
+    // Add magnetic disturbance from biome hazards
+    uint256 disturbance = positionHash % 40;
+    anomalyStrength += uint32(disturbance);
+    
+    // Calculate bio-metallic alloys from fused ecosystem
+    bioMetallicAlloys = uint32((positionHash % 30) + 20);
+    
+    return (anomalyStrength, bioMetallicAlloys);
+}
 }
