@@ -525,4 +525,46 @@ function checkWhisperingGroveEncounter(uint256 survivorId, uint8 currentRegion, 
     canEncounter = encounterChance >= 50;
     return (canEncounter, radiationBonus);
 }
+
+/**
+ * @notice Trigger the Whispering Fog event for a survivor
+ * @param survivorId The ID of the survivor encountering the fog
+ * @param choice The player's choice (0-3) from the event options
+ * @return success Whether the event was successfully triggered
+ */
+function triggerWhisperingFog(uint256 survivorId, uint8 choice) external returns (bool success) {
+    require(choice < 4, "Invalid choice");
+    
+    SurvivalStatus storage status = survivalStatus[survivorId];
+    
+    if (choice == 0) {
+        // Follow the whispers deeper into the fog
+        status.perceptionBonus = 24; // Hours
+        if (status.sanity >= 30) {
+            status.sanity -= 30;
+        } else {
+            status.sanity = 0;
+        }
+        status.spectralGuardians = 1; // Risk encountering hostile spectral entities
+    } else if (choice == 1) {
+        // Build protective circle and wait it out
+        status.travelTime += 6; // Hours
+        status.resourceConsumption = true;
+    } else if (choice == 2) {
+        // Use flares to burn away the mist
+        _consumeItem(survivorId, ITEM_FLARE, 3);
+        status.attentionDrawn = true; // Attracts nearby creatures
+    } else if (choice == 3) {
+        // Cover ears and navigate by touch
+        if (status.sanity >= 10) {
+            status.sanity -= 10;
+        } else {
+            status.sanity = 0;
+        }
+        status.environmentalHazardRisk = true;
+    }
+    
+    emit WhisperingFogTriggered(survivorId, choice);
+    return true;
+}
 }
