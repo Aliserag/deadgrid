@@ -1,0 +1,25 @@
+{
+  "title": "The Scavenger's Bargain",
+  "trigger_condition": "Player enters an abandoned market district with at least 50% inventory space remaining",
+  "description": "You stumble upon a makeshift stall manned by a gaunt figure in patched clothing. Various salvaged goods are displayed on a tarp-covered table. The scavenger eyes you warily but makes no threatening moves. 'Trade?' he rasps, gesturing to his wares. His prices seem unusually reasonable for the wasteland.",
+  "choices": [
+    {
+      "option": "Trade for medical supplies",
+      "consequence": "Lose 3 units of clean water, gain 2 medkits and 1 antibiotic"
+    },
+    {
+      "option": "Trade for ammunition",
+      "consequence": "Lose 2 days worth of food rations, gain 15 rounds of common caliber ammunition"
+    },
+    {
+      "option": "Trade for information",
+      "consequence": "Lose 1 valuable trinket, gain location of a hidden cache (reveals new map marker)"
+    },
+    {
+      "option": "Decline and move on",
+      "consequence": "No trade occurs, but the scavenger remembers your honesty (may offer better deals in future encounters)"
+    }
+  ],
+  "rarity": "uncommon",
+  "duration": "Until player leaves the market district or completes one trade"
+}
