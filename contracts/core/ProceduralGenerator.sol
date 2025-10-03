@@ -506,4 +506,22 @@ function generateSeedVaultEncounter(uint256 locationId) external view returns (s
         ". Chemical hazards detected - gas masks required."
     ));
 }
+
+/**
+ * @notice Generate agricultural research encounter based on story scenario
+ */
+function generateAgriculturalResearchEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 seedPreservation = _random(locationId) % 41 + 60; // 60-100 preservation level
+    uint256 scavengerThreat = _random(block.timestamp) % 31 + 70; // 70-100 threat level
+    
+    return string(abi.encodePacked(
+        "Agricultural Research Facility discovered at location ",
+        _uintToString(locationId),
+        ". Seed preservation: ",
+        _uintToString(seedPreservation),
+        "%. Scavenger threat level: ",
+        _uintToString(scavengerThreat),
+        ". Climate control failing - immediate action required."
+    ));
+}
 }
