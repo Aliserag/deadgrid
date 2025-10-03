@@ -11,3 +11,4 @@ export { default as Rusteatersreckoning1758492614619 } from './item/rust_eater_s
 export { default as Rusteaterslament1758772816127 } from './item/rust_eater_s_lament_1758772816127';
 export { default as Rusteatersrevenge1759368596028 } from './item/rust_eater_s_revenge_1759368596028';
 export { default as Whispersecho1759384214021 } from './item/whisper_s_echo_1759384214021';
+export { default as Rustsingerslament1759434313700 } from './item/rust_singer_s_lament_1759434313700';

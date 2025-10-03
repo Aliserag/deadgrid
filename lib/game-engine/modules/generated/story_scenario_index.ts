@@ -21,3 +21,4 @@ export { default as Thelastharvest1759229442596 } from './story_scenario/the_las
 export { default as Thelastharvest1759257936962 } from './story_scenario/the_last_harvest_1759257936962';
 export { default as Thelastharvest1759365793514 } from './story_scenario/the_last_harvest_1759365793514';
 export { default as Thelastharvest1759369242577 } from './story_scenario/the_last_harvest_1759369242577';
+export { default as Thelastharvest1759455639567 } from './story_scenario/the_last_harvest_1759455639567';

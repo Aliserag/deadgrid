@@ -14,3 +14,6 @@ export { default as Thelastbroadcast1758252318721 } from './event/the_last_broad
 export { default as Thescavengersbargain1758270919956 } from './event/the_scavenger_s_bargain_1758270919956';
 export { default as Theglimmeringcache1758292215761 } from './event/the_glimmering_cache_1758292215761';
 export { default as Theweepinggrove1758751520394 } from './event/the_weeping_grove_1758751520394';
+export { default as Thewhisperinggrove1759440016207 } from './event/the_whispering_grove_1759440016207';
+export { default as Thewhisperingfog1759460957412 } from './event/the_whispering_fog_1759460957412';
+export { default as Thescavengersbargain1759511716331 } from './event/the_scavenger_s_bargain_1759511716331';
