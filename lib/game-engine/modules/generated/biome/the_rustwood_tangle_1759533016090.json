@@ -1,0 +1,31 @@
+{
+  "name": "The Rustwood Tangle",
+  "description": "A bizarre forest where metal and organic matter have fused into a single ecosystem. Twisted trees with metallic bark grow alongside crystalline fungi that pulse with faint energy. The air smells of ozone and damp earth, creating an unsettling yet strangely beautiful landscape.",
+  "terrain_type": "Metallic-organic hybrid forest with crystalline formations",
+  "hazards": [
+    "Corrosive sap dripping from metallic trees",
+    "Unstable energy discharges from crystal formations",
+    "Magnetic anomalies that disrupt electronics",
+    "Razor-sharp metallic foliage"
+  ],
+  "resources": [
+    "Conductive crystal shards",
+    "Purified metallic sap",
+    "Rare earth elements",
+    "Bio-metallic alloys",
+    "Energy cells from crystal formations"
+  ],
+  "ambient_sounds": [
+    "Metallic creaking and groaning from shifting trees",
+    "Faint crystalline humming",
+    "Distant electrical crackling",
+    "Echoing drips of corrosive fluids"
+  ],
+  "weather_patterns": [
+    "Acidic mist storms",
+    "Energy surges that make crystals glow intensely",
+    "Magnetic disturbances",
+    "Heavy metallic rain that pings against surfaces"
+  ],
+  "entry_message": "You step into the Rustwood Tangle, where nature and machine have become one. Metallic trees creak ominously as crystalline fungi cast an eerie glow across the landscape. The air hums with latent energy, warning of the dangers hidden within this strange fusion of worlds."
+}
