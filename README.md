@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-04**: Added biome - The Rustwood Expanse
 - **2025-10-04**: Added mechanic - Adaptive Mutation
 - **2025-10-03**: Added biome - The Rustwood Tangle
 - **2025-10-03**: Added story_scenario - The Last Harvest
