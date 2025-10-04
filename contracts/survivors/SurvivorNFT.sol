@@ -355,4 +355,23 @@ function _generateSaltWaterResistance(uint256 dna, uint256 daysSurvived) externa
     return resistanceLevels[(dna + daysSurvived) % 5];
 }
 
+
+/**
+ * @notice Generate survivor's salt water discovery knowledge based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return discovery The generated salt water discovery knowledge
+ */
+function _generateSaltWaterDiscovery(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory discoveries = [
+        "Unaware of salt water effects on infected",
+        "Observed infected avoiding submerged areas",
+        "Knows salt water slows infected movement",
+        "Uses salt water as defensive barrier",
+        "Expert in coastal infected behavior patterns",
+        "Master of marine environment survival tactics"
+    ];
+    
+    return discoveries[(dna + daysSurvived) % 6];
+}
 }
