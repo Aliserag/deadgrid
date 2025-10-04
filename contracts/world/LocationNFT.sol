@@ -575,4 +575,36 @@ function calculateRustCathedralEffects(int32 x, int32 y, LocationType locationTy
     return (hazardLevel, rareComponents);
 }
 
+
+/**
+ * @notice Calculate Rust Cathedral steam forge crafting bonuses and hazards
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return forgeBonus The calculated crafting bonus (0-100)
+ * @return steamHazard The calculated steam explosion hazard level (0-100)
+ */
+function calculateRustCathedralForgeEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 forgeBonus, uint32 steamHazard) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rust_cathedral_forge")));
+    
+    // Base forge bonus from location type
+    if (locationType == LocationType.DUNGEON) {
+        forgeBonus = 80;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        forgeBonus = 65;
+    } else if (locationType == LocationType.WASTELAND) {
+        forgeBonus = 45;
+    } else {
+        forgeBonus = 30;
+    }
+    
+    // Add random variation from forge condition
+    uint256 forgeCondition = positionHash % 25;
+    forgeBonus += uint32(forgeCondition);
+    
+    // Calculate steam hazard from poorly maintained pipes
+    steamHazard = uint32((positionHash % 40) + 30);
+    
+    return (forgeBonus, steamHazard);
+}
 }
