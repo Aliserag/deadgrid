@@ -630,4 +630,51 @@ function checkScavengerBargainEncounter(uint256 survivorId, uint8 currentRegion,
     hostilityChance = 25; // Fixed 25% chance scavenger becomes hostile if refusing trade
     return (canEncounter, hostilityChance);
 }
+
+/**
+ * @notice Trigger adaptive mutation for a survivor when conditions are met
+ * @param survivorId The ID of the survivor to check for mutation
+ * @param mutationType The type of mutation to activate (0-4)
+ * @return success Whether the mutation was successfully triggered
+ */
+function triggerAdaptiveMutation(uint256 survivorId, uint8 mutationType) external returns (bool success) {
+    require(mutationType < 5, "Invalid mutation type");
+    
+    SurvivalStatus storage status = survivalStatus[survivorId];
+    
+    // Check mutation requirements
+    require(status.environmentalExposure >= 70, "Insufficient environmental exposure");
+    require(status.contaminatedConsumption >= 3, "Insufficient contaminated consumption");
+    require(status.health < (status.maxHealth / 2), "Health above mutation threshold");
+    
+    // Apply mutation benefits
+    if (mutationType == 0) {
+        status.radiationResistance = 40;
+    } else if (mutationType == 1) {
+        status.toxinImmunity = true;
+    } else if (mutationType == 2) {
+        status.thermalVision = 300; // Seconds
+    } else if (mutationType == 3) {
+        status.healthRegeneration = 1; // Percent per second
+    } else if (mutationType == 4) {
+        status.meleeDamageBonus = 30;
+    }
+    
+    // Set mutation duration based on progression level
+    if (status.mutationProgression >= 3) {
+        status.activeMutationDuration = 480; // 8 minutes for master
+    } else if (status.mutationProgression >= 2) {
+        status.activeMutationDuration = 360; // 6 minutes for advanced
+    } else if (status.mutationProgression >= 1) {
+        status.activeMutationDuration = 240; // 4 minutes for intermediate
+    } else {
+        status.activeMutationDuration = 120; // 2 minutes for basic
+    }
+    
+    status.activeMutation = mutationType + 1; // Store active mutation (1-5)
+    status.mutationActive = true;
+    
+    emit AdaptiveMutationTriggered(survivorId, mutationType, status.activeMutationDuration);
+    return true;
+}
 }
