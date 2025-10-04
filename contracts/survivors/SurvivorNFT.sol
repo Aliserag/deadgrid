@@ -392,4 +392,23 @@ function _generateFungalSporeResistance(uint256 dna, uint256 daysSurvived) exter
     
     return resistanceLevels[(dna + daysSurvived) % 5];
 }
+
+/**
+ * @notice Generate survivor's marine life observation skill based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return observationSkill The generated marine life observation skill level
+ */
+function _generateMarineObservationSkill(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory observationSkills = [
+        "No marine life observation skills",
+        "Basic coastal creature identification",
+        "Can track tidal patterns and marine behavior",
+        "Expert in edible marine species and harvesting",
+        "Understands marine ecosystem changes and adaptations",
+        "Master marine biologist with survival applications"
+    ];
+    
+    return observationSkills[(dna + daysSurvived) % 6];
+}
 }
