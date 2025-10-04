@@ -543,4 +543,26 @@ function generateFungalBlightEncounter(uint256 locationId) external view returns
     ));
 }
 
+
+/**
+ * @notice Generate survivor rescue encounter based on story scenario
+ */
+function generateSurvivorRescueEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 survivorCount = _random(locationId) % 2 + 1; // 1-2 survivors
+    uint256 raiderThreat = _random(block.timestamp) % 61 + 40; // 40-100 threat level
+    uint256 resourceCost = _random(locationId) % 31 + 20; // 20-50 resource cost
+    
+    return string(abi.encodePacked(
+        "Survivors in distress at location ",
+        _uintToString(locationId),
+        ". ",
+        _uintToString(survivorCount),
+        " survivor(s) need rescue. Raider threat: ",
+        _uintToString(raiderThreat),
+        "%. Resource cost for rescue: ",
+        _uintToString(resourceCost),
+        " units. Moral choice required - save survivors or preserve resources."
+    ));
+}
+
 }
