@@ -565,4 +565,22 @@ function generateSurvivorRescueEncounter(uint256 locationId) external view retur
     ));
 }
 
+
+/**
+ * @notice Generate Corpse-Crawler enemy encounter with burrow ambush ability
+ */
+function generateCorpseCrawlerEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 health = _random(block.timestamp) % 41 + 80; // 80-120 health
+    uint256 damage = _random(locationId) % 11 + 15; // 15-25 damage
+    
+    return string(abi.encodePacked(
+        "Corpse-Crawler detected at location ",
+        _uintToString(locationId),
+        ". Health: ",
+        _uintToString(health),
+        ", Damage: ",
+        _uintToString(damage),
+        ". Burrow Ambush active - can emerge from underground unexpectedly."
+    ));
+}
 }
