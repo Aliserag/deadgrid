@@ -37,3 +37,4 @@ jobs:
       # 2025-10-04: Added mechanic test for Adaptive Mutation
       # 2025-10-04: Added biome test for The Rustwood Expanse
       # 2025-10-04: Added survivor_log test for feature
+      # 2025-10-04: Added location test for The Rust Cathedral
