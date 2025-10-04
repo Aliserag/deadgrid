@@ -374,4 +374,22 @@ function _generateSaltWaterDiscovery(uint256 dna, uint256 daysSurvived) external
     
     return discoveries[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's fungal spore resistance based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return sporeResistance The generated fungal spore resistance level
+ */
+function _generateFungalSporeResistance(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[5] memory resistanceLevels = [
+        "Highly vulnerable to fungal spores",
+        "Basic spore resistance with proper gear",
+        "Moderate spore immunity developed over time",
+        "High resistance to airborne fungal particles",
+        "Complete fungal spore adaptation"
+    ];
+    
+    return resistanceLevels[(dna + daysSurvived) % 5];
+}
 }
