@@ -510,4 +510,36 @@ function calculateRustwoodTangleMagneticAnomalies(int32 x, int32 y, LocationType
     
     return (anomalyStrength, bioMetallicAlloys);
 }
+
+/**
+ * @notice Calculate Rustwood Expanse biome hazards and resource bonuses
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return hazardLevel The calculated hazard level (0-100)
+ * @return salvagedElectronics Amount of salvaged electronics available
+ */
+function calculateRustwoodExpanseEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 hazardLevel, uint32 salvagedElectronics) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rustwood_expanse")));
+    
+    // Base hazard from terrain type
+    if (locationType == LocationType.DUNGEON) {
+        hazardLevel = 70;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        hazardLevel = 60;
+    } else if (locationType == LocationType.WASTELAND) {
+        hazardLevel = 50;
+    } else {
+        hazardLevel = 40;
+    }
+    
+    // Add industrial instability from biome hazards
+    uint256 instability = positionHash % 35;
+    hazardLevel += uint32(instability);
+    
+    // Calculate salvaged electronics from industrial ruins
+    salvagedElectronics = uint32((positionHash % 30) + 20);
+    
+    return (hazardLevel, salvagedElectronics);
+}
 }
