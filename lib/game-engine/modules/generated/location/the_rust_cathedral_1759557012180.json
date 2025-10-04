@@ -1,0 +1,20 @@
+{
+  "name": "The Rust Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": [
+    "Scrap Cultists",
+    "Radiation-mutated crows",
+    "Automated defense systems"
+  ],
+  "notable_features": [
+    "Former pre-collapse industrial cathedral converted into scrap worship site",
+    "Functioning steam-powered forge in the nave",
+    "Stained glass windows depicting mechanical deities",
+    "Network of maintenance tunnels beneath the main hall",
+    "Rusted pipe organ that still produces haunting mechanical music"
+  ],
+  "exploration_notes": "Players discover a bizarre fusion of industrial machinery and religious iconography. The main hall contains working forges where cultists craft weapons from scrap. Hidden compartments in the confessionals contain valuable blueprints and rare components. The underground tunnels lead to a secret workshop with advanced crafting stations, but are heavily trapped and patrolled by fanatical scrap-worshippers who view technology as divine."
+}
