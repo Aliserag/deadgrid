@@ -542,4 +542,37 @@ function calculateRustwoodExpanseEffects(int32 x, int32 y, LocationType location
     
     return (hazardLevel, salvagedElectronics);
 }
+
+/**
+ * @notice Calculate Rust Cathedral biome hazards and resource bonuses
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return hazardLevel The calculated hazard level (0-100)
+ * @return rareComponents Number of rare components available
+ */
+function calculateRustCathedralEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 hazardLevel, uint32 rareComponents) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rust_cathedral")));
+    
+    // Base hazard from terrain type
+    if (locationType == LocationType.DUNGEON) {
+        hazardLevel = 70;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        hazardLevel = 60;
+    } else if (locationType == LocationType.WASTELAND) {
+        hazardLevel = 50;
+    } else {
+        hazardLevel = 40;
+    }
+    
+    // Add cultist and mechanical hazards from biome
+    uint256 cultistDanger = positionHash % 30;
+    hazardLevel += uint32(cultistDanger);
+    
+    // Calculate rare components from hidden workshops and confessionals
+    rareComponents = uint32((positionHash % 35) + 25);
+    
+    return (hazardLevel, rareComponents);
+}
+
 }
