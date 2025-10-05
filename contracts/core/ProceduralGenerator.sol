@@ -583,4 +583,25 @@ function generateCorpseCrawlerEncounter(uint256 locationId) external view return
         ". Burrow Ambush active - can emerge from underground unexpectedly."
     ));
 }
+
+/**
+ * @notice Generate moral choice encounter based on story scenario
+ */
+function generateMoralChoiceEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 immediateBenefit = _random(locationId) % 41 + 60; // 60-100 immediate benefit
+    uint256 longTermValue = _random(block.timestamp) % 41 + 60; // 60-100 long-term value
+    uint256 communityTrust = _random(locationId) % 51 + 50; // 50-100 trust impact
+    
+    return string(abi.encodePacked(
+        "Moral Choice required at location ",
+        _uintToString(locationId),
+        ". Immediate benefit: ",
+        _uintToString(immediateBenefit),
+        "%. Long-term value: ",
+        _uintToString(longTermValue),
+        "%. Community trust impact: ",
+        _uintToString(communityTrust),
+        "%. Choose: Save current survivors or preserve knowledge for future."
+    ));
+}
 }
