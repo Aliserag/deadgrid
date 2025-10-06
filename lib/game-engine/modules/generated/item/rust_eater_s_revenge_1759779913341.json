@@ -1,0 +1,19 @@
+{
+  "name": "Rust-Eater's Revenge",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 450,
+  "stats": {
+    "damage": 28,
+    "durability": 85,
+    "attack_speed": 0.8,
+    "armor_penetration": 15
+  },
+  "description": "Forged from the remains of a pre-Collapse industrial shredder, this massive blade bears deep grooves where acid rain has permanently etched its surface. The weapon was crafted by the legendary scavenger known only as 'Rust-Eater,' who supposedly survived the Corrosive Storms of '78 by sheltering in an ancient factory. The blade hums faintly when radiation levels spike, serving as an impromptu Geiger counter for those who learn its language.",
+  "special_effects": [
+    "Corrosive Strikes: 25% chance to inflict 'Corrosion' status on hit, reducing target's armor by 20% for 10 seconds",
+    "Radiation Sense: Glows faintly blue when radiation levels exceed 50 rads",
+    "Factory Born: Deals 15% additional damage to robotic enemies and mechanical constructs"
+  ]
+}
