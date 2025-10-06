@@ -41,3 +41,4 @@ jobs:
       # 2025-10-04: Added story_scenario test for feature
       # 2025-10-04: Added enemy test for Corpse-Crawler
       # 2025-10-05: Added story_scenario test for feature
+      # 2025-10-06: Added survivor_log test for feature
