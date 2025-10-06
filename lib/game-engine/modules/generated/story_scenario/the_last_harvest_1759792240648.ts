@@ -1,0 +1,94 @@
+/**
+ * story_scenario: The Last Harvest
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface TheLastHarvestData {
+  title: string;
+  protagonist: string;
+  setting: string;
+  situation: string;
+  attempted_solution: string;
+  complications: string;
+  resolution: string;
+  lesson_learned: string;
+  casualties: any[];
+  resources_gained: any[];
+  moral_choice: string;
+  long_term_impact: string;
+}
+
+export class TheLastHarvestModule extends GameModule {
+  static readonly metadata: TheLastHarvestData = {
+      "title": "The Last Harvest",
+      "protagonist": {
+          "name": "Dr. Aris Thorne",
+          "backstory": "Former botanist and seed bank researcher who survived the initial collapse by fortifying his university's agricultural research station. Haunted by the memory of his research team being overrun by desperate survivors during the early chaos."
+      },
+      "setting": {
+          "location": "Ruined University of Northwood Agricultural Research Center, surrounded by the skeletal remains of what was once fertile farmland",
+          "time": "Late autumn, three years after the Collapse. The air carries the bite of early frost and the scent of decay."
+      },
+      "situation": "Aris discovered a sealed greenhouse with viable frost-resistant potato hybrids—potentially enough food to sustain his small community through the brutal winter. However, the greenhouse is structurally compromised and located in a contested zone controlled by the 'Rust Dogs,' a violent scavenger gang that patrols the area. The community's children are already showing signs of malnutrition, and their existing supplies will last only three more weeks. Every day of delay means stronger frosts and more vigilant patrols.",
+      "attempted_solution": "Aris planned a night operation with two volunteers—Maya, a former park ranger skilled in stealth, and Eli, a mechanic who knew the terrain. They used knowledge of old maintenance tunnels to bypass main patrol routes. Aris developed a diversion—setting fire to an abandoned warehouse far from the greenhouse to draw the Rust Dogs' attention. They carried minimal gear: harvesting tools, seed bags, and Eli's homemade silencers for their few remaining firearms. The plan relied on speed and precision—get in, harvest the potatoes and seeds, and retreat before the diversion faded.",
+      "complications": "The diversion worked too well. Instead of drawing patrols away, the massive fire alerted the entire Rust Dog territory. As Aris's team began harvesting, they heard vehicles approaching from multiple directions. Eli's homemade silencer failed during a confrontation with a lone guard, the shot echoing through the night. Maya was grazed by return fire while covering their retreat. Worst of all, they discovered most potatoes had developed a fungal rot in the damp greenhouse—only about a third were salvageable. Their escape route through the tunnels was blocked by a recent collapse, forcing them into the open.",
+      "resolution": "Trapped between advancing Rust Dogs and certain starvation back home, Aris made a desperate choice. He used their remaining explosives to collapse a section of the research center's main building, creating enough chaos for Maya and Eli to escape with what little food they'd gathered. Aris stayed behind as bait, leading the Rust Dogs on a chase through the burning complex. He ultimately escaped through an old storm drain, but suffered severe smoke inhalation and frostbite in his left hand. The community survived the winter, but just barely—the potatoes provided only two months of meager rations instead of the five they'd hoped for.",
+      "lesson_learned": "Never stake survival on a single resource, no matter how promising. Diversification and contingency planning are more valuable than any single bounty.",
+      "casualties": [
+          "Eli succumbed to infected wounds two weeks after the mission",
+          "Three community members died from malnutrition during the winter despite rationing",
+          "An unknown number of Rust Dogs perished in the building collapse"
+      ],
+      "resources_gained": [
+          "18 pounds of frost-resistant potatoes",
+          "3 sealed packets of hybrid potato seeds",
+          "2 Rust Dog firearms with limited ammunition",
+          "Maya's recovered park ranger medkit"
+      ],
+      "moral_choice": "Aris had the opportunity to kill a wounded, unconscious Rust Dog guard during their escape—eliminating a threat and gaining his superior equipment. He chose to leave the man alive, taking only his ammunition. The guard later identified Aris to his superiors, leading to increased raids on their community the following spring.",
+      "long_term_impact": "The Rust Dogs now specifically target Aris's community, viewing them as both a threat and a source of agricultural knowledge. However, the salvaged potato seeds have begun yielding successful crops, making the community a potential agricultural hub in the region—attracting both allies and new enemies. Aris's frostbite damage means he can no longer perform delicate botanical work, forcing him to train others and confront his identity beyond being 'the plant doctor.' The community remains divided over his decision to spare the guard—some see it as moral strength, others as fatal weakness."
+  };
+  
+  static readonly type = 'story_scenario';
+  static readonly version = '1.0.0';
+  static readonly generated = 1759792240649;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(TheLastHarvestModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered story_scenario: The Last Harvest`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default TheLastHarvestModule;
