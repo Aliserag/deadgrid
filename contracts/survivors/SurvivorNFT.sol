@@ -411,4 +411,23 @@ function _generateMarineObservationSkill(uint256 dna, uint256 daysSurvived) exte
     
     return observationSkills[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's guilt level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return guiltLevel The generated guilt level description
+ */
+function _generateGuiltLevel(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory guiltLevels = [
+        "No significant guilt, focused on survival",
+        "Minor regrets about past decisions",
+        "Moderate guilt over choices made to survive",
+        "Haunted by specific survival decisions",
+        "Severe guilt affecting daily functioning",
+        "Consumed by guilt over lost companions and choices"
+    ];
+    
+    return guiltLevels[(dna + daysSurvived) % 6];
+}
 }
