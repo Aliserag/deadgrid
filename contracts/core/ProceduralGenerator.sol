@@ -604,4 +604,25 @@ function generateMoralChoiceEncounter(uint256 locationId) external view returns 
         "%. Choose: Save current survivors or preserve knowledge for future."
     ));
 }
+
+/**
+ * @notice Generate frostbite injury encounter based on story scenario
+ */
+function generateFrostbiteInjuryEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 severity = _random(locationId) % 41 + 60; // 60-100 severity level
+    uint256 medicalCost = _random(block.timestamp) % 31 + 20; // 20-50 medical cost
+    uint256 permanentDamage = _random(locationId) % 51 + 50; // 50-100 permanent damage
+    
+    return string(abi.encodePacked(
+        "Frostbite Injury at location ",
+        _uintToString(locationId),
+        ". Severity: ",
+        _uintToString(severity),
+        "%. Medical resource cost: ",
+        _uintToString(medicalCost),
+        " units. Permanent damage risk: ",
+        _uintToString(permanentDamage),
+        "%. Immediate treatment required to prevent long-term disability."
+    ));
+}
 }
