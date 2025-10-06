@@ -341,4 +341,18 @@ function initializeRustSingersLament() private {
     createItem("Rust-Singer's Lament", "Forged from the remains of a pre-Collapse industrial saw blade and wrapped in salvaged copper wiring, this massive sword hums with residual energy. The blade bears faint etchings of assembly line schematics and the serial number 'AX-7' - believed to be from the automated factory that caused the Detroit Meltdown. Those who wield it sometimes hear faint whispers of the machine spirit that once inhabited the manufacturing AI.", ItemType.WEAPON, Rarity.EPIC, 1);
 }
 
+
+/**
+ * @notice Initialize Rust-Eater's Revenge weapon with special stats
+ */
+function initializeRustEatersRevenge() private {
+    createItem(
+        "Rust-Eater's Revenge", 
+        "Forged from the remains of a pre-Collapse industrial shredder, this massive blade bears deep grooves where acid rain has permanently etched its surface. The weapon was crafted by the legendary scavenger known only as 'Rust-Eater,' who supposedly survived the Corrosive Storms of '78 by sheltering in an ancient factory. The blade hums faintly when radiation levels spike, serving as an impromptu Geiger counter for those who learn its language.", 
+        ItemType.WEAPON, 
+        Rarity.EPIC, 
+        1
+    );
+}
+
 }
