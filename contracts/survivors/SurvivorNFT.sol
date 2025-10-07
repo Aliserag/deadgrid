@@ -430,4 +430,23 @@ function _generateGuiltLevel(uint256 dna, uint256 daysSurvived) external pure re
     
     return guiltLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's desalination knowledge based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return desalinationKnowledge The generated desalination knowledge level
+ */
+function _generateDesalinationKnowledge(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory knowledgeLevels = [
+        "No desalination knowledge",
+        "Basic understanding of water purification",
+        "Can operate simple desalination systems",
+        "Expert in manual tide-powered desalination",
+        "Master of emergency marine water systems",
+        "Innovator in post-apocalyptic water solutions"
+    ];
+    
+    return knowledgeLevels[(dna + daysSurvived) % 6];
+}
 }
