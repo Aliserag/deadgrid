@@ -449,4 +449,23 @@ function _generateDesalinationKnowledge(uint256 dna, uint256 daysSurvived) exter
     
     return knowledgeLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's voice mimicry awareness based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return mimicryAwareness The generated voice mimicry awareness level
+ */
+function _generateVoiceMimicryAwareness(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory awarenessLevels = [
+        "Unaware of infected voice mimicry ability",
+        "Heard strange voices but unsure of source",
+        "Knows infected can mimic human speech",
+        "Can distinguish mimicry from real human voices",
+        "Expert at detecting and avoiding mimicry traps",
+        "Master of using mimicry against infected for tactical advantage"
+    ];
+    
+    return awarenessLevels[(dna + daysSurvived) % 6];
+}
 }
