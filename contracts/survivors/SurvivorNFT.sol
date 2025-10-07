@@ -468,4 +468,23 @@ function _generateVoiceMimicryAwareness(uint256 dna, uint256 daysSurvived) exter
     
     return awarenessLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's marine hive mind awareness based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return hiveMindAwareness The generated marine hive mind awareness level
+ */
+function _generateMarineHiveMindAwareness(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory awarenessLevels = [
+        "Unaware of marine hive mind connections",
+        "Noticed strange synchronized behavior in marine life",
+        "Recognizes hive mind distress signals and patterns",
+        "Can predict marine behavior through hive mind observations",
+        "Expert at exploiting hive mind weaknesses for survival",
+        "Master of manipulating marine hive mind for tactical advantage"
+    ];
+    
+    return awarenessLevels[(dna + daysSurvived) % 6];
+}
 }
