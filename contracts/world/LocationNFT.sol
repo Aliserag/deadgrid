@@ -607,4 +607,37 @@ function calculateRustCathedralForgeEffects(int32 x, int32 y, LocationType locat
     
     return (forgeBonus, steamHazard);
 }
+
+/**
+ * @notice Calculate Rust Cathedral cultist trust and rust-based crafting bonuses
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return trustLevel The calculated cultist trust level (0-100)
+ * @return rustCraftingBonus Bonus percentage for rust-based crafting recipes
+ */
+function calculateRustCathedralCultistEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 trustLevel, uint32 rustCraftingBonus) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rust_cathedral_cultists")));
+    
+    // Base trust level from location type
+    if (locationType == LocationType.DUNGEON) {
+        trustLevel = 25;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        trustLevel = 40;
+    } else if (locationType == LocationType.WASTELAND) {
+        trustLevel = 15;
+    } else {
+        trustLevel = 10;
+    }
+    
+    // Add random variation from cultist disposition
+    uint256 cultistDisposition = positionHash % 35;
+    trustLevel += uint32(cultistDisposition);
+    
+    // Calculate rust crafting bonus from hidden workshops and prophecies
+    rustCraftingBonus = uint32((positionHash % 45) + 15);
+    
+    return (trustLevel, rustCraftingBonus);
+}
+
 }
