@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-08**: Added enemy - Corrupted Scavenger
 - **2025-10-08**: Added survivor_log - Dr. Aris Thorne
 - **2025-10-07**: Added survivor_log - Dr. Aris Thorne
 - **2025-10-07**: Added survivor_log - Dr. Aris Thorne
