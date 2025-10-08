@@ -544,4 +544,23 @@ function _generateAquariumSurvivalExpertise(uint256 dna, uint256 daysSurvived) e
     
     return expertiseLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's guilt and isolation level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return guiltIsolationLevel The generated guilt and isolation level description
+ */
+function _generateGuiltIsolationLevel(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory guiltLevels = [
+        "Overwhelming guilt leading to self-destructive behavior",
+        "Severe isolation causing auditory hallucinations and paranoia",
+        "Moderate guilt affecting decision-making and resource use",
+        "Using isolation to develop survival strategies and awareness",
+        "Transformed guilt into protective instincts for others",
+        "Mastered isolation to achieve peak survival efficiency and mental clarity"
+    ];
+    
+    return guiltLevels[(dna + daysSurvived) % 6];
+}
 }
