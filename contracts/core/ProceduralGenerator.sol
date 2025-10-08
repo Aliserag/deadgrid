@@ -625,4 +625,28 @@ function generateFrostbiteInjuryEncounter(uint256 locationId) external view retu
         "%. Immediate treatment required to prevent long-term disability."
     ));
 }
+
+/**
+ * @notice Generate Corrupted Scavenger enemy encounter with pack tactics and carrion call abilities
+ */
+function generateCorruptedScavengerEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 health = _random(locationId) % 61 + 180; // 180-240 health
+    uint256 damage = _random(block.timestamp) % 16 + 25; // 25-40 damage
+    uint256 packBonus = _random(locationId) % 21 + 10; // 10-30% pack damage bonus
+    uint256 summonChance = _random(block.timestamp) % 71 + 30; // 30-100% carrion call chance
+    
+    return string(abi.encodePacked(
+        "Corrupted Scavenger detected at location ",
+        _uintToString(locationId),
+        ". Health: ",
+        _uintToString(health),
+        ", Damage: ",
+        _uintToString(damage),
+        ". Pack Tactics: +",
+        _uintToString(packBonus),
+        "% damage when allies nearby. Carrion Call: ",
+        _uintToString(summonChance),
+        "% chance to summon reinforcements at low health."
+    ));
+}
 }
