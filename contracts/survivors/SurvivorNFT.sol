@@ -487,4 +487,23 @@ function _generateMarineHiveMindAwareness(uint256 dna, uint256 daysSurvived) ext
     
     return awarenessLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's mental resilience level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return mentalResilience The generated mental resilience level description
+ */
+function _generateMentalResilience(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory resilienceLevels = [
+        "Severe depression with frequent dissociation",
+        "Moderate depression with auditory hallucinations",
+        "Struggling but maintaining basic routines",
+        "Finding purpose in small daily tasks",
+        "Using memories as motivation to survive",
+        "Transformed trauma into unwavering survival instinct"
+    ];
+    
+    return resilienceLevels[(dna + daysSurvived) % 6];
+}
 }
