@@ -525,4 +525,23 @@ function _generateSaltWaterKnowledge(uint256 dna, uint256 daysSurvived) external
     
     return knowledgeLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's aquarium survival expertise based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return aquariumExpertise The generated aquarium survival expertise level
+ */
+function _generateAquariumSurvivalExpertise(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory expertiseLevels = [
+        "No aquarium survival knowledge",
+        "Basic understanding of aquarium facilities and resources",
+        "Can navigate and secure small aquarium facilities",
+        "Expert in maintaining aquarium life support systems",
+        "Master of using aquarium environments for long-term survival",
+        "Innovator in transforming aquariums into impenetrable safe havens"
+    ];
+    
+    return expertiseLevels[(dna + daysSurvived) % 6];
+}
 }
