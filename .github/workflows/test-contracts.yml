@@ -49,3 +49,4 @@ jobs:
       # 2025-10-08: Added enemy test for Corrupted Scavenger
       # 2025-10-08: Added location test for The Rust Cathedral
       # 2025-10-08: Added enemy test for Corpse-Crawler
+      # 2025-10-08: Added story_scenario test for feature
