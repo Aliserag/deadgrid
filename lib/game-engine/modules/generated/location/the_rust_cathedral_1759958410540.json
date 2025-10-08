@@ -1,0 +1,15 @@
+{
+  "name": "The Rust Cathedral",
+  "type": "landmark",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Rust-Walkers (mutated humans with metallic skin), Scrap-Scavengers (hostile survivors), and Glitch-Hounds (cybernetic canines)",
+  "notable_features": [
+    "A towering structure made entirely of salvaged vehicles and machinery",
+    "A central spire that hums with unstable energy, causing electronic interference",
+    "Moving platforms and collapsing walkways throughout the interior",
+    "A hidden underground workshop with pre-war technology"
+  ],
+  "exploration_notes": "Players will find shifting corridors, automated defense systems, and valuable tech components. The central spire's energy can be harnessed for power, but attracts more Rust-Walkers. The workshop contains rare crafting blueprints."
+}
