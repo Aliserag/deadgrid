@@ -649,4 +649,28 @@ function generateCorruptedScavengerEncounter(uint256 locationId) external view r
         "% chance to summon reinforcements at low health."
     ));
 }
+
+/**
+ * @notice Generate Corrupted Scavenger loot drop with mutated components
+ */
+function generateCorruptedScavengerLoot(uint256 locationId) external view returns (string memory) {
+    uint256 glandDrop = _random(locationId) % 81 + 20; // 20-100% mutated gland drop chance
+    uint256 gearDrop = _random(block.timestamp) % 71 + 30; // 30-100% tattered gear drop chance
+    uint256 meatDrop = _random(locationId) % 61 + 40; // 40-100% corrupted meat drop chance
+    uint256 scrapDrop = _random(block.timestamp) % 91 + 10; // 10-100% scrap parts drop chance
+    
+    return string(abi.encodePacked(
+        "Corrupted Scavenger loot available at location ",
+        _uintToString(locationId),
+        ". Mutated Gland: ",
+        _uintToString(glandDrop),
+        "%, Tattered Gear: ",
+        _uintToString(gearDrop),
+        "%, Corrupted Meat: ",
+        _uintToString(meatDrop),
+        "%, Scrap Parts: ",
+        _uintToString(scrapDrop),
+        "%. Risk vs reward - contaminated items may have side effects."
+    ));
+}
 }
