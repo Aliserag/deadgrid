@@ -1,0 +1,27 @@
+{
+  "name": "Corpse-Crawler",
+  "type": "mutant",
+  "tier": 2,
+  "health": {
+    "min": 80,
+    "max": 120
+  },
+  "damage": {
+    "min": 15,
+    "max": 25
+  },
+  "speed": "normal",
+  "behavior": "stalker",
+  "abilities": [
+    "Burrow Ambush - Can quickly dig underground and emerge near prey",
+    "Acidic Spit - Ranged attack that deals damage over time",
+    "Corpse Mimicry - Remains perfectly still, appearing as a dead body until prey approaches"
+  ],
+  "loot": [
+    "Mutated Gland",
+    "Acidic Sac",
+    "Tattered Hide",
+    "Scrap Metal"
+  ],
+  "description": "A humanoid mutant with pale, mottled skin that blends with the wasteland. Its limbs are elongated and jointed in unnatural ways, allowing it to crawl with disturbing fluidity. The mouth splits vertically to reveal multiple rows of needle-like teeth, and its eyes are milky white and sunken. It moves with a hunched, skittering gait when not using its burrowing ability."
+}
