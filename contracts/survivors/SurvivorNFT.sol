@@ -506,4 +506,23 @@ function _generateMentalResilience(uint256 dna, uint256 daysSurvived) external p
     
     return resilienceLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's salt water knowledge based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return saltWaterKnowledge The generated salt water knowledge level
+ */
+function _generateSaltWaterKnowledge(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory knowledgeLevels = [
+        "No understanding of salt water properties",
+        "Basic knowledge that salt water repels infected",
+        "Can use salt water for basic protection and purification",
+        "Expert in coastal survival using salt water advantages",
+        "Master of salt water purification and defensive applications",
+        "Innovator in using marine environments for complete safety from infection"
+    ];
+    
+    return knowledgeLevels[(dna + daysSurvived) % 6];
+}
 }
