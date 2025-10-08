@@ -697,4 +697,28 @@ function generateCorpseCrawlerLoot(uint256 locationId) external view returns (st
         "%. Handle with care - acidic components may be volatile."
     ));
 }
+
+/**
+ * @notice Generate mutated grain harvesting event based on story scenario
+ */
+function generateMutatedGrainHarvest(uint256 locationId) external view returns (string memory) {
+    uint256 toxicityLevel = _random(locationId) % 61 + 40; // 40-100 toxicity level
+    uint256 yieldAmount = _random(block.timestamp) % 16 + 5; // 5-20 kg yield
+    uint256 processingCost = _random(locationId) % 26 + 25; // 25-50 resource cost
+    uint256 safetyChance = _random(block.timestamp) % 51 + 50; // 50-100% safety chance after processing
+    
+    return string(abi.encodePacked(
+        "Mutated grain harvest available at location ",
+        _uintToString(locationId),
+        ". Toxicity level: ",
+        _uintToString(toxicityLevel),
+        "%. Potential yield: ",
+        _uintToString(yieldAmount),
+        "kg. Processing cost: ",
+        _uintToString(processingCost),
+        " resources. Safety chance after processing: ",
+        _uintToString(safetyChance),
+        "%. Risk radiation poisoning for vital food supply."
+    ));
+}
 }
