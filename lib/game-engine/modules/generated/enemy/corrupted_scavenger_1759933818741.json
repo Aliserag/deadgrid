@@ -1,0 +1,27 @@
+{
+  "name": "Corrupted Scavenger",
+  "type": "mutant",
+  "tier": 3,
+  "health": {
+    "min": 180,
+    "max": 240
+  },
+  "damage": {
+    "min": 25,
+    "max": 45
+  },
+  "speed": "normal",
+  "behavior": "stalker",
+  "abilities": [
+    "Toxic Spit: Ranged attack that deals poison damage over time",
+    "Camouflage: Can blend with ruined environments, becoming harder to detect",
+    "Pack Call: Summons 1-2 lesser mutants if health drops below 50%"
+  ],
+  "loot": [
+    "Mutated Gland (crafting component)",
+    "Tattered Scavenger Gear",
+    "Corrupted Meat (consumable with risk)",
+    "Assorted Scrap Parts"
+  ],
+  "description": "A humanoid mutant with patchy, mottled skin that shifts color to match its surroundings. Its limbs are unnaturally elongated, ending in claw-like hands. The creature's face is mostly featureless except for a wide, lipless mouth that can distend to spit corrosive venom. Moves with an unsettling, deliberate gait when stalking prey."
+}
