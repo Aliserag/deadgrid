@@ -673,4 +673,28 @@ function generateCorruptedScavengerLoot(uint256 locationId) external view return
         "%. Risk vs reward - contaminated items may have side effects."
     ));
 }
+
+/**
+ * @notice Generate Corpse-Crawler loot drop with mutated components
+ */
+function generateCorpseCrawlerLoot(uint256 locationId) external view returns (string memory) {
+    uint256 glandDrop = _random(locationId) % 81 + 20; // 20-100% mutated gland drop chance
+    uint256 sacDrop = _random(block.timestamp) % 71 + 30; // 30-100% acidic sac drop chance
+    uint256 hideDrop = _random(locationId) % 61 + 40; // 40-100% tattered hide drop chance
+    uint256 scrapDrop = _random(block.timestamp) % 91 + 10; // 10-100% scrap metal drop chance
+    
+    return string(abi.encodePacked(
+        "Corpse-Crawler loot available at location ",
+        _uintToString(locationId),
+        ". Mutated Gland: ",
+        _uintToString(glandDrop),
+        "%, Acidic Sac: ",
+        _uintToString(sacDrop),
+        "%, Tattered Hide: ",
+        _uintToString(hideDrop),
+        "%, Scrap Metal: ",
+        _uintToString(scrapDrop),
+        "%. Handle with care - acidic components may be volatile."
+    ));
+}
 }
