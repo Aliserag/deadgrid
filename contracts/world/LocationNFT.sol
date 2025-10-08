@@ -640,4 +640,37 @@ function calculateRustCathedralCultistEffects(int32 x, int32 y, LocationType loc
     return (trustLevel, rustCraftingBonus);
 }
 
+
+/**
+ * @notice Calculate Rust Cathedral spire energy interference and tech component bonuses
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return interferenceLevel The calculated electronic interference level (0-100)
+ * @return techComponents Number of valuable tech components available
+ */
+function calculateRustCathedralSpireEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 interferenceLevel, uint32 techComponents) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rust_cathedral_spire")));
+    
+    // Base interference from spire energy
+    if (locationType == LocationType.DUNGEON) {
+        interferenceLevel = 85;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        interferenceLevel = 70;
+    } else if (locationType == LocationType.WASTELAND) {
+        interferenceLevel = 55;
+    } else {
+        interferenceLevel = 40;
+    }
+    
+    // Add random variation from spire instability
+    uint256 spireInstability = positionHash % 25;
+    interferenceLevel += uint32(spireInstability);
+    
+    // Calculate tech components from hidden workshops and moving platforms
+    techComponents = uint32((positionHash % 50) + 30);
+    
+    return (interferenceLevel, techComponents);
+}
+
 }
