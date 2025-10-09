@@ -721,4 +721,28 @@ function generateMutatedGrainHarvest(uint256 locationId) external view returns (
         "%. Risk radiation poisoning for vital food supply."
     ));
 }
+
+/**
+ * @notice Generate radiation sickness treatment event based on story scenario
+ */
+function generateRadiationSicknessTreatment(uint256 survivorId) external view returns (string memory) {
+    uint256 severity = _random(survivorId) % 61 + 40; // 40-100 severity level
+    uint256 treatmentCost = _random(block.timestamp) % 36 + 15; // 15-50 anti-rad medication cost
+    uint256 survivalChance = _random(survivorId) % 51 + 50; // 50-100% survival chance with treatment
+    uint256 permanentDamage = _random(block.timestamp) % 41 + 10; // 10-50% permanent damage chance
+    
+    return string(abi.encodePacked(
+        "Radiation sickness treatment required for survivor ",
+        _uintToString(survivorId),
+        ". Severity: ",
+        _uintToString(severity),
+        "%. Treatment cost: ",
+        _uintToString(treatmentCost),
+        " anti-rad medication. Survival chance: ",
+        _uintToString(survivalChance),
+        "%. Permanent damage chance: ",
+        _uintToString(permanentDamage),
+        "%. Critical choice - limited resources vs saving lives."
+    ));
+}
 }
