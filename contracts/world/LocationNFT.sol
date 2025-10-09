@@ -705,4 +705,36 @@ function calculateRustCathedralReactorEffects(int32 x, int32 y, LocationType loc
     
     return (radiationLevel, isotopeRewards);
 }
+
+/**
+ * @notice Calculate Chromatic Blightlands reality distortion effects and resource availability
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return distortionLevel The calculated reality distortion level (0-100)
+ * @return chromaticCrystals Number of chromatic crystals available from the blightlands
+ */
+function calculateChromaticBlightlandsEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 distortionLevel, uint32 chromaticCrystals) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "chromatic_blightlands")));
+    
+    // Base distortion level from blightlands energy
+    if (locationType == LocationType.DUNGEON) {
+        distortionLevel = 80;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        distortionLevel = 65;
+    } else if (locationType == LocationType.WASTELAND) {
+        distortionLevel = 50;
+    } else {
+        distortionLevel = 35;
+    }
+    
+    // Add random variation from reality instability
+    uint256 realityInstability = positionHash % 30;
+    distortionLevel += uint32(realityInstability);
+    
+    // Calculate chromatic crystals from crystalline formations
+    chromaticCrystals = uint32((positionHash % 40) + 20);
+    
+    return (distortionLevel, chromaticCrystals);
+}
 }
