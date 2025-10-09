@@ -737,4 +737,36 @@ function calculateChromaticBlightlandsEffects(int32 x, int32 y, LocationType loc
     
     return (distortionLevel, chromaticCrystals);
 }
+
+/**
+ * @notice Calculate Rustwood Tangle environmental hazards and resource availability
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return hazardLevel The calculated environmental hazard level (0-100)
+ * @return bioResources Number of bio-luminescent fungi and salvaged resources available
+ */
+function calculateRustwoodTangleEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 hazardLevel, uint32 bioResources) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rustwood_tangle")));
+    
+    // Base hazard level from corrosive environment
+    if (locationType == LocationType.DUNGEON) {
+        hazardLevel = 90;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        hazardLevel = 75;
+    } else if (locationType == LocationType.WASTELAND) {
+        hazardLevel = 60;
+    } else {
+        hazardLevel = 45;
+    }
+    
+    // Add random variation from environmental instability
+    uint256 environmentalInstability = positionHash % 35;
+    hazardLevel += uint32(environmentalInstability);
+    
+    // Calculate bio resources from fungal growth and metal salvage
+    bioResources = uint32((positionHash % 60) + 25);
+    
+    return (hazardLevel, bioResources);
+}
 }
