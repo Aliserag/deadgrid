@@ -563,4 +563,23 @@ function _generateGuiltIsolationLevel(uint256 dna, uint256 daysSurvived) externa
     
     return guiltLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's memory preservation level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return memoryPreservation The generated memory preservation level description
+ */
+function _generateMemoryPreservation(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory preservationLevels = [
+        "Memories distorted into traumatic weapons",
+        "Fragmented recall with significant emotional interference",
+        "Basic memory retention through routine documentation",
+        "Organized memory preservation using detailed notes",
+        "Strategic use of memories as survival motivation",
+        "Master of memory curation for optimal mental resilience"
+    ];
+    
+    return preservationLevels[(dna + daysSurvived) % 6];
+}
 }
