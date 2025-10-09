@@ -673,4 +673,36 @@ function calculateRustCathedralSpireEffects(int32 x, int32 y, LocationType locat
     return (interferenceLevel, techComponents);
 }
 
+
+/**
+ * @notice Calculate Rust Cathedral reactor altar radiation effects and isotope rewards
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return radiationLevel The calculated radiation level (0-100)
+ * @return isotopeRewards Number of rare isotopes available from the reactor altar
+ */
+function calculateRustCathedralReactorEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 radiationLevel, uint32 isotopeRewards) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rust_cathedral_reactor")));
+    
+    // Base radiation level from reactor altar
+    if (locationType == LocationType.DUNGEON) {
+        radiationLevel = 75;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        radiationLevel = 60;
+    } else if (locationType == LocationType.WASTELAND) {
+        radiationLevel = 45;
+    } else {
+        radiationLevel = 30;
+    }
+    
+    // Add random variation from reactor instability
+    uint256 reactorInstability = positionHash % 20;
+    radiationLevel += uint32(reactorInstability);
+    
+    // Calculate isotope rewards from salvaged reactor core
+    isotopeRewards = uint32((positionHash % 25) + 10);
+    
+    return (radiationLevel, isotopeRewards);
+}
 }
