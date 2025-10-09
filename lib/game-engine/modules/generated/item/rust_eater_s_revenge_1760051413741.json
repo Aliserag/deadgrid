@@ -1,0 +1,19 @@
+{
+  "name": "Rust-Eater's Revenge",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 450,
+  "stats": {
+    "damage": 28,
+    "durability": 120,
+    "attack_speed": 0.8,
+    "armor_penetration": 15
+  },
+  "description": "Forged from the remains of pre-Collapse industrial machinery and tempered in the toxic rains of the Rust Plains, this massive blade seems to feed on corrosion. The weapon hums with residual energy from the old world, its serrated edge constantly shedding flakes of rust that somehow sharpen rather than weaken the blade. Legends say the first Rust-Eater was a scavenger who survived three winters in the metal graveyards by learning to weaponize decay itself.",
+  "special_effects": {
+    "Corrosive Strike": "Chance to permanently reduce enemy armor on hit",
+    "Rust Bloom": "Deals bonus damage to mechanical enemies and metal structures",
+    "Decay Resonance": "Gains temporary damage boost when striking corroded or rusted targets"
+  }
+}
