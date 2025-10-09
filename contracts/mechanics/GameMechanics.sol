@@ -677,4 +677,42 @@ function triggerAdaptiveMutation(uint256 survivorId, uint8 mutationType) externa
     emit AdaptiveMutationTriggered(survivorId, mutationType, status.activeMutationDuration);
     return true;
 }
+
+/**
+ * @notice Trigger the Whispering Grove event for a survivor
+ * @param survivorId The ID of the survivor triggering the event
+ * @param choice The player's chosen action (0-3)
+ * @return success Whether the event was successfully triggered
+ */
+function triggerWhisperingGrove(uint256 survivorId, uint8 choice) external returns (bool success) {
+    require(choice < 4, "Invalid choice");
+    
+    SurvivalStatus storage status = survivalStatus[survivorId];
+    
+    if (choice == 0) {
+        // Follow whispers deeper
+        status.sanity += 20;
+        _mintItem(survivorId, ITEM_MEDICINAL_HERBS);
+        _mintItem(survivorId, ITEM_MEDICINAL_HERBS);
+    } else if (choice == 1) {
+        // Harvest glowing fungi
+        _mintItem(survivorId, ITEM_GLOWING_FUNGI);
+        _mintItem(survivorId, ITEM_GLOWING_FUNGI);
+        status.sanity -= 10;
+    } else if (choice == 2) {
+        // Mark location and leave
+        status.whisperingGroveMarked = true;
+    } else if (choice == 3) {
+        // Attempt communication
+        if (status.intelligence >= 70) {
+            status.permanentStatBoost += 5;
+        } else {
+            status.sanity -= 30;
+        }
+    }
+    
+    emit WhisperingGroveTriggered(survivorId, choice);
+    return true;
+}
+
 }
