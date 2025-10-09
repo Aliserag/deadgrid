@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-09**: Added location - The Rust Cathedral
 - **2025-10-08**: Added survivor_log - Dr. Aris Thorne
 - **2025-10-08**: Added location - The Rust Cathedral
 - **2025-10-08**: Added story_scenario - The Last Harvest
