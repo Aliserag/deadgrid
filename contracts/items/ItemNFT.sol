@@ -355,4 +355,34 @@ function initializeRustEatersRevenge() private {
     );
 }
 
+
+/**
+ * @notice Apply Rust-Eater's Revenge special effects on attack
+ * @param targetType Type of target being attacked (0 = organic, 1 = mechanical, 2 = structure)
+ * @param targetHasCorrosion Whether target has corrosion status effect
+ * @return damageMultiplier Damage multiplier based on special effects
+ * @return armorReduction Permanent armor reduction amount if Corrosive Strike procs
+ */
+function calculateRustEaterEffects(
+    uint8 targetType,
+    bool targetHasCorrosion
+) public pure returns (uint8 damageMultiplier, uint8 armorReduction) {
+    damageMultiplier = 100; // Base 100% damage
+    
+    // Rust Bloom: Bonus damage to mechanical enemies and metal structures
+    if (targetType == 1 || targetType == 2) {
+        damageMultiplier = 125; // 25% bonus damage
+    }
+    
+    // Decay Resonance: Temporary damage boost against corroded targets
+    if (targetHasCorrosion) {
+        damageMultiplier += 15; // Additional 15% damage boost
+    }
+    
+    // Corrosive Strike: 30% chance to permanently reduce armor by 5
+    if (uint256(keccak256(abi.encodePacked(block.timestamp, targetType))) % 100 < 30) {
+        armorReduction = 5;
+    }
+}
+
 }
