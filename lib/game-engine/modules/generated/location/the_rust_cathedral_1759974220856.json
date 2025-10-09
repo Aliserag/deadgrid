@@ -1,0 +1,16 @@
+{
+  "name": "The Rust Cathedral",
+  "type": "landmark",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Rust Cultists (fanatical scavengers who worship pre-collapse machinery), mutated crows, and occasional feral ghouls drawn to the residual radiation",
+  "notable_features": [
+    "A massive, collapsed factory building whose rusted steel framework resembles gothic arches",
+    "A still-active automated assembly line that periodically activates, creating both hazards and opportunities",
+    "A central 'altar' made from a salvaged nuclear reactor core (lightly radioactive)",
+    "Wind chimes crafted from scrap metal that create an eerie, constant melody",
+    "Graffiti murals depicting the 'Rust God' and scenes of industrial worship"
+  ],
+  "exploration_notes": "Players will find the cultists are territorial but can be bargained with using pre-collapse technology. The automated systems contain valuable manufacturing components, but careful timing is required to avoid the crushing pistons and welding arms. The reactor altar area requires radiation protection but contains rare isotopes. The cult leader's quarters hold detailed maps of other industrial sites."
+}
