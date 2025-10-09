@@ -55,3 +55,4 @@ jobs:
       # 2025-10-09: Added event test for feature
       # 2025-10-09: Added biome test for The Chromatic Blightlands
       # 2025-10-09: Added biome test for The Rustwood Tangle
+      # 2025-10-09: Added survivor_log test for feature

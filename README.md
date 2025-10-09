@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-09**: Added survivor_log - Dr. Aris Thorne
 - **2025-10-09**: Added biome - The Rustwood Tangle
 - **2025-10-09**: Added biome - The Chromatic Blightlands
 - **2025-10-09**: Added event - The Whispering Grove
