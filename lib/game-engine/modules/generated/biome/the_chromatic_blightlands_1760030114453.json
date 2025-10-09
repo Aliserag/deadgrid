@@ -1,0 +1,31 @@
+{
+  "name": "The Chromatic Blightlands",
+  "description": "A bizarre landscape where reality itself seems corrupted by an ancient mutagenic event. The ground pulses with shifting colors and organic structures grow in impossible geometric patterns. Strange crystalline formations emit a low hum that resonates through the air.",
+  "terrain_type": "Mutated crystalline plains with floating landmasses",
+  "hazards": [
+    "Reality distortion fields that cause disorientation",
+    "Unstable chromatic energy surges",
+    "Semi-sentient crystalline predators",
+    "Gravity anomalies near floating islands"
+  ],
+  "resources": [
+    "Chromatic crystals",
+    "Reality-shard fragments",
+    "Mutated flora samples",
+    "Ancient tech remnants",
+    "Purified resonance ore"
+  ],
+  "ambient_sounds": [
+    "Low-frequency crystalline humming",
+    "Crackling energy discharges",
+    "Distant glass-like shattering",
+    "Ethereal harmonic resonances"
+  ],
+  "weather_patterns": [
+    "Chromatic storms that shift local physics",
+    "Reality tears that briefly reveal other dimensions",
+    "Energy saturation events",
+    "Gravity fluctuation periods"
+  ],
+  "entry_message": "The air shimmers with impossible colors as you step into the Blightlands. Your senses reel from the geometric madness surrounding you - floating islands drift overhead while crystalline structures pulse with alien energy. Reality feels thin here."
+}
