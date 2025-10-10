@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-10**: Added quest - The Rust Garden
 - **2025-10-10**: Added location - The Rust Cathedral
 - **2025-10-10**: Added item - Rust-Singer's Lament
 - **2025-10-10**: Added survivor_log - Dr. Aris Thorne
