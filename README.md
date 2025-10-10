@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-10**: Added npc - Dr. Aris Thorne
 - **2025-10-10**: Added story_scenario - The Last Harvest
 - **2025-10-10**: Added quest - The Rust Garden
 - **2025-10-10**: Added location - The Rust Cathedral
