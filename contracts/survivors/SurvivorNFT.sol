@@ -620,4 +620,23 @@ function _generateLinguisticExpertise(uint256 dna, uint256 daysSurvived) externa
     
     return expertiseLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's hope resilience level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return hopeResilience The generated hope resilience level description
+ */
+function _generateHopeResilience(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory resilienceLevels = [
+        "Hope completely extinguished, survival purely instinctual",
+        "Fragile hope requiring constant external validation",
+        "Cyclical hope that fluctuates with circumstances and discoveries",
+        "Deliberately cultivated hope through routine and memory preservation",
+        "Hope transformed into unshakable survival determination",
+        "Hope mastered as strategic resource for long-term endurance and leadership"
+    ];
+    
+    return resilienceLevels[(dna + daysSurvived) % 6];
+}
 }
