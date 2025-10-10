@@ -745,4 +745,28 @@ function generateRadiationSicknessTreatment(uint256 survivorId) external view re
         "%. Critical choice - limited resources vs saving lives."
     ));
 }
+
+/**
+ * @notice Generate fungal contamination event based on story scenario
+ */
+function generateFungalContaminationEvent(uint256 locationId) external view returns (string memory) {
+    uint256 contaminationLevel = _random(locationId) % 61 + 40; // 40-100 contamination level
+    uint256 foodLoss = _random(block.timestamp) % 51 + 30; // 30-80% food loss
+    uint256 decontaminationCost = _random(locationId) % 31 + 20; // 20-50 resource cost
+    uint256 successChance = _random(block.timestamp) % 41 + 60; // 60-100% decontamination success chance
+    
+    return string(abi.encodePacked(
+        "Fungal contamination detected at location ",
+        _uintToString(locationId),
+        ". Contamination level: ",
+        _uintToString(contaminationLevel),
+        "%. Food loss: ",
+        _uintToString(foodLoss),
+        "%. Decontamination cost: ",
+        _uintToString(decontaminationCost),
+        " resources. Success chance: ",
+        _uintToString(successChance),
+        "%. Critical survival situation - risk starvation vs resource expenditure."
+    ));
+}
 }
