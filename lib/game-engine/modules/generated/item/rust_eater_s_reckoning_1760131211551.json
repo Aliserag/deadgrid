@@ -1,0 +1,19 @@
+{
+  "name": "Rust-Eater's Reckoning",
+  "category": "weapon",
+  "rarity": "epic",
+  "weight": 3.2,
+  "value": 850,
+  "stats": {
+    "damage": 45,
+    "durability": 120,
+    "attack_speed": 0.8,
+    "armor_penetration": 15
+  },
+  "description": "Forged from the hull of a pre-Collapse naval vessel and etched with corrosive patterns, this heavy blade seems to actively consume rust and decay. Survivors whisper that it was crafted by the Rust-Eaters cult, who believe that embracing decay is the only path to true power in the wasted world. The weapon hums with a faint, unsettling energy when near corroded metal.",
+  "special_effects": {
+    "Corrosive Edge": "Deals 25% bonus damage to robotic enemies and armored targets",
+    "Rust Absorption": "Slowly repairs durability when exposed to heavily corroded environments",
+    "Decay Resonance": "Glimmers with eerie blue light when ancient technology is nearby"
+  }
+}
