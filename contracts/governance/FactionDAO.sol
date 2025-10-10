@@ -467,4 +467,37 @@ contract FactionDAO is
     function supportsInterface(bytes4 interfaceId) public view override(Governor, GovernorTimelockControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
+
+/**
+ * @notice Complete the Rust Garden quest by submitting fungal samples
+ * @param player The address completing the quest
+ * @param fungalSamples Number of fungal samples collected
+ * @param radiationLevels Array of radiation levels for each sample
+ */
+function completeRustGardenQuest(
+    address player,
+    uint256 fungalSamples,
+    uint256[] memory radiationLevels
+) external {
+    require(fungalSamples >= 5, "Insufficient fungal samples");
+    require(radiationLevels.length == fungalSamples, "Radiation levels mismatch");
+    
+    uint256 safeSamples = 0;
+    for (uint256 i = 0; i < radiationLevels.length; i++) {
+        if (radiationLevels[i] < 8) { // 0.8 rads scaled by 10
+            safeSamples++;
+        }
+    }
+    
+    require(safeSamples >= 5, "Not enough safe samples");
+    
+    // Grant rewards
+    _grantExperience(player, 750);
+    _mintItem(player, "Radiation Antidote", 3);
+    _mintItem(player, "Preserved Rations", 5);
+    _increaseReputation(player, 25);
+    
+    emit QuestCompleted(player, "quest_rust_garden");
+}
+
 }
