@@ -582,4 +582,23 @@ function _generateMemoryPreservation(uint256 dna, uint256 daysSurvived) external
     
     return preservationLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's marine biology expertise level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return marineBiologyExpertise The generated marine biology expertise level description
+ */
+function _generateMarineBiologyExpertise(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory expertiseLevels = [
+        "No marine biology knowledge",
+        "Basic understanding of coastal ecosystems",
+        "Can identify edible marine life and safe water sources",
+        "Expert in using marine environments for survival and protection",
+        "Master of marine ecosystem manipulation for defense and sustenance",
+        "Innovator in transforming marine knowledge into complete survival advantage"
+    ];
+    
+    return expertiseLevels[(dna + daysSurvived) % 6];
+}
 }
