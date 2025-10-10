@@ -769,4 +769,36 @@ function calculateRustwoodTangleEffects(int32 x, int32 y, LocationType locationT
     
     return (hazardLevel, bioResources);
 }
+
+/**
+ * @notice Calculate Rust Cathedral holographic interference effects and tech component rewards
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return interferenceLevel The calculated holographic interference level (0-100)
+ * @return techComponents Number of tech components available from the holographic systems
+ */
+function calculateRustCathedralHologramEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 interferenceLevel, uint32 techComponents) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rust_cathedral_hologram")));
+    
+    // Base interference level from holographic projectors
+    if (locationType == LocationType.DUNGEON) {
+        interferenceLevel = 70;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        interferenceLevel = 55;
+    } else if (locationType == LocationType.WASTELAND) {
+        interferenceLevel = 40;
+    } else {
+        interferenceLevel = 25;
+    }
+    
+    // Add random variation from projector instability
+    uint256 projectorInstability = positionHash % 25;
+    interferenceLevel += uint32(projectorInstability);
+    
+    // Calculate tech components from salvaged holographic systems
+    techComponents = uint32((positionHash % 35) + 15);
+    
+    return (interferenceLevel, techComponents);
+}
 }
