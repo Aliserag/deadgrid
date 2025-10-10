@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena with two daughters - Maya (8) and Chloe (6). Was leading a research expedition in the Florida Keys when the outbreak began. Dreamed of establishing marine protected areas and publishing children's books about ocean conservation.",
+      "day_number": 127,
+      "location": "Abandoned lighthouse keeper's cottage on Loggerhead Key, Dry Tortugas. The structure leans slightly, its white paint peeling like sunburned skin. Inside smells of salt, rot, and desperation. Through cracked windows, the turquoise waters mock me with their unchanged beauty.",
+      "entry": "The silence here is different from the mainland's dead quiet. Here, the ocean still breathes - waves hiss against the shore, gulls still cry, the wind still sings through broken shutters. It's nature's cruel joke that the world above water died while the world below continues, oblivious.\n\nI watched a pod of dolphins hunting this morning. Their effortless grace made me weep. Lena would have loved seeing them. She always said dolphins were the ocean's smile.\n\nFound another of Maya's drawings today, tucked in my field notebook. She'd drawn our family as mermaids, swimming through a rainbow coral reef. Chloe was a little seahorse clinging to Lena's tail. I traced the crayon lines until my vision blurred.\n\nHad to make a choice today that will haunt me. A young couple washed up on the beach this morning - refugees from Key West. They'd been bitten. The woman was already turning, her skin taking on that awful gray pallor. The man begged me to save her. I had my flare gun and fishing knife. I could see the struggle in his eyes - the man who loved her fighting the instinct to survive.\n\nI made him turn away. Did what needed doing. He hasn't spoken since. Just sits on the beach, staring at the horizon where his wife's body now feeds the sharks. Sometimes mercy is the cruelest weapon we wield.\n\nThe worst part? Part of me was calculating how long their supplies would last me.",
+      "condition": "Physically: Malnourished (down 40 pounds), sunburned and peeling, right ankle permanently stiff from an old injury. Saltwater sores on legs. Mentally: Haunted by decisions made, swings between clinical detachment and overwhelming grief. Sleeps with a diving knife.",
+      "discoveries": "The infected avoid deep water - something about the pressure or salt content affects them. Found this when a group waded after me but retreated when chest-deep. Also discovered that sea turtle eggs remain edible for weeks if buried in cool sand. The ocean may be our salvation yet.",
+      "warnings": "Don't trust boats that seem abandoned too easily - they're often traps. Booby-trap your perimeter with fishing line and shells - the noise alerts you. Most importantly: saltwater contamination in wounds is a death sentence now that antibiotics are gone. Even small cuts can kill you.",
+      "last_meal": "Boiled hermit crab and sea grapes, about 6 hours ago. Found some edible seaweed that made it feel almost like a proper meal.",
+      "companions": "Currently alone. The young man from the couple left at dusk, swimming toward the horizon. Don't think he meant to reach the other side. Lost contact with my research team on Day 14. Family in Orlando - status unknown. Sometimes I'm glad they're probably beyond suffering.",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1760065780803;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
