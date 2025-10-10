@@ -385,4 +385,34 @@ function calculateRustEaterEffects(
     }
 }
 
+
+/**
+ * @notice Apply Rust-Singer's Lament special effects on attack
+ * @param targetType Type of target being attacked (0 = organic, 1 = robotic, 2 = energy_shield)
+ * @param isInWater Whether attacker is currently in water
+ * @return damageMultiplier Damage multiplier based on special effects
+ * @return shouldStagger Whether to trigger concussive shockwave
+ */
+function calculateRustSingerEffects(
+    uint8 targetType,
+    bool isInWater
+) public pure returns (uint8 damageMultiplier, bool shouldStagger) {
+    damageMultiplier = 100; // Base 100% damage
+    
+    // EMP Resonance: 25% bonus damage to robotic enemies and energy shields
+    if (targetType == 1 || targetType == 2) {
+        damageMultiplier = 125;
+    }
+    
+    // Tide Caller: 15% chance to create concussive shockwave
+    if (uint256(keccak256(abi.encodePacked(block.timestamp, targetType))) % 100 < 15) {
+        shouldStagger = true;
+    }
+    
+    // Ocean's Memory: Additional 10% damage bonus when in water
+    if (isInWater) {
+        damageMultiplier += 10;
+    }
+}
+
 }
