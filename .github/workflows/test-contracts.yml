@@ -57,3 +57,4 @@ jobs:
       # 2025-10-09: Added biome test for The Rustwood Tangle
       # 2025-10-09: Added survivor_log test for feature
       # 2025-10-09: Added item test for Rust-Eater's Revenge
+      # 2025-10-10: Added story_scenario test for feature
