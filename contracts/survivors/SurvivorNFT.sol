@@ -601,4 +601,23 @@ function _generateMarineBiologyExpertise(uint256 dna, uint256 daysSurvived) exte
     
     return expertiseLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's linguistic expertise level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return linguisticExpertise The generated linguistic expertise level description
+ */
+function _generateLinguisticExpertise(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory expertiseLevels = [
+        "No linguistic knowledge beyond basic communication",
+        "Basic understanding of language preservation principles",
+        "Can document and analyze emerging dialects and language shifts",
+        "Expert in decoding pre-collapse recordings and texts",
+        "Master of using linguistic knowledge for negotiation and information gathering",
+        "Innovator in language reconstruction and cross-faction communication systems"
+    ];
+    
+    return expertiseLevels[(dna + daysSurvived) % 6];
+}
 }
