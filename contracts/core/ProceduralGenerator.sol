@@ -769,4 +769,28 @@ function generateFungalContaminationEvent(uint256 locationId) external view retu
         "%. Critical survival situation - risk starvation vs resource expenditure."
     ));
 }
+
+/**
+ * @notice Generate seed vault expedition event based on story scenario
+ */
+function generateSeedVaultExpedition(uint256 locationId) external view returns (string memory) {
+    uint256 seedRecovery = _random(locationId) % 41 + 60; // 60-100% seed recovery chance
+    uint256 teamCasualties = _random(block.timestamp) % 51 + 20; // 20-70% team casualty chance
+    uint256 expeditionCost = _random(locationId) % 26 + 25; // 25-50 resource cost
+    uint256 survivalBonus = _random(block.timestamp) % 31 + 20; // 20-50% survival bonus if successful
+    
+    return string(abi.encodePacked(
+        "Seed vault expedition available at location ",
+        _uintToString(locationId),
+        ". Seed recovery chance: ",
+        _uintToString(seedRecovery),
+        "%. Team casualty chance: ",
+        _uintToString(teamCasualties),
+        "%. Expedition cost: ",
+        _uintToString(expeditionCost),
+        " resources. Survival bonus if successful: ",
+        _uintToString(survivalBonus),
+        "%. High-risk mission for critical food security."
+    ));
+}
 }
