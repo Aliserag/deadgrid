@@ -801,4 +801,37 @@ function calculateRustCathedralHologramEffects(int32 x, int32 y, LocationType lo
     
     return (interferenceLevel, techComponents);
 }
+
+/**
+ * @notice Calculate Rustwood Tangle magnetic storm effects and magnetic ore rewards
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return magneticStormLevel The calculated magnetic storm intensity level (0-100)
+ * @return magneticOre Number of magnetic ore fragments available from the tangle
+ */
+function calculateRustwoodTangleMagneticEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 magneticStormLevel, uint32 magneticOre) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rustwood_magnetic")));
+    
+    // Base magnetic storm level from environmental anomalies
+    if (locationType == LocationType.DUNGEON) {
+        magneticStormLevel = 85;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        magneticStormLevel = 70;
+    } else if (locationType == LocationType.WASTELAND) {
+        magneticStormLevel = 55;
+    } else {
+        magneticStormLevel = 40;
+    }
+    
+    // Add random variation from magnetic field instability
+    uint256 magneticInstability = positionHash % 30;
+    magneticStormLevel += uint32(magneticInstability);
+    
+    // Calculate magnetic ore fragments from metallic formations
+    magneticOre = uint32((positionHash % 50) + 20);
+    
+    return (magneticStormLevel, magneticOre);
+}
+
 }
