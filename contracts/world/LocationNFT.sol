@@ -834,4 +834,36 @@ function calculateRustwoodTangleMagneticEffects(int32 x, int32 y, LocationType l
     return (magneticStormLevel, magneticOre);
 }
 
+
+/**
+ * @notice Calculate Rust Cathedral geothermal forge effects and crafted weapon rewards
+ * @param x X coordinate of location
+ * @param y Y coordinate of location
+ * @param locationType Type of location to calculate effects for
+ * @return forgeHeatLevel The calculated geothermal forge heat level (0-100)
+ * @return craftedWeapons Number of high-quality crafted weapons available from the forge
+ */
+function calculateRustCathedralForgeEffects(int32 x, int32 y, LocationType locationType) public pure returns (uint32 forgeHeatLevel, uint32 craftedWeapons) {
+    uint256 positionHash = uint256(keccak256(abi.encodePacked(x, y, "rust_cathedral_forge")));
+    
+    // Base forge heat level from geothermal activity
+    if (locationType == LocationType.DUNGEON) {
+        forgeHeatLevel = 80;
+    } else if (locationType == LocationType.SCAVENGING_SITE) {
+        forgeHeatLevel = 65;
+    } else if (locationType == LocationType.WASTELAND) {
+        forgeHeatLevel = 50;
+    } else {
+        forgeHeatLevel = 35;
+    }
+    
+    // Add random variation from geothermal vent instability
+    uint256 ventInstability = positionHash % 20;
+    forgeHeatLevel += uint32(ventInstability);
+    
+    // Calculate crafted weapons from automated assembly lines
+    craftedWeapons = uint32((positionHash % 25) + 10);
+    
+    return (forgeHeatLevel, craftedWeapons);
+}
 }
