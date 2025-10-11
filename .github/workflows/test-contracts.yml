@@ -66,3 +66,4 @@ jobs:
       # 2025-10-10: Added item test for Rust-Eater's Reckoning
       # 2025-10-10: Added biome test for The Rustwood Tangle
       # 2025-10-11: Added quest test for feature
+      # 2025-10-11: Added event test for feature
