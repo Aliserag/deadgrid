@@ -793,4 +793,28 @@ function generateSeedVaultExpedition(uint256 locationId) external view returns (
         "%. High-risk mission for critical food security."
     ));
 }
+
+/**
+ * @notice Generate leadership crisis event based on story scenario
+ */
+function generateLeadershipCrisisEvent(uint256 communityId) external view returns (string memory) {
+    uint256 trustLoss = _random(communityId) % 41 + 30; // 30-70% trust loss
+    uint256 resourcePenalty = _random(block.timestamp) % 26 + 15; // 15-40 resource penalty
+    uint256 resolutionCost = _random(communityId) % 31 + 20; // 20-50 resource cost
+    uint256 recoveryChance = _random(block.timestamp) % 51 + 50; // 50-100% recovery chance
+    
+    return string(abi.encodePacked(
+        "Leadership crisis in community ",
+        _uintToString(communityId),
+        ". Trust loss: ",
+        _uintToString(trustLoss),
+        "%. Resource penalty: ",
+        _uintToString(resourcePenalty),
+        ". Resolution cost: ",
+        _uintToString(resolutionCost),
+        " resources. Recovery chance: ",
+        _uintToString(recoveryChance),
+        "%. Critical morale situation - risk community collapse vs resource investment."
+    ));
+}
 }
