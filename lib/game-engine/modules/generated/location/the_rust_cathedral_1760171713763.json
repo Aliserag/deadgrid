@@ -1,0 +1,22 @@
+{
+  "name": "The Rust Cathedral",
+  "type": "building",
+  "size": "large",
+  "danger_level": 7,
+  "loot_quality": "good",
+  "occupants": "Rust-Walkers (mutated humans with metal-plated skin), Scrap-Scavengers, automated defense systems",
+  "notable_features": [
+    "Former pre-war manufacturing plant converted into a religious site",
+    "Working forge powered by geothermal vents",
+    "Intact automated assembly lines now used for weapon crafting",
+    "Radioactive stained glass windows made from salvaged monitors",
+    "Network of steam pipes that periodically release scalding jets"
+  ],
+  "exploration_notes": [
+    "The main hall contains makeshift shrines to forgotten technology",
+    "Upper levels house living quarters with well-preserved pre-war machinery",
+    "Basement levels flood periodically with contaminated water",
+    "Scavengers have established trade posts in the safer eastern wing",
+    "The central forge area is heavily guarded but contains high-quality crafted weapons"
+  ]
+}
