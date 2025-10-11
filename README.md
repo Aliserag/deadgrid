@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-11**: Added quest - Radio Silence
 - **2025-10-10**: Added biome - The Rustwood Tangle
 - **2025-10-10**: Added item - Rust-Eater's Reckoning
 - **2025-10-10**: Added survivor_log - Dr. Aris Thorne
