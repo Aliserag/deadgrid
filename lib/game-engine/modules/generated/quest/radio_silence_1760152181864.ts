@@ -1,0 +1,135 @@
+/**
+ * quest: Radio Silence
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface RadioSilenceData {
+  id: string;
+  title: string;
+  giver: string;
+  description: string;
+  objectives: any[];
+  rewards: string;
+  prerequisites: string;
+  dialogue: string;
+}
+
+export class RadioSilenceModule extends GameModule {
+  static readonly metadata: RadioSilenceData = {
+      "id": "quest_radio_silence",
+      "title": "Radio Silence",
+      "giver": "Old Man Henderson",
+      "description": "Before the Collapse, Henderson was a radio engineer. He believes he's picked up a faint, repeating signal from a pre-war emergency broadcast station in the ruined city center. The signal might contain vital information about safe zones or hidden supplies, but his equipment is too damaged to pinpoint the source. He needs someone brave (or desperate) enough to venture into the urban ruins and find the transmission's origin.",
+      "objectives": [
+          {
+              "id": "locate_transmitter",
+              "description": "Follow Henderson's coordinates to the general area of the signal in the city center",
+              "completed": false
+          },
+          {
+              "id": "find_broadcast_source",
+              "description": "Search the ruins for the signal's origin point (the old Emergency Broadcast Tower)",
+              "completed": false
+          },
+          {
+              "id": "retrieve_transmission_log",
+              "description": "Recover the transmission log or data core from the broadcast equipment",
+              "completed": false
+          },
+          {
+              "id": "return_to_henderson",
+              "description": "Bring the retrieved data back to Old Man Henderson at his shack",
+              "completed": false
+          }
+      ],
+      "rewards": {
+          "experience": 750,
+          "items": [
+              {
+                  "id": "item_repair_kit",
+                  "name": "Advanced Repair Kit",
+                  "quantity": 1
+              },
+              {
+                  "id": "currency_scrap",
+                  "name": "Salvage Scrap",
+                  "quantity": 150
+              }
+          ],
+          "reputation": {
+              "faction": "Henderson's Shack",
+              "amount": 25
+          },
+          "unlocks": [
+              "Henderson's Radio Shop Services"
+          ]
+      },
+      "prerequisites": {
+          "min_level": 8,
+          "required_quests": [
+              "quest_first_contact"
+          ],
+          "required_items": [
+              "item_geiger_counter"
+          ],
+          "required_reputation": {
+              "faction": "Henderson's Shack",
+              "level": "Neutral"
+          }
+      },
+      "dialogue": {
+          "initial_greeting": "You look like you can handle yourself. Come closer, I've got a proposition. Heard a whisper on the airwaves... a real one, not just static. Think you're up for some urban exploration?",
+          "accept_quest": "The signal's coming from the old broadcast tower downtown. Coordinates are... questionable, but it's your best starting point. Watch for Feral Ghouls - they nest in those ruins. And radiation. Lots of radiation.",
+          "decline_quest": "Suit yourself. More static for me, I suppose. Come back if you change your mind. The signal won't decode itself.",
+          "during_quest": {
+              "no_progress": "Any luck with that signal? The tower should be near what's left of Memorial Park. Don't tell me the city scares you.",
+              "partial_progress": "You're getting closer, I can feel it! The signal's stronger when I think about you being out there. Find that data core!",
+              "all_objectives_complete": "You found it! By the old gods and the new, you actually found it! Let me see that data core..."
+          },
+          "completion": "This is... incredible. This isn't just an emergency broadcast. It's a looped message from a government bunker that was supposed to be empty. Coordinates, access codes... you've just given us a real chance. Take these supplies - you've more than earned them."
+      }
+  };
+  
+  static readonly type = 'quest';
+  static readonly version = '1.0.0';
+  static readonly generated = 1760152181866;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(RadioSilenceModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered quest: Radio Silence`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default RadioSilenceModule;
