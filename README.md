@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Recent Updates
 
+- **2025-10-11**: Added location - The Rust Cathedral
 - **2025-10-11**: Added event - The Whispering Grove
 - **2025-10-11**: Added quest - Radio Silence
 - **2025-10-10**: Added biome - The Rustwood Tangle
