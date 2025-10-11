@@ -639,4 +639,23 @@ function _generateHopeResilience(uint256 dna, uint256 daysSurvived) external pur
     
     return resilienceLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's historical expertise level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return historicalExpertise The generated historical expertise level description
+ */
+function _generateHistoricalExpertise(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory expertiseLevels = [
+        "No historical knowledge beyond basic events",
+        "Basic understanding of pre-collapse history and documentation",
+        "Can analyze historical patterns for survival strategy",
+        "Expert in using historical knowledge for resource location and preservation",
+        "Master of historical analysis for predicting faction behavior and threats",
+        "Innovator in applying historical wisdom to rebuild civilization and maintain hope"
+    ];
+    
+    return expertiseLevels[(dna + daysSurvived) % 6];
+}
 }
