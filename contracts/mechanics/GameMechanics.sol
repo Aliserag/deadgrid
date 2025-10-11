@@ -715,4 +715,32 @@ function triggerWhisperingGrove(uint256 survivorId, uint8 choice) external retur
     return true;
 }
 
+
+/**
+ * @notice Check if conditions are met to trigger the Whispering Grove event
+ * @param survivorId The ID of the survivor to check
+ * @param currentRegion The current region the survivor is in
+ * @param isFullMoon Whether it's currently a full moon night
+ * @return canTrigger Whether the event can be triggered
+ * @return hostilityChance The base chance of hostility if choosing dangerous options
+ */
+function checkWhisperingGroveConditions(uint256 survivorId, uint8 currentRegion, bool isFullMoon) external view returns (bool canTrigger, uint8 hostilityChance) {
+    SurvivalStatus storage status = survivalStatus[survivorId];
+    
+    // Must be in forest region (region 3) during full moon
+    if (currentRegion != 3 || !isFullMoon) {
+        return (false, 0);
+    }
+    
+    // Higher sanity increases encounter chance, but too high sanity makes it less likely to notice the supernatural
+    uint8 sanityBonus = status.sanity >= 80 ? 20 : (status.sanity >= 60 ? 30 : (status.sanity >= 40 ? 40 : 25));
+    
+    // Calculate final trigger chance
+    uint8 triggerChance = 35 + sanityBonus;
+    
+    canTrigger = triggerChance >= 50;
+    hostilityChance = 30; // Base 30% chance of hostility for dangerous choices
+    return (canTrigger, hostilityChance);
+}
+
 }
