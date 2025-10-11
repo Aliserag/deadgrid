@@ -500,4 +500,31 @@ function completeRustGardenQuest(
     emit QuestCompleted(player, "quest_rust_garden");
 }
 
+
+/**
+ * @notice Complete the Radio Silence quest by submitting transmission data
+ * @param player The address completing the quest
+ * @param transmissionStrength Signal strength of the broadcast (0-100)
+ * @param dataIntegrity Quality of retrieved transmission data (0-100)
+ * @param radiationExposure Total radiation exposure during quest
+ */
+function completeRadioSilenceQuest(
+    address player,
+    uint256 transmissionStrength,
+    uint256 dataIntegrity,
+    uint256 radiationExposure
+) external {
+    require(transmissionStrength >= 75, "Signal too weak to decode");
+    require(dataIntegrity >= 80, "Transmission data corrupted");
+    require(radiationExposure <= 50, "Radiation exposure too high");
+    
+    // Grant rewards
+    _grantExperience(player, 750);
+    _mintItem(player, "Advanced Repair Kit", 1);
+    _mintCurrency(player, "Salvage Scrap", 150);
+    _increaseReputation(player, 25);
+    
+    emit QuestCompleted(player, "quest_radio_silence");
+}
+
 }
