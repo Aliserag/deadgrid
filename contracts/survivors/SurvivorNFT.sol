@@ -658,4 +658,23 @@ function _generateHistoricalExpertise(uint256 dna, uint256 daysSurvived) externa
     
     return expertiseLevels[(dna + daysSurvived) % 6];
 }
+
+/**
+ * @notice Generate survivor's moral resilience level based on DNA and days survived
+ * @param dna The survivor's DNA value
+ * @param daysSurvived Number of days the survivor has endured
+ * @return moralResilience The generated moral resilience level description
+ */
+function _generateMoralResilience(uint256 dna, uint256 daysSurvived) external pure returns (string memory) {
+    string[6] memory resilienceLevels = [
+        "Moral compass shattered, survival justifies any action",
+        "Fragile morality requiring constant rationalization of choices",
+        "Cyclical moral conflict with periods of regret and justification",
+        "Deliberately maintained morality through documentation and reflection",
+        "Moral framework transformed into strategic survival advantage",
+        "Master of moral calculus for optimal long-term survival and leadership"
+    ];
+    
+    return resilienceLevels[(dna + daysSurvived) % 6];
+}
 }
