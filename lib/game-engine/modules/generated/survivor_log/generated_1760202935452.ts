@@ -1,0 +1,77 @@
+/**
+ * survivor_log: undefined
+ */
+
+import { GameModule } from '../../../core/GameModule';
+
+export interface GeneratedData {
+  author_name: string;
+  author_background: string;
+  day_number: number;
+  location: string;
+  entry: string;
+  condition: string;
+  discoveries: string;
+  warnings: string;
+  last_meal: string;
+  companions: string;
+  hope_level: number;
+}
+
+export class GeneratedModule extends GameModule {
+  static readonly metadata: GeneratedData = {
+      "author_name": "Dr. Aris Thorne",
+      "author_background": "Former marine biologist and university professor specializing in coral reef ecosystems. Married to Lena for 12 years, father to 7-year-old Maya. Was leading a research expedition in the Florida Keys when the outbreak began. Dreamed of establishing marine protected areas and writing children's books about ocean conservation.",
+      "day_number": 187,
+      "location": "Abandoned aquarium research facility, Miami - humid air thick with salt and decay, empty tanks casting blue-green shadows, the occasional drip of water echoing like a ticking clock",
+      "entry": "The generator finally gave out today. That persistent hum that's been my companion these past months has been replaced by a silence so profound it feels like the walls are holding their breath. I never thought I'd miss mechanical noise, but its absence leaves room for other sounds - the scuttling in the walls, the distant moans from the beach, the relentless whisper of what I've lost.\n\nI found myself talking to the ghost fish today. Stood before the massive central tank, now home only to algae and the skeletal remains of what were once vibrant communities. I described the bioluminescent displays I witnessed in the Mariana Trench to empty water. Lena would have called it madness, but she's not here to judge. Maya would have loved the stories though - she always loved my fish tales.\n\nThe hardest part isn't the hunger or the fear. It's the moral arithmetic we perform daily. Yesterday I traded my last antibiotic tablets for two cans of beans. Was preserving my own life worth sacrificing potential medicine for someone else? There are no good answers, only varying degrees of regret.\n\nToday I watched from the observation deck as a group of survivors tried to raid a supply cache near the pier. They moved with the desperate coordination of people who've learned to work together. Part of me wanted to signal them, to join their fragile community. The other part, the larger part, remembered what happened the last time I trusted strangers. The blood on the laboratory floor still stains my memory brighter than it stains the tiles.\n\nI've started documenting the behavioral changes in the infected in the margins of my research notes. They're developing patterns, almost rituals. Science persists even when civilization doesn't.",
+      "condition": "Physically: Malnourished (ribs visible), suffering from persistent cough, left hand infected from recent cut. Mentally: Analytical detachment alternating with overwhelming grief, sleeps in 2-3 hour intervals, talks to absent family members as coping mechanism",
+      "discoveries": "The infected avoid large bodies of salt water - observed multiple subjects stopping at water's edge. Salt might be a deterrent. Also discovered emergency marine radio in basement that still has power from solar panels - been monitoring channels but only static so far",
+      "warnings": "Never travel during high humidity - the infected seem more active when the air is heavy. Canned food older than 2 years shows signs of botulism - check for bulging lids. Trust is more dangerous than any infected - they can only kill you once",
+      "last_meal": "Cold canned sardines and rehydrated beans (14 hours ago), water purified through makeshift sand filter",
+      "companions": "Alone since Day 43 when research team was overrun. Lost Lena and Maya during initial evacuation - they didn't make it to the extraction point. Sometimes imagines conversations with Dr. Chen, his late colleague",
+      "hope_level": 3
+  };
+  
+  static readonly type = 'survivor_log';
+  static readonly version = '1.0.0';
+  static readonly generated = 1760202935454;
+  
+  async initialize(engine: any): Promise<void> {
+    // Register with appropriate system
+    const system = this.getTargetSystem(engine);
+    if (system) {
+      await system.register(GeneratedModule.metadata);
+    }
+    
+    // Log registration
+    console.log(`[Module] Registered survivor_log: undefined`);
+  }
+  
+  private getTargetSystem(engine: any): any {
+    const systemMap: Record<string, string> = {
+      'biome': 'world.biomeSystem',
+      'event': 'systems.eventSystem',
+      'item': 'systems.itemSystem',
+      'enemy': 'entities.enemySystem',
+      'quest': 'systems.questSystem',
+      'npc': 'entities.npcSystem',
+      'location': 'world.locationSystem',
+      'mechanic': 'systems.mechanicSystem',
+      'survivor_log': 'world.loreSystem'
+    };
+    
+    const path = systemMap[this.constructor.name] || 'systems.contentSystem';
+    return path.split('.').reduce((obj, key) => obj?.[key], engine);
+  }
+  
+  async update(deltaTime: number): Promise<void> {
+    // Module-specific update logic if needed
+  }
+  
+  async cleanup(): Promise<void> {
+    // Cleanup resources if needed
+  }
+}
+
+export default GeneratedModule;
