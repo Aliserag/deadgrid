@@ -469,4 +469,23 @@ contract ProceduralGenerator is AccessControl {
     function _random(uint256 seed) private view returns (uint256) {
         return uint256(keccak256(abi.encodePacked(block.timestamp, block.prevrandao, nonce, seed)));
     }
+
+/**
+ * @notice Generate Glitch-Walker enemy encounter with EMP burst ability
+ */
+function generateGlitchWalkerEncounter(uint256 locationId) external view returns (string memory) {
+    uint256 health = _random(block.timestamp) % 41 + 180; // 180-220 health
+    uint256 damage = _random(locationId) % 16 + 25; // 25-40 damage
+    
+    return string(abi.encodePacked(
+        "Glitch-Walker detected at location ", 
+        _uintToString(locationId),
+        ". Health: ",
+        _uintToString(health),
+        ", Damage: ",
+        _uintToString(damage),
+        ". EMP Burst active - equipment may malfunction."
+    ));
+}
+
 }
