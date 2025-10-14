@@ -1,0 +1,24 @@
+name: Test Smart Contracts
+
+on:
+  push:
+    branches: [ main, V2 ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      - name: Run contract tests
+        run: npm run test:contracts
+
+      # Auto-generated test steps below
+      # 2025-10-02: Added item test for Rust-Eater's Revenge
